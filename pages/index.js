@@ -11,7 +11,6 @@ import { IoLogoGithub } from 'react-icons/io5'
 import { useContext, useEffect } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
 
-// TODO: crear descripcion (ChatGPT)
 const Home = () => {
   const voxel = useContext(VoxelKoalaContext)
   useEffect(() => {
@@ -28,7 +27,7 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          Hello, I'm a backend developer traveling around the world!
+          Hello, I'm a backend developer travelling around the world!
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -36,7 +35,7 @@ const Home = () => {
             <Heading as="h2" variant="page-title">
               Israel López
             </Heading>
-            <p>Poner aquí una descripción molona sacada de ChatGPT</p>
+            <Paragraph>Senior Software Developer</Paragraph>
           </Box>
           <Box
             flexShrink={0}
@@ -64,7 +63,7 @@ const Home = () => {
             Work
           </Heading>
           <Paragraph>
-            Intro a mis trabajos.
+            Israel is a senior software developer based in Spain with a passion for expanding his horizons and traveling the world while doing what he loves: developing high-quality software products. With extensive experience in high availability and concurrency environments, he excels in performance optimization, ensuring every byte counts. Israel's dedication to his craft and his ability to deliver exceptional results make him a valuable asset to any project.
           </Paragraph>
           <Box align="center" my={4}>
             <Button
@@ -85,15 +84,32 @@ const Home = () => {
           </Heading>
           <BioSection>
             <BioYear>1983</BioYear>
-            Tachaaaaan aqui nacio un koala!!!
+            Born in Madrid, Spain.
+          </BioSection>
+          <BioSection>
+            <BioYear>2007</BioYear>
+            Complete the diploma in computer science in Alcalá de Henares University.
+          </BioSection>
+          <BioSection>
+            <BioYear>2009</BioYear>
+            Complete the Master of Artificial Intelligence in information and communication technologies at Alcalá de Henares University.
+          </BioSection>
+          <BioSection>
+            <BioYear>2004 to present</BioYear>
+            Working as a Full-time employee.
+          </BioSection>
+          <BioSection>
+            <BioYear>2024 to future</BioYear>
+            Working as a freelancer.
           </BioSection>
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Hobbies 🧗 🏂   🤿
+            Hobbies
           </Heading>
           <Paragraph>
+            🧗 climbing, 🏂 snowboarding,   travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence.
           </Paragraph>
         </Section>
 

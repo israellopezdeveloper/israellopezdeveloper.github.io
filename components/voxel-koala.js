@@ -131,7 +131,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       x: pos.x,
       y: pos.y,
       z: pos.z,
-      duration: 0.8
+      duration: 1.2
     })
   }
 
