@@ -2,7 +2,7 @@ import { useEffect, useRef, useCallback, forwardRef, useImperativeHandle } from 
 import * as THREE from 'three'
 import { loadGLTFModel } from '../libs/model'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { KoalaSpinner, KoalaContainer } from './voxel-koala-loader'
+import { KoalaContainer } from './voxel-koala-loader'
 import gsap from 'gsap'
 
 const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
@@ -16,11 +16,9 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
   const urlKoalaWorkGLB = (process.env.NODE_ENV === 'production' ? '' : '') + '/koala_work.glb'
   const urlKoalaEducationGLB = (process.env.NODE_ENV === 'production' ? '' : '') + '/koala_education.glb'
 
-  const position_main = new THREE.Vector3(200, 0, 0)
-
-  const position_work = new THREE.Vector3(0, 200, 0)
-
-  const position_education = new THREE.Vector3(0, 0, 200)
+  const position_main = new THREE.Vector3(85, 0, 0)
+  const position_work = new THREE.Vector3(0, 95, 0)
+  const position_education = new THREE.Vector3(-85, 0, 0)
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -68,6 +66,9 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
       const scene = new THREE.Scene()
+
+      const light = new THREE.AmbientLight(0x404040, 3); // soft white light
+      scene.add(light);
 
       const target = new THREE.Vector3(-3.5, 1.2, 0)
       const initialCameraPosition = new THREE.Vector3(20, 10, 20)
@@ -130,7 +131,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       x: pos.x,
       y: pos.y,
       z: pos.z,
-      duration: 0.5
+      duration: 0.8
     })
   }
 
