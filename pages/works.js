@@ -4,6 +4,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbDevo from '../public/images/works/devo1.png'
+import thumbEC from '../public/images/works/European_Commission_01.png'
 import { useContext, useEffect } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
 
@@ -23,7 +24,12 @@ const Works = () => {
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
             <WorkGridItem id="devo" title="Devo" thumbnail={thumbDevo}>
-              Devo is a cloud-native logging and security analytics company providing real-time insights and advanced analytics for enterprise data. Their platform helps organizations efficiently detect and respond to security threats using machine learning and scalable architecture. Devo serves industries like finance and telecom, enhancing cybersecurity and data management.
+              Cloud-native company offering real-time security analytics, machine learning, and scalable solutions for enterprise data management.
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem id="ec" title="European Commission" thumbnail={thumbEC}>
+              The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs.
             </WorkGridItem>
           </Section>
         </SimpleGrid>

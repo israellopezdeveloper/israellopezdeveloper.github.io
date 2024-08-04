@@ -109,7 +109,7 @@ const Home = () => {
             Hobbies
           </Heading>
           <Paragraph>
-            🧗 climbing, 🏂 snowboarding,   travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence.
+            🧗 climbing, 🏂 snowboarding, 🧭 travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence.
           </Paragraph>
         </Section>
 
