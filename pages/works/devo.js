@@ -4,7 +4,6 @@ import {
   Link,
   List,
   ListItem,
-  AspectRatio,
   Heading,
   Center
 } from '@chakra-ui/react'

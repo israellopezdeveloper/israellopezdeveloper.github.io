@@ -3,13 +3,6 @@ import Image from 'next/image'
 import { Box, Text, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 
-const truncateText = (text, maxLength) => {
-  if (text.length <= maxLength) {
-    return text
-  }
-  return text.substring(0, maxLength) + '...'
-}
-
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
     <LinkBox cursor="pointer">
@@ -55,7 +48,7 @@ export const WorkGridItem = ({
       cursor="pointer"
     >
       <Box
-        width="230px"
+        width="240px"
         height="150px"
         display="flex"
         justifyContent="center"
@@ -65,8 +58,9 @@ export const WorkGridItem = ({
           src={thumbnail}
           alt={title}
           className="grid-item-thumbnail"
-          placeholder="blur"
           objectFit='contain'
+          width={240}
+          height={150}
         />
       </Box>
       <LinkOverlay as="div" href={`/${category}/${id}`}>

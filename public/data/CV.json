@@ -1,6 +1,64 @@
 {
   "works": [
     {
+      "name": "Devo",
+      "short_description": [
+        "Cloud-native company offering real-time security analytics, machine learning, and scalable solutions for enterprise data management."
+      ],
+      "thumbnail": "devo1.png",
+      "period_time": "March 2020 - March 2024",
+      "full_description": [
+        "Devo is a leading cloud-native logging and security analytics company dedicated to providing real-time insights and advanced analytics for enterprise data. Their robust platform empowers organizations to efficiently detect, analyze, and respond to security threats by leveraging the power of machine learning and a highly scalable architecture. Devo's solutions are designed to handle large volumes of data, ensuring that businesses can maintain high levels of performance and security. Serving a diverse range of industries, including finance and telecommunications, Devo enhances cybersecurity measures and optimizes data management practices, helping enterprises stay ahead of evolving threats and regulatory requirements. With a commitment to innovation and excellence, Devo is at the forefront of transforming how businesses approach security and data analytics."
+      ],
+      "contribution": [
+        "At Devo, Israel played a crucial role in the data ingestion team, specifically focusing on the load balancer. Given the sensitivity of the data and its importance for diagnosing potential attacks, the service needed to be both reliable and fast. Under Israel's expertise, the system was able to handle an impressive ingestion volume of approximately 60TB per day. Additionally, he significantly contributed to Devo's efforts in adapting to the necessary standards for integration with U.S. federal systems, achieving FedRAMP certification. Furthermore, Israel participated in the creation of a multi-region and multi-cloud backup system, ensuring data redundancy and reliability across diverse environments. Israel's work ensured that Devo's platform met the highest levels of security and compliance, enhancing the company's capability to serve its clients effectively."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://www.devo.com/es/",
+          "text": "Devo Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Improve existant load balancer",
+          "description": [
+            "Israel contributed significantly to enhancing the performance of Devo's load balancer by implementing advanced strategies that improved fault tolerance and optimized the monitoring of data ingestion services. He meticulously analyzed the system's requirements and identified key areas for improvement, ensuring that the load balancer could handle varying levels of traffic with greater efficiency. His efforts in improving the fault tolerance mechanisms helped the system recover swiftly from unexpected failures, maintaining high availability and reliability. Additionally, Israel created support for the RELP (Reliable Event Logging Protocol) from scratch, ensuring reliable and efficient event logging across the system.",
+            "Furthermore, Israel developed methods to balance the load based on the client, which facilitated more compact data queries. By ensuring that data was not unnecessarily mixed across all nodes, he streamlined the data retrieval process, making it faster and more efficient. This client-specific load balancing approach not only improved query performance but also reduced the overhead on the system. Israel's contributions led to a more robust and responsive load balancing system, significantly enhancing the overall performance and user experience at Devo."
+          ],
+          "links": [
+            {
+              "tag": "Documentation",
+              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers",
+              "text": "Load balancer documentation"
+            }
+          ],
+          "technologies": [
+            "Node.js",
+            "C",
+            "C++",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "Git",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        }
+      ],
+      "images": [
+        "devo1.png",
+        "devo2.png"
+      ]
+    },
+    {
       "name": "European Commission",
       "short_description": [
         "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs."
@@ -70,7 +128,7 @@
             "Jira",
             "JUnit",
             "Bamboo",
-            "SonarQuebe",
+            "SonarQube",
             "TDD",
             "BDD"
           ]
