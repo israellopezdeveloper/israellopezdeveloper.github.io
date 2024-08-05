@@ -1,0 +1,125 @@
+import {
+  Container,
+  Badge,
+  Link,
+  List,
+  ListItem,
+  Heading,
+  Center,
+  Box
+} from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Title, WorkImage, Meta } from '../../components/work'
+import P from '../../components/paragraph'
+import Layout from '../../components/layouts/article'
+import fs from 'fs'
+import path from 'path'
+
+const Work = ({ job }) => (
+  <Layout title={job.name} >
+    <Container>
+      <Title>
+        {job.name} <Badge>{job.period_time}</Badge>
+      </Title>
+      {
+        job.full_description.map((str, index) => (
+          <P key={index} dangerouslySetInnerHTML={{ __html: str }} />
+        ))
+      }
+      <WorkImage src={"/images/works/" + job.thumbnail} alt={job.name} />
+      <List ml={4} my={4}>
+        {
+          job.links.map((item, index) => (
+            <ListItem key={index}>
+              <Meta>{item.tag}</Meta>
+              <Link href={item.url} target='_blank'>
+                {item.text} <ExternalLinkIcon mx="2px" />
+              </Link>
+            </ListItem>
+          ))
+        }
+        <ListItem>
+          <Meta>Contributions</Meta>
+          {
+            job.contribution.map((str, index) => (
+              <P key={index} dangerouslySetInnerHTML={{ __html: str }} />
+            ))
+          }
+          {
+            job.projects.map((project, index1) => (
+              <Box key={index1}>
+                <Heading as="h3" fontSize={16} my={6}>
+                  <Center>Project {index1 + 1}: {project.name}</Center>
+                </Heading>
+                {
+                  project.description.map((str, index2) => (
+                    <P key={index2} dangerouslySetInnerHTML={{ __html: str }} />
+                  ))
+                }
+                {
+                  project.links.map((link, index2) => (
+                    <Box key={index2}>
+                      <Meta>link.tag</Meta>
+                      <Link href={link.url} target='_blank'>
+                        {link.text} <ExternalLinkIcon mx="2px" />
+                      </Link>
+                    </Box>
+                  ))
+                }
+                <Heading as="h5" fontSize={14} my={6}>
+                  <Center>Technologies</Center>
+                </Heading>
+                <Box>
+                  {
+                    project.technologies.map((str, index2) => (
+                      <Meta key={index2}>{str}</Meta>
+                    ))
+                  }
+                </Box>
+              </Box>
+            ))
+          }
+        </ListItem>
+      </List>
+      {
+        job.images.map((image, index) => (
+          <WorkImage key={index} src={"/images/works/" + image} alt={job.name} />
+        ))
+      }
+    </Container>
+  </Layout >
+)
+
+// Función para obtener datos estáticos
+export async function getStaticProps({ params }) {
+  const filePath = path.join(process.cwd(), 'public', 'data', 'CV.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const cvData = JSON.parse(jsonData);
+
+  const job = cvData.works[params.id];
+
+  return {
+    props: {
+      job
+    }
+  };
+}
+
+// Función para obtener los paths estáticos
+export async function getStaticPaths() {
+  const filePath = path.join(process.cwd(), 'public', 'data', 'CV.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  const cvData = JSON.parse(jsonData);
+
+  const paths = cvData.works.map((_, index) => ({
+    params: { id: index.toString() }
+  }));
+
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export default Work
+

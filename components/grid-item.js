@@ -1,7 +1,14 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+
+const truncateText = (text, maxLength) => {
+  if (text.length <= maxLength) {
+    return text
+  }
+  return text.substring(0, maxLength) + '...'
+}
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
@@ -28,25 +35,54 @@ export const WorkGridItem = ({
   title,
   thumbnail
 }) => (
-  <Box w="100%" textAlign="center">
+  <Box
+    w="100%"
+    textAlign="center"
+    border="1px"
+    borderColor={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+    borderRadius="md"
+    overflow="hidden"
+    _hover={{
+      transform: 'scale(1.05)',
+      boxShadow: 'lg',
+    }}
+    transition="all 0.3s ease-in-out"
+  >
     <LinkBox
       as={NextLink}
       href={`/${category}/${id}`}
       scroll={false}
       cursor="pointer"
     >
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-      />
+      <Box
+        width="230px"
+        height="150px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        overflow="hidden">
+        <Image
+          src={thumbnail}
+          alt={title}
+          className="grid-item-thumbnail"
+          placeholder="blur"
+          objectFit='contain'
+        />
+      </Box>
       <LinkOverlay as="div" href={`/${category}/${id}`}>
         <Text mt={2} fontSize={20}>
           {title}
         </Text>
       </LinkOverlay>
-      <Text fontSize={14}>{children}</Text>
+      <Text
+        fontSize={14}
+        css={{
+          display: '-webkit-box',
+          WebkitLineClamp: 4,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        }}>{children}</Text>
     </LinkBox>
   </Box>
 )
@@ -85,7 +121,7 @@ export const GridItemStyle = () => (
   <Global
     styles={`
       .grid-item-thumbnail {
-        border-radius: 12px;
+        border-radius: 12px
       }
     `}
   />

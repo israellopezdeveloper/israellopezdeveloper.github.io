@@ -28,7 +28,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
           <Section>
-            <WorkGridItem id="ec" title="European Commission" thumbnail={thumbEC}>
+            <WorkGridItem id="0" title="European Commission" thumbnail={thumbEC}>
               The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs.
             </WorkGridItem>
           </Section>

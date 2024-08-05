@@ -1,0 +1,84 @@
+{
+  "works": [
+    {
+      "name": "European Commission",
+      "short_description": [
+        "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs."
+      ],
+      "thumbnail": "European_Commission_01.png",
+      "period_time": "June 2017 - January 2020",
+      "full_description": [
+        "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, upholding the EU treaties, and managing the day-to-day business of the EU. It operates as a cabinet government, with 27 members of the Commission (one from each member state) led by a President. The Commission's main roles include developing strategies and policies, enforcing EU laws, and negotiating international agreements on behalf of the EU.",
+        "Within the European Commission, the Directorate-General for Competition (DG COMP) plays a critical role. DG COMP is responsible for establishing and implementing competition policy to ensure fair competition within the EU internal market. This includes enforcing antitrust laws, overseeing mergers and acquisitions, and preventing monopolistic practices and state aid that could distort competition. DG COMP works to protect consumers and businesses by promoting innovation, ensuring a level playing field, and enhancing economic efficiency.",
+        "Israel worked at DG COMP, contributing to the Commission's efforts to maintain competitive markets and foster economic growth across the European Union."
+      ],
+      "contribution": [
+        "Israel worked as a software architect on three projects, with a wide range of responsibilities that showcased his expertise and leadership in software development. His key responsibilities included:",
+        "<b>Management of Non-Functional Requirements and Project Definition</b>: Using Enterprise Architect, Israel was responsible for identifying and managing non-functional requirements, ensuring that each project was clearly defined and aligned with organizational goals.",
+        "<b>Task Prioritization</b>: Utilizing Jira, he prioritized tasks effectively to ensure that the most critical elements were addressed in a timely manner.",
+        "<b>Management of Task Dependencies</b>: He used Jira to manage dependencies between tasks, ensuring smooth progress and minimizing delays.",
+        "<b>Technology Selection</b>: Israel was instrumental in selecting the appropriate technologies for each project, ensuring that they were well-suited to meet the project’s needs.",
+        "<b>Team Member Profile Definition</b>: He defined the profiles and roles of team members, ensuring that the team had the necessary skills and expertise to succeed.",
+        "<b>Inter-Team Collaboration</b>: Israel facilitated collaboration between different teams whose projects needed to be integrated, ensuring seamless integration and cooperation.",
+        "<b>Quality Control and Testing</b>: He defined quality controls and testing protocols, including unit tests using technologies such as JUnit or Google Test/Valgrind, depending on the programming language.",
+        "<b>CI/CD Systems Implementation</b>: He defined and implemented Continuous Integration and Continuous Deployment systems using tools like Bamboo and SonarQube.",
+        "<b>Software Development Methodologies</b>: Israel applied Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices to ensure high-quality software development.",
+        "<b>Agile Methodology</b>: He utilized SCRUM as the primary methodology for project management, fostering an agile and efficient development process."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://competition-policy.ec.europa.eu/index_en",
+          "text": "EU, DG COMP Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Definition of Two RESTful APIs",
+          "description": [
+            "The first project involved defining two RESTful APIs that implemented the Richardson Maturity Model Level 3, incorporating HATEOAS. These APIs were designed as platforms for the secure exchange of legal documents in anti-cartel proceedings.",
+            "<b>Internal API</b>: The first API was intended to serve the internal staff of the European Commission.",
+            "<b>External API</b>: The second API served as a platform for external personnel.",
+            "Both APIs featured access control through a Single Sign-On system called CAS. Data persistence was managed using both Oracle DB and MongoDB. Additionally, the APIs were integrated with an internal secure document storage project via a SOAP interface. The workflow of each procedure was managed using the State design pattern, and system administrators were notified of status changes via email."
+          ],
+          "links": [
+            {
+              "tag": "Documentation",
+              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
+              "text": "e-leniency documentation"
+            }
+          ],
+          "technologies": [
+            "Java 8",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "JPA",
+            "Eclipselink",
+            "WebLogic 12",
+            "Oracle DB",
+            "MongoDB",
+            "Swagger",
+            "JUnit",
+            "AngularJS 5",
+            "Selenium",
+            "Maven",
+            "Git",
+            "CAS",
+            "Jira",
+            "JUnit",
+            "Bamboo",
+            "SonarQuebe",
+            "TDD",
+            "BDD"
+          ]
+        }
+      ],
+      "images": [
+        "European_Commission_02.png"
+      ]
+    }
+  ]
+}
