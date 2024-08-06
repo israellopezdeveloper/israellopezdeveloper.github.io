@@ -30,6 +30,7 @@ export const WorkGridItem = ({
 }) => (
   <Box
     w="100%"
+    p={5}
     textAlign="center"
     border="1px"
     borderColor={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
@@ -39,28 +40,28 @@ export const WorkGridItem = ({
       transform: 'scale(1.05)',
       boxShadow: 'lg',
     }}
-    transition="all 0.3s ease-in-out"
-  >
+    transition="all 0.3s ease-in-out">
     <LinkBox
       as={NextLink}
       href={`/${category}/${id}`}
       scroll={false}
-      cursor="pointer"
-    >
+      alignItems={'center'}
+      w={'100%'}
+      cursor="pointer">
       <Box
+        display="flex"
         width="240px"
         height="150px"
-        display="flex"
+        ml={'calc((100% - 240px)/2)'}
+        overflow="hidden"
         justifyContent="center"
-        alignItems="center"
-        overflow="hidden">
+        alignItems="center">
         <Image
           src={thumbnail}
           alt={title}
-          className="grid-item-thumbnail"
-          objectFit='contain'
           width={240}
           height={150}
+          style={{ position: 'relative', objectFit: 'contain', maxWidth: '240px', maxHeight: '150px' }}
         />
       </Box>
       <LinkOverlay as="div" href={`/${category}/${id}`}>
@@ -70,6 +71,7 @@ export const WorkGridItem = ({
       </LinkOverlay>
       <Text
         fontSize={14}
+        textAlign={'justify'}
         css={{
           display: '-webkit-box',
           WebkitLineClamp: 4,
@@ -84,29 +86,62 @@ export const WorkGridItem = ({
 export const EducationGridItem = ({
   children,
   category = 'educations',
+  type,
   id,
   title,
   thumbnail
 }) => (
-  <Box w="100%" textAlign="center">
+  <Box
+    w="100%"
+    p={5}
+    textAlign="center"
+    border="1px"
+    borderColor={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+    borderRadius="md"
+    overflow="hidden"
+    _hover={{
+      transform: 'scale(1.05)',
+      boxShadow: 'lg',
+    }}
+    transition="all 0.3s ease-in-out">
     <LinkBox
       as={NextLink}
-      href={`/${category}/${id}`}
+      href={`/${category}/${type}/${id}`}
       scroll={false}
-      cursor="pointer"
-    >
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-      />
-      <LinkOverlay as="div" href={`/${category}/${id}`}>
+      alignItems={'center'}
+      w={'100%'}
+      cursor="pointer">
+      <Box
+        display="flex"
+        width={240}
+        height={150}
+        ml={'calc((100% - 240px)/2)'}
+        overflow="hidden"
+        justifyContent="center"
+        alignItems="center">
+        <Image
+          src={thumbnail}
+          alt={title}
+          width={240}
+          height={150}
+          style={{ position: 'relative', objectFit: 'contain', maxWidth: '240px', maxHeight: '150px' }}
+        />
+      </Box>
+      <LinkOverlay as="div" href={`/${category}/${type}/${id}`}>
         <Text mt={2} fontSize={20}>
           {title}
         </Text>
       </LinkOverlay>
-      <Text fontSize={14}>{children}</Text>
+      <Text
+        fontSize={14}
+        textAlign={'justify'}
+        css={{
+          display: '-webkit-box',
+          WebkitLineClamp: 4,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        }}>{children}</Text>
     </LinkBox>
   </Box>
 )

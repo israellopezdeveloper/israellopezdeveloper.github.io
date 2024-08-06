@@ -1,6 +1,7 @@
 import NextLink from 'next/link'
-import { Heading, Box, Image, Link, Badge } from '@chakra-ui/react'
+import { Heading, Box, Image, Link, Badge, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, useDisclosure } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { useState } from 'react'
 
 export const Title = ({ children }) => (
   <Box>
@@ -17,9 +18,40 @@ export const Title = ({ children }) => (
   </Box>
 )
 
-export const WorkImage = ({ src, alt }) => (
-  <Image borderRadius="lg" w="full" src={src} alt={alt} mb={4} />
-)
+export const WorkImage = ({ src, alt }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [imageSrc, setImageSrc] = useState('')
+
+  const handleClick = () => {
+    setImageSrc(src)
+    onOpen()
+  }
+
+  return (
+    <>
+      <Image
+        borderRadius="lg"
+        w="full"
+        src={src}
+        alt={alt}
+        mb={4}
+        maxH={300}
+        fit={'scale-down'}
+        onClick={handleClick}
+        cursor="pointer"
+      />
+      <Modal isOpen={isOpen} onClose={onClose} size={'xl'}>
+        <ModalOverlay />
+        <ModalContent maxW={'80vw'} maxH={'80vh'} >
+          <ModalCloseButton />
+          <ModalBody display="flex" justifyContent="center" alignItems="center" p={0}>
+            <Image src={imageSrc} alt={alt} borderRadius="lg" style={{ width: '80vw', height: '80vh' }} />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
+  )
+}
 
 export const Meta = ({ children }) => (
   <Badge colorScheme="green" mr={2}>

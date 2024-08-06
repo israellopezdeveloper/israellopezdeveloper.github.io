@@ -12,12 +12,11 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
-import fs from 'fs'
-import path from 'path'
+import cvData from '../../public/data/CV.json'
 
 const Work = ({ job }) => (
   <Layout title={job.name} >
-    <Container>
+    <Container ml={0} mr={0} w={'100%'} maxW={'100%'}>
       <Title>
         {job.name} <Badge>{job.period_time}</Badge>
       </Title>
@@ -92,10 +91,6 @@ const Work = ({ job }) => (
 
 // Función para obtener datos estáticos
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'CV.json');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
-  const cvData = JSON.parse(jsonData);
-
   const job = cvData.works[params.id];
 
   return {
@@ -107,9 +102,6 @@ export async function getStaticProps({ params }) {
 
 // Función para obtener los paths estáticos
 export async function getStaticPaths() {
-  const filePath = path.join(process.cwd(), 'public', 'data', 'CV.json');
-  const jsonData = fs.readFileSync(filePath, 'utf-8');
-  const cvData = JSON.parse(jsonData);
 
   const paths = cvData.works.map((_, index) => ({
     params: { id: index.toString() }

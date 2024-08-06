@@ -138,5 +138,130 @@
         "European_Commission_02.png"
       ]
     }
-  ]
+  ],
+  "educations": {
+    "university": [
+      {
+        "university_name": "Alcalá de Henares University",
+        "title": "Master's Degree in Artificial Intelligence in information and communication technologies",
+        "period_time": "September 2007 - June 2009",
+        "summary": [
+          "Artificial intelligence and machine learning. Supervised, unsupervised and reinforced. Symbolic learning Classification and regression models. Optimization of models.",
+          "Deep nets. Multilayer networks, backpropagation. Loss functions. Hyperparameters and learning strategies.",
+          "Convolutional networks. Recognition of images.",
+          "Sequential, recurrent networks. LSTM models.",
+          "Paralleling and computation techniques in GPU-based architectures.",
+          "Vectorization techniques. Programming with tensorflow and theano.",
+          "Scalable automated learning. Parallelization frameworks in computer cluster.",
+          "Applications in medicine, finance, automatic driving, etc."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      },
+      {
+        "university_name": "Alcalá de Henares University",
+        "title": "Technical Engineering in Computer Science",
+        "period_time": "September 2001 - June 2007",
+        "summary": [
+          "With honors in: Artificial Intelligence, Fuzzy Logic, Artificial Vision Systems, Physics II, Mathematical Analysis, Data Structure, Networks."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      }
+    ],
+    "complementary": [
+      {
+        "institution": "Linux Foundation",
+        "title": "LPIC - 2",
+        "period_time": "September 2015",
+        "summary": [
+          "Official certification of Linux system administration that implies the qualification for:",
+          "Advanced administration of Linux systems, including those related to the kernel.",
+          "Perform advanced management of storage of blocks and file system, as well asnetworks advanced authentication and system security, including firewall and VPN",
+          "Install and configure core network services (DHCP, DNS, SSH, web servers, file servers, email, etc).",
+          "Monitor assistants and advise management on automation and purchases"
+        ],
+        "images": [
+          "linux_foundation.png"
+        ],
+        "thumbnail": "linux_foundation.png"
+      },
+      {
+        "institution": "Linux Foundation",
+        "title": "LPIC - 1",
+        "period_time": "September 2013",
+        "summary": [
+          "Official certification of Linux system administration that implies the qualification for:",
+          "Install a Linux system, including X11 and configure it as a network client.",
+          "Work in command line.",
+          "Manage files and access permissions including ACL, as well as system security.",
+          "Perform simple maintenance tasks."
+        ],
+        "images": [
+          "linux_foundation.png"
+        ],
+        "thumbnail": "linux_foundation.png"
+      },
+      {
+        "institution": "Alcalá de Henares University",
+        "title": "Design and evaluation of digital educational contents",
+        "period_time": "September 2007",
+        "summary": [
+          "Design of educational content through the SCORM standard."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      },
+      {
+        "institution": "Alcalá de Henares University",
+        "title": "Course of artificial vision",
+        "period_time": "September 2007",
+        "summary": [
+          "Systems of artificial vision, convolutional matrices, filters."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Spanish",
+        "spoken": "Native",
+        "writen": "Native",
+        "read": "Native",
+        "acreditations": [],
+        "thumbnail": "spanish.png"
+      },
+      {
+        "language": "English",
+        "spoken": "Fluent",
+        "writen": "Fluent",
+        "read": "Fluent",
+        "acreditations": [],
+        "thumbnail": "english.svg"
+      },
+      {
+        "language": "Chinese",
+        "spoken": "Fluent",
+        "writen": "Fluent",
+        "read": "Fluent",
+        "acreditations": [
+          {
+            "institution": "Confucius Institute Madrid",
+            "title": "HSK 3",
+            "period_time": "September 2009"
+          }
+        ],
+        "thumbnail": "chinese.png"
+      }
+    ]
+  }
 }
