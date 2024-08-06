@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Heading, Box, Image, Link, Badge, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, useDisclosure } from '@chakra-ui/react'
+import { Heading, Box, Image, Link, Badge, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, useDisclosure, useColorModeValue } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { useState } from 'react'
 
@@ -45,7 +45,7 @@ export const WorkImage = ({ src, alt }) => {
         <ModalContent maxW={'80vw'} maxH={'80vh'} >
           <ModalCloseButton />
           <ModalBody display="flex" justifyContent="center" alignItems="center" p={0}>
-            <Image src={imageSrc} alt={alt} borderRadius="lg" style={{ width: '80vw', height: '80vh' }} />
+            <Image src={imageSrc} alt={alt} borderRadius="lg" style={{ width: '80vw', height: '80vh', objectFit: 'contain' }} bg={useColorModeValue('whiteAlpha.900', 'whiteAlpha.500')} />
           </ModalBody>
         </ModalContent>
       </Modal>

@@ -24,12 +24,16 @@ const Works = () => {
       const endDate = moment(period[1], 'MMMM YYYY')
       const duration = endDate.diff(startDate, 'months')
 
+      let job_techs = []
       work.projects.forEach(project => {
         project.technologies.forEach(tech => {
           if (techUsage[tech]) {
-            techUsage[tech] += duration
+            if (!job_techs.includes(tech)) {
+              techUsage[tech] += duration
+            }
           } else {
             techUsage[tech] = duration
+            job_techs.push(tech)
           }
         })
       })
