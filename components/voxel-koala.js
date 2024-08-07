@@ -39,6 +39,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
     const { current: container } = refContainer
     if (container) {
       const models = []
+      const scene = new THREE.Scene()
       function loadModel(url, position) {
         loadGLTFModel(scene, url, {
           receiveShadow: false,
@@ -66,7 +67,6 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       renderer.outputEncoding = THREE.sRGBEncoding
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
-      const scene = new THREE.Scene()
 
       const light1 = new THREE.DirectionalLight(0xffffff, 2.5)
       scene.add(light1)

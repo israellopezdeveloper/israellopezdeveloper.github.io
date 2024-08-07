@@ -8,10 +8,10 @@
       "thumbnail": "devo.png",
       "period_time": "March 2020 - March 2024",
       "full_description": [
-        "Devo is a leading cloud-native logging and security analytics company dedicated to providing real-time insights and advanced analytics for enterprise data. Their robust platform empowers organizations to efficiently detect, analyze, and respond to security threats by leveraging the power of machine learning and a highly scalable architecture. Devo's solutions are designed to handle large volumes of data, ensuring that businesses can maintain high levels of performance and security. Serving a diverse range of industries, including finance and telecommunications, Devo enhances cybersecurity measures and optimizes data management practices, helping enterprises stay ahead of evolving threats and regulatory requirements. With a commitment to innovation and excellence, Devo is at the forefront of transforming how businesses approach security and data analytics."
+        "<P>Devo is a leading cloud-native logging and security analytics company dedicated to providing real-time insights and advanced analytics for enterprise data. Their robust platform empowers organizations to efficiently detect, analyze, and respond to security threats by leveraging the power of machine learning and a highly scalable architecture. Devo's solutions are designed to handle large volumes of data, ensuring that businesses can maintain high levels of performance and security. Serving a diverse range of industries, including finance and telecommunications, Devo enhances cybersecurity measures and optimizes data management practices, helping enterprises stay ahead of evolving threats and regulatory requirements. With a commitment to innovation and excellence, Devo is at the forefront of transforming how businesses approach security and data analytics.</P>"
       ],
       "contribution": [
-        "At Devo, Israel played a crucial role in the data ingestion team, specifically focusing on the load balancer. Given the sensitivity of the data and its importance for diagnosing potential attacks, the service needed to be both reliable and fast. Under Israel's expertise, the system was able to handle an impressive ingestion volume of approximately 60TB per day. Additionally, he significantly contributed to Devo's efforts in adapting to the necessary standards for integration with U.S. federal systems, achieving FedRAMP certification. Furthermore, Israel participated in the creation of a multi-region and multi-cloud backup system, ensuring data redundancy and reliability across diverse environments. Israel's work ensured that Devo's platform met the highest levels of security and compliance, enhancing the company's capability to serve its clients effectively."
+        "<P>At Devo, I played a crucial role in the data ingestion team, specifically focusing on the load balancer. Given the sensitivity of the data and its importance for diagnosing potential attacks, the service needed to be both reliable and fast. Under my expertise, the system was able to handle an impressive ingestion volume of approximately 60TB per day. Additionally, I significantly contributed to Devo's efforts in adapting to the necessary standards for integration with U.S. federal systems, achieving FedRAMP certification. Furthermore, I participated in the creation of a multi-region and multi-cloud backup system, ensuring data redundancy and reliability across diverse environments. My work ensured that Devo's platform met the highest levels of security and compliance, enhancing the company's capability to serve its clients effectively.</P>"
       ],
       "links": [
         {
@@ -22,10 +22,10 @@
       ],
       "projects": [
         {
-          "name": "Improve existant load balancer",
+          "name": "Improve existing load balancer",
           "description": [
-            "Israel contributed significantly to enhancing the performance of Devo's load balancer by implementing advanced strategies that improved fault tolerance and optimized the monitoring of data ingestion services. He meticulously analyzed the system's requirements and identified key areas for improvement, ensuring that the load balancer could handle varying levels of traffic with greater efficiency. His efforts in improving the fault tolerance mechanisms helped the system recover swiftly from unexpected failures, maintaining high availability and reliability. Additionally, Israel created support for the RELP (Reliable Event Logging Protocol) from scratch, ensuring reliable and efficient event logging across the system.",
-            "Furthermore, Israel developed methods to balance the load based on the client, which facilitated more compact data queries. By ensuring that data was not unnecessarily mixed across all nodes, he streamlined the data retrieval process, making it faster and more efficient. This client-specific load balancing approach not only improved query performance but also reduced the overhead on the system. Israel's contributions led to a more robust and responsive load balancing system, significantly enhancing the overall performance and user experience at Devo."
+            "<P>I contributed significantly to enhancing the performance of Devo's load balancer by implementing advanced strategies that improved fault tolerance and optimized the monitoring of data ingestion services. I meticulously analyzed the system's requirements and identified key areas for improvement, ensuring that the load balancer could handle varying levels of traffic with greater efficiency. My efforts in improving the fault tolerance mechanisms helped the system recover swiftly from unexpected failures, maintaining high availability and reliability. Additionally, I created support for the RELP (Reliable Event Logging Protocol) from scratch, ensuring reliable and efficient event logging across the system.</P>",
+            "<P>Furthermore, I developed methods to balance the load based on the client, which facilitated more compact data queries. By ensuring that data was not unnecessarily mixed across all nodes, I streamlined the data retrieval process, making it faster and more efficient. This client-specific load balancing approach not only improved query performance but also reduced the overhead on the system. My contributions led to a more robust and responsive load balancing system, significantly enhancing the overall performance and user experience at Devo.</P>"
           ],
           "links": [
             {
@@ -46,7 +46,7 @@
             "Jenkins",
             "Gitlab CI/CD",
             "Kubernetes",
-            "Git",
+            "GIT",
             "Jira",
             "TDD",
             "BDD"
@@ -55,15 +55,14 @@
         {
           "name": "Create a multi-cloud backup system",
           "description": [
-            "Israel spearheaded the development of a cutting-edge multi-cloud backup system from scratch, a crucial advancement for Devo's data redundancy and disaster recovery capabilities. This system was designed to store client logs across multiple regions and cloud environments, ensuring maximum data protection and availability. One of the key features of this system was its ability to configure storage types on-the-fly, allowing for seamless adjustments to the cloud storage configurations based on real-time needs and criteria.",
-            "Israel implemented sophisticated data transition criteria, which automated the movement of data between various storage classes based on usage patterns and retention policies. This feature ensured that data was always stored in the most cost-effective and efficient manner, without compromising accessibility or performance.",
-            "In addition to this, Israel's system included robust node recovery mechanisms, enabling quick restoration of service in the event of a node failure. This significantly reduced downtime and maintained the integrity and availability of critical data. To further enhance the system's efficiency, he developed advanced data compaction methods for data nearing its end-of-life, streamlining storage usage and reducing overhead.",
-            "Finally, Israel integrated precise system cleanup schedules, ensuring that obsolete data was purged in a timely manner, maintaining optimal system performance and storage health. His contributions to this multi-cloud backup system not only fortified Devo's data management capabilities but also ensured compliance with stringent security and data retention regulations. This project underscored Israel's expertise in creating resilient, scalable, and highly efficient data storage solutions, reinforcing Devo's commitment to excellence in security and data analytics."
+            "<P>I spearheaded the development of a cutting-edge multi-cloud backup system from scratch, a crucial advancement for Devo's data redundancy and disaster recovery capabilities. This system was designed to store client logs across multiple regions and cloud environments, ensuring maximum data protection and availability. One of the key features of this system was its ability to configure storage types on-the-fly, allowing for seamless adjustments to the cloud storage configurations based on real-time needs and criteria.</P>",
+            "<P>I implemented sophisticated data transition criteria, which automated the movement of data between various storage classes based on usage patterns and retention policies. This feature ensured that data was always stored in the most cost-effective and efficient manner, without compromising accessibility or performance.</P>",
+            "<P>In addition to this, my system included robust node recovery mechanisms, enabling quick restoration of service in the event of a node failure. This significantly reduced downtime and maintained the integrity and availability of critical data. To further enhance the system's efficiency, I developed advanced data compaction methods for data nearing its end-of-life, streamlining storage usage and reducing overhead.</P>",
+            "<P>Finally, I integrated precise system cleanup schedules, ensuring that obsolete data was purged in a timely manner, maintaining optimal system performance and storage health. My contributions to this multi-cloud backup system not only fortified Devo's data management capabilities but also ensured compliance with stringent security and data retention regulations. This project underscored my expertise in creating resilient, scalable, and highly efficient data storage solutions, reinforcing Devo's commitment to excellence in security and data analytics.</P>"
           ],
           "links": [],
           "technologies": [
-            "Java 11",
-            "Java 21",
+            "Java",
             "AWS",
             "GCP",
             "FIPS",
@@ -74,7 +73,7 @@
             "Jenkins",
             "Gitlab CI/CD",
             "Kubernetes",
-            "Git",
+            "GIT",
             "Jira",
             "TDD",
             "BDD"
@@ -83,17 +82,17 @@
         {
           "name": "Integrating Quality and Security Reviews into the CI/CD Pipeline",
           "description": [
-            "Israel played a pivotal role in the integration of comprehensive quality and security checks into Devo's CI/CD pipeline. This initiative was instrumental in elevating the development process to meet stringent industry standards, including NIST, FIPS, and FedRAMP.",
-            "<b>Jenkins Pipeline Integration</b>",
-            "Initially, Israel focused on incorporating SonarQube into the Jenkins pipeline for continuous code quality analysis. He configured SonarQube to perform static code analysis, which allowed the team to detect code smells, bugs, and potential vulnerabilities early in the development cycle. This integration ensured that only high-quality code was merged, significantly reducing the number of issues that reached production.",
-            "<b>Transition to GitLab CI/CD</b>",
-            "Following the success with Jenkins, Israel transitioned the pipeline to GitLab CI/CD. He leveraged GitLab's advanced features to streamline the process and enhance the automation of code deployments. This move facilitated better collaboration and efficiency across the development team.",
-            "<b>Security Vulnerability Scanning</b>",
-            "To address security vulnerabilities, Israel integrated Snyk and OWASP into the CI/CD pipeline. Snyk provided real-time scanning of open source dependencies, identifying and suggesting fixes for known vulnerabilities. Meanwhile, OWASP tools were utilized to perform comprehensive security assessments, focusing on identifying and mitigating risks associated with web applications.",
-            "<b>Achieving Compliance Standards</b>",
-            "Israel's meticulous work ensured that the pipeline adhered to the rigorous standards required by NIST, FIPS, and FedRAMP. He established automated checks and balances within the CI/CD process, ensuring that every code change underwent thorough quality and security reviews before deployment. This not only improved the overall security posture of the applications but also streamlined the compliance verification process, making it easier for Devo to demonstrate adherence to these critical standards.",
-            "<b>Outcome</b>",
-            "Israel's contributions significantly enhanced the robustness of Devo's CI/CD pipeline, ensuring that code quality and security were maintained at the highest levels. The integration of SonarQube, Snyk, and OWASP tools into the pipeline resulted in a more secure and efficient development process, aligning with the company’s commitment to innovation and excellence. This project was a crucial step in maintaining Devo's position at the forefront of cybersecurity and data analytics, providing clients with reliable and secure solutions."
+            "<P>I played a pivotal role in the integration of comprehensive quality and security checks into Devo's CI/CD pipeline. This initiative was instrumental in elevating the development process to meet stringent industry standards, including NIST, FIPS, and FedRAMP.</P>",
+            "<P><b>Jenkins Pipeline Integration</b></P>",
+            "<P>Initially, I focused on incorporating SonarQube into the Jenkins pipeline for continuous code quality analysis. I configured SonarQube to perform static code analysis, which allowed the team to detect code smells, bugs, and potential vulnerabilities early in the development cycle. This integration ensured that only high-quality code was merged, significantly reducing the number of issues that reached production.</P>",
+            "<P><b>Transition to GitLab CI/CD</b></P>",
+            "<P>Following the success with Jenkins, I transitioned the pipeline to GitLab CI/CD. I leveraged GitLab's advanced features to streamline the process and enhance the automation of code deployments. This move facilitated better collaboration and efficiency across the development team.</P>",
+            "<P><b>Security Vulnerability Scanning</b></P>",
+            "<P>To address security vulnerabilities, I integrated Snyk and OWASP into the CI/CD pipeline. Snyk provided real-time scanning of open source dependencies, identifying and suggesting fixes for known vulnerabilities. Meanwhile, OWASP tools were utilized to perform comprehensive security assessments, focusing on identifying and mitigating risks associated with web applications.</P>",
+            "<P><b>Achieving Compliance Standards</b></P>",
+            "<P>My meticulous work ensured that the pipeline adhered to the rigorous standards required by NIST, FIPS, and FedRAMP. I established automated checks and balances within the CI/CD process, ensuring that every code change underwent thorough quality and security reviews before deployment. This not only improved the overall security posture of the applications but also streamlined the compliance verification process, making it easier for Devo to demonstrate adherence to these critical standards.</P>",
+            "<P><b>Outcome</b></P>",
+            "<P>My contributions significantly enhanced the robustness of Devo's CI/CD pipeline, ensuring that code quality and security were maintained at the highest levels. The integration of SonarQube, Snyk, and OWASP tools into the pipeline resulted in a more secure and efficient development process, aligning with the company’s commitment to innovation and excellence. This project was a crucial step in maintaining Devo's position at the forefront of cybersecurity and data analytics, providing clients with reliable and secure solutions.</P>"
           ],
           "links": [],
           "technologies": [
@@ -112,25 +111,25 @@
         {
           "name": "Creation of an Alert System for Monitoring with Prometheus",
           "description": [
-            "Israel was instrumental in the development of a comprehensive alert system designed to monitor performance and critical situations in production environments using Prometheus. Recognizing the need for real-time monitoring and prompt response mechanisms, Israel architected a solution that provided detailed insights into system performance and detected potential issues such as fraud, attacks, and other anomalies.",
-            "To achieve this, Israel integrated Prometheus into Devo's infrastructure, setting up robust metrics collection and alerting mechanisms. He defined key performance indicators (KPIs) and thresholds that were crucial for maintaining system health and stability. By leveraging Prometheus' powerful querying capabilities, Israel established a series of alert rules that could identify abnormal patterns in data ingestion, processing times, and system resource usage.",
-            "In addition to setting up the alert system, Israel developed a thorough troubleshooting guide to assist the operations team in diagnosing and resolving issues swiftly. This guide included step-by-step procedures for identifying the root cause of alerts, recommended actions, and escalation protocols. The guide ensured that team members had a clear understanding of how to handle different types of alerts, from minor performance degradations to critical system failures.",
-            "Furthermore, Israel implemented automated early response actions to mitigate potential issues before they escalated. These automated actions included restarting services, redistributing load, and scaling resources dynamically based on the nature and severity of the alerts. By automating these initial responses, Israel significantly reduced the mean time to recovery (MTTR) and minimized the impact of issues on the end-users.",
-            "To enhance the overall effectiveness of the monitoring system, Israel also designed protocols for handling critical system situations. These protocols outlined the roles and responsibilities of team members, communication strategies, and coordination efforts required during major incidents. This structured approach ensured a swift and coordinated response, reducing downtime and maintaining service reliability.",
-            "Israel's contributions to the creation of the alert system not only improved the monitoring capabilities of Devo's platform but also bolstered its security posture by enabling the early detection of fraud and attacks. His work ensured that the system could maintain high performance and resilience, providing Devo's clients with a reliable and secure data analytics platform."
+            "<P>I was instrumental in the development of a comprehensive alert system designed to monitor performance and critical situations in production environments using Prometheus. Recognizing the need for real-time monitoring and prompt response mechanisms, I architected a solution that provided detailed insights into system performance and detected potential issues such as fraud, attacks, and other anomalies.</P>",
+            "<P>To achieve this, I integrated Prometheus into Devo's infrastructure, setting up robust metrics collection and alerting mechanisms. I defined key performance indicators (KPIs) and thresholds that were crucial for maintaining system health and stability. By leveraging Prometheus' powerful querying capabilities, I established a series of alert rules that could identify abnormal patterns in data ingestion, processing times, and system resource usage.</P>",
+            "<P>In addition to setting up the alert system, I developed a thorough troubleshooting guide to assist the operations team in diagnosing and resolving issues swiftly. This guide included step-by-step procedures for identifying the root cause of alerts, recommended actions, and escalation protocols. The guide ensured that team members had a clear understanding of how to handle different types of alerts, from minor performance degradations to critical system failures.</P>",
+            "<P>Furthermore, I implemented automated early response actions to mitigate potential issues before they escalated. These automated actions included restarting services, redistributing load, and scaling resources dynamically based on the nature and severity of the alerts. By automating these initial responses, I significantly reduced the mean time to recovery (MTTR) and minimized the impact of issues on the end-users.</P>",
+            "<P>To enhance the overall effectiveness of the monitoring system, I also designed protocols for handling critical system situations. These protocols outlined the roles and responsibilities of team members, communication strategies, and coordination efforts required during major incidents. This structured approach ensured a swift and coordinated response, reducing downtime and maintaining service reliability.</P>",
+            "<P>My contributions to the creation of the alert system not only improved the monitoring capabilities of Devo's platform but also bolstered its security posture by enabling the early detection of fraud and attacks. My work ensured that the system could maintain high performance and resilience, providing Devo's clients with a reliable and secure data analytics platform.</P>"
           ],
           "links": [],
           "technologies": [
             "Prometheus",
             "Grafana",
-            "kubernetes",
+            "Kubernetes",
             "Docker",
             "Elastic Stack",
             "Kibana",
             "Python",
             "Bash",
             "Ansible",
-            "Git"
+            "GIT"
           ]
         }
       ],
@@ -147,22 +146,24 @@
       "thumbnail": "European_Commission_01.png",
       "period_time": "June 2017 - January 2020",
       "full_description": [
-        "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, upholding the EU treaties, and managing the day-to-day business of the EU. It operates as a cabinet government, with 27 members of the Commission (one from each member state) led by a President. The Commission's main roles include developing strategies and policies, enforcing EU laws, and negotiating international agreements on behalf of the EU.",
-        "Within the European Commission, the Directorate-General for Competition (DG COMP) plays a critical role. DG COMP is responsible for establishing and implementing competition policy to ensure fair competition within the EU internal market. This includes enforcing antitrust laws, overseeing mergers and acquisitions, and preventing monopolistic practices and state aid that could distort competition. DG COMP works to protect consumers and businesses by promoting innovation, ensuring a level playing field, and enhancing economic efficiency.",
-        "Israel worked at DG COMP, contributing to the Commission's efforts to maintain competitive markets and foster economic growth across the European Union."
+        "<P>The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, upholding the EU treaties, and managing the day-to-day business of the EU. It operates as a cabinet government, with 27 members of the Commission (one from each member state) led by a President. The Commission's main roles include developing strategies and policies, enforcing EU laws, and negotiating international agreements on behalf of the EU.</P>",
+        "<P>Within the European Commission, the Directorate-General for Competition (DG COMP) plays a critical role. DG COMP is responsible for establishing and implementing competition policy to ensure fair competition within the EU internal market. This includes enforcing antitrust laws, overseeing mergers and acquisitions, and preventing monopolistic practices and state aid that could distort competition. DG COMP works to protect consumers and businesses by promoting innovation, ensuring a level playing field, and enhancing economic efficiency.</P>",
+        "<P>I worked at DG COMP, contributing to the Commission's efforts to maintain competitive markets and foster economic growth across the European Union.</P>"
       ],
       "contribution": [
-        "Israel worked as a software architect on three projects, with a wide range of responsibilities that showcased his expertise and leadership in software development. His key responsibilities included:",
-        "<b>Management of Non-Functional Requirements and Project Definition</b>: Using Enterprise Architect, Israel was responsible for identifying and managing non-functional requirements, ensuring that each project was clearly defined and aligned with organizational goals.",
-        "<b>Task Prioritization</b>: Utilizing Jira, he prioritized tasks effectively to ensure that the most critical elements were addressed in a timely manner.",
-        "<b>Management of Task Dependencies</b>: He used Jira to manage dependencies between tasks, ensuring smooth progress and minimizing delays.",
-        "<b>Technology Selection</b>: Israel was instrumental in selecting the appropriate technologies for each project, ensuring that they were well-suited to meet the project’s needs.",
-        "<b>Team Member Profile Definition</b>: He defined the profiles and roles of team members, ensuring that the team had the necessary skills and expertise to succeed.",
-        "<b>Inter-Team Collaboration</b>: Israel facilitated collaboration between different teams whose projects needed to be integrated, ensuring seamless integration and cooperation.",
-        "<b>Quality Control and Testing</b>: He defined quality controls and testing protocols, including unit tests using technologies such as JUnit or Google Test/Valgrind, depending on the programming language.",
-        "<b>CI/CD Systems Implementation</b>: He defined and implemented Continuous Integration and Continuous Deployment systems using tools like Bamboo and SonarQube.",
-        "<b>Software Development Methodologies</b>: Israel applied Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices to ensure high-quality software development.",
-        "<b>Agile Methodology</b>: He utilized SCRUM as the primary methodology for project management, fostering an agile and efficient development process."
+        "<P>At the European Commission, I worked as a software architect on three projects, with a wide range of responsibilities that showcased my expertise and leadership in software development. My key responsibilities included:</P>",
+        "<ul>",
+        "<li><b>Management of Non-Functional Requirements and Project Definition</b>: Using Enterprise Architect, I was responsible for identifying and managing non-functional requirements, ensuring that each project was clearly defined and aligned with organizational goals.</li>",
+        "<li><b>Task Prioritization</b>: Utilizing Jira, I prioritized tasks effectively to ensure that the most critical elements were addressed in a timely manner.</li>",
+        "<li><b>Management of Task Dependencies</b>: I used Jira to manage dependencies between tasks, ensuring smooth progress and minimizing delays.</li>",
+        "<li><b>Technology Selection</b>: I was instrumental in selecting the appropriate technologies for each project, ensuring that they were well-suited to meet the project’s needs.</li>",
+        "<li><b>Team Member Profile Definition</b>: I defined the profiles and roles of team members, ensuring that the team had the necessary skills and expertise to succeed.</li>",
+        "<li><b>Inter-Team Collaboration</b>: I facilitated collaboration between different teams whose projects needed to be integrated, ensuring seamless integration and cooperation.</li>",
+        "<li><b>Quality Control and Testing</b>: I defined quality controls and testing protocols, including unit tests using technologies such as JUnit or Google Test/Valgrind, depending on the programming language.</li>",
+        "<li><b>CI/CD Systems Implementation</b>: I defined and implemented Continuous Integration and Continuous Deployment systems using tools like Bamboo and SonarQube.</li>",
+        "<li><b>Software Development Methodologies</b>: I applied Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices to ensure high-quality software development.</li>",
+        "<li><b>Agile Methodology</b>: I utilized SCRUM as the primary methodology for project management, fostering an agile and efficient development process</li>.",
+        "</ul>"
       ],
       "links": [
         {
@@ -175,9 +176,11 @@
         {
           "name": "Definition of Two RESTful APIs",
           "description": [
-            "The first project involved defining two RESTful APIs that implemented the Richardson Maturity Model Level 3, incorporating HATEOAS. These APIs were designed as platforms for the secure exchange of legal documents in anti-cartel proceedings.",
-            "<b>Internal API</b>: The first API was intended to serve the internal staff of the European Commission.",
-            "<b>External API</b>: The second API served as a platform for external personnel.",
+            "<P>The first project involved defining two RESTful APIs that implemented the Richardson Maturity Model Level 3, incorporating HATEOAS. These APIs were designed as platforms for the secure exchange of legal documents in anti-cartel proceedings.</P>",
+            "<ul>",
+            "<li><b>Internal API</b>: The first API was intended to serve the internal staff of the European Commission.</li>",
+            "<li><b>External API</b>: The second API served as a platform for external personnel.</li>",
+            "</ul>",
             "Both APIs featured access control through a Single Sign-On system called CAS. Data persistence was managed using both Oracle DB and MongoDB. Additionally, the APIs were integrated with an internal secure document storage project via a SOAP interface. The workflow of each procedure was managed using the State design pattern, and system administrators were notified of status changes via email."
           ],
           "links": [
@@ -188,7 +191,7 @@
             }
           ],
           "technologies": [
-            "Java 8",
+            "Java",
             "Spring Security",
             "Spring MVC",
             "Spring Data",
@@ -201,10 +204,10 @@
             "MongoDB",
             "Swagger",
             "JUnit",
-            "AngularJS 5",
+            "AngularJS",
             "Selenium",
             "Maven",
-            "Git",
+            "GIT",
             "CAS",
             "Jira",
             "JUnit",
@@ -217,10 +220,10 @@
         {
           "name": "E-Confidenciality",
           "description": [
-            "In the second project, Israel played a pivotal role as the software architect, overseeing the development of a sophisticated system for negotiating confidential versions of legal documentation in anti-cartel proceedings. His contributions were instrumental in establishing and assigning dynamic verification groups responsible for managing online legal processes. These groups, composed of internal personnel, were verified through the Central Authentication Service (CAS), a system previously implemented under his guidance.",
-            "Israel architected the system that governs the status of each document using the Status design pattern, which allows for the reversal of changes, ensuring the integrity and accuracy of legal documents throughout the negotiation process. His expertise ensured that any modifications could be undone, maintaining the documents' fidelity.",
-            "Additionally, Israel selected and integrated Oracle DB and MongoDB as the database engines, capitalizing on their strengths to efficiently manage the project's complex data requirements. He ensured that the implementation followed the Richardson Maturity Model Level 3, incorporating HATEOAS (Hypermedia as the Engine of Application State) principles. This approach guaranteed a robust, scalable system capable of supporting the intricate workflows involved in anti-cartel legal proceedings.",
-            "Through his leadership and technical expertise, Israel significantly enhanced the project's capability to provide a secure, reliable, and user-friendly platform for negotiating sensitive legal documents, thus bolstering the efficacy of anti-cartel enforcement actions. His work as the software architect was crucial in achieving the project's goals and ensuring its success."
+            "<P>In the second project, I played a pivotal role as the software architect, overseeing the development of a sophisticated system for negotiating confidential versions of legal documentation in anti-cartel proceedings. My contributions were instrumental in establishing and assigning dynamic verification groups responsible for managing online legal processes. These groups, composed of internal personnel, were verified through the Central Authentication Service (CAS), a system previously implemented under my guidance.</P>",
+            "<P>I architected the system that governs the status of each document using the Status design pattern, which allows for the reversal of changes, ensuring the integrity and accuracy of legal documents throughout the negotiation process. My expertise ensured that any modifications could be undone, maintaining the documents' fidelity.</P>",
+            "<P>Additionally, I selected and integrated Oracle DB and MongoDB as the database engines, capitalizing on their strengths to efficiently manage the project's complex data requirements. I ensured that the implementation followed the Richardson Maturity Model Level 3, incorporating HATEOAS (Hypermedia as the Engine of Application State) principles. This approach guaranteed a robust, scalable system capable of supporting the intricate workflows involved in anti-cartel legal proceedings.</P>",
+            "<P>Through my leadership and technical expertise, I significantly enhanced the project's capability to provide a secure, reliable, and user-friendly platform for negotiating sensitive legal documents, thus bolstering the efficacy of anti-cartel enforcement actions. My work as the software architect was crucial in achieving the project's goals and ensuring its success.</P>"
           ],
           "links": [
             {
@@ -230,7 +233,7 @@
             }
           ],
           "technologies": [
-            "AngularJS 5",
+            "AngularJS",
             "Ansible",
             "BDD",
             "Bamboo",
@@ -238,11 +241,11 @@
             "Docker",
             "Eclipselink",
             "Enterprise Architect",
-            "Git",
+            "GIT",
             "IntelliJ IDEA",
             "JPA",
             "JUnit",
-            "Java 8",
+            "Java",
             "Jira",
             "Maven",
             "MongoDB",
@@ -262,13 +265,13 @@
         {
           "name": "Semantic index of legal documents",
           "description": [
-            "The third project, proposed by Israel, centers around developing a sophisticated system for semantic indexing of legal documents. Israel acted as the architect for this project, deeply involving himself in the programming process to ensure its success. The project utilizes clustering techniques, specifically the K-Means algorithm, applied to the dataset of legal documents from the anti-cartel department. The indexing process is integrated into a microservice designed with the gRPC framework, implemented in C++14 to ensure maximum efficiency and performance.",
-            "The architecture of these microservices follows the Command Query Responsibility Segregation (CQRS) paradigm, deployed on a service pool to guarantee resilience and rapid response times. The semantic search capability is powered by a neural network trained on the anti-cartel legal documents dataset, utilizing the TensorFlow framework. Additionally, Israel developed a complementary service in Java, which leverages this semantic search tool to enhance its functionality.",
-            "This dual-service approach not only facilitates high-speed semantic searches but also ensures robust and scalable indexing of complex legal documents. The system's design emphasizes resilience, efficiency, and accuracy, making it a vital tool for legal document management and retrieval in the anti-cartel department. Israel's initiative and hands-on involvement in both the architecture and programming were crucial to the project's success."
+            "<P>The third project, proposed by me, centers around developing a sophisticated system for semantic indexing of legal documents. I acted as the architect for this project, deeply involving myself in the programming process to ensure its success. The project utilizes clustering techniques, specifically the K-Means algorithm, applied to the dataset of legal documents from the anti-cartel department. The indexing process is integrated into a microservice designed with the gRPC framework, implemented in C++14 to ensure maximum efficiency and performance.</P>",
+            "<P>The architecture of these microservices follows the Command Query Responsibility Segregation (CQRS) paradigm, deployed on a service pool to guarantee resilience and rapid response times. The semantic search capability is powered by a neural network trained on the anti-cartel legal documents dataset, utilizing the TensorFlow framework. Additionally, I developed a complementary service in Java, which leverages this semantic search tool to enhance its functionality.</P>",
+            "<P>This dual-service approach not only facilitates high-speed semantic searches but also ensures robust and scalable indexing of complex legal documents. The system's design emphasizes resilience, efficiency, and accuracy, making it a vital tool for legal document management and retrieval in the anti-cartel department. My initiative and hands-on involvement in both the architecture and programming were crucial to the project's success.</P>"
           ],
           "links": [],
           "technologies": [
-            "AngularJS 5",
+            "AngularJS",
             "Ansible",
             "Bamboo",
             "C++",
@@ -283,14 +286,14 @@
             "IntelliJ IDEA",
             "JPA",
             "JUnit",
-            "Java 8",
+            "Java",
             "Jira",
             "Maven",
             "Microservices",
             "OpenCL",
             "Oracle DB",
             "Selenium",
-            "Sonarqube",
+            "SonarQube",
             "Spring Data",
             "Spring Documentation",
             "Spring MVC",
@@ -305,11 +308,11 @@
         {
           "name": "Development of a Renewable Energy Distribution System",
           "description": [
-            "The fourth project involves the development of a renewable energy distribution system within the electrical grid, aiming to normalize and stabilize electric consumption over time to maximize the utilization of renewable energies. Israel played a significant role in this project, contributing extensively to both its architecture and implementation.",
-            "The system integrates a diverse array of technologies to achieve its goals. At the core of the communication system lies a Kafka-based messenger cluster, where communication with devices is managed through Avro schemas. An intermediary \"gateway\" is implemented using RaspberryPi, responsible for sending telemetry data and receiving commands. This gateway system is developed in Go, utilizing the ModBus communications protocol in both its serial and TCP versions, with TCP communications secured via a VPN.",
-            "The software management for this project is handled through the BalenaIO platform, which facilitates the deployment and operation of the gateway devices. Continuous Integration and Continuous Deployment (CI/CD) processes are managed using CircleCI, ensuring a seamless and efficient development workflow.",
-            "In addition, Israel created a statistics parser in Groovy for the ingestion of telemetry data, providing critical insights into energy consumption patterns and system performance. His involvement was pivotal, overseeing the architecture, implementation, and integration of various components to ensure the project's success.",
-            "Israel's hands-on approach and technical expertise were instrumental in addressing the challenges of renewable energy distribution. His contribution in leveraging advanced technologies and developing robust communication protocols underscores his significant role in this innovative project aimed at enhancing the stability and efficiency of renewable energy usage within the electrical grid."
+            "<P>The fourth project involves the development of a renewable energy distribution system within the electrical grid, aiming to normalize and stabilize electric consumption over time to maximize the utilization of renewable energies. I played a significant role in this project, contributing extensively to both its architecture and implementation.</P>",
+            "<P>The system integrates a diverse array of technologies to achieve its goals. At the core of the communication system lies a Kafka-based messenger cluster, where communication with devices is managed through Avro schemas. An intermediary \"gateway\" is implemented using RaspberryPi, responsible for sending telemetry data and receiving commands. This gateway system is developed in Go, utilizing the ModBus communications protocol in both its serial and TCP versions, with TCP communications secured via a VPN.</P>",
+            "<P>The software management for this project is handled through the BalenaIO platform, which facilitates the deployment and operation of the gateway devices. Continuous Integration and Continuous Deployment (CI/CD) processes are managed using CircleCI, ensuring a seamless and efficient development workflow.</P>",
+            "<P>In addition, I created a statistics parser in Groovy for the ingestion of telemetry data, providing critical insights into energy consumption patterns and system performance. My involvement was pivotal, overseeing the architecture, implementation, and integration of various components to ensure the project's success.</P>",
+            "<P>My hands-on approach and technical expertise were instrumental in addressing the challenges of renewable energy distribution. My contribution in leveraging advanced technologies and developing robust communication protocols underscores my significant role in this innovative project aimed at enhancing the stability and efficiency of renewable energy usage within the electrical grid.</P>"
           ],
           "links": [],
           "technologies": [
@@ -322,14 +325,14 @@
             "Makefile",
             "Docker",
             "Kubernetes",
-            "Google Cloud Computing",
+            "GCP",
             "Azure",
             "IoTHub",
             "Kafka",
             "Avro Schemas",
             "Ansible",
             "Elastic Search",
-            "Kibanna",
+            "Kibana",
             "Makefile",
             "Jira",
             "Groovy"
@@ -348,206 +351,346 @@
       "thumbnail": "panel_sistemas.png",
       "period_time": "September 2015 - June 2017",
       "full_description": [
-        "Panel Sistemas is a leading technology solutions company specializing in software development, consulting, and IT services. Founded in Spain, it serves diverse industries with notable clients such as Telefónica, BBVA, Santander, Repsol, and El Corte Inglés.",
+        "<P>Panel Sistemas is a leading technology solutions company specializing in software development, consulting, and IT services. Founded in Spain, it serves diverse industries with notable clients such as Telefónica, BBVA, Santander, Repsol, and El Corte Inglés.</P>",
         "<b>Services Offered</b>",
-        "- Software Development: Custom software solutions.",
-        "- Consulting: IT strategy and optimization.",
-        "- Maintenance and Support: Ongoing application support.",
-        "- Quality Assurance: Comprehensive software testing.",
-        "- Digital Transformation: Transitioning businesses to digital platforms.",
+        "<lu>",
+        "<li>Software Development: Custom software solutions.</li>",
+        "<li>Consulting: IT strategy and optimization.</li>",
+        "<li>Maintenance and Support: Ongoing application support.</li>",
+        "<li>Quality Assurance: Comprehensive software testing.</li>",
+        "<li>Digital Transformation: Transitioning businesses to digital platforms.</li>",
+        "</lu>",
         "<b>Industry Expertise</b>",
-        "- Finance",
-        "- Telecommunications",
-        "- Energy",
-        "- Retail"
+        "<lu>",
+        "<li>Finance</li>",
+        "<li>Telecommunications</li>",
+        "<li>Energy</li>",
+        "<li>Retail</li>",
+        "</lu>"
       ],
       "contribution": [
-        "Israel worked as a software architect on three projects, with a wide range of responsibilities that showcased his expertise and leadership in software development. His key responsibilities included:",
-        "<b>Management of Non-Functional Requirements and Project Definition</b>: Using Enterprise Architect, Israel was responsible for identifying and managing non-functional requirements, ensuring that each project was clearly defined and aligned with organizational goals.",
-        "<b>Task Prioritization</b>: Utilizing Jira, he prioritized tasks effectively to ensure that the most critical elements were addressed in a timely manner.",
-        "<b>Management of Task Dependencies</b>: He used Jira to manage dependencies between tasks, ensuring smooth progress and minimizing delays.",
-        "<b>Technology Selection</b>: Israel was instrumental in selecting the appropriate technologies for each project, ensuring that they were well-suited to meet the project’s needs.",
-        "<b>Team Member Profile Definition</b>: He defined the profiles and roles of team members, ensuring that the team had the necessary skills and expertise to succeed.",
-        "<b>Inter-Team Collaboration</b>: Israel facilitated collaboration between different teams whose projects needed to be integrated, ensuring seamless integration and cooperation.",
-        "<b>Quality Control and Testing</b>: He defined quality controls and testing protocols, including unit tests using technologies such as JUnit or Google Test/Valgrind, depending on the programming language.",
-        "<b>CI/CD Systems Implementation</b>: He defined and implemented Continuous Integration and Continuous Deployment systems using tools like Bamboo and SonarQube.",
-        "<b>Software Development Methodologies</b>: Israel applied Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices to ensure high-quality software development.",
-        "<b>Agile Methodology</b>: He utilized SCRUM as the primary methodology for project management, fostering an agile and efficient development process."
+        "<P>At Panel Sistemas, I worked as a functional analyst on three projects. In addition, I performed tasks as a senior programmer in the post-decision-making phase. My responsibilities as a functional analyst included the following:</P>",
+        "<ul>",
+        "<li>Analysis of non-functional requirements and decision-making on the exact implementation of the solution (Redmine)</li>",
+        "<li>Creation of sub-tasks with lower granularity to achieve objectives (Redmine)</li>",
+        "<li>Time estimation (Redmine)</li>",
+        "<li>Definition and implementation of the project structure in the specified technologies</li>",
+        "<li>Definition of unit test coverage and quality (JUnit, Google Test, Valgrind)</li>",
+        "<li>Implementation of CI/CD systems (Jenkins)</li>",
+        "<li>Utilization of SCRUM as the development methodology</li>",
+        "<li>Application of TDD and BDD in software development</li>",
+        "<li>Delivery of training sessions on TDD, BDD, Neural Networks, Clean Code, and more</li>",
+        "</ul>"
       ],
       "links": [
         {
           "tag": "Website",
-          "url": "https://competition-policy.ec.europa.eu/index_en",
-          "text": "EU, DG COMP Website"
+          "url": "https://www.panel.es/",
+          "text": "Panel Sistemas Website"
         }
       ],
       "projects": [
         {
-          "name": "Definition of Two RESTful APIs",
+          "name": "Modernizing Maritime and Air Transport Messaging: Replacing IATA with XML/JSON",
           "description": [
-            "The first project involved defining two RESTful APIs that implemented the Richardson Maturity Model Level 3, incorporating HATEOAS. These APIs were designed as platforms for the secure exchange of legal documents in anti-cartel proceedings.",
-            "<b>Internal API</b>: The first API was intended to serve the internal staff of the European Commission.",
-            "<b>External API</b>: The second API served as a platform for external personnel.",
-            "Both APIs featured access control through a Single Sign-On system called CAS. Data persistence was managed using both Oracle DB and MongoDB. Additionally, the APIs were integrated with an internal secure document storage project via a SOAP interface. The workflow of each procedure was managed using the State design pattern, and system administrators were notified of status changes via email."
-          ],
-          "links": [
-            {
-              "tag": "Documentation",
-              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
-              "text": "e-leniency documentation"
-            }
-          ],
-          "technologies": [
-            "Java 8",
-            "Spring Security",
-            "Spring MVC",
-            "Spring Data",
-            "Spring Documentation",
-            "Spring IoC",
-            "JPA",
-            "Eclipselink",
-            "WebLogic 12",
-            "Oracle DB",
-            "MongoDB",
-            "Swagger",
-            "JUnit",
-            "AngularJS 5",
-            "Selenium",
-            "Maven",
-            "Git",
-            "CAS",
-            "Jira",
-            "JUnit",
-            "Bamboo",
-            "SonarQube",
-            "TDD",
-            "BDD"
-          ]
-        },
-        {
-          "name": "E-Confidenciality",
-          "description": [
-            "In the second project, Israel played a pivotal role as the software architect, overseeing the development of a sophisticated system for negotiating confidential versions of legal documentation in anti-cartel proceedings. His contributions were instrumental in establishing and assigning dynamic verification groups responsible for managing online legal processes. These groups, composed of internal personnel, were verified through the Central Authentication Service (CAS), a system previously implemented under his guidance.",
-            "Israel architected the system that governs the status of each document using the Status design pattern, which allows for the reversal of changes, ensuring the integrity and accuracy of legal documents throughout the negotiation process. His expertise ensured that any modifications could be undone, maintaining the documents' fidelity.",
-            "Additionally, Israel selected and integrated Oracle DB and MongoDB as the database engines, capitalizing on their strengths to efficiently manage the project's complex data requirements. He ensured that the implementation followed the Richardson Maturity Model Level 3, incorporating HATEOAS (Hypermedia as the Engine of Application State) principles. This approach guaranteed a robust, scalable system capable of supporting the intricate workflows involved in anti-cartel legal proceedings.",
-            "Through his leadership and technical expertise, Israel significantly enhanced the project's capability to provide a secure, reliable, and user-friendly platform for negotiating sensitive legal documents, thus bolstering the efficacy of anti-cartel enforcement actions. His work as the software architect was crucial in achieving the project's goals and ensuring its success."
-          ],
-          "links": [
-            {
-              "tag": "Documentation",
-              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en",
-              "text": "e-confidenciality documentation"
-            }
-          ],
-          "technologies": [
-            "AngularJS 5",
-            "Ansible",
-            "BDD",
-            "Bamboo",
-            "CAS",
-            "Docker",
-            "Eclipselink",
-            "Enterprise Architect",
-            "Git",
-            "IntelliJ IDEA",
-            "JPA",
-            "JUnit",
-            "Java 8",
-            "Jira",
-            "Maven",
-            "MongoDB",
-            "Oracle DB",
-            "Selenium",
-            "SonarQube",
-            "Spring Data",
-            "Spring Documentation",
-            "Spring IoC",
-            "Spring MVC",
-            "Spring Security",
-            "Swagger",
-            "TDD",
-            "WebLogic 12"
-          ]
-        },
-        {
-          "name": "Semantic index of legal documents",
-          "description": [
-            "The third project, proposed by Israel, centers around developing a sophisticated system for semantic indexing of legal documents. Israel acted as the architect for this project, deeply involving himself in the programming process to ensure its success. The project utilizes clustering techniques, specifically the K-Means algorithm, applied to the dataset of legal documents from the anti-cartel department. The indexing process is integrated into a microservice designed with the gRPC framework, implemented in C++14 to ensure maximum efficiency and performance.",
-            "The architecture of these microservices follows the Command Query Responsibility Segregation (CQRS) paradigm, deployed on a service pool to guarantee resilience and rapid response times. The semantic search capability is powered by a neural network trained on the anti-cartel legal documents dataset, utilizing the TensorFlow framework. Additionally, Israel developed a complementary service in Java, which leverages this semantic search tool to enhance its functionality.",
-            "This dual-service approach not only facilitates high-speed semantic searches but also ensures robust and scalable indexing of complex legal documents. The system's design emphasizes resilience, efficiency, and accuracy, making it a vital tool for legal document management and retrieval in the anti-cartel department. Israel's initiative and hands-on involvement in both the architecture and programming were crucial to the project's success."
+            "<P>The first of the projects I worked on involved implementing a message exchange platform for maritime and air transport. This project successfully replaced the outdated IATA standard, which was based on plain text and prone to human errors due to its reliance on the position of the text string, with a more modern, readable, and error-resistant format based on XML/JSON.</P>",
+            "<P>To achieve this, I defined a parser that translated messages from the old format to either of the two modern standards through a Restful API that adhered to the Richardson Level 3 maturity model. This API not only provided an entry point for message translation but also facilitated intercommunication with other platforms worldwide and the storage of these communications to ensure the traceability of package transit globally. The project's goals required a high-availability structure and a replicated database system based on MongoDB, implemented through a cluster of servers with each shard replicated.</P>"
           ],
           "links": [],
           "technologies": [
-            "AngularJS 5",
-            "Ansible",
-            "Bamboo",
-            "C++",
-            "CUDA",
-            "Cassandra",
-            "Docker",
-            "Eclipselink",
-            "Enterprise Architect",
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Wildfly/JBoss",
+            "MongoDB",
+            "RabbitMQ",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "GWT",
+            "AWS",
+            "Phonegap",
+            "Hadoop",
+            "Selenium",
+            "Maven",
             "GIT",
-            "GoogleTest",
-            "Groovy",
+            "Jenkins",
+            "Redmine",
             "IntelliJ IDEA",
-            "JPA",
-            "JUnit",
-            "Java 8",
-            "Jira",
-            "Maven",
-            "Microservices",
-            "OpenCL",
-            "Oracle DB",
-            "Selenium",
-            "Sonarqube",
-            "Spring Data",
-            "Spring Documentation",
-            "Spring MVC",
-            "Spring Security",
-            "Swagger",
-            "TensorFlow",
-            "Valgrind",
-            "WebLogic 12",
-            "gRPC"
+            "Docker",
+            "Ansible"
           ]
         },
         {
-          "name": "Development of a Renewable Energy Distribution System",
+          "name": "Iberdrola's Intelligent Terminal Management with Siemens",
           "description": [
-            "The fourth project involves the development of a renewable energy distribution system within the electrical grid, aiming to normalize and stabilize electric consumption over time to maximize the utilization of renewable energies. Israel played a significant role in this project, contributing extensively to both its architecture and implementation.",
-            "The system integrates a diverse array of technologies to achieve its goals. At the core of the communication system lies a Kafka-based messenger cluster, where communication with devices is managed through Avro schemas. An intermediary \"gateway\" is implemented using RaspberryPi, responsible for sending telemetry data and receiving commands. This gateway system is developed in Go, utilizing the ModBus communications protocol in both its serial and TCP versions, with TCP communications secured via a VPN.",
-            "The software management for this project is handled through the BalenaIO platform, which facilitates the deployment and operation of the gateway devices. Continuous Integration and Continuous Deployment (CI/CD) processes are managed using CircleCI, ensuring a seamless and efficient development workflow.",
-            "In addition, Israel created a statistics parser in Groovy for the ingestion of telemetry data, providing critical insights into energy consumption patterns and system performance. His involvement was pivotal, overseeing the architecture, implementation, and integration of various components to ensure the project's success.",
-            "Israel's hands-on approach and technical expertise were instrumental in addressing the challenges of renewable energy distribution. His contribution in leveraging advanced technologies and developing robust communication protocols underscores his significant role in this innovative project aimed at enhancing the stability and efficiency of renewable energy usage within the electrical grid."
+            "The second project was a joint project with Siemens to create Iberdrola's intelligent terminal management infrastructure. These terminals took information about the user's electricity consumption by sending a daily report to the server using the SNMP communication protocol, unless a more detailed monitoring was desired on a specific device or set of devices, in which case reports would be generated with a level of detail that would reach consumption per minute. These data were stored in a non-relational MongoDB database, which for obvious reasons were several clusters, with load balancing and replicated shards. The information of each point was stored in the cluster by geographical proximity, as long as the server was able to assume the volume of data that included the inclusion of said node. The information of each node was kept for one year with a level of detail of consumption per minute, after the year was compacted generating the maximum, minimum and average of each day and this information was kept at this level of detail for 5 years and past That time lapse the information from each node was compacted again. The system also gave the possibility to control and listen in real time to the device through the SNMP and JNLP protocol. This structure was created using microservices in C ++ with the remote procedure call framework gRPC and was implemented in a set of servers based on Red Hat Enterprise Linux."
           ],
           "links": [],
           "technologies": [
-            "Go",
-            "Unit Test",
-            "BalenaIO",
-            "RaspberryPI",
-            "Modbus",
-            "Python",
-            "Makefile",
-            "Docker",
-            "Kubernetes",
-            "Google Cloud Computing",
-            "Azure",
-            "IoTHub",
-            "Kafka",
-            "Avro Schemas",
-            "Ansible",
-            "Elastic Search",
-            "Kibanna",
-            "Makefile",
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "MongoDB",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "Hadoop",
+            "Maven",
+            "GIT",
+            "Jenkins",
             "Jira",
-            "Groovy"
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes",
+            "JNLP",
+            "SNMP",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IOT"
+          ]
+        },
+        {
+          "name": "Monitoring and Care System for People with Disabilities or the Elderly for Securitas Direct",
+          "description": [
+            "<P>The third project, executed for Securitas Direct, involved creating a comprehensive monitoring and care system for people with disabilities or the elderly. The system identified the user's status based on various sensors distributed throughout their home, including presence sensors, door opening sensors, and personal fall sensors. This data was collected to provide detailed information about the user's activities, which was not only stored and accessible for consultation but also capable of generating alarms based on the individual's typical behavior patterns. The system analyzed these patterns and alerted if any sudden changes were detected, with customizable alarm settings.</P>",
+            "<P>Additionally, the application included a mobile component developed as a hybrid application. This mobile version utilized sensors to identify falls, track the GPS position of the individual, and more.</P>"
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "AWS",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring Batch",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "Oracle DB",
+            "JUnit",
+            "Ionic",
+            "Typescript",
+            "Hadoop",
+            "Selenium",
+            "Jasmine",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "Confluence",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes"
           ]
         }
       ],
       "images": [
-        "European_Commission_02.png"
+        "iata.png",
+        "iberdrola.svg",
+        "siemens.png"
+      ]
+    },
+    {
+      "name": "Prisa Group",
+      "short_description": [
+        "Panel Sistemas is a company specializing in technological solutions, offering software services, consulting, and development to various industries."
+      ],
+      "thumbnail": "prisa.png",
+      "period_time": "September 2015 - June 2017",
+      "full_description": [
+        "<P>Panel Sistemas is a leading technology solutions company specializing in software development, consulting, and IT services. Founded in Spain, it serves diverse industries with notable clients such as Telefónica, BBVA, Santander, Repsol, and El Corte Inglés.</P>",
+        "<b>Services Offered</b>",
+        "<lu>",
+        "<li>Software Development: Custom software solutions.</li>",
+        "<li>Consulting: IT strategy and optimization.</li>",
+        "<li>Maintenance and Support: Ongoing application support.</li>",
+        "<li>Quality Assurance: Comprehensive software testing.</li>",
+        "<li>Digital Transformation: Transitioning businesses to digital platforms.</li>",
+        "</lu>",
+        "<b>Industry Expertise</b>",
+        "<lu>",
+        "<li>Finance</li>",
+        "<li>Telecommunications</li>",
+        "<li>Energy</li>",
+        "<li>Retail</li>",
+        "</lu>"
+      ],
+      "contribution": [
+        "<P>At Panel Sistemas, I worked as a functional analyst on three projects. In addition, I performed tasks as a senior programmer in the post-decision-making phase. My responsibilities as a functional analyst included the following:</P>",
+        "<ul>",
+        "<li>Analysis of non-functional requirements and decision-making on the exact implementation of the solution (Redmine)</li>",
+        "<li>Creation of sub-tasks with lower granularity to achieve objectives (Redmine)</li>",
+        "<li>Time estimation (Redmine)</li>",
+        "<li>Definition and implementation of the project structure in the specified technologies</li>",
+        "<li>Definition of unit test coverage and quality (JUnit, Google Test, Valgrind)</li>",
+        "<li>Implementation of CI/CD systems (Jenkins)</li>",
+        "<li>Utilization of SCRUM as the development methodology</li>",
+        "<li>Application of TDD and BDD in software development</li>",
+        "<li>Delivery of training sessions on TDD, BDD, Neural Networks, Clean Code, and more</li>",
+        "</ul>"
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://www.panel.es/",
+          "text": "Panel Sistemas Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Modernizing Maritime and Air Transport Messaging: Replacing IATA with XML/JSON",
+          "description": [
+            "<P>The first of the projects I worked on involved implementing a message exchange platform for maritime and air transport. This project successfully replaced the outdated IATA standard, which was based on plain text and prone to human errors due to its reliance on the position of the text string, with a more modern, readable, and error-resistant format based on XML/JSON.</P>",
+            "<P>To achieve this, I defined a parser that translated messages from the old format to either of the two modern standards through a Restful API that adhered to the Richardson Level 3 maturity model. This API not only provided an entry point for message translation but also facilitated intercommunication with other platforms worldwide and the storage of these communications to ensure the traceability of package transit globally. The project's goals required a high-availability structure and a replicated database system based on MongoDB, implemented through a cluster of servers with each shard replicated.</P>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Wildfly/JBoss",
+            "MongoDB",
+            "RabbitMQ",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "GWT",
+            "AWS",
+            "Phonegap",
+            "Hadoop",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Redmine",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible"
+          ]
+        },
+        {
+          "name": "Iberdrola's Intelligent Terminal Management with Siemens",
+          "description": [
+            "The second project was a joint project with Siemens to create Iberdrola's intelligent terminal management infrastructure. These terminals took information about the user's electricity consumption by sending a daily report to the server using the SNMP communication protocol, unless a more detailed monitoring was desired on a specific device or set of devices, in which case reports would be generated with a level of detail that would reach consumption per minute. These data were stored in a non-relational MongoDB database, which for obvious reasons were several clusters, with load balancing and replicated shards. The information of each point was stored in the cluster by geographical proximity, as long as the server was able to assume the volume of data that included the inclusion of said node. The information of each node was kept for one year with a level of detail of consumption per minute, after the year was compacted generating the maximum, minimum and average of each day and this information was kept at this level of detail for 5 years and past That time lapse the information from each node was compacted again. The system also gave the possibility to control and listen in real time to the device through the SNMP and JNLP protocol. This structure was created using microservices in C ++ with the remote procedure call framework gRPC and was implemented in a set of servers based on Red Hat Enterprise Linux."
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "MongoDB",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "Hadoop",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes",
+            "JNLP",
+            "SNMP",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IOT"
+          ]
+        },
+        {
+          "name": "Monitoring and Care System for People with Disabilities or the Elderly for Securitas Direct",
+          "description": [
+            "<P>The third project, executed for Securitas Direct, involved creating a comprehensive monitoring and care system for people with disabilities or the elderly. The system identified the user's status based on various sensors distributed throughout their home, including presence sensors, door opening sensors, and personal fall sensors. This data was collected to provide detailed information about the user's activities, which was not only stored and accessible for consultation but also capable of generating alarms based on the individual's typical behavior patterns. The system analyzed these patterns and alerted if any sudden changes were detected, with customizable alarm settings.</P>",
+            "<P>Additionally, the application included a mobile component developed as a hybrid application. This mobile version utilized sensors to identify falls, track the GPS position of the individual, and more.</P>"
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "AWS",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring Batch",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "Oracle DB",
+            "JUnit",
+            "Ionic",
+            "Typescript",
+            "Hadoop",
+            "Selenium",
+            "Jasmine",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "Confluence",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes"
+          ]
+        }
+      ],
+      "images": [
+        "iata.png",
+        "iberdrola.svg",
+        "siemens.png"
       ]
     }
   ],

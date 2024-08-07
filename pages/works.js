@@ -1,5 +1,5 @@
 import cvData from '../public/data/CV.json'
-import { Container, Heading, SimpleGrid, Divider, Box, WrapItem, Wrap } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Box, WrapItem, Wrap, useColorModeValue } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
@@ -7,6 +7,34 @@ import { useContext, useEffect, useMemo, useState } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
 import TechBadge from '../components/techbadge'
 import moment from 'moment'
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // Función para actualizar el estado con el tamaño de la ventana
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Añadir event listener
+    window.addEventListener("resize", handleResize);
+
+    // Llamar a la función handleResize inmediatamente para establecer el tamaño inicial
+    handleResize();
+
+    // Limpiar event listener al desmontar
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Array vacío para que solo se ejecute al montar y desmontar
+  return windowSize
+}
+
 
 const Works = () => {
   const voxel = useContext(VoxelKoalaContext)
@@ -83,10 +111,12 @@ const Works = () => {
     })
   })
 
+  const { width } = useWindowSize()
+  const isMobile = width < 768; // Define el tamaño de pantalla móvil como < 768px
 
   return (
     <Layout title="Works">
-      <Container display="flex" flexDirection="row" maxW={'100%'}>
+      <Container display="flex" flexDirection={isMobile ? 'column' : 'row'} maxW={'100%'}>
         <Box flex="3">
           <Heading as="h3" fontSize={20} mb={4}>
             Works
@@ -120,7 +150,7 @@ const Works = () => {
           </Section>
         </Box>
 
-        <Box flex="1" ml={6}>
+        <Box flex="1" ml={6} bg={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')} p={1} rounded={'md'}>
           <Heading as="h3" fontSize={20} mb={4}>
             Technologies
           </Heading>
@@ -133,7 +163,7 @@ const Works = () => {
             onToggle={handleSelectAllChange}
           />
           <Wrap gap={0.1}>
-            {Object.keys(technologyUsage).map((tech, index) => (
+            {Object.keys(technologyUsage).sort().map((tech, index) => (
               <WrapItem key={index}>
                 <TechBadge
                   tech={tech}

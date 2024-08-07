@@ -20,11 +20,7 @@ const Work = ({ job }) => (
       <Title>
         {job.name} <Badge>{job.period_time}</Badge>
       </Title>
-      {
-        job.full_description.map((str, index) => (
-          <P key={index} dangerouslySetInnerHTML={{ __html: str }} />
-        ))
-      }
+      <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: job.full_description.join('') }} />
       <WorkImage src={"/images/works/" + job.thumbnail} alt={job.name} />
       <List ml={4} my={4}>
         {
@@ -39,22 +35,14 @@ const Work = ({ job }) => (
         }
         <ListItem>
           <Meta>Contributions</Meta>
-          {
-            job.contribution.map((str, index) => (
-              <P key={index} dangerouslySetInnerHTML={{ __html: str }} />
-            ))
-          }
+          <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: job.contribution.join('') }} />
           {
             job.projects.map((project, index1) => (
               <Box key={index1}>
                 <Heading as="h3" fontSize={16} my={6}>
                   <Center>Project {index1 + 1}: {project.name}</Center>
                 </Heading>
-                {
-                  project.description.map((str, index2) => (
-                    <P key={index2} dangerouslySetInnerHTML={{ __html: str }} />
-                  ))
-                }
+                <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: project.description.join('') }} />
                 {
                   project.links.map((link, index2) => (
                     <Box key={index2}>
