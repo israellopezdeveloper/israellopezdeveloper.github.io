@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback, forwardRef, useImperativeHandle } from 'react'
+import { useEffect, useRef, useCallback, forwardRef, useImperativeHandle, useMemo } from 'react'
 import * as THREE from 'three'
 import { loadGLTFModel } from '../libs/model'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -16,9 +16,9 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
   const urlKoalaWorkGLB = (process.env.NODE_ENV === 'production' ? '' : '') + '/koala_work.glb'
   const urlKoalaEducationGLB = (process.env.NODE_ENV === 'production' ? '' : '') + '/koala_education.glb'
 
-  const position_main = new THREE.Vector3(85, 0, 0)
-  const position_work = new THREE.Vector3(0, 95, 0)
-  const position_education = new THREE.Vector3(-85, 0, 0)
+  const position_main = useMemo(() => (new THREE.Vector3(85, 0, 0)), [])
+  const position_work = useMemo(() => (new THREE.Vector3(0, 95, 0)), [])
+  const position_education = useMemo(() => (new THREE.Vector3(-85, 0, 0)), [])
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -34,10 +34,12 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
     }
   }, [])
 
+
   useEffect(() => {
     const { current: container } = refContainer
     if (container) {
-      const models = [];
+      const models = []
+      const scene = new THREE.Scene()
       function loadModel(url, position) {
         loadGLTFModel(scene, url, {
           receiveShadow: false,
@@ -65,10 +67,11 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       renderer.outputEncoding = THREE.sRGBEncoding
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
-      const scene = new THREE.Scene()
 
-      const light = new THREE.AmbientLight(0x404040, 3); // soft white light
-      scene.add(light);
+      const light1 = new THREE.DirectionalLight(0xffffff, 2.5)
+      scene.add(light1)
+      const light2 = new THREE.AmbientLight(0xffffff, 1.0)
+      scene.add(light2)
 
       const target = new THREE.Vector3(-3.5, 1.2, 0)
       const initialCameraPosition = new THREE.Vector3(20, 10, 20)
@@ -88,7 +91,6 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
 
-
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.target = target
       controls.enabled = false
@@ -103,7 +105,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
         req = requestAnimationFrame(animate)
         models.forEach(model => {
           model.rotation.y += 0.003; // Ajusta la velocidad de rotación según sea necesario
-        });
+        })
         renderer.render(scene, camera)
       }
 
@@ -113,7 +115,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
         renderer.dispose()
       }
     }
-  }, [])
+  }, [position_education, position_main, position_work, urlKoalaEducationGLB, urlKoalaMainGLB, urlKoalaWorkGLB])
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize, false)
@@ -131,7 +133,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       x: pos.x,
       y: pos.y,
       z: pos.z,
-      duration: 0.8
+      duration: 1.2
     })
   }
 
@@ -147,7 +149,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
         animateCamera(position_education)
       }
     }
-  }, [])
+  }, [position_work, position_main, position_education])
 
   return (
     <KoalaContainer ref={refContainer} {...props}>
