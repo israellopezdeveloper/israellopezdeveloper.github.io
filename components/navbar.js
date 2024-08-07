@@ -1,7 +1,7 @@
 import Logo from './logo'
 import NextLink from 'next/link'
 import { Box, Container, Heading, Link, useColorModeValue, Flex, Stack, Menu, MenuButton, IconButton, MenuList, MenuItem } from '@chakra-ui/react'
-import { HamburgerIcon, HumburgerIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import { forwardRef } from 'react'
 import ThemeToggleButton from './theme-toggle-button'
 
@@ -27,6 +27,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
 ))
+MenuLink.displayName = 'MenuLink'
 
 const NavBar = props => {
   const { path } = props

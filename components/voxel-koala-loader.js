@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { Box, Spinner } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 export const KoalaContainer = forwardRef(({ children }, ref) => (
   <Box
@@ -15,11 +15,11 @@ export const KoalaContainer = forwardRef(({ children }, ref) => (
     {children}
   </Box>
 ))
+KoalaContainer.displayName = 'KoalaContainer'
 
 const Loader = () => {
   return (
     <KoalaContainer>
-      <KoalaSpinner />
     </KoalaContainer>
   )
 }

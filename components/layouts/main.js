@@ -65,7 +65,7 @@ const Main = ({ children, router }) => {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
-        <title>Israel's Portfolio</title>
+        <title>Israel&apos;s Portfolio</title>
       </Head>
 
       <Navbar path={router.asPath} />

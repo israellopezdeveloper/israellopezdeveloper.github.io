@@ -27,7 +27,7 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          Hello, I'm a backend developer travelling around the world!
+          Hello, I&apos;m a backend developer travelling around the world!
         </Box>
 
         <Box display={{ md: 'flex' }}>
@@ -63,7 +63,7 @@ const Home = () => {
             Work
           </Heading>
           <Paragraph>
-            Israel is a senior software developer based in Spain with a passion for expanding his horizons and traveling the world while doing what he loves: developing high-quality software products. With extensive experience in high availability and concurrency environments, he excels in performance optimization, ensuring every byte counts. Israel's dedication to his craft and his ability to deliver exceptional results make him a valuable asset to any project.
+            Israel is a senior software developer based in Spain with a passion for expanding his horizons and traveling the world while doing what he loves: developing high-quality software products. With extensive experience in high availability and concurrency environments, he excels in performance optimization, ensuring every byte counts. Israel&apos;s dedication to his craft and his ability to deliver exceptional results make him a valuable asset to any project.
           </Paragraph>
           <Box align="center" my={4}>
             <Button
