@@ -1,11 +1,17 @@
-import { extendTheme, Heading, textDecoration } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
-import { global } from 'styled-jsx/css'
 
 const styles = {
   global: props => ({
     body: {
-      bg: mode('#f0e7db', '#202023')(props)
+      //bg: mode('#f0e7db', '#202023')(props)
+      backgroundImage: mode(
+        'url("/images/light2.jpg")',
+        'url("/images/universe2.jpg")'
+      )(props),
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
     }
   })
 }

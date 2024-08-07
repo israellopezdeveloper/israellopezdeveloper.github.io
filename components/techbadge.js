@@ -1,4 +1,4 @@
-import { Badge, Box, useColorModeValue } from '@chakra-ui/react';
+import { Badge, Box } from '@chakra-ui/react';
 
 const TechBadge = ({ tech, usage = 0, isSelected, onToggle }) => {
   return (

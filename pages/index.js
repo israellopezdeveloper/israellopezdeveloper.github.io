@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Container, Box, Heading, Image, useColorModeValue, Button, List, ListItem } from "@chakra-ui/react"
+import { Container, Box, Heading, useColorModeValue, Button, List, ListItem } from "@chakra-ui/react"
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { IoLogoGithub } from 'react-icons/io5'
 import { useContext, useEffect } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
+import { WorkImage } from '../components/work'
 
 const Home = () => {
   const voxel = useContext(VoxelKoalaContext)
@@ -27,15 +28,28 @@ const Home = () => {
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           css={{ backdropFilter: 'blur(10px)' }}
         >
-          Hello, I&apos;m a backend developer travelling around the world!
+          Hello, I&apos;m a senior software developer travelling around the world!
         </Box>
 
-        <Box display={{ md: 'flex' }}>
-          <Box flexGrow={1}>
+        <Box
+          mt={-8}
+          borderColor="whiteAlpha.800"
+          borderWidth={2}
+          borderStyle="solid"
+          w="150px"
+          h="150px"
+          display="inline-block"
+          borderRadius="full"
+          overflow="hidden"
+        >
+          <WorkImage src={"/images/israel.png"} alt="Profile Image" />
+        </Box>
+        <Box>
+          <Box alignItems={'center'}>
             <Heading as="h2" variant="page-title">
               Israel López
             </Heading>
-            <Paragraph>Senior Software Developer</Paragraph>
+            <Paragraph style={{ textAlign: 'center' }}>Senior Software Developer</Paragraph>
           </Box>
           <Box
             flexShrink={0}
@@ -43,18 +57,6 @@ const Home = () => {
             ml={{ md: 6 }}
             textAlign="center"
           >
-            <Box
-              borderColor="whiteAlpha.800"
-              borderWidth={2}
-              borderStyle="solid"
-              w="100px"
-              h="100px"
-              display="inline-block"
-              borderRadius="full"
-              overflow="hidden"
-            >
-              <Image borderColor="whiteAlpha.800" borderWidth={2} borderStyle="solid" maxWidth="100px" display="inline-block" borderRadius="full" src="/images/israel.png" alt="Profile Image" />
-            </Box>
           </Box>
         </Box>
 

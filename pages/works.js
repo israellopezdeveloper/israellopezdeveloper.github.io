@@ -1,5 +1,5 @@
 import cvData from '../public/data/CV.json'
-import { Container, Heading, SimpleGrid, Divider, Box, WrapItem, Wrap, useColorModeValue, border } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Box, WrapItem, Wrap, useColorModeValue } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'

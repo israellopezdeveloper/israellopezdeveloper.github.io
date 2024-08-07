@@ -10,7 +10,6 @@ import {
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import cvData from '../../public/data/CV.json'
 
@@ -46,7 +45,7 @@ const Work = ({ job }) => (
                 {
                   project.links.map((link, index2) => (
                     <Box key={index2}>
-                      <Meta>link.tag</Meta>
+                      <Meta>{link.tag}</Meta>
                       <Link href={link.url} target='_blank'>
                         {link.text} <ExternalLinkIcon mx="2px" />
                       </Link>
