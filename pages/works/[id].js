@@ -43,6 +43,17 @@ const Work = ({ job }) => (
                 </Heading>
                 <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: project.description.join('') }} />
                 {
+                  project.links && project.links.length > 0 ?
+                    (
+                      <Heading as="h5" fontSize={14} my={6}>
+                        <Center>Project links</Center>
+                      </Heading>
+                    ) :
+                    (
+                      ''
+                    )
+                }
+                {
                   project.links.map((link, index2) => (
                     <Box key={index2}>
                       <Meta>{link.tag}</Meta>
@@ -62,15 +73,47 @@ const Work = ({ job }) => (
                     ))
                   }
                 </Box>
+                {
+                  project.images && project.images.length > 0 ?
+                    (
+                      <Heading as="h5" fontSize={14} my={6}>
+                        <Center>Proyect images</Center>
+                      </Heading>
+                    ) :
+                    (
+                      ''
+                    )
+                }
+                <Box>
+                  {
+                    project.images && project.images.length > 0 ?
+                      project.images.map((image, index2) => (
+                        <WorkImage key={index2} src={"/images/works/" + image} alt={job.name} />
+                      )) :
+                      ('')
+                  }
+                </Box>
               </Box>
             ))
           }
         </ListItem>
       </List>
       {
-        job.images.map((image, index) => (
-          <WorkImage key={index} src={"/images/works/" + image} alt={job.name} />
-        ))
+        job.images && job.images.length > 0 ?
+          (
+            <Heading as="h3" fontSize={14} my={6}>
+              <Center>Job images</Center>
+            </Heading>
+          ) :
+          (
+            ''
+          )
+      }
+      {
+        job.images && job.images.length > 0 ?
+          job.images.map((image, index) => (
+            <WorkImage key={index} src={"/images/works/" + image} alt={job.name} />
+          )) : ('')
       }
     </Container>
   </Layout >
