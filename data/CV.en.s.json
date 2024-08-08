@@ -1,0 +1,962 @@
+{
+  "intro": {
+    "greeting": "Hello, I'm a senior software developer traveling around the world!",
+    "profile_image": "israel.png",
+    "name": "Israel López",
+    "title": "Senior Software Engineer",
+    "summary": [
+      "Israel is a senior software developer based in Spain, passionate about developing high-quality software products while traveling the world. He has extensive experience in high availability and concurrency environments, excelling in performance optimization. Israel's dedication to his craft makes him a valuable asset to any project."
+    ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "Born in Madrid, Spain."
+      },
+      {
+        "dates": "2007",
+        "text": "Complete the diploma in computer science in Alcalá de Henares University."
+      },
+      {
+        "dates": "2009",
+        "text": "Complete the Master of Artificial Intelligence in information and communication technologies at Alcalá de Henares University."
+      },
+      {
+        "dates": "2004 to present",
+        "text": "Working as a Full-time employee."
+      }
+    ],
+    "hobbies": [
+      "🧗 climbing, 🏂 snowboarding, 🧭 travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence."
+    ],
+    "links": [
+      {
+        "icon": "",
+        "url": "https://github.com/israellopezdeveloper",
+        "text": "@israellopezdeveloper"
+      },
+      {
+        "icon": "󰇮",
+        "url": "mailto:israel.lopez.developer@gmail.com",
+        "text": "israel.lopez.developer@gmail.com"
+      },
+      {
+        "icon": "󰌻",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/",
+        "text": "https://www.linkedin.com/in/israellopezmaiz/"
+      },
+      {
+        "icon": "",
+        "url": "tel:+34648136640",
+        "text": "+34 648 13 66 40"
+      }
+    ]
+  },
+  "works": [
+    {
+      "name": "Devo",
+      "short_description": [
+        "Cloud-native company offering real-time security analytics, machine learning, and scalable solutions for enterprise data management."
+      ],
+      "thumbnail": "devo.png",
+      "period_time": "March 2020 - March 2024",
+      "full_description": [
+        "Devo is a leading cloud-native logging and security analytics company providing real-time insights and advanced analytics for enterprise data. Their robust platform helps organizations detect, analyze, and respond to security threats efficiently."
+      ],
+      "contribution": [
+        "At Devo, I improved the data ingestion team, focusing on the load balancer. I helped the system handle 60TB per day and achieved FedRAMP certification. I also developed a multi-region and multi-cloud backup system, ensuring data redundancy."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://www.devo.com/es/",
+          "text": "Devo Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Improve existing load balancer",
+          "description": [
+            "I enhanced Devo's load balancer by implementing strategies for fault tolerance and optimized data monitoring. I supported the RELP protocol and developed client-specific load balancing methods."
+          ],
+          "links": [
+            {
+              "tag": "Documentation",
+              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers",
+              "text": "Load balancer documentation"
+            }
+          ],
+          "technologies": [
+            "Node.js",
+            "C",
+            "C++",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "GIT",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "Create a multi-cloud backup system",
+          "description": [
+            "I developed a multi-cloud backup system to ensure data protection and availability, automating data transition and implementing robust recovery mechanisms."
+          ],
+          "technologies": [
+            "Java",
+            "AWS",
+            "GCP",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "GIT",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "Integrating Quality and Security Reviews into the CI/CD Pipeline",
+          "description": [
+            "I integrated SonarQube, Snyk, and OWASP into Devo's CI/CD pipeline to ensure high-quality code and compliance with standards like NIST, FIPS, and FedRAMP."
+          ],
+          "technologies": [
+            "Gitlab CI/CD",
+            "Jenkins",
+            "NIST",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Kubernetes",
+            "Jira"
+          ]
+        },
+        {
+          "name": "Creation of an Alert System for Monitoring with Prometheus",
+          "description": [
+            "I developed an alert system using Prometheus for real-time monitoring, defining KPIs and automated response actions to ensure system health and performance."
+          ],
+          "technologies": [
+            "Prometheus",
+            "Grafana",
+            "Kubernetes",
+            "Docker",
+            "Elastic Stack",
+            "Kibana",
+            "Python",
+            "Bash",
+            "Ansible",
+            "GIT"
+          ]
+        }
+      ],
+      "images": [
+        "devo1.png",
+        "devo2.png"
+      ]
+    },
+    {
+      "name": "European Commission",
+      "short_description": [
+        "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs."
+      ],
+      "thumbnail": "European_Commission_01.png",
+      "period_time": "June 2017 - January 2020",
+      "full_description": [
+        "The European Commission enforces EU laws and negotiates international agreements. I worked in the Directorate-General for Competition (DG COMP), ensuring fair competition within the EU."
+      ],
+      "contribution": [
+        "I worked as a software architect on three projects, managing non-functional requirements, prioritizing tasks, selecting technologies, defining team roles, and implementing CI/CD systems."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://competition-policy.ec.europa.eu/index_en",
+          "text": "EU, DG COMP Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Definition of Two RESTful APIs",
+          "description": [
+            "I defined two RESTful APIs with HATEOAS for secure exchange of legal documents, featuring access control, data persistence, and integration with secure storage."
+          ],
+          "links": [
+            {
+              "tag": "Documentation",
+              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
+              "text": "e-leniency documentation"
+            }
+          ],
+          "images": [
+            "European_Commission_02.png"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "JPA",
+            "Eclipselink",
+            "WebLogic 12",
+            "Oracle DB",
+            "MongoDB",
+            "Swagger",
+            "JUnit",
+            "AngularJS",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "CAS",
+            "Jira",
+            "Bamboo",
+            "SonarQube",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "E-Confidenciality",
+          "description": [
+            "I developed a system for negotiating confidential legal documents, implementing dynamic verification groups and using Oracle DB and MongoDB for data management."
+          ],
+          "links": [
+            {
+              "tag": "Documentation",
+              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en",
+              "text": "e-confidenciality documentation"
+            }
+          ],
+          "technologies": [
+            "AngularJS",
+            "Ansible",
+            "BDD",
+            "Bamboo",
+            "CAS",
+            "Docker",
+            "Eclipselink",
+            "Enterprise Architect",
+            "GIT",
+            "IntelliJ IDEA",
+            "JPA",
+            "JUnit",
+            "Java",
+            "Jira",
+            "Maven",
+            "MongoDB",
+            "Oracle DB",
+            "Selenium",
+            "SonarQube",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring MVC",
+            "Spring Security",
+            "Swagger",
+            "TDD",
+            "WebLogic 12"
+          ]
+        },
+        {
+          "name": "Semantic index of legal documents",
+          "description": [
+            "I developed a semantic indexing system for legal documents using K-Means clustering, gRPC microservices in C++14, and TensorFlow for neural network-based search."
+          ],
+          "technologies": [
+            "AngularJS",
+            "Ansible",
+            "Bamboo",
+            "C++",
+            "CUDA",
+            "Cassandra",
+            "Docker",
+            "Eclipselink",
+            "Enterprise Architect",
+            "GIT",
+            "GoogleTest",
+            "Groovy",
+            "IntelliJ IDEA",
+            "JPA",
+            "JUnit",
+            "Java",
+            "Jira",
+            "Maven",
+            "Microservices",
+            "OpenCL",
+            "Oracle DB",
+            "Selenium",
+            "SonarQube",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring MVC",
+            "Spring Security",
+            "Swagger",
+            "TensorFlow",
+            "Valgrind",
+            "WebLogic 12",
+            "gRPC"
+          ]
+        },
+        {
+          "name": "Development of a Renewable Energy Distribution System",
+          "description": [
+            "I contributed to developing a renewable energy distribution system using Kafka-based communication, ModBus protocol, and RaspberryPi gateways."
+          ],
+          "technologies": [
+            "Go",
+            "Unit Test",
+            "BalenaIO",
+            "RaspberryPI",
+            "Modbus",
+            "Python",
+            "Makefile",
+            "Docker",
+            "Kubernetes",
+            "GCP",
+            "Azure",
+            "IoTHub",
+            "Kafka",
+            "Avro Schemas",
+            "Ansible",
+            "Elastic Search",
+            "Kibana",
+            "Makefile",
+            "Jira",
+            "Groovy"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Panel Systems",
+      "short_description": [
+        "Panel Sistemas is a company specializing in technological solutions, offering software services, consulting, and development to various industries."
+      ],
+      "thumbnail": "panel_sistemas.png",
+      "period_time": "September 2015 - June 2017",
+      "full_description": [
+        "Panel Sistemas provides software development, consulting, and IT services to diverse industries."
+      ],
+      "contribution": [
+        "I worked as a functional analyst and senior programmer, managing non-functional requirements, defining project structures, and implementing CI/CD systems."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://www.panel.es/",
+          "text": "Panel Sistemas Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Modernizing Maritime and Air Transport Messaging",
+          "description": [
+            "I implemented a message exchange platform for maritime and air transport, replacing the IATA standard with XML/JSON, and ensuring high availability with a replicated MongoDB database."
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Wildfly/JBoss",
+            "MongoDB",
+            "RabbitMQ",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "GWT",
+            "AWS",
+            "Phonegap",
+            "Hadoop",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Redmine",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible"
+          ]
+        },
+        {
+          "name": "Iberdrola's Intelligent Terminal Management with Siemens",
+          "description": [
+            "I developed a system for managing electricity consumption terminals, using SNMP protocol and a non-relational MongoDB database for data storage and analysis."
+          ],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "MongoDB",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "Hadoop",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes",
+            "JNLP",
+            "SNMP",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IOT"
+          ]
+        },
+        {
+          "name": "Monitoring and Care System for Securitas Direct",
+          "description": [
+            "I developed a monitoring system for people with disabilities or the elderly, using sensors to track activities and generate alarms based on behavior patterns."
+          ],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "AWS",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring Batch",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "Oracle DB",
+            "JUnit",
+            "Ionic",
+            "Typescript",
+            "Hadoop",
+            "Selenium",
+            "Jasmine",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "Confluence",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Prisa Group",
+      "short_description": [
+        "Grupo PRISA is a Spanish media conglomerate, renowned for its influential newspapers, radio stations, and educational publications."
+      ],
+      "thumbnail": "prisa.png",
+      "period_time": "March 2012 - May 2015",
+      "full_description": [
+        "Grupo PRISA is a leading Spanish media conglomerate with a wide range of media outlets including newspapers, radio stations, television channels, and educational publications."
+      ],
+      "contribution": [
+        "As a remote senior programmer, I defined project requirements, coordinated with international teams, and developed tools to improve automation and productivity."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://www.prisa.com/es",
+          "text": "Prisa Group Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Educational Package Viewer Application",
+          "description": [
+            "I developed an Android and iOS application for viewing educational packages, ensuring compatibility with low-end devices and SCORM standards."
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "XCode",
+            "Objective-C",
+            "Dagger",
+            "SCORM",
+            "HTML5",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Educational Package Standardization Project",
+          "description": [
+            "I developed a Flash to HTML5 translation tool to standardize educational packages, ensuring compatibility with the SCORM standard."
+          ],
+          "technologies": [
+            "C++",
+            "Linux",
+            "Flash",
+            "HTML5",
+            "JavaScript",
+            "AngularJS",
+            "Bootstrap",
+            "SCORM",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence",
+            "QEmu",
+            "KVM",
+            "Xen",
+            "Bash",
+            "NginX",
+            "Valgrind"
+          ]
+        },
+        {
+          "name": "Educational Platform Project",
+          "description": [
+            "I developed a C#/.NET platform for managing educational tasks, integrating high-resolution audio and video communication for real-time interactions."
+          ],
+          "technologies": [
+            "C#",
+            ".NET",
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Intelygenz",
+      "short_description": [
+        "Intelygenz is a technology company specializing in artificial intelligence, machine learning, and custom software solutions for diverse industries."
+      ],
+      "thumbnail": "intelygenz.png",
+      "period_time": "January 2010 - January 2012",
+      "full_description": [
+        "Intelygenz specializes in artificial intelligence, machine learning, and custom software solutions."
+      ],
+      "contribution": [
+        "As a Senior Programmer, I contributed to three significant projects, including developing an Android app for Antena 3 Television using inaudible audio markers."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://intelygenz.com/",
+          "text": "Intelygenz Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Antena 3 Television Project",
+          "description": [
+            "I developed an interactive Android app for Antena 3 Television, using inaudible audio markers to update content in real-time."
+          ],
+          "links": [
+            {
+              "tag": "Documentation",
+              "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf",
+              "text": "Antena 3 TV app documentation"
+            }
+          ],
+          "images": [
+            "intelygenz_01.jpeg"
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "Android NDK",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Document Manager Project for BBVA",
+          "description": [
+            "I developed a document manager for BBVA bank in C#, facilitating document management tasks and integrating with external tools."
+          ],
+          "images": [
+            "bbva.jpg"
+          ],
+          "technologies": [
+            "C#",
+            ".NET",
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Cassandra",
+            "HTML5",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Collaborative Front Project",
+          "description": [
+            "I developed a collaborative front-end for BBVA bank, creating a library of gestures and actions to improve user interaction."
+          ],
+          "images": [
+            "bbva.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Websphere",
+            "Oracle DB",
+            "JUnit",
+            "JSF",
+            "Maven",
+            "GIT",
+            "Jira",
+            "Confluence",
+            "Eclipse"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Alcalá de Henares University (UAH)",
+      "short_description": [
+        "The University of Alcalá de Henares is a prestigious Spanish institution known for its rich history and diverse academic programs."
+      ],
+      "thumbnail": "uah.svg",
+      "period_time": "January 2006 - January 2009",
+      "full_description": [
+        "The University of Alcalá de Henares is a renowned public university near Madrid, Spain, known for its strong programs in literature, linguistics, and Spanish language studies."
+      ],
+      "contribution": [
+        "As a researcher in the TIFyC group, I focused on accessibility issues, AI algorithms, artificial vision, and biometric systems. I collaborated with other universities, prepared research reports, and applied for R&D grants. I also taught courses on AI and Artificial Vision."
+      ],
+      "links": [
+        {
+          "tag": "Website",
+          "url": "https://uah.es/",
+          "text": "UAH Website"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Research Group Project",
+          "description": [
+            "I researched innovative devices for enhancing interaction for individuals with disabilities, focusing on intuitive and accessible technologies."
+          ],
+          "images": [
+            "tifyc.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "Android",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "Qt",
+            "PIC",
+            "Arduino",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Biometric Devices Communication System",
+          "description": [
+            "I developed a standardized communication system for biometric devices, ensuring seamless message exchange and collaboration."
+          ],
+          "technologies": [
+            "Java",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Research Group Web Page Project",
+          "description": [
+            "I created and maintained the research group's website using Joomla CMS, ensuring it was secure, scalable, and user-friendly."
+          ],
+          "images": [
+            "tifyc.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Research Group Contributions",
+          "description": [
+            "I organized seminars on Robotics, taught AI and Artificial Vision, and participated in the Hispabot robotic contest."
+          ],
+          "images": [
+            "hispabot.jpeg"
+          ],
+          "technologies": [
+            "C",
+            "C++",
+            "Arduino",
+            "PIC",
+            "Mathlab",
+            "Octave",
+            "Java",
+            "Python"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Knowcentury",
+      "short_description": [
+        "Small business dedicated to creating web pages"
+      ],
+      "thumbnail": "knowcentury.png",
+      "period_time": "January 2005 - July 2005",
+      "full_description": [
+        "Small business dedicated to creating web pages"
+      ],
+      "contribution": [
+        "I worked as a junior web programmer using CMS at Knowcentury."
+      ],
+      "projects": [
+        {
+          "name": "Websites develop",
+          "description": [
+            "Implementation of web pages using CMS such as Joomla, Drupal, and Moodle."
+          ],
+          "technologies": [
+            "Joomla",
+            "PHP",
+            "Javascript",
+            "MySQL",
+            "HTML"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "IBM",
+      "short_description": [
+        "IBM, a global technology company, specializes in cloud computing, AI, and hardware, providing innovative solutions for businesses worldwide."
+      ],
+      "thumbnail": "ibm.svg",
+      "period_time": "September 2003 - December 2004",
+      "full_description": [
+        "IBM is a global leader in technology, offering innovative solutions in AI, cloud computing, and enterprise hardware."
+      ],
+      "contribution": [
+        "I investigated the use of the IBM System Z/390s mainframe for system virtualization, utilizing Qemu to enable remote systems using Suse Linux Enterprise Edition."
+      ],
+      "projects": [
+        {
+          "name": "Websites develop",
+          "description": [
+            "Implementation of web pages using CMS such as Joomla, Drupal, and Moodle."
+          ],
+          "images": [
+            "ibm_system_z.jpg",
+            "kvm.png",
+            "suse.png"
+          ],
+          "technologies": [
+            "Joomla",
+            "PHP",
+            "Javascript",
+            "MySQL",
+            "HTML"
+          ]
+        }
+      ]
+    }
+  ],
+  "educations": {
+    "university": [
+      {
+        "university_name": "Alcalá de Henares University",
+        "title": "Master's Degree in Artificial Intelligence in information and communication technologies",
+        "period_time": "September 2007 - June 2009",
+        "summary": [
+          "Artificial intelligence and machine learning. Supervised, unsupervised, and reinforced learning. Symbolic learning, classification, and regression models. Optimization of models.",
+          "Deep nets, backpropagation, loss functions, hyperparameters, and learning strategies.",
+          "Convolutional networks and image recognition.",
+          "Sequential, recurrent networks, LSTM models.",
+          "Paralleling and computation techniques in GPU-based architectures.",
+          "Vectorization techniques. Programming with TensorFlow and Theano.",
+          "Scalable automated learning. Parallelization frameworks in computer clusters.",
+          "Applications in medicine, finance, autonomous driving, etc."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      },
+      {
+        "university_name": "Alcalá de Henares University",
+        "title": "Technical Engineering in Computer Science",
+        "period_time": "September 2001 - June 2007",
+        "summary": [
+          "With honors in: Artificial Intelligence, Fuzzy Logic, Artificial Vision Systems, Physics II, Mathematical Analysis, Data Structure, Networks."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      }
+    ],
+    "complementary": [
+      {
+        "institution": "Linux Foundation",
+        "title": "LPIC - 2",
+        "period_time": "September 2015",
+        "summary": [
+          "Advanced administration of Linux systems, including kernel management.",
+          "Perform advanced management of block storage, file systems, networks, authentication, and system security, including firewalls and VPN.",
+          "Install and configure core network services (DHCP, DNS, SSH, web servers, file servers, email, etc).",
+          "Monitor systems and advise management on automation and purchases."
+        ],
+        "images": [
+          "linux_foundation.png"
+        ],
+        "thumbnail": "linux_foundation.png"
+      },
+      {
+        "institution": "Linux Foundation",
+        "title": "LPIC - 1",
+        "period_time": "September 2013",
+        "summary": [
+          "Install a Linux system, including X11 and configure it as a network client.",
+          "Work in the command line.",
+          "Manage files and access permissions, including ACL, as well as system security.",
+          "Perform simple maintenance tasks."
+        ],
+        "images": [
+          "linux_foundation.png"
+        ],
+        "thumbnail": "linux_foundation.png"
+      },
+      {
+        "institution": "Alcalá de Henares University",
+        "title": "Design and evaluation of digital educational contents",
+        "period_time": "September 2007",
+        "summary": [
+          "Design of educational content through the SCORM standard."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      },
+      {
+        "institution": "Alcalá de Henares University",
+        "title": "Course of artificial vision",
+        "period_time": "September 2007",
+        "summary": [
+          "Systems of artificial vision, convolutional matrices, filters."
+        ],
+        "images": [
+          "uah.svg"
+        ],
+        "thumbnail": "uah.svg"
+      }
+    ],
+    "languages": [
+      {
+        "language": "Spanish",
+        "spoken": "Native",
+        "writen": "Native",
+        "read": "Native",
+        "acreditations": [],
+        "thumbnail": "spanish.png"
+      },
+      {
+        "language": "English",
+        "spoken": "Fluent",
+        "writen": "Fluent",
+        "read": "Fluent",
+        "acreditations": [],
+        "thumbnail": "english.svg"
+      },
+      {
+        "language": "Chinese",
+        "spoken": "Fluent",
+        "writen": "Fluent",
+        "read": "Fluent",
+        "acreditations": [
+          {
+            "institution": "Confucius Institute Madrid",
+            "title": "HSK 3",
+            "period_time": "September 2009"
+          }
+        ],
+        "thumbnail": "chinese.png"
+      }
+    ]
+  }
+}

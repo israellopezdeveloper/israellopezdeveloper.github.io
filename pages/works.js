@@ -1,4 +1,3 @@
-import cvData from '../public/data/CV.json'
 import { Container, Heading, SimpleGrid, Divider, Box, WrapItem, Wrap, useColorModeValue } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -7,6 +6,11 @@ import { useContext, useEffect, useMemo, useState } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
 import TechBadge from '../components/techbadge'
 import moment from 'moment'
+import cvDataEN from '../data/CV.en.json'
+import cvDataENS from '../data/CV.en.s.json'
+import cvDataES from '../data/CV.es.json'
+import cvDataESS from '../data/CV.es.s.json'
+import { useLanguage } from '../components/context/language_context'
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -35,12 +39,23 @@ function useWindowSize() {
   return windowSize
 }
 
-
 const Works = () => {
   const voxel = useContext(VoxelKoalaContext)
   useEffect(() => {
     voxel.current.to_work()
   }, [voxel])
+
+  const { language } = useLanguage()
+  const cvDataArray = useMemo(() => ({
+    'en': cvDataEN,
+    'en.s': cvDataENS,
+    'es': cvDataES,
+    'es.s': cvDataESS
+  }), [])
+  const [cvData, setCvData] = useState(cvDataEN)
+  useEffect(() => {
+    setCvData(cvDataArray[language])
+  }, [language, cvDataArray])
 
   // Función para calcular los meses de uso de cada tecnología
   const calculateTechnologyUsage = () => {
@@ -58,6 +73,7 @@ const Works = () => {
           if (techUsage[tech]) {
             if (!job_techs.includes(tech)) {
               techUsage[tech] += duration
+              job_techs.push(tech)
             }
           } else {
             techUsage[tech] = duration
@@ -71,7 +87,7 @@ const Works = () => {
   }
 
   // Uso de useMemo para memorizar el uso de las tecnologías
-  const technologyUsage = useMemo(calculateTechnologyUsage, [])
+  const technologyUsage = useMemo(calculateTechnologyUsage, [cvData.works])
 
   // Estado para las tecnologías seleccionadas
   const [selectedTechnologies, setSelectedTechnologies] = useState(() => {

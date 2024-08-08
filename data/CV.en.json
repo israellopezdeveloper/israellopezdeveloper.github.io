@@ -1,4 +1,56 @@
 {
+  "intro": {
+    "greeting": "Hello, I'm a senior software developer travelling around the world!",
+    "profile_image": "israel.png",
+    "name": "Israel López",
+    "title": "Senior Software Engineer",
+    "summary": [
+      "<P>Israel is a senior software developer based in Spain with a passion for expanding his horizons and traveling the world while doing what he loves: developing high-quality software products. With extensive experience in high availability and concurrency environments, he excels in performance optimization, ensuring every byte counts. Israel&apos;s dedication to his craft and his ability to deliver exceptional results make him a valuable asset to any project.</P>"
+    ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "Born in Madrid, Spain."
+      },
+      {
+        "dates": "2007",
+        "text": "Complete the diploma in computer science in Alcalá de Henares University."
+      },
+      {
+        "dates": "2009",
+        "text": "Complete the Master of Artificial Intelligence in information and communication technologies at Alcalá de Henares University."
+      },
+      {
+        "dates": "2004 to present",
+        "text": "Working as a Full-time employee."
+      }
+    ],
+    "hobbies": [
+      "🧗 climbing, 🏂 snowboarding, 🧭 travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence."
+    ],
+    "links": [
+      {
+        "icon": "",
+        "url": "https://github.com/israellopezdeveloper",
+        "text": "@israellopezdeveloper"
+      },
+      {
+        "icon": "󰇮",
+        "url": "mailto:israel.lopez.developer@gmail.com",
+        "text": "israel.lopez.developer@gmail.com"
+      },
+      {
+        "icon": "󰌻",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/",
+        "text": "https://www.linkedin.com/in/israellopezmaiz/"
+      },
+      {
+        "icon": "",
+        "url": "tel:+34648136640",
+        "text": "+34 648 13 66 40"
+      }
+    ]
+  },
   "works": [
     {
       "name": "Devo",
@@ -162,7 +214,7 @@
         "<li><b>Quality Control and Testing</b>: I defined quality controls and testing protocols, including unit tests using technologies such as JUnit or Google Test/Valgrind, depending on the programming language.</li>",
         "<li><b>CI/CD Systems Implementation</b>: I defined and implemented Continuous Integration and Continuous Deployment systems using tools like Bamboo and SonarQube.</li>",
         "<li><b>Software Development Methodologies</b>: I applied Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices to ensure high-quality software development.</li>",
-        "<li><b>Agile Methodology</b>: I utilized SCRUM as the primary methodology for project management, fostering an agile and efficient development process</li>.",
+        "<li><b>Agile Methodology</b>: I utilized SCRUM as the primary methodology for project management, fostering an agile and efficient development process.</li>",
         "</ul>"
       ],
       "links": [
@@ -189,6 +241,9 @@
               "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
               "text": "e-leniency documentation"
             }
+          ],
+          "images": [
+            "European_Commission_02.png"
           ],
           "technologies": [
             "Java",
@@ -339,9 +394,7 @@
           ]
         }
       ],
-      "images": [
-        "European_Commission_02.png"
-      ]
+      "images": []
     },
     {
       "name": "Panel Systems",
@@ -397,6 +450,9 @@
             "<P>To achieve this, I defined a parser that translated messages from the old format to either of the two modern standards through a Restful API that adhered to the Richardson Level 3 maturity model. This API not only provided an entry point for message translation but also facilitated intercommunication with other platforms worldwide and the storage of these communications to ensure the traceability of package transit globally. The project's goals required a high-availability structure and a replicated database system based on MongoDB, implemented through a cluster of servers with each shard replicated.</P>"
           ],
           "links": [],
+          "images": [
+            "iata.png"
+          ],
           "technologies": [
             "Java",
             "Spring Security",
@@ -431,6 +487,10 @@
             "The second project was a joint project with Siemens to create Iberdrola's intelligent terminal management infrastructure. These terminals took information about the user's electricity consumption by sending a daily report to the server using the SNMP communication protocol, unless a more detailed monitoring was desired on a specific device or set of devices, in which case reports would be generated with a level of detail that would reach consumption per minute. These data were stored in a non-relational MongoDB database, which for obvious reasons were several clusters, with load balancing and replicated shards. The information of each point was stored in the cluster by geographical proximity, as long as the server was able to assume the volume of data that included the inclusion of said node. The information of each node was kept for one year with a level of detail of consumption per minute, after the year was compacted generating the maximum, minimum and average of each day and this information was kept at this level of detail for 5 years and past That time lapse the information from each node was compacted again. The system also gave the possibility to control and listen in real time to the device through the SNMP and JNLP protocol. This structure was created using microservices in C ++ with the remote procedure call framework gRPC and was implemented in a set of servers based on Red Hat Enterprise Linux."
           ],
           "links": [],
+          "images": [
+            "iberdrola.svg",
+            "siemens.png"
+          ],
           "technologies": [
             "C++",
             "Google Test",
@@ -512,11 +572,7 @@
           ]
         }
       ],
-      "images": [
-        "iata.png",
-        "iberdrola.svg",
-        "siemens.png"
-      ]
+      "images": []
     },
     {
       "name": "Prisa Group",
@@ -659,6 +715,9 @@
               "text": "Antena 3 TV app documentation"
             }
           ],
+          "images": [
+            "intelygenz_01.jpeg"
+          ],
           "technologies": [
             "Java",
             "Android Studio",
@@ -675,6 +734,9 @@
             "<p>Additionally, the document manager integrated the workflow and business logic of BBVA, enabling seamless interaction with other banking entities. This implementation not only streamlined document handling processes but also ensured that the bank's operations were aligned with industry standards and best practices, thereby enhancing efficiency and collaboration across different departments and external partners.</p>"
           ],
           "links": [],
+          "images": [
+            "bbva.jpg"
+          ],
           "technologies": [
             "C#",
             ".NET",
@@ -698,6 +760,9 @@
             "<p>A significant achievement of this project was the creation of a library of gestures and actions on the screen, known as IRIS. This library was designed to improve user interaction by providing intuitive and efficient ways to perform various tasks. The IRIS library enhanced the overall user experience, making the application more responsive and user-friendly.</p>"
           ],
           "links": [],
+          "images": [
+            "bbva.jpg"
+          ],
           "technologies": [
             "Java",
             "Spring Security",
@@ -719,10 +784,7 @@
           ]
         }
       ],
-      "images": [
-        "intelygenz_01.jpeg",
-        "bbva.jpg"
-      ]
+      "images": []
     },
     {
       "name": "Alcalá de Henares University (UAH)",
@@ -765,6 +827,9 @@
             "<p>This project exemplifies our commitment to leveraging technology to break down barriers and improve the quality of life for individuals with disabilities, making technology accessible and usable for everyone, regardless of their physical abilities.</p>"
           ],
           "links": [],
+          "images": [
+            "tifyc.jpg"
+          ],
           "technologies": [
             "Java",
             "Android Studio",
@@ -810,6 +875,9 @@
             "<p>Overall, this project demonstrated my ability to develop and manage a dynamic web presence that effectively supports the goals and activities of a specialized group, utilizing the powerful features of Joomla CMS.</p>"
           ],
           "links": [],
+          "images": [
+            "tifyc.jpg"
+          ],
           "technologies": [
             "Java",
             "Linux",
@@ -829,6 +897,9 @@
             "<p>Beyond teaching and support roles, I actively participated in extracurricular activities, including the Hispabot robotic contest. I competed in the labyrinth resolution mode, where I applied my expertise in robotics and AI to design and program robots capable of navigating and solving mazes. This experience not only honed my technical skills but also demonstrated my ability to apply research in real-world competitive environments.</p>"
           ],
           "links": [],
+          "images": [
+            "hispabot.jpeg"
+          ],
           "technologies": [
             "C",
             "C++",
@@ -841,9 +912,7 @@
           ]
         }
       ],
-      "images": [
-        "tifyc.jpg"
-      ]
+      "images": []
     },
     {
       "name": "Knowcentury",
@@ -906,6 +975,11 @@
             "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
           ],
           "links": [],
+          "images": [
+            "ibm_system_z.jpg",
+            "kvm.png",
+            "suse.png"
+          ],
           "technologies": [
             "Joomla",
             "PHP",
@@ -914,11 +988,6 @@
             "HTML"
           ]
         }
-      ],
-      "images": [
-        "ibm_system_z.jpg",
-        "kvm.png",
-        "suse.png"
       ]
     }
   ],

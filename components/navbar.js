@@ -4,6 +4,7 @@ import { Box, Container, Heading, Link, useColorModeValue, Flex, Stack, Menu, Me
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { forwardRef } from 'react'
 import ThemeToggleButton from './theme-toggle-button'
+import LanguageSelector from './language_selector'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -73,6 +74,7 @@ const NavBar = props => {
         </Stack>
 
         <Box flex={1} align="right">
+          <LanguageSelector display={{ base: 'inline-block' }} />
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
