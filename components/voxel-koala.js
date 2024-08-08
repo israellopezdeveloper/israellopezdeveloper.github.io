@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback, forwardRef, useImperativeHandle, useMemo } from 'react'
 import * as THREE from 'three'
+import { sRGBEncoding } from 'three'
 import { loadGLTFModel } from '../libs/model'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { KoalaContainer } from './voxel-koala-loader'
@@ -64,7 +65,7 @@ const VoxelKoala = forwardRef(function VoxelKoala(props, ref) {
       })
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
-      renderer.outputEncoding = THREE.sRGBEncoding
+      renderer.outputEncoding = sRGBEncoding
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
 

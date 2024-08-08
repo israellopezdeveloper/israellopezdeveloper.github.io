@@ -87,7 +87,7 @@ const Works = () => {
   }
 
   // Uso de useMemo para memorizar el uso de las tecnologías
-  const technologyUsage = useMemo(calculateTechnologyUsage, [])
+  const technologyUsage = useMemo(calculateTechnologyUsage, [cvData.works])
 
   // Estado para las tecnologías seleccionadas
   const [selectedTechnologies, setSelectedTechnologies] = useState(() => {
