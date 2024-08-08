@@ -7,6 +7,24 @@
     "summary": [
       "<P>Israel es un desarrollador de software senior con sede en España y una pasión por expandir sus horizontes y viajar por el mundo mientras hace lo que ama: desarrollar productos de software de alta calidad. Con una amplia experiencia en entornos de alta disponibilidad y concurrencia, se destaca en la optimización del rendimiento, asegurándose de que cada byte cuente. La dedicación de Israel a su oficio y su capacidad para ofrecer resultados excepcionales lo convierten en un valioso activo para cualquier proyecto.</P>"
     ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "Nací en Madrid, España"
+      },
+      {
+        "dates": "2007",
+        "text": "Complete la licenciatura en Informática en la Universidad de Alcalá de Henares"
+      },
+      {
+        "dates": "2009",
+        "text": "Complete el Master en Inteligencia Artificila en información y comunicación de tecnologias en la Universidad de Alcalá de Henares."
+      },
+      {
+        "dates": "2004 a la actualidad",
+        "text": "Trabajando como empleado"
+      }
+    ],
     "hobbies": [
       "🧗 escalada, 🏂 snowboard, 🧭 viajar, 🤿 buceo, ⨋ matemáticas (especialmente álgebra lineal y estadísticas), 🧠 Inteligencia Artificial."
     ],

@@ -7,6 +7,24 @@
     "summary": [
       "<P>Israel is a senior software developer based in Spain with a passion for expanding his horizons and traveling the world while doing what he loves: developing high-quality software products. With extensive experience in high availability and concurrency environments, he excels in performance optimization, ensuring every byte counts. Israel&apos;s dedication to his craft and his ability to deliver exceptional results make him a valuable asset to any project.</P>"
     ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "Born in Madrid, Spain."
+      },
+      {
+        "dates": "2007",
+        "text": "Complete the diploma in computer science in Alcalá de Henares University."
+      },
+      {
+        "dates": "2009",
+        "text": "Complete the Master of Artificial Intelligence in information and communication technologies at Alcalá de Henares University."
+      },
+      {
+        "dates": "2004 to present",
+        "text": "Working as a Full-time employee."
+      }
+    ],
     "hobbies": [
       "🧗 climbing, 🏂 snowboarding, 🧭 travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence."
     ],

@@ -13,6 +13,7 @@ import { WorkImage } from '../components/work'
 import cvDataEN from '../data/CV.en.json'
 import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
+import cvDataESS from '../data/CV.es.s.json'
 import { useLanguage } from '../components/context/language_context'
 
 const Home = () => {
@@ -21,7 +22,8 @@ const Home = () => {
   const cvDataArray = useMemo(() => ({
     'en': cvDataEN,
     'en.s': cvDataENS,
-    'es': cvDataES
+    'es': cvDataES,
+    'es.s': cvDataESS
   }), [])
 
   const { language } = useLanguage()
@@ -100,26 +102,14 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>
-          <BioSection>
-            <BioYear>1983</BioYear>
-            Born in Madrid, Spain.
-          </BioSection>
-          <BioSection>
-            <BioYear>2007</BioYear>
-            Complete the diploma in computer science in Alcalá de Henares University.
-          </BioSection>
-          <BioSection>
-            <BioYear>2009</BioYear>
-            Complete the Master of Artificial Intelligence in information and communication technologies at Alcalá de Henares University.
-          </BioSection>
-          <BioSection>
-            <BioYear>2004 to present</BioYear>
-            Working as a Full-time employee.
-          </BioSection>
-          <BioSection>
-            <BioYear>2024 to future</BioYear>
-            Working as a freelancer.
-          </BioSection>
+          {
+            cvData.intro.bio.map((bio, index) => (
+              <BioSection key={index}>
+                <BioYear>{bio.dates}</BioYear>
+                {bio.text}
+              </BioSection>
+            ))
+          }
         </Section>
 
         <Section delay={0.3}>

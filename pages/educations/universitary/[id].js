@@ -9,6 +9,7 @@ import { useLanguage } from '../../../components/context/language_context'
 import cvDataEN from '../../../data/CV.en.json'
 import cvDataENS from '../../../data/CV.en.s.json'
 import cvDataES from '../../../data/CV.es.json'
+import cvDataESS from '../../../data/CV.es.s.json'
 import { useEffect, useMemo, useState } from 'react'
 
 const Education = ({ studyId }) => {
@@ -18,7 +19,8 @@ const Education = ({ studyId }) => {
   const cvDataArray = useMemo(() => ({
     'en': cvDataEN,
     'en.s': cvDataENS,
-    'es': cvDataES
+    'es': cvDataES,
+    'es.s': cvDataESS
   }), [])
 
   useEffect(() => {

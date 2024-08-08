@@ -9,6 +9,7 @@ import moment from 'moment'
 import cvDataEN from '../data/CV.en.json'
 import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
+import cvDataESS from '../data/CV.es.s.json'
 import { useLanguage } from '../components/context/language_context'
 
 function useWindowSize() {
@@ -48,7 +49,8 @@ const Works = () => {
   const cvDataArray = useMemo(() => ({
     'en': cvDataEN,
     'en.s': cvDataENS,
-    'es': cvDataES
+    'es': cvDataES,
+    'es.s': cvDataESS
   }), [])
   const [cvData, setCvData] = useState(cvDataEN)
   useEffect(() => {

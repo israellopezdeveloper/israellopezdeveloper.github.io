@@ -11,7 +11,8 @@ const LanguageSelector = ({ display }) => {
   const languages = [
     { code: 'en', label: 'English', flag: '🇬🇧' },
     { code: 'en.s', label: 'English short', flag: '🇬🇧' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' }
+    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: 'es.s', label: 'Español corto', flag: '🇪🇸' }
   ]
 
   return (
@@ -20,7 +21,7 @@ const LanguageSelector = ({ display }) => {
       onChange={(e) => changeLanguage(e.target.value)}
       size="sm"
       variant="outline"
-      width="120px"
+      width="160px"
       display={display}
     >
       {languages.map(({ code, label, flag }) => (

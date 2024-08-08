@@ -1,32 +1,32 @@
 {
   "intro": {
-    "greeting": "Hello, I'm a senior software developer traveling around the world!",
+    "greeting": "¡Hola, soy un desarrollador de software senior viajando por el mundo!",
     "profile_image": "israel.png",
     "name": "Israel López",
-    "title": "Senior Software Engineer",
+    "title": "Ingeniero de Software Senior",
     "summary": [
-      "Israel is a senior software developer based in Spain, passionate about developing high-quality software products while traveling the world. He has extensive experience in high availability and concurrency environments, excelling in performance optimization. Israel's dedication to his craft makes him a valuable asset to any project."
+      "Israel es un desarrollador de software senior con base en España, apasionado por desarrollar productos de software de alta calidad mientras viaja por el mundo. Tiene una amplia experiencia en entornos de alta disponibilidad y concurrencia, destacándose en la optimización del rendimiento. La dedicación de Israel a su oficio lo convierte en un activo valioso para cualquier proyecto."
     ],
     "bio": [
       {
         "dates": "1983",
-        "text": "Born in Madrid, Spain."
+        "text": "Nacido en Madrid, España."
       },
       {
         "dates": "2007",
-        "text": "Complete the diploma in computer science in Alcalá de Henares University."
+        "text": "Completó el diploma en ciencias de la computación en la Universidad de Alcalá de Henares."
       },
       {
         "dates": "2009",
-        "text": "Complete the Master of Artificial Intelligence in information and communication technologies at Alcalá de Henares University."
+        "text": "Completó el Máster en Inteligencia Artificial en tecnologías de la información y la comunicación en la Universidad de Alcalá de Henares."
       },
       {
-        "dates": "2004 to present",
-        "text": "Working as a Full-time employee."
+        "dates": "2004 a la actualidad",
+        "text": "Trabajando como empleado a tiempo completo."
       }
     ],
     "hobbies": [
-      "🧗 climbing, 🏂 snowboarding, 🧭 travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence."
+      "🧗 escalada, 🏂 snowboard, 🧭 viajar, 🤿 buceo, ⨋ matemáticas (especialmente álgebra lineal y estadísticas), 🧠 Inteligencia Artificial."
     ],
     "links": [
       {
@@ -55,34 +55,34 @@
     {
       "name": "Devo",
       "short_description": [
-        "Cloud-native company offering real-time security analytics, machine learning, and scalable solutions for enterprise data management."
+        "Empresa nativa de la nube que ofrece análisis de seguridad en tiempo real, aprendizaje automático y soluciones escalables para la gestión de datos empresariales."
       ],
       "thumbnail": "devo.png",
-      "period_time": "March 2020 - March 2024",
+      "period_time": "Marzo 2020 - Marzo 2024",
       "full_description": [
-        "Devo is a leading cloud-native logging and security analytics company providing real-time insights and advanced analytics for enterprise data. Their robust platform helps organizations detect, analyze, and respond to security threats efficiently."
+        "Devo es una empresa líder en análisis de registros y seguridad en la nube que proporciona información en tiempo real y análisis avanzados de datos empresariales. Su plataforma robusta ayuda a las organizaciones a detectar, analizar y responder a las amenazas de seguridad de manera eficiente."
       ],
       "contribution": [
-        "At Devo, I improved the data ingestion team, focusing on the load balancer. I helped the system handle 60TB per day and achieved FedRAMP certification. I also developed a multi-region and multi-cloud backup system, ensuring data redundancy."
+        "En Devo, mejoré el equipo de ingestión de datos, enfocándome en el balanceador de carga. Ayudé al sistema a manejar 60TB por día y logré la certificación FedRAMP. También desarrollé un sistema de respaldo multirregional y multinube, asegurando la redundancia de los datos."
       ],
       "links": [
         {
-          "tag": "Website",
+          "tag": "Sitio web",
           "url": "https://www.devo.com/es/",
-          "text": "Devo Website"
+          "text": "Sitio web de Devo"
         }
       ],
       "projects": [
         {
-          "name": "Improve existing load balancer",
+          "name": "Mejorar el balanceador de carga existente",
           "description": [
-            "I enhanced Devo's load balancer by implementing strategies for fault tolerance and optimized data monitoring. I supported the RELP protocol and developed client-specific load balancing methods."
+            "Mejoré el balanceador de carga de Devo implementando estrategias para la tolerancia a fallos y optimización del monitoreo de datos. Soporté el protocolo RELP y desarrollé métodos de balanceo de carga específicos para clientes."
           ],
           "links": [
             {
-              "tag": "Documentation",
+              "tag": "Documentación",
               "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers",
-              "text": "Load balancer documentation"
+              "text": "Documentación del balanceador de carga"
             }
           ],
           "technologies": [
@@ -104,9 +104,9 @@
           ]
         },
         {
-          "name": "Create a multi-cloud backup system",
+          "name": "Crear un sistema de respaldo multinube",
           "description": [
-            "I developed a multi-cloud backup system to ensure data protection and availability, automating data transition and implementing robust recovery mechanisms."
+            "Desarrollé un sistema de respaldo multinube para asegurar la protección y disponibilidad de los datos, automatizando la transición de datos e implementando mecanismos de recuperación robustos."
           ],
           "technologies": [
             "Java",
@@ -127,9 +127,9 @@
           ]
         },
         {
-          "name": "Integrating Quality and Security Reviews into the CI/CD Pipeline",
+          "name": "Integración de revisiones de calidad y seguridad en la pipeline CI/CD",
           "description": [
-            "I integrated SonarQube, Snyk, and OWASP into Devo's CI/CD pipeline to ensure high-quality code and compliance with standards like NIST, FIPS, and FedRAMP."
+            "Integré SonarQube, Snyk y OWASP en la pipeline CI/CD de Devo para asegurar código de alta calidad y cumplimiento con estándares como NIST, FIPS y FedRAMP."
           ],
           "technologies": [
             "Gitlab CI/CD",
@@ -145,9 +145,9 @@
           ]
         },
         {
-          "name": "Creation of an Alert System for Monitoring with Prometheus",
+          "name": "Creación de un sistema de alertas para monitoreo con Prometheus",
           "description": [
-            "I developed an alert system using Prometheus for real-time monitoring, defining KPIs and automated response actions to ensure system health and performance."
+            "Desarrollé un sistema de alertas usando Prometheus para monitoreo en tiempo real, definiendo KPIs y acciones de respuesta automatizadas para asegurar la salud y el rendimiento del sistema."
           ],
           "technologies": [
             "Prometheus",
@@ -169,36 +169,36 @@
       ]
     },
     {
-      "name": "European Commission",
+      "name": "Comisión Europea",
       "short_description": [
-        "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs."
+        "La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones y gestionar los asuntos cotidianos."
       ],
       "thumbnail": "European_Commission_01.png",
-      "period_time": "June 2017 - January 2020",
+      "period_time": "Junio 2017 - Enero 2020",
       "full_description": [
-        "The European Commission enforces EU laws and negotiates international agreements. I worked in the Directorate-General for Competition (DG COMP), ensuring fair competition within the EU."
+        "La Comisión Europea hace cumplir las leyes de la UE y negocia acuerdos internacionales. Trabajé en la Dirección General de Competencia (DG COMP), asegurando la competencia justa dentro de la UE."
       ],
       "contribution": [
-        "I worked as a software architect on three projects, managing non-functional requirements, prioritizing tasks, selecting technologies, defining team roles, and implementing CI/CD systems."
+        "Trabajé como arquitecto de software en tres proyectos, gestionando requisitos no funcionales, priorizando tareas, seleccionando tecnologías, definiendo roles de equipo e implementando sistemas CI/CD."
       ],
       "links": [
         {
-          "tag": "Website",
+          "tag": "Sitio web",
           "url": "https://competition-policy.ec.europa.eu/index_en",
-          "text": "EU, DG COMP Website"
+          "text": "Sitio web de la UE, DG COMP"
         }
       ],
       "projects": [
         {
-          "name": "Definition of Two RESTful APIs",
+          "name": "Definición de dos APIs RESTful",
           "description": [
-            "I defined two RESTful APIs with HATEOAS for secure exchange of legal documents, featuring access control, data persistence, and integration with secure storage."
+            "Definí dos APIs RESTful con HATEOAS para el intercambio seguro de documentos legales, con control de acceso, persistencia de datos e integración con almacenamiento seguro."
           ],
           "links": [
             {
-              "tag": "Documentation",
+              "tag": "Documentación",
               "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
-              "text": "e-leniency documentation"
+              "text": "Documentación de e-leniency"
             }
           ],
           "images": [
@@ -231,15 +231,15 @@
           ]
         },
         {
-          "name": "E-Confidenciality",
+          "name": "E-Confidencialidad",
           "description": [
-            "I developed a system for negotiating confidential legal documents, implementing dynamic verification groups and using Oracle DB and MongoDB for data management."
+            "Desarrollé un sistema para la negociación de documentos legales confidenciales, implementando grupos de verificación dinámicos y utilizando Oracle DB y MongoDB para la gestión de datos."
           ],
           "links": [
             {
-              "tag": "Documentation",
+              "tag": "Documentación",
               "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en",
-              "text": "e-confidenciality documentation"
+              "text": "Documentación de e-confidencialidad"
             }
           ],
           "technologies": [
@@ -273,9 +273,9 @@
           ]
         },
         {
-          "name": "Semantic index of legal documents",
+          "name": "Índice semántico de documentos legales",
           "description": [
-            "I developed a semantic indexing system for legal documents using K-Means clustering, gRPC microservices in C++14, and TensorFlow for neural network-based search."
+            "Desarrollé un sistema de indexación semántica para documentos legales utilizando clustering K-Means, microservicios gRPC en C++14 y TensorFlow para búsqueda basada en redes neuronales."
           ],
           "technologies": [
             "AngularJS",
@@ -313,9 +313,9 @@
           ]
         },
         {
-          "name": "Development of a Renewable Energy Distribution System",
+          "name": "Desarrollo de un sistema de distribución de energía renovable",
           "description": [
-            "I contributed to developing a renewable energy distribution system using Kafka-based communication, ModBus protocol, and RaspberryPi gateways."
+            "Contribuí al desarrollo de un sistema de distribución de energía renovable utilizando comunicación basada en Kafka, protocolo ModBus y gateways RaspberryPi."
           ],
           "technologies": [
             "Go",
@@ -344,30 +344,30 @@
       "images": []
     },
     {
-      "name": "Panel Systems",
+      "name": "Panel Sistemas",
       "short_description": [
-        "Panel Sistemas is a company specializing in technological solutions, offering software services, consulting, and development to various industries."
+        "Panel Sistemas es una empresa especializada en soluciones tecnológicas, ofreciendo servicios de software, consultoría y desarrollo a diversas industrias."
       ],
       "thumbnail": "panel_sistemas.png",
-      "period_time": "September 2015 - June 2017",
+      "period_time": "Septiembre 2015 - Junio 2017",
       "full_description": [
-        "Panel Sistemas provides software development, consulting, and IT services to diverse industries."
+        "Panel Sistemas proporciona desarrollo de software, consultoría y servicios de TI a diversas industrias."
       ],
       "contribution": [
-        "I worked as a functional analyst and senior programmer, managing non-functional requirements, defining project structures, and implementing CI/CD systems."
+        "Trabajé como analista funcional y programador senior, gestionando requisitos no funcionales, definiendo estructuras de proyectos e implementando sistemas CI/CD."
       ],
       "links": [
         {
-          "tag": "Website",
+          "tag": "Sitio web",
           "url": "https://www.panel.es/",
-          "text": "Panel Sistemas Website"
+          "text": "Sitio web de Panel Sistemas"
         }
       ],
       "projects": [
         {
-          "name": "Modernizing Maritime and Air Transport Messaging",
+          "name": "Modernización de mensajería de transporte marítimo y aéreo",
           "description": [
-            "I implemented a message exchange platform for maritime and air transport, replacing the IATA standard with XML/JSON, and ensuring high availability with a replicated MongoDB database."
+            "Implementé una plataforma de intercambio de mensajes para transporte marítimo y aéreo, reemplazando el estándar IATA con XML/JSON y asegurando alta disponibilidad con una base de datos replicada de MongoDB."
           ],
           "technologies": [
             "Java",
@@ -398,9 +398,9 @@
           ]
         },
         {
-          "name": "Iberdrola's Intelligent Terminal Management with Siemens",
+          "name": "Gestión inteligente de terminales de Iberdrola con Siemens",
           "description": [
-            "I developed a system for managing electricity consumption terminals, using SNMP protocol and a non-relational MongoDB database for data storage and analysis."
+            "Desarrollé un sistema para gestionar terminales de consumo eléctrico, utilizando protocolo SNMP y una base de datos no relacional MongoDB para el almacenamiento y análisis de datos."
           ],
           "technologies": [
             "C++",
@@ -438,9 +438,9 @@
           ]
         },
         {
-          "name": "Monitoring and Care System for Securitas Direct",
+          "name": "Sistema de monitoreo y cuidado para Securitas Direct",
           "description": [
-            "I developed a monitoring system for people with disabilities or the elderly, using sensors to track activities and generate alarms based on behavior patterns."
+            "Desarrollé un sistema de monitoreo para personas con discapacidades o ancianos, utilizando sensores para rastrear actividades y generar alarmas basadas en patrones de comportamiento."
           ],
           "technologies": [
             "C++",
@@ -484,30 +484,30 @@
       "images": []
     },
     {
-      "name": "Prisa Group",
+      "name": "Grupo Prisa",
       "short_description": [
-        "Grupo PRISA is a Spanish media conglomerate, renowned for its influential newspapers, radio stations, and educational publications."
+        "Grupo PRISA es un conglomerado de medios español, conocido por sus influyentes periódicos, estaciones de radio y publicaciones educativas."
       ],
       "thumbnail": "prisa.png",
-      "period_time": "March 2012 - May 2015",
+      "period_time": "Marzo 2012 - Mayo 2015",
       "full_description": [
-        "Grupo PRISA is a leading Spanish media conglomerate with a wide range of media outlets including newspapers, radio stations, television channels, and educational publications."
+        "Grupo PRISA es un conglomerado de medios líder en España, con una amplia gama de medios de comunicación, incluidos periódicos, estaciones de radio, canales de televisión y publicaciones educativas."
       ],
       "contribution": [
-        "As a remote senior programmer, I defined project requirements, coordinated with international teams, and developed tools to improve automation and productivity."
+        "Como programador senior remoto, definí requisitos de proyectos, coordiné con equipos internacionales y desarrollé herramientas para mejorar la automatización y la productividad."
       ],
       "links": [
         {
-          "tag": "Website",
+          "tag": "Sitio web",
           "url": "https://www.prisa.com/es",
-          "text": "Prisa Group Website"
+          "text": "Sitio web de Grupo Prisa"
         }
       ],
       "projects": [
         {
-          "name": "Educational Package Viewer Application",
+          "name": "Aplicación de visor de paquetes educativos",
           "description": [
-            "I developed an Android and iOS application for viewing educational packages, ensuring compatibility with low-end devices and SCORM standards."
+            "Desarrollé una aplicación para Android e iOS para ver paquetes educativos, asegurando compatibilidad con dispositivos de gama baja y estándares SCORM."
           ],
           "technologies": [
             "Java",
@@ -526,9 +526,9 @@
           ]
         },
         {
-          "name": "Educational Package Standardization Project",
+          "name": "Proyecto de estandarización de paquetes educativos",
           "description": [
-            "I developed a Flash to HTML5 translation tool to standardize educational packages, ensuring compatibility with the SCORM standard."
+            "Desarrollé una herramienta de traducción de Flash a HTML5 para estandarizar paquetes educativos, asegurando compatibilidad con el estándar SCORM."
           ],
           "technologies": [
             "C++",
@@ -552,9 +552,9 @@
           ]
         },
         {
-          "name": "Educational Platform Project",
+          "name": "Proyecto de plataforma educativa",
           "description": [
-            "I developed a C#/.NET platform for managing educational tasks, integrating high-resolution audio and video communication for real-time interactions."
+            "Desarrollé una plataforma en C#/.NET para gestionar tareas educativas, integrando comunicación de audio y video de alta resolución para interacciones en tiempo real."
           ],
           "technologies": [
             "C#",
@@ -573,34 +573,34 @@
     {
       "name": "Intelygenz",
       "short_description": [
-        "Intelygenz is a technology company specializing in artificial intelligence, machine learning, and custom software solutions for diverse industries."
+        "Intelygenz es una empresa de tecnología especializada en inteligencia artificial, aprendizaje automático y soluciones de software personalizadas para diversas industrias."
       ],
       "thumbnail": "intelygenz.png",
-      "period_time": "January 2010 - January 2012",
+      "period_time": "Enero 2010 - Enero 2012",
       "full_description": [
-        "Intelygenz specializes in artificial intelligence, machine learning, and custom software solutions."
+        "Intelygenz se especializa en inteligencia artificial, aprendizaje automático y soluciones de software personalizadas."
       ],
       "contribution": [
-        "As a Senior Programmer, I contributed to three significant projects, including developing an Android app for Antena 3 Television using inaudible audio markers."
+        "Como Programador Senior, contribuí a tres proyectos significativos, incluido el desarrollo de una aplicación Android para Antena 3 Televisión usando marcadores de audio inaudibles."
       ],
       "links": [
         {
-          "tag": "Website",
+          "tag": "Sitio web",
           "url": "https://intelygenz.com/",
-          "text": "Intelygenz Website"
+          "text": "Sitio web de Intelygenz"
         }
       ],
       "projects": [
         {
-          "name": "Antena 3 Television Project",
+          "name": "Proyecto de Antena 3 Televisión",
           "description": [
-            "I developed an interactive Android app for Antena 3 Television, using inaudible audio markers to update content in real-time."
+            "Desarrollé una aplicación interactiva para Android para Antena 3 Televisión, utilizando marcadores de audio inaudibles para actualizar contenido en tiempo real."
           ],
           "links": [
             {
-              "tag": "Documentation",
+              "tag": "Documentación",
               "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf",
-              "text": "Antena 3 TV app documentation"
+              "text": "Documentación de la app de Antena 3 TV"
             }
           ],
           "images": [
@@ -616,9 +616,9 @@
           ]
         },
         {
-          "name": "Document Manager Project for BBVA",
+          "name": "Proyecto de gestor de documentos para BBVA",
           "description": [
-            "I developed a document manager for BBVA bank in C#, facilitating document management tasks and integrating with external tools."
+            "Desarrollé un gestor de documentos para el banco BBVA en C#, facilitando las tareas de gestión de documentos e integrándose con herramientas externas."
           ],
           "images": [
             "bbva.jpg"
@@ -640,9 +640,9 @@
           ]
         },
         {
-          "name": "Collaborative Front Project",
+          "name": "Proyecto de front colaborativo",
           "description": [
-            "I developed a collaborative front-end for BBVA bank, creating a library of gestures and actions to improve user interaction."
+            "Desarrollé un front-end colaborativo para el banco BBVA, creando una biblioteca de gestos y acciones para mejorar la interacción del usuario."
           ],
           "images": [
             "bbva.jpg"
@@ -670,30 +670,30 @@
       "images": []
     },
     {
-      "name": "Alcalá de Henares University (UAH)",
+      "name": "Universidad de Alcalá de Henares (UAH)",
       "short_description": [
-        "The University of Alcalá de Henares is a prestigious Spanish institution known for its rich history and diverse academic programs."
+        "La Universidad de Alcalá de Henares es una prestigiosa institución española conocida por su rica historia y sus diversos programas académicos."
       ],
       "thumbnail": "uah.svg",
-      "period_time": "January 2006 - January 2009",
+      "period_time": "Enero 2006 - Enero 2009",
       "full_description": [
-        "The University of Alcalá de Henares is a renowned public university near Madrid, Spain, known for its strong programs in literature, linguistics, and Spanish language studies."
+        "La Universidad de Alcalá de Henares es una reconocida universidad pública cerca de Madrid, España, conocida por sus sólidos programas en literatura, lingüística y estudios del idioma español."
       ],
       "contribution": [
-        "As a researcher in the TIFyC group, I focused on accessibility issues, AI algorithms, artificial vision, and biometric systems. I collaborated with other universities, prepared research reports, and applied for R&D grants. I also taught courses on AI and Artificial Vision."
+        "Como investigador en el grupo TIFyC, me enfoqué en problemas de accesibilidad, algoritmos de IA, visión artificial y sistemas biométricos. Colaboré con otras universidades, preparé informes de investigación y solicité subvenciones de I+D. También impartí cursos sobre IA y Visión Artificial."
       ],
       "links": [
         {
-          "tag": "Website",
+          "tag": "Sitio web",
           "url": "https://uah.es/",
-          "text": "UAH Website"
+          "text": "Sitio web de la UAH"
         }
       ],
       "projects": [
         {
-          "name": "Research Group Project",
+          "name": "Proyecto del grupo de investigación",
           "description": [
-            "I researched innovative devices for enhancing interaction for individuals with disabilities, focusing on intuitive and accessible technologies."
+            "Investigé dispositivos innovadores para mejorar la interacción de personas con discapacidades, enfocándome en tecnologías intuitivas y accesibles."
           ],
           "images": [
             "tifyc.jpg"
@@ -715,9 +715,9 @@
           ]
         },
         {
-          "name": "Biometric Devices Communication System",
+          "name": "Sistema de comunicación de dispositivos biométricos",
           "description": [
-            "I developed a standardized communication system for biometric devices, ensuring seamless message exchange and collaboration."
+            "Desarrollé un sistema de comunicación estandarizado para dispositivos biométricos, asegurando un intercambio de mensajes y colaboración fluida."
           ],
           "technologies": [
             "Java",
@@ -731,9 +731,9 @@
           ]
         },
         {
-          "name": "Research Group Web Page Project",
+          "name": "Proyecto de página web del grupo de investigación",
           "description": [
-            "I created and maintained the research group's website using Joomla CMS, ensuring it was secure, scalable, and user-friendly."
+            "Creé y mantuve el sitio web del grupo de investigación utilizando el CMS Joomla, asegurando que fuera seguro, escalable y fácil de usar."
           ],
           "images": [
             "tifyc.jpg"
@@ -750,9 +750,9 @@
           ]
         },
         {
-          "name": "Research Group Contributions",
+          "name": "Contribuciones al grupo de investigación",
           "description": [
-            "I organized seminars on Robotics, taught AI and Artificial Vision, and participated in the Hispabot robotic contest."
+            "Organicé seminarios sobre robótica, impartí cursos de IA y Visión Artificial y participé en el concurso de robótica Hispabot."
           ],
           "images": [
             "hispabot.jpeg"
@@ -774,21 +774,21 @@
     {
       "name": "Knowcentury",
       "short_description": [
-        "Small business dedicated to creating web pages"
+        "Pequeña empresa dedicada a la creación de páginas web"
       ],
       "thumbnail": "knowcentury.png",
-      "period_time": "January 2005 - July 2005",
+      "period_time": "Enero 2005 - Julio 2005",
       "full_description": [
-        "Small business dedicated to creating web pages"
+        "Pequeña empresa dedicada a la creación de páginas web"
       ],
       "contribution": [
-        "I worked as a junior web programmer using CMS at Knowcentury."
+        "Trabajé como programador web junior usando CMS en Knowcentury."
       ],
       "projects": [
         {
-          "name": "Websites develop",
+          "name": "Desarrollo de sitios web",
           "description": [
-            "Implementation of web pages using CMS such as Joomla, Drupal, and Moodle."
+            "Implementación de páginas web usando CMS como Joomla, Drupal y Moodle."
           ],
           "technologies": [
             "Joomla",
@@ -804,21 +804,21 @@
     {
       "name": "IBM",
       "short_description": [
-        "IBM, a global technology company, specializes in cloud computing, AI, and hardware, providing innovative solutions for businesses worldwide."
+        "IBM, una empresa de tecnología global, se especializa en computación en la nube, IA y hardware, proporcionando soluciones innovadoras para negocios en todo el mundo."
       ],
       "thumbnail": "ibm.svg",
-      "period_time": "September 2003 - December 2004",
+      "period_time": "Septiembre 2003 - Diciembre 2004",
       "full_description": [
-        "IBM is a global leader in technology, offering innovative solutions in AI, cloud computing, and enterprise hardware."
+        "IBM es un líder global en tecnología, ofreciendo soluciones innovadoras en IA, computación en la nube y hardware empresarial."
       ],
       "contribution": [
-        "I investigated the use of the IBM System Z/390s mainframe for system virtualization, utilizing Qemu to enable remote systems using Suse Linux Enterprise Edition."
+        "Investigué el uso del mainframe IBM System Z/390s para virtualización de sistemas, utilizando Qemu para habilitar sistemas remotos con Suse Linux Enterprise Edition."
       ],
       "projects": [
         {
-          "name": "Websites develop",
+          "name": "Desarrollo de sitios web",
           "description": [
-            "Implementation of web pages using CMS such as Joomla, Drupal, and Moodle."
+            "Implementación de páginas web usando CMS como Joomla, Drupal y Moodle."
           ],
           "images": [
             "ibm_system_z.jpg",
@@ -839,18 +839,18 @@
   "educations": {
     "university": [
       {
-        "university_name": "Alcalá de Henares University",
-        "title": "Master's Degree in Artificial Intelligence in information and communication technologies",
-        "period_time": "September 2007 - June 2009",
+        "university_name": "Universidad de Alcalá de Henares",
+        "title": "Máster en Inteligencia Artificial en tecnologías de la información y la comunicación",
+        "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
-          "Artificial intelligence and machine learning. Supervised, unsupervised, and reinforced learning. Symbolic learning, classification, and regression models. Optimization of models.",
-          "Deep nets, backpropagation, loss functions, hyperparameters, and learning strategies.",
-          "Convolutional networks and image recognition.",
-          "Sequential, recurrent networks, LSTM models.",
-          "Paralleling and computation techniques in GPU-based architectures.",
-          "Vectorization techniques. Programming with TensorFlow and Theano.",
-          "Scalable automated learning. Parallelization frameworks in computer clusters.",
-          "Applications in medicine, finance, autonomous driving, etc."
+          "Inteligencia artificial y aprendizaje automático. Aprendizaje supervisado, no supervisado y por refuerzo. Aprendizaje simbólico, modelos de clasificación y regresión. Optimización de modelos.",
+          "Redes profundas, retropropagación, funciones de pérdida, hiperparámetros y estrategias de aprendizaje.",
+          "Redes convolucionales y reconocimiento de imágenes.",
+          "Redes secuenciales, recurrentes, modelos LSTM.",
+          "Técnicas de paralelización y computación en arquitecturas basadas en GPU.",
+          "Técnicas de vectorización. Programación con TensorFlow y Theano.",
+          "Aprendizaje automatizado escalable. Marcos de paralelización en clústeres de computadoras.",
+          "Aplicaciones en medicina, finanzas, conducción autónoma, etc."
         ],
         "images": [
           "uah.svg"
@@ -858,11 +858,11 @@
         "thumbnail": "uah.svg"
       },
       {
-        "university_name": "Alcalá de Henares University",
-        "title": "Technical Engineering in Computer Science",
-        "period_time": "September 2001 - June 2007",
+        "university_name": "Universidad de Alcalá de Henares",
+        "title": "Ingeniería Técnica en Informática",
+        "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
-          "With honors in: Artificial Intelligence, Fuzzy Logic, Artificial Vision Systems, Physics II, Mathematical Analysis, Data Structure, Networks."
+          "Con honores en: Inteligencia Artificial, Lógica Difusa, Sistemas de Visión Artificial, Física II, Análisis Matemático, Estructura de Datos, Redes."
         ],
         "images": [
           "uah.svg"
@@ -874,12 +874,12 @@
       {
         "institution": "Linux Foundation",
         "title": "LPIC - 2",
-        "period_time": "September 2015",
+        "period_time": "Septiembre 2015",
         "summary": [
-          "Advanced administration of Linux systems, including kernel management.",
-          "Perform advanced management of block storage, file systems, networks, authentication, and system security, including firewalls and VPN.",
-          "Install and configure core network services (DHCP, DNS, SSH, web servers, file servers, email, etc).",
-          "Monitor systems and advise management on automation and purchases."
+          "Administración avanzada de sistemas Linux, incluyendo la gestión del kernel.",
+          "Realizar la gestión avanzada de almacenamiento en bloque, sistemas de archivos, redes, autenticación y seguridad del sistema, incluidos firewalls y VPN.",
+          "Instalar y configurar servicios de red principales (DHCP, DNS, SSH, servidores web, servidores de archivos, correo electrónico, etc.).",
+          "Monitorear sistemas y asesorar a la gerencia sobre automatización y compras."
         ],
         "images": [
           "linux_foundation.png"
@@ -889,12 +889,12 @@
       {
         "institution": "Linux Foundation",
         "title": "LPIC - 1",
-        "period_time": "September 2013",
+        "period_time": "Septiembre 2013",
         "summary": [
-          "Install a Linux system, including X11 and configure it as a network client.",
-          "Work in the command line.",
-          "Manage files and access permissions, including ACL, as well as system security.",
-          "Perform simple maintenance tasks."
+          "Instalar un sistema Linux, incluyendo X11 y configurarlo como cliente de red.",
+          "Trabajar en la línea de comandos.",
+          "Gestionar archivos y permisos de acceso, incluyendo ACL, así como la seguridad del sistema.",
+          "Realizar tareas de mantenimiento simples."
         ],
         "images": [
           "linux_foundation.png"
@@ -902,11 +902,11 @@
         "thumbnail": "linux_foundation.png"
       },
       {
-        "institution": "Alcalá de Henares University",
-        "title": "Design and evaluation of digital educational contents",
-        "period_time": "September 2007",
+        "institution": "Universidad de Alcalá de Henares",
+        "title": "Diseño y evaluación de contenidos educativos digitales",
+        "period_time": "Septiembre 2007",
         "summary": [
-          "Design of educational content through the SCORM standard."
+          "Diseño de contenidos educativos a través del estándar SCORM."
         ],
         "images": [
           "uah.svg"
@@ -914,11 +914,11 @@
         "thumbnail": "uah.svg"
       },
       {
-        "institution": "Alcalá de Henares University",
-        "title": "Course of artificial vision",
-        "period_time": "September 2007",
+        "institution": "Universidad de Alcalá de Henares",
+        "title": "Curso de visión artificial",
+        "period_time": "Septiembre 2007",
         "summary": [
-          "Systems of artificial vision, convolutional matrices, filters."
+          "Sistemas de visión artificial, matrices convolucionales, filtros."
         ],
         "images": [
           "uah.svg"
@@ -928,31 +928,31 @@
     ],
     "languages": [
       {
-        "language": "Spanish",
-        "spoken": "Native",
-        "writen": "Native",
-        "read": "Native",
+        "language": "Español",
+        "spoken": "Nativo",
+        "writen": "Nativo",
+        "read": "Nativo",
         "acreditations": [],
         "thumbnail": "spanish.png"
       },
       {
-        "language": "English",
-        "spoken": "Fluent",
-        "writen": "Fluent",
-        "read": "Fluent",
+        "language": "Inglés",
+        "spoken": "Fluido",
+        "writen": "Fluido",
+        "read": "Fluido",
         "acreditations": [],
         "thumbnail": "english.svg"
       },
       {
-        "language": "Chinese",
-        "spoken": "Fluent",
-        "writen": "Fluent",
-        "read": "Fluent",
+        "language": "Chino",
+        "spoken": "Fluido",
+        "writen": "Fluido",
+        "read": "Fluido",
         "acreditations": [
           {
-            "institution": "Confucius Institute Madrid",
+            "institution": "Instituto Confucio Madrid",
             "title": "HSK 3",
-            "period_time": "September 2009"
+            "period_time": "Septiembre 2009"
           }
         ],
         "thumbnail": "chinese.png"
