@@ -1,4 +1,38 @@
 {
+  "intro": {
+    "greeting": "Hello, I'm a senior software developer travelling around the world!",
+    "profile_image": "israel.png",
+    "name": "Israel López",
+    "title": "Senior Software Engineer",
+    "summary": [
+      "<P>Israel is a senior software developer based in Spain with a passion for expanding his horizons and traveling the world while doing what he loves: developing high-quality software products. With extensive experience in high availability and concurrency environments, he excels in performance optimization, ensuring every byte counts. Israel&apos;s dedication to his craft and his ability to deliver exceptional results make him a valuable asset to any project.</P>"
+    ],
+    "hobbies": [
+      "🧗 climbing, 🏂 snowboarding, 🧭 travel, 🤿 scuba diving, ⨋ maths (especially linear algebra and statistics), 🧠 Artificial Intelligence."
+    ],
+    "links": [
+      {
+        "icon": "",
+        "url": "https://github.com/israellopezdeveloper",
+        "text": "@israellopezdeveloper"
+      },
+      {
+        "icon": "󰇮",
+        "url": "mailto:israel.lopez.developer@gmail.com",
+        "text": "israel.lopez.developer@gmail.com"
+      },
+      {
+        "icon": "󰌻",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/",
+        "text": "https://www.linkedin.com/in/israellopezmaiz/"
+      },
+      {
+        "icon": "",
+        "url": "tel:+34648136640",
+        "text": "+34 648 13 66 40"
+      }
+    ]
+  },
   "works": [
     {
       "name": "Devo",

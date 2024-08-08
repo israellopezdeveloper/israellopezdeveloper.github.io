@@ -1,16 +1,30 @@
-import cvData from '../public/data/CV.json'
 import { Container, Heading, SimpleGrid, Divider, Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { EducationGridItem } from '../components/grid-item'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
+import cvDataEN from '../data/CV.en.json'
+import cvDataENS from '../data/CV.en.s.json'
+import cvDataES from '../data/CV.es.json'
+import { useLanguage } from '../components/context/language_context'
 
 const Educations = () => {
   const voxel = useContext(VoxelKoalaContext)
   useEffect(() => {
     voxel.current.to_education()
   }, [voxel])
+
+  const { language } = useLanguage()
+  const cvDataArray = useMemo(() => ({
+    'en': cvDataEN,
+    'en.s': cvDataENS,
+    'es': cvDataES
+  }), [])
+  const [cvData, setCvData] = useState(cvDataEN)
+  useEffect(() => {
+    setCvData(cvDataArray[language])
+  }, [language, cvDataArray])
 
   return (
     <Layout title="Education">
