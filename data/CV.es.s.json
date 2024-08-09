@@ -288,7 +288,7 @@
             "Eclipselink",
             "Enterprise Architect",
             "GIT",
-            "GoogleTest",
+            "Google Test",
             "Groovy",
             "IntelliJ IDEA",
             "JPA",
@@ -516,7 +516,7 @@
             "Objective-C",
             "Dagger",
             "SCORM",
-            "HTML5",
+            "HTML",
             "JavaScript",
             "Bootstrap",
             "jQuery",
@@ -534,7 +534,7 @@
             "C++",
             "Linux",
             "Flash",
-            "HTML5",
+            "HTML",
             "JavaScript",
             "AngularJS",
             "Bootstrap",
@@ -630,7 +630,7 @@
             "Windows Server",
             "Microsoft SQL Server",
             "Cassandra",
-            "HTML5",
+            "HTML",
             "JavaScript",
             "Bootstrap",
             "jQuery",
@@ -793,7 +793,7 @@
           "technologies": [
             "Joomla",
             "PHP",
-            "Javascript",
+            "JavaScript",
             "MySQL",
             "HTML"
           ]
@@ -828,7 +828,7 @@
           "technologies": [
             "Joomla",
             "PHP",
-            "Javascript",
+            "JavaScript",
             "MySQL",
             "HTML"
           ]

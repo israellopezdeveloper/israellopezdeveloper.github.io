@@ -61,7 +61,7 @@ const Works = () => {
   const calculateTechnologyUsage = () => {
     const techUsage = {}
 
-    cvData.works.forEach(work => {
+    cvDataEN.works.forEach(work => {
       const period = work.period_time.split(' - ')
       const startDate = moment(period[0], 'MMMM YYYY')
       const endDate = moment(period[1], 'MMMM YYYY')
