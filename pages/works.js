@@ -11,6 +11,7 @@ import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
 import cvDataESS from '../data/CV.es.s.json'
 import { useLanguage } from '../components/context/language_context'
+import RepoList from '../components/RepoList'
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -134,36 +135,30 @@ const Works = () => {
     <Layout title="Works">
       <Container display="flex" flexDirection={isMobile ? 'column' : 'row'} maxW={'100%'}>
         <Box flex="3">
-          <Heading as="h3" fontSize={20} mb={4}>
-            Works
-          </Heading>
+          <Section>
+            <Heading as="h3" fontSize={20} mb={4}>
+              Works
+            </Heading>
 
-          <SimpleGrid columns={[1, 1, 2]} gap={6}>
-            {filteredWorks.map((work, index) => (
-              <Section key={index}>
-                <WorkGridItem
+            <SimpleGrid columns={[1, 1, 2]} gap={6}>
+              {filteredWorks.map((work, index) => (
+                <WorkGridItem key={index}
                   id={index.toString()}
                   title={work.name}
                   thumbnail={`/images/works/${work.thumbnail}`}>
                   {work.short_description}
                 </WorkGridItem>
-              </Section>
-            ))}
-          </SimpleGrid>
+              ))}
+            </SimpleGrid>
+          </Section>
 
+          <Divider my={6} />
           <Section delay={0.2}>
-            <Divider my={6} />
             <Heading as="h3" fontSize={20} mb={4}>
-              Collaborations
+              Own projects
             </Heading>
           </Section>
-
-          <Section delay={0.4}>
-            <Divider my={6} />
-            <Heading as="h3" fontSize={20} mb={4}>
-              Old works
-            </Heading>
-          </Section>
+          <RepoList />
         </Box>
 
         <Box flex="1" ml={6} bg={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')} p={1} rounded={'md'}>
