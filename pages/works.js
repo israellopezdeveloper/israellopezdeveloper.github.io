@@ -41,7 +41,7 @@ function useWindowSize() {
 }
 
 async function fetchRepos() {
-  const test = false
+  const test = true
   if (!test) {
     try {
       const response = await axios.get('https://api.github.com/users/israellopezdeveloper/repos')
@@ -106,6 +106,30 @@ async function fetchRepos() {
         {
           "tech": "JavaScript",
           "time": 1
+        },
+        {
+          "tech": "next.js",
+          "time": 1
+        },
+        {
+          "tech": "chakra",
+          "time": 1
+        },
+        {
+          "tech": "react",
+          "time": 1
+        },
+        {
+          "tech": "node.js",
+          "time": 1
+        },
+        {
+          "tech": "threejs",
+          "time": 1
+        },
+        {
+          "tech": "blender",
+          "time": 1
         }
       ], "title": {
         "es": "Mi portfolio",
@@ -165,14 +189,14 @@ const Works = () => {
           }
         })
       })
-      repos.forEach(repo => {
-        repo.techs.forEach(tech => {
-          if (techUsage[tech.tech]) {
-            techUsage[tech.tech] += tech.time
-          } else {
-            techUsage[tech.tech] = tech.time
-          }
-        })
+    })
+    repos.forEach(repo => {
+      repo.techs.forEach(tech => {
+        if (techUsage[tech.tech]) {
+          techUsage[tech.tech] += tech.time
+        } else {
+          techUsage[tech.tech] = tech.time
+        }
       })
     })
 
