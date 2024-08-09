@@ -1,7 +1,7 @@
 import { Container, Heading, SimpleGrid, Divider, Box, WrapItem, Wrap, useColorModeValue } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { ProjectGridItem, WorkGridItem } from '../components/grid-item'
 import { useContext, useEffect, useMemo, useState } from 'react'
 import { VoxelKoalaContext } from '../components/layouts/main'
 import TechBadge from '../components/techbadge'
@@ -11,7 +11,7 @@ import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
 import cvDataESS from '../data/CV.es.s.json'
 import { useLanguage } from '../components/context/language_context'
-import RepoList from '../components/RepoList'
+import axios from 'axios'
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -40,8 +40,91 @@ function useWindowSize() {
   return windowSize
 }
 
+async function fetchRepos() {
+  const test = true
+  if (!test) {
+    try {
+      const response = await axios.get('https://api.github.com/users/israellopezdeveloper/repos')
+      const repoData = response.data
+
+      const reposFilled = await Promise.all(
+        repoData.map(async (repo) => {
+          const startDate = new Date(repo.created_at)
+
+          // Fecha actual
+          const currentDate = new Date()
+
+          // Calcula la diferencia en años y meses
+          const yearsDiff = currentDate.getFullYear() - startDate.getFullYear()
+          const monthsDiff = currentDate.getMonth() - startDate.getMonth()
+
+          // Calcula el número total de meses
+          let totalMonths = yearsDiff * 12 + monthsDiff
+          totalMonths = (totalMonths === 0 ? 1 : totalMonths)
+          let techs = await axios.get(repo.languages_url)
+          techs = Object.keys(techs.data)
+          let techs2 = []
+          try {
+            techs2 = await axios.get(`https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/.techs`)
+            techs2 = techs2.data.split('\n')
+          } catch (e) {
+          }
+          techs = [...new Set([...techs, ...techs2])]
+          techs = techs.map((item) => {
+            return {
+              'tech': item,
+              'time': totalMonths
+            }
+          })
+          const titles = JSON.parse(repo.description)
+          const output = {
+            techs: techs,
+            title: {
+              es: titles.es.name,
+              en: titles.en.name
+            },
+            description: {
+              es: titles.es.desc,
+              en: titles.en.desc
+            },
+            url: repo.html_url,
+
+            thumbnail: `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/.logo.png`
+          }
+          return output
+        })
+      )
+
+      return reposFilled
+    } catch (error) {
+      console.error(error)
+    } finally {
+    }
+  } else {
+    return [{
+      "techs": [
+        {
+          "tech": "JavaScript",
+          "time": 1
+        }
+      ], "title": {
+        "es": "Mi portfolio",
+        "en": "My portfolio"
+      }, "description": {
+        "es": "Código fuente de mi portfolio",
+        "en": "Source code of my portfolio"
+      }, "url": "https://github.com/israellopezdeveloper/israellopezdeveloper.github.io", thumbnail: "https://raw.githubusercontent.com/israellopezdeveloper/israellopezdeveloper.github.io/main/.logo.png"
+    }]
+  }
+}
+
+let repos = []
+
+fetchRepos().then(r => repos = r)
+
 const Works = () => {
   const voxel = useContext(VoxelKoalaContext)
+
   useEffect(() => {
     voxel.current.to_work()
   }, [voxel])
@@ -82,13 +165,22 @@ const Works = () => {
           }
         })
       })
+      repos.forEach(repo => {
+        repo.techs.forEach(tech => {
+          if (techUsage[tech.tech]) {
+            techUsage[tech.tech] += tech.time
+          } else {
+            techUsage[tech.tech] = tech.time
+          }
+        })
+      })
     })
 
     return techUsage
   }
 
   // Uso de useMemo para memorizar el uso de las tecnologías
-  const technologyUsage = useMemo(calculateTechnologyUsage, [cvData.works])
+  const technologyUsage = useMemo(calculateTechnologyUsage, [])
 
   // Estado para las tecnologías seleccionadas
   const [selectedTechnologies, setSelectedTechnologies] = useState(() => {
@@ -128,6 +220,11 @@ const Works = () => {
     })
   })
 
+  // Filtrar los proyectos basados en las tecnologías seleccionadas
+  const filteredProjects = repos.filter(repo => {
+    return repo.techs.map(t => t.tech).some(tech => selectedTechnologies[tech])
+  })
+
   const { width } = useWindowSize()
   const isMobile = width < 768; // Define el tamaño de pantalla móvil como < 768px
 
@@ -157,8 +254,17 @@ const Works = () => {
             <Heading as="h3" fontSize={20} mb={4}>
               Own projects
             </Heading>
+            <SimpleGrid columns={[1, 1, 2]} gap={6}>
+              {filteredProjects.map((repo) => (
+                <ProjectGridItem key={'Repo' + repo.id}
+                  id={repo.url}
+                  title={repo.title.es}
+                  thumbnail={repo.thumbnail}>
+                  {repo.description.es}
+                </ProjectGridItem>
+              ))}
+            </SimpleGrid>
           </Section>
-          <RepoList />
         </Box>
 
         <Box flex="1" ml={6} bg={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')} p={1} rounded={'md'}>

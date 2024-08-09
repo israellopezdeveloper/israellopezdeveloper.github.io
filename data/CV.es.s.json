@@ -1,11 +1,15 @@
 {
   "intro": {
-    "greeting": "¡Hola, soy un desarrollador de software senior viajando por el mundo!",
+    "greeting": "¡Hola! Soy Israel, un dev senior empedernido viajando por el mundo.",
     "profile_image": "israel.png",
     "name": "Israel López",
     "title": "Ingeniero de Software Senior",
     "summary": [
-      "Israel es un desarrollador de software senior con base en España, apasionado por desarrollar productos de software de alta calidad mientras viaja por el mundo. Tiene una amplia experiencia en entornos de alta disponibilidad y concurrencia, destacándose en la optimización del rendimiento. La dedicación de Israel a su oficio lo convierte en un activo valioso para cualquier proyecto."
+      "<P>Mi mochila está llena de código y de ganas de seguir aprendiendo. ¡La programación es mi superpoder!</P>",
+      "<P>Desde los 13 me picó el gusanillo de la programación y no he podido parar. ¡En cualquier rincón del mundo, con mi portátil bajo el brazo!</P>",
+      "<P>Me considero una mente inquieta por las ganas insaciables que tengo de aprender,  innovar y superar nuevos retos intelectuales. Disfruto de la sensación de ver cómo una idea se convierte en realidad a través de código.</P>",
+      "<P>Tengo la suerte de que la programación no solo es mi trabajo, también es mi pasión y si hay algo que me caracteriza es mi insistencia por encontrar la solución óptima al proyecto.  Porque si, me  enorgullece entregar código limpio y eficiente.</P>",
+      "<P>Si conectamos, ¿estás listo para embarcarte en una nueva aventura tecnológica conmigo?</P>"
     ],
     "bio": [
       {
