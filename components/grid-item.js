@@ -43,7 +43,6 @@ export const ProjectGridItem = ({
     <LinkBox
       as={NextLink}
       href={id}
-      isExternal
       target='_blank'
       scroll={false}
       alignItems={'center'}

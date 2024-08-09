@@ -48,6 +48,7 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Israel López portfolio" />
         <meta name="og:title" content="Israel López" />
         <meta property="og:type" content="website" />
+        <meta name="keywords" content="Freelance,Senior,Software Engineer,Full-stack,Developer,Machine Learning,Cybersecurity,Artificial Intelligence,CI/CD,Cloud,FedRAMP,RESTful,API,Microservices,Java,C++,Kubernetes,TDD (Test-Driven Development),BDD (Behavior-Driven Development),AI in Healthcare,TensorFlow,Neural Networks,Artificial Vision Systems,Scalable,Cloud Computing,Docker,Jenkins,GitLab,Software Architecture,Scalable Architecture,Real-time Security Analytics,Data Management,System Virtualization,Enterprise Solutions,Data Redundancy,High Availability Systems,Fault Tolerance,Load Balancing,Prometheus,Cloud Security,GCP,AWS,Linux,LPIC,Deep Learning,TensorFlow,NIST,Snyk,OWASP,SonarQube,SCRUM,Agile,Java,Spring,Cassandra,MongoDB,Oracle,IoT,High-performance" />
         <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png" />
