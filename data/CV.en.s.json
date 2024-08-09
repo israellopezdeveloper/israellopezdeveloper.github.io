@@ -1,11 +1,15 @@
 {
   "intro": {
-    "greeting": "Hello, I'm a senior software developer traveling around the world!",
+    "greeting": "Hi! I'm Israel, a seasoned senior dev traveling the world.",
     "profile_image": "israel.png",
     "name": "Israel López",
     "title": "Senior Software Engineer",
     "summary": [
-      "Israel is a senior software developer based in Spain, passionate about developing high-quality software products while traveling the world. He has extensive experience in high availability and concurrency environments, excelling in performance optimization. Israel's dedication to his craft makes him a valuable asset to any project."
+      "<P>My backpack is full of code and the desire to continue learning. Programming is my superpower!</P>",
+      "<P>Since I was 13, I've been hooked on programming and I haven't been able to stop. Anywhere in the world, with my laptop under my arm!</P>",
+      "<P>I consider myself a restless mind because of the insatiable desire I have to learn, innovate and overcome new intellectual challenges. I enjoy the feeling of seeing how an idea becomes reality through code.</P>",
+      "<P>I'm lucky that programming is not only my job, it's also my passion and if there's something that characterizes me, it's my insistence on finding the optimal solution to the project. Because yes, I'm proud to deliver clean and efficient code.</P>",
+      "<P>If we connect, are you ready to embark on a new technological adventure with me?</P>"
     ],
     "bio": [
       {
@@ -288,7 +292,7 @@
             "Eclipselink",
             "Enterprise Architect",
             "GIT",
-            "GoogleTest",
+            "Google Test",
             "Groovy",
             "IntelliJ IDEA",
             "JPA",
@@ -516,7 +520,7 @@
             "Objective-C",
             "Dagger",
             "SCORM",
-            "HTML5",
+            "HTML",
             "JavaScript",
             "Bootstrap",
             "jQuery",
@@ -534,7 +538,7 @@
             "C++",
             "Linux",
             "Flash",
-            "HTML5",
+            "HTML",
             "JavaScript",
             "AngularJS",
             "Bootstrap",
@@ -630,7 +634,7 @@
             "Windows Server",
             "Microsoft SQL Server",
             "Cassandra",
-            "HTML5",
+            "HTML",
             "JavaScript",
             "Bootstrap",
             "jQuery",
@@ -793,7 +797,7 @@
           "technologies": [
             "Joomla",
             "PHP",
-            "Javascript",
+            "JavaScript",
             "MySQL",
             "HTML"
           ]
@@ -828,7 +832,7 @@
           "technologies": [
             "Joomla",
             "PHP",
-            "Javascript",
+            "JavaScript",
             "MySQL",
             "HTML"
           ]
