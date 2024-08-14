@@ -1,0 +1,24 @@
+{
+  "technologies": [
+    "next.js",
+    "chakra",
+    "react",
+    "node.js",
+    "threejs",
+    "blender"
+  ],
+  "lang": {
+    "en": {
+      "name": "My portfolio",
+      "desc": "Source code of my portfolio"
+    },
+    "es": {
+      "name": "Mi portfolio",
+      "desc": "Código fuente de mi portfolio"
+    },
+    "zh": {
+      "name": "我的投资组合",
+      "desc": "我的投资组合的源代码"
+    }
+  }
+}
