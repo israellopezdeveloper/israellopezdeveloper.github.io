@@ -58,6 +58,7 @@
   "works": [
     {
       "name": "Devo",
+      "title": "Ingeniero Software Senior",
       "short_description": [
         "Empresa nativa de la nube que ofrece análisis de seguridad en tiempo real, aprendizaje automático y soluciones escalables para la gestión de datos empresariales."
       ],
@@ -196,6 +197,7 @@
     },
     {
       "name": "Comisión Europea",
+      "title": "Arquitecto Software",
       "short_description": [
         "La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones y gestionar los asuntos diarios."
       ],
@@ -402,6 +404,7 @@
     },
     {
       "name": "Panel Sistemas",
+      "title": "Ingeniero Software Senior",
       "short_description": [
         "Panel Sistemas es una empresa especializada en soluciones tecnológicas, ofreciendo servicios de software, consultoría y desarrollo a diversas industrias."
       ],
@@ -580,6 +583,7 @@
     },
     {
       "name": "Grupo Prisa",
+      "title": "Ingeniero Software Senior",
       "short_description": [
         "Grupo PRISA es un conglomerado de medios español, conocido por sus influyentes periódicos, emisoras de radio y publicaciones educativas."
       ],
@@ -686,6 +690,7 @@
     },
     {
       "name": "Intelygenz",
+      "title": "Ingeniero Software Senior",
       "short_description": [
         "Intelygenz es una empresa de tecnología especializada en inteligencia artificial, aprendizaje automático y soluciones de software a medida para diversas industrias."
       ],
@@ -791,7 +796,8 @@
       "images": []
     },
     {
-      "name": "Universidad de Alcalá de Henares (UAH)",
+      "name": "UAH",
+      "title": "Investigador y personal docente",
       "short_description": [
         "La Universidad de Alcalá de Henares es una prestigiosa institución española conocida por su rica historia y diversos programas académicos."
       ],
@@ -920,6 +926,7 @@
     },
     {
       "name": "Knowcentury",
+      "title": "Programador junior",
       "short_description": [
         "Pequeña empresa dedicada a la creación de páginas web"
       ],
@@ -952,6 +959,7 @@
     },
     {
       "name": "IBM",
+      "title": "Programador junior",
       "short_description": [
         "IBM, una empresa tecnológica global, se especializa en computación en la nube, IA y hardware, proporcionando soluciones innovadoras para negocios en todo el mundo."
       ],
@@ -998,7 +1006,7 @@
   "educations": {
     "university": [
       {
-        "university_name": "Universidad de Alcalá de Henares",
+        "university_name": "UAH",
         "title": "Máster en Inteligencia Artificial en tecnologías de la información y la comunicación",
         "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
@@ -1017,7 +1025,7 @@
         "thumbnail": "uah.svg"
       },
       {
-        "university_name": "Universidad de Alcalá de Henares",
+        "university_name": "UAH",
         "title": "Ingeniería Técnica en Informática",
         "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
