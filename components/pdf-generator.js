@@ -1,19 +1,21 @@
-const cv = require('../data/CV.es.json')
+const cv_es = require('../data/CV.es.json')
+const cv_en = require('../data/CV.en.json')
+const gui_es = require('../data/gui.es.json')
+const gui_en = require('../data/gui.en.json')
 const fs = require('fs')
 const { exec } = require('child_process')
 
-const generateMarkdown = (data) => {
-  function eliminarEtiquetasHTML(texto) {
-    // Expresión regular para encontrar todas las etiquetas HTML
-    const regex = /<\/?[^>]+(>|$)/g
-    return texto.replace(regex, '').replace(/#/g, '\\#')
-  }
-
-  let markdown = `  \\documentclass[a4paper,10pt]{article}\n\
+function generate_pdf(json_cv, json_gui, name) {
+  const generateMarkdown = (data) => {
+    function eliminarEtiquetasHTML(texto) {
+      // Expresión regular para encontrar todas las etiquetas HTML
+      const regex = /<\/?[^>]+(>|$)/g
+      return texto.replace(regex, '').replace(/#/g, '\\#').replace(/&/g, '\\&')
+    }
+    let markdown = `  \\documentclass[a4paper,10pt]{article}\n\
   \\usepackage[utf8]{inputenc}\n\
   \\usepackage{graphicx}\n\
   \\usepackage{fontspec}\n\
-  \\setmainfont{JetBrainsMono Nerd Font}\n\
   \\usepackage{parskip}\n\
   \\usepackage{xcolor}\n\
   \\usepackage{tcolorbox}\n\
@@ -23,6 +25,8 @@ const generateMarkdown = (data) => {
   \\usepackage{tikz}\n\
   \\usepackage{multirow}\n\
   \\usepackage{array}\n\
+  \\setmonofont{JetBrainsMono Nerd Font}\n\
+  \\pagestyle{empty}\n\
   \\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}\n\
   \\hypersetup{\n\
     colorlinks=true,\n\
@@ -62,126 +66,96 @@ const generateMarkdown = (data) => {
   }\n\
   \\newcommand{\\roundedimage}[1]{\n\
     \\begin{tikzpicture}\n\
-      \\clip[rounded corners=5mm] (0,0) rectangle (2.5,2.5);\n\
-      \\node[anchor=south west,inner sep=0] at (0,0) {\\includegraphics[width=2.5cm,height=2.5cm]{#1}};\n\
+      \\clip[rounded corners=3mm] (0,0) rectangle (3,3);\n\
+      \\node[anchor=south west,inner sep=0] at (0,0) {\\includegraphics[width=3cm,height=3cm]{#1}};\n\
     \\end{tikzpicture}\n\
   }\n\
   \\begin{document}\n\
     \\begin{tabular*}{\\textwidth}{l @{\\extracolsep{\\fill}} r}\n\
-      \\textbf{\\Huge ${data.intro.name}} & \\multirow{5}{*}{\\roundedimage{./public/images/${data.intro.profile_image}}}\\\\\n\
+      \\textbf{\\Huge ${data.intro.name}} & \\multirow{6}{*}{\\roundedimage{./public/images/${data.intro.profile_image}}}\\\\\n\
       \\textbf{${data.intro.title}} & \\\\ \n`
 
-  data.intro.links.forEach((link) => {
-    markdown += `      ${link.icon} ${link.text} & \\\\ \n`
-  })
-  markdown += `\\end{tabular*}\n\
-    \\cvsection{Summary}\n`
-  data.intro.summary.forEach(line => {
-    markdown += `  ${eliminarEtiquetasHTML(line)}\n\n`
-  })
-  markdown += `\\cvsection{Experiencia}\n`
-  data.works.forEach(job => {
-    markdown += `\\cvsubsection{${job.title}}{${job.name}}{${job.period_time}}\n`
-    job.contribution.forEach(line => {
-      markdown += `${eliminarEtiquetasHTML(line)}\n\n`
+    data.intro.links.forEach((link) => {
+      markdown += `      \\texttt{${link.icon}} ${link.text} & \\\\ \n`
     })
-    job.projects.forEach(project => {
-      markdown += `\\cvsubsubsection{${project.name}}\n`
-      project.description.forEach(line => {
+    markdown += `    \\end{tabular*}\n\
+    \\cvsection{${json_gui.pdf.summary}}\n`
+    data.intro.summary.forEach(line => {
+      markdown += `  ${eliminarEtiquetasHTML(line)}\n\n`
+    })
+    markdown += `    \\cvsection{${json_gui.pdf.exp}}\n`
+    data.works.forEach(job => {
+      markdown += `\\cvsubsection{${job.title}}{${job.name}}{${job.period_time}}\n`
+      job.contribution.forEach(line => {
         markdown += `${eliminarEtiquetasHTML(line)}\n\n`
       })
-      markdown += `\\cvsubsubsubsection{Tecnologías}\n`
-      markdown += `${project.technologies.join(', ').replace(/\#/g, '\\#')}\n\n`
+      job.projects.forEach(project => {
+        markdown += `\\cvsubsubsection{${project.name}}\n`
+        project.description.forEach(line => {
+          markdown += `${eliminarEtiquetasHTML(line)}\n\n`
+        })
+        markdown += `\\cvsubsubsubsection{${json_gui.pdf.techs}}\n`
+        markdown += `${project.technologies.join(', ').replace(/\#/g, '\\#')}\n\n`
+      })
     })
-  })
-  markdown += `\\cvsection{Educación}\n`
-  data.educations.university.forEach(edu => {
-    markdown += `\\cvsubsection{${edu.title}}{${edu.university_name}}{${edu.period_time}}\n`
-    edu.summary.forEach(line => {
-      markdown += `${eliminarEtiquetasHTML(line)}\n\n`
+    markdown += `\\cvsection{${json_gui.pdf.edu}}\n`
+    data.educations.university.forEach(edu => {
+      markdown += `      \\cvsubsection{${edu.title}}{${edu.university_name}}{${edu.period_time}}\n`
+      edu.summary.forEach(line => {
+        markdown += `${eliminarEtiquetasHTML(line)}\n\n`
+      })
     })
-  })
-  data.educations.complementary.forEach(edu => {
-    markdown += `\\cvsubsection{${edu.title}}{${edu.institution}}{${edu.period_time}}\n`
-    edu.summary.forEach(line => {
-      markdown += `${eliminarEtiquetasHTML(line)}\n\n`
+    data.educations.complementary.forEach(edu => {
+      markdown += `      \\cvsubsection{${edu.title}}{${edu.institution}}{${edu.period_time}}\n`
+      edu.summary.forEach(line => {
+        markdown += `${eliminarEtiquetasHTML(line)}\n\n`
+      })
     })
-  })
-  markdown += `\\cvsection{Idiomas}\n`
-  markdown += `\\renewcommand{\\arraystretch}{1.5}\n`
-  markdown += `\\begin{tabular}{ l c c r }\n\
-    \\textbf{Language} & \\textbf{Spoken} & \\textbf{Writen} & \\textbf{Read} \\\\\n`
-  markdown += `\\hline\n`
-  data.educations.languages.forEach(edu => {
-    markdown += `\\textbf{${edu.language}} & ${edu.spoken} & ${edu.writen} & ${edu.read}\\\\\n`
-  })
-  markdown += `\\end{tabular}\n`
-  markdown += `\\cvsubsection{Acreditaciones}{}{}\n`
-  data.educations.languages.forEach(edu => {
-    if (edu.acreditations.length > 0) {
-      markdown += `\\cvsubsubsection{${edu.language}}\n`
+    markdown += `    \\cvsection{${json_gui.pdf.langs}}\n`
+    markdown += `\\renewcommand{\\arraystretch}{1.5}\n`
+    markdown += `\\begin{tabular}{ l c c r }\n\
+    \\textbf{${json_gui.pdf.lang}} & \\textbf{${json_gui.pdf.spoken}} & \\textbf{${json_gui.pdf.writen}} & \\textbf{${json_gui.pdf.read}} \\\\\n`
+    markdown += `\\hline\n`
+    data.educations.languages.forEach(edu => {
+      markdown += `\\textbf{${edu.language}} & ${edu.spoken} & ${edu.writen} & ${edu.read}\\\\\n`
+    })
+    markdown += `\\end{tabular}\n`
+    markdown += `\\cvsubsection{${json_gui.pdf.acreditations}}{}{}\n`
+    data.educations.languages.forEach(edu => {
+      if (edu.acreditations.length > 0) {
+        markdown += `\\cvsubsubsection{${edu.language}}\n`
+      }
+      edu.acreditations.forEach(acr => {
+        markdown += `\\cvsubsubsubsection{${acr.title} ${acr.institution} [${acr.period_time}]}\n`
+      })
+    })
+    markdown += `\\end{document}`
+    markdown = markdown.replace(/^ {2}/gm, '')
+    return markdown
+  }
+
+  const markdown = generateMarkdown(json_cv)
+  fs.writeFileSync(`${name}.tex`, markdown)
+
+  exec(`xelatex ${name}.tex -o ${name}.pdf`, (error, stdout, stderr) => {
+    //console.log(stdout)
+    if (error) {
+      console.error(error.message)
+      //fs.unlink('cv.tex', () => { })
+      return
     }
-    edu.acreditations.forEach(acr => {
-      markdown += `\\cvsubsubsubsection{${acr.title} ${acr.institution} [${acr.period_time}]}\n`
+    if (stderr) {
+      console.error(stderr)
+      //fs.unlink('cv.tex', () => { })
+      return
+    }
+    [`${name}.aux`, `${name}.log`, `${name}.out`, `texput.log`, `${name}.tex`].forEach(file => {
+      fs.unlink(file, () => { })
     })
+    console.log("Generated")
   })
-  markdown += `\\end{document}`
-
-  //data.works.forEach((work) => {
-  //  markdown += `\n## ${ work.name } [${ work.period_time }]\n`
-  //  work.contribution.forEach((cont) => {
-  //    markdown += `\n${ eliminarEtiquetasHTML(cont) } \n`
-  //  })
-  //  markdown += `\n### Projects\n`
-  //  work.projects.forEach((project) => {
-  //    markdown += `\n#### ${ project.name } \n`
-  //    project.description.forEach((desc) => {
-  //      markdown += `\n${ eliminarEtiquetasHTML(desc) } \n`
-  //    })
-  //    markdown += `\n ** Technologies:** ${ project.technologies.join(', ') } \n`
-  //  })
-  //})
-  //
-  //markdown += `\n## Education\n`
-  //data.educations.university.forEach((edu) => {
-  //  markdown += `\n### ${ edu.title } (${ edu.university_name }) -> ${ edu.period_time } \n`
-  //  edu.summary.forEach((sum) => {
-  //    markdown += `\n${ sum } \n`
-  //  })
-  //})
-  //data.educations.complementary.forEach((edu) => {
-  //  markdown += `\n### ${ edu.title } (${ edu.institution }) -> ${ edu.period_time } \n`
-  //  edu.summary.forEach((sum) => {
-  //    markdown += `\n${ sum } \n`
-  //  })
-  //})
-  //
-  //markdown += `\n## Languages\n`
-  //markdown += '| Language | Spoken | Writen | Read |\n'
-  //markdown += '-------- | ------ | ------ | ---- |\n'
-  //data.educations.languages.forEach((lang) => {
-  //  markdown += `| ${ lang.language }| ${ lang.spoken }| ${ lang.writen }| ${ lang.read }|\n`
-  //})
-
-  markdown = markdown.replace(/^ {2}/gm, '')
-  return markdown
 }
 
-const markdown = generateMarkdown(cv)
-fs.writeFileSync('cv.tex', markdown)
+generate_pdf(cv_es, gui_es, "CV-es")
 
-exec('xelatex cv.tex -o cv.pdf', (error, stdout, stderr) => {
-  //console.log(stdout)
-  if (error) {
-    console.error(error.message)
-    //fs.unlink('cv.tex', () => { })
-    return
-  }
-  if (stderr) {
-    console.error(stderr)
-    //fs.unlink('cv.tex', () => { })
-    return
-  }
-  console.log("Generated")
-})
-
+generate_pdf(cv_en, gui_en, "CV-en")
