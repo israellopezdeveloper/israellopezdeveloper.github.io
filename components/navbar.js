@@ -2,9 +2,13 @@ import Logo from './logo'
 import NextLink from 'next/link'
 import { Box, Container, Heading, Link, useColorModeValue, Flex, Stack, Menu, MenuButton, IconButton, MenuList, MenuItem } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { forwardRef } from 'react'
+import { forwardRef, useEffect, useMemo, useState } from 'react'
 import ThemeToggleButton from './theme-toggle-button'
 import LanguageSelector from './language_selector'
+import { useLanguage } from './context/language_context'
+import guiEN from '../data/gui.en.json'
+import guiES from '../data/gui.es.json'
+import guiZH from '../data/gui.zh.json'
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -32,6 +36,20 @@ MenuLink.displayName = 'MenuLink'
 
 const NavBar = props => {
   const { path } = props
+  const { language } = useLanguage()
+  const guiArray = useMemo(() => ({
+    'en': guiEN,
+    'en.s': guiEN,
+    'es': guiES,
+    'es.s': guiES,
+    'zh': guiZH,
+    'zh.s': guiZH
+  }), [])
+  const [gui, setGui] = useState(guiEN)
+
+  useEffect(() => {
+    setGui(guiArray[language])
+  }, [language, guiArray])
 
   return (
     <Box
@@ -66,10 +84,10 @@ const NavBar = props => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            {gui.titles.jobs}
           </LinkItem>
           <LinkItem href="/educations" path={path}>
-            Education
+            {gui.titles.education}
           </LinkItem>
         </Stack>
 
@@ -86,13 +104,13 @@ const NavBar = props => {
               />
               <MenuList>
                 <MenuItem as={MenuLink} href="/">
-                  About
+                  {gui.titles.about}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/works">
-                  Works
+                  {gui.titles.jobs}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/educations">
-                  Education
+                  {gui.titles.education}
                 </MenuItem>
               </MenuList>
             </Menu>

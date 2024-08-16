@@ -1,8 +1,11 @@
 const cv_es = require('../data/CV.es.json')
 const cv_en = require('../data/CV.en.json')
+const cv_zh = require('../data/CV.zh.json')
 const gui_es = require('../data/gui.es.json')
 const gui_en = require('../data/gui.en.json')
+const gui_zh = require('../data/gui.zh.json')
 const fs = require('fs')
+const path = require('path')
 const { exec } = require('child_process')
 
 function generate_pdf(json_cv, json_gui, name) {
@@ -14,6 +17,7 @@ function generate_pdf(json_cv, json_gui, name) {
     }
     let markdown = `  \\documentclass[a4paper,10pt]{article}\n\
   \\usepackage[utf8]{inputenc}\n\
+  \\usepackage{xeCJK}\n\
   \\usepackage{graphicx}\n\
   \\usepackage{fontspec}\n\
   \\usepackage{parskip}\n\
@@ -152,10 +156,19 @@ function generate_pdf(json_cv, json_gui, name) {
     [`${name}.aux`, `${name}.log`, `${name}.out`, `texput.log`, `${name}.tex`].forEach(file => {
       fs.unlink(file, () => { })
     })
-    console.log("Generated")
+    const oldPath = path.join(process.cwd(), `${name}.pdf`)
+    const newPath = path.join(process.cwd(), 'public', `${name}.pdf`)
+    try {
+      fs.renameSync(oldPath, newPath)
+    } catch (err) {
+      console.error('Error al mover el archivo:', err)
+    }
+    console.log(`Generated ${name}`)
   })
 }
 
 generate_pdf(cv_es, gui_es, "CV-es")
 
 generate_pdf(cv_en, gui_en, "CV-en")
+
+generate_pdf(cv_zh, gui_zh, "CV-zh")

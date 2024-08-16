@@ -8,7 +8,12 @@ import cvDataEN from '../data/CV.en.json'
 import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
 import cvDataESS from '../data/CV.es.s.json'
+import cvDataZH from '../data/CV.zh.json'
+import cvDataZHS from '../data/CV.zh.s.json'
 import { useLanguage } from '../components/context/language_context'
+import guiEN from '../data/gui.en.json'
+import guiES from '../data/gui.es.json'
+import guiZH from '../data/gui.zh.json'
 
 const Educations = () => {
   const voxel = useContext(VoxelKoalaContext)
@@ -21,19 +26,31 @@ const Educations = () => {
     'en': cvDataEN,
     'en.s': cvDataENS,
     'es': cvDataES,
-    'es.s': cvDataESS
+    'es.s': cvDataESS,
+    'zh': cvDataZH,
+    'zh.s': cvDataZHS
   }), [])
+  const guiArray = useMemo(() => ({
+    'en': guiEN,
+    'en.s': guiEN,
+    'es': guiES,
+    'es.s': guiES,
+    'zh': guiZH,
+    'zh.s': guiZH
+  }), [])
+  const [gui, setGui] = useState(guiEN)
   const [cvData, setCvData] = useState(cvDataEN)
   useEffect(() => {
     setCvData(cvDataArray[language])
-  }, [language, cvDataArray])
+    setGui(guiArray[language])
+  }, [language, cvDataArray, guiArray])
 
   return (
     <Layout title="Education">
       <Container display="flex" flexDirection="row" maxW={'75%'}>
         <Box flex="3">
           <Heading as="h3" fontSize={20} mb={4}>
-            University
+            {gui.educations.uni}
           </Heading>
 
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
@@ -53,7 +70,7 @@ const Educations = () => {
           <Section delay={0.2}>
             <Divider my={6} />
             <Heading as="h3" fontSize={20} mb={4}>
-              Complementary
+              {gui.educations.complementary}
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={6}>
               {cvData.educations.complementary.map((education, index) => (
@@ -73,7 +90,7 @@ const Educations = () => {
           <Section delay={0.4}>
             <Divider my={6} />
             <Heading as="h3" fontSize={20} mb={4}>
-              Languages
+              {gui.educations.languages}
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={6}>
               {cvData.educations.languages.map((education, index) => (

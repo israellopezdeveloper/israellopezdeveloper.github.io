@@ -14,6 +14,11 @@ import cvDataEN from '../data/CV.en.json'
 import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
 import cvDataESS from '../data/CV.es.s.json'
+import cvDataZH from '../data/CV.zh.json'
+import cvDataZHS from '../data/CV.zh.s.json'
+import guiEN from '../data/gui.en.json'
+import guiES from '../data/gui.es.json'
+import guiZH from '../data/gui.zh.json'
 import { useLanguage } from '../components/context/language_context'
 
 const Home = () => {
@@ -23,14 +28,27 @@ const Home = () => {
     'en': cvDataEN,
     'en.s': cvDataENS,
     'es': cvDataES,
-    'es.s': cvDataESS
+    'es.s': cvDataESS,
+    'zh': cvDataZH,
+    'zh.s': cvDataZHS
+  }), [])
+
+  const guiArray = useMemo(() => ({
+    'en': guiEN,
+    'en.s': guiEN,
+    'es': guiES,
+    'es.s': guiES,
+    'zh': guiZH,
+    'zh.s': guiZH
   }), [])
 
   const { language } = useLanguage()
   const [cvData, setCvData] = useState(cvDataEN)
+  const [gui, setGui] = useState(guiEN)
   useEffect(() => {
     setCvData(cvDataArray[language])
-  }, [language, cvDataArray])
+    setGui(guiArray[language])
+  }, [language, cvDataArray, guiArray])
 
   useEffect(() => {
     voxel.current.to_main()
@@ -82,7 +100,7 @@ const Home = () => {
 
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            Work
+            {gui.intro.aboutme}
           </Heading>
           <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: cvData.intro.summary.join('') }} />
           <Box align="center" my={4}>
@@ -93,14 +111,26 @@ const Home = () => {
               rightIcon={<ChevronRightIcon />}
               colorScheme="teal"
             >
-              My portfolio
+              {gui.intro.my_portfolio}
+            </Button>
+          </Box>
+          <Box align="center" my={4}>
+            <Button
+              as={NextLink}
+              href={"/CV-" + language.split('.')[0] + ".pdf"}
+              scroll={false}
+              rightIcon={<ChevronRightIcon />}
+              colorScheme="teal"
+              target='_blank'
+            >
+              CV
             </Button>
           </Box>
         </Section>
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
-            Bio
+            {gui.intro.bio}
           </Heading>
           {
             cvData.intro.bio.map((bio, index) => (
@@ -114,14 +144,14 @@ const Home = () => {
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Hobbies
+            {gui.intro.hobbies}
           </Heading>
           {cvData.intro.hobbies}
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            On the web
+            {gui.intro.links}
           </Heading>
           <List>
             {

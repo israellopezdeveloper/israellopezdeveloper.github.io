@@ -10,6 +10,11 @@ import cvDataEN from '../data/CV.en.json'
 import cvDataENS from '../data/CV.en.s.json'
 import cvDataES from '../data/CV.es.json'
 import cvDataESS from '../data/CV.es.s.json'
+import cvDataZH from '../data/CV.zh.json'
+import cvDataZHS from '../data/CV.zh.s.json'
+import guiEN from '../data/gui.en.json'
+import guiES from '../data/gui.es.json'
+import guiZH from '../data/gui.zh.json'
 import { useLanguage } from '../components/context/language_context'
 import axios from 'axios'
 
@@ -663,12 +668,24 @@ const Works = () => {
     'en': cvDataEN,
     'en.s': cvDataENS,
     'es': cvDataES,
-    'es.s': cvDataESS
+    'es.s': cvDataESS,
+    'zh': cvDataZH,
+    'zh.s': cvDataZHS
+  }), [])
+  const guiArray = useMemo(() => ({
+    'en': guiEN,
+    'en.s': guiEN,
+    'es': guiES,
+    'es.s': guiES,
+    'zh': guiZH,
+    'zh.s': guiZH
   }), [])
   const [cvData, setCvData] = useState(cvDataEN)
+  const [gui, setGui] = useState(guiEN)
   useEffect(() => {
     setCvData(cvDataArray[language])
-  }, [language, cvDataArray])
+    setGui(guiArray[language])
+  }, [language, cvDataArray, guiArray])
 
   // Función para calcular los meses de uso de cada tecnología
   const calculateTechnologyUsage = () => {
@@ -763,7 +780,7 @@ const Works = () => {
         <Box flex="3">
           <Section>
             <Heading as="h3" fontSize={20} mb={4}>
-              Works
+              {gui.jobs.title}
             </Heading>
 
             <SimpleGrid columns={[1, 1, 2]} gap={6}>
@@ -781,7 +798,7 @@ const Works = () => {
           <Divider my={6} />
           <Section delay={0.2}>
             <Heading as="h3" fontSize={20} mb={4}>
-              Own projects
+              {gui.jobs.own_projects}
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={6}>
               {filteredProjects.map((repo) => (
@@ -798,10 +815,10 @@ const Works = () => {
 
         <Box flex="1" ml={6} bg={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')} p={1} rounded={'md'}>
           <Heading as="h3" fontSize={20} mb={4}>
-            Technologies
+            {gui.jobs.techs}
           </Heading>
           <p style={{ fontSize: '10pt' }}>
-            The amount in parentheses is the months worked in each technology.
+            {gui.jobs.tech_text}
           </p>
           <TechBadge
             tech="Select All"

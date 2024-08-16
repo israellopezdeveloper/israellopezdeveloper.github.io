@@ -9,10 +9,12 @@ const LanguageSelector = ({ display }) => {
   }
 
   const languages = [
-    { code: 'en', label: 'English', flag: '🇬🇧' },
-    { code: 'en.s', label: 'English short', flag: '🇬🇧' },
-    { code: 'es', label: 'Español', flag: '🇪🇸' },
-    { code: 'es.s', label: 'Español corto', flag: '🇪🇸' }
+    { code: 'en', label: '', flag: '🇬🇧' },
+    { code: 'en.s', label: 'short', flag: '🇬🇧' },
+    { code: 'es', label: '', flag: '🇪🇸' },
+    { code: 'es.s', label: 'corto', flag: '🇪🇸' },
+    { code: 'zh', label: '', flag: '🇨🇳' },
+    { code: 'zh.s', label: '简要', flag: '🇨🇳' }
   ]
 
   return (
@@ -21,7 +23,7 @@ const LanguageSelector = ({ display }) => {
       onChange={(e) => changeLanguage(e.target.value)}
       size="sm"
       variant="outline"
-      width="160px"
+      width="70px"
       display={display}
     >
       {languages.map(({ code, label, flag }) => (

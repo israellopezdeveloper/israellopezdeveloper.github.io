@@ -10,6 +10,8 @@ import cvDataEN from '../../../data/CV.en.json'
 import cvDataENS from '../../../data/CV.en.s.json'
 import cvDataES from '../../../data/CV.es.json'
 import cvDataESS from '../../../data/CV.es.s.json'
+import cvDataZH from '../../data/CV.zh.json'
+import cvDataZHS from '../../data/CV.zh.s.json'
 import { useEffect, useMemo, useState } from 'react'
 
 const Education = ({ studyId }) => {
@@ -20,7 +22,9 @@ const Education = ({ studyId }) => {
     'en': cvDataEN,
     'en.s': cvDataENS,
     'es': cvDataES,
-    'es.s': cvDataESS
+    'es.s': cvDataESS,
+    'zh': cvDataZH,
+    'zh.s': cvDataZHS
   }), [])
 
   useEffect(() => {
