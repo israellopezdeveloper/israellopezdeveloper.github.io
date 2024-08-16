@@ -141,7 +141,7 @@ function generate_pdf(json_cv, json_gui, name) {
   const markdown = generateMarkdown(json_cv)
   fs.writeFileSync(`${name}.tex`, markdown)
 
-  exec(`xelatex ${name}.tex -o ${name}.pdf`, (error, stdout, stderr) => {
+  exec(`xelatex -interaction nonstopmode ${name}.tex -o ${name}.pdf`, (error, stdout, stderr) => {
     //console.log(stdout)
     if (error) {
       console.error(error.message)
