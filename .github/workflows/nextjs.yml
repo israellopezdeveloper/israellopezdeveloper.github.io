@@ -28,7 +28,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    needs: compile_pdf  # Este trabajo depende de la creación del PDF
     steps:
       - name: Checkout
         uses: actions/checkout@v4
