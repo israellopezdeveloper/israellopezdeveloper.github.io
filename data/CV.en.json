@@ -58,6 +58,7 @@
   "works": [
     {
       "name": "Devo",
+      "title": "Senior Software Engineer",
       "short_description": [
         "Cloud-native company offering real-time security analytics, machine learning, and scalable solutions for enterprise data management."
       ],
@@ -196,6 +197,7 @@
     },
     {
       "name": "European Commission",
+      "title": "Software Arquitect",
       "short_description": [
         "The European Commission is the executive branch of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day affairs."
       ],
@@ -402,6 +404,7 @@
     },
     {
       "name": "Panel Systems",
+      "title": "Senior Software Engineer",
       "short_description": [
         "Panel Sistemas is a company specializing in technological solutions, offering software services, consulting, and development to various industries."
       ],
@@ -580,6 +583,7 @@
     },
     {
       "name": "Prisa Group",
+      "title": "Senior Software Engineer",
       "short_description": [
         "Grupo PRISA is a Spanish media conglomerate, renowned for its influential newspapers, radio stations, and educational publications."
       ],
@@ -686,6 +690,7 @@
     },
     {
       "name": "Intelygenz",
+      "title": "Senior Software Engineer",
       "short_description": [
         "Intelygenz is a technology company specializing in artificial intelligence, machine learning, and custom software solutions for diverse industries."
       ],
@@ -792,6 +797,7 @@
     },
     {
       "name": "Alcalá de Henares University (UAH)",
+      "title": "Researcher and teaching staff",
       "short_description": [
         "The University of Alcalá de Henares is a prestigious Spanish institution known for its rich history and diverse academic programs."
       ],
@@ -920,6 +926,7 @@
     },
     {
       "name": "Knowcentury",
+      "title": "Junior programmer",
       "short_description": [
         "Small business dedicated to creating web pages"
       ],
@@ -952,6 +959,7 @@
     },
     {
       "name": "IBM",
+      "title": "Junior programmer",
       "short_description": [
         "IBM, a global technology company, specializes in cloud computing, AI, and hardware, providing innovative solutions for businesses worldwide."
       ],

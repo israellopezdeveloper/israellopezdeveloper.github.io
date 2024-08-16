@@ -16,6 +16,11 @@ import cvDataEN from '../../data/CV.en.json'
 import cvDataENS from '../../data/CV.en.s.json'
 import cvDataES from '../../data/CV.es.json'
 import cvDataESS from '../../data/CV.es.s.json'
+import cvDataZH from '../../data/CV.zh.json'
+import cvDataZHS from '../../data/CV.zh.s.json'
+import guiEN from '../../data/gui.en.json'
+import guiES from '../../data/gui.es.json'
+import guiZH from '../../data/gui.zh.json'
 import { useEffect, useMemo, useState } from 'react'
 
 const Work = ({ jobId }) => {
@@ -26,13 +31,26 @@ const Work = ({ jobId }) => {
     'en': cvDataEN,
     'en.s': cvDataENS,
     'es': cvDataES,
-    'es.s': cvDataESS
+    'es.s': cvDataESS,
+    'zh': cvDataZH,
+    'zh.s': cvDataZHS
   }), [])
+
+  const guiArray = useMemo(() => ({
+    'en': guiEN,
+    'en.s': guiEN,
+    'es': guiES,
+    'es.s': guiES,
+    'zh': guiZH,
+    'zh.s': guiZH
+  }), [])
+  const [gui, setGui] = useState(guiEN)
 
   useEffect(() => {
     const cvData = cvDataArray[language]
     setJob(cvData.works[jobId])
-  }, [language, jobId, cvDataArray])
+    setGui(guiArray[language])
+  }, [language, jobId, cvDataArray, guiArray])
 
   return (
     <Layout title={job.name} >
@@ -57,7 +75,7 @@ const Work = ({ jobId }) => {
               ) : ('')
           }
           <ListItem>
-            <Meta>Contributions</Meta>
+            <Meta>{gui.jobs.job.contributions}</Meta>
             <div style={{ textAlign: 'justify' }} dangerouslySetInnerHTML={{ __html: job.contribution.join('') }} />
             {
               job.projects.map((project, index1) => (
@@ -70,7 +88,7 @@ const Work = ({ jobId }) => {
                     project.links && project.links.length > 0 ?
                       (
                         <Heading as="h5" fontSize={14} my={6}>
-                          <Center>Project links</Center>
+                          <Center>{gui.jobs.job.links}</Center>
                         </Heading>
                       ) :
                       (
@@ -91,7 +109,7 @@ const Work = ({ jobId }) => {
                       ) : ('')
                   }
                   <Heading as="h5" fontSize={14} my={6}>
-                    <Center>Technologies</Center>
+                    <Center>{gui.jobs.job.techs}</Center>
                   </Heading>
                   <Box>
                     {
@@ -104,7 +122,7 @@ const Work = ({ jobId }) => {
                     project.images && project.images.length > 0 ?
                       (
                         <Heading as="h5" fontSize={14} my={6}>
-                          <Center>Proyect images</Center>
+                          <Center>{gui.jobs.job.project_imgs}</Center>
                         </Heading>
                       ) :
                       (
@@ -129,7 +147,7 @@ const Work = ({ jobId }) => {
           job.images && job.images.length > 0 ?
             (
               <Heading as="h3" fontSize={14} my={6}>
-                <Center>Job images</Center>
+                <Center>{gui.jobs.job.job_imgs}</Center>
               </Heading>
             ) :
             (

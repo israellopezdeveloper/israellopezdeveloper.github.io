@@ -21,6 +21,11 @@ import cvDataEN from '../../../data/CV.en.json'
 import cvDataENS from '../../../data/CV.en.s.json'
 import cvDataES from '../../../data/CV.es.json'
 import cvDataESS from '../../../data/CV.es.s.json'
+import cvDataZH from '../../../data/CV.zh.json'
+import cvDataZHS from '../../../data/CV.zh.s.json'
+import guiEN from '../../../data/gui.en.json'
+import guiES from '../../../data/gui.es.json'
+import guiZH from '../../../data/gui.zh.json'
 import { useEffect, useMemo, useState } from 'react'
 
 const Education = ({ studyId }) => {
@@ -31,13 +36,25 @@ const Education = ({ studyId }) => {
     'en': cvDataEN,
     'en.s': cvDataENS,
     'es': cvDataES,
-    'es.s': cvDataESS
+    'es.s': cvDataESS,
+    'zh': cvDataZH,
+    'zh.s': cvDataZHS
   }), [])
+  const guiArray = useMemo(() => ({
+    'en': guiEN,
+    'en.s': guiEN,
+    'es': guiES,
+    'es.s': guiES,
+    'zh': guiZH,
+    'zh.s': guiZH
+  }), [])
+  const [gui, setGui] = useState(guiEN)
 
   useEffect(() => {
     const cvData = cvDataArray[language]
     setStudy(cvData.educations.languages[studyId])
-  }, [language, studyId, cvDataArray])
+    setGui(guiArray[language])
+  }, [language, studyId, cvDataArray, guiArray])
 
   return (
     <Layout title={study.language.toUpperCase()} >
@@ -49,37 +66,44 @@ const Education = ({ studyId }) => {
       </Container>
       <Box p={5} border="1px" borderColor="gray.200" borderRadius="md">
         <Heading as="h3" fontSize={20} mb={4}>
-          Proficiency
+          {gui.educations.education.proefiency}
         </Heading>
 
         <TableContainer mb={4}>
-          <Table variant="simple">
+          <Table variant="simple" textAlign={'center'}>
             <Thead>
               <Tr>
-                <Th>Skill</Th>
-                <Th>Level</Th>
+                <Th textAlign={'center'}>{gui.educations.education.skill}</Th>
+                <Th textAlign={'center'}>{gui.educations.education.level}</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td>Spoken</Td>
-                <Td>{study.spoken}</Td>
+                <Td textAlign={'center'}>{gui.educations.education.spoken}</Td>
+                <Td textAlign={'center'}>{study.spoken}</Td>
               </Tr>
               <Tr>
-                <Td>Written</Td>
-                <Td>{study.writen}</Td>
+                <Td textAlign={'center'}>{gui.educations.education.writen}</Td>
+                <Td textAlign={'center'}>{study.writen}</Td>
               </Tr>
               <Tr>
-                <Td>Read</Td>
-                <Td>{study.read}</Td>
+                <Td textAlign={'center'}>{gui.educations.education.read}</Td>
+                <Td textAlign={'center'}>{study.read}</Td>
               </Tr>
             </Tbody>
           </Table>
         </TableContainer>
 
-        <Heading as="h4" fontSize={18} mb={2}>
-          Acreditations
-        </Heading>
+        {
+          study.acreditations.length > 0 ?
+            (
+              <Heading as="h4" fontSize={18} mb={2}>
+                {gui.educations.education.acreditations}
+              </Heading>
+            ) : (
+              ''
+            )
+        }
         <List spacing={3}>
           {study.acreditations.map((acreditation, index) => (
             <ListItem key={index}>
