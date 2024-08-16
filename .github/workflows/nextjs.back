@@ -28,7 +28,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    needs: compile_pdf  # Este trabajo depende de la creación del PDF
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -54,10 +53,6 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Install TeX Live
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-lang-chinese fonts-noto-cjk
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -78,9 +73,6 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Compile LaTeX to PDF
-        run: |
-          node components/pdf-generator.js
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
@@ -94,9 +86,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build  # Este trabajo depende de la construcción del sitio
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
