@@ -46,57 +46,6 @@ function useWindowSize() {
   return windowSize
 }
 
-async function fetchRepos() {
-  try {
-    const response = await axios.get('https://api.github.com/users/israellopezdeveloper/repos')
-    const repoData = response.data
-    console.log("repoData", repoData)
-
-    const reposFilled = await Promise.all(
-      repoData.map(async (repo) => {
-        const startDate = new Date(repo.created_at)
-
-        // Fecha actual
-        const currentDate = new Date()
-
-        // Calcula la diferencia en años y meses
-        const yearsDiff = currentDate.getFullYear() - startDate.getFullYear()
-        const monthsDiff = currentDate.getMonth() - startDate.getMonth()
-
-        // Calcula el número total de meses
-        let totalMonths = yearsDiff * 12 + monthsDiff
-        totalMonths = (totalMonths === 0 ? 1 : totalMonths)
-        let techs = await axios.get(repo.languages_url)
-        techs = Object.keys(techs.data)
-        let nitem = {}
-        try {
-          const data = await axios.get(repo.html_url.replace("github.com", "raw.githubusercontent.com") + "/metadata-branch/metadata.json")
-          nitem = data.data
-          nitem.url = repo.html_url
-          nitem.thumbnail = repo.html_url.replace("github.com", "raw.githubusercontent.com") + "/metadata-branch/logo.png"
-          techs = [...new Set([...(techs || []), ...(nitem.technologies || [])])]
-          nitem.technologies = techs.map((item) => {
-            return {
-              'tech': item,
-              'time': totalMonths
-            }
-          })
-        } catch (error) {
-          // Manejar error si es necesario
-        }
-        return nitem
-      })
-    )
-
-    return reposFilled
-  } catch (error) {
-  } finally {
-  }
-}
-
-let repos = []
-
-fetchRepos().then(r => repos = r)
 
 const Works = () => {
   const voxel = useContext(VoxelKoalaContext)
@@ -130,6 +79,58 @@ const Works = () => {
   }, [language, cvDataArray, guiArray])
 
   // Función para calcular los meses de uso de cada tecnología
+  const [repos, setRepos] = useState([]);
+  useEffect(() => {
+    async function fetchRepos() {
+      try {
+        const response = await axios.get('https://api.github.com/users/israellopezdeveloper/repos')
+        const repoData = response.data
+
+        const reposFilled = await Promise.all(
+          repoData.map(async (repo) => {
+            const startDate = new Date(repo.created_at)
+
+            // Fecha actual
+            const currentDate = new Date()
+
+            // Calcula la diferencia en años y meses
+            const yearsDiff = currentDate.getFullYear() - startDate.getFullYear()
+            const monthsDiff = currentDate.getMonth() - startDate.getMonth()
+
+            // Calcula el número total de meses
+            let totalMonths = yearsDiff * 12 + monthsDiff
+            totalMonths = (totalMonths === 0 ? 1 : totalMonths)
+            let techs = await axios.get(repo.languages_url)
+            techs = Object.keys(techs.data)
+            let nitem = {}
+            try {
+              const data = await axios.get(repo.html_url.replace("github.com", "raw.githubusercontent.com") + "/metadata-branch/metadata.json")
+              nitem = data.data
+              nitem.url = repo.html_url
+              nitem.thumbnail = repo.html_url.replace("github.com", "raw.githubusercontent.com") + "/metadata-branch/logo.png"
+              techs = [...new Set([...(techs || []), ...(nitem.technologies || [])])]
+              nitem.technologies = techs.map((item) => {
+                return {
+                  'tech': item,
+                  'time': totalMonths
+                }
+              })
+            } catch (error) {
+              // Manejar error si es necesario
+            }
+            return nitem
+          })
+        )
+
+        setRepos(reposFilled)
+      } catch (error) {
+        setRepos(backup_repos);
+      } finally {
+      }
+    }
+    fetchRepos();
+  }, []); // Se ejecuta solo al montar el componente
+
   const calculateTechnologyUsage = () => {
     const techUsage = {}
 
@@ -155,20 +156,22 @@ const Works = () => {
       })
     })
     repos.forEach(repo => {
-      repo.technologies.forEach(tech => {
-        if (techUsage[tech.tech]) {
-          techUsage[tech.tech] += tech.time
-        } else {
-          techUsage[tech.tech] = tech.time
-        }
-      })
+      if (repo.technologies) {
+        repo.technologies.forEach(tech => {
+          if (techUsage[tech.tech]) {
+            techUsage[tech.tech] += tech.time
+          } else {
+            techUsage[tech.tech] = tech.time
+          }
+        })
+      }
     })
 
     return techUsage
   }
 
   // Uso de useMemo para memorizar el uso de las tecnologías
-  const technologyUsage = useMemo(calculateTechnologyUsage, [])
+  const technologyUsage = useMemo(calculateTechnologyUsage, [repos])
 
   // Estado para las tecnologías seleccionadas
   const [selectedTechnologies, setSelectedTechnologies] = useState(() => {
@@ -210,7 +213,11 @@ const Works = () => {
 
   // Filtrar los proyectos basados en las tecnologías seleccionadas
   const filteredProjects = repos.filter(repo => {
-    return repo.technologies.map(t => t.tech).some(tech => selectedTechnologies[tech])
+    if (repo.technologies) {
+      return repo.technologies.map(t => t.tech).some(tech => selectedTechnologies[tech])
+    } else {
+      return false
+    }
   })
 
   const { width } = useWindowSize()
