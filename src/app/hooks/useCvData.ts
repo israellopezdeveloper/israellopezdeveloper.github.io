@@ -1,8 +1,15 @@
 "use client";
 
 import * as React from "react";
-import type { CV } from "../types/cv";
+import type {
+  CV,
+  CVComplementary,
+  CVLang,
+  CVUniversity,
+  CVWork,
+} from "../types/cv";
 import { getCvUrl, type Lang } from "../lib/i18n";
+import { slugify } from "../lib/slug";
 
 const cache = new Map<string, CV>();
 
@@ -18,22 +25,45 @@ export function useCvData(lang: Lang, short: boolean) {
       setLoading(false);
       return;
     }
+    const urlen = getCvUrl("en", true);
     let cancelled = false;
     setLoading(true);
-    fetch(url, { cache: "no-cache" })
-      .then((r) => {
-        if (!r.ok) throw new Error(`Failed to load ${url}`);
-        return r.json();
+    Promise.all([
+      fetch(url, { cache: "no-cache" }),
+      fetch(urlen, { cache: "no-cache" }),
+    ])
+      .then(([res1, res2]) => {
+        if (!res1.ok || !res2.ok) throw new Error(`Failed to load ${url}`);
+        return Promise.all([res1.json(), res2.json()]);
       })
-      .then((json: CV) => {
+      .then(([json1, jsonen]: CV[]) => {
         if (cancelled) return;
+        const json: CV = json1!!;
+        json?.educations.complementary.forEach(
+          (comp: CVComplementary, i: number) => {
+            comp.slug = slugify(
+              jsonen?.educations.complementary[i]?.title || "",
+            );
+          },
+        );
+        json?.educations.university.forEach((uni: CVUniversity, i: number) => {
+          uni.slug = slugify(jsonen?.educations.university[i]?.title || "");
+        });
+        json?.educations.languages.forEach((lang: CVLang, i: number) => {
+          lang.slug = slugify(jsonen?.educations.languages[i]?.language || "");
+        });
+        json?.works.forEach((work: CVWork, i: number) => {
+          work.slug = slugify(jsonen?.works[i]?.name || "");
+        });
         cache.set(url, json);
+        console.log(json);
         setData(json);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch((error) => {
+        console.error("Error:", error);
         if (cancelled) return;
-        setError(err);
+        setError(error);
         setLoading(false);
       });
     return () => {

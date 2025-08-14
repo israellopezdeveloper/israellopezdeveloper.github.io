@@ -55,9 +55,7 @@ export function getUniversitySlug(u: Univ) {
 
 export function getComplementarySlug(c: Comp) {
   if (c.slug) return c.slug;
-  const base = [fromEn(c, "institution"), fromEn(c, "title")]
-    .filter(Boolean)
-    .join(" ");
+  const base = fromEn(c, "title");
   return base ? slugify(base) : "item";
 }
 

@@ -30,6 +30,7 @@ export type CVProject = {
 };
 
 export type CVWork = {
+  slug?: string;
   name: string;
   short_description?: string[];
   thumbnail?: string;
@@ -42,6 +43,7 @@ export type CVWork = {
 };
 
 export type CVUniversity = {
+  slug?: string;
   university_name: string;
   title: string;
   period_time?: string;
@@ -51,6 +53,7 @@ export type CVUniversity = {
 };
 
 export type CVComplementary = {
+  slug?: string;
   institution: string;
   title: string;
   period_time?: string;
@@ -66,6 +69,7 @@ export type CVAcreditation = {
 };
 
 export type CVLang = {
+  slug?: string;
   language: string;
   spoken?: string;
   writen?: string;

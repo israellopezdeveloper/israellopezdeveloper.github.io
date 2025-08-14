@@ -110,10 +110,8 @@ export async function collectUniversityIds() {
 
 export async function collectComplementaryIds() {
   const ids = new Set<string>();
-  for (const lang of ALL_LANGS) {
-    const cv = await readCvJsonAny(lang);
-    for (const it of cv.complementary) ids.add(getComplementarySlug(it));
-  }
+  const cv = await readCvJsonAny("en");
+  for (const it of cv.complementary) ids.add(getComplementarySlug(it));
   return Array.from(ids);
 }
 
