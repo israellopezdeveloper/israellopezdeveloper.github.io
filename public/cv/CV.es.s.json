@@ -1,0 +1,1238 @@
+{
+  "intro": {
+    "greeting": "¡Hola! Soy Israel, un dev senior empedernido viajando por el mundo.",
+    "profile_image": "israel.png",
+    "name": "Israel López",
+    "title": "Ingeniero de Software Senior",
+    "summary": [
+      "<P>Mi mochila está llena de código y de ganas de seguir aprendiendo. ¡La programación es mi superpoder!</P>",
+      "<P>Desde los 13 me picó el gusanillo de la programación y no he podido parar. ¡En cualquier rincón del mundo, con mi portátil bajo el brazo!</P>",
+      "<p>Estudio en Estados Unidos y soy una de las personas más influyentes del mundo.</p>",
+      "<p>Mi objetivo es crear una solución a mi proyecto.</p>",
+      "<P>Si conectamos, ¿estás listo para embarcarte en una nueva aventura tecnológica conmigo?</P>"
+    ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "Nací en Madrid, España"
+      },
+      {
+        "dates": "2007",
+        "text": "Complete la licenciatura en Informática en la Universidad de Alcalá de Henares"
+      },
+      {
+        "dates": "2009",
+        "text": "Complete el Master en Inteligencia Artificila en información y comunicación de tecnologias en la Universidad de Alcalá de Henares."
+      },
+      {
+        "dates": "2004 a la actualidad",
+        "text": "Trabajando como empleado"
+      }
+    ],
+    "hobbies": [
+      "🧗 escalada, 🏂 snowboard, 🧭 viajar, 🤿 buceo, ⨋ matemáticas (especialmente álgebra lineal y estadísticas), 🧠 Inteligencia Artificial."
+    ],
+    "links": [
+      {
+        "icon": "",
+        "url": "https://github.com/israellopezdeveloper",
+        "text": "@israellopezdeveloper"
+      },
+      {
+        "icon": "󰇮",
+        "url": "mailto:israel.lopez.developer@gmail.com",
+        "text": "israel.lopez.developer@gmail.com"
+      },
+      {
+        "icon": "󰌻",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/",
+        "text": "https://www.linkedin.com/in/israellopezmaiz/"
+      },
+      {
+        "icon": "",
+        "url": "tel:+34648136640",
+        "text": "+34 648 13 66 40"
+      }
+    ]
+  },
+  "works": [
+    {
+      "name": "Datura AI",
+      "title": "Senior Software Developer - Freelance",
+      "short_description": [
+        "<p>La tecnología de inteligencia artificial (IA) se ha convertido en una de las empresas más grandes del mundo.</p>"
+      ],
+      "thumbnail": "daturaai.png",
+      "period_time": "Marzo 2025 - Actualidad",
+      "full_description": [
+        "<p>La tecnología de Inteligencia Artificial (IA) es una de las herramientas más innovadoras del mundo.</p>"
+      ],
+      "contribution": [
+        "<p>El equipo de fabricantes de software de la empresa estadounidense Adobe presentó este lunes una serie de avances tecnológicos</p>"
+      ],
+      "links": [
+        {
+          "icon": "",
+          "text": "Website",
+          "url": "https://www.datura.ai"
+        }
+      ],
+      "projects": [
+        {
+          "description": "<p>La nueva plataforma de Inteligencia Artificial, Celium, es una de las más conocidas y usadas en el</p>",
+          "links": [
+            {
+              "icon": "",
+              "text": "Portal de Celium",
+              "url": "https://celium.datura.ai"
+            }
+          ],
+          "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
+          "technologies": [
+            "Python",
+            "Rust",
+            "C",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "Git",
+            "GitHub Actions",
+            "GPU Computing",
+            "CUDA",
+            "Tech",
+            "Bittensor",
+            "Prometheus"
+          ]
+        }
+      ],
+      "technologies": [],
+      "images": []
+    },
+    {
+      "name": "Indra",
+      "title": "Arquitecto Software",
+      "short_description": [
+        "La empresa española Indra anunció este viernes su alianza con el Fondo Monetario Internacional (FMI)."
+      ],
+      "thumbnail": "indra.png",
+      "period_time": "Abril 2024 - Febrero 2025",
+      "full_description": [
+        "<p>El gigante de la tecnología Indra es uno de los grandes fabricantes de software de todo el mundo.</p>"
+      ],
+      "contribution": [
+        "<p>Desde hace unos meses fui a la oficina de Indra, una de las empresas más grandes de Silicon Valley.</p>"
+      ],
+      "links": [],
+      "projects": [
+        {
+          "description": "<p>La arquitectura del sistema de misión de vehículos militares de la Organización del Tratado del Atlántico Norte (OTAN) es una de las más complejas de los últimos tiempos.</p>",
+          "links": [
+            {
+              "icon": "",
+              "text": "Participación de Indra en el Fondo Europeo de Defensa",
+              "url": "https://www.indracompany.com/es/noticia/indra-lidera-participacion-espanola-proyectos-fondo-europeo-defensa-entra-formar-12"
+            }
+          ],
+          "name": "Sistema de misión de nueva generación para vehículos militares",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Spring Data",
+            "Spring Security",
+            "Node.js",
+            "Express",
+            "Python",
+            "FastAPI",
+            "RAG",
+            "Vector DB",
+            "Embeddings",
+            "PostgreSQL",
+            "MongoDB",
+            "GIS",
+            "PostGIS",
+            "OpenLayers",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "GitHub Actions",
+            "Jira",
+            "Prometheus",
+            "Grafana"
+          ]
+        }
+      ],
+      "technologies": [],
+      "images": []
+    },
+    {
+      "name": "Devo",
+      "title": "Ingeniero Software Senior",
+      "short_description": [
+        "La nube de datos de Google es una de las empresas más conocidas de todo el mundo."
+      ],
+      "thumbnail": "devo.png",
+      "period_time": "Marzo 2020 - Marzo 2024",
+      "full_description": [
+        "<p>La seguridad de los datos es una de las grandes amenazas de ciberseguridad en el mundo. Pero, ¿por qué?</p>"
+      ],
+      "contribution": [
+        "<p>Hace unos meses, mi primera experiencia en la construcción de Devo, un servicio de ingesta aérea de EE.UU., cambió radicalmente mi vida.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://www.devo.com/es/",
+          "text": "Sitio web de Devo"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Mejorar el balanceador de carga existente",
+          "description": [
+            "<p>El balanceador de carga de Devo, uno de los sistemas más utilizados en el tráfico de información en Estados Unidos, es el más eficiente de la historia.</p>",
+            "<p>Desde hace unos años, tengo un sistema de balanceo de carga específico para clientes.</p>"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers",
+              "text": "Documentación del balanceador de carga"
+            }
+          ],
+          "technologies": [
+            "Node.js",
+            "C",
+            "C++",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "GIT",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "Crear un sistema de respaldo multicloud",
+          "description": [
+            "<p>El director ejecutivo de la compañía de almacenamiento multicloud, Devo, anunció este miércoles la creación de un nuevo sistema de respaldo a la nube.</p>",
+            "<p>El director ejecutivo de Microsoft, Tim Berners-Lee, anunció este miércoles el lanzamiento de un sistema de almacenamiento que permite</p>",
+            "<p>Hace unos meses, mi sistema de almacenamiento de información de la Agencia Nacional de Inteligencia (NSA, por sus siglas en inglés)</p>",
+            "<p>Desde que empezó a trabajar en el sistema de almacenamiento multicloud de Devo, mi objetivo es mantener la seguridad de los</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "AWS",
+            "GCP",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "GIT",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "Integrar revisiones de calidad y seguridad en el pipeline CI/CD",
+          "description": [
+            "<p>La consultora de ingeniería de la Universidad de Michigan, Patricia Jugué, es uno de los primeros en participar en el proyecto de construcción</p>",
+            "<P><b>Integración del Pipeline Jenkins</b></P>",
+            "<p>El equipo de ingeniería Jenkins, de la empresa estadounidense SonarQube, desarrolló un sistema de análisis de código de alta calidad</p>",
+            "<P><b>Transición a GitLab CI/CD</b></P>",
+            "<p>Hace unos meses, el director ejecutivo de GitLab, Keith Jenkins, trabajó en el proyecto de aprendizaje de código</p>",
+            "<P><b>Escaneo de Vulnerabilidades de Seguridad</b></P>",
+            "<p>El equipo de expertos en seguridad cibernética Snyk y el Instituto de Seguridad de Naciones Unidas para el Atlántico Norte (</p>",
+            "<P><b>Lograr Estándares de Cumplimiento</b></P>",
+            "<p>Después de más de una década de esfuerzos, Devo, la empresa de software estadounidense que desarrolló el pipeline de las aplicaciones</p>",
+            "<P><b>Resultado</b></P>",
+            "<p>La empresa estadounidense Devo, conocida por sus servicios de análisis de datos, participó este miércoles en un proyecto para mejorar la seguridad del código cibernético.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Gitlab CI/CD",
+            "Jenkins",
+            "NIST",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Kubernetes",
+            "Jira"
+          ]
+        },
+        {
+          "name": "Creación de un sistema de alerta para monitoreo con Prometheus",
+          "description": [
+            "<p>Hace más de un siglo diseñé Prometheus, un sistema de alerta para problemas de seguridad.</p>",
+            "<p>Hace unos meses, a principios de la década de 1990, mientras trabajaba en Devo, la consultora de informática estadounidense, pensé que el sistema de vigilancia de</p>",
+            "<p>El director ejecutivo de la Agencia Nacional de Seguridad de Naciones Unidas (NASA, por sus siglas en inglés) Jorge Luis Borges desarrolló el sistema de alertas a nivel mundial.</p>",
+            "<p>El gobierno de Estados Unidos anunció este miércoles la implementación de una nueva estrategia para reducir el impacto de los problemas de alerta a nivel global.</p>",
+            "<p>El director ejecutivo de la Agencia Nacional de Seguridad de Naciones Unidas (NSA, por sus siglas en inglés) Jorge Luis Borges diseñó un equipo de monitoreo para</p>",
+            "<p>El director ejecutivo de la consultora de seguridad e inteligencia de EE.UU., David Robson, creó el sistema de alerta para ataques cibernéticos.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Prometheus",
+            "Grafana",
+            "Kubernetes",
+            "Docker",
+            "Elastic Stack",
+            "Kibana",
+            "Python",
+            "Bash",
+            "Ansible",
+            "GIT"
+          ]
+        }
+      ],
+      "images": [
+        "devo1.png",
+        "devo2.png"
+      ]
+    },
+    {
+      "name": "Comisión Europea",
+      "title": "Arquitecto Software",
+      "short_description": [
+        "La Comisión Europea es el órgano más importante de la Unión Europea."
+      ],
+      "thumbnail": "European_Commission_01.png",
+      "period_time": "Junio 2017 - Enero 2020",
+      "full_description": [
+        "<p>La Comisión Europea es el brazo ejecutivo de la Unión Europea.</p>",
+        "<p>La Dirección General de Competencia (DG Comp) de la Comisión Europea (UE) es el cargo más importante del gobierno europeo.</p>",
+        "<p>La primera ministra de la Unión Europea, Jean-Claude Juncker, es uno de los principales economistas del mundo.</p>"
+      ],
+      "contribution": [
+        "<p>El arquitecto de software Alejandro González Iñárritu es uno de los primeros en llegar a la Unión Europea.</p>",
+        "<ul>",
+        "<p>Desde que empezó a trabajar como consultora para proyectos de infraestructura, nuestro objetivo es identificar y definir los requisitos no funcionales.</p>",
+        "<p>En esta nueva serie, los periodistas de la BBC te ayudan a entender cómo se comportan las tareas más importantes del mundo.</p>",
+        "<p>En esta nueva serie, los expertos en gestión de tareas pueden ayudar a resolver problemas.</p>",
+        "<p>La Universidad Autónoma de San Diego, en Estados Unidos, hizo un proyecto de tecnología diseñado para el Instituto Tecnológico de Madrid.</p>",
+        "<p>En esta nueva serie, los miembros del equipo de fútbol de la BBC te ayudan a definir los perfiles de</p>",
+        "<p>El equipo de proyectos de ingeniería de la Universidad Autónoma de San Diego, en Estados Unidos, fue elegido como</p>",
+        "<p>El control de calidad y pruebas de tecnología es una de las áreas más usadas en el mundo.</p>",
+        "<p>En esta nueva serie, los expertos en temas de seguridad de la BBC te ayudan a entender cómo funcionan</p>",
+        "<p>En esta nueva serie de noticias de la Universidad Autónoma de San Diego, usted puede conocer algunas de las</p>",
+        "<p>En esta nueva serie de películas de la BBC te presentamos algunas de las mejores técnicas para gestión</p>",
+        "</ul>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://competition-policy.ec.europa.eu/index_en",
+          "text": "Sitio web de la Comisión Europea, DG COMP"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Definición de dos APIs RESTful",
+          "description": [
+            "<p>El gobierno británico anunció este miércoles el lanzamiento de dos nuevos proyectos de intercambio de documentos legal</p>",
+            "<ul>",
+            "<li><b>API Interna</b>: La primera API estaba destinada a servir al personal interno de la Comisión Europea.</li>",
+            "<li><b>API Externa</b>: La segunda API sirvió como plataforma para el personal externo.</li>",
+            "</ul>",
+            "El gobierno de Estados Unidos anunció este miércoles la creación de dos nuevas aplicaciones para control de acceso"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
+              "text": "Documentación de e-leniency"
+            }
+          ],
+          "images": [
+            "European_Commission_02.png"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "JPA",
+            "Eclipselink",
+            "WebLogic 12",
+            "Oracle DB",
+            "MongoDB",
+            "Swagger",
+            "JUnit",
+            "AngularJS",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "CAS",
+            "Jira",
+            "JUnit",
+            "Bamboo",
+            "SonarQube",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "E-Confidencialidad",
+          "description": [
+            "<p>Hace dos años, desde que asumió el cargo de director ejecutivo de la Agencia Nacional de Seguridad Nacional (NSA, por sus siglas en inglés), mi</p>",
+            "<p>Hace unos meses fui diseñando un sistema de diseño de documentos legales que permite a los ciudadanos de Estados Unidos mantener la fidelidad de sus</p>",
+            "<p>Hace unos meses, el director ejecutivo de la Agencia Nacional de Inteligencia de Estados Unidos (NSA, por sus siglas en inglés), Richardson, hizo</p>",
+            "<p>La aplicación antimonopolio es una de las empresas más grandes del mundo.</p>"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en",
+              "text": "Documentación de e-confidencialidad"
+            }
+          ],
+          "technologies": [
+            "AngularJS",
+            "Ansible",
+            "BDD",
+            "Bamboo",
+            "CAS",
+            "Docker",
+            "Eclipselink",
+            "Enterprise Architect",
+            "GIT",
+            "IntelliJ IDEA",
+            "JPA",
+            "JUnit",
+            "Java",
+            "Jira",
+            "Maven",
+            "MongoDB",
+            "Oracle DB",
+            "Selenium",
+            "SonarQube",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring MVC",
+            "Spring Security",
+            "Swagger",
+            "TDD",
+            "WebLogic 12"
+          ]
+        },
+        {
+          "name": "Índice semántico de documentos legales",
+          "description": [
+            "<p>Desde hace unos meses, tengo tres proyectos para desarrollar un sistema sofisticado para la indexación semántica de documentos legales.</p>",
+            "<p>El Instituto de Investigaciones de la Universidad de Stanford, en Estados Unidos, ha desarrollado un servicio de búsqueda semántica para computadoras y dispositivos electrónico</p>",
+            "<p>El Departamento Antimonopolio de EE.UU. diseñó un sistema de búsqueda de documentos legales de alta velocidad.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "AngularJS",
+            "Ansible",
+            "Bamboo",
+            "C++",
+            "CUDA",
+            "Cassandra",
+            "Docker",
+            "Eclipselink",
+            "Enterprise Architect",
+            "GIT",
+            "Google Test",
+            "Groovy",
+            "IntelliJ IDEA",
+            "JPA",
+            "JUnit",
+            "Java",
+            "Jira",
+            "Maven",
+            "Microservices",
+            "OpenCL",
+            "Oracle DB",
+            "Selenium",
+            "SonarQube",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring MVC",
+            "Spring Security",
+            "Swagger",
+            "TensorFlow",
+            "Valgrind",
+            "WebLogic 12",
+            "gRPC"
+          ]
+        },
+        {
+          "name": "Desarrollo de un sistema de distribución de energía renovable",
+          "description": [
+            "<p>El gobierno de Estados Unidos anunció este miércoles el inicio de cuatro proyectos de energía renovable en el país.</p>",
+            "<p>El gobierno de Estados Unidos anunció el lanzamiento de un nuevo sistema de mensajería basado en la tecnología Raspberry Pi.</p>",
+            "<p>El proyecto de integración continua y despliegue continuo de los dispositivos Gateway a través de la Agencia Nacional de Inteligencia Artificial (Anvisa) está siendo desarrollado</p>",
+            "<p>Desde hace unos meses, mi equipo de ingeniería y tecnología de la Universidad de Stanford, en Estados Unidos, ha desarrollado un proyecto para diseñar un sistema de</p>",
+            "<p>La consultora de investigación de la Universidad Autónoma de San Diego, en Estados Unidos, hizo historia a partir de los proyectos de distribución de energía renovable.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Go",
+            "Unit Test",
+            "BalenaIO",
+            "RaspberryPI",
+            "Modbus",
+            "Python",
+            "Make",
+            "Docker",
+            "Kubernetes",
+            "GCP",
+            "Azure",
+            "IoTHub",
+            "Kafka",
+            "Avro Schemas",
+            "Ansible",
+            "Elastic Search",
+            "Kibana",
+            "Jira",
+            "Groovy"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Panel Sistemas",
+      "title": "Ingeniero Software Senior",
+      "short_description": [
+        "Panel Sistemas es una empresa de software que ofrece servicios a empresas de todo el mundo."
+      ],
+      "thumbnail": "panel_sistemas.png",
+      "period_time": "Septiembre 2015 - Junio 2017",
+      "full_description": [
+        "<p>Panel Sistemas, una empresa de consultoría de software de telecomunicaciones, se convirtió este martes en la empresa más grande del mundo.</p>",
+        "<b>Servicios Ofrecidos</b>",
+        "<lu>",
+        "<li>Desarrollo de Software: Soluciones de software a medida.</li>",
+        "<li>Consultoría: Estrategia y optimización de TI.</li>",
+        "<li>Mantenimiento y Soporte: Soporte continuo de aplicaciones.</li>",
+        "<li>Aseguramiento de Calidad: Pruebas de software completas.</li>",
+        "<li>Transformación Digital: Transición de negocios a plataformas digitales.</li>",
+        "</lu>",
+        "<b>Experiencia en la Industria</b>",
+        "<lu>",
+        "<li>Finanzas</li>",
+        "<li>Telecomunicaciones</li>",
+        "<li>Energía</li>",
+        "<li>Retail</li>",
+        "</lu>"
+      ],
+      "contribution": [
+        "<p>Desde hace más de un año, fui analista de sistemas de telecomunicaciones.</p>",
+        "<ul>",
+        "<li>Análisis de requisitos no funcionales y toma de decisiones sobre la implementación exacta de la solución (Redmine)</li>",
+        "<li>Creación de sub-tareas con menor granularidad para lograr objetivos (Redmine)</li>",
+        "<li>Estimación de tiempos (Redmine)</li>",
+        "<li>Definición e implementación de la estructura del proyecto en las tecnologías especificadas</li>",
+        "<li>Definición de la cobertura y calidad de las pruebas unitarias (JUnit, Google Test, Valgrind)</li>",
+        "<li>Implementación de sistemas CI/CD (Jenkins)</li>",
+        "<li>Utilización de SCRUM como metodología de desarrollo</li>",
+        "<li>Aplicación de TDD y BDD en el desarrollo de software</li>",
+        "<li>Impartición de sesiones de capacitación sobre TDD, BDD, Redes Neuronales, Código Limpio y más</li>",
+        "</ul>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://www.panel.es/",
+          "text": "Sitio web de Panel Sistemas"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Modernización de la mensajería de transporte marítimo y aéreo: reemplazo de IATA por XML/JSON",
+          "description": [
+            "<p>El director ejecutivo de la Agencia Internacional de Transportes Aéreos (IATA, por sus siglas en inglés) de Estados Unidos, Tony Blair, trabajó en el área de</p>",
+            "<p>Hace unos meses, el profesor de la Universidad de Stanford, en Estados Unidos, Tony Blair, desarrolló un proyecto para traducir mensajes de texto a formato antiguo.</p>"
+          ],
+          "links": [],
+          "images": [
+            "iata.png"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Wildfly/JBoss",
+            "MongoDB",
+            "RabbitMQ",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "GWT",
+            "AWS",
+            "Phonegap",
+            "Hadoop",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Redmine",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible"
+          ]
+        },
+        {
+          "name": "Gestión Inteligente de Terminales de Iberdrola con Siemens",
+          "description": [
+            "La empresa española Iberdrola desarrolló dos proyectos de gestión inteligente con el objetivo de controlar el consumo eléctrico del usuario."
+          ],
+          "links": [],
+          "images": [
+            "iberdrola.svg",
+            "siemens.png"
+          ],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "MongoDB",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "Hadoop",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes",
+            "JNLP",
+            "SNMP",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IOT"
+          ]
+        },
+        {
+          "name": "Sistema de monitoreo y cuidado para personas con discapacidades o ancianos para Securitas Direct",
+          "description": [
+            "<p>El gobierno de Estados Unidos anunció el lanzamiento de tres proyectos de vigilancia y cuidado para personas con discapacidades.</p>",
+            "<p>La aplicación de mensajería instantánea Android fue lanzada en Estados Unidos por Google.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "AWS",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring Batch",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "Oracle DB",
+            "JUnit",
+            "Ionic",
+            "Typescript",
+            "Hadoop",
+            "Selenium",
+            "Jasmine",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "Confluence",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Grupo Prisa",
+      "title": "Ingeniero Software Senior",
+      "short_description": [
+        "Grupo PRISA es un conglomerado de medios español, conocido por sus influyentes periódicos, emisoras de radio y publicaciones educativas."
+      ],
+      "thumbnail": "prisa.png",
+      "period_time": "Marzo 2012 - Mayo 2015",
+      "full_description": [
+        "<p>El gobierno de España anunció este miércoles la creación del Grupo PRISA, una de las mayores empresas de medios en el mundo.</p>",
+        "<p>Aspectos clave de Grupo PRISA incluyen:</p>",
+        "<ul>",
+        "<p>El País, uno de los diarios más leídos y respetados de España, se convirtió este miércoles en el prestigioso periódico de la revista española PRISA.</p>",
+        "<p>En el sector de la radio, Cadena SER, la red de radio líder en España, se encuentra bajo el paraguas de PRISA.</p>",
+        "<p>La cadena de televisión española PRISA ha sido uno de los principales fabricantes de noticias de América Latina.</p>",
+        "<p>La empresa española de publicaciones educativas, PRISA, anunció este jueves que se ha convertido en el primer fabricante de libros de texto y contenido digital</p>",
+        "<p>El gigante de la investigación y tecnología de Nueva York, PRISA, es una de las empresas más grandes del mundo.</p>",
+        "<p>La empresa española de telecomunicaciones, PRISA, es una de las empresas más influyentes del mundo.</p>",
+        "</ul>"
+      ],
+      "contribution": [
+        "<p>Hace unos meses, el programador senior remoto de la Universidad de Stanford, en Estados Unidos, se convirtió en uno de los mejores programadores remotos</p>",
+        "<p>Hace unos meses, mi primera edición de un proyecto de cooperación bilateral con equipos externos en Estados Unidos fue a través de una h</p>",
+        "<p>Hace unos meses, mi jefe de proyectos de ingeniería de la Universidad de Oxford, en Reino Unido, trabajó como profesor y profesor de software.</p>",
+        "<p>Un equipo de ingenieros de la Universidad de Stanford, en Estados Unidos, desarrolló un proyecto de planificación y gestión que tuvo como objetivo</p>",
+        "<p>El programador senior de la consultora de proyectos remotos SCrum, Alejandro Martínez, es uno de los más jovenes programadores en el mundo.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://www.prisa.com/es",
+          "text": "Sitio web de Grupo Prisa"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Aplicación de visor de paquetes educativos",
+          "description": [
+            "<p>El gobierno de Estados Unidos realizó dos proyectos para desarrollar una aplicación para el sistema operativo Android.</p>",
+            "<p>La aplicación de aprendizaje e-learning, conocida por sus características y capacidades, fue lanzada este miércoles por la empresa británica Microsoft.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "XCode",
+            "Objective-C",
+            "Dagger",
+            "SCORM",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Proyecto de estandarización de paquetes educativos",
+          "description": [
+            "<p>El segundo proyecto de traducción de Adobe Flash a la nueva versión del sistema operativo de textos y tecnologías se realizó en Estados Unidos.</p>",
+            "<p>La Universidad de Cambridge, en Reino Unido, aprobó este miércoles una nueva versión de la biblioteca centralizada.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Linux",
+            "Flash",
+            "HTML",
+            "JavaScript",
+            "AngularJS",
+            "Bootstrap",
+            "SCORM",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence",
+            "QEmu",
+            "KVM",
+            "Xen",
+            "Bash",
+            "NginX",
+            "Valgrind"
+          ]
+        },
+        {
+          "name": "Proyecto de plataforma educativa",
+          "description": [
+            "<p>La Universidad de Stanford, en Estados Unidos, realizó dos proyectos de software que permiten a los usuarios realizar tareas relacionadas con la educación.</p>",
+            "<p>El gobierno de Estados Unidos anunció el lanzamiento de una nueva plataforma educativa para estudiantes de secundaria.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "C#",
+            ".NET",
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Intelygenz",
+      "title": "Ingeniero Software Senior",
+      "short_description": [
+        "El gigante de tecnología Intelygenz anunció este lunes que lanzará una nueva versión de su sistema operativo."
+      ],
+      "thumbnail": "intelygenz.png",
+      "period_time": "Enero 2010 - Enero 2012",
+      "full_description": [
+        "<p>La Universidad de Stanford, en Estados Unidos, realizó dos proyectos de software que permiten a los usuarios realizar tareas relacionadas con la educación.</p>",
+        "<p>El gobierno de Estados Unidos anunció el lanzamiento de una nueva plataforma educativa para estudiantes de secundaria.</p>"
+      ],
+      "contribution": [
+        "<p>El programador Senior de la Universidad de Stanford, en Estados Unidos, Alejandro González Iñárritu, fue uno de los primeros a</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://intelygenz.com/",
+          "text": "Sitio web de Intelygenz"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Proyecto de Antena 3 Televisión",
+          "description": [
+            "<p>El gobierno de Corea del Sur anunció que está desarrollando una nueva aplicación para el sistema operativo Android.</p>",
+            "<p>La aplicación de mensajería instantánea Spotify usó un nuevo formato de audio basado en la transmisión televisiva.</p>"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf",
+              "text": "Documentación de la aplicación de Antena 3 TV"
+            }
+          ],
+          "images": [
+            "intelygenz_01.jpeg"
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "Android NDK",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Proyecto de gestor de documentos para BBVA",
+          "description": [
+            "<p>El gobierno de Estados Unidos realizó dos proyectos que incluyen el desarrollo de un gestor de documentos dentro del entorno .NET.</p>",
+            "<p>El Banco Central de Venezuela (BBVA) anunció este miércoles la implementación de un nuevo sistema de manejo de documentos para el banco.</p>"
+          ],
+          "links": [],
+          "images": [
+            "bbva.jpg"
+          ],
+          "technologies": [
+            "C#",
+            ".NET",
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Cassandra",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Proyecto de Front colaborativo",
+          "description": [
+            "<p>El Banco Central de Venezuela realizó tres proyectos para desarrollar aplicaciones para el sistema bancario.</p>",
+            "<p>El gobierno de Estados Unidos lanzó una aplicación para intercambiar gestos y acciones en pantalla.</p>"
+          ],
+          "links": [],
+          "images": [
+            "bbva.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Websphere",
+            "Oracle DB",
+            "JUnit",
+            "JSF",
+            "Maven",
+            "GIT",
+            "Jira",
+            "Confluence",
+            "GIT",
+            "Eclipse"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "UAH",
+      "title": "Investigador y personal docente",
+      "short_description": [
+        "La Universidad de Alcalá de Henares es una prestigiosa institución española conocida por su rica historia y diversos programas académicos."
+      ],
+      "thumbnail": "uah.svg",
+      "period_time": "Enero 2006 - Enero 2009",
+      "full_description": [
+        "<p>La Universidad de Alcalá de Henares es una de las universidades más antiguas de España.</p>",
+        "<p>La Universidad de Alcalá, en España, es uno de los más prestigiosos de su historia.</p>",
+        "<p>La Universidad Nacional Autónoma de Buenos Aires es una de las universidades más antiguas del mundo.</p>",
+        "<p>La Universidad de Alcalá, en el norte de España, es una de las universidades más prestigiosas del mundo.</p>",
+        "<p>La Universidad de Alcalá, en el norte de España, está dedicada a fomentar una comunidad diversa e inclusa.</p>",
+        "<p>La Universidad de Alcalá es una de las universidades más prestigiosas del mundo.</p>",
+        "<p>La Universidad de Alcalá, en el norte de España, se ha convertido en una de las universidades más importantes del mundo.</p>",
+        "<p>La Universidad de Alcalá de Henares es una de las universidades más reconocidas de España.</p>"
+      ],
+      "contribution": [
+        "<p>La Universidad de Cambridge, en Reino Unido, es una de las universidades más prestigiosas de la historia.</p>",
+        "<p>La investigación de la Universidad de Stanford, en Estados Unidos, es una de las más prestigiosas del mundo.</p>",
+        "<p>Hace unos meses, mi equipo de investigación de la Universidad de Oxford, en Reino Unido, tuvo un papel fundamental en la forma en que nuestros estudios</p>",
+        "<p>La primera vez que participé en el estudio de la Universidad Nacional Autónoma de Madrid (UNAM, por sus siglas en inglés) fue a través de un proyecto de</p>",
+        "<p>Hace unos meses, fui profesor de Inteligencia Artificial (IA) en la Universidad de Stanford, en Estados Unidos.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://uah.es/",
+          "text": "Sitio web de la Universidad de Alcalá"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Proyecto del grupo de investigación",
+          "description": [
+            "<p>Un grupo de científicos de la Universidad de Cambridge, en Reino Unido, realizó una serie de proyectos para desarrollar tecnologías que pueden ayudar a personas con</p>",
+            "<p>Un equipo de expertos en tecnología de la Universidad de Stanford, en Reino Unido, desarrolló una estrategia para desarrollar dispositivos que permitan a los usuario</p>",
+            "<p>Una investigación de la Universidad de Stanford, en Reino Unido, reveló que dispositivos y aplicaciones para personas con discapacidades están siendo desarrollados</p>",
+            "<p>El Instituto Tecnológico de la Universidad de Stanford, en Estados Unidos, ha desarrollado un proyecto para ayudar a los</p>"
+          ],
+          "links": [],
+          "images": [
+            "tifyc.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "Android",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "Qt",
+            "PIC",
+            "Arduino",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Sistema de comunicación para dispositivos biométricos",
+          "description": [
+            "<p>Hace unos meses trabajé en un proyecto para desarrollar un sistema de comunicación estandarizado para dispositivos biométricos</p>",
+            "<p>El gobierno de Estados Unidos anunció este miércoles la creación de un sistema basado en los dispositivos biométricos (</p>",
+            "<p>El fabricante de teléfonos inteligentes de la Universidad de California, en Estados Unidos, anunció este miércoles que</p>",
+            "<p>Los fabricantes de teléfonos móviles de todo el mundo lograron un avance significativo en el desarrollo de un sistema</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Proyecto de página web del grupo de investigación",
+          "description": [
+            "<p>El grupo de investigación de la Universidad de Cambridge, en Reino Unido, realizó tres proyectos para desarrollar una página</p>",
+            "<p>El grupo de investigación de la Universidad de Cambridge, en Estados Unidos, creó un sitio web basado en el sistema de</p>",
+            "<p>Hace unos meses, el director ejecutivo del sitio web de computadoras y tecnologías conocido como</p>",
+            "<p>Hace unos meses, mi objetivo era desarrollar un proyecto para crear una plataforma web que permite a</p>"
+          ],
+          "links": [],
+          "images": [
+            "tifyc.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Contribuciones al grupo de investigación",
+          "description": [
+            "<p>Hace unos meses, mi primera clase de investigación sobre la Robótica en la Universidad Nacional Autónoma de Madrid</p>",
+            "<p>Hace cinco años, fui profesor de tecnología de la Universidad Autónoma de San Diego, en Estados Unidos.</p>",
+            "<p>Hace unos meses, mi primera clase de investigación en robótica fue en Estados Unidos.</p>"
+          ],
+          "links": [],
+          "images": [
+            "hispabot.jpeg"
+          ],
+          "technologies": [
+            "C",
+            "C++",
+            "Arduino",
+            "PIC",
+            "Mathlab",
+            "Octave",
+            "Java",
+            "Python"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Knowcentury",
+      "title": "Programador junior",
+      "short_description": [
+        "Pequeña empresa dedicada a la creación de páginas web"
+      ],
+      "thumbnail": "knowcentury.png",
+      "period_time": "Enero 2005 - Julio 2005",
+      "full_description": [
+        "Pequeña empresa dedicada a la creación de páginas web"
+      ],
+      "contribution": [
+        "<p>La Universidad de Cambridge, en Reino Unido, es una de las universidades más prestigiosas del mundo.</p>"
+      ],
+      "links": [],
+      "projects": [
+        {
+          "name": "Desarrollo de sitios web",
+          "description": [
+            "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Joomla",
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "HTML"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "IBM",
+      "title": "Programador junior",
+      "short_description": [
+        "La empresa estadounidense IBM anunció este lunes que se encuentra en Nueva York."
+      ],
+      "thumbnail": "ibm.svg",
+      "period_time": "Septiembre 2003 - Diciembre 2004",
+      "full_description": [
+        "<p>La empresa tecnológica estadounidense IBM anunció este miércoles la creación de una nueva línea de productos y</p>",
+        "<p>La empresa estadounidense IBM anunció este miércoles su primera edición de la tecnología de inteligencia artificial (IA</p>",
+        "<p>La empresa estadounidense IBM presentó este lunes su nueva plataforma de computación en la nube, IBM Cloud.</p>",
+        "<p>La empresa estadounidense IBM presentó este miércoles una nueva serie de mainframe, diseñada para ayudar a los usuarios de dispositivos electrónicos.</p>",
+        "<p>La empresa estadounidense de tecnología IBM, conocida como IBM Quantum, es una de las empresas más innovadoras del mundo.</p>",
+        "<p>La empresa estadounidense de tecnología IBM anunció este lunes que se compromete a reducir su huella ambiental.</p>",
+        "<p>La empresa de tecnología estadounidense IBM se convirtió este miércoles en la primera compañía tecnológica de la historia.</p>"
+      ],
+      "contribution": [
+        "<p>El ejército de Estados Unidos informó este miércoles que el gobierno de EE.UU. puso en marcha una investigación sobre la virtualización de sistemas.</p>",
+        "<p>Hace unos meses, el profesor de arquitectura y tecnología de la Universidad de Oxford, en Reino Unido, Qemu, trabajó en el proyecto Suse Linux Enterprise edition.</p>",
+        "<p>El director ejecutivo de IBM, Tim Berners-Lee, investigó algunos de los aspectos más importantes de la virtualización de sistemas.</p>"
+      ],
+      "links": [],
+      "projects": [
+        {
+          "name": "Desarrollo de sitios web",
+          "description": [
+            "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>"
+          ],
+          "links": [],
+          "images": [
+            "ibm_system_z.jpg",
+            "kvm.png",
+            "suse.png"
+          ],
+          "technologies": [
+            "Joomla",
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "HTML"
+          ]
+        }
+      ]
+    }
+  ],
+  "educations": {
+    "university": [
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "period_time": "Septiembre 2007 - Junio 2009",
+        "summary": [
+          "En esta nueva serie de películas, los niños aprenden cómo se comportan.",
+          "Redes profundas. Redes multicapa, retropropagación. Funciones de pérdida. Hiperparámetros y estrategias de aprendizaje.",
+          "Redes convolucionales. Reconocimiento de imágenes.",
+          "Redes secuenciales y recurrentes. Modelos LSTM.",
+          "Técnicas de paralelización y computación en arquitecturas basadas en GPU.",
+          "Técnicas de vectorización. Programación con tensorflow y theano.",
+          "Aprendizaje automatizado escalable. Frameworks de paralelización en clústeres de computadoras.",
+          "Aplicaciones en medicina, finanzas, conducción automática, etc."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Máster en Inteligencia Artificial en tecnologías de la información y la comunicación",
+        "university_name": "UAH"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "period_time": "Septiembre 2001 - Junio 2007",
+        "summary": [
+          "En esta nueva serie, los periodistas de la BBC te ayudan a practicar ciencias matemáticas."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Ingeniería Técnica en Informática",
+        "university_name": "UAH"
+      }
+    ],
+    "complementary": [
+      {
+        "images": [
+          "linux_foundation.png"
+        ],
+        "institution": "Fundación Linux",
+        "period_time": "Septiembre 2015",
+        "summary": [
+          "Certificación oficial de administración de sistemas Linux que implica la calificación para:",
+          "Administración avanzada de sistemas Linux, incluidos los relacionados con el kernel.",
+          "La Agencia Nacional de Seguridad de EE.UU. (NSA, por sus siglas en inglés) anunció este viernes que",
+          "Instalar y configurar servicios centrales de red (DHCP, DNS, SSH, servidores web, servidores de archivos, correo electrónico, etc.).",
+          "Monitorizar asistentes y asesorar a la administración sobre automatización y compras"
+        ],
+        "thumbnail": "linux_foundation.png",
+        "title": "LPIC - 2"
+      },
+      {
+        "images": [
+          "linux_foundation.png"
+        ],
+        "institution": "Fundación Linux",
+        "period_time": "Septiembre 2013",
+        "summary": [
+          "Certificación oficial de administración de sistemas Linux que implica la calificación para:",
+          "Instalar un sistema Linux, incluido X11 y configurarlo como un cliente de red.",
+          "Trabajar en la línea de comandos.",
+          "Gestionar archivos y permisos de acceso, incluidos ACL, así como la seguridad del sistema.",
+          "Realizar tareas de mantenimiento sencillas."
+        ],
+        "thumbnail": "linux_foundation.png",
+        "title": "LPIC - 1"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "institution": "Universidad de Alcalá de Henares",
+        "period_time": "Septiembre 2007",
+        "summary": [
+          "Diseño de contenido educativo a través del estándar SCORM."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Diseño y evaluación de contenidos educativos digitales"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "institution": "Universidad de Alcalá de Henares",
+        "period_time": "Septiembre 2007",
+        "summary": [
+          "Sistemas de visión artificial, matrices de convolución, filtros."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Curso de visión artificial"
+      }
+    ],
+    "languages": [
+      {
+        "acreditations": [],
+        "language": "Español",
+        "read": "Nativo",
+        "spoken": "Nativo",
+        "thumbnail": "spanish.png",
+        "writen": "Nativo"
+      },
+      {
+        "acreditations": [],
+        "language": "Inglés",
+        "read": "Fluido",
+        "spoken": "Fluido",
+        "thumbnail": "english.svg",
+        "writen": "Fluido"
+      },
+      {
+        "acreditations": [
+          {
+            "institution": "Instituto Confucio Madrid",
+            "period_time": "Septiembre 2009",
+            "title": "HSK 3"
+          }
+        ],
+        "language": "Chino",
+        "read": "Fluido",
+        "spoken": "Fluido",
+        "thumbnail": "chinese.png",
+        "writen": "Fluido"
+      }
+    ]
+  }
+}

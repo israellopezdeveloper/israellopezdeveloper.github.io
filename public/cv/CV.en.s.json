@@ -1,0 +1,1238 @@
+{
+  "intro": {
+    "greeting": "Hello, I'm Israel, a hardened senior dev traveling the world.",
+    "profile_image": "israel.png",
+    "name": "Israel López",
+    "title": "Senior Software Engineer",
+    "summary": [
+      "<p>My backpack is full of code and I want to keep learning. Programming is my superpower!</p>",
+      "<p>I've been bitten by the programming worm since I was 13 and I couldn't stop anywhere in the world with my laptop under my arm!</p>",
+      "<p>I consider myself a restless mind because of my insatiable desire to learn, innovate and overcome new intellectual challenges.</p>",
+      "<p>I'm proud to deliver a code that doesn't need to be written.</p>",
+      "<p>If we connect, are you ready to embark on a new technological adventure with me?</p>"
+    ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "I was born in Madrid, Spain"
+      },
+      {
+        "dates": "2007",
+        "text": "Completed his bachelor's degree in Computer Science at the University of Alcalá de Henares"
+      },
+      {
+        "dates": "2009",
+        "text": "Juan Carlos González has been awarded a degree in Artificial Intelligence at the University of Alcalá de Henares."
+      },
+      {
+        "dates": "2004 a la actualidad",
+        "text": "Working as an employee"
+      }
+    ],
+    "hobbies": [
+      " climbing,  snowboarding,  traveling,  diving,  mathematics (especially linear algebra and statistics),  Artificial intelligence."
+    ],
+    "links": [
+      {
+        "icon": "",
+        "url": "https://github.com/israellopezdeveloper",
+        "text": "@israellopezdeveloper"
+      },
+      {
+        "icon": "󰇮",
+        "url": "mailto:israel.lopez.developer@gmail.com",
+        "text": "israel.lopez.developer@gmail.com"
+      },
+      {
+        "icon": "󰌻",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/",
+        "text": "https://www.linkedin.com/in/israellopezmaiz/"
+      },
+      {
+        "icon": "",
+        "url": "tel:+34648136640",
+        "text": "+34 648 13 66 40"
+      }
+    ]
+  },
+  "works": [
+    {
+      "name": "Datura AI",
+      "title": "Senior Software Developer - Freelance",
+      "short_description": [
+        "<p>Artificial Intelligence (AI) technologies are being deployed in containers across the UK.</p>"
+      ],
+      "thumbnail": "daturaai.png",
+      "period_time": "Marzo 2025 - Actualidad",
+      "full_description": [
+        "<p>In our series of letters from African journalists, scientists and academics from around the world, we look at how they manage artificial</p>"
+      ],
+      "contribution": [
+        "<p>A team of software engineers has been developing a range of ways to reduce costs.</p>"
+      ],
+      "links": [
+        {
+          "icon": "",
+          "text": "Website",
+          "url": "https://www.datura.ai"
+        }
+      ],
+      "projects": [
+        {
+          "description": "<p>Celium, a cloud-based platform based on containers, has been launched in the UK.</p>",
+          "links": [
+            {
+              "icon": "",
+              "text": "Portal de Celium",
+              "url": "https://celium.datura.ai"
+            }
+          ],
+          "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
+          "technologies": [
+            "Python",
+            "Rust",
+            "C",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "Git",
+            "GitHub Actions",
+            "GPU Computing",
+            "CUDA",
+            "Tech",
+            "Bittensor",
+            "Prometheus"
+          ]
+        }
+      ],
+      "technologies": [],
+      "images": []
+    },
+    {
+      "name": "Indra",
+      "title": "Software architect",
+      "short_description": [
+        "The Spanish company Indra has been appointed to the European Union for the first time."
+      ],
+      "thumbnail": "indra.png",
+      "period_time": "Abril 2024 - Febrero 2025",
+      "full_description": [
+        "<p>Indra, a leading consulting firm, has been appointed to the UK's largest security firm.</p>"
+      ],
+      "contribution": [
+        "<p>Indra I has been a leading technical engineer in the developing world of Java. Here he explains why.</p>"
+      ],
+      "links": [],
+      "projects": [
+        {
+          "description": "<p>The design and implementation of a new armed forces mission system has been announced by the British government.</p>",
+          "links": [
+            {
+              "icon": "",
+              "text": "Participación de Indra en el Fondo Europeo de Defensa",
+              "url": "https://www.indracompany.com/es/noticia/indra-lidera-participacion-espanola-proyectos-fondo-europeo-defensa-entra-formar-12"
+            }
+          ],
+          "name": "Sistema de misión de nueva generación para vehículos militares",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Spring Data",
+            "Spring Security",
+            "Node.js",
+            "Express",
+            "Python",
+            "FastAPI",
+            "RAG",
+            "Vector DB",
+            "Embeddings",
+            "PostgreSQL",
+            "MongoDB",
+            "GIS",
+            "PostGIS",
+            "OpenLayers",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "GitHub Actions",
+            "Jira",
+            "Prometheus",
+            "Grafana"
+          ]
+        }
+      ],
+      "technologies": [],
+      "images": []
+    },
+    {
+      "name": "Devo",
+      "title": "Senior software engineer",
+      "short_description": [
+        "A cloud-based company that offers real-time security analytics, machine learning and scalable solutions for enterprise data management."
+      ],
+      "thumbnail": "devo.png",
+      "period_time": "Marzo 2020 - Marzo 2024",
+      "full_description": [
+        "<p>The company behind data security software Devo has been appointed to the Royal College of Commerce in New York.</p>"
+      ],
+      "contribution": [
+        "<p>The former chief executive of the US Federal Data Management Agency (FedramP) has been appointed as a consultant.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://www.devo.com/es/",
+          "text": "Sitio web de Devo"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Mejorar el balanceador de carga existente",
+          "description": [
+            "<p>The former chief executive of the Department of Defence (DEVA) has been appointed to the Ministry of Justice.</p>",
+            "<p>When it comes to data recovery, I developed a way to balance the amount of time it takes.</p>"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers",
+              "text": "Documentación del balanceador de carga"
+            }
+          ],
+          "technologies": [
+            "Node.js",
+            "C",
+            "C++",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "GIT",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "Crear un sistema de respaldo multicloud",
+          "description": [
+            "<p>Devon-based IT firm Devo has become the first in the UK to deploy a cloud storage system.</p>",
+            "<p>Data storage is a key part of our efforts to ensure that data is safely stored across the world.</p>",
+            "<p>In our series of letters from African journalists, I developed a system designed to improve data storage.</p>",
+            "<p>Devon-based IT analyst and former chief executive of Microsoft's Devo Systems has been involved in a major project to improve data management.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "AWS",
+            "GCP",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Jenkins",
+            "Gitlab CI/CD",
+            "Kubernetes",
+            "GIT",
+            "Jira",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "Integrar revisiones de calidad y seguridad en el pipeline CI/CD",
+          "description": [
+            "<p>The former chief executive of Devon's nuclear pipelines has been appointed to a joint inspection team.</p>",
+            "<p><b>Integration of the Jenkins Pipeline</b></p>",
+            "<p>When I started working on the Jenkins pipeline, I was asked to explain why.</p>",
+            "<p><b>Transition to GitLab CI/CD</b></p>",
+            "<p>When I was a technical engineer at GitLab, I started the process.</p>",
+            "<p><b>Scanning of Security Vulnerabilities</b></p>",
+            "<p>When I was a researcher at the University of Aberdeen, I used Snyk and owaSP tools to assess web security.</p>",
+            "<p><b>Achieving Compliance Standards</b></p>",
+            "<p>Devon-based IT engineer Devo has been involved in a major security improvement project in the pipeline.</p>",
+            "<p><b>Results</b></p>",
+            "<p>Devon-based engineering firm Devo has been appointed chief executive of the company for the first time.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Gitlab CI/CD",
+            "Jenkins",
+            "NIST",
+            "FIPS",
+            "FedRAMP",
+            "SonarQube",
+            "Snyk",
+            "Owasp",
+            "Kubernetes",
+            "Jira"
+          ]
+        },
+        {
+          "name": "Creación de un sistema de alerta para monitoreo con Prometheus",
+          "description": [
+            "<p>In our series of letters from African journalists, writers and analysts explain why I worked with Prometheus.</p>",
+            "<p>Devon's communications system, Devo, has been rated as the most secure in the UK.</p>",
+            "<p>A technical expert has been involved in developing a system which aims to ensure the safety of emergency workers.</p>",
+            "<p>When I started working on a new software system, I was able to reduce the impact of technical problems.</p>",
+            "<p>The Isle of Man's CCTV monitoring system has been designed to improve the effectiveness of the system.</p>",
+            "<p>The creator of a security alert system for Devon has been appointed to the Department of Defence.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Prometheus",
+            "Grafana",
+            "Kubernetes",
+            "Docker",
+            "Elastic Stack",
+            "Kibana",
+            "Python",
+            "Bash",
+            "Ansible",
+            "GIT"
+          ]
+        }
+      ],
+      "images": [
+        "devo1.png",
+        "devo2.png"
+      ]
+    },
+    {
+      "name": "Comisión Europea",
+      "title": "Software architect",
+      "short_description": [
+        "The European Commission has been appointed to the European Parliament."
+      ],
+      "thumbnail": "European_Commission_01.png",
+      "period_time": "Junio 2017 - Enero 2020",
+      "full_description": [
+        "<p>The European Commission has been officially established.</p>",
+        "<p>The European Commission has appointed a new directorate-general to ensure fair competition in the European Union.</p>",
+        "<p>The European Commission has appointed a new chief executive.</p>"
+      ],
+      "contribution": [
+        "<p>The European Commission has appointed a software architect to the European Union.</p>",
+        "<ul></ul>",
+        "<p>In our series of letters from African journalists, academics and business leaders, I spoke to us about the management of non-functional requirements.</p>",
+        "<p>These are some of the most important ways to tackle the coronavirus pandemic.</p>",
+        "<li><b>Management of task dependencies</b>: I used Jira to manage dependencies between tasks, ensuring smooth progress and minimizing delays.</li>",
+        "<p>In our series of letters from African journalists, I spoke to the BBC about how I worked with a team of engineers.</p>",
+        "<p>Welcome to a new recruitment agency.</p>",
+        "<p>A new partnership has been created between the UK's two largest manufacturing companies.</p>",
+        "<p>Welcome to the UK's testing system.</p>",
+        "<p>In our series of letters from African journalists, I have been given a glimpse of how they work.</p>",
+        "<p>In our series of letters from African writers, I explain how software development is handled.</p>",
+        "<li><b>Agile methodology</b>: I used SCRUM as the main methodology for project management, encouraging an agile and efficient development process.</li>",
+        ""
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://competition-policy.ec.europa.eu/index_en",
+          "text": "Sitio web de la Comisión Europea, DG COMP"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Definición de dos APIs RESTful",
+          "description": [
+            "<p>A new project has been launched to establish a new system for the testing of new technologies.</p>",
+            "<ul></ul>",
+            "<li><b>Internal API</b>: The first API was intended to serve the internal staff of the European Commission.</li>",
+            "<li><b>External API</b>: The second API served as a platform for external staff.</li>",
+            "",
+            "Oracle and MongoDB have managed their data persistence processes using a separate system."
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
+              "text": "Documentación de e-leniency"
+            }
+          ],
+          "images": [
+            "European_Commission_02.png"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "JPA",
+            "Eclipselink",
+            "WebLogic 12",
+            "Oracle DB",
+            "MongoDB",
+            "Swagger",
+            "JUnit",
+            "AngularJS",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "CAS",
+            "Jira",
+            "JUnit",
+            "Bamboo",
+            "SonarQube",
+            "TDD",
+            "BDD"
+          ]
+        },
+        {
+          "name": "E-Confidencialidad",
+          "description": [
+            "<p>When I was a lawyer, I worked on two separate projects.</p>",
+            "<p>The status of legal documents in England and Wales is a key part of the process of negotiation.</p>",
+            "<p>In our series of letters from African journalists, I developed a software system which allows developers to access sensitive data</p>",
+            "<p>The chief executive of the UK's antitrust enforcement agency has been appointed to the High Court.</p>"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en",
+              "text": "Documentación de e-confidencialidad"
+            }
+          ],
+          "technologies": [
+            "AngularJS",
+            "Ansible",
+            "BDD",
+            "Bamboo",
+            "CAS",
+            "Docker",
+            "Eclipselink",
+            "Enterprise Architect",
+            "GIT",
+            "IntelliJ IDEA",
+            "JPA",
+            "JUnit",
+            "Java",
+            "Jira",
+            "Maven",
+            "MongoDB",
+            "Oracle DB",
+            "Selenium",
+            "SonarQube",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring MVC",
+            "Spring Security",
+            "Swagger",
+            "TDD",
+            "WebLogic 12"
+          ]
+        },
+        {
+          "name": "Índice semántico de documentos legales",
+          "description": [
+            "<p>The BBC's weekly The Boss series profiles different projects from around the world.</p>",
+            "<p>A network of sophisticated search engines has been developed to ensure the accuracy of the process.</p>",
+            "<p>A new system has been developed for the antitrust department.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "AngularJS",
+            "Ansible",
+            "Bamboo",
+            "C++",
+            "CUDA",
+            "Cassandra",
+            "Docker",
+            "Eclipselink",
+            "Enterprise Architect",
+            "GIT",
+            "Google Test",
+            "Groovy",
+            "IntelliJ IDEA",
+            "JPA",
+            "JUnit",
+            "Java",
+            "Jira",
+            "Maven",
+            "Microservices",
+            "OpenCL",
+            "Oracle DB",
+            "Selenium",
+            "SonarQube",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring MVC",
+            "Spring Security",
+            "Swagger",
+            "TensorFlow",
+            "Valgrind",
+            "WebLogic 12",
+            "gRPC"
+          ]
+        },
+        {
+          "name": "Desarrollo de un sistema de distribución de energía renovable",
+          "description": [
+            "<p>The Isle of Man's electricity grid is being upgraded to renewable energy.</p>",
+            "<p>The ModBus communications system has been developed in the UK.</p>",
+            "<p>Gateways are being deployed across Northern Ireland.</p>",
+            "<p>In our series of letters from African journalists, I developed a new system for tracking energy consumption.</p>",
+            "<p>In our series of letters from African journalists, scientists and academics explain why I worked with renewable energy across the UK</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Go",
+            "Unit Test",
+            "BalenaIO",
+            "RaspberryPI",
+            "Modbus",
+            "Python",
+            "Make",
+            "Docker",
+            "Kubernetes",
+            "GCP",
+            "Azure",
+            "IoTHub",
+            "Kafka",
+            "Avro Schemas",
+            "Ansible",
+            "Elastic Search",
+            "Kibana",
+            "Jira",
+            "Groovy"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Panel Sistemas",
+      "title": "Senior software engineer",
+      "short_description": [
+        "Panel Systems is a technology solutions company offering software, consulting and development services to various industries."
+      ],
+      "thumbnail": "panel_sistemas.png",
+      "period_time": "Septiembre 2015 - Junio 2017",
+      "full_description": [
+        "<p>The Spanish company Panel Sistemas has been named as the UK's largest IT firm.</p>",
+        "<b>Services offered</b>",
+        "<lu></lu>",
+        "<li>Software development: Tailored software solutions.</li>",
+        "<li>Consulting: IT strategy and optimization.</li>",
+        "<li>Maintenance and Support: Continuous application support.</li>",
+        "<li>Quality assurance: Complete software testing.</li>",
+        "<li>Digital transformation: transition from business to digital platforms.</li>",
+        "",
+        "<b>Experience in the industry</b>",
+        "<lu></lu>",
+        "<li>Finances</li>",
+        "<li>Telecommunications</li>",
+        "<li>Energy</li>",
+        "<li>Retail</li>",
+        ""
+      ],
+      "contribution": [
+        "<p>The former chief executive of Panel Systems has been appointed to the role.</p>",
+        "<ul></ul>",
+        "<li>Analysis of non-functional requirements and decision-making on the exact implementation of the solution (Redmine)</li>",
+        "<li>Creating sub-tasks with less granularity to achieve objectives (Redmine)</li>",
+        "<li>Estimated time (Redmine)</li>",
+        "<li>Definition and implementation of the project structure in the specified technologies</li>",
+        "<li>Definition of the coverage and quality of unit tests (JUnit, Google Test, Valgrind)</li>",
+        "<li>Implementation of IC/CD systems (Jenkins)</li>",
+        "<li>Use of SCRUM as a development methodology</li>",
+        "<li>Application of TDD and BDD in software development</li>",
+        "<li>Teaching training sessions on TDD, BDD, Neural Networks, Clean Code and more</li>",
+        ""
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://www.panel.es/",
+          "text": "Sitio web de Panel Sistemas"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Modernización de la mensajería de transporte marítimo y aéreo: reemplazo de IATA por XML/JSON",
+          "description": [
+            "<p>The International Air Transport Agency (IATA) has announced a major shake-up of its communications system.</p>",
+            "<p>The BBC's weekly The Boss series profiles different business leaders from around the world. This week we speak to Richardson, chief executive of the</p>"
+          ],
+          "links": [],
+          "images": [
+            "iata.png"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Wildfly/JBoss",
+            "MongoDB",
+            "RabbitMQ",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "GWT",
+            "AWS",
+            "Phonegap",
+            "Hadoop",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Redmine",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible"
+          ]
+        },
+        {
+          "name": "Gestión Inteligente de Terminales de Iberdrola con Siemens",
+          "description": [
+            "Spain's Spanish mining company, Iberdrola, has completed two major projects, including a joint project with Siemens."
+          ],
+          "links": [],
+          "images": [
+            "iberdrola.svg",
+            "siemens.png"
+          ],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "MongoDB",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "Hadoop",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes",
+            "JNLP",
+            "SNMP",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IOT"
+          ]
+        },
+        {
+          "name": "Sistema de monitoreo y cuidado para personas con discapacidades o ancianos para Securitas Direct",
+          "description": [
+            "<p>A third project has been carried out across the UK to identify people with disabilities and the elderly.</p>",
+            "<p>A smartphone app has been launched in the US.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Google Test",
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "AWS",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring Batch",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "Oracle DB",
+            "JUnit",
+            "Ionic",
+            "Typescript",
+            "Hadoop",
+            "Selenium",
+            "Jasmine",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "Confluence",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Grupo Prisa",
+      "title": "Senior software engineer",
+      "short_description": [
+        "Grupo PRISA is a Spanish media conglomerate, known for its influential newspapers, radio stations and educational publications."
+      ],
+      "thumbnail": "prisa.png",
+      "period_time": "Marzo 2012 - Mayo 2015",
+      "full_description": [
+        "<p>Spanish media giant PRISA has announced it is to close its doors to a public consultation.</p>",
+        "<p>Key aspects of PRISA Group include:</p>",
+        "<ul></ul>",
+        "<p>Spain's national newspaper PRISA is based in the capital, Madrid.</p>",
+        "<p>Spanish radio broadcaster PRISA has announced that it is taking over Cadena SER.</p>",
+        "<p>The Spanish broadcaster PRISA has announced that it is developing a new TV network.</p>",
+        "<p>The Spanish publishing company PRISA has announced it is selling a number of educational publications.</p>",
+        "<p>The BBC's weekly The Boss series profiles different business leaders from around the world. This week we speak to PRISA.</p>",
+        "<p>The Spanish media company PRISA has become the world's largest broadcaster.</p>",
+        ""
+      ],
+      "contribution": [
+        "<p>In our series of letters from African journalists, the BBC's Jonathan Marcus looks at the challenges of working as a remote programmer.</p>",
+        "<p>When I started working as a technical officer at the University of Oxford, I was asked to explain why I worked with foreign teams.</p>",
+        "<p>When I started working as a technical officer at the University of Edinburgh, I was able to contribute to improving efficiency.</p>",
+        "<p>Planning is one of the key responsibilities of a project management team.</p>",
+        "<p>When I started working as a remote programmer at the University of Edinburgh in July, I was able to work with the Scottish government.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://www.prisa.com/es",
+          "text": "Sitio web de Grupo Prisa"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Aplicación de visor de paquetes educativos",
+          "description": [
+            "<p>A pioneering software application has been launched in the UK.</p>",
+            "<p>A new e-learning application has been launched in the UK.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "XCode",
+            "Objective-C",
+            "Dagger",
+            "SCORM",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Proyecto de estandarización de paquetes educativos",
+          "description": [
+            "<p>A second project has been launched to improve the standardisation of Adobe Flash.</p>",
+            "<p>The first phase of a major project to improve the quality and integrity of school packages has been completed.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "C++",
+            "Linux",
+            "Flash",
+            "HTML",
+            "JavaScript",
+            "AngularJS",
+            "Bootstrap",
+            "SCORM",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence",
+            "QEmu",
+            "KVM",
+            "Xen",
+            "Bash",
+            "NginX",
+            "Valgrind"
+          ]
+        },
+        {
+          "name": "Proyecto de plataforma educativa",
+          "description": [
+            "<p>A third project has been developed using C# on the .net platform.</p>",
+            "<p>Education Secretary John Kerry has unveiled a new wireless teaching platform for schools across the UK.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "C#",
+            ".NET",
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Intelygenz",
+      "title": "Senior software engineer",
+      "short_description": [
+        "Intelygenz, the maker of artificial intelligence software, has gone into administration."
+      ],
+      "thumbnail": "intelygenz.png",
+      "period_time": "Enero 2010 - Enero 2012",
+      "full_description": [
+        "<p>A third project has been developed using C# on the .net platform.</p>",
+        "<p>Education Secretary John Kerry has unveiled a new wireless teaching platform for schools across the UK.</p>"
+      ],
+      "contribution": [
+        "<p>The BBC's weekly The Boss series profiles different business leaders from around the world.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://intelygenz.com/",
+          "text": "Sitio web de Intelygenz"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Proyecto de Antena 3 Televisión",
+          "description": [
+            "<p>Indonesia's telecoms giant has launched a two-year project to improve its operating system.</p>",
+            "<p>The BBC has created a modified audio recording which allows users to listen to the broadcast.</p>"
+          ],
+          "links": [
+            {
+              "tag": "Documentación",
+              "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf",
+              "text": "Documentación de la aplicación de Antena 3 TV"
+            }
+          ],
+          "images": [
+            "intelygenz_01.jpeg"
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "Android NDK",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Proyecto de gestor de documentos para BBVA",
+          "description": [
+            "<p>Two separate projectes have been developed using C# within the .net environment.</p>",
+            "<p>British Bank of America (BBVA) has introduced a new document manager, which aims to improve the way it works.</p>"
+          ],
+          "links": [],
+          "images": [
+            "bbva.jpg"
+          ],
+          "technologies": [
+            "C#",
+            ".NET",
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Cassandra",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
+          ]
+        },
+        {
+          "name": "Proyecto de Front colaborativo",
+          "description": [
+            "<p>A third project has been carried out on the development of a new banking platform for the Bank of England.</p>",
+            "<p>A project designed to improve the use of gestures and actions has been launched by the University of Edinburgh.</p>"
+          ],
+          "links": [],
+          "images": [
+            "bbva.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Websphere",
+            "Oracle DB",
+            "JUnit",
+            "JSF",
+            "Maven",
+            "GIT",
+            "Jira",
+            "Confluence",
+            "GIT",
+            "Eclipse"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "UAH",
+      "title": "Research and teaching staff",
+      "short_description": [
+        "The University of Alcalá de Henares is a prestigious Spanish institution known for its rich history and various academic programs."
+      ],
+      "thumbnail": "uah.svg",
+      "period_time": "Enero 2006 - Enero 2009",
+      "full_description": [
+        "<p>The University of Alcalá de Henares has been officially opened.</p>",
+        "<p>A Spanish university has been officially opened in the city of Alcalá.</p>",
+        "<p>The University of Madrid has opened its doors to the public for the first time.</p>",
+        "<p>The Spanish city of Alcalá has become one of the world's most prestigious universities.</p>",
+        "<p>A university in the Spanish city of Alcalá has opened its doors to international students.</p>",
+        "<p>The University of Alcalá in Spain has been named as one of the world's most prestigious universities.</p>",
+        "<p>A Spanish university is celebrating its 50th anniversary.</p>",
+        "<p>The University of Alcalá de Henares has been officially opened.</p>"
+      ],
+      "contribution": [
+        "<p>When I was a researcher at the University of Cambridge, I had always been involved in developing artificial intelligence.</p>",
+        "<p>When I graduated from the University of Cambridge, I was a scientist.</p>",
+        "<p>Scientists at the University of Cambridge have been given a key role in their work.</p>",
+        "<p>In our series of letters from African journalists, academics and writers, I spoke to the BBC about the impact of the scheme.</p>",
+        "<p>In our series of letters from African journalists, scientists and academics from around the world have shared their experiences.</p>"
+      ],
+      "links": [
+        {
+          "tag": "Sitio web",
+          "url": "https://uah.es/",
+          "text": "Sitio web de la Universidad de Alcalá"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Proyecto del grupo de investigación",
+          "description": [
+            "<p>Researchers at the University of Cambridge have completed a series of research projects aimed at improving the ability of individuals to communicate.</p>",
+            "<p>A team of experts from the University of Cambridge has created a digital environment for people with visual, auditory and motor disabilities.</p>",
+            "<p>Scientists at the University of Cambridge have developed a range of new technologies for people with disabilities.</p>",
+            "<p>The British Medical Association has launched a project to improve the quality of life for people with disabilities.</p>"
+          ],
+          "links": [],
+          "images": [
+            "tifyc.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Android Studio",
+            "Android",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "Qt",
+            "PIC",
+            "Arduino",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Sistema de comunicación para dispositivos biométricos",
+          "description": [
+            "<p>In our series of letters from across the world, I have been working on two separate projectes.</p>",
+            "<p>Scientists at the University of Cambridge have developed a system that allows users to use biometric devices.</p>",
+            "<p>In our series of letters from African journalists, the BBC looks at the challenges facing the Biometric System.</p>",
+            "<p>Scientists at the University of Cambridge have completed a project to improve the use of biometric devices.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Java",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Proyecto de página web del grupo de investigación",
+          "description": [
+            "<p>A third project has been carried out by the University of Cambridge University research group.</p>",
+            "<p>Welcome to a new website created by the University of Cambridge University's research group.</p>",
+            "<p>Following a series of technical improvements, I've been working on the Isle of Man's largest website,</p>",
+            "<p>Welcome to a new project on the web.</p>"
+          ],
+          "links": [],
+          "images": [
+            "tifyc.jpg"
+          ],
+          "technologies": [
+            "Java",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
+          ]
+        },
+        {
+          "name": "Contribuciones al grupo de investigación",
+          "description": [
+            "<p>When I was a scientist at the University of Cambridge, I went to work with the British Robotics Institute.</p>",
+            "<p>In our series of letters from African journalists, I spoke to the BBC about how I worked with the University of Cambridge.</p>",
+            "<p>When I graduated from the University of Edinburgh, I was a robotic engineer.</p>"
+          ],
+          "links": [],
+          "images": [
+            "hispabot.jpeg"
+          ],
+          "technologies": [
+            "C",
+            "C++",
+            "Arduino",
+            "PIC",
+            "Mathlab",
+            "Octave",
+            "Java",
+            "Python"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Knowcentury",
+      "title": "Junior programmer",
+      "short_description": [
+        "Small company dedicated to creating websites"
+      ],
+      "thumbnail": "knowcentury.png",
+      "period_time": "Enero 2005 - Julio 2005",
+      "full_description": [
+        "Small company dedicated to creating websites"
+      ],
+      "contribution": [
+        "<p>During my early college years, in order to pay for my studies, I worked as a junior web programmer using CMS at Knowcentury.</p>"
+      ],
+      "links": [],
+      "projects": [
+        {
+          "name": "Desarrollo de sitios web",
+          "description": [
+            "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
+          ],
+          "links": [],
+          "technologies": [
+            "Joomla",
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "HTML"
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "IBM",
+      "title": "Junior programmer",
+      "short_description": [
+        "The world's largest technology company, IBM, has announced it is to launch a new business."
+      ],
+      "thumbnail": "ibm.svg",
+      "period_time": "Septiembre 2003 - Diciembre 2004",
+      "full_description": [
+        "<p>The world's largest technology company, IBM, has announced a new chapter in its history.</p>",
+        "<p>The world's biggest computing giant, IBM, has announced that it is developing artificial intelligence (AI).</p>",
+        "<p>Technology giant IBM has announced that it is developing a cloud computing platform designed to support artificial intelligence (AI).</p>",
+        "<p>IBM's Z series of mainframe technology has played a crucial role in the global economy.</p>",
+        "<p>The world's biggest computer giant, IBM, has announced it is developing a range of technologies that could revolution</p>",
+        "<p>The world's biggest technology company, IBM, has announced its annual sustainability strategy.</p>",
+        "<p>IBM, the world's largest technology company, has announced it is operating in the US.</p>"
+      ],
+      "contribution": [
+        "<p>The University of Suse has completed a three-year project to virtualise remote systems.</p>",
+        "<p>In our series of letters from African journalists, the BBC's Jonathan Marcus looks at how the Qemu operating system works.</p>",
+        "<p>In our series of letters from African journalists, I developed a project to examine the challenges of virtualisation.</p>"
+      ],
+      "links": [],
+      "projects": [
+        {
+          "name": "Desarrollo de sitios web",
+          "description": [
+            "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
+          ],
+          "links": [],
+          "images": [
+            "ibm_system_z.jpg",
+            "kvm.png",
+            "suse.png"
+          ],
+          "technologies": [
+            "Joomla",
+            "PHP",
+            "JavaScript",
+            "MySQL",
+            "HTML"
+          ]
+        }
+      ]
+    }
+  ],
+  "educations": {
+    "university": [
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "period_time": "Septiembre 2007 - Junio 2009",
+        "summary": [
+          "In our series of letters from across the world, we look at some of the key features of artificial intelligence.",
+          "Deep networks. Multilayer networks, retropropagation. Loss functions. Hyperparameters and learning strategies.",
+          "Convolusionary networks, image recognition.",
+          "Sequential and recurring networks, LSTM models.",
+          "Parallelisation and computing techniques in GPU-based architectures.",
+          "Vectoring techniques, programming with tensorflow and thean.",
+          "Scalable automated learning. Parallel frameworks in clusters of computers.",
+          "Applications in medicine, finance, automated driving, etc."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Master's degree in Artificial Intelligence in information and communication technologies",
+        "university_name": "UAH"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "period_time": "Septiembre 2001 - Junio 2007",
+        "summary": [
+          "In our series of letters from across the world, scientists have been awarded a prestigious degree."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Technical engineering in computer science",
+        "university_name": "UAH"
+      }
+    ],
+    "complementary": [
+      {
+        "images": [
+          "linux_foundation.png"
+        ],
+        "institution": "The Linux Foundation",
+        "period_time": "Septiembre 2015",
+        "summary": [
+          "Official Linux system administration certification involving qualification for:",
+          "Advanced management of Linux systems, including those related to the kernel.",
+          "Advanced security systems are being developed in the UK.",
+          "Install and configure central network services (DHCP, DNS, SSH, web servers, file servers, email, etc.).",
+          "Monitoring assistants and advising management on automation and procurement"
+        ],
+        "thumbnail": "linux_foundation.png",
+        "title": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal."
+      },
+      {
+        "images": [
+          "linux_foundation.png"
+        ],
+        "institution": "The Linux Foundation",
+        "period_time": "Septiembre 2013",
+        "summary": [
+          "Official Linux system administration certification involving qualification for:",
+          "Install a Linux system, including X11 and configure it as a network client.",
+          "Work on the command line.",
+          "Manage files and access permissions, including ACL, as well as system security.",
+          "Perform simple maintenance tasks."
+        ],
+        "thumbnail": "linux_foundation.png",
+        "title": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal."
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "institution": "University of Alcalá de Henares",
+        "period_time": "Septiembre 2007",
+        "summary": [
+          "Design of educational content through the SCORM standard."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Design and evaluation of digital educational content"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "institution": "University of Alcalá de Henares",
+        "period_time": "Septiembre 2007",
+        "summary": [
+          "Artificial vision systems, winding arrays, filters."
+        ],
+        "thumbnail": "uah.svg",
+        "title": "Artificial vision course"
+      }
+    ],
+    "languages": [
+      {
+        "acreditations": [],
+        "language": "Spanish",
+        "read": "Native",
+        "spoken": "Native",
+        "thumbnail": "spanish.png",
+        "writen": "Native"
+      },
+      {
+        "acreditations": [],
+        "language": "English",
+        "read": "Fluid",
+        "spoken": "Fluid",
+        "thumbnail": "english.svg",
+        "writen": "Fluid"
+      },
+      {
+        "acreditations": [
+          {
+            "institution": "Instituto Confucio Madrid",
+            "period_time": "Septiembre 2009",
+            "title": "HSK 3"
+          }
+        ],
+        "language": "Chinese",
+        "read": "Fluid",
+        "spoken": "Fluid",
+        "thumbnail": "chinese.png",
+        "writen": "Fluid"
+      }
+    ]
+  }
+}
