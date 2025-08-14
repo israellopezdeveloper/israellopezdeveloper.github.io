@@ -880,7 +880,9 @@ class ProjectDialog(QtWidgets.QDialog):
         techs = [self.listTech.item(i).text() for i in range(self.listTech.count())]
         return {
             "name": self.edName.text().strip(),
-            "description": self.htmlDesc.html(),
+            "description": [
+                self.htmlDesc.html(),
+            ],
             "links": links,
             "technologies": techs,
         }

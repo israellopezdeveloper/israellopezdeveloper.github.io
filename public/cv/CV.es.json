@@ -79,12 +79,14 @@
       ],
       "projects": [
         {
-          "description": "<p>Celium es una plataforma desarrollada por <strong>Datura AI</strong> para gestionar, desplegar y optimizar modelos de Inteligencia Artificial en redes distribuidas y dispositivos remotos. Su objetivo es facilitar la ejecución de modelos complejos, como Stable Diffusion, Whisper, LLaMA o Mistral, incluso en entornos con recursos limitados, garantizando alta disponibilidad, escalabilidad y rendimiento.</p>\n\n<p>La plataforma permite a los usuarios:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en contenedores sobre infraestructuras locales, en la nube o en el edge.</li>\n  <li>Editar pods y reasignar recursos (CPU, GPU, memoria) dinámicamente para adaptarse a la demanda.</li>\n  <li>Utilizar plantillas de despliegue optimizadas para modelos específicos.</li>\n  <li>Monitorizar métricas de rendimiento y uso de recursos en tiempo real.</li>\n  <li>Automatizar la actualización y distribución de modelos en cientos de nodos remotos.</li>\n  <li>Integrar la plataforma con ecosistemas descentralizados como Bittensor para aumentar la interoperabilidad.</li>\n</ul>\n\n<p>Celium utiliza una arquitectura modular basada en contenedores y orquestadores, optimizada para reducir la latencia y el consumo de recursos. Emplea balanceo de cargas inteligente, gestión distribuida de datos y técnicas avanzadas de afinidad de procesos para maximizar la eficiencia energética y el rendimiento del hardware disponible.</p>\n",
+          "description": [
+            "<p>Celium es una plataforma desarrollada por <strong>Datura AI</strong> para gestionar, desplegar y optimizar modelos de Inteligencia Artificial en redes distribuidas y dispositivos remotos. Su objetivo es facilitar la ejecución de modelos complejos, como Stable Diffusion, Whisper, LLaMA o Mistral, incluso en entornos con recursos limitados, garantizando alta disponibilidad, escalabilidad y rendimiento.</p>\n\n<p>La plataforma permite a los usuarios:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en contenedores sobre infraestructuras locales, en la nube o en el edge.</li>\n  <li>Editar pods y reasignar recursos (CPU, GPU, memoria) dinámicamente para adaptarse a la demanda.</li>\n  <li>Utilizar plantillas de despliegue optimizadas para modelos específicos.</li>\n  <li>Monitorizar métricas de rendimiento y uso de recursos en tiempo real.</li>\n  <li>Automatizar la actualización y distribución de modelos en cientos de nodos remotos.</li>\n  <li>Integrar la plataforma con ecosistemas descentralizados como Bittensor para aumentar la interoperabilidad.</li>\n</ul>\n\n<p>Celium utiliza una arquitectura modular basada en contenedores y orquestadores, optimizada para reducir la latencia y el consumo de recursos. Emplea balanceo de cargas inteligente, gestión distribuida de datos y técnicas avanzadas de afinidad de procesos para maximizar la eficiencia energética y el rendimiento del hardware disponible.</p>\n"
+          ],
           "links": [
             {
               "icon": "",
               "text": "Portal de Celium",
-              "url": "https://celium.datura.ai"
+              "url": "https://lium.io/"
             }
           ],
           "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
@@ -125,7 +127,9 @@
       "links": [],
       "projects": [
         {
-          "description": "<p>\n    Proyecto estratégico desarrollado por Indra en el marco del Fondo Europeo de Defensa para crear el\n    <strong>primer sistema de misión de nueva generación para vehículos militares de Europa y países de la OTAN</strong>.\n    El sistema integra capacidades de Inteligencia Artificial, GIS y gestión de sensores para ofrecer a las\n    fuerzas armadas una ventaja táctica en entornos operativos complejos.\n  </p>\n\n  <p>\n    La arquitectura es abierta, modular y escalable, permitiendo la interoperabilidad entre ejércitos aliados\n    y la rápida integración de nuevos componentes tecnológicos. Incluye un <strong>sistema RAG</strong> para\n    recuperación contextual de información, análisis geoespacial en tiempo real, y módulos de comunicación\n    seguros para la transmisión de datos críticos.\n  </p>\n<h3>Responsabilidades</h3>\n  <ul class=\"responsibilities\">\n    <li>Diseño e implementación de microservicios backend en Java y Node.js bajo principios de Clean Architecture.</li>\n    <li>Desarrollo e integración de un sistema RAG para búsqueda semántica y contextualización de datos operativos.</li>\n    <li>Implementación de funcionalidades GIS para análisis geoespacial y visualización táctica en mapas interactivos.</li>\n    <li>Definición de APIs y protocolos seguros para interoperar con otros sistemas OTAN.</li>\n    <li>Automatización de pipelines CI/CD en GitLab con despliegues en Kubernetes.</li>\n    <li>Optimización de rendimiento, pruebas de carga y validación de tolerancia a fallos.</li>\n  </ul>",
+          "description": [
+            "<p>\n    Proyecto estratégico desarrollado por Indra en el marco del Fondo Europeo de Defensa para crear el\n    <strong>primer sistema de misión de nueva generación para vehículos militares de Europa y países de la OTAN</strong>.\n    El sistema integra capacidades de Inteligencia Artificial, GIS y gestión de sensores para ofrecer a las\n    fuerzas armadas una ventaja táctica en entornos operativos complejos.\n  </p>\n\n  <p>\n    La arquitectura es abierta, modular y escalable, permitiendo la interoperabilidad entre ejércitos aliados\n    y la rápida integración de nuevos componentes tecnológicos. Incluye un <strong>sistema RAG</strong> para\n    recuperación contextual de información, análisis geoespacial en tiempo real, y módulos de comunicación\n    seguros para la transmisión de datos críticos.\n  </p>\n<h3>Responsabilidades</h3>\n  <ul class=\"responsibilities\">\n    <li>Diseño e implementación de microservicios backend en Java y Node.js bajo principios de Clean Architecture.</li>\n    <li>Desarrollo e integración de un sistema RAG para búsqueda semántica y contextualización de datos operativos.</li>\n    <li>Implementación de funcionalidades GIS para análisis geoespacial y visualización táctica en mapas interactivos.</li>\n    <li>Definición de APIs y protocolos seguros para interoperar con otros sistemas OTAN.</li>\n    <li>Automatización de pipelines CI/CD en GitLab con despliegues en Kubernetes.</li>\n    <li>Optimización de rendimiento, pruebas de carga y validación de tolerancia a fallos.</li>\n  </ul>"
+          ],
           "links": [
             {
               "icon": "",
@@ -298,10 +302,7 @@
           ]
         }
       ],
-      "images": [
-        "devo1.png",
-        "devo2.png"
-      ]
+      "images": ["devo1.png", "devo2.png"]
     },
     {
       "name": "Comisión Europea",
@@ -356,9 +357,7 @@
               "text": "Documentación de e-leniency"
             }
           ],
-          "images": [
-            "European_Commission_02.png"
-          ],
+          "images": ["European_Commission_02.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -564,9 +563,7 @@
             "<P>Para lograr esto, definí un analizador que traducía mensajes del formato antiguo a cualquiera de los dos estándares modernos a través de una API Restful que cumplía con el modelo de madurez de Richardson Nivel 3. Esta API no solo proporcionó un punto de entrada para la traducción de mensajes, sino que también facilitó la intercomunicación con otras plataformas en todo el mundo y el almacenamiento de estas comunicaciones para asegurar la trazabilidad del tránsito de paquetes a nivel mundial. Los objetivos del proyecto requerían una estructura de alta disponibilidad y un sistema de base de datos replicada basado en MongoDB, implementado a través de un clúster de servidores con cada fragmento replicado.</P>"
           ],
           "links": [],
-          "images": [
-            "iata.png"
-          ],
+          "images": ["iata.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -601,10 +598,7 @@
             "El segundo proyecto fue un proyecto conjunto con Siemens para crear la infraestructura de gestión inteligente de terminales de Iberdrola. Estos terminales tomaban información sobre el consumo eléctrico del usuario enviando un informe diario al servidor utilizando el protocolo de comunicación SNMP, a menos que se deseara un monitoreo más detallado de un dispositivo o conjunto de dispositivos específico, en cuyo caso se generarían informes con un nivel de detalle que llegaría al consumo por minuto. Estos datos se almacenaban en una base de datos no relacional MongoDB, que por razones obvias eran varios clústeres, con balanceo de carga y fragmentos replicados. La información de cada punto se almacenaba en el clúster por proximidad geográfica, siempre que el servidor pudiera asumir el volumen de datos que incluía la inclusión de dicho nodo. La información de cada nodo se mantenía durante un año con un nivel de detalle de consumo por minuto, después de un año se compactaba generando el máximo, mínimo y promedio de cada día y esta información se mantenía a este nivel de detalle durante 5 años y pasado ese lapso de tiempo la información de cada nodo se compactaba nuevamente. El sistema también daba la posibilidad de controlar y escuchar en tiempo real el dispositivo a través del protocolo SNMP y JNLP. Esta estructura se creó utilizando microservicios en C++ con el framework de llamada a procedimiento remoto gRPC y se implementó en un conjunto de servidores basados en Red Hat Enterprise Linux."
           ],
           "links": [],
-          "images": [
-            "iberdrola.svg",
-            "siemens.png"
-          ],
+          "images": ["iberdrola.svg", "siemens.png"],
           "technologies": [
             "C++",
             "Google Test",
@@ -831,9 +825,7 @@
               "text": "Documentación de la aplicación de Antena 3 TV"
             }
           ],
-          "images": [
-            "intelygenz_01.jpeg"
-          ],
+          "images": ["intelygenz_01.jpeg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -850,9 +842,7 @@
             "<p>Además, el gestor de documentos integraba el flujo de trabajo y la lógica de negocio de BBVA, permitiendo una interacción fluida con otras entidades bancarias. Esta implementación no solo agilizó los procesos de manejo de documentos, sino que también aseguró que las operaciones del banco estuvieran alineadas con los estándares y mejores prácticas de la industria, mejorando así la eficiencia y colaboración entre diferentes departamentos y socios externos.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "C#",
             ".NET",
@@ -876,9 +866,7 @@
             "<p>Un logro significativo de este proyecto fue la creación de una biblioteca de gestos y acciones en pantalla, conocida como IRIS. Esta biblioteca fue diseñada para mejorar la interacción del usuario proporcionando formas intuitivas y eficientes de realizar varias tareas. La biblioteca IRIS mejoró la experiencia general del usuario, haciendo que la aplicación fuera más receptiva y fácil de usar.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -944,9 +932,7 @@
             "<p>Este proyecto ejemplifica nuestro compromiso de aprovechar la tecnología para eliminar barreras y mejorar la calidad de vida de las personas con discapacidades, haciendo que la tecnología sea accesible y usable para todos, independientemente de sus capacidades físicas.</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -992,9 +978,7 @@
             "<p>En resumen, este proyecto demostró mi capacidad para desarrollar y gestionar una presencia web dinámica que respalda efectivamente los objetivos y actividades de un grupo especializado, utilizando las potentes características del CMS Joomla.</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Linux",
@@ -1014,9 +998,7 @@
             "<p>Más allá de los roles de enseñanza y apoyo, participé activamente en actividades extracurriculares, incluyendo el concurso de robótica Hispabot. Competí en el modo de resolución de laberintos, donde apliqué mi experiencia en robótica e IA para diseñar y programar robots capaces de navegar y resolver laberintos. Esta experiencia no solo mejoró mis habilidades técnicas, sino que también demostró mi capacidad para aplicar la investigación en entornos competitivos del mundo real.</p>"
           ],
           "links": [],
-          "images": [
-            "hispabot.jpeg"
-          ],
+          "images": ["hispabot.jpeg"],
           "technologies": [
             "C",
             "C++",
@@ -1053,13 +1035,7 @@
             "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>"
           ],
           "links": [],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "images": []
@@ -1094,18 +1070,8 @@
             "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>"
           ],
           "links": [],
-          "images": [
-            "ibm_system_z.jpg",
-            "kvm.png",
-            "suse.png"
-          ],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ]
     }
@@ -1113,9 +1079,7 @@
   "educations": {
     "university": [
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
           "Inteligencia artificial y aprendizaje automático. Supervisado, no supervisado y reforzado. Aprendizaje simbólico. Modelos de clasificación y regresión. Optimización de modelos.",
@@ -1132,9 +1096,7 @@
         "university_name": "UAH"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
           "Con honores en: Inteligencia Artificial, Lógica Difusa, Sistemas de Visión Artificial, Física II, Análisis Matemático, Estructura de Datos, Redes."
@@ -1146,9 +1108,7 @@
     ],
     "complementary": [
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "Fundación Linux",
         "period_time": "Septiembre 2015",
         "summary": [
@@ -1162,9 +1122,7 @@
         "title": "LPIC - 2"
       },
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "Fundación Linux",
         "period_time": "Septiembre 2013",
         "summary": [
@@ -1178,9 +1136,7 @@
         "title": "LPIC - 1"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "Universidad de Alcalá de Henares",
         "period_time": "Septiembre 2007",
         "summary": [
@@ -1190,9 +1146,7 @@
         "title": "Diseño y evaluación de contenidos educativos digitales"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "Universidad de Alcalá de Henares",
         "period_time": "Septiembre 2007",
         "summary": [
@@ -1236,3 +1190,4 @@
     ]
   }
 }
+

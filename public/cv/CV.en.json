@@ -79,12 +79,14 @@
       ],
       "projects": [
         {
-          "description": "<p>Celium is a platform developed by <strong>Date and time</strong>It aims to facilitate the execution of complex models, such as Stable Diffusion, Whisper, LLaMA or Mistral, even in environments with limited resources, ensuring high availability, scalability and performance.</p>\n<p>The platform allows users to:</p>\n<ul>\n<li>Instantly deploy models in containers on local infrastructure, in the cloud or on the edge.</li>\n<li>Edit pods and reallocate resources (CPU, GPU, memory) dynamically to adapt to demand.</li>\n<li>Use deployment templates optimized for specific models.</li>\n<li>Monitor performance metrics and resource use in real time.</li>\n<li>Automate the updating and distribution of models at hundreds of remote nodes.</li>\n<li>Integrate the platform with decentralized ecosystems such as Bittensor to increase interoperability.</li>\n</ul>\n<p>Celium uses a modular architecture based on containers and orchestrators, optimized to reduce latency and resource consumption. It employs intelligent load balancing, distributed data management, and advanced process affinity techniques to maximize energy efficiency and the performance of available hardware.</p>\n",
+          "description": [
+            "<p>Celium is a platform developed by <strong>Date and time</strong>It aims to facilitate the execution of complex models, such as Stable Diffusion, Whisper, LLaMA or Mistral, even in environments with limited resources, ensuring high availability, scalability and performance.</p>\n<p>The platform allows users to:</p>\n<ul>\n<li>Instantly deploy models in containers on local infrastructure, in the cloud or on the edge.</li>\n<li>Edit pods and reallocate resources (CPU, GPU, memory) dynamically to adapt to demand.</li>\n<li>Use deployment templates optimized for specific models.</li>\n<li>Monitor performance metrics and resource use in real time.</li>\n<li>Automate the updating and distribution of models at hundreds of remote nodes.</li>\n<li>Integrate the platform with decentralized ecosystems such as Bittensor to increase interoperability.</li>\n</ul>\n<p>Celium uses a modular architecture based on containers and orchestrators, optimized to reduce latency and resource consumption. It employs intelligent load balancing, distributed data management, and advanced process affinity techniques to maximize energy efficiency and the performance of available hardware.</p>\n"
+          ],
           "links": [
             {
               "icon": "",
               "text": "Portal de Celium",
-              "url": "https://celium.datura.ai"
+              "url": "https://lium.io/"
             }
           ],
           "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
@@ -125,7 +127,9 @@
       "links": [],
       "projects": [
         {
-          "description": "<p>Strategic project developed by Indra within the framework of the European Defence Fund to create the <strong>first new generation mission system for military vehicles from Europe and NATO countries</strong>. The system integrates AI, GIS and sensor management capabilities to provide the armed forces with a tactical advantage in complex operational environments. </p>\n<p>The architecture is open, modular and scalable, enabling interoperability between allied armies and the rapid integration of new technological components.<strong>RAG system</strong>for contextual information retrieval, real-time geospatial analysis, and secure communication modules for the transmission of critical data. </p>\n<h3>The responsibilities</h3>\n<ul class=\"responsibilities\">\n<li>Design and implementation of backend microservices in Java and Node.js under the principles of Clean Architecture.</li>\n<li>Development and integration of an RAG system for semantic search and contextualization of operational data.</li>\n<li>Implementation of GIS functionalities for geospatial analysis and tactical visualization on interactive maps.</li>\n<li>Definition of secure APIs and protocols to interoperate with other NATO systems.</li>\n<li>Automation of CI/CD pipelines in GitLab with deployments in Kubernetes.</li>\n<li>Performance optimization, load testing and fault tolerance validation.</li>\n</ul>",
+          "description": [
+            "<p>Strategic project developed by Indra within the framework of the European Defence Fund to create the <strong>first new generation mission system for military vehicles from Europe and NATO countries</strong>. The system integrates AI, GIS and sensor management capabilities to provide the armed forces with a tactical advantage in complex operational environments. </p>\n<p>The architecture is open, modular and scalable, enabling interoperability between allied armies and the rapid integration of new technological components.<strong>RAG system</strong>for contextual information retrieval, real-time geospatial analysis, and secure communication modules for the transmission of critical data. </p>\n<h3>The responsibilities</h3>\n<ul class=\"responsibilities\">\n<li>Design and implementation of backend microservices in Java and Node.js under the principles of Clean Architecture.</li>\n<li>Development and integration of an RAG system for semantic search and contextualization of operational data.</li>\n<li>Implementation of GIS functionalities for geospatial analysis and tactical visualization on interactive maps.</li>\n<li>Definition of secure APIs and protocols to interoperate with other NATO systems.</li>\n<li>Automation of CI/CD pipelines in GitLab with deployments in Kubernetes.</li>\n<li>Performance optimization, load testing and fault tolerance validation.</li>\n</ul>"
+          ],
           "links": [
             {
               "icon": "",
@@ -298,10 +302,7 @@
           ]
         }
       ],
-      "images": [
-        "devo1.png",
-        "devo2.png"
-      ]
+      "images": ["devo1.png", "devo2.png"]
     },
     {
       "name": "Comisión Europea",
@@ -356,9 +357,7 @@
               "text": "Documentación de e-leniency"
             }
           ],
-          "images": [
-            "European_Commission_02.png"
-          ],
+          "images": ["European_Commission_02.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -564,9 +563,7 @@
             "<p>To achieve this, I defined an analyzer that translated messages from the old format to either of the two modern standards through a Restful API that met the Richardson Level 3 maturity model. This API not only provided an entry point for message translation, but also facilitated intercommunication with other platforms around the world and storage of these communications to ensure the traceability of packet transit globally. The project objectives required a high availability structure and a replicated database system based on MongoDB, implemented through a cluster of servers with each replicated fragment.</p>"
           ],
           "links": [],
-          "images": [
-            "iata.png"
-          ],
+          "images": ["iata.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -601,10 +598,7 @@
             "The second project was a joint project with Siemens to create the Intelligent Management Infrastructure of Iberdrola's terminals. These terminals were stored in a non-relational MongoDB database, which for obvious reasons were several clusters, with load balancing and replicated fragments. The information from each point was stored in the cluster by geographic proximity, provided the server could assume the volume of data that included the said node. This data consumption was generated for one year using the JCPOA system and this data was then maintained at a time-based level called the JCPOA, and this data was then maintained at a time-based level called the JCPOA."
           ],
           "links": [],
-          "images": [
-            "iberdrola.svg",
-            "siemens.png"
-          ],
+          "images": ["iberdrola.svg", "siemens.png"],
           "technologies": [
             "C++",
             "Google Test",
@@ -831,9 +825,7 @@
               "text": "Documentación de la aplicación de Antena 3 TV"
             }
           ],
-          "images": [
-            "intelygenz_01.jpeg"
-          ],
+          "images": ["intelygenz_01.jpeg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -850,9 +842,7 @@
             "<p>In addition, the document manager integrated BBVA's workflow and business logic, enabling smooth interaction with other banking entities. This implementation not only streamlined document management processes, but also ensured that the bank's operations were aligned with industry standards and best practices, thus improving efficiency and collaboration between different departments and external partners.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "C#",
             ".NET",
@@ -876,9 +866,7 @@
             "<p>A significant achievement of this project was the creation of an on-screen library of gestures and actions, known as IRIS. This library was designed to improve user interaction by providing intuitive and efficient ways to perform various tasks. The IRIS library improved the overall user experience, making the application more receptive and easy to use.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -944,9 +932,7 @@
             "<p>This project exemplifies our commitment to leveraging technology to remove barriers and improve the quality of life for people with disabilities, making technology accessible and usable to everyone, regardless of their physical abilities.</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -992,9 +978,7 @@
             "<p>In short, this project demonstrated my ability to develop and manage a dynamic web presence that effectively supports the goals and activities of a specialized group, using the powerful features of the Joomla CMS.</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Linux",
@@ -1014,9 +998,7 @@
             "<p>Beyond teaching and support roles, I actively participated in extracurricular activities, including the Hispabot robotics competition. I competed in the maze-resolution mode, where I applied my experience in robotics and AI to design and program robots capable of navigating and solving maze-resolving. This experience not only improved my technical skills, but also demonstrated my ability to apply research in competitive real-world environments.</p>"
           ],
           "links": [],
-          "images": [
-            "hispabot.jpeg"
-          ],
+          "images": ["hispabot.jpeg"],
           "technologies": [
             "C",
             "C++",
@@ -1034,14 +1016,10 @@
     {
       "name": "Knowcentury",
       "title": "Junior programmer",
-      "short_description": [
-        "Small company dedicated to creating websites"
-      ],
+      "short_description": ["Small company dedicated to creating websites"],
       "thumbnail": "knowcentury.png",
       "period_time": "Enero 2005 - Julio 2005",
-      "full_description": [
-        "Small company dedicated to creating websites"
-      ],
+      "full_description": ["Small company dedicated to creating websites"],
       "contribution": [
         "<p>During my early college years, in order to pay for my studies, I worked as a junior web programmer using CMS at Knowcentury.</p>"
       ],
@@ -1053,13 +1031,7 @@
             "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
           ],
           "links": [],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "images": []
@@ -1094,18 +1066,8 @@
             "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
           ],
           "links": [],
-          "images": [
-            "ibm_system_z.jpg",
-            "kvm.png",
-            "suse.png"
-          ],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ]
     }
@@ -1113,9 +1075,7 @@
   "educations": {
     "university": [
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
           "Artificial intelligence and machine learning. Supervised, unsupervised and reinforced. Symbolic learning. Classification and regression models. Optimization of models.",
@@ -1132,9 +1092,7 @@
         "university_name": "UAH"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
           "With honors in: Artificial intelligence, diffuse logic, systems of artificial vision, physics II, mathematical analysis, data structure, networks."
@@ -1146,9 +1104,7 @@
     ],
     "complementary": [
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "The Linux Foundation",
         "period_time": "Septiembre 2015",
         "summary": [
@@ -1162,9 +1118,7 @@
         "title": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal."
       },
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "The Linux Foundation",
         "period_time": "Septiembre 2013",
         "summary": [
@@ -1178,9 +1132,7 @@
         "title": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal."
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "University of Alcalá de Henares",
         "period_time": "Septiembre 2007",
         "summary": [
@@ -1190,14 +1142,10 @@
         "title": "Design and evaluation of digital educational content"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "University of Alcalá de Henares",
         "period_time": "Septiembre 2007",
-        "summary": [
-          "Artificial vision systems, winding arrays, filters."
-        ],
+        "summary": ["Artificial vision systems, winding arrays, filters."],
         "thumbnail": "uah.svg",
         "title": "Artificial vision course"
       }
@@ -1236,3 +1184,4 @@
     ]
   }
 }
+

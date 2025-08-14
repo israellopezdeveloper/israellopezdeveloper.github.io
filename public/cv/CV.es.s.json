@@ -79,12 +79,14 @@
       ],
       "projects": [
         {
-          "description": "<p>La nueva plataforma de Inteligencia Artificial, Celium, es una de las más conocidas y usadas en el</p>",
+          "description": [
+            "<p>La nueva plataforma de Inteligencia Artificial, Celium, es una de las más conocidas y usadas en el</p>"
+          ],
           "links": [
             {
               "icon": "",
               "text": "Portal de Celium",
-              "url": "https://celium.datura.ai"
+              "url": "https://lium.io/"
             }
           ],
           "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
@@ -125,7 +127,9 @@
       "links": [],
       "projects": [
         {
-          "description": "<p>La arquitectura del sistema de misión de vehículos militares de la Organización del Tratado del Atlántico Norte (OTAN) es una de las más complejas de los últimos tiempos.</p>",
+          "description": [
+            "<p>La arquitectura del sistema de misión de vehículos militares de la Organización del Tratado del Atlántico Norte (OTAN) es una de las más complejas de los últimos tiempos.</p>"
+          ],
           "links": [
             {
               "icon": "",
@@ -298,10 +302,7 @@
           ]
         }
       ],
-      "images": [
-        "devo1.png",
-        "devo2.png"
-      ]
+      "images": ["devo1.png", "devo2.png"]
     },
     {
       "name": "Comisión Europea",
@@ -356,9 +357,7 @@
               "text": "Documentación de e-leniency"
             }
           ],
-          "images": [
-            "European_Commission_02.png"
-          ],
+          "images": ["European_Commission_02.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -564,9 +563,7 @@
             "<p>Hace unos meses, el profesor de la Universidad de Stanford, en Estados Unidos, Tony Blair, desarrolló un proyecto para traducir mensajes de texto a formato antiguo.</p>"
           ],
           "links": [],
-          "images": [
-            "iata.png"
-          ],
+          "images": ["iata.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -601,10 +598,7 @@
             "La empresa española Iberdrola desarrolló dos proyectos de gestión inteligente con el objetivo de controlar el consumo eléctrico del usuario."
           ],
           "links": [],
-          "images": [
-            "iberdrola.svg",
-            "siemens.png"
-          ],
+          "images": ["iberdrola.svg", "siemens.png"],
           "technologies": [
             "C++",
             "Google Test",
@@ -831,9 +825,7 @@
               "text": "Documentación de la aplicación de Antena 3 TV"
             }
           ],
-          "images": [
-            "intelygenz_01.jpeg"
-          ],
+          "images": ["intelygenz_01.jpeg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -850,9 +842,7 @@
             "<p>El Banco Central de Venezuela (BBVA) anunció este miércoles la implementación de un nuevo sistema de manejo de documentos para el banco.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "C#",
             ".NET",
@@ -876,9 +866,7 @@
             "<p>El gobierno de Estados Unidos lanzó una aplicación para intercambiar gestos y acciones en pantalla.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -944,9 +932,7 @@
             "<p>El Instituto Tecnológico de la Universidad de Stanford, en Estados Unidos, ha desarrollado un proyecto para ayudar a los</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -992,9 +978,7 @@
             "<p>Hace unos meses, mi objetivo era desarrollar un proyecto para crear una plataforma web que permite a</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Linux",
@@ -1014,9 +998,7 @@
             "<p>Hace unos meses, mi primera clase de investigación en robótica fue en Estados Unidos.</p>"
           ],
           "links": [],
-          "images": [
-            "hispabot.jpeg"
-          ],
+          "images": ["hispabot.jpeg"],
           "technologies": [
             "C",
             "C++",
@@ -1053,13 +1035,7 @@
             "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>"
           ],
           "links": [],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "images": []
@@ -1094,18 +1070,8 @@
             "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>"
           ],
           "links": [],
-          "images": [
-            "ibm_system_z.jpg",
-            "kvm.png",
-            "suse.png"
-          ],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ]
     }
@@ -1113,9 +1079,7 @@
   "educations": {
     "university": [
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
           "En esta nueva serie de películas, los niños aprenden cómo se comportan.",
@@ -1132,9 +1096,7 @@
         "university_name": "UAH"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
           "En esta nueva serie, los periodistas de la BBC te ayudan a practicar ciencias matemáticas."
@@ -1146,9 +1108,7 @@
     ],
     "complementary": [
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "Fundación Linux",
         "period_time": "Septiembre 2015",
         "summary": [
@@ -1162,9 +1122,7 @@
         "title": "LPIC - 2"
       },
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "Fundación Linux",
         "period_time": "Septiembre 2013",
         "summary": [
@@ -1178,9 +1136,7 @@
         "title": "LPIC - 1"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "Universidad de Alcalá de Henares",
         "period_time": "Septiembre 2007",
         "summary": [
@@ -1190,9 +1146,7 @@
         "title": "Diseño y evaluación de contenidos educativos digitales"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "Universidad de Alcalá de Henares",
         "period_time": "Septiembre 2007",
         "summary": [
@@ -1236,3 +1190,4 @@
     ]
   }
 }
+

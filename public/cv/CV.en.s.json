@@ -79,12 +79,14 @@
       ],
       "projects": [
         {
-          "description": "<p>Celium, a cloud-based platform based on containers, has been launched in the UK.</p>",
+          "description": [
+            "<p>Celium, a cloud-based platform based on containers, has been launched in the UK.</p>"
+          ],
           "links": [
             {
               "icon": "",
               "text": "Portal de Celium",
-              "url": "https://celium.datura.ai"
+              "url": "https://lium.io/"
             }
           ],
           "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
@@ -125,7 +127,9 @@
       "links": [],
       "projects": [
         {
-          "description": "<p>The design and implementation of a new armed forces mission system has been announced by the British government.</p>",
+          "description": [
+            "<p>The design and implementation of a new armed forces mission system has been announced by the British government.</p>"
+          ],
           "links": [
             {
               "icon": "",
@@ -298,10 +302,7 @@
           ]
         }
       ],
-      "images": [
-        "devo1.png",
-        "devo2.png"
-      ]
+      "images": ["devo1.png", "devo2.png"]
     },
     {
       "name": "Comisión Europea",
@@ -356,9 +357,7 @@
               "text": "Documentación de e-leniency"
             }
           ],
-          "images": [
-            "European_Commission_02.png"
-          ],
+          "images": ["European_Commission_02.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -564,9 +563,7 @@
             "<p>The BBC's weekly The Boss series profiles different business leaders from around the world. This week we speak to Richardson, chief executive of the</p>"
           ],
           "links": [],
-          "images": [
-            "iata.png"
-          ],
+          "images": ["iata.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -601,10 +598,7 @@
             "Spain's Spanish mining company, Iberdrola, has completed two major projects, including a joint project with Siemens."
           ],
           "links": [],
-          "images": [
-            "iberdrola.svg",
-            "siemens.png"
-          ],
+          "images": ["iberdrola.svg", "siemens.png"],
           "technologies": [
             "C++",
             "Google Test",
@@ -831,9 +825,7 @@
               "text": "Documentación de la aplicación de Antena 3 TV"
             }
           ],
-          "images": [
-            "intelygenz_01.jpeg"
-          ],
+          "images": ["intelygenz_01.jpeg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -850,9 +842,7 @@
             "<p>British Bank of America (BBVA) has introduced a new document manager, which aims to improve the way it works.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "C#",
             ".NET",
@@ -876,9 +866,7 @@
             "<p>A project designed to improve the use of gestures and actions has been launched by the University of Edinburgh.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -944,9 +932,7 @@
             "<p>The British Medical Association has launched a project to improve the quality of life for people with disabilities.</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -992,9 +978,7 @@
             "<p>Welcome to a new project on the web.</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Linux",
@@ -1014,9 +998,7 @@
             "<p>When I graduated from the University of Edinburgh, I was a robotic engineer.</p>"
           ],
           "links": [],
-          "images": [
-            "hispabot.jpeg"
-          ],
+          "images": ["hispabot.jpeg"],
           "technologies": [
             "C",
             "C++",
@@ -1034,14 +1016,10 @@
     {
       "name": "Knowcentury",
       "title": "Junior programmer",
-      "short_description": [
-        "Small company dedicated to creating websites"
-      ],
+      "short_description": ["Small company dedicated to creating websites"],
       "thumbnail": "knowcentury.png",
       "period_time": "Enero 2005 - Julio 2005",
-      "full_description": [
-        "Small company dedicated to creating websites"
-      ],
+      "full_description": ["Small company dedicated to creating websites"],
       "contribution": [
         "<p>During my early college years, in order to pay for my studies, I worked as a junior web programmer using CMS at Knowcentury.</p>"
       ],
@@ -1053,13 +1031,7 @@
             "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
           ],
           "links": [],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "images": []
@@ -1094,18 +1066,8 @@
             "<p>Implementation of web pages using CMS such as Joomla, Drupal and Moodle.</p>"
           ],
           "links": [],
-          "images": [
-            "ibm_system_z.jpg",
-            "kvm.png",
-            "suse.png"
-          ],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ]
     }
@@ -1113,9 +1075,7 @@
   "educations": {
     "university": [
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
           "In our series of letters from across the world, we look at some of the key features of artificial intelligence.",
@@ -1132,9 +1092,7 @@
         "university_name": "UAH"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
           "In our series of letters from across the world, scientists have been awarded a prestigious degree."
@@ -1146,9 +1104,7 @@
     ],
     "complementary": [
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "The Linux Foundation",
         "period_time": "Septiembre 2015",
         "summary": [
@@ -1162,9 +1118,7 @@
         "title": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal."
       },
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "The Linux Foundation",
         "period_time": "Septiembre 2013",
         "summary": [
@@ -1178,9 +1132,7 @@
         "title": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal."
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "University of Alcalá de Henares",
         "period_time": "Septiembre 2007",
         "summary": [
@@ -1190,14 +1142,10 @@
         "title": "Design and evaluation of digital educational content"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "University of Alcalá de Henares",
         "period_time": "Septiembre 2007",
-        "summary": [
-          "Artificial vision systems, winding arrays, filters."
-        ],
+        "summary": ["Artificial vision systems, winding arrays, filters."],
         "thumbnail": "uah.svg",
         "title": "Artificial vision course"
       }
@@ -1236,3 +1184,4 @@
     ]
   }
 }
+
