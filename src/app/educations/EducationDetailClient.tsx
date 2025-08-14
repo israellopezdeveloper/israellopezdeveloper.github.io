@@ -76,7 +76,6 @@ export default function EducationDetailClient({
   const finder = (x: CVUniversity | CVComplementary | CVLang) => {
     switch (category) {
       case "university":
-        console.log(x);
         return isUniversity(x) && getUniversitySlug(x) === id;
       case "complementary":
         return isComplementary(x) && getComplementarySlug(x) === id;

@@ -56,7 +56,6 @@ export function useCvData(lang: Lang, short: boolean) {
           work.slug = slugify(jsonen?.works[i]?.name || "");
         });
         cache.set(url, json);
-        console.log(json);
         setData(json);
         setLoading(false);
       })

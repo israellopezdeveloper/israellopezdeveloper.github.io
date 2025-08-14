@@ -1,0 +1,501 @@
+[
+  {
+    "id": 1023013524,
+    "url": "https://github.com/israellopezdeveloper/democracy_chain",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/democracy_chain/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "Democracy Chain",
+        "desc": "A blockchain-based project aimed at making the democratic voting process more transparent and secure."
+      },
+      "es": {
+        "name": "Democracy Chain",
+        "desc": "ChatGPT Plus"
+      },
+      "zh": {
+        "name": "Democracy Chain",
+        "desc": "一个基于区块链的项目，旨在使民主投票过程更加透明和安全。"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "TypeScript",
+        "time": 1
+      },
+      {
+        "tech": "JavaScript",
+        "time": 1
+      },
+      {
+        "tech": "Python",
+        "time": 1
+      },
+      {
+        "tech": "Shell",
+        "time": 1
+      },
+      {
+        "tech": "CSS",
+        "time": 1
+      },
+      {
+        "tech": "Solidity",
+        "time": 1
+      },
+      {
+        "tech": "Dockerfile",
+        "time": 1
+      },
+      {
+        "tech": "HTML",
+        "time": 1
+      },
+      {
+        "tech": "Web3",
+        "time": 1
+      },
+      {
+        "tech": "RAG",
+        "time": 1
+      },
+      {
+        "tech": "Next.js",
+        "time": 1
+      },
+      {
+        "tech": "React.js",
+        "time": 1
+      },
+      {
+        "tech": "Vue",
+        "time": 1
+      },
+      {
+        "tech": "Wagmi",
+        "time": 1
+      },
+      {
+        "tech": "Node.js",
+        "time": 1
+      }
+    ]
+  },
+  {
+    "id": 841414130,
+    "url": "https://github.com/israellopezdeveloper/scaffold",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/scaffold/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "Scaffold",
+        "desc": "Scaffold for C/C++ projects"
+      },
+      "es": {
+        "name": "Andamiaje",
+        "desc": "Andamiaje para proyectos C/C++"
+      },
+      "zh": {
+        "name": "脚手架",
+        "desc": "C/C++ 项目的脚手架"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "M4",
+        "time": 12
+      },
+      {
+        "tech": "Shell",
+        "time": 12
+      },
+      {
+        "tech": "Makefile",
+        "time": 12
+      },
+      {
+        "tech": "HTML",
+        "time": 12
+      },
+      {
+        "tech": "Make",
+        "time": 12
+      },
+      {
+        "tech": "Bash",
+        "time": 12
+      }
+    ]
+  },
+  {
+    "id": 1020931865,
+    "url": "https://github.com/israellopezdeveloper/playmate",
+    "lang": {
+      "en": {
+        "name": "playmate"
+      },
+      "es": {
+        "name": "playmate"
+      },
+      "zh": {
+        "name": "playmate"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "TypeScript",
+        "time": 1
+      },
+      {
+        "tech": "JavaScript",
+        "time": 1
+      },
+      {
+        "tech": "CSS",
+        "time": 1
+      },
+      {
+        "tech": "EJS",
+        "time": 1
+      },
+      {
+        "tech": "HTML",
+        "time": 1
+      },
+      {
+        "tech": "Dockerfile",
+        "time": 1
+      }
+    ]
+  },
+  {
+    "id": 996235920,
+    "url": "https://github.com/israellopezdeveloper/miner-validator",
+    "lang": {
+      "en": {
+        "name": "miner-validator",
+        "desc": "miner-validator"
+      },
+      "es": {
+        "name": "miner-validator",
+        "desc": "miner-validator"
+      },
+      "zh": {
+        "name": "miner-validator",
+        "desc": "miner-validator"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "Python",
+        "time": 2
+      },
+      {
+        "tech": "Jupyter Notebook",
+        "time": 2
+      },
+      {
+        "tech": "Shell",
+        "time": 2
+      },
+      {
+        "tech": "Makefile",
+        "time": 2
+      },
+      {
+        "tech": "PLpgSQL",
+        "time": 2
+      },
+      {
+        "tech": "Dockerfile",
+        "time": 2
+      },
+      {
+        "tech": "Jinja",
+        "time": 2
+      },
+      {
+        "tech": "Smarty",
+        "time": 2
+      },
+      {
+        "tech": "JavaScript",
+        "time": 2
+      }
+    ]
+  },
+  {
+    "id": 969052478,
+    "url": "https://github.com/israellopezdeveloper/bittensor-sentiment-api",
+    "lang": {
+      "en": {
+        "name": "bittensor-sentiment-api"
+      },
+      "es": {
+        "name": "bittensor-sentiment-api"
+      },
+      "zh": {
+        "name": "bittensor-sentiment-api"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "Python",
+        "time": 4
+      },
+      {
+        "tech": "Shell",
+        "time": 4
+      },
+      {
+        "tech": "Makefile",
+        "time": 4
+      },
+      {
+        "tech": "Dockerfile",
+        "time": 4
+      }
+    ]
+  },
+  {
+    "id": 841876692,
+    "url": "https://github.com/israellopezdeveloper/saurion",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/saurion/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "Saurion",
+        "desc": "Minimalistic C project using liburing and a threadpool to asynchronously manage sockets in high-concurrency environments."
+      },
+      "es": {
+        "name": "Saurion",
+        "desc": "Proyecto en C minimalista que utiliza liburing y un threadpool para manejar asincrónicamente sockets en entornos de alta concurrencia."
+      },
+      "zh": {
+        "name": "Saurion",
+        "desc": "使用liburing和线程池异步管理高并发环境中的套接字的简约C项目。"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "C",
+        "time": 12
+      },
+      {
+        "tech": "C++",
+        "time": 12
+      },
+      {
+        "tech": "Shell",
+        "time": 12
+      },
+      {
+        "tech": "Makefile",
+        "time": 12
+      },
+      {
+        "tech": "M4",
+        "time": 12
+      },
+      {
+        "tech": "Make",
+        "time": 12
+      },
+      {
+        "tech": "JavaScript",
+        "time": 12
+      },
+      {
+        "tech": "Valgrind",
+        "time": 12
+      },
+      {
+        "tech": "Google Test",
+        "time": 12
+      },
+      {
+        "tech": "Docker",
+        "time": 12
+      },
+      {
+        "tech": "TDD",
+        "time": 12
+      }
+    ]
+  },
+  {
+    "id": 872726235,
+    "url": "https://github.com/israellopezdeveloper/docker",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/docker/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "Docker Repository",
+        "desc": "Repository for storing docker images"
+      },
+      "es": {
+        "name": "Repositorio Docker",
+        "desc": "Repositorio para almacenar las imagenes docker"
+      },
+      "zh": {
+        "name": "Docker 存储库",
+        "desc": "存储 docker 镜像的存储库"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "Dockerfile",
+        "time": 10
+      },
+      {
+        "tech": "Shell",
+        "time": 10
+      },
+      {
+        "tech": "Bash",
+        "time": 10
+      },
+      {
+        "tech": "Docker",
+        "time": 10
+      }
+    ]
+  },
+  {
+    "id": 841856638,
+    "url": "https://github.com/israellopezdeveloper/nanologger",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/nanologger/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "NanoLogger",
+        "desc": "A macro-based lightweight logger for C, providing minimal code impact while enabling detailed tracking of execution times and thread activity."
+      },
+      "es": {
+        "name": "NanoLogger",
+        "desc": "Logger ligero basado en macros para C, con mínimo impacto en el código y trazado detallado de tiempos de ejecución y actividad de hilos."
+      },
+      "zh": {
+        "name": "NanoLogger",
+        "desc": "基于宏的轻量级C语言日志记录器，具有最小代码影响，并提供详细的执行时间和线程活动跟踪"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "C",
+        "time": 12
+      },
+      {
+        "tech": "Makefile",
+        "time": 12
+      },
+      {
+        "tech": "Shell",
+        "time": 12
+      },
+      {
+        "tech": "C++",
+        "time": 12
+      }
+    ]
+  },
+  {
+    "id": 880266419,
+    "url": "https://github.com/israellopezdeveloper/threadripper",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/threadripper/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "ThreadRipper",
+        "desc": "real-time log monitoring to enhance traceability and analysis in concurrent execution environments."
+      },
+      "es": {
+        "name": "ThreadRipper",
+        "desc": "monitoreo de logs en tiempo real para mejorar la trazabilidad y el análisis en entornos de ejecución concurrentes."
+      },
+      "zh": {
+        "name": "ThreadRipper",
+        "desc": "实时日志监控，提升并发执行环境中的可追溯性和分析能力。"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "Python",
+        "time": 10
+      },
+      {
+        "tech": "Makefile",
+        "time": 10
+      },
+      {
+        "tech": "Shell",
+        "time": 10
+      },
+      {
+        "tech": "StreamLit",
+        "time": 10
+      }
+    ]
+  },
+  {
+    "id": 837935943,
+    "url": "https://github.com/israellopezdeveloper/israellopezdeveloper.github.io",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/israellopezdeveloper.github.io/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "My portfolio",
+        "desc": "Source code of my portfolio"
+      },
+      "es": {
+        "name": "Mi portfolio",
+        "desc": "Código fuente de mi portfolio"
+      },
+      "zh": {
+        "name": "我的投资组合",
+        "desc": "我的投资组合的源代码"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "JavaScript",
+        "time": 12
+      },
+      {
+        "tech": "next.js",
+        "time": 12
+      },
+      {
+        "tech": "chakra",
+        "time": 12
+      },
+      {
+        "tech": "react",
+        "time": 12
+      },
+      {
+        "tech": "node.js",
+        "time": 12
+      },
+      {
+        "tech": "threejs",
+        "time": 12
+      },
+      {
+        "tech": "blender",
+        "time": 12
+      }
+    ]
+  },
+  {
+    "id": 841351477,
+    "url": "https://github.com/israellopezdeveloper/.github",
+    "lang": {
+      "en": {
+        "name": ".github",
+        "desc": "Default community health files"
+      },
+      "es": {
+        "name": ".github",
+        "desc": "Default community health files"
+      },
+      "zh": {
+        "name": ".github",
+        "desc": "Default community health files"
+      }
+    }
+  }
+]

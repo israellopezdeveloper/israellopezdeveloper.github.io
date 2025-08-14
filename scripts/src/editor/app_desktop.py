@@ -830,7 +830,7 @@ class ProjectDialog(QtWidgets.QDialog):
 
         if value:
             self.edName.setText(value.get("name", ""))
-            self.htmlDesc.setHtml(value.get("description", ""))
+            self.htmlDesc.setHtml(coerce_html(value.get("description", "")))
             for link in value.get("links", []):
                 it = QtWidgets.QListWidgetItem(
                     f"{link.get('icon', '')} | {link.get('text', '')} | {link.get('url', '')}"

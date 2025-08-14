@@ -78,7 +78,7 @@ function idFromUrl(url: string): number {
 }
 
 async function loadBackup(): Promise<PersonalProject[]> {
-  const data = await fetchJson<BackupItem[]>("/cv/backup.repos.json");
+  const data = await fetchJson<BackupItem[]>("/backup.repos.json");
   return (data || []).map((b) => ({
     id: idFromUrl(b.url),
     url: b.url,
@@ -197,6 +197,7 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
         );
 
         if (!cancelled) {
+          console.log(enriched);
           setData(enriched);
           setLoading(false);
           setError(null);

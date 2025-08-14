@@ -63,6 +63,9 @@ EXCLUDE_KEYS = {
     "phone",
     "tel",
     "email",
+    "technologies",
+    "name",
+    "university_name",
 }
 
 RE_URL = re.compile(r"^https?://", re.I)
