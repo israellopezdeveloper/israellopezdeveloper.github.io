@@ -4,6 +4,7 @@ import * as React from "react";
 import { HStack, chakra } from "@chakra-ui/react";
 import { useLanguage } from "./context/LanguageContext";
 import type { Lang } from "../lib/i18n";
+import { useI18n } from "../i18n/useI18n";
 
 // elementos nativos tipados, pero con props de Chakra
 const SelectEl = chakra("select");
@@ -12,6 +13,7 @@ const LabelEl = chakra("label");
 
 export default function LanguageSelector() {
   const { lang, setLang, short, setShort } = useLanguage();
+  const t = useI18n();
 
   return (
     <HStack gap={3} align="center">
@@ -34,7 +36,7 @@ export default function LanguageSelector() {
       </SelectEl>
 
       <LabelEl htmlFor="short-toggle" fontSize="xs" cursor="pointer">
-        Short
+        {t("short")}
       </LabelEl>
 
       <CheckboxEl

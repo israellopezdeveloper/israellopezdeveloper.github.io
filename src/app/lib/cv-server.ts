@@ -5,6 +5,8 @@ import {
   getUniversitySlug,
   getComplementarySlug,
   getLanguageSlug,
+  slugify,
+  fromEn,
 } from "./slug";
 
 export type Lang = "en" | "es" | "zh";
@@ -27,6 +29,11 @@ type CompLite = {
   period_time?: string;
   summary?: string[];
 };
+type AcreditationLite = {
+  institution: string;
+  title: string;
+  period_time?: string;
+};
 type LangLite = {
   slug?: string;
   language?: string;
@@ -34,16 +41,17 @@ type LangLite = {
   spoken?: string;
   writen?: string;
   read?: string;
-  acreditations?: any[];
+  acreditations?: AcreditationLite[];
+};
+type EducationsLite = {
+  university?: UnivLite[];
+  complementary?: CompLite[];
+  languages?: LangLite[];
 };
 type CvLite = {
   works?: WorkLite[];
   personal_projects?: WorkLite[];
-  educations?: {
-    university?: UnivLite[];
-    complementary?: CompLite[];
-    languages?: LangLite[];
-  };
+  educations?: EducationsLite;
 };
 
 async function readIfExists(filePath: string): Promise<CvLite | null> {

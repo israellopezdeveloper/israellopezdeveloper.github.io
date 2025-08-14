@@ -6,19 +6,49 @@ import {
   Text,
   Box,
   Image,
-  VStack,
   Link,
-  chakra, // 👈 para tablas HTML estiladas con Chakra
+  chakra,
 } from "@chakra-ui/react";
-import { useLanguage } from "../components/context/LanguageContext";
-import { useCvData } from "../hooks/useCvData";
+import {
+  useLanguage
+} from "../components/context/LanguageContext";
+import {
+  useCvData
+} from "../hooks/useCvData";
 import {
   getUniversitySlug,
   getComplementarySlug,
   getLanguageSlug,
 } from "../lib/slug";
+import {
+  CVAcreditation,
+  CVComplementary,
+  CVEducations,
+  CVLang,
+  CVUniversity,
+} from "../types/cv";
+import NextLink from "next/link";
+import { useI18n } from "../i18n/useI18n";
 
 type Category = "university" | "complementary" | "languages";
+
+// Type guards
+function isUniversity(
+  x: CVUniversity | CVComplementary | CVLang
+): x is CVUniversity {
+  return (x as CVUniversity).university_name !== undefined;
+}
+
+function isComplementary(
+  x: CVUniversity | CVComplementary | CVLang
+): x is CVComplementary {
+  return (x as CVComplementary).title !== undefined &&
+    (x as CVComplementary).institution !== undefined;
+}
+
+function isLang(x: CVUniversity | CVComplementary | CVLang): x is CVLang {
+  return (x as CVLang).language !== undefined;
+}
 
 export default function EducationDetailClient({
   category,
@@ -29,6 +59,7 @@ export default function EducationDetailClient({
 }) {
   const { lang, short } = useLanguage();
   const { data, loading } = useCvData(lang, short);
+  const t = useI18n();
 
   if (loading || !data) {
     return (
@@ -38,70 +69,94 @@ export default function EducationDetailClient({
     );
   }
 
-  const store = data.educations ?? {};
-  const list = (store as any)[category] as any[] | undefined;
+  const store: CVEducations = data.educations ?? {};
+  const list = (store[category] ?? []) as (CVUniversity | CVComplementary | CVLang)[];
 
-  const finder =
-    {
-      university: (x: any) => getUniversitySlug(x) === id,
-      complementary: (x: any) => getComplementarySlug(x) === id,
-      languages: (x: any) => getLanguageSlug(x) === id,
-    }[category] || ((_: any) => false);
+  // Un único predicado sobre la UNIÓN
+  const finder = (x: CVUniversity | CVComplementary | CVLang) => {
+    switch (category) {
+      case "university":
+        return isUniversity(x) && getUniversitySlug(x) === id;
+      case "complementary":
+        return isComplementary(x) && getComplementarySlug(x) === id;
+      case "languages":
+        return isLang(x) && getLanguageSlug(x) === id;
+      default:
+        return false;
+    }
+  };
 
-  const item = list?.find(finder);
+  const item = list.find(finder);
   if (!item) {
     return (
       <Container maxW="container.md" py={8}>
-        <Heading size="md">No encontrado</Heading>
+        <Heading size="md">{t("notFound")}</Heading>
       </Container>
     );
   }
 
+  // Título seguro por categoría
   const title =
-    (category === "languages" ? item.language : item.title) ??
-    item.university_name ??
-    "Untitled";
+    category === "languages"
+      ? (isLang(item) ? item.language : "Untitled")
+      : isComplementary(item)
+        ? item.institution
+        : isUniversity(item)
+          ? item.university_name
+          : "Untitled";
 
   return (
     <Container maxW="container.md" py={8}>
-      <Heading mb={2}>{title}</Heading>
+      <Heading mb={4} style={{ display: "inline" }}>
+        <Link as={NextLink} href="/educations" target="_self" rel="noreferrer">
+          {t("education")}
+        </Link>{" "}
+        &gt; {title}
+      </Heading>
 
-      {category !== "languages" && item.university_name ? (
+      {/* Periodo — solo si existe en este tipo */}
+      {"period_time" in item && item.period_time ? (
+        <Text className="periodTime" fontSize="sm" color="gray.500" mb={4}>
+          {item.period_time}
+        </Text>
+      ) : null}
+
+      {/* Universidad — no aplica a CVLang y puede no existir en Complementary */}
+      {isUniversity(item) && item.university_name ? (
         <Text fontSize="sm" color="fg.muted" mb={1}>
           {item.university_name}
         </Text>
       ) : null}
 
-      {item.period_time ? (
-        <Text fontSize="sm" color="fg.muted" mb={4}>
-          {item.period_time}
-        </Text>
-      ) : null}
-
-      {item.thumbnail ? (
-        <Box mb={6} rounded="xl" overflow="hidden" borderWidth="1px">
+      {/* Thumbnail si existe en el objeto */}
+      {"thumbnail" in item && item.thumbnail ? (
+        <Box mb={6} rounded="xl" overflow="hidden" mt={"10px"}>
           <Image
             src={`/images/educations/${item.thumbnail}`}
             alt={title}
-            w="full"
             objectFit="contain"
             bg="blackAlpha.50"
+            left={"50%"}
+            transform={"translate(-50%)"}
+            style={{ position: "relative" }}
+            w="60%"
           />
         </Box>
       ) : null}
 
-      {/* Descripción / resumen */}
-      {item.summary?.map((p: string, i: number) => (
-        <Text key={`p-${i}`} mb={3}>
-          {p}
-        </Text>
-      ))}
+      {/* Summary solo existe en University/Complementary */}
+      {("summary" in item && Array.isArray(item.summary)) &&
+        item.summary!.map((p: string, i: number) => (
+          <Text key={`p-${i}`} mb={3}>
+            {p}
+          </Text>
+        ))}
 
-      {/* ===== Solo para Idiomas: Tabla de niveles ===== */}
-      {category === "languages" ? (
+      {/* ===== Solo Idiomas: niveles ===== */}
+      {category === "languages" && isLang(item) ? (
         <Box mt={6}>
           <Heading as="h4" size="sm" mb={3}>
-            Niveles
+            {t("levels")}
           </Heading>
           <chakra.table
             w="full"
@@ -109,13 +164,20 @@ export default function EducationDetailClient({
             rounded="lg"
             overflow="hidden"
             borderCollapse="separate"
-            sx={{ borderSpacing: 0 }}
+            // usa style en lugar de sx para evitar el error de tipos
+            style={{ borderSpacing: 0 }}
           >
             <chakra.thead bg="blackAlpha.50">
               <chakra.tr>
-                <chakra.th textAlign="left" p={3}>Hablado</chakra.th>
-                <chakra.th textAlign="left" p={3}>Escrito</chakra.th>
-                <chakra.th textAlign="left" p={3}>Leído</chakra.th>
+                <chakra.th textAlign="left" p={3}>
+                  {t("spoken")}
+                </chakra.th>
+                <chakra.th textAlign="left" p={3}>
+                  {t("writen")}
+                </chakra.th>
+                <chakra.th textAlign="left" p={3}>
+                  {t("read")}
+                </chakra.th>
               </chakra.tr>
             </chakra.thead>
             <chakra.tbody>
@@ -129,11 +191,14 @@ export default function EducationDetailClient({
         </Box>
       ) : null}
 
-      {/* ===== Solo para Idiomas: Tabla de acreditaciones (si existen) ===== */}
-      {category === "languages" && Array.isArray(item.acreditations) && item.acreditations.length > 0 ? (
+      {/* ===== Solo Idiomas: acreditaciones ===== */}
+      {category === "languages" &&
+        isLang(item) &&
+        Array.isArray(item.acreditations) &&
+        item.acreditations.length > 0 ? (
         <Box mt={6}>
           <Heading as="h4" size="sm" mb={3}>
-            Acreditaciones
+            {t("accreditations")}
           </Heading>
           <chakra.table
             w="full"
@@ -141,17 +206,23 @@ export default function EducationDetailClient({
             rounded="lg"
             overflow="hidden"
             borderCollapse="separate"
-            sx={{ borderSpacing: 0 }}
+            style={{ borderSpacing: 0 }}
           >
             <chakra.thead bg="blackAlpha.50">
               <chakra.tr>
-                <chakra.th textAlign="left" p={3}>Institución</chakra.th>
-                <chakra.th textAlign="left" p={3}>Título</chakra.th>
-                <chakra.th textAlign="left" p={3}>Fecha</chakra.th>
+                <chakra.th textAlign="left" p={3}>
+                  {t("institution")}
+                </chakra.th>
+                <chakra.th textAlign="left" p={3}>
+                  {t("title")}
+                </chakra.th>
+                <chakra.th textAlign="left" p={3}>
+                  {t("date")}
+                </chakra.th>
               </chakra.tr>
             </chakra.thead>
             <chakra.tbody>
-              {item.acreditations.map((a: any, i: number) => (
+              {item.acreditations!.map((a: CVAcreditation, i: number) => (
                 <chakra.tr key={i} _odd={{ bg: "blackAlpha.50" }}>
                   <chakra.td p={3}>{a.institution ?? "-"}</chakra.td>
                   <chakra.td p={3}>{a.title ?? "-"}</chakra.td>
@@ -160,27 +231,6 @@ export default function EducationDetailClient({
               ))}
             </chakra.tbody>
           </chakra.table>
-        </Box>
-      ) : null}
-
-      {/* Links opcionales */}
-      {item.links?.length ? (
-        <Box mt={6}>
-          <Heading as="h4" size="sm" mb={3}>
-            Links
-          </Heading>
-          <VStack align="start" gap={2}>
-            {item.links.map((l: any, idx: number) => (
-              <Box key={idx}>
-                <Text as="span" fontWeight="semibold" mr={2}>
-                  {l.tag}
-                </Text>
-                <Link href={l.url} target="_blank" rel="noreferrer">
-                  {l.text}
-                </Link>
-              </Box>
-            ))}
-          </VStack>
         </Box>
       ) : null}
     </Container>

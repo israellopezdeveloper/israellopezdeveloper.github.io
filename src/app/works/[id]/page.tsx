@@ -14,6 +14,6 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params; // Next 15: hay que await
-  return <WorkClient id={id} />;
+  return <WorkClient id={id} key={"work"} />;
 }
 

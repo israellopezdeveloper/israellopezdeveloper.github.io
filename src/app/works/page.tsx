@@ -19,6 +19,7 @@ import { getItemSlug } from "../lib/slug";
 import { parsePeriodToMonths } from "../lib/period";
 import * as React from "react";
 import type { CVWork } from "../types/cv";
+import { useI18n } from "../i18n/useI18n";
 
 // Extrae el set de tecnologías de un trabajo del CV (une todos sus proyectos)
 function collectWorkTechs(w: CVWork): string[] {
@@ -33,11 +34,20 @@ export default function WorksPage() {
   const { lang, short } = useLanguage();
   const { data: cv, loading: loadingCv, error: errorCv } = useCvData(lang, short);
   const { data: repos, loading: loadingRepos, error: errorRepos } = usePersonalProjects();
+  const t = useI18n();
 
-  const companies = !loadingCv && !errorCv && cv?.works ? cv.works : [];
-  const personal = !loadingRepos && !errorRepos ? repos : [];
+  // 1) Referencias estables
+  const companies = React.useMemo<CVWork[]>(
+    () => (!loadingCv && !errorCv && cv?.works) ? cv.works : [],
+    [loadingCv, errorCv, cv?.works]
+  );
 
-  // ---- Agregación por tech (personal + experience) ----
+  const personal = React.useMemo(
+    () => (!loadingRepos && !errorRepos && repos) ? repos : [],
+    [loadingRepos, errorRepos, repos]
+  );
+
+  // 2) Agregación por tech con deps estables
   const aggregated: AggregatedTech[] = React.useMemo(() => {
     const acc = new Map<string, number>();
 
@@ -48,64 +58,71 @@ export default function WorksPage() {
       }
     }
 
-    // Experience (period_time → meses)
+    // Experience
     for (const w of companies) {
       const months = parsePeriodToMonths(w.period_time);
       if (!months) continue;
-      const techs = collectWorkTechs(w);
-      for (const t of techs) acc.set(t, (acc.get(t) ?? 0) + months);
+      for (const t of collectWorkTechs(w)) {
+        acc.set(t, (acc.get(t) ?? 0) + months);
+      }
     }
 
-    return Array.from(acc.entries())
-      .map(([tech, months]) => ({ tech, months }))
+    return Array.from(acc, ([tech, months]) => ({ tech, months }))
       .sort((a, b) => b.months - a.months);
   }, [personal, companies]);
 
-  // ---- Estado: techs activas (todas al inicio) ----
+  // 3) Estado filtros
   const [activeTechs, setActiveTechs] = React.useState<Set<string>>(new Set());
 
-  React.useEffect(() => {
-    // Inicializa con todas activas cuando cambia la lista agregada
-    setActiveTechs(new Set(aggregated.map((i) => i.tech)));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [JSON.stringify(aggregated.map((i) => i.tech).sort())]);
+  // clave estable para saber si cambió el conjunto de techs agregadas
+  const aggregatedKey = React.useMemo(
+    () => aggregated.map(i => i.tech).sort().join("|"),
+    [aggregated]
+  );
 
-  const toggleTech = (tech: string) =>
-    setActiveTechs((prev) => {
+  React.useEffect(() => {
+    setActiveTechs(new Set(aggregated.map(i => i.tech)));
+  }, [aggregatedKey, aggregated]);
+
+  // 4) Handlers estables (opcional pero recomendable si los pasas a hijos)
+  const toggleTech = React.useCallback((tech: string) => {
+    setActiveTechs(prev => {
       const next = new Set(prev);
-      if (next.has(tech)) next.delete(tech);
-      else next.add(tech);
+      if (next.has(tech)) {
+        next.delete(tech);
+      } else {
+        next.add(tech);
+      }
       return next;
     });
+  }, []);
 
-  const activateAll = () =>
-    setActiveTechs(new Set(aggregated.map((i) => i.tech)));
+  const activateAll = React.useCallback(
+    () => setActiveTechs(new Set(aggregated.map(i => i.tech))),
+    [aggregated]
+  );
 
-  const clearAll = () => setActiveTechs(new Set());
+  const clearAll = React.useCallback(() => setActiveTechs(new Set()), []);
 
-  // ---- Filtrado por tech activa (match por al menos 1 tecnología) ----
+  // 5) Filtros con deps estables
   const filteredCompanies = React.useMemo(() => {
     if (activeTechs.size === 0) return [] as CVWork[];
-    return companies.filter((w) => {
-      const techs = collectWorkTechs(w);
-      return techs.some((t) => activeTechs.has(t));
-    });
+    return companies.filter(w => collectWorkTechs(w).some(t => activeTechs.has(t)));
   }, [companies, activeTechs]);
 
   const filteredPersonal = React.useMemo(() => {
     if (activeTechs.size === 0) return [] as typeof repos;
-    return personal.filter((p) =>
-      (p.technologies ?? []).some((t) => activeTechs.has(t.tech))
-    );
+    return personal.filter(p => (p.technologies ?? []).some(t => activeTechs.has(t.tech)));
   }, [personal, activeTechs]);
+
   return (
     <Container maxW="container.lg" py={8}>
-      <Grid templateColumns={{ base: "1fr", lg: "1fr 250px" }} gap={8} alignItems="start">
+      <Grid templateColumns={{ base: "1fr", lg: "1fr 270px" }} gap={8} alignItems="start">
         {/* Columna principal */}
         <GridItem>
-          <Heading mb={4}>Experience</Heading>
+          <Heading mb={4} mt={"0px"} pt={"0px"}>{t("experience")}</Heading>
           {loadingCv ? (
-            <Heading size="sm" opacity={0.6}>Cargando…</Heading>
+            <Heading size="sm" opacity={0.6}>{t("loading")}</Heading>
           ) : (
             <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} gap={8}>
               {filteredCompanies.map((w, idx) => {
@@ -128,9 +145,9 @@ export default function WorksPage() {
             </SimpleGrid>
           )}
 
-          <Heading mb={4}>Personal Projects</Heading>
+          <Heading mb={4}>{t("personalProjects")}</Heading>
           {loadingRepos ? (
-            <Heading size="sm" opacity={0.6}>Cargando…</Heading>
+            <Heading size="sm" opacity={0.6}>{t("loading")}</Heading>
           ) : (
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
               {filteredPersonal.map((r) => (

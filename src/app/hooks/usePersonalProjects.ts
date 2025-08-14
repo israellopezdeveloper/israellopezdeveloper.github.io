@@ -29,7 +29,7 @@ export type PersonalProject = {
 function monthsSince(dateISO: string) {
   const start = new Date(dateISO);
   const now = new Date();
-  let months =
+  const months =
     (now.getFullYear() - start.getFullYear()) * 12 +
     (now.getMonth() - start.getMonth());
   return Math.max(1, months);
@@ -120,7 +120,7 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
           repos = await fetchJson<RepoAPI[]>(
             `https://api.github.com/users/${username}/repos?per_page=100&sort=updated`,
           );
-        } catch (err) {
+        } catch {
           // fallo completo de GitHub → usa backup
           const backup = await loadBackup();
           if (!cancelled) {

@@ -1,7 +1,7 @@
 "use client";
 
 import NextLink from "next/link";
-import { Box, Image, Text, Heading, Link, HStack } from "@chakra-ui/react";
+import { Box, Image, Text, Link, HStack } from "@chakra-ui/react";
 import type { Work } from "../types/work";
 import TechBadge from "./TechBadge";
 
@@ -14,11 +14,9 @@ export default function WorkCard({ work }: { work: Work }) {
         </Link>
       )}
       <Box p={4}>
-        <Heading size="md" mb={1}>
-          <Link as={NextLink} href={`/works/${work.id}`}>
-            {work.title}
-          </Link>
-        </Heading>
+        <Link as={NextLink} href={`/works/${work.id}`}>
+          {work.title}
+        </Link>
         {work.year && (
           <Text fontSize="sm" color="gray.500" mb={2}>
             {work.year}

@@ -1,4 +1,14 @@
-export type CVLink = { icon?: string; url: string; text: string; tag?: string };
+export type CVLink = {
+  icon?: string;
+  url: string;
+  text: string;
+  tag?: string;
+};
+
+export type CVBio = {
+  dates: string;
+  text: string;
+};
 
 export type CVIntro = {
   greeting: string;
@@ -6,7 +16,7 @@ export type CVIntro = {
   name: string;
   title: string;
   summary?: string[];
-  bio?: { dates: string; text: string }[];
+  bio?: CVBio[];
   hobbies?: string[];
   links?: CVLink[];
 };
@@ -49,25 +59,30 @@ export type CVComplementary = {
   thumbnail?: string;
 };
 
+export type CVAcreditation = {
+  institution: string;
+  title: string;
+  period_time?: string;
+};
+
 export type CVLang = {
   language: string;
   spoken?: string;
   writen?: string;
   read?: string;
-  acreditations?: {
-    institution: string;
-    title: string;
-    period_time?: string;
-  }[];
+  acreditations?: CVAcreditation[];
   thumbnail?: string;
+};
+
+export type CVEducations = {
+  university: CVUniversity[];
+  complementary: CVComplementary[];
+  languages: CVLang[];
 };
 
 export type CV = {
   intro: CVIntro;
   works: CVWork[];
-  educations: {
-    university: CVUniversity[];
-    complementary: CVComplementary[];
-    languages: CVLang[];
-  };
+  personal_projects?: CVWork[];
+  educations: CVEducations;
 };

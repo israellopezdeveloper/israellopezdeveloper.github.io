@@ -5,14 +5,16 @@ import { useLanguage } from "../../components/context/LanguageContext";
 import { useCvData } from "../../hooks/useCvData";
 import { getItemSlug } from "../../lib/slug";
 import NextLink from "next/link";
-import { CVLink, CVProject } from "@/app/types/cv";
+import { CVLink, CVProject, CVWork } from "@/app/types/cv";
 import TechBadge from "@/app/components/TechBadge";
+import { useI18n } from "@/app/i18n/useI18n";
 
 type WorkClientProps = { id: string };
 
 export default function WorkClient({ id }: WorkClientProps) {
   const { lang, short } = useLanguage();
   const { data, loading } = useCvData(lang, short);
+  const t = useI18n()
 
   if (loading || !data) {
     return (
@@ -34,7 +36,7 @@ export default function WorkClient({ id }: WorkClientProps) {
     );
   }
 
-  const w: any = work;
+  const w: CVWork = work;
 
   return (
     <Container maxW="container.md" py={8} className="DetailPage">
@@ -44,7 +46,7 @@ export default function WorkClient({ id }: WorkClientProps) {
           href="/works"
           target="_self"
           rel="noreferrer"
-        >Works</Link> &gt; {w.name}</Heading>
+        >{t("jobsAndProjects")}</Link> &gt; {w.name}</Heading>
       {w.period_time && <Text className="periodTime" fontSize="sm" color="gray.500" mb={4}>{w.period_time}</Text>}
       {
         w.full_description?.map((p: string, i: number) => (
@@ -58,11 +60,14 @@ export default function WorkClient({ id }: WorkClientProps) {
       }
       {
         w.thumbnail && (
-          <Box mb={6} rounded="xl" overflow="hidden" style={{ margin: "20px" }}>
+          <Box mb={6} rounded="xl" overflow="hidden">
             <Image
               src={`/images/works/${w.thumbnail}`}
               alt={w.name}
-              w="full"
+              left={"50%"}
+              transform={"translate(-50%)"}
+              style={{ position: "relative" }}
+              w="60%"
               objectFit="contain"
             />
           </Box>
@@ -73,10 +78,10 @@ export default function WorkClient({ id }: WorkClientProps) {
           <Box mt={6}>
             <Center>
               <VStack align="start" gap={2}>
-                {w.links.map((l: any, idx: number) => (
+                {w.links.map((link: CVLink, idx: number) => (
                   <Box key={idx}>
-                    <Text as="span" fontWeight="semibold" mr={2}>{l.tag}</Text>
-                    <Link href={l.url} target="_blank" rel="noreferrer">{l.text}</Link>
+                    <Text as="span" fontWeight="semibold" mr={2}>{link.tag}</Text>
+                    <Link href={link.url} target="_blank" rel="noreferrer">{link.text}</Link>
                   </Box>
                 ))}
               </VStack>
@@ -85,7 +90,7 @@ export default function WorkClient({ id }: WorkClientProps) {
         ) : null
       }
       <Heading mb={4} className="subtitle1">
-        Contributions
+        {t("contributions")}
       </Heading>
       {
         w.contribution?.map((p: string, i: number) => (
@@ -112,18 +117,26 @@ export default function WorkClient({ id }: WorkClientProps) {
               />
             ))}
             <Heading mb={4} className="subtitle2">
-              Technologies
+              {t("technologies")}
             </Heading>
-            {project.technologies?.map((technology: string) => (
-              <TechBadge label={technology} />
+            {project.technologies?.map((technology: string, i: number) => (
+              <TechBadge label={technology} key={"tech" + i} />
             ))}
             {project.images && project.images?.length > 0 ? (
               <Heading mb={4} className="subtitle2">
-                Images
+                {t("images")}
               </Heading>
             ) : null}
-            {project.images?.map((image: string) => (
-              <Box mb={6} rounded="xl" overflow="hidden" style={{ margin: "20px" }}>
+            {project.images?.map((image: string, i: number) => (
+              <Box
+                mb={6}
+                rounded="xl"
+                overflow="hidden"
+                left={"50%"}
+                transform={"translate(-50%)"}
+                style={{ margin: "20px", width: "60%", position: "relative" }}
+                key={"pr" + index + "_" + i}
+              >
                 <Image
                   src={`/images/works/${image}`}
                   alt={image}
@@ -134,11 +147,11 @@ export default function WorkClient({ id }: WorkClientProps) {
             ))}
             {project.links && project.links?.length > 0 ? (
               <Heading mb={4} className="subtitle2">
-                Links
+                {t("links")}
               </Heading>
             ) : null}
-            {project.links?.map((link: CVLink) => (
-              <>
+            {project.links?.map((link: CVLink, i: number) => (
+              <span key={"link" + i}>
                 <label>
                   {link.icon}{link.tag}:
                 </label>
@@ -148,7 +161,7 @@ export default function WorkClient({ id }: WorkClientProps) {
                   target="_blank"
                   rel="noreferrer"
                 >{link.text}</Link>
-              </>
+              </span>
             ))}
           </div>
         ))
@@ -156,13 +169,13 @@ export default function WorkClient({ id }: WorkClientProps) {
       {
         w.images && w.images?.length > 0 ? (
           <Heading mb={4} className="subtitle1">
-            Job Images
+            {t("jobImages")}
           </Heading>
         ) : null
       }
       {
-        w.images?.map((image: string) => (
-          <Box mb={6} rounded="xl" overflow="hidden" style={{ margin: "20px" }}>
+        w.images?.map((image: string, i: number) => (
+          <Box key={"pro_img" + i} mb={6} rounded="xl" overflow="hidden" style={{ margin: "20px" }}>
             <Image
               src={`/images/works/${image}`}
               alt={image}

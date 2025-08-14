@@ -4,7 +4,6 @@ import NextLink from "next/link";
 import {
   Box,
   Image,
-  Heading,
   Text,
   Link,
   VStack,
@@ -34,22 +33,28 @@ export default function EducationCard({
   return (
     <Box as="article" borderWidth="1px" rounded="xl" overflow="hidden" _hover={{ shadow: "md" }} className="workcard">
       {thumbnail ? (
-        <Image
-          src={thumbnail}
-          alt={title}
-          w="full"
-          h="140px"
-          objectFit="contain"
-          bg="blackAlpha.50"
-        />
+        <Link
+          as={NextLink}
+          href={href}
+          left={"50%"}
+          transform={"translate(-50%)"}
+          style={{ position: "relative" }}
+        >
+          <Image
+            src={thumbnail}
+            alt={title}
+            w="full"
+            h="140px"
+            objectFit="contain"
+            bg="blackAlpha.50"
+          />
+        </Link>
       ) : (
         <Box h="140px" bg="blackAlpha.100" />
       )}
 
       <Box p={4}>
-        <Heading size="md" lineClamp={2} mb={1}>
-          <Link as={NextLink} href={href}>{title}</Link>
-        </Heading>
+        <Link as={NextLink} href={href}>{title}</Link>
         {subtitle ? (
           <Text fontSize="sm" color="fg.muted" mb={1}>{subtitle}</Text>
         ) : null}
