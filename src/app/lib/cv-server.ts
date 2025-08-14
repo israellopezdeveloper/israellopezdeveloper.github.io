@@ -5,8 +5,6 @@ import {
   getUniversitySlug,
   getComplementarySlug,
   getLanguageSlug,
-  slugify,
-  fromEn,
 } from "./slug";
 
 export type Lang = "en" | "es" | "zh";

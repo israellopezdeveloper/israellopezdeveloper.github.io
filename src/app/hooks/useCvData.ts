@@ -37,8 +37,8 @@ export function useCvData(lang: Lang, short: boolean) {
         return Promise.all([res1.json(), res2.json()]);
       })
       .then(([json1, jsonen]: CV[]) => {
-        if (cancelled) return;
-        const json: CV = json1!!;
+        if (cancelled || !json1 || !jsonen) return;
+        const json: CV = json1;
         json?.educations.complementary.forEach(
           (comp: CVComplementary, i: number) => {
             comp.slug = slugify(

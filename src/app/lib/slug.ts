@@ -1,4 +1,4 @@
-export function fromEn<T extends Record<string, any>>(
+export function fromEn<T extends Record<string, string>>(
   obj: T,
   base: string,
 ): string | undefined {
