@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import * as React from "react";
+import * as React from 'react';
 
-type LangKey = "en" | "es" | "zh";
+type LangKey = 'en' | 'es' | 'zh';
 
 type RepoAPI = {
   id: number;
@@ -26,7 +26,7 @@ export type PersonalProject = {
   technologies?: { tech: string; time: number }[];
 };
 
-function monthsSince(dateISO: string) {
+function monthsSince(dateISO: string): number {
   const start = new Date(dateISO);
   const now = new Date();
   const months =
@@ -38,15 +38,15 @@ function monthsSince(dateISO: string) {
 async function fetchJson<T>(url: string): Promise<T> {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`Failed ${url}: ${r.status}`);
-  return r.json();
+  return r.json() as Promise<T>;
 }
 
 async function fetchRepoMeta(
   repo: RepoAPI,
 ): Promise<{ meta?: RepoMeta; thumb?: string }> {
   const rawBase = repo.html_url.replace(
-    "github.com",
-    "raw.githubusercontent.com",
+    'github.com',
+    'raw.githubusercontent.com',
   );
   const metaUrl = `${rawBase}/metadata-branch/metadata.json`;
   const logoUrl = `${rawBase}/metadata-branch/logo.png`;
@@ -78,7 +78,7 @@ function idFromUrl(url: string): number {
 }
 
 async function loadBackup(): Promise<PersonalProject[]> {
-  const data = await fetchJson<BackupItem[]>("/backup.repos.json");
+  const data = await fetchJson<BackupItem[]>('/backup.repos.json');
   return (data || []).map((b) => ({
     id: idFromUrl(b.url),
     url: b.url,
@@ -101,7 +101,11 @@ async function loadBackup(): Promise<PersonalProject[]> {
   }));
 }
 
-export function usePersonalProjects(username = "israellopezdeveloper") {
+export function usePersonalProjects(username = 'israellopezdeveloper'): {
+  data: PersonalProject[];
+  loading: boolean;
+  error: unknown;
+} {
   const [data, setData] = React.useState<PersonalProject[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<unknown>(null);
@@ -109,7 +113,7 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
   React.useEffect(() => {
     let cancelled = false;
 
-    async function run() {
+    async function run(): Promise<void> {
       try {
         setLoading(true);
         setError(null);
@@ -144,7 +148,7 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
 
         // 2) Enriquecer cada repo
         const enriched = await Promise.all(
-          repos.map(async (repo) => {
+          repos.map(async (repo: RepoAPI): Promise<PersonalProject> => {
             const time = monthsSince(repo.created_at);
 
             // Lenguajes del repo
@@ -164,7 +168,7 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
             // Techs fusionadas (únicas)
             const techsSet = new Set<string>([
               ...languages,
-              ...((meta?.technologies ?? []) as string[]),
+              ...(meta?.technologies ?? []),
             ]);
             const technologies = Array.from(techsSet).map((tech) => ({
               tech,
@@ -174,7 +178,12 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
             const fallbackName = repo.name;
             const fallbackDesc = repo.description ?? undefined;
 
-            const makeLang = (k: LangKey) => {
+            const makeLang = (
+              k: LangKey,
+            ): {
+              desc?: string;
+              name: string;
+            } => {
               const name = meta?.lang?.[k]?.name ?? fallbackName;
               const desc = meta?.lang?.[k]?.desc ?? fallbackDesc;
               return { name, ...(desc ? { desc } : {}) };
@@ -185,9 +194,9 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
               url: repo.html_url,
               ...(thumb ? { thumbnail: thumb } : {}),
               lang: {
-                en: makeLang("en"),
-                es: makeLang("es"),
-                zh: makeLang("zh"),
+                en: makeLang('en'),
+                es: makeLang('es'),
+                zh: makeLang('zh'),
               },
               ...(technologies.length ? { technologies } : {}),
             };
@@ -197,7 +206,7 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
         );
 
         if (!cancelled) {
-          console.log(enriched);
+          console.warn(enriched);
           setData(enriched);
           setLoading(false);
           setError(null);
@@ -220,7 +229,9 @@ export function usePersonalProjects(username = "israellopezdeveloper") {
       }
     }
 
-    run();
+    run().catch((err: Error): void => {
+      console.error(err);
+    });
     return () => {
       cancelled = true;
     };

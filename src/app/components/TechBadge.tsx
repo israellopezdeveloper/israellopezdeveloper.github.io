@@ -1,6 +1,8 @@
-"use client";
+'use client';
 
-import { HStack, Box, Text } from "@chakra-ui/react";
+import { HStack, Box, Text } from '@chakra-ui/react';
+
+import type { JSX } from 'react';
 
 export default function TechBadge({
   label,
@@ -8,7 +10,7 @@ export default function TechBadge({
 }: {
   label: string;
   count?: number;
-}) {
+}): JSX.Element {
   return (
     <HStack
       as="span"
@@ -22,7 +24,7 @@ export default function TechBadge({
       <Text as="span" fontSize="xs">
         {label}
       </Text>
-      {typeof count === "number" ? (
+      {typeof count === 'number' ? (
         <Box as="span" fontSize="xs" opacity={0.7}>
           {count}m
         </Box>
@@ -30,4 +32,3 @@ export default function TechBadge({
     </HStack>
   );
 }
-

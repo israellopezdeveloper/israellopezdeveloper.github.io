@@ -1,16 +1,36 @@
-"use client";
+'use client';
 
-import NextLink from "next/link";
-import { Box, Image, Text, Link, HStack } from "@chakra-ui/react";
-import type { Work } from "../types/work";
-import TechBadge from "./TechBadge";
+import { Box, Image, Text, Link, HStack } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
-export default function WorkCard({ work }: { work: Work }) {
+import TechBadge from './TechBadge';
+
+import type { Work } from '../types/work';
+import type { JSX } from 'react';
+
+export default function WorkCard({ work }: { work: Work }): JSX.Element {
   return (
-    <Box as="article" rounded="xl" overflow="hidden" borderWidth="1px" _hover={{ shadow: "md" }} className="workcard">
+    <Box
+      as="article"
+      rounded="xl"
+      overflow="hidden"
+      borderWidth="1px"
+      _hover={{ shadow: 'md' }}
+      className="workcard"
+    >
       {work.thumbnail && (
-        <Link as={NextLink} href={`/works/${work.id}`} style={{ width: "100%" }}>
-          <Image src={work.thumbnail} alt={work.title} w="full" h="180px" objectFit="contain" />
+        <Link
+          as={NextLink}
+          href={`/works/${work.id}`}
+          style={{ width: '100%' }}
+        >
+          <Image
+            src={work.thumbnail}
+            alt={work.title}
+            w="full"
+            h="180px"
+            objectFit="contain"
+          />
         </Link>
       )}
       <Box p={4}>
@@ -22,9 +42,7 @@ export default function WorkCard({ work }: { work: Work }) {
             {work.year}
           </Text>
         )}
-        {work.description && (
-          <Text lineClamp={3}>{work.description}</Text>
-        )}
+        {work.description && <Text lineClamp={3}>{work.description}</Text>}
         {work.techs && work.techs.length ? (
           <HStack gap={2} mt={3} flexWrap="wrap">
             {work.techs.map((t) => (
@@ -36,4 +54,3 @@ export default function WorkCard({ work }: { work: Work }) {
     </Box>
   );
 }
-

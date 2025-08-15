@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Container,
@@ -6,20 +6,22 @@ import {
   Heading,
   Grid,
   GridItem,
-} from "@chakra-ui/react";
-import WorkCard from "../components/WorkCard";
-import ProjectGridItem from "../components/ProjectGridItem";
+} from '@chakra-ui/react';
+import * as React from 'react';
+
+import { useLanguage } from '../components/context/LanguageContext';
+import ProjectGridItem from '../components/ProjectGridItem';
 import TechFilterSidebar, {
-  AggregatedTech,
-} from "../components/TechFilterSidebar";
-import { useLanguage } from "../components/context/LanguageContext";
-import { useCvData } from "../hooks/useCvData";
-import { usePersonalProjects } from "../hooks/usePersonalProjects";
-import { getItemSlug } from "../lib/slug";
-import { parsePeriodToMonths } from "../lib/period";
-import * as React from "react";
-import type { CVWork } from "../types/cv";
-import { useI18n } from "../i18n/useI18n";
+  type AggregatedTech,
+} from '../components/TechFilterSidebar';
+import WorkCard from '../components/WorkCard';
+import { useCvData } from '../hooks/useCvData';
+import { usePersonalProjects } from '../hooks/usePersonalProjects';
+import { useI18n } from '../i18n/useI18n';
+import { parsePeriodToMonths } from '../lib/period';
+import { getItemSlug } from '../lib/slug';
+
+import type { CVWork } from '../types/cv';
 
 // Extrae el set de tecnologías de un trabajo del CV (une todos sus proyectos)
 function collectWorkTechs(w: CVWork): string[] {
@@ -30,21 +32,29 @@ function collectWorkTechs(w: CVWork): string[] {
   return Array.from(set);
 }
 
-export default function WorksPage() {
+export default function WorksPage(): React.JSX.Element {
   const { lang, short } = useLanguage();
-  const { data: cv, loading: loadingCv, error: errorCv } = useCvData(lang, short);
-  const { data: repos, loading: loadingRepos, error: errorRepos } = usePersonalProjects();
+  const {
+    data: cv,
+    loading: loadingCv,
+    error: errorCv,
+  } = useCvData(lang, short);
+  const {
+    data: repos,
+    loading: loadingRepos,
+    error: errorRepos,
+  } = usePersonalProjects();
   const t = useI18n();
 
   // 1) Referencias estables
   const companies = React.useMemo<CVWork[]>(
-    () => (!loadingCv && !errorCv && cv?.works) ? cv.works : [],
-    [loadingCv, errorCv, cv?.works]
+    () => (!loadingCv && !errorCv && cv?.works ? cv.works : []),
+    [loadingCv, errorCv, cv?.works],
   );
 
   const personal = React.useMemo(
-    () => (!loadingRepos && !errorRepos && repos) ? repos : [],
-    [loadingRepos, errorRepos, repos]
+    () => (!loadingRepos && !errorRepos && repos ? repos : []),
+    [loadingRepos, errorRepos, repos],
   );
 
   // 2) Agregación por tech con deps estables
@@ -67,8 +77,9 @@ export default function WorksPage() {
       }
     }
 
-    return Array.from(acc, ([tech, months]) => ({ tech, months }))
-      .sort((a, b) => b.months - a.months);
+    return Array.from(acc, ([tech, months]) => ({ tech, months })).sort(
+      (a, b) => b.months - a.months,
+    );
   }, [personal, companies]);
 
   // 3) Estado filtros
@@ -76,17 +87,21 @@ export default function WorksPage() {
 
   // clave estable para saber si cambió el conjunto de techs agregadas
   const aggregatedKey = React.useMemo(
-    () => aggregated.map(i => i.tech).sort().join("|"),
-    [aggregated]
+    () =>
+      aggregated
+        .map((i) => i.tech)
+        .sort()
+        .join('|'),
+    [aggregated],
   );
 
   React.useEffect(() => {
-    setActiveTechs(new Set(aggregated.map(i => i.tech)));
+    setActiveTechs(new Set(aggregated.map((i) => i.tech)));
   }, [aggregatedKey, aggregated]);
 
   // 4) Handlers estables (opcional pero recomendable si los pasas a hijos)
   const toggleTech = React.useCallback((tech: string) => {
-    setActiveTechs(prev => {
+    setActiveTechs((prev) => {
       const next = new Set(prev);
       if (next.has(tech)) {
         next.delete(tech);
@@ -98,8 +113,8 @@ export default function WorksPage() {
   }, []);
 
   const activateAll = React.useCallback(
-    () => setActiveTechs(new Set(aggregated.map(i => i.tech))),
-    [aggregated]
+    () => setActiveTechs(new Set(aggregated.map((i) => i.tech))),
+    [aggregated],
   );
 
   const clearAll = React.useCallback(() => setActiveTechs(new Set()), []);
@@ -107,22 +122,34 @@ export default function WorksPage() {
   // 5) Filtros con deps estables
   const filteredCompanies = React.useMemo(() => {
     if (activeTechs.size === 0) return [] as CVWork[];
-    return companies.filter(w => collectWorkTechs(w).some(t => activeTechs.has(t)));
+    return companies.filter((w) =>
+      collectWorkTechs(w).some((t) => activeTechs.has(t)),
+    );
   }, [companies, activeTechs]);
 
   const filteredPersonal = React.useMemo(() => {
     if (activeTechs.size === 0) return [] as typeof repos;
-    return personal.filter(p => (p.technologies ?? []).some(t => activeTechs.has(t.tech)));
+    return personal.filter((p) =>
+      (p.technologies ?? []).some((t) => activeTechs.has(t.tech)),
+    );
   }, [personal, activeTechs]);
 
   return (
     <Container maxW="container.lg" py={8}>
-      <Grid templateColumns={{ base: "1fr", lg: "1fr 270px" }} gap={8} alignItems="start">
+      <Grid
+        templateColumns={{ base: '1fr', lg: '1fr 270px' }}
+        gap={8}
+        alignItems="start"
+      >
         {/* Columna principal */}
         <GridItem>
-          <Heading mb={4} mt={"0px"} pt={"0px"}>{t("experience")}</Heading>
+          <Heading mb={4} mt={'0px'} pt={'0px'}>
+            {t('experience')}
+          </Heading>
           {loadingCv ? (
-            <Heading size="sm" opacity={0.6}>{t("loading")}</Heading>
+            <Heading size="sm" opacity={0.6}>
+              {t('loading')}
+            </Heading>
           ) : (
             <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} gap={8}>
               {filteredCompanies.map((w, idx) => {
@@ -133,11 +160,17 @@ export default function WorksPage() {
                     work={{
                       id,
                       title: w.name,
-                      ...(w.short_description?.[0] && { description: w.short_description[0] }),
+                      ...(w.short_description?.[0] && {
+                        description: w.short_description[0],
+                      }),
                       ...(w.period_time && { year: w.period_time }),
-                      ...(w.thumbnail && { thumbnail: `/images/works/${w.thumbnail}` }),
+                      ...(w.thumbnail && {
+                        thumbnail: `/images/works/${w.thumbnail}`,
+                      }),
                       // Si quieres mostrar techs en la card, puedes poner todas las del work:
-                      ...(collectWorkTechs(w).length ? { techs: collectWorkTechs(w) } : {}),
+                      ...(collectWorkTechs(w).length
+                        ? { techs: collectWorkTechs(w) }
+                        : {}),
                     }}
                   />
                 );
@@ -145,9 +178,11 @@ export default function WorksPage() {
             </SimpleGrid>
           )}
 
-          <Heading mb={4}>{t("personalProjects")}</Heading>
+          <Heading mb={4}>{t('personalProjects')}</Heading>
           {loadingRepos ? (
-            <Heading size="sm" opacity={0.6}>{t("loading")}</Heading>
+            <Heading size="sm" opacity={0.6}>
+              {t('loading')}
+            </Heading>
           ) : (
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={6}>
               {filteredPersonal.map((r) => (
@@ -158,7 +193,7 @@ export default function WorksPage() {
         </GridItem>
 
         {/* Sidebar derecha con filtros */}
-        <GridItem display={{ base: "none", lg: "block" }}>
+        <GridItem display={{ base: 'none', lg: 'block' }}>
           <TechFilterSidebar
             items={aggregated}
             active={activeTechs}
@@ -171,4 +206,3 @@ export default function WorksPage() {
     </Container>
   );
 }
-

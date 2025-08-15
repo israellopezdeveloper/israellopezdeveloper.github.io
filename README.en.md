@@ -13,7 +13,6 @@ Welcome to my portfolio! This project has been created to showcase my work and s
 ## Features
 
 - **Modern and Responsive Interface**: The portfolio is designed to provide a smooth user experience across both mobile devices and desktop screens.
-  
 - **3D Animations**: Thanks to the combination of Blender and Three.js, the portfolio includes interactive 3D animations that enhance the visual experience and demonstrate my skills in developing advanced graphics.
 
 - **SEO Optimized**: By using Next.js, I was able to optimize the portfolio for search engines, improving its online visibility and making it easier for others to find my work.

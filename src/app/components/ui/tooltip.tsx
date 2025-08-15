@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { Tooltip as ChakraTooltip, Portal } from "@chakra-ui/react";
+import { Tooltip as ChakraTooltip, Portal } from '@chakra-ui/react';
+import * as React from 'react';
 
 export interface TooltipProps extends ChakraTooltip.RootProps {
   showArrow?: boolean;
@@ -42,7 +42,6 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
         </Portal>
       </ChakraTooltip.Root>
     );
-  }
+  },
 );
-Tooltip.displayName = "Tooltip";
-
+Tooltip.displayName = 'Tooltip';

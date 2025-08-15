@@ -1,3 +1,4 @@
 1 -  Editor - cls; nvim
 2 -  Server - cls; rm -rf .next; npm run dev
-3 -  Commands - cls
+3 -  App - cls; cd scripts/;
+4 -  Commands - cls

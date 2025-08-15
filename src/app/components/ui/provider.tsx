@@ -1,17 +1,19 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
-import system from "./theme";
-import { ThemeProvider } from "next-themes";
+import { ChakraProvider } from '@chakra-ui/react';
+import { ThemeProvider } from 'next-themes';
+import * as React from 'react';
 
-export function Provider({ children }: { children: React.ReactNode }) {
+import system from './theme';
+
+export function Provider({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.JSX.Element {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <ChakraProvider value={system}>
-        {children}
-      </ChakraProvider>
+      <ChakraProvider value={system}>{children}</ChakraProvider>
     </ThemeProvider>
   );
 }
-

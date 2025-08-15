@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-import NextLink from "next/link";
 import {
   Box,
   Image,
@@ -9,16 +8,19 @@ import {
   VStack,
   HStack,
   Badge,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+
+import type { JSX } from 'react';
 
 type Props = {
-  href: string;                // enlace interno a la página de detalle
-  title: string;               // título principal
-  subtitle?: string;           // uni/institución o idioma
-  period?: string;             // periodo
-  thumbnail?: string;          // /images/educations/...
-  summary?: string[];          // primeras líneas
-  badges?: string[];           // extras (por ejemplo skills/keywords)
+  href: string; // enlace interno a la página de detalle
+  title: string; // título principal
+  subtitle?: string; // uni/institución o idioma
+  period?: string; // periodo
+  thumbnail?: string; // /images/educations/...
+  summary?: string[]; // primeras líneas
+  badges?: string[]; // extras (por ejemplo skills/keywords)
 };
 
 export default function EducationCard({
@@ -29,16 +31,23 @@ export default function EducationCard({
   thumbnail,
   summary,
   badges,
-}: Props) {
+}: Props): JSX.Element {
   return (
-    <Box as="article" borderWidth="1px" rounded="xl" overflow="hidden" _hover={{ shadow: "md" }} className="workcard">
+    <Box
+      as="article"
+      borderWidth="1px"
+      rounded="xl"
+      overflow="hidden"
+      _hover={{ shadow: 'md' }}
+      className="workcard"
+    >
       {thumbnail ? (
         <Link
           as={NextLink}
           href={href}
-          left={"50%"}
-          transform={"translate(-50%)"}
-          style={{ position: "relative" }}
+          left={'50%'}
+          transform={'translate(-50%)'}
+          style={{ position: 'relative' }}
         >
           <Image
             src={thumbnail}
@@ -54,12 +63,18 @@ export default function EducationCard({
       )}
 
       <Box p={4}>
-        <Link as={NextLink} href={href}>{title}</Link>
+        <Link as={NextLink} href={href}>
+          {title}
+        </Link>
         {subtitle ? (
-          <Text fontSize="sm" color="fg.muted" mb={1}>{subtitle}</Text>
+          <Text fontSize="sm" color="fg.muted" mb={1}>
+            {subtitle}
+          </Text>
         ) : null}
         {period ? (
-          <Text fontSize="sm" color="fg.muted" mb={2}>{period}</Text>
+          <Text fontSize="sm" color="fg.muted" mb={2}>
+            {period}
+          </Text>
         ) : null}
         {summary?.length ? (
           <VStack align="start" gap={1}>
@@ -68,11 +83,14 @@ export default function EducationCard({
         ) : null}
         {badges?.length ? (
           <HStack mt={3} gap={2} flexWrap="wrap">
-            {badges.map((b) => <Badge key={b} variant="subtle">{b}</Badge>)}
+            {badges.map((b) => (
+              <Badge key={b} variant="subtle">
+                {b}
+              </Badge>
+            ))}
           </HStack>
         ) : null}
       </Box>
     </Box>
   );
 }
-
