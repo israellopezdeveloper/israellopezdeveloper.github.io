@@ -3,7 +3,14 @@
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { usePathname } from 'next/navigation';
-import React, { useEffect, useMemo, useRef, useState, Suspense, type JSX } from 'react';
+import React, {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  Suspense,
+  type JSX,
+} from 'react';
 
 import type * as THREE from 'three';
 
@@ -17,8 +24,10 @@ const ROUTE_TO_MODEL: Record<string, string> = {
 
 function pickModelForPath(pathname: string): string {
   if (pathname.startsWith('/work')) return ROUTE_TO_MODEL['/work'] || '';
-  if (pathname.startsWith('/education')) return ROUTE_TO_MODEL['/education'] || '';
-  if (pathname === '/' || pathname.startsWith('/home')) return ROUTE_TO_MODEL['/'] || '';
+  if (pathname.startsWith('/education'))
+    return ROUTE_TO_MODEL['/education'] || '';
+  if (pathname === '/' || pathname.startsWith('/home'))
+    return ROUTE_TO_MODEL['/'] || '';
   // fallback
   return ROUTE_TO_MODEL['/'] || '';
 }
@@ -106,7 +115,8 @@ function SpinningSwitcher({
 
 export default function KoalaCanvas(): JSX.Element {
   const pathname = usePathname();
-  const modelUrl: string = useMemo(() => pickModelForPath(pathname || '/'), [pathname]) || '/';
+  const modelUrl: string =
+    useMemo(() => pickModelForPath(pathname || '/'), [pathname]) || '/';
 
   return (
     <div id="koala-canvas-container" aria-hidden>

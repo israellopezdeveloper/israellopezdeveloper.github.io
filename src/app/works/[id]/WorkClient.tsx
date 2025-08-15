@@ -1,6 +1,15 @@
 'use client';
 
-import { Container, Heading, Text, Box, Image, VStack, Link, Center } from '@chakra-ui/react';
+import {
+  Container,
+  Heading,
+  Text,
+  Box,
+  Image,
+  VStack,
+  Link,
+  Center,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import { useLanguage } from '../../components/context/LanguageContext';
@@ -145,7 +154,12 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
               style={{ margin: '20px', width: '60%', position: 'relative' }}
               key={'pr' + index + '_' + i}
             >
-              <Image src={`/images/works/${image}`} alt={image} w="full" objectFit="contain" />
+              <Image
+                src={`/images/works/${image}`}
+                alt={image}
+                w="full"
+                objectFit="contain"
+              />
             </Box>
           ))}
           {project.links && project.links?.length > 0 ? (
@@ -159,7 +173,12 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
                 {link.icon}
                 {link.tag}:
               </label>
-              <Link as={NextLink} href={link.url} target="_blank" rel="noreferrer">
+              <Link
+                as={NextLink}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {link.text}
               </Link>
             </span>
@@ -172,8 +191,19 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
         </Heading>
       ) : null}
       {w.images?.map((image: string, i: number) => (
-        <Box key={'pro_img' + i} mb={6} rounded="xl" overflow="hidden" style={{ margin: '20px' }}>
-          <Image src={`/images/works/${image}`} alt={image} w="full" objectFit="cover" />
+        <Box
+          key={'pro_img' + i}
+          mb={6}
+          rounded="xl"
+          overflow="hidden"
+          style={{ margin: '20px' }}
+        >
+          <Image
+            src={`/images/works/${image}`}
+            alt={image}
+            w="full"
+            objectFit="cover"
+          />
         </Box>
       ))}
     </Container>

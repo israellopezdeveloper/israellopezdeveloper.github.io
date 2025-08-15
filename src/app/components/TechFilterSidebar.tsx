@@ -39,7 +39,13 @@ export default function TechFilterSidebar({
   if (!items.length) return <></>; // ✅ early return después del hook
 
   return (
-    <Box position="sticky" top={`${stickyOffset}px`} borderWidth="1px" rounded="xl" p={4}>
+    <Box
+      position="sticky"
+      top={`${stickyOffset}px`}
+      borderWidth="1px"
+      rounded="xl"
+      p={4}
+    >
       <Heading as="h3" size="sm" mb={2} mt="0px" pt="0px">
         {t('usedTechnologies')}
       </Heading>
@@ -65,7 +71,10 @@ export default function TechFilterSidebar({
               onClick={() => onToggleAction(it.tech)}
               userSelect="none"
             >
-              <Badge variant={isActive ? 'solid' : 'outline'} opacity={isActive ? 1 : 0.6}>
+              <Badge
+                variant={isActive ? 'solid' : 'outline'}
+                opacity={isActive ? 1 : 0.6}
+              >
                 {it.tech}
               </Badge>
               <Box fontSize="xs" color="fg.muted">

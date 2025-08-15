@@ -30,7 +30,8 @@ function monthsSince(dateISO: string): number {
   const start = new Date(dateISO);
   const now = new Date();
   const months =
-    (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth());
   return Math.max(1, months);
 }
 
@@ -40,8 +41,13 @@ async function fetchJson<T>(url: string): Promise<T> {
   return r.json() as Promise<T>;
 }
 
-async function fetchRepoMeta(repo: RepoAPI): Promise<{ meta?: RepoMeta; thumb?: string }> {
-  const rawBase = repo.html_url.replace('github.com', 'raw.githubusercontent.com');
+async function fetchRepoMeta(
+  repo: RepoAPI,
+): Promise<{ meta?: RepoMeta; thumb?: string }> {
+  const rawBase = repo.html_url.replace(
+    'github.com',
+    'raw.githubusercontent.com',
+  );
   const metaUrl = `${rawBase}/metadata-branch/metadata.json`;
   const logoUrl = `${rawBase}/metadata-branch/logo.png`;
 
@@ -148,7 +154,9 @@ export function usePersonalProjects(username = 'israellopezdeveloper'): {
             // Lenguajes del repo
             let languages: string[] = [];
             try {
-              const langsObj = await fetchJson<Record<string, number>>(repo.languages_url);
+              const langsObj = await fetchJson<Record<string, number>>(
+                repo.languages_url,
+              );
               languages = Object.keys(langsObj || {});
             } catch {
               /* si falla languages_url, seguimos sin tirar toda la carga */
@@ -158,7 +166,10 @@ export function usePersonalProjects(username = 'israellopezdeveloper'): {
             const { meta, thumb } = await fetchRepoMeta(repo);
 
             // Techs fusionadas (únicas)
-            const techsSet = new Set<string>([...languages, ...(meta?.technologies ?? [])]);
+            const techsSet = new Set<string>([
+              ...languages,
+              ...(meta?.technologies ?? []),
+            ]);
             const technologies = Array.from(techsSet).map((tech) => ({
               tech,
               time,

@@ -1,11 +1,19 @@
 'use client';
 
-import { Container, SimpleGrid, Heading, Grid, GridItem } from '@chakra-ui/react';
+import {
+  Container,
+  SimpleGrid,
+  Heading,
+  Grid,
+  GridItem,
+} from '@chakra-ui/react';
 import * as React from 'react';
 
 import { useLanguage } from '../components/context/LanguageContext';
 import ProjectGridItem from '../components/ProjectGridItem';
-import TechFilterSidebar, { type AggregatedTech } from '../components/TechFilterSidebar';
+import TechFilterSidebar, {
+  type AggregatedTech,
+} from '../components/TechFilterSidebar';
 import WorkCard from '../components/WorkCard';
 import { useCvData } from '../hooks/useCvData';
 import { usePersonalProjects } from '../hooks/usePersonalProjects';
@@ -26,8 +34,16 @@ function collectWorkTechs(w: CVWork): string[] {
 
 export default function WorksPage(): React.JSX.Element {
   const { lang, short } = useLanguage();
-  const { data: cv, loading: loadingCv, error: errorCv } = useCvData(lang, short);
-  const { data: repos, loading: loadingRepos, error: errorRepos } = usePersonalProjects();
+  const {
+    data: cv,
+    loading: loadingCv,
+    error: errorCv,
+  } = useCvData(lang, short);
+  const {
+    data: repos,
+    loading: loadingRepos,
+    error: errorRepos,
+  } = usePersonalProjects();
   const t = useI18n();
 
   // 1) Referencias estables
@@ -106,17 +122,25 @@ export default function WorksPage(): React.JSX.Element {
   // 5) Filtros con deps estables
   const filteredCompanies = React.useMemo(() => {
     if (activeTechs.size === 0) return [] as CVWork[];
-    return companies.filter((w) => collectWorkTechs(w).some((t) => activeTechs.has(t)));
+    return companies.filter((w) =>
+      collectWorkTechs(w).some((t) => activeTechs.has(t)),
+    );
   }, [companies, activeTechs]);
 
   const filteredPersonal = React.useMemo(() => {
     if (activeTechs.size === 0) return [] as typeof repos;
-    return personal.filter((p) => (p.technologies ?? []).some((t) => activeTechs.has(t.tech)));
+    return personal.filter((p) =>
+      (p.technologies ?? []).some((t) => activeTechs.has(t.tech)),
+    );
   }, [personal, activeTechs]);
 
   return (
     <Container maxW="container.lg" py={8}>
-      <Grid templateColumns={{ base: '1fr', lg: '1fr 270px' }} gap={8} alignItems="start">
+      <Grid
+        templateColumns={{ base: '1fr', lg: '1fr 270px' }}
+        gap={8}
+        alignItems="start"
+      >
         {/* Columna principal */}
         <GridItem>
           <Heading mb={4} mt={'0px'} pt={'0px'}>
@@ -136,11 +160,17 @@ export default function WorksPage(): React.JSX.Element {
                     work={{
                       id,
                       title: w.name,
-                      ...(w.short_description?.[0] && { description: w.short_description[0] }),
+                      ...(w.short_description?.[0] && {
+                        description: w.short_description[0],
+                      }),
                       ...(w.period_time && { year: w.period_time }),
-                      ...(w.thumbnail && { thumbnail: `/images/works/${w.thumbnail}` }),
+                      ...(w.thumbnail && {
+                        thumbnail: `/images/works/${w.thumbnail}`,
+                      }),
                       // Si quieres mostrar techs en la card, puedes poner todas las del work:
-                      ...(collectWorkTechs(w).length ? { techs: collectWorkTechs(w) } : {}),
+                      ...(collectWorkTechs(w).length
+                        ? { techs: collectWorkTechs(w) }
+                        : {}),
                     }}
                   />
                 );

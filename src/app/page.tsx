@@ -63,7 +63,12 @@ export default function HomePage(): JSX.Element {
             {intro.name} - {intro.title}
           </Heading>
         </Box>
-        <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} textAlign="center"></Box>
+        <Box
+          flexShrink={0}
+          mt={{ base: 4, md: 0 }}
+          ml={{ md: 6 }}
+          textAlign="center"
+        ></Box>
       </Box>
 
       <div

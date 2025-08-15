@@ -1,4 +1,7 @@
-export function fromEn<T extends Record<string, string>>(obj: T, base: string): string | undefined {
+export function fromEn<T extends Record<string, string>>(
+  obj: T,
+  base: string,
+): string | undefined {
   return obj[`${base}_en`] ?? obj[base];
 }
 
@@ -11,7 +14,11 @@ export function slugify(input: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-export function getItemSlug(item: { slug?: string; name: string; name_en?: string }): string {
+export function getItemSlug(item: {
+  slug?: string;
+  name: string;
+  name_en?: string;
+}): string {
   if (item.slug) return item.slug;
   const base = fromEn(item, 'name');
   return base ? slugify(base) : 'item';

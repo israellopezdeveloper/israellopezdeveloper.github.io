@@ -1,6 +1,14 @@
 'use client';
 
-import { Box, Image, Text, Link, VStack, HStack, Badge } from '@chakra-ui/react';
+import {
+  Box,
+  Image,
+  Text,
+  Link,
+  VStack,
+  HStack,
+  Badge,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import type { JSX } from 'react';

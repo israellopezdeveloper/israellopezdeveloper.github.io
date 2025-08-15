@@ -19,8 +19,18 @@ export default function WorkCard({ work }: { work: Work }): JSX.Element {
       className="workcard"
     >
       {work.thumbnail && (
-        <Link as={NextLink} href={`/works/${work.id}`} style={{ width: '100%' }}>
-          <Image src={work.thumbnail} alt={work.title} w="full" h="180px" objectFit="contain" />
+        <Link
+          as={NextLink}
+          href={`/works/${work.id}`}
+          style={{ width: '100%' }}
+        >
+          <Image
+            src={work.thumbnail}
+            alt={work.title}
+            w="full"
+            h="180px"
+            objectFit="contain"
+          />
         </Link>
       )}
       <Box p={4}>

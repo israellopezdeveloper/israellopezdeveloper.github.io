@@ -22,9 +22,12 @@ import LanguageSelector from './LanguageSelector';
 import { useI18n } from '../i18n/useI18n';
 
 // Evita mismatches en el botón de tema
-const ColorModeButton = dynamic(() => import('./ui/color-mode').then((m) => m.ColorModeButton), {
-  ssr: false,
-});
+const ColorModeButton = dynamic(
+  () => import('./ui/color-mode').then((m) => m.ColorModeButton),
+  {
+    ssr: false,
+  },
+);
 
 function NavLink({
   href,
@@ -41,7 +44,9 @@ function NavLink({
   const isActive = useMemo(() => {
     if (!pathname) return false;
     if (href === '/') return pathname === '/';
-    return partial ? pathname === href || pathname.startsWith(href + '/') : pathname === href;
+    return partial
+      ? pathname === href || pathname.startsWith(href + '/')
+      : pathname === href;
   }, [pathname, href, partial]);
 
   return (
@@ -70,7 +75,13 @@ export default function Navbar(): JSX.Element {
   ];
 
   return (
-    <Box as="nav" position="sticky" top={0} zIndex={10} backdropFilter="saturate(100%) blur(5px)">
+    <Box
+      as="nav"
+      position="sticky"
+      top={0}
+      zIndex={10}
+      backdropFilter="saturate(100%) blur(5px)"
+    >
       <Container maxW="container.lg" py={2}>
         <Flex align="center">
           <HStack gap={2}>
@@ -84,7 +95,12 @@ export default function Navbar(): JSX.Element {
             </IconButton>
 
             {/* Menú desktop */}
-            <HStack as="ul" gap={1} display={{ base: 'none', md: 'flex' }} className="menu">
+            <HStack
+              as="ul"
+              gap={1}
+              display={{ base: 'none', md: 'flex' }}
+              className="menu"
+            >
               {links.map((l) => (
                 <Box as="li" key={l.href} listStyleType="none">
                   <NavLink href={l.href}>{l.label}</NavLink>

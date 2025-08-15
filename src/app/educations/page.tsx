@@ -6,7 +6,11 @@ import { useLanguage } from '../components/context/LanguageContext';
 import EducationCard from '../components/EducationCard';
 import { useCvData } from '../hooks/useCvData';
 import { useI18n } from '../i18n/useI18n';
-import { getUniversitySlug, getComplementarySlug, getLanguageSlug } from '../lib/slug';
+import {
+  getUniversitySlug,
+  getComplementarySlug,
+  getLanguageSlug,
+} from '../lib/slug';
 
 import type { JSX } from 'react';
 
@@ -42,7 +46,9 @@ export default function EducationsPage(): JSX.Element {
                 title={u.title ?? u.university_name ?? 'Untitled'}
                 {...(u.university_name ? { subtitle: u.university_name } : {})}
                 {...(u.period_time ? { period: u.period_time } : {})}
-                {...(u.thumbnail ? { thumbnail: `/images/educations/${u.thumbnail}` } : {})}
+                {...(u.thumbnail
+                  ? { thumbnail: `/images/educations/${u.thumbnail}` }
+                  : {})}
                 {...(u.summary?.length ? { summary: u.summary } : {})}
               />
             ))}
@@ -59,7 +65,9 @@ export default function EducationsPage(): JSX.Element {
                 title={c.title ?? 'Untitled'}
                 {...(c.institution ? { subtitle: c.institution } : {})}
                 {...(c.period_time ? { period: c.period_time } : {})}
-                {...(c.thumbnail ? { thumbnail: `/images/educations/${c.thumbnail}` } : {})}
+                {...(c.thumbnail
+                  ? { thumbnail: `/images/educations/${c.thumbnail}` }
+                  : {})}
                 {...(c.summary?.length ? { summary: c.summary } : {})}
               />
             ))}
@@ -87,7 +95,11 @@ export default function EducationsPage(): JSX.Element {
                     ? { thumbnail: `/images/educations/${language.thumbnail}` }
                     : {})}
                   {...(language.acreditations?.length
-                    ? { summary: [`${language.acreditations.length} ${t('accreditations')}`] }
+                    ? {
+                        summary: [
+                          `${language.acreditations.length} ${t('accreditations')}`,
+                        ],
+                      }
                     : {})}
                 />
               );

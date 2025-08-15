@@ -6,7 +6,11 @@ import * as React from 'react';
 
 import system from './theme';
 
-export function Provider({ children }: { children: React.ReactNode }): React.JSX.Element {
+export function Provider({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.JSX.Element {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <ChakraProvider value={system}>{children}</ChakraProvider>

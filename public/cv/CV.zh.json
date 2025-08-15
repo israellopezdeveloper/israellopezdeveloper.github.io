@@ -298,10 +298,7 @@
           ]
         }
       ],
-      "images": [
-        "devo1.png",
-        "devo2.png"
-      ]
+      "images": ["devo1.png", "devo2.png"]
     },
     {
       "name": "Comisión Europea",
@@ -356,9 +353,7 @@
               "text": "Documentación de e-leniency"
             }
           ],
-          "images": [
-            "European_Commission_02.png"
-          ],
+          "images": ["European_Commission_02.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -564,9 +559,7 @@
             "<p>为了实现这一目标,我定义了一个分析仪,将旧格式的消息翻译到两个现代标准中的任何一个,通过一个符合理查德森3级成熟模式的Restful API. 这种API不仅提供了信息翻译的输入点,而且还提供了全球其他平台的互通和这些通信的存储,以确保全球数据包流量的可追溯性.该项目的目标需要一个高可用性结构和基于MongoDB的复制数据库系统,</p>"
           ],
           "links": [],
-          "images": [
-            "iata.png"
-          ],
+          "images": ["iata.png"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -601,10 +594,7 @@
             "第二个项目是与西门子合作创建Iberdrola终端智能管理基础设施的联合项目.这些终端通过使用SNMP通信协议向服务器发送日常报告来获取用户电力消耗的信息,除非需要更详细的设备或特定设备集的监测,在这种情况下将产生每分钟消耗的细节级别的报告.这些数据被存储在一个非关系数据库 MongoDB中,这些数据是多个集群,负载量和复制的碎片.每个点的信息都被存储在集群中,只要服务器能够承担包含该集群的数据量."
           ],
           "links": [],
-          "images": [
-            "iberdrola.svg",
-            "siemens.png"
-          ],
+          "images": ["iberdrola.svg", "siemens.png"],
           "technologies": [
             "C++",
             "Google Test",
@@ -691,9 +681,7 @@
     {
       "name": "Grupo Prisa",
       "title": "高级软件工程师",
-      "short_description": [
-        "普里萨集团是一家西班牙媒体集团,"
-      ],
+      "short_description": ["普里萨集团是一家西班牙媒体集团,"],
       "thumbnail": "prisa.png",
       "period_time": "Marzo 2012 - Mayo 2015",
       "full_description": [
@@ -831,9 +819,7 @@
               "text": "Documentación de la aplicación de Antena 3 TV"
             }
           ],
-          "images": [
-            "intelygenz_01.jpeg"
-          ],
+          "images": ["intelygenz_01.jpeg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -850,9 +836,7 @@
             "<p>此外,文件经理将BBVA的工作流程和业务逻辑整合起来,使其与其他银行机构进行流动互动.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "C#",
             ".NET",
@@ -876,9 +860,7 @@
             "<p>该项目的重要成就之一是创建一个屏幕手势和行动图书馆,称为IRIS.该图书馆旨在改善用户互动,提供多项任务的直观和高效方式.IRIS图书馆改善了用户的整体体验,使应用程序更容易接受和使用.</p>"
           ],
           "links": [],
-          "images": [
-            "bbva.jpg"
-          ],
+          "images": ["bbva.jpg"],
           "technologies": [
             "Java",
             "Spring Security",
@@ -944,9 +926,7 @@
             "<p>这项项目是我们对利用技术来消除障碍和提高残疾人的生活质量的承诺的典范,</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Android Studio",
@@ -992,9 +972,7 @@
             "<p>简而言之,这个项目证明了我能够开发和管理一个动态的网络存在,</p>"
           ],
           "links": [],
-          "images": [
-            "tifyc.jpg"
-          ],
+          "images": ["tifyc.jpg"],
           "technologies": [
             "Java",
             "Linux",
@@ -1014,9 +992,7 @@
             "<p>除了教学和支持角色之外,我还积极参与课外活动,包括Hispabot机器人竞赛.我参加了迷宫解决模式,在那里我应用了机器人和人工智能方面的经验来设计和编程能够导航和解决迷宫的机器人.</p>"
           ],
           "links": [],
-          "images": [
-            "hispabot.jpeg"
-          ],
+          "images": ["hispabot.jpeg"],
           "technologies": [
             "C",
             "C++",
@@ -1034,32 +1010,18 @@
     {
       "name": "Knowcentury",
       "title": "小程序员",
-      "short_description": [
-        "专注于创建网站的小公司"
-      ],
+      "short_description": ["专注于创建网站的小公司"],
       "thumbnail": "knowcentury.png",
       "period_time": "Enero 2005 - Julio 2005",
-      "full_description": [
-        "专注于创建网站的小公司"
-      ],
-      "contribution": [
-        "<p>在大学的早期,为了支付我的学费,</p>"
-      ],
+      "full_description": ["专注于创建网站的小公司"],
+      "contribution": ["<p>在大学的早期,为了支付我的学费,</p>"],
       "links": [],
       "projects": [
         {
           "name": "Desarrollo de sitios web",
-          "description": [
-            "<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>"
-          ],
+          "description": ["<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>"],
           "links": [],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "images": []
@@ -1090,22 +1052,10 @@
       "projects": [
         {
           "name": "Desarrollo de sitios web",
-          "description": [
-            "<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>"
-          ],
+          "description": ["<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>"],
           "links": [],
-          "images": [
-            "ibm_system_z.jpg",
-            "kvm.png",
-            "suse.png"
-          ],
-          "technologies": [
-            "Joomla",
-            "PHP",
-            "JavaScript",
-            "MySQL",
-            "HTML"
-          ]
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ]
     }
@@ -1113,9 +1063,7 @@
   "educations": {
     "university": [
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2007 - Junio 2009",
         "summary": [
           "人工智能和机器学习. 监督,不监督和增强. 象征性学习. 排序和退缩模式. 模型优化.",
@@ -1132,9 +1080,7 @@
         "university_name": "UAH"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "period_time": "Septiembre 2001 - Junio 2007",
         "summary": [
           "在:人工智能,分散逻辑,人工视觉系统,物理II,数学分析,数据结构,网络等方面获得荣誉."
@@ -1146,9 +1092,7 @@
     ],
     "complementary": [
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "Linux基金会",
         "period_time": "Septiembre 2015",
         "summary": [
@@ -1162,9 +1106,7 @@
         "title": "公积金 - 2"
       },
       {
-        "images": [
-          "linux_foundation.png"
-        ],
+        "images": ["linux_foundation.png"],
         "institution": "Linux基金会",
         "period_time": "Septiembre 2013",
         "summary": [
@@ -1178,26 +1120,18 @@
         "title": "产品类型:"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "河内阿尔卡拉大学",
         "period_time": "Septiembre 2007",
-        "summary": [
-          "通过SCORM标准设计教育内容."
-        ],
+        "summary": ["通过SCORM标准设计教育内容."],
         "thumbnail": "uah.svg",
         "title": "数字教育内容的设计和评估"
       },
       {
-        "images": [
-          "uah.svg"
-        ],
+        "images": ["uah.svg"],
         "institution": "河内阿尔卡拉大学",
         "period_time": "Septiembre 2007",
-        "summary": [
-          "人工视觉系统,卷积矩阵,过器."
-        ],
+        "summary": ["人工视觉系统,卷积矩阵,过器."],
         "thumbnail": "uah.svg",
         "title": "人工视觉课程"
       }

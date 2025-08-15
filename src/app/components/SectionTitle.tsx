@@ -3,7 +3,11 @@ import { Heading } from '@chakra-ui/react';
 
 import type { JSX } from 'react';
 
-export default function SectionTitle({ children }: { children: React.ReactNode }): JSX.Element {
+export default function SectionTitle({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
   return (
     <Heading
       as="h3"

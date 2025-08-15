@@ -5,7 +5,13 @@ import * as React from 'react';
 import { getCvUrl, type Lang } from '../lib/i18n';
 import { slugify } from '../lib/slug';
 
-import type { CV, CVComplementary, CVLang, CVUniversity, CVWork } from '../types/cv';
+import type {
+  CV,
+  CVComplementary,
+  CVLang,
+  CVUniversity,
+  CVWork,
+} from '../types/cv';
 
 const cache = new Map<string, CV>();
 
@@ -31,7 +37,10 @@ export function useCvData(
     const urlen = getCvUrl('en', true);
     let cancelled = false;
     setLoading(true);
-    Promise.all([fetch(url, { cache: 'no-cache' }), fetch(urlen, { cache: 'no-cache' })])
+    Promise.all([
+      fetch(url, { cache: 'no-cache' }),
+      fetch(urlen, { cache: 'no-cache' }),
+    ])
       .then(([res1, res2]) => {
         if (!res1.ok || !res2.ok) throw new Error(`Failed to load ${url}`);
         return Promise.all([res1.json(), res2.json()]);
@@ -39,9 +48,13 @@ export function useCvData(
       .then(([json1, jsonen]: CV[]) => {
         if (cancelled || !json1 || !jsonen) return;
         const json: CV = json1;
-        json?.educations.complementary.forEach((comp: CVComplementary, i: number) => {
-          comp.slug = slugify(jsonen?.educations.complementary[i]?.title || '');
-        });
+        json?.educations.complementary.forEach(
+          (comp: CVComplementary, i: number) => {
+            comp.slug = slugify(
+              jsonen?.educations.complementary[i]?.title || '',
+            );
+          },
+        );
         json?.educations.university.forEach((uni: CVUniversity, i: number) => {
           uni.slug = slugify(jsonen?.educations.university[i]?.title || '');
         });

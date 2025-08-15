@@ -20,7 +20,11 @@ function getInitialLang(): Lang {
   return 'en';
 }
 
-export function LanguageProvider({ children }: { children: React.ReactNode }): React.JSX.Element {
+export function LanguageProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.JSX.Element {
   const [lang, setLang] = React.useState<Lang>(getInitialLang());
   const [short, setShort] = React.useState<boolean>(false);
   const mounted = React.useRef(false);
@@ -30,14 +34,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }): R
     mounted.current = true;
     const saved = (typeof window !== 'undefined' &&
       localStorage.getItem(STORAGE_KEY)) as Lang | null;
-    const savedShort = (typeof window !== 'undefined' && localStorage.getItem(STORAGE_SHORT)) as
-      | 'true'
-      | 'false'
-      | null;
+    const savedShort = (typeof window !== 'undefined' &&
+      localStorage.getItem(STORAGE_SHORT)) as 'true' | 'false' | null;
 
     if (saved && LANGS.includes(saved)) setLang(saved);
     else {
-      const nav = typeof navigator !== 'undefined' ? navigator.language.slice(0, 2) : 'en';
+      const nav =
+        typeof navigator !== 'undefined'
+          ? navigator.language.slice(0, 2)
+          : 'en';
       setLang(LANGS.includes(nav as Lang) ? (nav as Lang) : 'en');
     }
     if (savedShort != null) setShort(savedShort === 'true');
@@ -54,7 +59,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }): R
   }, [short]);
 
   const value: Ctx = { lang, short, setLang, setShort };
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  );
 }
 
 export function useLanguage(): Ctx {

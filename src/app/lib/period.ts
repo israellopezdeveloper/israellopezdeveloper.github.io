@@ -87,7 +87,9 @@ export function parsePeriodToMonths(period?: string): number {
   if (!start || !end) return 0;
 
   let months =
-    (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth()) +
+    1;
 
   if (months < 0) months = 0;
   return months;

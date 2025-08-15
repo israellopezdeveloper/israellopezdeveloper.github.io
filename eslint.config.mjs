@@ -48,13 +48,19 @@ export default [
       'unused-imports': unusedImports,
     },
     rules: {
-      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        { prefer: 'type-imports' },
+      ],
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/no-misused-promises': [
         'error',
         { checksVoidReturn: { attributes: false } },
       ],
-      '@typescript-eslint/explicit-function-return-type': ['warn', { allowExpressions: true }],
+      '@typescript-eslint/explicit-function-return-type': [
+        'warn',
+        { allowExpressions: true },
+      ],
 
       'unused-imports/no-unused-imports': 'error',
       'no-duplicate-imports': 'error',

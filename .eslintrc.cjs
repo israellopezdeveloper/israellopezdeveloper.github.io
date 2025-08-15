@@ -22,13 +22,19 @@ module.exports = {
   },
   rules: {
     // --- Estrictas de TS:
-    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      { prefer: 'type-imports' },
+    ],
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-misused-promises': [
       'error',
       { checksVoidReturn: { attributes: false } },
     ],
-    '@typescript-eslint/explicit-function-return-type': ['warn', { allowExpressions: true }],
+    '@typescript-eslint/explicit-function-return-type': [
+      'warn',
+      { allowExpressions: true },
+    ],
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'off', // súbela a 'error' si tu código ya está limpio
 
@@ -62,7 +68,12 @@ module.exports = {
   overrides: [
     // Archivos de configuración, scripts, etc. sin type-check completo:
     {
-      files: ['*.config.*', 'next.config.*', 'postcss.config.*', 'tailwind.config.*'],
+      files: [
+        '*.config.*',
+        'next.config.*',
+        'postcss.config.*',
+        'tailwind.config.*',
+      ],
       parserOptions: { project: null },
     },
   ],

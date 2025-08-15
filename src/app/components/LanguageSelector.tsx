@@ -22,7 +22,9 @@ export default function LanguageSelector(): React.JSX.Element {
       <SelectEl
         id="lang"
         value={lang}
-        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setLang(e.target.value as Lang)}
+        onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+          setLang(e.target.value as Lang)
+        }
         fontSize="sm"
         px="2"
         py="1"
@@ -43,7 +45,9 @@ export default function LanguageSelector(): React.JSX.Element {
         id="short-toggle"
         type="checkbox"
         checked={short}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setShort(e.target.checked)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setShort(e.target.checked)
+        }
       />
     </HStack>
   );

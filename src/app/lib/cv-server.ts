@@ -1,7 +1,12 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-import { getItemSlug, getUniversitySlug, getComplementarySlug, getLanguageSlug } from './slug';
+import {
+  getItemSlug,
+  getUniversitySlug,
+  getComplementarySlug,
+  getLanguageSlug,
+} from './slug';
 
 export type Lang = 'en' | 'es' | 'zh';
 export const ALL_LANGS: Lang[] = ['en', 'es', 'zh'];

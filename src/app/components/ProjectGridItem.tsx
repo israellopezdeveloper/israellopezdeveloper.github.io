@@ -14,7 +14,11 @@ type Props = {
   maxBadges?: number;
 };
 
-export default function ProjectGridItem({ project, lang, maxBadges = 6 }: Props): JSX.Element {
+export default function ProjectGridItem({
+  project,
+  lang,
+  maxBadges = 6,
+}: Props): JSX.Element {
   const title = project.lang[lang]?.name ?? 'Untitled';
   const desc = project.lang[lang]?.desc;
 
@@ -33,14 +37,25 @@ export default function ProjectGridItem({ project, lang, maxBadges = 6 }: Props)
       className="workcard"
     >
       {project.thumbnail ? (
-        <Image src={project.thumbnail} alt={title} w="full" h="180px" objectFit="contain" />
+        <Image
+          src={project.thumbnail}
+          alt={title}
+          w="full"
+          h="180px"
+          objectFit="contain"
+        />
       ) : (
         <Box h="180px" bg="blackAlpha.100" />
       )}
 
       <Box p={4}>
         <Heading size="md" mb={1} lineClamp={2}>
-          <Link as={NextLink} href={project.url} target="_blank" rel="noreferrer">
+          <Link
+            as={NextLink}
+            href={project.url}
+            target="_blank"
+            rel="noreferrer"
+          >
             {title}
           </Link>
         </Heading>

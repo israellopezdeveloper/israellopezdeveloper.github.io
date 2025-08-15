@@ -1,12 +1,24 @@
 'use client';
 
-import { Container, Heading, Text, Box, Image, Link, chakra } from '@chakra-ui/react';
+import {
+  Container,
+  Heading,
+  Text,
+  Box,
+  Image,
+  Link,
+  chakra,
+} from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import { useLanguage } from '../components/context/LanguageContext';
 import { useCvData } from '../hooks/useCvData';
 import { useI18n } from '../i18n/useI18n';
-import { getUniversitySlug, getComplementarySlug, getLanguageSlug } from '../lib/slug';
+import {
+  getUniversitySlug,
+  getComplementarySlug,
+  getLanguageSlug,
+} from '../lib/slug';
 
 import type {
   CVAcreditation,
@@ -20,13 +32,18 @@ import type { JSX } from 'react';
 type Category = 'university' | 'complementary' | 'languages';
 
 // Type guards
-function isUniversity(x: CVUniversity | CVComplementary | CVLang): x is CVUniversity {
+function isUniversity(
+  x: CVUniversity | CVComplementary | CVLang,
+): x is CVUniversity {
   return (x as CVUniversity).university_name !== undefined;
 }
 
-function isComplementary(x: CVUniversity | CVComplementary | CVLang): x is CVComplementary {
+function isComplementary(
+  x: CVUniversity | CVComplementary | CVLang,
+): x is CVComplementary {
   return (
-    (x as CVComplementary).title !== undefined && (x as CVComplementary).institution !== undefined
+    (x as CVComplementary).title !== undefined &&
+    (x as CVComplementary).institution !== undefined
   );
 }
 
@@ -54,7 +71,11 @@ export default function EducationDetailClient({
   }
 
   const store: CVEducations = data.educations ?? {};
-  const list = (store[category] ?? []) as (CVUniversity | CVComplementary | CVLang)[];
+  const list = (store[category] ?? []) as (
+    | CVUniversity
+    | CVComplementary
+    | CVLang
+  )[];
 
   // Un único predicado sobre la UNIÓN
   const finder = (x: CVUniversity | CVComplementary | CVLang): boolean => {
