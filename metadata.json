@@ -1,11 +1,11 @@
 {
   "technologies": [
-    "next.js",
-    "chakra",
-    "react",
-    "node.js",
-    "threejs",
-    "blender"
+    "Next.js",
+    "Chakra",
+    "React.js",
+    "Node.js",
+    "Three.js",
+    "Blender"
   ],
   "lang": {
     "en": {
