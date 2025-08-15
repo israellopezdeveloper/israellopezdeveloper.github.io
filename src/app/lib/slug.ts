@@ -1,27 +1,20 @@
-export function fromEn<T extends Record<string, string>>(
-  obj: T,
-  base: string,
-): string | undefined {
+export function fromEn<T extends Record<string, string>>(obj: T, base: string): string | undefined {
   return obj[`${base}_en`] ?? obj[base];
 }
 
-export function slugify(input: string) {
+export function slugify(input: string): string {
   return input
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
-export function getItemSlug(item: {
-  slug?: string;
-  name: string;
-  name_en?: string;
-}) {
+export function getItemSlug(item: { slug?: string; name: string; name_en?: string }): string {
   if (item.slug) return item.slug;
-  const base = fromEn(item, "name");
-  return base ? slugify(base) : "item";
+  const base = fromEn(item, 'name');
+  return base ? slugify(base) : 'item';
 }
 
 // ---- Educación ----
@@ -47,20 +40,20 @@ type Lang = {
   language_en?: string;
 };
 
-export function getUniversitySlug(u: Univ) {
+export function getUniversitySlug(u: Univ): string {
   if (u.slug) return u.slug;
-  const base = fromEn(u, "title") ?? fromEn(u, "university_name");
-  return base ? slugify(base) : "item";
+  const base = fromEn(u, 'title') ?? fromEn(u, 'university_name');
+  return base ? slugify(base) : 'item';
 }
 
-export function getComplementarySlug(c: Comp) {
+export function getComplementarySlug(c: Comp): string {
   if (c.slug) return c.slug;
-  const base = fromEn(c, "title");
-  return base ? slugify(base) : "item";
+  const base = fromEn(c, 'title');
+  return base ? slugify(base) : 'item';
 }
 
-export function getLanguageSlug(l: Lang) {
+export function getLanguageSlug(l: Lang): string {
   if (l.slug) return l.slug;
-  const base = fromEn(l, "language");
-  return base ? slugify(base) : "language";
+  const base = fromEn(l, 'language');
+  return base ? slugify(base) : 'language';
 }

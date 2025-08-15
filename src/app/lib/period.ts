@@ -35,10 +35,10 @@ export function parsePeriodToMonths(period?: string): number {
     december: 11,
   };
 
-  const norm = (s: string) =>
+  const norm = (s: string): string =>
     s
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase()
       .trim();
 
@@ -46,12 +46,12 @@ export function parsePeriodToMonths(period?: string): number {
 
   // separadores: " - ", "–", " a "
   const parts = clean.split(/\s*[-–]\s*|\s+a\s+/);
-  const startStr = parts[0] ?? "";
+  const startStr = parts[0] ?? '';
   const endStrRaw: string | undefined = parts[1]; // puede venir vacío
 
   // helper: parse endpoint "mes año" | "año" | "actualidad/present"
   function parseEnd(sRaw: string | undefined, isEnd: boolean): Date | null {
-    const s = (sRaw ?? (isEnd ? "actualidad" : "")).trim();
+    const s = (sRaw ?? (isEnd ? 'actualidad' : '')).trim();
     if (!s) return null;
 
     if (/actual|present/.test(s)) return now;
@@ -59,8 +59,8 @@ export function parsePeriodToMonths(period?: string): number {
     // mes + año
     const m = s.match(/([a-z\u00f1]+)\s+(\d{4})/i);
     if (m) {
-      const monthName = norm(m[1] ?? "");
-      const yearStr = m[2] ?? "";
+      const monthName = norm(m[1] ?? '');
+      const yearStr = m[2] ?? '';
       const year = parseInt(yearStr, 10);
       const month = monthMap[monthName];
       if (Number.isInteger(year) && month !== undefined) {
@@ -87,9 +87,7 @@ export function parsePeriodToMonths(period?: string): number {
   if (!start || !end) return 0;
 
   let months =
-    (end.getFullYear() - start.getFullYear()) * 12 +
-    (end.getMonth() - start.getMonth()) +
-    1;
+    (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
 
   if (months < 0) months = 0;
   return months;

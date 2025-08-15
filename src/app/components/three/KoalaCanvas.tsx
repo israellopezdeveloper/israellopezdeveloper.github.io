@@ -1,49 +1,50 @@
-"use client";
+'use client';
 
-import React, { useEffect, useMemo, useRef, useState, Suspense } from "react";
-import * as THREE from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, OrbitControls, useGLTF } from "@react-three/drei";
-import { usePathname } from "next/navigation";
+import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { usePathname } from 'next/navigation';
+import React, { useEffect, useMemo, useRef, useState, Suspense, type JSX } from 'react';
+
+import type * as THREE from 'three';
 
 /** Mapea ruta -> modelo GLB (en /public/models) */
 const ROUTE_TO_MODEL: Record<string, string> = {
-  "/": "/models/koala_main.glb",
-  "/home": "/models/koala_main.glb",
-  "/work": "/models/koala_work.glb",
-  "/education": "/models/koala_education.glb",
+  '/': '/models/koala_main.glb',
+  '/home': '/models/koala_main.glb',
+  '/work': '/models/koala_work.glb',
+  '/education': '/models/koala_education.glb',
 };
 
-function pickModelForPath(pathname: string) {
-  if (pathname.startsWith("/work")) return ROUTE_TO_MODEL["/work"];
-  if (pathname.startsWith("/education")) return ROUTE_TO_MODEL["/education"];
-  if (pathname === "/" || pathname.startsWith("/home")) return ROUTE_TO_MODEL["/"];
+function pickModelForPath(pathname: string): string {
+  if (pathname.startsWith('/work')) return ROUTE_TO_MODEL['/work'] || '';
+  if (pathname.startsWith('/education')) return ROUTE_TO_MODEL['/education'] || '';
+  if (pathname === '/' || pathname.startsWith('/home')) return ROUTE_TO_MODEL['/'] || '';
   // fallback
-  return ROUTE_TO_MODEL["/"];
+  return ROUTE_TO_MODEL['/'] || '';
 }
 
 /** Carga y pinta un GLB */
-function GLB({ url }: { url: string }) {
+function GLB({ url }: { url: string }): JSX.Element {
   const { scene } = useGLTF(url);
   // opcional: centrar/escala si hiciera falta
   return <primitive object={scene} />;
 }
 
 // Preload de los modelos para cambios fluidos
-useGLTF.preload("/models/koala_main.glb");
-useGLTF.preload("/models/koala_work.glb");
-useGLTF.preload("/models/koala_education.glb");
+useGLTF.preload('/models/koala_main.glb');
+useGLTF.preload('/models/koala_work.glb');
+useGLTF.preload('/models/koala_education.glb');
 
 /** Gestiona: giro por cambio de ruta + giro idle cuando no hay interacción */
 function SpinningSwitcher({
   url,
-  duration = 1.0,        // seg. para la animación de cambio
-  idleSpeed = 0.6,        // radianes/segundo mientras está en reposo
+  duration = 1.0, // seg. para la animación de cambio
+  idleSpeed = 0.6, // radianes/segundo mientras está en reposo
 }: {
   url: string;
   duration?: number;
   idleSpeed?: number;
-}) {
+}): JSX.Element {
   const groupRef = useRef<THREE.Group>(null);
   const [currentUrl, setCurrentUrl] = useState(url);
   const [rotationProgress, setRotationProgress] = useState<number | null>(null);
@@ -103,9 +104,9 @@ function SpinningSwitcher({
   );
 }
 
-export default function KoalaCanvas() {
+export default function KoalaCanvas(): JSX.Element {
   const pathname = usePathname();
-  const modelUrl: string = useMemo(() => pickModelForPath(pathname || "/"), [pathname]) || "/";
+  const modelUrl: string = useMemo(() => pickModelForPath(pathname || '/'), [pathname]) || '/';
 
   return (
     <div id="koala-canvas-container" aria-hidden>
@@ -119,4 +120,3 @@ export default function KoalaCanvas() {
     </div>
   );
 }
-

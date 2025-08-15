@@ -1,29 +1,21 @@
-"use client";
+'use client';
 
-import NextLink from "next/link";
-import {
-  Box,
-  Image,
-  Text,
-  Heading,
-  Link,
-  HStack,
-} from "@chakra-ui/react";
-import type { PersonalProject } from "../hooks/usePersonalProjects";
-import TechBadge from "./TechBadge";
+import { Box, Image, Text, Heading, Link, HStack } from '@chakra-ui/react';
+import NextLink from 'next/link';
+
+import TechBadge from './TechBadge';
+
+import type { PersonalProject } from '../hooks/usePersonalProjects';
+import type { JSX } from 'react';
 
 type Props = {
   project: PersonalProject;
-  lang: "en" | "es" | "zh";
+  lang: 'en' | 'es' | 'zh';
   maxBadges?: number;
 };
 
-export default function ProjectGridItem({
-  project,
-  lang,
-  maxBadges = 6,
-}: Props) {
-  const title = project.lang[lang]?.name ?? "Untitled";
+export default function ProjectGridItem({ project, lang, maxBadges = 6 }: Props): JSX.Element {
+  const title = project.lang[lang]?.name ?? 'Untitled';
   const desc = project.lang[lang]?.desc;
 
   const badges = (project.technologies ?? [])
@@ -37,29 +29,18 @@ export default function ProjectGridItem({
       rounded="xl"
       overflow="hidden"
       borderWidth="1px"
-      _hover={{ shadow: "md" }}
+      _hover={{ shadow: 'md' }}
       className="workcard"
     >
       {project.thumbnail ? (
-        <Image
-          src={project.thumbnail}
-          alt={title}
-          w="full"
-          h="180px"
-          objectFit="contain"
-        />
+        <Image src={project.thumbnail} alt={title} w="full" h="180px" objectFit="contain" />
       ) : (
         <Box h="180px" bg="blackAlpha.100" />
       )}
 
       <Box p={4}>
         <Heading size="md" mb={1} lineClamp={2}>
-          <Link
-            as={NextLink}
-            href={project.url}
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link as={NextLink} href={project.url} target="_blank" rel="noreferrer">
             {title}
           </Link>
         </Heading>
@@ -77,4 +58,3 @@ export default function ProjectGridItem({
     </Box>
   );
 }
-

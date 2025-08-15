@@ -13,7 +13,6 @@
 ## Características
 
 - **Interfaz moderna y responsiva**: El portafolio está diseñado para ofrecer una experiencia de usuario fluida tanto en dispositivos móviles como en pantallas de escritorio.
-  
 - **Animaciones 3D**: Gracias a la combinación de Blender y Three.js, el portafolio cuenta con animaciones 3D interactivas que enriquecen la experiencia visual y demuestran mis habilidades en el desarrollo de gráficos avanzados.
 
 - **SEO optimizado**: Al utilizar Next.js, he podido optimizar el portafolio para motores de búsqueda, lo que mejora su visibilidad en línea y facilita que otros encuentren mi trabajo.
@@ -29,7 +28,6 @@ git clone https://github.com/israellopezdeveloper/israellopezdeveloper.github.io
 ```
 
 2. Navega al directorio del Proyecto:
-
 
 ```bash
 cd israellopezdeveloper.github.io.git
@@ -56,4 +54,3 @@ Este es un proyecto personal, pero si tienes sugerencias o encuentras algún pro
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
