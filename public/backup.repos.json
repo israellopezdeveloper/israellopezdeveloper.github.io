@@ -1,5 +1,66 @@
 [
   {
+    "id": 837935943,
+    "url": "https://github.com/israellopezdeveloper/israellopezdeveloper.github.io",
+    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/israellopezdeveloper.github.io/metadata-branch/logo.png",
+    "lang": {
+      "en": {
+        "name": "My portfolio",
+        "desc": "Source code of my portfolio"
+      },
+      "es": {
+        "name": "Mi portfolio",
+        "desc": "Código fuente de mi portfolio"
+      },
+      "zh": {
+        "name": "我的投资组合",
+        "desc": "我的投资组合的源代码"
+      }
+    },
+    "technologies": [
+      {
+        "tech": "Python",
+        "time": 12
+      },
+      {
+        "tech": "TypeScript",
+        "time": 12
+      },
+      {
+        "tech": "JavaScript",
+        "time": 12
+      },
+      {
+        "tech": "CSS",
+        "time": 12
+      },
+      {
+        "tech": "Next.js",
+        "time": 12
+      },
+      {
+        "tech": "Chakra",
+        "time": 12
+      },
+      {
+        "tech": "React.js",
+        "time": 12
+      },
+      {
+        "tech": "Node.js",
+        "time": 12
+      },
+      {
+        "tech": "Three.js",
+        "time": 12
+      },
+      {
+        "tech": "Blender",
+        "time": 12
+      }
+    ]
+  },
+  {
     "id": 1023013524,
     "url": "https://github.com/israellopezdeveloper/democracy_chain",
     "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/democracy_chain/metadata-branch/logo.png",
@@ -428,55 +489,6 @@
       {
         "tech": "StreamLit",
         "time": 10
-      }
-    ]
-  },
-  {
-    "id": 837935943,
-    "url": "https://github.com/israellopezdeveloper/israellopezdeveloper.github.io",
-    "thumbnail": "https://raw.githubusercontent.com/israellopezdeveloper/israellopezdeveloper.github.io/metadata-branch/logo.png",
-    "lang": {
-      "en": {
-        "name": "My portfolio",
-        "desc": "Source code of my portfolio"
-      },
-      "es": {
-        "name": "Mi portfolio",
-        "desc": "Código fuente de mi portfolio"
-      },
-      "zh": {
-        "name": "我的投资组合",
-        "desc": "我的投资组合的源代码"
-      }
-    },
-    "technologies": [
-      {
-        "tech": "JavaScript",
-        "time": 12
-      },
-      {
-        "tech": "next.js",
-        "time": 12
-      },
-      {
-        "tech": "chakra",
-        "time": 12
-      },
-      {
-        "tech": "react",
-        "time": 12
-      },
-      {
-        "tech": "node.js",
-        "time": 12
-      },
-      {
-        "tech": "threejs",
-        "time": 12
-      },
-      {
-        "tech": "blender",
-        "time": 12
       }
     ]
   },

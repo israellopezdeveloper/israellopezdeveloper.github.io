@@ -35,7 +35,6 @@ export default [
     ],
   },
 
-
   // ---------- TypeScript (con type-check) ----------
   ...tseslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
