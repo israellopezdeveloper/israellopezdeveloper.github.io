@@ -3,12 +3,17 @@ import tseslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
 import prettier from 'eslint-config-prettier';
+import { FlatCompat } from '@eslint/eslintrc';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+const compat = new FlatCompat({ baseDirectory: __dirname });
+
 export default [
+  ...compat.extends('next/core-web-vitals'),
+
   // Ignorados: sustituyen a .eslintignore
   {
     ignores: [
