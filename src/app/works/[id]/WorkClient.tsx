@@ -12,15 +12,15 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
+import TechBadge from '@/app/components/TechBadge';
+import { useI18n } from '@/app/i18n/useI18n';
+
 import { useLanguage } from '../../components/context/LanguageContext';
 import { useCvData } from '../../hooks/useCvData';
 import { getItemSlug } from '../../lib/slug';
 
 import type { CVLink, CVProject, CVWork } from '@/app/types/cv';
 import type { JSX } from 'react';
-
-import TechBadge from '@/app/components/TechBadge';
-import { useI18n } from '@/app/i18n/useI18n';
 
 type WorkClientProps = { id: string };
 

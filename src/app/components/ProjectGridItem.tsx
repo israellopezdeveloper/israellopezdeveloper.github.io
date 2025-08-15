@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Image, Text, Heading, Link, HStack } from '@chakra-ui/react';
+import { Box, Image, Text, Link, HStack } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 import TechBadge from './TechBadge';
@@ -37,28 +37,29 @@ export default function ProjectGridItem({
       className="workcard"
     >
       {project.thumbnail ? (
-        <Image
-          src={project.thumbnail}
-          alt={title}
-          w="full"
-          h="180px"
-          objectFit="contain"
-        />
+        <Link
+          as={NextLink}
+          href={project.url}
+          target="_blank"
+          rel="noreferrer"
+          style={{ width: '100%' }}
+        >
+          <Image
+            src={project.thumbnail}
+            alt={title}
+            w="full"
+            h="180px"
+            objectFit="contain"
+          />
+        </Link>
       ) : (
         <Box h="180px" bg="blackAlpha.100" />
       )}
 
       <Box p={4}>
-        <Heading size="md" mb={1} lineClamp={2}>
-          <Link
-            as={NextLink}
-            href={project.url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {title}
-          </Link>
-        </Heading>
+        <Link as={NextLink} href={project.url} target="_blank" rel="noreferrer">
+          {title}
+        </Link>
 
         {desc ? <Text lineClamp={3}>{desc}</Text> : null}
 
