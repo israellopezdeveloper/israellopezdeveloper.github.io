@@ -6,6 +6,10 @@ import {
   Heading,
   Grid,
   GridItem,
+  Drawer,
+  Portal,
+  CloseButton,
+  Button,
 } from '@chakra-ui/react';
 import * as React from 'react';
 
@@ -45,6 +49,7 @@ export default function WorksPage(): React.JSX.Element {
     error: errorRepos,
   } = usePersonalProjects();
   const t = useI18n();
+  const [open, setOpen] = React.useState(false);
 
   // 1) Referencias estables
   const companies = React.useMemo<CVWork[]>(
@@ -136,8 +141,47 @@ export default function WorksPage(): React.JSX.Element {
 
   return (
     <Container maxW="container.lg" py={8}>
+      {/* Botón para pantallas pequeñas */}
+      <div style={{ marginTop: 24, display: 'block' }} className="lg:hidden">
+        <Button onClick={() => setOpen(true)} style={{ width: '100%' }}>
+          {t('filter')}
+        </Button>
+
+        <Drawer.Root
+          open={open}
+          onOpenChange={(e) => setOpen(e.open)}
+          placement="end"
+        >
+          <Portal>
+            <Drawer.Backdrop />
+            <Drawer.Positioner>
+              <Drawer.Content>
+                <Drawer.Header>
+                  <Drawer.Title>Filter</Drawer.Title>
+                </Drawer.Header>
+
+                <Drawer.Body>
+                  <TechFilterSidebar
+                    items={aggregated}
+                    active={activeTechs}
+                    onToggleAction={toggleTech}
+                    onActivateAllAction={activateAll}
+                    onClearAction={clearAll}
+                  />
+                </Drawer.Body>
+
+                <Drawer.Footer>
+                  <Drawer.CloseTrigger asChild>
+                    <CloseButton size="sm" />
+                  </Drawer.CloseTrigger>
+                </Drawer.Footer>
+              </Drawer.Content>
+            </Drawer.Positioner>
+          </Portal>
+        </Drawer.Root>
+      </div>
       <Grid
-        templateColumns={{ base: '1fr', lg: '1fr 270px' }}
+        templateColumns={{ base: '1fr', lg: '1fr' }}
         gap={8}
         alignItems="start"
       >
@@ -151,7 +195,7 @@ export default function WorksPage(): React.JSX.Element {
               {t('loading')}
             </Heading>
           ) : (
-            <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} gap={8}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
               {filteredCompanies.map((w, idx) => {
                 const id = getItemSlug(w);
                 return (
@@ -190,17 +234,6 @@ export default function WorksPage(): React.JSX.Element {
               ))}
             </SimpleGrid>
           )}
-        </GridItem>
-
-        {/* Sidebar derecha con filtros */}
-        <GridItem display={{ base: 'none', lg: 'block' }}>
-          <TechFilterSidebar
-            items={aggregated}
-            active={activeTechs}
-            onToggleAction={toggleTech}
-            onActivateAllAction={activateAll}
-            onClearAction={clearAll}
-          />
         </GridItem>
       </Grid>
     </Container>

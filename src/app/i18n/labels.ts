@@ -34,6 +34,7 @@ export type LabelKey =
   | 'notFound'
   | 'loading'
   | 'toggleColorMode'
+  | 'filter'
   | 'accreditations';
 
 const es: Record<LabelKey, string> = {
@@ -69,6 +70,7 @@ const es: Record<LabelKey, string> = {
   notFound: 'No se ha encontrado',
   loading: 'Cargando ...',
   toggleColorMode: 'Cambiar modo de color',
+  filter: 'Filtro',
   accreditations: 'Acreditaciones',
 };
 
@@ -105,6 +107,7 @@ const en: Record<LabelKey, string> = {
   notFound: 'Not found',
   loading: 'Loading ...',
   toggleColorMode: 'Toggle color mode',
+  filter: 'Filter',
   accreditations: 'Accreditations',
 };
 
@@ -142,6 +145,7 @@ const zh: Record<LabelKey, string> = {
   notFound: '未找到',
   loading: '加载中……',
   toggleColorMode: '切换颜色模式',
+  filter: '滤波器',
   accreditations: '认证',
 };
 
