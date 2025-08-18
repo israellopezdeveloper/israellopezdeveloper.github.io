@@ -25,4 +25,4 @@ line-length = 100
 [tool.poetry.scripts]
 traduce = "editor.traductor.__main__:main"
 resume = "editor.summarizer.__main__:main"
-editor = "editor.__main__:main"
+editor = "editor.app.main:main"

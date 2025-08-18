@@ -45,28 +45,68 @@ def to_nllb(code: str) -> str:
 
 # ------------------------ Reglas de exclusión ------------------------------
 
-EXCLUDE_KEYS = {
-    "url",
-    "urls",
-    "link",
-    "links",
-    "thumbnail",
-    "thumbnails",
-    "icon",
-    "icons",
-    "image",
-    "images",
-    "profile_image",
-    "period_time",
-    "dates",
-    "acreditations",
-    "phone",
-    "tel",
-    "email",
-    "technologies",
-    "name",
-    "university_name",
-}
+EXCLUDE_PATHS = [
+    "profile.name",
+    "profile.links[].icon",
+    "profile.links[].url",
+    "works[].name",
+    "works[].thumbnail",
+    "works[].period_time.",
+    "works[].links[].icon",
+    "works[].links[].url",
+    "works[].projects[].links[].url",
+    "works[].projects[].links[].icon",
+    "works[].projects[].technologies[]",
+    "works[].technologies[]",
+    "works[].images[]",
+    "educations[].university[].images[]",
+    "educations[].university[].thumbnail",
+    "educations[].university[].university_name",
+    "educations[].complementary[].images[]",
+    "educations[].complementary[].thumbnail",
+    "educations[].complementary[].institution",
+    "educations[].languages[].acreditations[].institution",
+    "educations[].languages[].acreditations[].title",
+    "educations[].languages[].thumbnail",
+]
+
+
+def _compile_exclude_patterns(patterns: List[str]):
+    comp = []
+    for p in patterns:
+        toks = []
+        for part in p.split("."):
+            if part.endswith("[]"):
+                toks.append((part[:-2], True))  # (clave, requiere_indice)
+            else:
+                toks.append((part, False))
+        comp.append(toks)
+    return comp
+
+
+_COMPILED_EXCLUDE = _compile_exclude_patterns(EXCLUDE_PATHS)
+
+
+def _path_matches_tokens(tokens: List[Tuple[str, bool]], path: Tuple[Any, ...]) -> bool:
+    """Compara tokens (clave / clave[]) con la tupla de ruta real (claves y enteros). Match exacto."""
+    j = 0
+    for key, wants_index in tokens:
+        if j >= len(path) or path[j] != key:
+            return False
+        j += 1
+        if wants_index:
+            if j >= len(path) or not isinstance(path[j], int):
+                return False
+            j += 1
+    return j == len(path)
+
+
+def is_excluded_path(path: Tuple[Any, ...]) -> bool:
+    for tokens in _COMPILED_EXCLUDE:
+        if _path_matches_tokens(tokens, path):
+            return True
+    return False
+
 
 RE_URL = re.compile(r"^https?://", re.I)
 RE_EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -102,19 +142,30 @@ def walk_collect(
     if isinstance(obj, dict):
         molded: Dict[Any, Any] = {}
         for k, v in obj.items():
-            if k in EXCLUDE_KEYS:
+            new_path = path + (k,)
+            if is_excluded_path(new_path) or v == "":
+                # No tocar nada bajo esta ruta
                 molded[k] = v
                 continue
-            molded[k] = walk_collect(v, path + (k,), k, pending_plain, pending_html)
+            molded[k] = walk_collect(v, new_path, k, pending_plain, pending_html)
         return molded
 
     if isinstance(obj, list):
-        return [
-            walk_collect(v, path + (i,), parent_key, pending_plain, pending_html)
-            for i, v in enumerate(obj)
-        ]
+        out_list: List[Any] = []
+        for i, v in enumerate(obj):
+            new_path = path + (i,)
+            if is_excluded_path(new_path):
+                out_list.append(v)  # entero excluido (p.ej. images[], technologies[])
+            else:
+                out_list.append(
+                    walk_collect(v, new_path, parent_key, pending_plain, pending_html)
+                )
+        return out_list
 
     if isinstance(obj, str):
+        # Excluir por ruta exacta (e.g., intro.name, ... .url, ... .thumbnail, etc.)
+        if is_excluded_path(path):
+            return obj
         if is_untranslatable_leaf(obj):
             return obj
         if is_html_like(obj):
