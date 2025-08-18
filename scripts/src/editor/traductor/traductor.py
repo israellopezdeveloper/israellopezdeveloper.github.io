@@ -9,6 +9,13 @@ import torch
 from bs4 import BeautifulSoup
 from bs4.element import Tag, NavigableString
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+import os
+
+# Evita exceso de hilos en tokenizers (a veces da sensación de "freeze")
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+
+# Cache sencilla de traductores por configuración
+_TRANSLATOR_CACHE: dict[tuple, NLLBTranslator] = {}
 
 # ---------- Mapeo de idiomas a códigos NLLB (acepta ISO corto) ------------
 
@@ -412,6 +419,37 @@ def translate_json_file(
         json.dump(translated, f, ensure_ascii=False, indent=2)
 
 
+def _get_translator(
+    *,
+    model_name: str,
+    device: Optional[str],
+    fp16: bool,
+    num_beams: int,
+    max_input_length: int = 1024,
+    max_new_tokens: int = 512,
+) -> NLLBTranslator:
+    key = (
+        model_name,
+        device or ("cuda:0" if torch.cuda.is_available() else "cpu"),
+        bool(fp16),
+        int(num_beams),
+        int(max_input_length),
+        int(max_new_tokens),
+    )
+    tr = _TRANSLATOR_CACHE.get(key)
+    if tr is None:
+        tr = NLLBTranslator(
+            model_name=model_name,
+            device=device,
+            fp16=fp16,
+            num_beams=num_beams,
+            max_input_length=max_input_length,
+            max_new_tokens=max_new_tokens,
+        )
+        _TRANSLATOR_CACHE[key] = tr
+    return tr
+
+
 def translate_json(
     data: Any,
     src_lang: str = "es",
@@ -428,6 +466,12 @@ def translate_json(
     Traduce un objeto JSON ya cargado en memoria usando NLLB.
     Acepta códigos ISO cortos ("es", "en", "zh") o NLLB ("spa_Latn", etc.).
     """
+    translator = _get_translator(
+        model_name=model_name,
+        device=device,
+        fp16=True,
+        num_beams=num_beams,
+    )
     translator = NLLBTranslator(
         model_name=model_name,
         device=device,

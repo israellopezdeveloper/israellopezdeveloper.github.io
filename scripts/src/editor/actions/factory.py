@@ -34,6 +34,7 @@ def create_menu_actions(main: QtWidgets.QMainWindow) -> Dict[str, QtGui.QAction]
 
     A["translate"] = act("&Translate", "Ctrl+T", "Traducir contenido")
     A["summarize"] = act("&Summarize", "Ctrl+R", "Resumir contenido")
+    A["internationalize"] = act("&internationalize", "Ctrl+I", "Internacionalizar")
 
     # Conexiones si existen los métodos
     _connect(A["new"], getattr(main, "on_new", None))
@@ -44,6 +45,7 @@ def create_menu_actions(main: QtWidgets.QMainWindow) -> Dict[str, QtGui.QAction]
 
     _connect(A["translate"], getattr(main, "action_translate", None))
     _connect(A["summarize"], getattr(main, "action_summarize", None))
+    _connect(A["internationalize"], getattr(main, "action_internationalize", None))
 
     return A
 
@@ -69,6 +71,7 @@ def create_button_actions(main: QtWidgets.QMainWindow) -> Dict[str, QtGui.QActio
 
     A["translate"] = act("󰗊", "Traducir contenido")
     A["summarize"] = act("", "Resumir contenido")
+    A["internationalize"] = act("🌏", "Internacionalizar")
 
     # Conexiones si existen los métodos
     _connect(A["new"], getattr(main, "on_new", None))
@@ -77,5 +80,6 @@ def create_button_actions(main: QtWidgets.QMainWindow) -> Dict[str, QtGui.QActio
 
     _connect(A["translate"], getattr(main, "action_translate", None))
     _connect(A["summarize"], getattr(main, "action_summarize", None))
+    _connect(A["internationalize"], getattr(main, "action_internationalize", None))
 
     return A
