@@ -18,11 +18,23 @@ jsonschema = "^4.25.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "*"
+black = "^25.1.0"
+isort = "^6.0.1"
+flake8 = "^7.3.0"
+mypy = "^1.17.1"
+pre-commit = "^4.3.0"
 
 [tool.ruff]
-line-length = 100
+line-length = 88
 
 [tool.poetry.scripts]
 traduce = "editor.traductor.__main__:main"
 resume = "editor.summarizer.__main__:main"
 editor = "editor.app.main:main"
+format = "black ."
+lint = "flake8 ."
+sort-imports = "isort ."
+
+[tool.black]
+line-length = 88
+target-version = ['py313']
