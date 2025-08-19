@@ -149,7 +149,7 @@ def ensure_profile_defaults(v: Any) -> Profile:
 def ensure_portfolio_defaults(v: Any) -> PortfolioData:
     d = dict(v or {})
     return {
-        "profile": ensure_profile_defaults(d.get("profile") or {}),
+        "intro": ensure_profile_defaults(d.get("intro") or d.get("profile") or {}),
         "works": [ensure_work_defaults(x) for x in (d.get("works") or [])],
         "educations": ensure_educations_defaults(d.get("educations") or {}),
     }

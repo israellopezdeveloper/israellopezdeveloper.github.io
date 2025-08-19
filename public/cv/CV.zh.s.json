@@ -4,90 +4,71 @@
     "profile_image": "israel.png",
     "name": "Israel López",
     "title": "高级软件工程师",
-    "summary": [
-      "<p>我的背包充满了代码,我想继续学习.编程是我的超能力!</p>",
-      "<p>从我13岁开始,我一直被编程虫子咬伤,我无法停下来.</p>",
-      "<p>我认为自己是一个不安的头脑,因为我渴望学习,创新和克服新的智力挑战.我喜欢看到一个想法通过代码成为现实.</p>",
-      "<p>我很幸运,编程不仅是我的工作,也是我的热情,如果我有什么特点,那就是我坚持寻找最好的解决方案,因为我很自豪地提供清洁,高效的代码.</p>",
-      "<p>如果我们连接起来,你准备好与我开启新的技术冒险吗?</p>"
+    "summary": "<p>我的背包充满了代码,我想继续学习.编程是我的超能力! 从我13岁开始,我一直被编程虫子咬伤,我无法停下来.</p>",
+    "links": [
+      {
+        "text": "@israellopezdeveloper",
+        "url": "https://github.com/israellopezdeveloper",
+        "icon": ""
+      },
+      {
+        "text": "israel.lopez.developer@gmail.com",
+        "url": "mailto:israel.lopez.developer@gmail.com",
+        "icon": "󰇮"
+      },
+      {
+        "text": "https://www.linkedin.com/in/israellopezmaiz/",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/",
+        "icon": "󰌻"
+      },
+      {
+        "text": "+34 648 13 66 40",
+        "url": "tel:+34648136640",
+        "icon": ""
+      }
     ],
+    "hobbies": "<p>登山, 滑雪板, 旅行, 潜水, 数学 (尤其是线性代数和统计学), 人工智能.</p>",
     "bio": [
       {
-        "dates": "1983",
+        "dates": "1983 年",
         "text": "我出生在西班牙马德里."
       },
       {
-        "dates": "2007",
+        "dates": "2007 年",
         "text": "在河内尔卡拉大学完成计算机学士学位"
       },
       {
-        "dates": "2009",
+        "dates": "2009 年",
         "text": "在亨雷斯阿尔卡拉大学完成了人工智能信息和技术传播士学位."
       },
       {
-        "dates": "2004 a la actualidad",
+        "dates": "2004年至今",
         "text": "作为一名员工"
-      }
-    ],
-    "hobbies": [
-      "登山, 滑雪板, 旅行, 潜水, 数学 (尤其是线性代数和统计学), 人工智能."
-    ],
-    "links": [
-      {
-        "icon": "",
-        "url": "https://github.com/israellopezdeveloper",
-        "text": "@israellopezdeveloper"
-      },
-      {
-        "icon": "󰇮",
-        "url": "mailto:israel.lopez.developer@gmail.com",
-        "text": "israel.lopez.developer@gmail.com"
-      },
-      {
-        "icon": "󰌻",
-        "url": "https://www.linkedin.com/in/israellopezmaiz/",
-        "text": "https://www.linkedin.com/in/israellopezmaiz/"
-      },
-      {
-        "icon": "",
-        "url": "tel:+34648136640",
-        "text": "+34 648 13 66 40"
       }
     ]
   },
   "works": [
     {
       "name": "Datura AI",
-      "title": "高级软件开发人员 - 自由职业",
-      "short_description": [
-        "达图拉AI是一家专注于比特森森等网络分散技术的初创公司.其使命是构建解决方案,超越集中系统,提供易于使用的工具和高性能产品.<strong></strong>一个即时在容器中部署人工智能模型的平台,可编辑 pods,部署模板和快速执行模型,如Stable Diffusion或Whisper."
-      ],
+      "short_description": "<p>一个即时在容器中部署人工智能模型的平台,可编辑 pods,部署模板和快速执行模型,如Stable Diffusion或Whisper.</p>",
       "thumbnail": "daturaai.png",
-      "period_time": "Marzo 2025 - Actualidad",
-      "full_description": [
-        "<p>数据库 AI (AI) 是AI 在云和远程设备中使用的工具.</p>"
-      ],
-      "contribution": ["<p>编者按:本文不代表BBC观点和立场.</p>"],
+      "period_time": {
+        "start": "2025年3月",
+        "end": "",
+        "current": true
+      },
+      "full_description": "<p>数据库 AI 是一个专门开发用于分散网络和分布式环境中分布和执行人工智能模型的技术的公司.其目标是消除集中系统的局限性,提供可安全,快速和可扩展的AI模型在云和远程设备中部署的工具. 动态地编辑 pods 和调整资源. 使用优化的模板,如稳定扩散,Whisper,LLaMA或Mistral. 集成到像Bittensor这样的分散生态系统.</p>",
+      "contribution": "<p>在Python和Rust中实现模型管理,监控和故障恢复模块. 用Docker和Kubernetes实现部署管道自动化. 优化使用GPU和CPU,以最大限度地提高能源效率.</p>",
       "links": [
         {
-          "icon": "",
-          "text": "Website",
+          "text": "网站",
           "url": "https://www.datura.ai"
         }
       ],
       "projects": [
         {
-          "description": [
-            "<p>利姆(Lim) 是全球最先进的AI 数据库 - AI 网络平台.</p>"
-          ],
-          "links": [
-            {
-              "icon": "",
-              "text": "Portal de Celium",
-              "url": "https://celium.datura.ai"
-            }
-          ],
-          "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
+          "name": "在分布式环境中进行人工智能模型配乐和分发平台",
+          "description": "<p>利姆是一个由 数据库 AI 在分布式网络和远程设备上管理,部署和优化人工智能模型. 它的目标是促进执行复杂的模型,如稳定扩散,声,LLaMA或Mistral,即使在资源有限的环境中,确保高可用性,可扩展性和性能. 该平台允许用户: 在本地基础设施,云或边缘容器中即时部署模型. 动态编辑 pods 和重新分配资源 (CPU, GPU,内存) 适应需求. 它使用智能负载平衡,分布式数据管理和先进的流程 afinity 技术来最大限度地提高可用硬件的能源效率和性能.</p>",
           "technologies": [
             "Python",
             "Rust",
@@ -102,38 +83,34 @@
             "Tech",
             "Bittensor",
             "Prometheus"
-          ]
+          ],
+          "links": [
+            {
+              "text": "的门户",
+              "url": "https://lium.io/"
+            }
+          ],
+          "images": []
         }
       ],
-      "technologies": [],
       "images": []
     },
     {
       "name": "Indra",
-      "title": "软件架构师",
-      "short_description": [
-        "印拉是西班牙领先的咨询和技术跨国公司,遍布140多个国家.它为国防,运输,能源,安全和数字化转型等领域提供创新解决方案.在国防领域,它开发战略和关键任务系统,以加强欧洲和北约盟国军队的技术自主和互操作性."
-      ],
+      "short_description": "印拉是西班牙领先的咨询和技术跨国公司,遍布140多个国家.它为国防,运输,能源,安全和数字化转型等领域提供创新解决方案.在国防领域,它开发战略和关键任务系统,以加强欧洲和北约盟国军队的技术自主和互操作性.",
       "thumbnail": "indra.png",
-      "period_time": "Abril 2024 - Febrero 2025",
-      "full_description": [
-        "<p>印拉(印度拉)是欧洲和北约国家首个新一代军事车辆任务系统的开发。</p>"
-      ],
-      "contribution": ["<p>印德拉(Idora) 是印度工程师的硕士生,也是工程师.</p>"],
+      "period_time": {
+        "start": "2024年4月",
+        "end": "2025年2月",
+        "current": false
+      },
+      "full_description": "<p>印拉是全球领先的咨询和技术公司之一,为国防,运输,能源,安全和数字化转型部门提供集成解决方案. 在国防领域,INDRA领导了欧洲和北约国家首个新一代军事车辆任务系统的开发,这是一个先项目,旨在为军队提供一个开放,模块化和可扩展的平台,将传感器,通信系统,人工智能能力和GIS组件结合起来,以优化在复杂的运营环境中决策.该系统是欧洲国防基金倡议的一部分,旨在加强欧洲的战略自治和盟军之间的互操作性.</p>",
+      "contribution": "<p>在印德拉,我参与了以下关键领域: 背端设计和实施 在Java和Node.js中使用清洁架构原则来实现可维护性和可扩展性. 一个RAG系统的集成 对于操作智能背景回收:多元摄入,嵌入和语义搜索. 在Jira中,Agile (SCRUM) 和管理 优先考虑关键功能和协调依赖. 与GitLab的CI/CD 并且在 子子 ;可用Prometheus和Grafana进行观察.</p>",
       "links": [],
       "projects": [
         {
-          "description": [
-            "<p>印度在欧洲国防基金框架内开发了首个新一代军事车辆任务系统.</p>"
-          ],
-          "links": [
-            {
-              "icon": "",
-              "text": "Participación de Indra en el Fondo Europeo de Defensa",
-              "url": "https://www.indracompany.com/es/noticia/indra-lidera-participacion-espanola-proyectos-fondo-europeo-defensa-entra-formar-12"
-            }
-          ],
-          "name": "Sistema de misión de nueva generación para vehículos militares",
+          "name": "新一代军用车任务系统",
+          "description": "<p>印度在欧洲国防基金框架内开发的战略项目 欧洲和北约国家首个新一代军事车辆任务系统 系统将人工智能,GIS和传感器管理能力结合起来,为军队提供在复杂运营环境中战术优势. 责任 在Clean Architecture原则下在Java和Node.js中设计和实现后端微服务. 在互动地图中实现地理空间分析和战术可视化GIS功能. 在GitLab中自动化IC/CD管道,并部署在Kubernetes中.</p>",
           "technologies": [
             "Java",
             "Spring Boot",
@@ -158,47 +135,39 @@
             "Jira",
             "Prometheus",
             "Grafana"
-          ]
+          ],
+          "links": [
+            {
+              "text": "印度对欧洲国防基金的参与",
+              "url": "https://www.indracompany.com/es/noticia/indra-lidera-participacion-espanola-proyectos-fondo-europeo-defensa-entra-formar-12"
+            }
+          ],
+          "images": []
         }
       ],
-      "technologies": [],
       "images": []
     },
     {
       "name": "Devo",
-      "title": "高级软件工程师",
-      "short_description": [
-        "提供实时安全分析,机器学习和可扩展的企业数据管理解决方案."
-      ],
+      "short_description": "提供实时安全分析,机器学习和可扩展的企业数据管理解决方案.",
       "thumbnail": "devo.png",
-      "period_time": "Marzo 2020 - Marzo 2024",
-      "full_description": [
-        "<p>美国威尔士计算机安全公司(Devo)是全球最大的数据管理公司之一.</p>"
-      ],
-      "contribution": [
-        "<p>作为美国联邦数据处理系统(FedRAMP)的首席执行官,我一直担任该系统创建人。</p>"
-      ],
+      "period_time": {
+        "start": "2020年3月",
+        "end": "2024年3月",
+        "current": false
+      },
+      "full_description": "<p>Devo是一家领先的记录分析和云本土安全公司,致力于为企业数据提供实时知识和先进分析.其强大的平台使组织能够有效地检测,分析和应对安全威胁,利用机器学习的力量和高度可扩展的架构. Devo的解决方案旨在管理大量数据,确保企业能够保持高水平的性能和安全.</p>",
+      "contribution": "<p>此外,我对 Devo的努力做出了重大贡献,以适应美国联邦系统集成所需的标准,获得FedRAMP认证.我还参与了创建多区域和多云支持系统,确保多个环境中的数据的冗余性和可靠性.我的工作确保了 Devo的平台达到高安全水平,更有效地服务于公司的客户.</p>",
       "links": [
         {
-          "tag": "Sitio web",
-          "url": "https://www.devo.com/es/",
-          "text": "Sitio web de Devo"
+          "text": "戴沃的网站",
+          "url": "https://www.devo.com/es/"
         }
       ],
       "projects": [
         {
-          "name": "Mejorar el balanceador de carga existente",
-          "description": [
-            "<p>我通过实施先进的策略来提高DevO负载平衡器的性能,提高了故障耐受性,优化了数据摄入服务的监控.我仔细分析了系统要求,并确定了关键的改进领域,确保负载平衡器能够更高效地处理变量流量水平.我对改进故障耐受性机制的努力帮助系统快速从意外故障中恢复,保持高可用性和可靠性.</p>",
-            "<p>我的计算机软件“Doo”是专门为客户提供数据。</p>"
-          ],
-          "links": [
-            {
-              "tag": "Documentación",
-              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers",
-              "text": "Documentación del balanceador de carga"
-            }
-          ],
+          "name": "改进现有负载推移器",
+          "description": "<p>我通过实施先进的策略来提高DevO负载平衡器的性能,提高了故障耐受性,优化了数据摄入服务的监控.我仔细分析了系统要求,并确定了关键的改进领域,确保负载平衡器能够更高效地处理变量流量水平.我对改进故障耐受性机制的努力帮助系统快速从意外故障中恢复,保持高可用性和可靠性. 我的贡献导致了更强,更响应的负载平衡系统,显著提高了 Devo的性能和用户体验.</p>",
           "technologies": [
             "Node.js",
             "C",
@@ -215,17 +184,18 @@
             "Jira",
             "TDD",
             "BDD"
-          ]
+          ],
+          "links": [
+            {
+              "text": "货物推移仪的文件",
+              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers"
+            }
+          ],
+          "images": []
         },
         {
-          "name": "Crear un sistema de respaldo multicloud",
-          "description": [
-            "<p>我负责从零开始开发一款最新的多云备份系统,这是 Devo的冗余和灾难恢复能力的关键进展.该系统旨在存储客户记录在多个区域和云环境中,确保最大的数据保护和可用性.该系统的一个关键特点是它能够设置实时存储类型,允许流动调整基于实时需求和标准的云存储配置.</p>",
-            "<p>我实施了复杂的数据过渡标准,这些标准根据使用模式和保留政策来自动化了不同类型的存储之间的数据流动,</p>",
-            "<p>除此之外,我的系统还包括强大的节点恢复机制,允许节点故障时快速恢复服务.这显著减少了停机时间,并保持了关键数据的完整性和可用性.</p>",
-            "<p>我的计算机系统是备份数据的最佳工具,专门处理数据。</p>"
-          ],
-          "links": [],
+          "name": "创建多云备份系统",
+          "description": "<p>我负责从零开始开发一款最新的多云备份系统,这是 Devo的冗余和灾难恢复能力的关键进展.该系统旨在存储客户记录在多个区域和云环境中,确保最大的数据保护和可用性.该系统的一个关键特点是它能够设置实时存储类型,允许流动调整基于实时需求和标准的云存储配置. 最后,我整合了精确的系统清洁时间,确保过时的数据及时被删除,保持系统的最佳性能和存储健康.我对这个多云备份系统的贡献不仅增强了 Devo的数据管理能力,还确保了严格的安全和数据保留监管的遵守.</p>",
           "technologies": [
             "Java",
             "AWS",
@@ -242,24 +212,13 @@
             "Jira",
             "TDD",
             "BDD"
-          ]
-        },
-        {
-          "name": "Integrar revisiones de calidad y seguridad en el pipeline CI/CD",
-          "description": [
-            "<p>我在将全面的质量和安全审查集成到DevO的IC/CD管道中发挥了重要作用. 这一举措对于将开发过程提升到符合NIST,FIPS和FedRAMP等严格的行业标准,</p>",
-            "<p><b>连接詹金斯管道</b></p>",
-            "<p>首先,我专注于将 SonarQube 纳入Jenkins 管道中进行持续的代码质量分析.我设置了 SonarQube 进行静态代码分析,这使得团队能够在开发周期早期发现代码气味,错误和可能的漏洞.</p>",
-            "<p><b>转向 GitLab CI/CD</b></p>",
-            "<p>在Jenkins的成功之后,我将管道转换为GitLab CI/CD. 我利用GitLab的先进功能来加速流程,提高代码实现自动化. 这一变化使整个开发团队更好地协作和效率.</p>",
-            "<p><b>安全漏洞扫描</b></p>",
-            "<p>为了解决安全漏洞,我将Snyk和OWASP集成到CI/CD管道中.Snyk提供了实时开源依赖性扫描,识别和建议已知漏洞的解决方案.</p>",
-            "<p><b>实现符合标准</b></p>",
-            "<p>我的精心工作确保了该管道符合NIST,FIPS和FedRAMP所要求的严格标准. 我在CI/CD过程中建立了自动化验证和平衡,确保每个代码更改都在实施前经过全面的质量和安全审查. 这不仅改善了应用程序的整体安全态度,还加速了遵守验证过程,</p>",
-            "<p><b>结果</b></p>",
-            "<p>我的贡献使我的项目在网络安全和数据分析中发挥重要作用.</p>"
           ],
           "links": [],
+          "images": []
+        },
+        {
+          "name": "将质量和安全检查集成到IC/CD管道中",
+          "description": "<p>我在将全面的质量和安全审查集成到DevO的IC/CD管道中发挥了重要作用. 这一举措对于将开发过程提升到符合NIST,FIPS和FedRAMP等严格的行业标准, 连接詹金斯管道 首先,我专注于将 SonarQube 纳入Jenkins 管道中进行持续的代码质量分析.我设置了 SonarQube 进行静态代码分析,这使得团队能够在开发周期早期发现代码气味,错误和可能的漏洞. 转向 GitLab CI/CD 在Jenkins的成功之后,我将管道转换为GitLab CI/CD. 安全漏洞扫描 为了解决安全漏洞,我将Snyk和OWASP集成到CI/CD管道中.Snyk提供了实时开源依赖性扫描,识别和建议已知漏洞的解决方案. 这不仅改善了应用程序的整体安全态度,还加速了遵守验证过程, 结果 我的贡献显著提高了 Devo CI/CD管道的强性,确保代码质量和安全性保持在最高水平.</p>",
           "technologies": [
             "Gitlab CI/CD",
             "Jenkins",
@@ -271,19 +230,13 @@
             "Owasp",
             "Kubernetes",
             "Jira"
-          ]
-        },
-        {
-          "name": "Creación de un sistema de alerta para monitoreo con Prometheus",
-          "description": [
-            "<p>我在开发一个全面的警报系统中发挥了重要作用,该系统旨在通过Prometheus来监测生产环境中的性能和危机情况. 意识到需要实时监测和快速响应机制,</p>",
-            "<p>为了实现这一目标,我将Prometheus集成到 Devo的基础设施中,设置了强大的测量和警报收集机制. 我定义了关键绩效指标 (KPIs) 和关键门来维持系统健康和稳定.</p>",
-            "<p>除了设置警报系统之外,我还开发了一份完整的解决问题指南,以帮助操作团队快速诊断和解决问题. 这项指南包括确定警报的根源,建议行动和升级协议的步骤程序. 该指南确保团队成员清楚地了解如何处理不同类型的警报,从较小的性能下降到系统关键故障.</p>",
-            "<p>此外,我还实施了自动化早期响应行动,以缓解可能出现的问题,在它们升级之前.这些自动化行动包括重新启动服务,重新分配负载和根据警报的性质和严重性动态升级资源.通过自动化这些初始响应,</p>",
-            "<p>为了提高监控系统的整体效率,我还设计了处理系统关键情况的协议. 这些协议概述了团队成员的角色和责任,在更大的事件中所需的沟通策略和协调努力. 这种结构化的方法确保了快速和协调的响应,减少停机时间并保持服务的可靠性.</p>",
-            "<p>我对创建警报系统的贡献不仅提高了 Devo平台的监控能力,还加强了其安全立场,通过允许早期的欺诈和攻击检测.我的工作确保了该系统能够保持高性能和弹性,为 Devo客户提供可靠,安全的数据分析平台.</p>"
           ],
           "links": [],
+          "images": []
+        },
+        {
+          "name": "使用Prometheus创建监控警报系统",
+          "description": "<p>我在开发一个全面的警报系统中发挥了重要作用,该系统旨在通过Prometheus来监测生产环境中的性能和危机情况. 意识到需要实时监测和快速响应机制, 为了实现这一目标,我将Prometheus集成到 Devo的基础设施中,设置了强大的测量和警报收集机制. 我定义了关键绩效指标 (KPIs) 和关键门来维持系统健康和稳定. 除了设置警报系统之外,我还开发了一份完整的解决问题指南,以帮助操作团队快速诊断和解决问题. 我对创建警报系统的贡献不仅提高了 Devo平台的监控能力,还加强了其安全立场,通过允许早期的欺诈和攻击检测.我的工作确保了该系统能够保持高性能和弹性,为 Devo客户提供可靠,安全的数据分析平台.</p>",
           "technologies": [
             "Prometheus",
             "Grafana",
@@ -295,65 +248,34 @@
             "Bash",
             "Ansible",
             "GIT"
-          ]
+          ],
+          "links": [],
+          "images": []
         }
       ],
       "images": ["devo1.png", "devo2.png"]
     },
     {
       "name": "Comisión Europea",
-      "title": "软件架构师",
-      "short_description": [
-        "欧盟委员会是欧盟执行机构,负责提出立法,执行决策和管理日常事务."
-      ],
+      "short_description": "欧盟委员会是欧盟执行机构,负责提出立法,执行决策和管理日常事务.",
       "thumbnail": "European_Commission_01.png",
-      "period_time": "Junio 2017 - Enero 2020",
-      "full_description": [
-        "<p>欧盟委员会是欧盟的执行机构,负责提出立法,执行决策,维护欧盟条约和管理欧盟日常事务. 它作为一个内政府,由27名委员会成员 (每一个成员国都有一名) 领导. 委员会的主要角色包括制定战略和政策,执行欧盟法律,代表欧盟谈判国际协议.</p>",
-        "<p>在欧盟委员会内部,竞争总局 (GD COMP) 起着关键作用.GD COMP 负责制定和实施竞争政策,以确保在欧盟内部市场内的公平竞争.这包括执行反断法律,监督并购,防止可能扭曲竞争的断行为和国家援助.GD COMP 通过促进创新,确保平等条件和提高经济效率来保护消费者和企业.</p>",
-        "<p>我曾在COMP总局工作,并为欧盟各地保持竞争力的市场和促进经济增长所做的努力做出了贡献.</p>"
-      ],
-      "contribution": [
-        "<p>在欧盟委员会,我在三个项目中担任软件架构师,</p>",
-        "<ul></ul>",
-        "<li><b>不功能要求管理和项目定义</b>通过使用企业架构师,我负责识别和管理非功能要求,确保每个项目都清楚地定义并符合组织目标.</li>",
-        "<li><b>任务优先级</b>通过使用Jira,我有效地优先任务,以确保最关键的元素得到及时处理.</li>",
-        "<li><b>任务依赖管理</b>我使用Jira来管理任务间的依赖性,确保流动的进展,并减少延迟.</li>",
-        "<li><b>技术选择</b>我在选择适合每个项目的技术方面发挥了重要作用,确保它们适合满足项目需求.</li>",
-        "<li><b>定义团队成员个人资料</b>我定义了团队成员的个人资料和角色,确保团队拥有成功的技能和经验.</li>",
-        "<li><b>团队合作</b>项目需要集成的不同团队之间的合作,确保无的集成和合作.</li>",
-        "<li><b>质量控制和测试</b>我定义了质量控制和测试协议,包括使用JUnit或谷歌测试/Valgrind等技术的单元测试,</li>",
-        "<li><b>实施IC/CD系统</b>我定义并实现了连续集成和连续部署系统,使用了Bamboo和SonarQube等工具.</li>",
-        "<li><b>软件开发方法</b>我应用了基于试验的开发 (TDD) 和基于行为的开发 (BDD) 实践,以确保高质量的软件开发.</li>",
-        "<li><b>敏捷方法</b>我使用了SCRUM作为项目管理的主要方法,</li>",
-        ""
-      ],
+      "period_time": {
+        "start": "2017年6月",
+        "end": "2020 年 1 月",
+        "current": false
+      },
+      "full_description": "<p>在欧盟委员会内部,竞争总局 (GD COMP) 起着关键作用.GD COMP 负责制定和实施竞争政策,以确保在欧盟内部市场内的公平竞争.这包括执行反断法律,监督并购,防止可能扭曲竞争的断行为和国家援助.GD COMP 通过促进创新,确保平等条件和提高经济效率来保护消费者和企业. 我曾在COMP总局工作,并为欧盟各地保持竞争力的市场和促进经济增长所做的努力做出了贡献.</p>",
+      "contribution": "<p>任务优先级 通过使用Jira,我有效地优先任务,以确保最关键的元素得到及时处理. 任务依赖管理 我使用Jira来管理任务间的依赖性,确保流动的进展,并减少延迟. 质量控制和测试 我定义了质量控制和测试协议,包括使用JUnit或谷歌测试/Valgrind等技术的单元测试, 实施IC/CD系统 我定义并实现了连续集成和连续部署系统,使用了Bamboo和SonarQube等工具. 软件开发方法 我应用了基于试验的开发 (TDD) 和基于行为的开发 (BDD) 实践,以确保高质量的软件开发.</p>",
       "links": [
         {
-          "tag": "Sitio web",
-          "url": "https://competition-policy.ec.europa.eu/index_en",
-          "text": "Sitio web de la Comisión Europea, DG COMP"
+          "text": "欧盟委员会网站,",
+          "url": "https://competition-policy.ec.europa.eu/index_en"
         }
       ],
       "projects": [
         {
-          "name": "Definición de dos APIs RESTful",
-          "description": [
-            "<p>第一个项目涉及了两个RESTfulAPI的定义,它们实施了Richardson Level 3的成熟模型,其中包括HATEOAS. 这些API被设计为反断程序中安全交换法律文件的平台.</p>",
-            "<ul></ul>",
-            "<li><b>内部API</b>第一个API旨在服务于欧盟委员会内部人员.</li>",
-            "<li><b>外部API</b>第二个API作为外部人员的平台.</li>",
-            "",
-            "两个API都通过一个名为CAS的单次会议启动系统进行了访问控制.数据持久性是使用Oracle DB和MongoDB都管理的. 此外,API还通过SOAP接口集成到内部文件安全存储项目.每个程序的工作流程是使用State设计模式来管理的,系统管理人员通过电子邮件通知了状态变化."
-          ],
-          "links": [
-            {
-              "tag": "Documentación",
-              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf",
-              "text": "Documentación de e-leniency"
-            }
-          ],
-          "images": ["European_Commission_02.png"],
+          "name": "两个RESTful API的定义",
+          "description": "<p>内部API 第一个API旨在服务于欧盟委员会内部人员. 外部API 第二个API作为外部人员的平台. 两个API都通过一个名为CAS的单次会议启动系统进行了访问控制.数据持久性是使用Oracle DB和MongoDB都管理的.</p>",
           "technologies": [
             "Java",
             "Spring Security",
@@ -379,23 +301,18 @@
             "SonarQube",
             "TDD",
             "BDD"
-          ]
-        },
-        {
-          "name": "E-Confidencialidad",
-          "description": [
-            "<p>在第二个项目中,我作为软件架构师发挥了关键作用, 监督开发一个复杂的系统来谈判在反断程序中的法律文件的机密版本. 我的贡献是建立和分配负责管理在线法律流程的动态验证组的关键. 这些由内部人员组成的团体通过中央认证服务 (CAS) 进行了验证,</p>",
-            "<p>我设计了控制每个文件状态的系统架构,使用了状态设计模式,允许改变,确保在谈判过程中合法文件的完整性和准确性.</p>",
-            "<p>我选择了Oracle作为数据库引擎,以确保数据库的安全性。</p>",
-            "<p>通过我的领导和技术经验,我显著提高了该项目的能力,以提供一个安全,可靠,易于使用的平台来交易敏感的法律文件,从而加强了反断执法行动的有效性.作为软件架构师的工作对实现该项目的目标和确保其成功至关重要.</p>"
           ],
           "links": [
             {
-              "tag": "Documentación",
-              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en",
-              "text": "Documentación de e-confidencialidad"
+              "text": "电子实质性文件",
+              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf"
             }
           ],
+          "images": ["European_Commission_02.png"]
+        },
+        {
+          "name": "电子保密",
+          "description": "<p>在第二个项目中,我作为软件架构师发挥了关键作用, 监督开发一个复杂的系统来谈判在反断程序中的法律文件的机密版本. 这些由内部人员组成的团体通过中央认证服务 (CAS) 进行了验证, 我设计了控制每个文件状态的系统架构,使用了状态设计模式,允许改变,确保在谈判过程中合法文件的完整性和准确性. 此外,我选择并集成Oracle DB和MongoDB作为数据库引擎,利用它们的优势来有效地管理该项目的复杂数据要求. 我确保实现遵循Richardson Level 3的成熟模式,并将HATEOAS (Hypermedia as the Engine of Application State) 原则纳入.</p>",
           "technologies": [
             "AngularJS",
             "Ansible",
@@ -424,16 +341,18 @@
             "Swagger",
             "TDD",
             "WebLogic 12"
-          ]
+          ],
+          "links": [
+            {
+              "text": "电子保密文件",
+              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en"
+            }
+          ],
+          "images": []
         },
         {
-          "name": "Índice semántico de documentos legales",
-          "description": [
-            "<p>在英国,我设计了3个新的法律文件语义索引系统.</p>",
-            "<p>这些微服务的架构遵循命令和查询责任分离 (CQRS) 范式,部署在服务池中以确保快速的弹性和响应时间.语义搜索能力由一个在反断法文档数据集中训练的神经网络增强,使用 TensorFlow框架.</p>",
-            "<p>系统设计强调了弹性,效率和精确性,使其成为反断部门法律文件管理和恢复的重要工具.我在建筑和编程方面积极参与和积极参与是为项目成功至关重要的.</p>"
-          ],
-          "links": [],
+          "name": "法律文件的语义指数",
+          "description": "<p>我作为该项目的建筑师,深入参与编程过程以确保其成功.该项目使用集群技术,特别是K-Means算法,用于反断部门的法律文件数据集.索引过程是集成在一个微服务中设计的 gRPC框架,实现在C++14以确保最大的效率和性能. 这些微服务的架构遵循命令和查询责任分离 (CQRS) 范式,部署在服务池中以确保快速的弹性和响应时间.语义搜索能力由一个在反断法文档数据集中训练的神经网络增强,使用 TensorFlow框架.</p>",
           "technologies": [
             "AngularJS",
             "Ansible",
@@ -467,18 +386,13 @@
             "Valgrind",
             "WebLogic 12",
             "gRPC"
-          ]
-        },
-        {
-          "name": "Desarrollo de un sistema de distribución de energía renovable",
-          "description": [
-            "<p>第四个项目包括在电网内开发一个可再生能源分配系统,以正常化和稳定电力消费,以最大限度地利用可再生能源. 我在这项项目中发挥了重要作用,为其建筑和实施做出了广泛的贡献.</p>",
-            "<p>由卡夫卡开发的无线通信系统(VPN)是全球最受欢迎的通信工具之一.</p>",
-            "<p>该项目的软件管理是通过 BalenaIO平台进行的,该平台便于部署和运行门户设备. 连续集成和连续部署 (CI/CD) 过程是使用CircleCI来管理的,确保一个高效,无间断的开发工作流.</p>",
-            "<p>此外,我在Groovy创建了一个统计分析仪,用于摄入远程数据,提供有关能源消耗模式和系统性能的关键信息.</p>",
-            "<p>我的实践方法和技术经验对应可再生能源分配的挑战至关重要.我利用先进技术和开发强大的通信协议的贡献强调了我在这项创新的项目中发挥的重要作用,旨在提高电网内可再生能源的稳定性和效率.</p>"
           ],
           "links": [],
+          "images": []
+        },
+        {
+          "name": "发展可再生能源分配系统",
+          "description": "<p>该系统集成了各种各样的技术来实现其目标.通信系统的核心是一个基于卡夫卡的消息集群,在该集群中,设备的通信通过Avro计划进行管理.一个中间的\"门户\"是使用Raspberry Pi实现的,负责发送远程数据和接收命令.该门户系统是在Go开发的,使用ModBus通信协议在其串行版本和TCP中,通过VPN确保了TCP通信. 该项目的软件管理是通过 BalenaIO平台进行的,该平台便于部署和运行门户设备. 连续集成和连续部署 (CI/CD) 过程是使用CircleCI来管理的,确保一个高效,无间断的开发工作流. 此外,我在Groovy创建了一个统计分析仪,用于摄入远程数据,提供有关能源消耗模式和系统性能的关键信息.</p>",
           "technologies": [
             "Go",
             "Unit Test",
@@ -499,67 +413,34 @@
             "Kibana",
             "Jira",
             "Groovy"
-          ]
+          ],
+          "links": [],
+          "images": []
         }
       ],
       "images": []
     },
     {
       "name": "Panel Sistemas",
-      "title": "高级软件工程师",
-      "short_description": [
-        "系统集团是一家专注于技术解决方案的公司,为各种行业提供软件,咨询和开发服务."
-      ],
+      "short_description": "系统集团是一家专注于技术解决方案的公司,为各种行业提供软件,咨询和开发服务.",
       "thumbnail": "panel_sistemas.png",
-      "period_time": "Septiembre 2015 - Junio 2017",
-      "full_description": [
-        "<p>Panel Sistemas是一家技术解决方案的领先公司,专门开发软件,咨询和IT服务.</p>",
-        "<b>提供服务</b>",
-        "<lu></lu>",
-        "<li>软件开发:定制软件解决方案.</li>",
-        "<li>咨询:IT策略和优化</li>",
-        "<li>维护和支持:持续应用支持.</li>",
-        "<li>质量保证:完整的软件测试.</li>",
-        "<li>数字转型:企业转向数字平台.</li>",
-        "",
-        "<b>工业经验</b>",
-        "<lu></lu>",
-        "<li>财务</li>",
-        "<li>电信</li>",
-        "<li>能源</li>",
-        "<li>零售</li>",
-        ""
-      ],
-      "contribution": [
-        "<p>在系统小组,我在三个项目中担任函数分析师.我还担任高级程序员后决策阶段.作为函数分析师的职责包括:</p>",
-        "<ul></ul>",
-        "<li>分析非功能要求和对解决方案的精确实施决策 (Redmine)</li>",
-        "<li>为了实现目标,创建较小的小任务 (Redmine)</li>",
-        "<li>时间估计 (Redmine)</li>",
-        "<li>定义和实施项目结构在特定技术上</li>",
-        "<li>单位测试覆盖和质量定义 (JUnit, Google Test, Valgrind)</li>",
-        "<li>实施CI/CD系统 (詹金斯)</li>",
-        "<li>使用SCRUM作为开发方法</li>",
-        "<li>应用TDD和BDD在软件开发中</li>",
-        "<li>提供关于TDD,BDD,神经网络,Clean Code等的培训课程</li>",
-        ""
-      ],
+      "period_time": {
+        "start": "2015年9月",
+        "end": "2017年6月",
+        "current": false
+      },
+      "full_description": "<p>Panel Sistemas是一家技术解决方案的领先公司,专门开发软件,咨询和IT服务. 提供服务 软件开发:定制软件解决方案. 咨询:IT策略和优化 维护和支持:持续应用支持.</p>",
+      "contribution": "<p>在系统小组,我在三个项目中担任函数分析师.我还担任高级程序员后决策阶段.作为函数分析师的职责包括: 分析非功能要求和对解决方案的精确实施决策 (Redmine) 为了实现目标,创建较小的小任务 (Redmine) 时间估计 (Redmine) 定义和实施项目结构在特定技术上 单位测试覆盖和质量定义 (JUnit, Google Test, Valgrind) 实施CI/CD系统 (詹金斯) 使用SCRUM作为开发方法 应用TDD和BDD在软件开发中 提供关于TDD,BDD,神经网络,Clean Code等的培训课程</p>",
       "links": [
         {
-          "tag": "Sitio web",
-          "url": "https://www.panel.es/",
-          "text": "Sitio web de Panel Sistemas"
+          "text": "系统小组网站",
+          "url": "https://www.panel.es/"
         }
       ],
       "projects": [
         {
-          "name": "Modernización de la mensajería de transporte marítimo y aéreo: reemplazo de IATA por XML/JSON",
-          "description": [
-            "<p>我工作的第一个项目是实现一个用于海上和航空运输的信息交换平台.这个项目成功地取代了基于平文和人类错误的IATA标准,</p>",
-            "<p>作为全球数据包流量数据库的创建人,我正在制定一个新的数据库,以确保全球的数据包流率的可追溯</p>"
-          ],
-          "links": [],
-          "images": ["iata.png"],
+          "name": "现代化海运和航空通信:取代IATA的XML/JSON",
+          "description": "<p>我工作的第一个项目是实现一个用于海上和航空运输的信息交换平台.这个项目成功地取代了基于平文和人类错误的IATA标准, 为了实现这一目标,我定义了一个分析仪,将旧格式的消息翻译到两个现代标准中的任何一个,通过一个符合理查德森3级成熟模式的Restful API.</p>",
           "technologies": [
             "Java",
             "Spring Security",
@@ -586,15 +467,13 @@
             "IntelliJ IDEA",
             "Docker",
             "Ansible"
-          ]
-        },
-        {
-          "name": "Gestión Inteligente de Terminales de Iberdrola con Siemens",
-          "description": [
-            "西门子公司与德国科技公司CERN合作创建了两个智能管理基础设施项目,这些项目旨在减少电力短缺。"
           ],
           "links": [],
-          "images": ["iberdrola.svg", "siemens.png"],
+          "images": ["iata.png"]
+        },
+        {
+          "name": "智能Iberdrola终端管理与西门子",
+          "description": "第二个项目是与西门子合作创建Iberdrola终端智能管理基础设施的联合项目.这些终端通过使用SNMP通信协议向服务器发送日常报告来获取用户电力消耗的信息,除非需要更详细的设备或特定设备集的监测,在这种情况下将产生每分钟消耗的细节级别的报告.这些数据被存储在一个非关系数据库 MongoDB中,这些数据是多个集群,负载量和复制的碎片.每个点的信息都被存储在集群中,只要服务器能够承担包含该集群的数据量.",
           "technologies": [
             "C++",
             "Google Test",
@@ -628,15 +507,13 @@
             "Spring Data",
             "Spring Documentation",
             "Spring IOT"
-          ]
-        },
-        {
-          "name": "Sistema de monitoreo y cuidado para personas con discapacidades o ancianos para Securitas Direct",
-          "description": [
-            "<p>根据日本媒体《每日电讯报》的最新发展计划,Securitas Direct将提供两项新项目。</p>",
-            "<p>此外,该应用程序还包括一个作为混合应用程序开发的移动组件. 这种移动版本使用传感器识别下降,追踪个人GPS位置等.</p>"
           ],
           "links": [],
+          "images": ["iberdrola.svg", "siemens.png"]
+        },
+        {
+          "name": "监控和照顾系统对残疾人或老年人",
+          "description": "<p>第三个项目,为Securitas Direct执行,涉及创建一个为残疾人或老年人提供综合监控和护理系统.该系统基于其家庭分布的各种传感器识别用户的状态,包括存在传感器,门打开传感器和个人摔倒传感器.这些数据被收集以提供用户活动的详细信息,不仅可存储并可查询,而且还能够基于个人的典型行为模式生成警报.该系统分析这些模式并警告如果发现突然变化,具有可定制的警报设置. 这种移动版本使用传感器识别下降,追踪个人GPS位置等.</p>",
           "technologies": [
             "C++",
             "Google Test",
@@ -673,51 +550,34 @@
             "Docker",
             "Ansible",
             "Kubernetes"
-          ]
+          ],
+          "links": [],
+          "images": []
         }
       ],
       "images": []
     },
     {
       "name": "Grupo Prisa",
-      "title": "高级软件工程师",
-      "short_description": ["普里萨集团是一家西班牙媒体集团,"],
+      "short_description": "普里萨集团是一家西班牙媒体集团,",
       "thumbnail": "prisa.png",
-      "period_time": "Marzo 2012 - Mayo 2015",
-      "full_description": [
-        "<p>西班牙媒体公司普里萨集团(PRISA Group)在西班牙首都雅加达成立,成立于2007年。</p>",
-        "<p>普里萨集团的主要方面包括:</p>",
-        "<ul></ul>",
-        "<li><strong>报纸:</strong>普里萨的标志性报纸是<em>国家</em>在西班牙民主转型期间,它于1976年发行.<em>国家</em>报纸迅速成为新民主时代的象征,提供高质量的新闻和进步的编辑立场.报纸涵盖了各种主题,从国家和国际新闻到文化,经济和体育.</li>",
-        "<li><strong>无线电:</strong>在广播领域,PRISA拥有西班牙领先的广播网络Cadena SER.Cadena SER以其信息节目,广播节目和体育报道而闻名.它拥有大量的观众,并以其全面的报道新闻和广播节目而闻名,这些节目涉及当前的议题,政治和社会问题.</li>",
-        "<li><strong>电视:</strong>普里萨也在电视上透了自己的频道<em>美国广播公司</em>在2010年关闭之前,它一直是西班牙新闻市场的重要参与者.</li>",
-        "<li><strong>教育出版物:</strong>除了新闻和娱乐之外,PRISA是通过其子公司Santillana在教育出版业中重要的参与者.在1960年成立,Santillana是西班牙和拉丁美洲领先的教育材料出版商.它为学生和教师提供了广泛的教科书,数字内容和教育资源,为西班牙语世界教育做出了重大贡献.</li>",
-        "<li><strong>数字转型:</strong>在过去几年里,PRISA已经采取了数字化转型,适应不断变化的媒体环境.该公司在数字平台,移动应用程序和在线内容方面投入了大量资金,以达到更广泛的观众,并在数字时代保持相关性. <em>国家</em>例如,它拥有强大的数字存在,一个网站每月吸引数百万访问者,以及各种多媒体内容,</li>",
-        "<li><strong>全球影响:</strong>普里萨的影响力超越西班牙和拉丁美洲.它与国际媒体公司建立了战略伙伴关系,并扩大其范围到其他地区.该公司的内容被全球数百万人消费,使其成为西班牙,拉丁美洲和世界其他地区之间的重要文化和信息桥梁.</li>",
-        ""
-      ],
-      "contribution": [
-        "<p>我在三个重要的项目中担任远程高级程序员的丰富经验. 在这个角色中,我被委托了各种关键责任,需要技术经验和强大的沟通技能.我的主要职责之一是与产品所有者参加会议来定义项目的详细要求.这涉及了对项目的目标进行全面分析,并将它们分成特定和可处理的任务.</p>",
-        "<p>与外部团队的协调是我角色的另一个重要方面.我与位于南美,印度和中国的合作团队密切合作.这种国际协调要求我有效地管理不同的时间区和文化差异.</p>",
-        "<p>创新和效率是我角色的关键焦点领域.我参加了思维雨会议,开发和实施旨在提高团队的自动化和生产力的新工具.这些工具旨在加速工作流程,减少人工精力,提高开发过程的整体效率.通过引入这些创新,我可以为一个更高效,更有效的团队环境做出贡献.</p>",
-        "<p>详细的项目规划是另一个关键责任.我使用了SCRUM方法方法来确保所有任务都在项目生命周期中得到有效的组织和管理.这涉及创建详细的计划,制定现实的时间表,并持续监测进展以确保项目里程碑实现.SCRUM的使用使得项目管理具有灵活,反复的方法,使团队能够适应变化并快速应对挑战.</p>",
-        "<p>总的来说,我作为一个远程高级程序员的经验让我拥有多元化的技能和深入的理解如何在远程和全球的工作环境中有效地管理项目. 我能够定义详细的要求,与国际团队协调,创新提高生产力,并使用SCRUM管理项目,</p>"
-      ],
+      "period_time": {
+        "start": "2012年3月",
+        "end": "2015年5月",
+        "current": false
+      },
+      "full_description": "<p>普里萨集团 (PRISA Group),正式称为信息推广公司 (Promotora de Informaciones, S.A.),是一家在西班牙语世界具有重要影响力的西班牙媒体集团.1972年由耶稣·德·波兰科创立,普里萨已成长成为西班牙和拉丁美洲最大的媒体公司之一,包括各种媒体,包括报纸,广播公司,电视频道和教育出版物. 无线电: 在广播领域,PRISA拥有西班牙领先的广播网络Cadena SER.Cadena SER以其信息节目,广播节目和体育报道而闻名.它拥有大量的观众,并以其全面的报道新闻和广播节目而闻名,这些节目涉及当前的议题,政治和社会问题. 教育出版物: 除了新闻和娱乐之外,PRISA是通过其子公司Santillana在教育出版业中重要的参与者.在1960年成立,Santillana是西班牙和拉丁美洲领先的教育材料出版商.它为学生和教师提供了广泛的教科书,数字内容和教育资源,为西班牙语世界教育做出了重大贡献. 数字转型: 在过去几年里,PRISA已经采取了数字化转型,适应不断变化的媒体环境.该公司在数字平台,移动应用程序和在线内容方面投入了大量资金,以达到更广泛的观众,并在数字时代保持相关性.</p>",
+      "contribution": "<p>我在三个重要的项目中担任远程高级程序员的丰富经验. 在这个角色中,我被委托了各种关键责任,需要技术经验和强大的沟通技能.我的主要职责之一是与产品所有者参加会议来定义项目的详细要求.这涉及了对项目的目标进行全面分析,并将它们分成特定和可处理的任务. 详细的项目规划是另一个关键责任.我使用了SCRUM方法方法来确保所有任务都在项目生命周期中得到有效的组织和管理.这涉及创建详细的计划,制定现实的时间表,并持续监测进展以确保项目里程碑实现.SCRUM的使用使得项目管理具有灵活,反复的方法,使团队能够适应变化并快速应对挑战. 我能够定义详细的要求,与国际团队协调,创新提高生产力,并使用SCRUM管理项目,</p>",
       "links": [
         {
-          "tag": "Sitio web",
-          "url": "https://www.prisa.com/es",
-          "text": "Sitio web de Grupo Prisa"
+          "text": "快速集团网站",
+          "url": "https://www.prisa.com/es"
         }
       ],
       "projects": [
         {
-          "name": "Aplicación de visor de paquetes educativos",
-          "description": [
-            "<p>第一个项目涉及开发一款针对Android和iOS平台的综合应用程序,旨在可视化教育包.该应用程序是精心设计的,以支持低端设备,确保它可以达到更广泛的用户群体,而不会损害性能.该应用程序与用户流动地交互,提供无干扰和有吸引力的体验.</p>",
-            "<p>e-learning 教育包应用程序正式生效。</p>"
-          ],
-          "links": [],
+          "name": "教育套餐视窗应用",
+          "description": "<p>该应用程序的一个关键特征是它能够管理符合SCORM (共享内容对象参考模型) 标准的教育包,它在e-learning领域广泛用于创建和交付互动和适应性学习内容.为了确保与以前版本的兼容性,该应用程序也被设计以支持旧版本的教育包.这种双重兼容性确保用户可以访问广泛的现代和旧的教育内容,从而提高了应用程序的有用性和吸引力在各种教育环境中.</p>",
           "technologies": [
             "Java",
             "Android Studio",
@@ -732,15 +592,13 @@
             "Jira",
             "GIT",
             "Confluence"
-          ]
-        },
-        {
-          "name": "Proyecto de estandarización de paquetes educativos",
-          "description": [
-            "<p>第二个项目源于需要标准化教育包.为了节省与Flash迁移到SCORM标准下的HTML5相关的成本,决定开发一个Flash转换到HTML5的工具.该工具便于将Flash的教育内容转换到HTML5,确保了SCORM标准的兼容性.</p>",
-            "<p>为期三周的集中图书馆(Open Library)项目正式启动。</p>"
           ],
           "links": [],
+          "images": []
+        },
+        {
+          "name": "教育套餐标准化项目",
+          "description": "<p>第二个项目源于需要标准化教育包.为了节省与Flash迁移到SCORM标准下的HTML5相关的成本,决定开发一个Flash转换到HTML5的工具.该工具便于将Flash的教育内容转换到HTML5,确保了SCORM标准的兼容性.</p>",
           "technologies": [
             "C++",
             "Linux",
@@ -760,15 +618,13 @@
             "Bash",
             "NginX",
             "Valgrind"
-          ]
-        },
-        {
-          "name": "Proyecto de plataforma educativa",
-          "description": [
-            "<p>第三个项目是使用C#在 .NET平台上开发的,该平台是为教师和教育专业人员设计的综合环境.该平台允许用户管理各种教育任务,包括学生管理,管理教育包和分析结果.</p>",
-            "<p>此外,该平台还拥有高分辨率的IP音频和视频通信中心,改善了教师和学生之间的实时互动.</p>"
           ],
           "links": [],
+          "images": []
+        },
+        {
+          "name": "教育平台项目",
+          "description": "<p>第三个项目是使用C#在 .NET平台上开发的,该平台是为教师和教育专业人员设计的综合环境.该平台允许用户管理各种教育任务,包括学生管理,管理教育包和分析结果.</p><p>此外,该平台还拥有高分辨率的IP音频和视频通信中心,改善了教师和学生之间的实时互动.</p>",
           "technologies": [
             "C#",
             ".NET",
@@ -778,46 +634,34 @@
             "Jira",
             "GIT",
             "Confluence"
-          ]
+          ],
+          "links": [],
+          "images": []
         }
       ],
       "images": []
     },
     {
       "name": "Intelygenz",
-      "title": "高级软件工程师",
-      "short_description": [
-        "人工智能,机器学习和针对不同行业的定制软件解决方案的技术公司."
-      ],
+      "short_description": "人工智能,机器学习和针对不同行业的定制软件解决方案的技术公司.",
       "thumbnail": "intelygenz.png",
-      "period_time": "Enero 2010 - Enero 2012",
-      "full_description": [
-        "<p>第三个项目是使用C#在 .NET平台上开发的,该平台是为教师和教育专业人员设计的综合环境.该平台允许用户管理各种教育任务,包括学生管理,管理教育包和分析结果.</p>",
-        "<p>此外,该平台还拥有高分辨率的IP音频和视频通信中心,改善了教师和学生之间的实时互动.</p>"
-      ],
-      "contribution": ["<p>我为安特纳3电视应用程序做贡献.</p>"],
+      "period_time": {
+        "start": "2010年1月",
+        "end": "2012年1月",
+        "current": false
+      },
+      "full_description": "<p>第三个项目是使用C#在 .NET平台上开发的,该平台是为教师和教育专业人员设计的综合环境.该平台允许用户管理各种教育任务,包括学生管理,管理教育包和分析结果.</p><p>此外,该平台还拥有高分辨率的IP音频和视频通信中心,改善了教师和学生之间的实时互动.</p>",
+      "contribution": "<p>作为一名高级程序员,我为三项重大项目做出了贡献.第一个项目是安特纳3电视应用程序,该应用程序是为Android开发的.该应用程序作为电视内容的实时互动接口,通过嵌入音频的无声标记器更新.</p>",
       "links": [
         {
-          "tag": "Sitio web",
-          "url": "https://intelygenz.com/",
-          "text": "Sitio web de Intelygenz"
+          "text": "智能公司的网站",
+          "url": "https://intelygenz.com/"
         }
       ],
       "projects": [
         {
-          "name": "Proyecto de Antena 3 Televisión",
-          "description": [
-            "<p>第一个项目涉及开发安特纳3电视应用程序,该应用程序是为Android本地构建的.该应用程序作为与电视内容的实时互动接口,使用嵌入于音频中的无声标记器动态更新.</p>",
-            "<p>修改的音频包括特定时间间隔分离的声响,该应用程序在二进制格式中进行了解释. 这种创新的方法使应用程序能够无地与电视播放互动,为用户提供了更好的,有吸引力的视觉体验.</p>"
-          ],
-          "links": [
-            {
-              "tag": "Documentación",
-              "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf",
-              "text": "Documentación de la aplicación de Antena 3 TV"
-            }
-          ],
-          "images": ["intelygenz_01.jpeg"],
+          "name": "电视3号天线项目",
+          "description": "<p>第一个项目涉及开发安特纳3电视应用程序,该应用程序是为Android本地构建的.该应用程序作为与电视内容的实时互动接口,使用嵌入于音频中的无声标记器动态更新. 修改的音频包括特定时间间隔分离的声响,该应用程序在二进制格式中进行了解释.</p>",
           "technologies": [
             "Java",
             "Android Studio",
@@ -825,16 +669,18 @@
             "Jira",
             "GIT",
             "Confluence"
-          ]
+          ],
+          "links": [
+            {
+              "text": "3电视天线应用程序的文件",
+              "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf"
+            }
+          ],
+          "images": ["intelygenz_01.jpeg"]
         },
         {
-          "name": "Proyecto de gestor de documentos para BBVA",
-          "description": [
-            "<p>第二个项目涉及开发BBVA银行的文档管理器,在 .NET环境中部署在C#中.该系统旨在与基于Google App Engine框架的外部工具连接.</p>",
-            "<p>此外,文件经理将BBVA的工作流程和业务逻辑整合起来,使其与其他银行机构进行流动互动.</p>"
-          ],
-          "links": [],
-          "images": ["bbva.jpg"],
+          "name": "BBVA文件管理员项目",
+          "description": "<p>第二个项目涉及开发BBVA银行的文档管理器,在 .NET环境中部署在C#中.该系统旨在与基于Google App Engine框架的外部工具连接.</p><p>此外,文件经理将BBVA的工作流程和业务逻辑整合起来,使其与其他银行机构进行流动互动.</p>",
           "technologies": [
             "C#",
             ".NET",
@@ -849,16 +695,13 @@
             "Jira",
             "GIT",
             "Confluence"
-          ]
-        },
-        {
-          "name": "Proyecto de Front colaborativo",
-          "description": [
-            "<p>第三个项目涉及开发一个协作前端,用于BBVA银行,使用Java和JavaScript.该项目与NACAR环境集成,该平台旨在提高银行应用程序的功能和用户体验.与NACAR的集成允许开发先进的功能和流动的银行系统内部互动.</p>",
-            "<p>该项目的重要成就之一是创建一个屏幕手势和行动图书馆,称为IRIS.该图书馆旨在改善用户互动,提供多项任务的直观和高效方式.IRIS图书馆改善了用户的整体体验,使应用程序更容易接受和使用.</p>"
           ],
           "links": [],
-          "images": ["bbva.jpg"],
+          "images": ["bbva.jpg"]
+        },
+        {
+          "name": "合作前线项目",
+          "description": "<p>第三个项目涉及开发一个协作前端,用于BBVA银行,使用Java和JavaScript.该项目与NACAR环境集成,该平台旨在提高银行应用程序的功能和用户体验.与NACAR的集成允许开发先进的功能和流动的银行系统内部互动.</p>",
           "technologies": [
             "Java",
             "Spring Security",
@@ -877,54 +720,34 @@
             "Confluence",
             "GIT",
             "Eclipse"
-          ]
+          ],
+          "links": [],
+          "images": ["bbva.jpg"]
         }
       ],
       "images": []
     },
     {
       "name": "UAH",
-      "title": "研究人员和教职人员",
-      "short_description": [
-        "阿尔卡拉河纳斯大学是一所著名的西班牙大学,以其丰富的历史和各种学术课程而闻名."
-      ],
+      "short_description": "阿尔卡拉河纳斯大学是一所著名的西班牙大学,以其丰富的历史和各种学术课程而闻名.",
       "thumbnail": "uah.svg",
-      "period_time": "Enero 2006 - Enero 2009",
-      "full_description": [
-        "<p>位于西班牙马德里的阿尔卡拉·德·亨雷斯 (Alcazar de Henares University) 是西班牙最</p>",
-        "<p>阿尔卡拉大学以其对学术卓越和创新的承诺而庆祝. 它在各种研究领域提供广泛的本科,研究生和博士课程,包括人文,社会科学,自然科学,工程,健康科学和法律.</p>",
-        "<p>校园包括令人印象深刻的西班牙文艺复兴时期建筑例子,如圣伊尔德芬索学院,该校的主要建筑,拥有一个美丽的院子和历史教堂.大学对保存其历史和文化遗产的承诺在这些建筑宝藏的谨慎维护和恢复中明显.</p>",
-        "<p>除了历史悠久的校园外,阿尔卡拉大学拥有现代设施,配备了最新技术来支持先进的研究和创新的教学方法.该大学的图书馆,实验室和研究中心为学生和教师提供了他们追求学术和专业目标所需的资源.该大学还促进了强大的研究文化,并鼓励与国家和国际机构和行业的合作.</p>",
-        "<p>阿尔卡拉大学致力于促进多元化和包容的社区. 它欢迎来自世界各地的学生,并提供一系列的支持服务,以帮助国际学生融入校园生活.</p>",
-        "<p>阿尔卡拉大学使命的一个关键方面是它对社会责任和可持续发展的承诺.该大学积极参与促进环境可持续性,社会正义和社区发展的举措.与当地,国家和国际组织合作,应对迫切的全球挑战,并为社会福祉做出贡献.</p>",
-        "<p>阿尔卡拉大学的校友网络是其影响力和影响力的见证.该大学的毕业生在包括学术,商业,政府和艺术在内的各种领域取得了显著的成功.该大学与其校友保持着强的联系,培养了一个支持和承诺的社区,继续为该大学的遗产做出贡献.</p>",
-        "<p>简而言之,阿尔卡拉德河纳斯大学是一个杰出的机构,它具有历史意义和教育的进步态度.其致力于学术卓越,文化保存,研究创新和社会责任使其成为西班牙领先的大学,</p>"
-      ],
-      "contribution": [
-        "<p>我在大学担任研究员的角色是在TIFyC研究小组中,我在技术和人工智能领域取得进步的重点负责. 我的主要任务之一是对各种领域的艺术状态进行全面的研究,包括可访问性问题,人工智能算法,人工视觉和生物测量系统.</p>",
-        "<p>除了我的研究职责之外,我还积极参与与不同大学的研究小组合作.这些合作旨在促进知识交流,促进跨学科研究和推动创新项目.通过与其他研究人员密切合作,我们能够结合我们的经验和资源来解决复杂的挑战,</p>",
-        "<p>我工作的另一个关键方面是准备关于我们的研究发现的详细报告. 这些报告记录了我们的方法,结果和结论,为未来的研究提供了宝贵的资源,并为科学界做出了贡献.</p>",
-        "<p>此外,我参与了研究和申请国家资助和研发项目 (R&amp;D) 资助.这需要全面了解资金局势,并能够制定令人信服的提案,以证明我们的研究的重要性和潜在影响.获取这些资金是支持我们正在进行的项目和启动新举措的关键.</p>",
-        "<p>作为我的职责的一部分,我还担任助理教授,教授人工智能和人工视觉系统课程. 在这个职能中,我负责向学生传授知识,设计课程材料,并通过复杂的概念和实用应用来指导他们.我的教学作用使我能够与下一代研究人员和专业人士分享我对人工智能和人工视觉的热情,同时与学术界保持承诺.</p>"
-      ],
+      "period_time": {
+        "start": "2006年1月",
+        "end": "2009年1月",
+        "current": false
+      },
+      "full_description": "<p>阿尔卡拉·德·亨雷斯大学 (Alcalá de Henares University) 是位于西班牙马德里附近的历史城市阿尔卡拉·德·亨雷斯 (Alcalá de Henares) 的公立大学.它于1499年由Cardenal Cisneros创立,是西班牙最古老的大学之一,拥有丰富的传统与现代化的传统. 阿尔卡拉大学以其对学术卓越和创新的承诺而庆祝. 它在各种研究领域提供广泛的本科,研究生和博士课程,包括人文,社会科学,自然科学,工程,健康科学和法律. 校园包括令人印象深刻的西班牙文艺复兴时期建筑例子,如圣伊尔德芬索学院,该校的主要建筑,拥有一个美丽的院子和历史教堂.大学对保存其历史和文化遗产的承诺在这些建筑宝藏的谨慎维护和恢复中明显. 除了历史悠久的校园外,阿尔卡拉大学拥有现代设施,配备了最新技术来支持先进的研究和创新的教学方法.该大学的图书馆,实验室和研究中心为学生和教师提供了他们追求学术和专业目标所需的资源.该大学还促进了强大的研究文化,并鼓励与国家和国际机构和行业的合作.</p>",
+      "contribution": "<p>我在大学担任研究员的角色是在TIFyC研究小组中,我在技术和人工智能领域取得进步的重点负责. 我的主要任务之一是对各种领域的艺术状态进行全面的研究,包括可访问性问题,人工智能算法,人工视觉和生物测量系统. 除了我的研究职责之外,我还积极参与与不同大学的研究小组合作.这些合作旨在促进知识交流,促进跨学科研究和推动创新项目.通过与其他研究人员密切合作,我们能够结合我们的经验和资源来解决复杂的挑战, 我工作的另一个关键方面是准备关于我们的研究发现的详细报告. 此外,我参与了研究和申请国家资助和研发项目 (R&D) 资助.这需要全面了解资金局势,并能够制定令人信服的提案,以证明我们的研究的重要性和潜在影响.获取这些资金是支持我们正在进行的项目和启动新举措的关键.</p>",
       "links": [
         {
-          "tag": "Sitio web",
-          "url": "https://uah.es/",
-          "text": "Sitio web de la Universidad de Alcalá"
+          "text": "阿尔卡拉大学的网站",
+          "url": "https://uah.es/"
         }
       ],
       "projects": [
         {
-          "name": "Proyecto del grupo de investigación",
-          "description": [
-            "<p>我们的研究小组的重要项目之一是研究旨在改善视觉,听力或运动障碍者互动的创新设备. 这项研究的主要目的是开发和完善技术,</p>",
-            "<p>我们的团队探索了广泛的辅助技术和用户界面改进,旨在克服残疾人面临的挑战.这包括开发专业的输入设备,适应性软件解决方案和先进的用户界面设计,专门适应视觉,听力和动力残疾用户的需求. 通过关注这些领域,我们寻求创造一个更具包容性的数字环境,让用户更有效,更独立地与技术互动.</p>",
-            "<p>研究还涉及了广泛的用户测试和与残疾人合作,以确保开发的解决方案是实用的,易于使用和真正有益的.通过整合来自实际用户的评论,我们的研究小组能够在开发不仅符合访问性标准的设备和应用程序方面取得重大进展,而且还可以改善残疾人整体用户体验.</p>",
-            "<p>这项项目是我们对利用技术来消除障碍和提高残疾人的生活质量的承诺的典范,</p>"
-          ],
-          "links": [],
-          "images": ["tifyc.jpg"],
+          "name": "研究小组项目",
+          "description": "<p>这项研究的主要目的是开发和完善技术, 我们的团队探索了广泛的辅助技术和用户界面改进,旨在克服残疾人面临的挑战.这包括开发专业的输入设备,适应性软件解决方案和先进的用户界面设计,专门适应视觉,听力和动力残疾用户的需求. 研究还涉及了广泛的用户测试和与残疾人合作,以确保开发的解决方案是实用的,易于使用和真正有益的.通过整合来自实际用户的评论,我们的研究小组能够在开发不仅符合访问性标准的设备和应用程序方面取得重大进展,而且还可以改善残疾人整体用户体验.</p>",
           "technologies": [
             "Java",
             "Android Studio",
@@ -939,17 +762,13 @@
             "C#",
             ".NET",
             "Mono"
-          ]
-        },
-        {
-          "name": "Sistema de comunicación para dispositivos biométricos",
-          "description": [
-            "<p>我工作的第二个项目是为生物测量设备开发一个标准化的通信系统. 目标是实现多家制造商设备之间的无的消息交换和协作.</p>",
-            "<p>该项目需要仔细考虑互操作性问题,因为生物识别设备往往具有不同的通信协议和技术规格. 通过实施标准化PCR系统,我们能够抽象底层差异并创建一个统一的通信协议. 这项协议促进了高效的数据交换和在广泛的生物识别设备中运营协调.</p>",
-            "<p>此外,由于生物识别数据的敏感性,通信系统被设计成高度强和安全的.我们将加密和身份验证机制整合起来,以保护数据的完整性,防止未经授权的访问.最终结果是可靠的多平台解决方案,显著提高了生物识别系统的互操作性和功能.</p>",
-            "<p>这项项目不仅提高了设备的兼容性,还为生物测量技术的未来进步铺平了道路,使制造商能够专注于创新,而无需担心通信障碍.</p>"
           ],
           "links": [],
+          "images": ["tifyc.jpg"]
+        },
+        {
+          "name": "生物测量设备通信系统",
+          "description": "<p>我工作的第二个项目是为生物测量设备开发一个标准化的通信系统. 目标是实现多家制造商设备之间的无的消息交换和协作. 该项目需要仔细考虑互操作性问题,因为生物识别设备往往具有不同的通信协议和技术规格. 通过实施标准化PCR系统,我们能够抽象底层差异并创建一个统一的通信协议.</p>",
           "technologies": [
             "Java",
             "Linux",
@@ -959,18 +778,13 @@
             "C#",
             ".NET",
             "Mono"
-          ]
-        },
-        {
-          "name": "Proyecto de página web del grupo de investigación",
-          "description": [
-            "<p>第三个项目涉及使用Joomla的内容管理系统 (CMS) 来创建和持续维护研究小组网站. 这项项目不仅需要初步开发一个易于使用和视觉吸引力的网站,而且还需要不断更新和改进其特性和内容,以满足研究小组不断发展的需求.</p>",
-            "<p>通过利用Joomla的强大的框架,我确保了网站既安全又可扩展,能够处理不断增长的内容量和用户互动.CMS允许简单的内容管理,使研究小组成员能够贡献和更新信息而不需要广泛的技术知识.</p>",
-            "<p>除了技术实现外,我专注于优化网站的性能和可访问性.这包括确保快速加载时间,实现多设备兼容的响应性设计,并坚持可访问性标准,使网站适合所有访问者.定期维护任务包括更新Joomla核心和扩展,监测网站的性能,及时解决任何安全漏洞.</p>",
-            "<p>简而言之,这个项目证明了我能够开发和管理一个动态的网络存在,</p>"
           ],
           "links": [],
-          "images": ["tifyc.jpg"],
+          "images": []
+        },
+        {
+          "name": "研究小组网站项目",
+          "description": "<p>第三个项目涉及使用Joomla的内容管理系统 (CMS) 来创建和持续维护研究小组网站. 通过利用Joomla的强大的框架,我确保了网站既安全又可扩展,能够处理不断增长的内容量和用户互动.CMS允许简单的内容管理,使研究小组成员能够贡献和更新信息而不需要广泛的技术知识.</p>",
           "technologies": [
             "Java",
             "Linux",
@@ -980,17 +794,13 @@
             "C#",
             ".NET",
             "Mono"
-          ]
-        },
-        {
-          "name": "Contribuciones al grupo de investigación",
-          "description": [
-            "<p>在我在研究小组工作期间,我做了多种能力的贡献.我的支持工作涵盖了各种任务,旨在促进该小组的目标.我还组织和开展专业研讨会,专注于机器人,与我的同事和学生分享了先进的知识和最新的领域发展.</p>",
-            "<p>此外,我还担任助理教授,在那里我教授了人工智能和人工视觉等课程. 在这个角色中,我负责准备和讲座,协助课程设计,并向学生提供有关人工智能和计算机视觉技术的复杂主题的指导. 我参与这些课程有助于缩小理论概念与学生的实用应用之间的差距.</p>",
-            "<p>除了教学和支持角色之外,我还积极参与课外活动,包括Hispabot机器人竞赛.我参加了迷宫解决模式,在那里我应用了机器人和人工智能方面的经验来设计和编程能够导航和解决迷宫的机器人.</p>"
           ],
           "links": [],
-          "images": ["hispabot.jpeg"],
+          "images": ["tifyc.jpg"]
+        },
+        {
+          "name": "对研究小组的贡献",
+          "description": "<p>在我在研究小组工作期间,我做了多种能力的贡献.我的支持工作涵盖了各种任务,旨在促进该小组的目标.我还组织和开展专业研讨会,专注于机器人,与我的同事和学生分享了先进的知识和最新的领域发展. 除了教学和支持角色之外,我还积极参与课外活动,包括Hispabot机器人竞赛.我参加了迷宫解决模式,在那里我应用了机器人和人工智能方面的经验来设计和编程能够导航和解决迷宫的机器人.</p>",
           "technologies": [
             "C",
             "C++",
@@ -1000,170 +810,171 @@
             "Octave",
             "Java",
             "Python"
-          ]
+          ],
+          "links": [],
+          "images": ["hispabot.jpeg"]
         }
       ],
       "images": []
     },
     {
       "name": "Knowcentury",
-      "title": "小程序员",
-      "short_description": ["专注于创建网站的小公司"],
+      "short_description": "专注于创建网站的小公司",
       "thumbnail": "knowcentury.png",
-      "period_time": "Enero 2005 - Julio 2005",
-      "full_description": ["专注于创建网站的小公司"],
-      "contribution": ["<p>在大学的早期,为了支付我的学费,</p>"],
+      "period_time": {
+        "start": "2005年1月",
+        "end": "2005年7月",
+        "current": false
+      },
+      "full_description": "专注于创建网站的小公司",
+      "contribution": "<p>在大学的早期,为了支付我的学费,</p>",
       "links": [],
       "projects": [
         {
-          "name": "Desarrollo de sitios web",
-          "description": ["<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>"],
+          "name": "网站开发",
+          "description": "<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>",
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"],
           "links": [],
-          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
+          "images": []
         }
       ],
       "images": []
     },
     {
       "name": "IBM",
-      "title": "小程序员",
-      "short_description": [
-        "IBM是一家全球科技公司,专注于云计算,人工智能和硬件,为全球企业提供创新解决方案."
-      ],
+      "short_description": "IBM是一家全球科技公司,专注于云计算,人工智能和硬件,为全球企业提供创新解决方案.",
       "thumbnail": "ibm.svg",
-      "period_time": "Septiembre 2003 - Diciembre 2004",
-      "full_description": [
-        "<p>国际商务机械公司(IBM)是世界上最先进的科技公司之一,拥有超过20亿美元的资产。</p>",
-        "<p>总部设在伦敦的美国电脑公司IBM推出了人工智能(AI)系统。</p>",
-        "<p>总部设在伦敦的IBM(总部位于伦敦)推出其云平台,以促进人工智能的发展。</p>",
-        "<p>IBM的硬件解决方案也在公司成功中发挥了重要作用.例如,IBM Z Mainframe系列以其可靠性,安全性和性能而闻名,特别是在需要强大的数据处理能力的行业中,如银行和金融.这些 Mainframe旨在管理大规模交易处理和数据管理,确保业务持续性和运营效率.</p>",
-        "<p>另一个关键领域是IBM对研发 (R&amp;D) 的承诺.IBM在研发 (R&amp;D) 上投入大量资金,不断推进技术可能的极限.公司的创新导致了许多进步,包括量子计算的发展.IBMQuantum是一个先进的计算平台,利用量子力学的原则来解决超越经典计算机的能力的复杂问题.</p>",
-        "<p>此外,IBM对可持续发展和企业社会责任 (RSC) 的承诺反映了其对对世界产生积极影响的奉献.该公司已经实施了各种旨在减少其环境足迹,促进多样性和包容性,支持社区教育和发展的举措.IBM RSC的努力突出了其相信使用技术作为一个力量,促进社会积极的变化.</p>",
-        "<p>总部设在伦敦的IBM(总部位于伦敦)是全球第二大电脑制造商。</p>"
-      ],
-      "contribution": [
-        "<p>今年是全球首个虚拟化日.</p>",
-        "<p>编者按:本文不代表BBC观点和立场.</p>",
-        "<p>我研究了虚拟化技术,从技术层面来看,这项研究旨在提高对远程系统运行的安全性。</p>"
-      ],
+      "period_time": {
+        "start": "2003年9月",
+        "end": "2004年12月",
+        "current": false
+      },
+      "full_description": "<p>国际商务机械公司 (IBM) 是一个全球知名的科技公司,历史悠久超过一个世纪.成立于1911年,总部位于纽约阿蒙克,IBM一直处于技术创新的前沿,通过其开创性的解决方案影响着许多行业.今天,IBM是云计算,人工智能 (AI) 和企业硬件领域的领导者,提供一套完整的产品和服务,为各种规模的企业提供服务. 除了人工智能外,IBM还通过其IBM云平台在云计算方面取得了实质性进步.该强大的平台提供了广泛的云服务,包括基础设施作为服务 (IaaS),平台作为服务 (PaaS) 和软件作为服务 (SaaS).IBM云是旨在支持公共和私人云环境,使企业能够更灵活和安全地部署和管理应用程序.平台的集成能力允许与现有系统完美连接,促进数字化转型和创新. 另一个关键领域是IBM对研发 (R&D) 的承诺.IBM在研发 (R&D) 上投入大量资金,不断推进技术可能的极限.公司的创新导致了许多进步,包括量子计算的发展.IBMQuantum是一个先进的计算平台,利用量子力学的原则来解决超越经典计算机的能力的复杂问题. 总之,IBM是全球技术领导者,提供了AI,云计算和企业硬件的创新解决方案.与强大的研究和开发重点,该公司继续推动塑造各种行业未来的技术进步.IBM对可持续性和社会责任的承诺进一步加强了其作为一个进步的,社会意识的组织的声誉.通过其完整的产品和服务套件,IBM使企业能够实现其目标和浏览数字时代的复杂性.</p>",
+      "contribution": "<p>在此期间,我的主要责任是对IBM System Z/390s主机系统虚拟化的使用进行全面研究.该项目涉及使用开源模拟器Qemu来简化虚拟化过程.目标是实现远程系统的使用,从而在IBM主机中创建虚拟化环境.这些虚拟系统必须在Suse Linux Enterprise Edition操作系统下运行,为各种应用和服务提供一个强大,安全的平台. 我的角色需要全面了解IBM System Z/390s的架构和功能.我专注于探索Qemu如何有效地与主机集成以实现高效虚拟化.这涉及配置和优化主机以支持多个虚拟机,每个都运行其Suse Linux Enterprise Edition.使用Suse Linux是关键的,因为它提供了高性能和可靠的虚拟系统所需的必要稳定性和企业级特性.</p>",
       "links": [],
       "projects": [
         {
-          "name": "Desarrollo de sitios web",
-          "description": ["<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>"],
+          "name": "网站开发",
+          "description": "<p>使用Joomla,Drupal和Moodle等CMS实现网站.</p>",
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"],
           "links": [],
-          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
-          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"]
         }
-      ]
+      ],
+      "images": []
     }
   ],
   "educations": {
     "university": [
       {
-        "images": ["uah.svg"],
-        "period_time": "Septiembre 2007 - Junio 2009",
-        "summary": [
-          "人工智能和机器学习. 监督,不监督和增强. 象征性学习. 排序和退缩模式. 模型优化.",
-          "深度网络,多层网络,后传,损失功能,超参数和学习策略.",
-          "卷积网络,图像识别.",
-          "连续和重复网络,LSTM模型.",
-          "在基于GPU的架构中并行和计算技术.",
-          "测量技术,使用 Tensorflow 和 Thean 编程.",
-          "可扩展的自动学习.",
-          "医疗,金融,自动驾驶等领域的应用."
-        ],
-        "thumbnail": "uah.svg",
+        "university_name": "澳大利亚联邦大学",
         "title": "信息和通信技术人工智能士学位",
-        "university_name": "UAH"
+        "period_time": {
+          "start": "2007年9月",
+          "end": "2009年6月",
+          "current": false
+        },
+        "summary": "人工智能和机器学习.监督,不监督和增强.象征性学习. 分类和倒退模型.模型优化. 深层网络,倒流. 损失功能. 超参数和学习策略. LSTM模型. 基于GPU的架构中的平行和计算技术. 编程使用 tensorflow 和 theano.",
+        "images": ["uah.svg"],
+        "thumbnail": "uah.svg"
       },
       {
-        "images": ["uah.svg"],
-        "period_time": "Septiembre 2001 - Junio 2007",
-        "summary": [
-          "在:人工智能,分散逻辑,人工视觉系统,物理II,数学分析,数据结构,网络等方面获得荣誉."
-        ],
-        "thumbnail": "uah.svg",
+        "university_name": "澳大利亚联邦大学",
         "title": "计算机技术工程",
-        "university_name": "UAH"
+        "period_time": {
+          "start": "2001年9月",
+          "end": "2007年6月",
+          "current": false
+        },
+        "summary": "在:人工智能,分散逻辑,人工视觉系统,物理II,数学分析,数据结构,网络等方面获得荣誉.",
+        "images": ["uah.svg"],
+        "thumbnail": "uah.svg"
       }
     ],
     "complementary": [
       {
-        "images": ["linux_foundation.png"],
         "institution": "Linux基金会",
-        "period_time": "Septiembre 2015",
-        "summary": [
-          "官方Linux系统管理证书,涉及:",
-          "高级Linux系统管理,包括与内核相关的系统.",
-          "执行区块和文件系统存储的高级管理,以及网络的高级身份验证和系统安全,包括防火墙和VPN",
-          "设置和配置网络中心服务 (DHCP, DNS, SSH,网络服务器,文件服务器,电子邮件等).",
-          "监督助理,并向管理层提供自动化和采购方面的建议"
-        ],
-        "thumbnail": "linux_foundation.png",
-        "title": "公积金 - 2"
-      },
-      {
+        "title": "公积金 - 2",
+        "period_time": {
+          "start": "2015年9月",
+          "end": "",
+          "current": true
+        },
+        "summary": "官方的Linux系统管理证书涉及资格:高级Linux系统管理,包括与内核相关的系统.进行区块和文件系统存储的高级管理,以及高级网络认证和系统安全,包括防火墙和VPN.安装和配置中央网络服务 (DHCP,DNS,SSH,网络服务器,文件服务器,电子邮件等).",
         "images": ["linux_foundation.png"],
+        "thumbnail": "linux_foundation.png"
+      },
+      {
         "institution": "Linux基金会",
-        "period_time": "Septiembre 2013",
-        "summary": [
-          "官方Linux系统管理证书,涉及:",
-          "安装一个Linux系统,包括X11,并将其设置为网络客户端.",
-          "在指挥线上工作.",
-          "管理文件和访问权限,包括ACL,以及系统安全.",
-          "执行简单的维护任务."
-        ],
-        "thumbnail": "linux_foundation.png",
-        "title": "产品类型:"
+        "title": "产品类型:",
+        "period_time": {
+          "start": "2013年9月",
+          "end": "",
+          "current": true
+        },
+        "summary": "官方的Linux系统管理证书涉及到:安装一个Linux系统,包括X11并设置它作为网络客户端. 在命令行上工作.管理文件和访问权限,包括ACL,以及系统安全.执行简单的维护任务.",
+        "images": ["linux_foundation.png"],
+        "thumbnail": "linux_foundation.png"
       },
       {
-        "images": ["uah.svg"],
         "institution": "河内阿尔卡拉大学",
-        "period_time": "Septiembre 2007",
-        "summary": ["通过SCORM标准设计教育内容."],
-        "thumbnail": "uah.svg",
-        "title": "数字教育内容的设计和评估"
+        "title": "数字教育内容的设计和评估",
+        "period_time": {
+          "start": "2007年9月",
+          "end": "",
+          "current": true
+        },
+        "summary": "通过SCORM标准设计教育内容.",
+        "images": ["uah.svg"],
+        "thumbnail": "uah.svg"
       },
       {
-        "images": ["uah.svg"],
         "institution": "河内阿尔卡拉大学",
-        "period_time": "Septiembre 2007",
-        "summary": ["人工视觉系统,卷积矩阵,过器."],
-        "thumbnail": "uah.svg",
-        "title": "人工视觉课程"
+        "title": "人工视觉课程",
+        "period_time": {
+          "start": "2007年9月",
+          "end": "",
+          "current": true
+        },
+        "summary": "人工视觉系统,卷积矩阵,过器.",
+        "images": ["uah.svg"],
+        "thumbnail": "uah.svg"
       }
     ],
     "languages": [
       {
-        "acreditations": [],
         "language": "西班牙语",
-        "read": "原住民",
-        "spoken": "原住民",
+        "spoken": "土耳其人",
+        "writen": "土耳其人",
+        "read": "土耳其人",
         "thumbnail": "spanish.png",
-        "writen": "原住民"
+        "acreditation": []
       },
       {
-        "acreditations": [],
         "language": "英语",
-        "read": "液体",
-        "spoken": "液体",
+        "spoken": "流动性",
+        "writen": "流动性",
+        "read": "流动性",
         "thumbnail": "english.svg",
-        "writen": "液体"
+        "acreditation": []
       },
       {
-        "acreditations": [
-          {
-            "institution": "Instituto Confucio Madrid",
-            "period_time": "Septiembre 2009",
-            "title": "HSK 3"
-          }
-        ],
         "language": "中文",
-        "read": "液体",
-        "spoken": "液体",
+        "spoken": "流动性",
+        "writen": "流动性",
+        "read": "流动性",
         "thumbnail": "chinese.png",
-        "writen": "液体"
+        "acreditation": [
+          {
+            "institution": "马德里孔子学院",
+            "title": "汇率3",
+            "period_time": {
+              "start": "2009年9月",
+              "end": "",
+              "current": true
+            }
+          }
+        ]
       }
     ]
   }

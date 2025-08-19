@@ -233,34 +233,6 @@ def _migrate_languages(lst: Any) -> List[Dict[str, Any]]:
     return out
 
 
-def _migrate_intro_to_profile(d: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Convierte 'intro' → 'profile'
-    """
-    intro = _as_dict(d.get("intro"))
-    if not intro:
-        return {
-            "greeting": "",
-            "profile_image": "",
-            "name": "",
-            "title": "",
-            "summary": "",
-            "bio": [],
-            "hobbies": [],
-            "links": [],
-        }
-    return {
-        "greeting": _as_str(intro.get("greeting")),
-        "profile_image": _as_str(intro.get("profile_image")),
-        "name": _as_str(intro.get("name")),
-        "title": _as_str(intro.get("title")),
-        "summary": _join_html(intro.get("summary")),
-        "bio": _migrate_bio(intro.get("bio")),
-        "hobbies": _join_html(intro.get("hobbies")),
-        "links": _migrate_links(intro.get("links")),
-    }
-
-
 def _migrate_incoming(data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Acomoda tu JSON a nuestro esquema antes de defaults().
@@ -270,9 +242,9 @@ def _migrate_incoming(data: Dict[str, Any]) -> Dict[str, Any]:
 
     # profile (desde intro si existe)
     if "profile" in d:
-        out["profile"] = _as_dict(d.get("profile"))
+        out["intro"] = _as_dict(d.get("profile"))
     else:
-        out["profile"] = _migrate_intro_to_profile(d)
+        out["intro"] = _as_dict(d.get("intro"))
 
     # works
     out["works"] = _migrate_works(d.get("works"))

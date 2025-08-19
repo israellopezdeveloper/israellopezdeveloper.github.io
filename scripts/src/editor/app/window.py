@@ -164,12 +164,13 @@ class MainWindow(QtWidgets.QMainWindow):
         ensure_profile_defaults(self.data)
         ensure_educations_defaults(self.data.get("educations"))
 
-        self.tabProfile.from_data(self.data.get("profile", {}))
+        profile = self.data.get("intro", self.data.get("profile", {}))
+        self.tabProfile.from_data(profile)
         self.tabWorks.from_data(self.data.get("works", []))
         self.tabEdu.from_data(self.data.get("educations", {}))
 
     def _collect_from_tabs(self) -> None:
-        self.data["profile"] = self.tabProfile.value()
+        self.data["intro"] = self.tabProfile.value()
         self.data["works"] = self.tabWorks.value()
         self.data["educations"] = self.tabEdu.value()
 

@@ -56,11 +56,11 @@ def _is_excluded_path(
 # RUTAS QUE NUNCA SE DEBEN RESUMIR (nombres, urls, iconos, imágenes, etc.)
 EXCLUDE_PATHS = [
     # —— Perfil / Intro (ambos esquemas) ——
-    "profile.name",
-    "profile.profile_image",
-    "profile.links[].icon",
-    "profile.links[].url",
-    "profile.links[].text",
+    "intro.name",
+    "intro.profile_image",
+    "intro.links[].icon",
+    "intro.links[].url",
+    "intro.links[].text",
     # —— Works ——
     "works[].name",
     "works[].title",

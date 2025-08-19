@@ -73,7 +73,7 @@ export default function HomePage(): JSX.Element {
 
       <div
         style={{ textAlign: 'justify' }}
-        dangerouslySetInnerHTML={{ __html: intro.summary?.join('') || '' }}
+        dangerouslySetInnerHTML={{ __html: intro.summary || '' }}
       />
 
       <Heading>{t('myBio')}</Heading>

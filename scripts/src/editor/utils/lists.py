@@ -1,4 +1,3 @@
-# src/editor/utils/lists.py
 from __future__ import annotations
 
 from typing import Iterable, Any, List

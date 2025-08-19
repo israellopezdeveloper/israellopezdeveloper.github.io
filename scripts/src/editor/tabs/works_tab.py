@@ -1,59 +1,15 @@
-# src/editor/tabs/works_tab.py
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional, Union
 from PySide6 import QtCore, QtWidgets
 
 from editor.dialogs.work_dialog import WorkDialog
-
-try:
-    from ..utils.lists import enable_reorder, move_selected, remove_selected, add_item
-except Exception:
-
-    def enable_reorder(lw: QtWidgets.QListWidget) -> None:
-        lw.setDragEnabled(True)
-        lw.setAcceptDrops(True)
-        lw.setDefaultDropAction(QtCore.Qt.DropAction.MoveAction)
-        lw.setDragDropMode(QtWidgets.QAbstractItemView.DragDropMode.InternalMove)
-        lw.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.ExtendedSelection)
-
-    def move_selected(lw: QtWidgets.QListWidget, delta: int) -> None:
-        rows = sorted({i.row() for i in lw.selectedIndexes()})
-        if not rows:
-            return
-        iterable = reversed(rows) if delta > 0 else rows
-        moved: List[int] = []
-        for r in iterable:
-            nr = r + delta
-            if 0 <= nr < lw.count():
-                it = lw.takeItem(r)
-                lw.insertItem(nr, it)
-                moved.append(nr)
-        lw.clearSelection()
-        for r in moved:
-            it = lw.item(r)
-            if it is not None:
-                it.setSelected(True)
-        if moved:
-            lw.setCurrentRow(moved[-1])
-
-    def remove_selected(lw: QtWidgets.QListWidget) -> None:
-        for r in sorted({i.row() for i in lw.selectedIndexes()}, reverse=True):
-            lw.takeItem(r)
-
-    def add_item(
-        lw: QtWidgets.QListWidget,
-        text: str,
-        data: Any | None = None,
-        *,
-        role: int = int(QtCore.Qt.ItemDataRole.UserRole),
-    ) -> QtWidgets.QListWidgetItem:
-        it = QtWidgets.QListWidgetItem(text)
-        if data is not None:
-            it.setData(role, data)
-        lw.addItem(it)
-        return it
-
+from editor.utils.lists import (
+    add_item,
+    enable_reorder,
+    move_selected,
+    remove_selected,
+)
 
 Qt = QtCore.Qt
 
@@ -70,7 +26,7 @@ def _fmt_period(period: Dict[str, Any] | None) -> str:
     end = _s(period.get("end"))
     current = bool(period.get("current"))
     if start or end or current:
-        return f"{start} – {'Present' if current or not end else end}".strip(" –")
+        return f"{start} – {'Actualidad' if current or not end else end}".strip(" –")
     return ""
 
 
@@ -209,11 +165,7 @@ class WorksTab(QtWidgets.QWidget):
                 "name": _s(w.get("name")).strip(),
                 "short_description": _s(w.get("short_description")),
                 "thumbnail": _s(w.get("thumbnail")),
-                "period_time": {
-                    "start": _s((w.get("period_time") or {}).get("start")),
-                    "end": _s((w.get("period_time") or {}).get("end")),
-                    "current": bool((w.get("period_time") or {}).get("current")),
-                },
+                "period_time": _fmt_period(w),
                 "full_description": _s(w.get("full_description")),
                 "contribution": _s(w.get("contribution")),
                 "links": w.get("links") or [],

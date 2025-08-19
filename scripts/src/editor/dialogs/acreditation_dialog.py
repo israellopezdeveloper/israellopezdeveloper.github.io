@@ -86,14 +86,15 @@ class AcreditationDialog(QtWidgets.QDialog):
         self._revalidate()
 
     def value(self) -> Dict[str, Any]:
+        period_time = self._start.text().strip() + " - "
+        if self._current.isChecked():
+            period_time += "Actualidad"
+        else:
+            period_time += self._end.text().strip()
         return {
             "institution": self._institution.text().strip(),
             "title": self._title.text().strip(),
-            "period_time": {
-                "start": self._start.text().strip(),
-                "end": self._end.text().strip(),
-                "current": self._current.isChecked(),
-            },
+            "period_time": period_time,
         }
 
     # -------- Internos --------

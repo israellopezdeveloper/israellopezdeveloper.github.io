@@ -1,7 +1,7 @@
 # src/editor/dialogs/link_dialog.py
 from __future__ import annotations
 
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple
 from urllib.parse import urlparse
 
 from PySide6 import QtCore, QtWidgets
@@ -97,6 +97,18 @@ class LinkDialog(QtWidgets.QDialog):
         if icon:
             out["icon"] = icon
         return out
+
+    def str(self) -> str:
+        text = self._edit_text.text().strip()
+        url = self._edit_url.text().strip()
+        icon = self._edit_icon.text().strip()
+        return f"[{icon}] {text} — {url}" if icon else f"{text} — {url}"
+
+    def tuple(self) -> Tuple[str, str, str]:
+        text = self._edit_text.text().strip()
+        url = self._edit_url.text().strip()
+        icon = self._edit_icon.text().strip()
+        return (text, url, icon)
 
     # ------------------------------------------------------------------
     # Lógica de validación y aceptación

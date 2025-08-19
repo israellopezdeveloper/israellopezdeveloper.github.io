@@ -53,12 +53,11 @@ def to_nllb(code: str) -> str:
 # ------------------------ Reglas de exclusión ------------------------------
 
 EXCLUDE_PATHS = [
-    "profile.name",
-    "profile.links[].icon",
-    "profile.links[].url",
+    "intro.name",
+    "intro.links[].icon",
+    "intro.links[].url",
     "works[].name",
     "works[].thumbnail",
-    "works[].period_time.",
     "works[].links[].icon",
     "works[].links[].url",
     "works[].projects[].links[].url",
