@@ -1,6 +1,6 @@
 # src/editor/app/window.py
 from pathlib import Path
-from typing import Optional
+from typing import Dict, Optional
 
 from PySide6 import QtCore, QtWidgets
 
@@ -141,9 +141,9 @@ class MainWindow(QtWidgets.QMainWindow):
     def save_file(self) -> None:
         if not self.current_path:
             return self.save_file_as()
-        self._collect_from_tabs()
+        value = self._collect_from_tabs()
         try:
-            save_json(str(self.current_path), self.data)
+            save_json(str(self.current_path), value)
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error", f"No se pudo guardar:\n{e}")
             return
@@ -169,10 +169,12 @@ class MainWindow(QtWidgets.QMainWindow):
         self.tabWorks.from_data(self.data.get("works", []))
         self.tabEdu.from_data(self.data.get("educations", {}))
 
-    def _collect_from_tabs(self) -> None:
-        self.data["intro"] = self.tabProfile.value()
-        self.data["works"] = self.tabWorks.value()
-        self.data["educations"] = self.tabEdu.value()
+    def _collect_from_tabs(self) -> Dict:
+        values: Dict = {}
+        values["intro"] = self.tabProfile.value()
+        values["works"] = self.tabWorks.value()
+        values["educations"] = self.tabEdu.value()
+        return values
 
     # ------------------------------------------------------------------
     # Tools: translate / summarize
@@ -294,7 +296,6 @@ class MainWindow(QtWidgets.QMainWindow):
         try:
             if not self._intl_out_dir:
                 return
-            from editor.services.io import save_json  # type: ignore
 
             # base para nombres de archivo
             if self.current_path:
@@ -384,7 +385,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._tr_tgt = tgt
 
         # Recoge cambios de pestañas
-        self._collect_from_tabs()
+        value = self._collect_from_tabs()
 
         # Desactivar acciones (menú y toolbar)
         try:
@@ -423,7 +424,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Conexiones: a SLOTS del MainWindow (UI thread)
         worker.finished.connect(self._tr_on_finished)
         worker.error.connect(self._tr_on_error)
-        thread.started.connect(lambda: worker.run(self.data, src, tgt))
+        thread.started.connect(lambda: worker.run(value, src, tgt))
 
         # Importante: arrancar el hilo en el PRÓXIMO tick para no pisar el repintado
         QtCore.QTimer.singleShot(0, thread.start)
@@ -454,7 +455,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._sum_ratio = ratio
 
         # Recoge datos de pestañas
-        self._collect_from_tabs()
+        value = self._collect_from_tabs()
 
         # Desactivar acciones (menú y toolbar)
         try:
@@ -490,7 +491,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Conexiones a slots del MainWindow
         worker.finished.connect(self._sum_on_finished)
         worker.error.connect(self._sum_on_error)
-        thread.started.connect(lambda: worker.run(self.data, ratio))
+        thread.started.connect(lambda: worker.run(value, ratio))
 
         # Arranca en el próximo tick para no pisar el repintado
         QtCore.QTimer.singleShot(0, thread.start)
@@ -524,7 +525,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._intl_out_dir = out_dir
 
         # Recoger datos actuales
-        self._collect_from_tabs()
+        value = self._collect_from_tabs()
 
         # Desactivar acciones
         for key in ("internationalize",):
@@ -562,7 +563,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         worker.finished.connect(self._intl_on_finished)
         worker.error.connect(self._intl_on_error)
-        thread.started.connect(lambda: worker.run(self.data, src, ratio))
+        thread.started.connect(lambda: worker.run(value, src, ratio))
 
         # Arranca en el próximo tick para no bloquear el repintado del spinner
         QtCore.QTimer.singleShot(0, thread.start)

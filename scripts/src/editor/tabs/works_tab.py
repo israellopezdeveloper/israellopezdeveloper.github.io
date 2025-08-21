@@ -15,23 +15,19 @@ Qt = QtCore.Qt
 
 
 # -------------------- helpers de datos --------------------
-def _s(v: Any) -> str:
-    return "" if v is None else str(v)
-
-
 def _fmt_period(period: Dict[str, Any] | None) -> str:
     if not period:
         return ""
-    start = _s(period.get("start"))
-    end = _s(period.get("end"))
+    start = str(period.get("start"))
+    end = str(period.get("end"))
     current = bool(period.get("current"))
     if start or end or current:
-        return f"{start} – {'Actualidad' if current or not end else end}".strip(" –")
+        return f"{start} –- {'Actualidad' if current or not end else end}"
     return ""
 
 
 def _fmt_work_label(w: Dict[str, Any]) -> str:
-    name = _s(w.get("name"))
+    name = str(w.get("name"))
     when = _fmt_period(w.get("period_time") or {})
     return "  •  ".join([p for p in [name, when] if p]) or "(nuevo)"
 
@@ -152,7 +148,7 @@ class WorksTab(QtWidgets.QWidget):
             data_list = works
 
         for w in data_list:
-            wdict = dict(w) if isinstance(w, dict) else {"name": _s(w)}
+            wdict = dict(w) if isinstance(w, dict) else {"name": str(w)}
             add_item(self._list, _fmt_work_label(wdict), wdict)
 
     def value(self) -> List[Dict[str, Any]]:
@@ -162,12 +158,12 @@ class WorksTab(QtWidgets.QWidget):
             w: Dict[str, Any] = it.data(Qt.ItemDataRole.UserRole) or {}
             # limpieza mínima
             clean = {
-                "name": _s(w.get("name")).strip(),
-                "short_description": _s(w.get("short_description")),
-                "thumbnail": _s(w.get("thumbnail")),
-                "period_time": _fmt_period(w),
-                "full_description": _s(w.get("full_description")),
-                "contribution": _s(w.get("contribution")),
+                "name": str(w.get("name")).strip(),
+                "short_description": str(w.get("short_description")),
+                "thumbnail": str(w.get("thumbnail")),
+                "period_time": _fmt_period(w.get("period_time")),
+                "full_description": str(w.get("full_description")),
+                "contribution": str(w.get("contribution")),
                 "links": w.get("links") or [],
                 "projects": w.get("projects") or [],
                 "images": w.get("images") or [],

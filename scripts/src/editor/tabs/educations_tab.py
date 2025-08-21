@@ -3,120 +3,13 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
 from PySide6 import QtCore, QtWidgets
-
-# --- utilidades con fallback ---
-try:
-    from ..utils.lists import enable_reorder, move_selected, remove_selected, add_item
-except Exception:
-
-    def enable_reorder(lw: QtWidgets.QListWidget) -> None:
-        lw.setDragEnabled(True)
-        lw.setAcceptDrops(True)
-        lw.setDefaultDropAction(QtCore.Qt.DropAction.MoveAction)
-        lw.setDragDropMode(QtWidgets.QAbstractItemView.DragDropMode.InternalMove)
-        lw.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.ExtendedSelection)
-
-    def move_selected(lw: QtWidgets.QListWidget, delta: int) -> None:
-        rows = sorted({i.row() for i in lw.selectedIndexes()})
-        if not rows:
-            return
-        iterable = reversed(rows) if delta > 0 else rows
-        moved: List[int] = []
-        for r in iterable:
-            nr = r + delta
-            if 0 <= nr < lw.count():
-                it = lw.takeItem(r)
-                lw.insertItem(nr, it)
-                moved.append(nr)
-        lw.clearSelection()
-        for r in moved:
-            it = lw.item(r)
-            if it:
-                it.setSelected(True)
-        if moved:
-            lw.setCurrentRow(moved[-1])
-
-    def remove_selected(lw: QtWidgets.QListWidget) -> None:
-        for r in sorted({i.row() for i in lw.selectedIndexes()}, reverse=True):
-            lw.takeItem(r)
-
-    def add_item(
-        lw: QtWidgets.QListWidget,
-        text: str,
-        data: Any | None = None,
-        *,
-        role: int = int(QtCore.Qt.ItemDataRole.UserRole),
-    ) -> QtWidgets.QListWidgetItem:
-        it = QtWidgets.QListWidgetItem(text)
-        if data is not None:
-            it.setData(role, data)
-        lw.addItem(it)
-        return it
-
-
-# --- diálogos específicos si existen ---
-try:
-    from ..dialogs.university_dialog import UniversityDialog  # type: ignore
-except Exception:
-    UniversityDialog = None  # type: ignore
-
-try:
-    from ..dialogs.complementary_dialog import ComplementaryDialog  # type: ignore
-except Exception:
-    ComplementaryDialog = None  # type: ignore
-
-try:
-    from ..dialogs.language_dialog import LanguageDialog  # type: ignore
-except Exception:
-    LanguageDialog = None  # type: ignore
+from ..utils.lists import enable_reorder, move_selected, remove_selected, add_item
+from ..dialogs.university_dialog import UniversityDialog
+from ..dialogs.complementary_dialog import ComplementaryDialog
+from ..dialogs.language_dialog import LanguageDialog
 
 
 Qt = QtCore.Qt
-
-
-# ---------- Fallback mínimo de diálogo ----------
-class _SimpleItemDialog(QtWidgets.QDialog):
-    """Fallback genérico: solo pide 'Nombre'."""
-
-    def __init__(
-        self,
-        title: str,
-        parent: Optional[QtWidgets.QWidget] = None,
-        value: Optional[Dict[str, Any]] = None,
-    ) -> None:
-        super().__init__(parent)
-        self.setWindowTitle(title)
-        self.setModal(True)
-        self._edit = QtWidgets.QLineEdit(self)
-        self._edit.setPlaceholderText("Nombre")
-        if value:
-            # intenta usar 'name' o 'title' si vienen
-            self._edit.setText(str(value.get("name") or value.get("title") or ""))
-
-        form = QtWidgets.QFormLayout()
-        form.addRow("Nombre", self._edit)
-
-        buttons = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-            | QtWidgets.QDialogButtonBox.StandardButton.Cancel,
-            parent=self,
-        )
-        buttons.accepted.connect(self._on_accept)
-        buttons.rejected.connect(self.reject)
-
-        root = QtWidgets.QVBoxLayout(self)
-        root.addLayout(form)
-        root.addWidget(buttons)
-        self.resize(420, 120)
-
-    def _on_accept(self) -> None:
-        if not self._edit.text().strip():
-            self._edit.setFocus(Qt.FocusReason.OtherFocusReason)
-            return
-        self.accept()
-
-    def value(self) -> Dict[str, Any]:
-        return {"name": self._edit.text().strip()}
 
 
 # ---------- Helpers ----------
@@ -314,27 +207,19 @@ class EducationsTab(QtWidgets.QWidget):
                 except Exception:
                     pass
             return dlg
-        if kind == "languages" and LanguageDialog is not None:
-            dlg = LanguageDialog(parent)
-            if value and hasattr(dlg, "set_value"):
-                try:
-                    dlg.set_value(value)
-                except Exception:
-                    pass
-            return dlg
-        # Fallback
-        return _SimpleItemDialog(f"{kind.capitalize()} ", parent, value)
+        dlg = LanguageDialog(parent)
+        if value and hasattr(dlg, "set_value"):
+            try:
+                dlg.set_value(value)
+            except Exception:
+                pass
+        return dlg
 
     def _dialog_value(self, dlg: QtWidgets.QDialog) -> Dict[str, Any]:
         """Obtiene el dict del diálogo, sea específico o fallback."""
-        if hasattr(dlg, "value"):
-            try:
-                v = dlg.value()
-                if isinstance(v, dict):
-                    return v
-            except Exception:
-                pass
-        # fallback seguro
+        v = dlg.value()
+        if isinstance(v, dict):
+            return v
         return {}
 
     # ---------- acciones ----------

@@ -281,9 +281,8 @@ def load_json(path: str) -> Dict[str, Any]:
 
 
 def save_json(path: str, data: Dict[str, Any]) -> None:
-    norm = ensure_portfolio_defaults(data)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(norm, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def validate(data: Dict[str, Any]) -> Tuple[bool, str]:
