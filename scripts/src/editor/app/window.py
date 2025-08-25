@@ -10,7 +10,7 @@ from editor.services.internationalize import InternationalizeWorker
 from editor.services.summarize import SummarizeWorker
 from editor.services.translate import TranslateWorker
 
-from ..tabs.profile_tab import ProfileTab
+from ..tabs.intro_tab import IntroTab
 
 from ..tabs.works_tab import WorksTab
 
@@ -22,7 +22,7 @@ from ..actions.factory import create_menu_actions, create_button_actions
 from ..services.io import load_json, save_json
 
 # from ..services.summarize import summarize_json
-from ..models.defaults import ensure_profile_defaults, ensure_educations_defaults
+from ..models.defaults import ensure_intro_defaults, ensure_educations_defaults
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -36,11 +36,11 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # --- Tabs ---
         self.tabs = QtWidgets.QTabWidget()
-        self.tabProfile = ProfileTab()
+        self.tabIntro = IntroTab()
         self.tabWorks = WorksTab()
         self.tabEdu = EducationsTab()
 
-        self.tabs.addTab(self.tabProfile, "Profile")
+        self.tabs.addTab(self.tabIntro, "Intro")
         self.tabs.addTab(self.tabWorks, "Works")
         self.tabs.addTab(self.tabEdu, "Educations")
         self.setCentralWidget(self.tabs)
@@ -161,17 +161,16 @@ class MainWindow(QtWidgets.QMainWindow):
     # ------------------------------------------------------------------
     # Data <-> Tabs
     def _load_into_tabs(self) -> None:
-        ensure_profile_defaults(self.data)
+        ensure_intro_defaults(self.data)
         ensure_educations_defaults(self.data.get("educations"))
 
-        profile = self.data.get("intro", self.data.get("profile", {}))
-        self.tabProfile.from_data(profile)
+        self.tabIntro.from_data(self.data.get("intro", {}))
         self.tabWorks.from_data(self.data.get("works", []))
         self.tabEdu.from_data(self.data.get("educations", {}))
 
     def _collect_from_tabs(self) -> Dict:
         values: Dict = {}
-        values["intro"] = self.tabProfile.value()
+        values["intro"] = self.tabIntro.value()
         values["works"] = self.tabWorks.value()
         values["educations"] = self.tabEdu.value()
         return values
@@ -410,7 +409,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._tr_progress.raise_()
         self._tr_progress.activateWindow()
         # Fuerza un ciclo de eventos para que se pinte YA
-        QtWidgets.QApplication.processEvents(QtCore.QEventLoop.AllEvents)
+        QtWidgets.QApplication.processEvents(
+            QtCore.QEventLoop.ProcessEventsFlag.AllEvents
+        )
 
         # Hilo + worker
         thread = QtCore.QThread(self)
@@ -479,7 +480,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._sum_progress.show()
         self._sum_progress.raise_()
         self._sum_progress.activateWindow()
-        QtWidgets.QApplication.processEvents(QtCore.QEventLoop.AllEvents)
+        QtWidgets.QApplication.processEvents(
+            QtCore.QEventLoop.ProcessEventsFlag.AllEvents
+        )
 
         # Hilo + worker
         thread = QtCore.QThread(self)
@@ -552,7 +555,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._intl_progress.show()
         self._intl_progress.raise_()
         self._intl_progress.activateWindow()
-        QtWidgets.QApplication.processEvents(QtCore.QEventLoop.AllEvents)
+        QtWidgets.QApplication.processEvents(
+            QtCore.QEventLoop.ProcessEventsFlag.AllEvents
+        )
 
         # Hilo + worker
         thread = QtCore.QThread(self)

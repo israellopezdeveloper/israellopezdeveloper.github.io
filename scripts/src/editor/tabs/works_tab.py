@@ -5,6 +5,7 @@ from PySide6 import QtCore, QtWidgets
 
 from editor.dialogs.work_dialog import WorkDialog
 from editor.utils.lists import (
+    CustomList,
     add_item,
     enable_reorder,
     move_selected,
@@ -44,7 +45,10 @@ class WorksTab(QtWidgets.QWidget):
         self._connect()
 
     def _build_ui(self) -> None:
-        self._list = QtWidgets.QListWidget()
+        self._list = CustomList(
+            self,
+            dialog_cls=WorkDialog,
+        )
         enable_reorder(self._list)
 
         self._btn_add = QtWidgets.QPushButton("Añadir")

@@ -85,8 +85,8 @@ class Bio(TypedDict, total=False):
     text: str
 
 
-# Profile (ajústalo a tu pestaña Profile)
-class Profile(TypedDict, total=False):
+# Intro (ajústalo a tu pestaña intro)
+class Intro(TypedDict, total=False):
     greetings: str
     profile_image: str
     name: str
@@ -98,6 +98,6 @@ class Profile(TypedDict, total=False):
 
 # Documento raíz
 class PortfolioData(TypedDict, total=False):
-    profile: Profile
+    intro: Intro
     works: List[Work]
     educations: Educations

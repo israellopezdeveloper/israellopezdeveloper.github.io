@@ -240,11 +240,7 @@ def _migrate_incoming(data: Dict[str, Any]) -> Dict[str, Any]:
     d = _as_dict(data)
     out: Dict[str, Any] = {}
 
-    # profile (desde intro si existe)
-    if "profile" in d:
-        out["intro"] = _as_dict(d.get("profile"))
-    else:
-        out["intro"] = _as_dict(d.get("intro"))
+    out["intro"] = _as_dict(d.get("intro"))
 
     # works
     out["works"] = _migrate_works(d.get("works"))

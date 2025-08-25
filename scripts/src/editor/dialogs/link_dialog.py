@@ -1,10 +1,11 @@
-# src/editor/dialogs/link_dialog.py
 from __future__ import annotations
 
 from typing import Dict, Optional, Tuple
 from urllib.parse import urlparse
 
 from PySide6 import QtCore, QtWidgets
+
+from .base_dialog import BaseDialog
 
 
 def _is_valid_url(s: str) -> bool:
@@ -16,13 +17,18 @@ def _is_valid_url(s: str) -> bool:
         return False
 
 
-class LinkDialog(QtWidgets.QDialog):
+class LinkDialog(BaseDialog):
     """Diálogo para crear/editar un link: text, url, icon (opcional)."""
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
+    @property
+    def title(self) -> str:
+        return "Editar enlace"
+
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+    ) -> None:
         super().__init__(parent)
-        self.setWindowTitle("Editar enlace")
-        self.setModal(True)
 
         # --- Campos ---
         self._edit_text = QtWidgets.QLineEdit()
@@ -45,16 +51,6 @@ class LinkDialog(QtWidgets.QDialog):
         )
         self._lbl_hint.setPalette(pal)
         self._lbl_hint.setWordWrap(True)
-
-        # --- Botonera estándar ---
-        self._buttons = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-            | QtWidgets.QDialogButtonBox.StandardButton.Cancel
-        )
-        self._ok_btn = self._buttons.button(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-        )
-        self._ok_btn.setEnabled(False)
 
         # --- Layout ---
         form = QtWidgets.QFormLayout()
@@ -88,15 +84,11 @@ class LinkDialog(QtWidgets.QDialog):
         self._revalidate()
 
     def value(self) -> Dict[str, str]:
-        """Devuelve {'text','url','icon?'}; 'icon' se omite si está vacío."""
-        text = self._edit_text.text().strip()
-        url = self._edit_url.text().strip()
-        icon = self._edit_icon.text().strip()
-
-        out: Dict[str, str] = {"text": text, "url": url}
-        if icon:
-            out["icon"] = icon
-        return out
+        return {
+            "text": self._edit_text.text().strip(),
+            "url": self._edit_url.text().strip(),
+            "icon": self._edit_icon.text().strip(),
+        }
 
     def str(self) -> str:
         text = self._edit_text.text().strip()

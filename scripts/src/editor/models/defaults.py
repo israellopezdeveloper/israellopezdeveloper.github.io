@@ -12,7 +12,7 @@ from .schema import (
     Acreditation,
     LanguageEntry,
     Educations,
-    Profile,
+    Intro,
     PortfolioData,
 )
 
@@ -126,7 +126,7 @@ def ensure_educations_defaults(v: Any) -> Educations:
     }
 
 
-def ensure_profile_defaults(v: Any) -> Profile:
+def ensure_intro_defaults(v: Any) -> Intro:
     d = dict(v or {})
     summary_json = d.get("summary", "")
     if isinstance(summary_json, list):
@@ -149,7 +149,7 @@ def ensure_profile_defaults(v: Any) -> Profile:
 def ensure_portfolio_defaults(v: Any) -> PortfolioData:
     d = dict(v or {})
     return {
-        "intro": ensure_profile_defaults(d.get("intro") or d.get("profile") or {}),
+        "intro": ensure_intro_defaults(d.get("intro") or {}),
         "works": [ensure_work_defaults(x) for x in (d.get("works") or [])],
         "educations": ensure_educations_defaults(d.get("educations") or {}),
     }

@@ -4,77 +4,17 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtCore, QtWidgets
 
+from editor.dialogs.base_dialog import BaseDialog
+
 # ---------- Widgets / utilidades opcionales con fallback ----------
-try:
-    from ..widgets.html_editor import HtmlEditor  # editor + preview HTML
-except Exception:
-    HtmlEditor = None  # type: ignore
-
-try:
-    from ..widgets.file_select import FileSelect  # selector de archivo reutilizable
-except Exception:
-    FileSelect = None  # type: ignore
-
-try:
-    from ..utils.lists import enable_reorder, move_selected, remove_selected
-except Exception:
-
-    def enable_reorder(lw: QtWidgets.QListWidget) -> None:
-        lw.setDragEnabled(True)
-        lw.setAcceptDrops(True)
-        lw.setDefaultDropAction(QtCore.Qt.DropAction.MoveAction)
-        lw.setDragDropMode(QtWidgets.QAbstractItemView.DragDropMode.InternalMove)
-        lw.setSelectionMode(QtWidgets.QAbstractItemView.SelectionMode.ExtendedSelection)
-
-    def move_selected(lw: QtWidgets.QListWidget, delta: int) -> None:
-        rows = sorted({i.row() for i in lw.selectedIndexes()})
-        if not rows:
-            return
-        iterable = reversed(rows) if delta > 0 else rows
-        moved: List[int] = []
-        for r in iterable:
-            nr = r + delta
-            if 0 <= nr < lw.count():
-                it = lw.takeItem(r)
-                lw.insertItem(nr, it)
-                moved.append(nr)
-        lw.clearSelection()
-        for r in moved:
-            it = lw.item(r)
-            if it is not None:
-                it.setSelected(True)
-        if moved:
-            lw.setCurrentRow(moved[-1])
-
-    def remove_selected(lw: QtWidgets.QListWidget) -> None:
-        for r in sorted({i.row() for i in lw.selectedIndexes()}, reverse=True):
-            lw.takeItem(r)
-
-    def add_item(
-        lw: QtWidgets.QListWidget,
-        text: str,
-        data: Any | None = None,
-        *,
-        role: int = int(QtCore.Qt.ItemDataRole.UserRole),
-    ) -> QtWidgets.QListWidgetItem:
-        it = QtWidgets.QListWidgetItem(text)
-        if data is not None:
-            it.setData(role, data)
-        lw.addItem(it)
-        return it
+from ..widgets.html_editor import HtmlEditor  # editor + preview HTML
+from ..widgets.file_select import FileSelect  # selector de archivo reutilizable
+from ..utils.lists import CustomList, enable_reorder, move_selected, remove_selected
 
 
 # Dialogs
-try:
-    from ..dialogs.link_dialog import LinkDialog  # type: ignore
-except Exception:
-    LinkDialog = None  # type: ignore
-
-try:
-    from ..dialogs.project_dialog import ProjectDialog  # <- modal completo
-except Exception:
-    ProjectDialog = None  # type: ignore
-
+from ..dialogs.link_dialog import LinkDialog  # type: ignore
+from ..dialogs.project_dialog import ProjectDialog  # <- modal completo
 
 Qt = QtCore.Qt
 
@@ -149,15 +89,20 @@ class _FileSelect(QtWidgets.QWidget):
 
 
 # -------------------- Formulario de un trabajo --------------------
-class _WorkForm(QtWidgets.QWidget):
+class _WorkForm(BaseDialog):
     """Editor de un trabajo con el esquema solicitado."""
 
-    changed = QtCore.Signal()
+    @property
+    def title(self) -> str:
+        return "Descripción trabajo"
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+    ) -> None:
         super().__init__(parent)
 
-        # name
+        # --- Campos ---
         self._name = QtWidgets.QLineEdit()
 
         # short_description (texto plano)
@@ -165,20 +110,13 @@ class _WorkForm(QtWidgets.QWidget):
         self._short_desc.setPlaceholderText("Descripción breve…")
 
         # thumbnail (selector de imagen)
-        if FileSelect is not None:
-            self._thumbnail = FileSelect(
-                title="Elegir miniatura",
-                file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif)",
-                must_exist=True,
-            )
-            set_thumb = self._thumbnail.set_value
-            get_thumb = self._thumbnail.value
-        else:
-            self._thumbnail = _FileSelect()
-            set_thumb = self._thumbnail.set_value  # type: ignore[attr-defined]
-            get_thumb = self._thumbnail.value  # type: ignore[attr-defined]
-        self._set_thumb = set_thumb
-        self._get_thumb = get_thumb
+        self._thumbnail = FileSelect(
+            title="Elegir miniatura",
+            file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif)",
+            must_exist=True,
+        )
+        self._set_thumb = self._thumbnail.set_value
+        self._get_thumb = self._thumbnail.value
 
         # period_time (start, end, current)
         self._start = QtWidgets.QLineEdit()
@@ -188,37 +126,20 @@ class _WorkForm(QtWidgets.QWidget):
         self._current = QtWidgets.QCheckBox("Actual")
 
         # full_description (HTML)
-        if HtmlEditor:
-            self._full_desc = HtmlEditor(show_preview=True, parent=self)
-            set_full = self._full_desc.set_html
-            get_full = self._full_desc.html
-        else:
-            self._full_desc = QtWidgets.QPlainTextEdit()
-            set_full = self._full_desc.setPlainText  # type: ignore
-            get_full = self._full_desc.toPlainText  # type: ignore
-        self._set_full = set_full
-        self._get_full = get_full
+        self._full_desc = HtmlEditor(show_preview=True, parent=self)
+        self._set_full = self._full_desc.set_html
+        self._get_full = self._full_desc.html
 
         # contribution (HTML)
-        if HtmlEditor:
-            self._contrib = HtmlEditor(show_preview=True, parent=self)
-            set_contrib = self._contrib.set_html
-            get_contrib = self._contrib.html
-        else:
-            self._contrib = QtWidgets.QPlainTextEdit()
-            set_contrib = self._contrib.setPlainText  # type: ignore
-            get_contrib = self._contrib.toPlainText  # type: ignore
-        self._set_contrib = set_contrib
-        self._get_contrib = get_contrib
+        self._contrib = HtmlEditor(show_preview=True, parent=self)
+        self._set_contrib = self._contrib.set_html
+        self._get_contrib = self._contrib.html
 
         # links (lista de dicts)
-        self._links = QtWidgets.QListWidget()
-        enable_reorder(self._links)
-        self._btn_l_add = QtWidgets.QPushButton("Añadir")
-        self._btn_l_edit = QtWidgets.QPushButton("Editar")
-        self._btn_l_del = QtWidgets.QPushButton("Eliminar")
-        self._btn_l_up = QtWidgets.QPushButton("▲")
-        self._btn_l_down = QtWidgets.QPushButton("▼")
+        self._links = CustomList(
+            self,
+            dialog_cls=LinkDialog,
+        )
 
         # projects (lista; **abre modal** al añadir/editar)
         self._projects = QtWidgets.QListWidget()
@@ -294,15 +215,11 @@ class _WorkForm(QtWidgets.QWidget):
             v.addLayout(row)
             return box
 
-        box_links = build_section(
-            "Links",
-            self._links,
-            self._btn_l_add,
-            self._btn_l_edit,
-            self._btn_l_del,
-            self._btn_l_up,
-            self._btn_l_down,
-        )
+        box_links = QtWidgets.QGroupBox("Links", self)
+        vl = QtWidgets.QVBoxLayout(box_links)
+        vl.addWidget(self._links)
+        vl.addLayout(self._links.layout())
+
         box_projects = build_section(
             "Proyectos",
             self._projects,

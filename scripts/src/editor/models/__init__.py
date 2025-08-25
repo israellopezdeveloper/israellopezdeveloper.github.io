@@ -9,6 +9,6 @@ from .schema import (
     Acreditation,
     LanguageEntry,
     Educations,
-    Profile,
+    Intro,
     PortfolioData,
 )
