@@ -1,8 +1,8 @@
-# src/editor/widgets/file_select.py
 from __future__ import annotations
 
 from pathlib import Path
 from typing import Optional
+import shutil
 
 from PySide6 import QtCore, QtGui, QtWidgets
 
@@ -26,9 +26,8 @@ class FileSelect(QtWidgets.QWidget):
         title: str = "Seleccionar archivo",
         file_filter: str = "Todos (*)",
         select_dirs: bool = False,
-        save_mode: bool = False,
         must_exist: bool = False,
-        dialog_dir: Optional[str] = None,
+        dialog_dir: Path = Path.cwd(),
         clearable: bool = True,
         read_only: bool = False,
         parent: Optional[QtWidgets.QWidget] = None,
@@ -48,7 +47,6 @@ class FileSelect(QtWidgets.QWidget):
         self._title = title
         self._filter = file_filter
         self._select_dirs = bool(select_dirs)
-        self._save_mode = bool(save_mode)
         self._must_exist = bool(must_exist)
         self._dialog_dir = dialog_dir
 
@@ -105,7 +103,7 @@ class FileSelect(QtWidgets.QWidget):
         """Cambia el título del diálogo."""
         self._title = title or "Seleccionar archivo"
 
-    def set_dialog_dir(self, directory: str) -> None:
+    def set_dialog_dir(self, directory: Path) -> None:
         """Cambia el directorio inicial del diálogo."""
         self._dialog_dir = directory
 
@@ -124,7 +122,10 @@ class FileSelect(QtWidgets.QWidget):
         self.valueChanged.emit(self.value())
 
     def _start_dir(self) -> str:
-        # 1) Carpeta de la ruta actual si existe
+        # 1) Dialog dir configurado
+        if self._dialog_dir:
+            return str(self._dialog_dir.absolute())
+        # 2) Carpeta de la ruta actual si existe
         current = self.value()
         if current:
             p = Path(current).expanduser()
@@ -132,26 +133,36 @@ class FileSelect(QtWidgets.QWidget):
                 return str(p)
             if p.exists():
                 return str(p.parent)
-        # 2) Dialog dir configurado
-        if self._dialog_dir:
-            return self._dialog_dir
         # 3) Carpeta HOME
         return str(Path.home())
 
+    def _is_subpath(self, child: Path, parent: Path) -> bool:
+        try:
+            child.resolve().relative_to(parent.resolve())
+            return True
+        except Exception:
+            return False
+
+    def _unique_dest(self, base_dir: Path, name: str) -> Path:
+        base_dir.mkdir(parents=True, exist_ok=True)
+        stem = Path(name).stem
+        suf = Path(name).suffix
+        cand = base_dir / f"{stem}{suf}"
+        i = 1
+        while cand.exists():
+            cand = base_dir / f"{stem}_{i}{suf}"
+            i += 1
+        return cand
+
     def _pick(self, *, return_path: bool = False):
         path: Optional[str] = None
-        if self._select_dirs and not self._save_mode:
+        if self._select_dirs:
             path = (
                 QtWidgets.QFileDialog.getExistingDirectory(
                     self, self._title, self._start_dir()
                 )
                 or None
             )
-        elif self._save_mode:
-            path, _ = QtWidgets.QFileDialog.getSaveFileName(
-                self, self._title, self._start_dir(), self._filter
-            )
-            path = path or None
         else:
             path, _ = QtWidgets.QFileDialog.getOpenFileName(
                 self, self._title, self._start_dir(), self._filter
@@ -159,7 +170,26 @@ class FileSelect(QtWidgets.QWidget):
             path = path or None
 
         if path:
-            self.set_value(path)
+            sel = Path(path)
+            if self._is_subpath(sel, self._dialog_dir):
+                rel = sel.relative_to(self._dialog_dir).as_posix()
+                self.set_value(rel)
+                return rel if return_path else None
+            try:
+                dest = self._unique_dest(self._dialog_dir, sel.name)
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(sel, dest)
+                rel = dest.relative_to(self._dialog_dir).as_posix()
+                self.set_value(rel)
+                return rel if return_path else None
+            except Exception as e:
+                QtWidgets.QMessageBox.critical(
+                    self,
+                    "Error al copiar",
+                    f"No se pudo copiar el archivo seleccionado al directorio de trabajo:\n{e}",
+                )
+                self.set_value(sel.as_posix())
+                return sel.as_posix() if return_path else None
         return path if return_path else None
 
     def _revalidate(self) -> None:

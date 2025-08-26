@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any
+from pathlib import Path
+from typing import Any, List, Optional
 
 from PySide6 import QtCore, QtWidgets
 
@@ -16,13 +17,23 @@ class FileDialog(BaseDialog):
 
     changed = QtCore.Signal()
 
-    def __init__(self, parent=None):
-        super().__init__(parent)
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
+    ):
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
         self._file = FileSelect(
             title="Elegir imagen de perfil",
             file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif *.svg);;Todos (*)",
             must_exist=False,
             parent=self,
+            dialog_dir=self._dialog_dir,
         )
         lay = QtWidgets.QVBoxLayout(self)
         lay.addWidget(self._file)

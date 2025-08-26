@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtWidgets
 
@@ -14,8 +15,11 @@ class BaseDialog(QtWidgets.QDialog, metaclass=_QDialogABCMeta):
         self,
         parent: Optional[QtWidgets.QWidget] = None,
         suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
     ):
         super().__init__(parent)
+
+        self._dialog_dir = dialog_dir
 
         self._suggestions = suggestions
         self.setModal(True)

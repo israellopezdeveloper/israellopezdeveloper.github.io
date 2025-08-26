@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Dict, Optional, Tuple
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
 from PySide6 import QtCore, QtWidgets
@@ -27,8 +28,14 @@ class LinkDialog(BaseDialog):
     def __init__(
         self,
         parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
     ) -> None:
-        super().__init__(parent)
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         # --- Campos ---
         self._edit_text = QtWidgets.QLineEdit()

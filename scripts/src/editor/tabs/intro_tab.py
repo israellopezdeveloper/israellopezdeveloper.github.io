@@ -1,11 +1,10 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Dict, Optional
 from PySide6 import QtCore, QtWidgets
 
-from editor.utils.lists import (
-    CustomList,
-)
+from ..utils.lists import CustomList
 from ..dialogs.bio_dialog import BioDialog
 from ..widgets.html_editor import HtmlEditor
 from ..widgets.file_select import FileSelect
@@ -29,20 +28,26 @@ class IntroTab(QtWidgets.QWidget):
 
     changed = QtCore.Signal()
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
         super().__init__(parent)
+
+        self._dialog_dir = dialog_dir
 
         # Campos básicos
         self._greeting = QtWidgets.QLineEdit(self)
         self._name = QtWidgets.QLineEdit(self)
         self._title = QtWidgets.QLineEdit(self)
 
-        img_filter = "Imágenes (*.png *.jpg *.jpeg *.webp *.gif *.svg);;Todos (*)"
         self._profile_image = FileSelect(
             title="Elegir imagen de perfil",
-            file_filter=img_filter,
+            file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif *.svg);;Todos (*)",
             must_exist=False,
             parent=self,
+            dialog_dir=self._dialog_dir,
         )
         self._img_set = self._profile_image.set_value
         self._img_get = self._profile_image.value
@@ -59,19 +64,16 @@ class IntroTab(QtWidgets.QWidget):
         self._links = CustomList(
             self,
             dialog_cls=LinkDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # Bio
         self._bio = CustomList(
             self,
             dialog_cls=BioDialog,
+            dialog_dir=self._dialog_dir,
         )
 
-        self._build_ui()
-        self._connect()
-
-    # ---------- UI ----------
-    def _build_ui(self) -> None:
         # Form básico
         form = QtWidgets.QFormLayout()
         form.addRow("Greeting", self._greeting)
@@ -121,7 +123,6 @@ class IntroTab(QtWidgets.QWidget):
         root = QtWidgets.QVBoxLayout(self)
         root.addWidget(split)
 
-    def _connect(self) -> None:
         for w in [self._greeting, self._name, self._title]:
             w.textChanged.connect(self.changed)
 

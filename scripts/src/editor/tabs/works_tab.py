@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 from PySide6 import QtCore, QtWidgets
 
@@ -18,12 +19,20 @@ class WorksTab(QtWidgets.QWidget):
 
     changed = QtCore.Signal()
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
         super().__init__(parent)
+
+        self._dialog_dir = dialog_dir
+
         self._list = CustomList(
             self,
             dialog_cls=WorkDialog,
             suggestions=[],
+            dialog_dir=self._dialog_dir,
         )
         root = QtWidgets.QVBoxLayout(self)
         root.addWidget(self._list)

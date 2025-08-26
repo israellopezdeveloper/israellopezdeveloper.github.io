@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Dict, Iterable, Any, List, Optional
 from difflib import SequenceMatcher
 from PySide6 import QtCore, QtWidgets
@@ -105,8 +106,10 @@ class CustomList(QtWidgets.QWidget):
         *,
         dialog_cls: type[BaseDialog] | None = None,
         suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
     ) -> None:
         super().__init__(parent)
+        self._dialog_dir = dialog_dir
         self._list = QtWidgets.QListWidget()
         self._dialog_cls = dialog_cls
         self._suggestions = suggestions
@@ -144,7 +147,11 @@ class CustomList(QtWidgets.QWidget):
     def _add(self) -> None:
         if self._dialog_cls is None:
             return
-        dlg = self._dialog_cls(self, suggestions=self._suggestions)
+        dlg = self._dialog_cls(
+            self,
+            suggestions=self._suggestions,
+            dialog_dir=self._dialog_dir,
+        )
         if dlg.exec():
             it = QtWidgets.QListWidgetItem(dlg.str())
             it.setData(Qt.ItemDataRole.UserRole, dlg.value())

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from PySide6 import QtCore, QtWidgets
@@ -31,8 +32,13 @@ class ProjectDialog(BaseDialog):
         self,
         parent: Optional[QtWidgets.QWidget] = None,
         suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
     ) -> None:
-        super().__init__(parent, suggestions)
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         # --- Campos ---
         self._name = QtWidgets.QLineEdit()
@@ -51,12 +57,14 @@ class ProjectDialog(BaseDialog):
         self._links = CustomList(
             self,
             dialog_cls=LinkDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # images
         self._images = CustomList(
             self,
             dialog_cls=FileDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # --- Layout ---

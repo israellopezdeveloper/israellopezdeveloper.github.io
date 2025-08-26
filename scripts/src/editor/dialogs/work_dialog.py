@@ -1,6 +1,7 @@
 # src/editor/dialogs/work_dialog.py
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from PySide6 import QtCore, QtWidgets
@@ -35,8 +36,13 @@ class WorkDialog(BaseDialog):
         self,
         parent: Optional[QtWidgets.QWidget] = None,
         suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
     ) -> None:
-        super().__init__(parent, suggestions)
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         # --- Campos ---
         self._name = QtWidgets.QLineEdit()
@@ -49,7 +55,9 @@ class WorkDialog(BaseDialog):
         self._thumbnail = FileSelect(
             title="Elegir miniatura",
             file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif)",
-            must_exist=True,
+            must_exist=False,
+            parent=self,
+            dialog_dir=self._dialog_dir,
         )
         self._set_thumb = self._thumbnail.set_value
         self._get_thumb = self._thumbnail.value
@@ -75,6 +83,7 @@ class WorkDialog(BaseDialog):
         self._links = CustomList(
             self,
             dialog_cls=LinkDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # projects (lista; **abre modal** al añadir/editar)
@@ -82,12 +91,14 @@ class WorkDialog(BaseDialog):
             self,
             dialog_cls=ProjectDialog,
             suggestions=self._suggestions,
+            dialog_dir=self._dialog_dir,
         )
 
         # images (lista de rutas de imagen)
         self._images = CustomList(
             self,
             dialog_cls=FileDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # fila 1: name + thumbnail

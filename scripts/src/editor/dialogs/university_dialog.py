@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 
 from PySide6 import QtCore, QtWidgets
 
@@ -27,8 +28,17 @@ class UniversityDialog(BaseDialog):
     def title(self) -> str:
         return "Descripción estudio universitario"
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         self._university = QtWidgets.QLineEdit(self)
         self._title = QtWidgets.QLineEdit(self)
@@ -36,7 +46,9 @@ class UniversityDialog(BaseDialog):
         self._thumbnail = FileSelect(
             title="Elegir miniatura",
             file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif)",
-            must_exist=True,
+            must_exist=False,
+            parent=self,
+            dialog_dir=self._dialog_dir,
         )
         self._set_thumb = self._thumbnail.set_value
         self._get_thumb = self._thumbnail.value
@@ -57,6 +69,7 @@ class UniversityDialog(BaseDialog):
         self._images = CustomList(
             self,
             dialog_cls=FileDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # --- Layout ---

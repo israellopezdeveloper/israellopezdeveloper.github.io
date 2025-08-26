@@ -1,7 +1,8 @@
 # src/editor/dialogs/acreditation_dialog.py
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtCore, QtWidgets
 
 # Dialogs
@@ -23,8 +24,17 @@ class AcreditationDialog(BaseDialog):
     def title(self) -> str:
         return "Acreditación"
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         # Campos
         self._institution = QtWidgets.QLineEdit(self)

@@ -1,7 +1,7 @@
-# src/editor/dialogs/complementary_dialog.py
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtCore, QtWidgets
 
 # Utils
@@ -33,19 +33,28 @@ class ComplementaryDialog(BaseDialog):
     def title(self) -> str:
         return "Complementario"
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         # --- Campos principales ---
         self._institution = QtWidgets.QLineEdit(self)
         self._title = QtWidgets.QLineEdit(self)
 
-        img_filter = "Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)"
         self._thumbnail = FileSelect(
             title="Elegir miniatura",
-            file_filter=img_filter,
-            must_exist=True,
+            file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)",
+            must_exist=False,
             parent=self,
+            dialog_dir=self._dialog_dir,
         )
         self._thumb_set = self._thumbnail.set_value
         self._thumb_get = self._thumbnail.value
@@ -66,6 +75,7 @@ class ComplementaryDialog(BaseDialog):
         self._images = CustomList(
             self,
             dialog_cls=FileDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # --- Layout ---

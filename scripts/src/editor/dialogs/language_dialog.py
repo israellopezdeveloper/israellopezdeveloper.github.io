@@ -1,7 +1,8 @@
 # src/editor/dialogs/language_dialog.py
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtCore, QtWidgets
 
 # Utils
@@ -34,8 +35,17 @@ class LanguageDialog(BaseDialog):
     def title(self) -> str:
         return "Language"
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         # Campos
         self._language = QtWidgets.QLineEdit(self)
@@ -54,12 +64,12 @@ class LanguageDialog(BaseDialog):
         self._read = make_level_combo()
 
         # Thumbnail
-        img_filter = "Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)"
         self._thumbnail = FileSelect(
             title="Elegir miniatura",
-            file_filter=img_filter,
+            file_filter="Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)",
             must_exist=False,
             parent=self,
+            dialog_dir=dialog_dir,
         )
         self._thumb_set = self._thumbnail.set_value
         self._thumb_get = self._thumbnail.value
@@ -68,6 +78,7 @@ class LanguageDialog(BaseDialog):
         self._acreds = CustomList(
             self,
             dialog_cls=AcreditationDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # Layout superior (datos del idioma)

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 from PySide6 import QtCore, QtWidgets
 
@@ -26,25 +27,34 @@ class EducationsTab(QtWidgets.QWidget):
         value() -> dict { 'university': [...], 'complementary': [...], 'languages': [...] }
     """
 
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
         super().__init__(parent)
+
+        self._dialog_dir = dialog_dir
 
         # University
         self._university = CustomList(
             self,
             dialog_cls=UniversityDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # Complementary
         self._complementary = CustomList(
             self,
             dialog_cls=ComplementaryDialog,
+            dialog_dir=self._dialog_dir,
         )
 
         # Languages
         self._languages = CustomList(
             self,
             dialog_cls=LanguageDialog,
+            dialog_dir=self._dialog_dir,
         )
         w_uni = QtWidgets.QGroupBox("Universidad", self)
         vl = QtWidgets.QVBoxLayout(w_uni)

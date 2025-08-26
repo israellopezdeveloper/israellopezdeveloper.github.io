@@ -1,4 +1,4 @@
-# src/editor/app/window.py
+# -*- coding: utf-8 -*-
 from pathlib import Path
 from typing import Dict, Optional
 
@@ -11,34 +11,53 @@ from editor.services.summarize import SummarizeWorker
 from editor.services.translate import TranslateWorker
 
 from ..tabs.intro_tab import IntroTab
-
 from ..tabs.works_tab import WorksTab
-
 from ..tabs.educations_tab import EducationsTab
 
-
 from ..actions.factory import create_menu_actions, create_button_actions
-
 from ..services.io import load_json, save_json
-
-# from ..services.summarize import summarize_json
 from ..models.defaults import ensure_intro_defaults, ensure_educations_defaults
 
 
 class MainWindow(QtWidgets.QMainWindow):
-    def __init__(self) -> None:
+    def __init__(self, base_dir: Path) -> None:
         super().__init__()
         self.setWindowTitle("CV Editor")
         self.resize(1000, 700)
+
+        # --- Base dir & rutas ---
+        self.base_dir: Path = base_dir.expanduser().resolve()
+        self.dir_intro_images = self.base_dir / "public" / "images" / "intro"
+        self.dir_works_images = self.base_dir / "public" / "images" / "works"
+        self.dir_educ_images = self.base_dir / "public" / "images" / "educations"
+        self.dir_cv = self.base_dir / "public" / "cv"
+
+        # Garantiza que existen (por si se llama directo)
+        for d in (
+            self.dir_intro_images,
+            self.dir_works_images,
+            self.dir_educ_images,
+            self.dir_cv,
+        ):
+            d.mkdir(parents=True, exist_ok=True)
 
         self.current_path: Optional[Path] = None
         self.data: dict = {}
 
         # --- Tabs ---
         self.tabs = QtWidgets.QTabWidget()
-        self.tabIntro = IntroTab()
-        self.tabWorks = WorksTab()
-        self.tabEdu = EducationsTab()
+        self.tabIntro = IntroTab(
+            self,
+            dialog_dir=self.dir_intro_images,
+        )
+        self.tabWorks = WorksTab(
+            self,
+            dialog_dir=self.dir_works_images,
+        )
+        self.tabEdu = EducationsTab(
+            self,
+            dialog_dir=self.dir_educ_images,
+        )
 
         self.tabs.addTab(self.tabIntro, "Intro")
         self.tabs.addTab(self.tabWorks, "Works")
@@ -49,7 +68,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.actions_map = create_menu_actions(self)
         self.actions_toolbar_map = create_button_actions(self)
 
-        # --- Threads ---
+        # --- Threads (translate) ---
         self._tr_thread: QtCore.QThread | None = None
         self._tr_worker: TranslateWorker | None = None
         self._tr_progress: QtWidgets.QProgressDialog | None = None
@@ -57,17 +76,38 @@ class MainWindow(QtWidgets.QMainWindow):
         self._tr_src: str | None = None
         self._tr_tgt: str | None = None
 
+        # --- Threads (summarize) ---
+        self._sum_thread: QtCore.QThread | None = None
+        self._sum_worker: SummarizeWorker | None = None
+        self._sum_progress: QtWidgets.QProgressDialog | None = None
+        self._sum_save_path: str | None = None
+        self._sum_ratio: float | None = None
+
+        # --- Threads (internationalize) ---
+        self._intl_thread: QtCore.QThread | None = None
+        self._intl_worker: InternationalizeWorker | None = None
+        self._intl_progress: QtWidgets.QProgressDialog | None = None
+        self._intl_src: str | None = None
+        self._intl_ratio: float | None = None
+        self._intl_out_dir: str | None = None  # usaremos self.dir_cv
+
         self._build_menu()
 
         # status bar
         self.setStatusBar(QtWidgets.QStatusBar())
 
+    # -------------------- helpers guardar/abrir --------------------
+
     def _ask_save_path(self, tgt: str) -> str | None:
+        """
+        Sugerencia en <BASE>/public/cv/<base>.<tgt>.json (o portfolio.<tgt>.json)
+        """
+        self.dir_cv.mkdir(parents=True, exist_ok=True)
         if self.current_path:
             base = self.current_path.stem
-            suggested = str(self.current_path.with_name(f"{base}.{tgt}.json"))
+            suggested = str((self.dir_cv / f"{base}.{tgt}.json"))
         else:
-            suggested = str(Path.home() / f"portfolio.{tgt}.json")
+            suggested = str(self.dir_cv / f"portfolio.{tgt}.json")
 
         fn, _ = QtWidgets.QFileDialog.getSaveFileName(
             self, "Guardar JSON traducido", suggested, "JSON (*.json)"
@@ -79,11 +119,15 @@ class MainWindow(QtWidgets.QMainWindow):
         return fn
 
     def _ask_save_path_summary(self) -> str | None:
+        """
+        Sugerencia en <BASE>/public/cv/<base>.s.json (o portfolio.s.json)
+        """
+        self.dir_cv.mkdir(parents=True, exist_ok=True)
         if self.current_path:
             base = self.current_path.stem
-            suggested = str(self.current_path.with_name(f"{base}.s.json"))
+            suggested = str(self.dir_cv / f"{base}.s.json")
         else:
-            suggested = str(Path.home() / "portfolio.s.json")
+            suggested = str(self.dir_cv / "portfolio.s.json")
 
         fn, _ = QtWidgets.QFileDialog.getSaveFileName(
             self, "Guardar JSON resumido", suggested, "JSON (*.json)"
@@ -124,8 +168,9 @@ class MainWindow(QtWidgets.QMainWindow):
     # ------------------------------------------------------------------
     # File operations
     def open_file(self) -> None:
+        start_dir = str(self.dir_cv) if self.dir_cv.exists() else ""
         fn, _ = QtWidgets.QFileDialog.getOpenFileName(
-            self, "Abrir JSON", "", "JSON (*.json)"
+            self, "Abrir JSON", start_dir, "JSON (*.json)"
         )
         if not fn:
             return
@@ -150,8 +195,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.statusBar().showMessage(f"Guardado en {self.current_path}", 5000)
 
     def save_file_as(self) -> None:
+        self.dir_cv.mkdir(parents=True, exist_ok=True)
+        base = self.current_path.stem if self.current_path else "portfolio"
+        suggested = str(self.dir_cv / f"{base}.json")
         fn, _ = QtWidgets.QFileDialog.getSaveFileName(
-            self, "Guardar JSON", "", "JSON (*.json)"
+            self, "Guardar JSON", suggested, "JSON (*.json)"
         )
         if not fn:
             return
@@ -180,7 +228,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
     @QtCore.Slot(dict)
     def _tr_on_finished(self, res: dict) -> None:
-        # Estamos en el hilo de la UI: ya podemos tocar la UI sin bloqueos
         try:
             if self._tr_save_path:
                 from editor.services.io import save_json  # type: ignore
@@ -204,12 +251,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._tr_cleanup()
 
     def _tr_cleanup(self) -> None:
-        # Este método SIEMPRE se llama en el hilo de la UI
         if self._tr_progress:
             self._tr_progress.reset()
             self._tr_progress.close()
-
-        # Rehabilita acciones (menú y toolbar)
         try:
             self.actions_map["translate"].setEnabled(True)
         except Exception:
@@ -218,16 +262,12 @@ class MainWindow(QtWidgets.QMainWindow):
             self.actions_toolbar_map["translate"].setEnabled(True)
         except Exception:
             pass
-
-        # Para y limpia el hilo
         if self._tr_thread:
             self._tr_thread.quit()
             self._tr_thread.wait()
             if self._tr_worker:
                 self._tr_worker.deleteLater()
             self._tr_thread.deleteLater()
-
-        # Limpia refs y estado
         self._tr_worker = None
         self._tr_thread = None
         self._tr_progress = None
@@ -263,8 +303,6 @@ class MainWindow(QtWidgets.QMainWindow):
         if self._sum_progress:
             self._sum_progress.reset()
             self._sum_progress.close()
-
-        # Rehabilita acciones (menú y toolbar)
         try:
             self.actions_map["summarize"].setEnabled(True)
         except Exception:
@@ -273,16 +311,12 @@ class MainWindow(QtWidgets.QMainWindow):
             self.actions_toolbar_map["summarize"].setEnabled(True)
         except Exception:
             pass
-
-        # Para y limpia el hilo
         if self._sum_thread:
             self._sum_thread.quit()
             self._sum_thread.wait()
             if self._sum_worker:
                 self._sum_worker.deleteLater()
             self._sum_thread.deleteLater()
-
-        # Limpia refs
         self._sum_worker = None
         self._sum_thread = None
         self._sum_progress = None
@@ -293,28 +327,21 @@ class MainWindow(QtWidgets.QMainWindow):
     def _intl_on_finished(self, result: dict) -> None:
         # result: { lang: {"full": dict, "summary": dict}, ... }
         try:
-            if not self._intl_out_dir:
-                return
+            # Guardar SIEMPRE en <BASE>/public/cv
+            out_dir = self.dir_cv
+            out_dir.mkdir(parents=True, exist_ok=True)
+            base = self.current_path.stem if self.current_path else "portfolio"
 
-            # base para nombres de archivo
-            if self.current_path:
-                base = self.current_path.stem
-            else:
-                base = "portfolio"
-
-            saved = []
             for lang, payload in result.items():
                 full = payload.get("full", {})
                 summ = payload.get("summary", {})
-                fn_full = Path(self._intl_out_dir) / f"{base}.{lang}.json"
-                fn_sum = Path(self._intl_out_dir) / f"{base}.{lang}.s.json"
+                fn_full = out_dir / f"{base}.{lang}.json"
+                fn_sum = out_dir / f"{base}.{lang}.s.json"
                 save_json(str(fn_full), full)
                 save_json(str(fn_sum), summ)
-                saved.append(str(fn_full))
-                saved.append(str(fn_sum))
 
             self.statusBar().showMessage(
-                f"Internationalize OK. Archivos guardados en {self._intl_out_dir}", 8000
+                f"Internationalize OK. Archivos guardados en {out_dir}", 8000
             )
         except Exception as e:
             QtWidgets.QMessageBox.critical(self, "Error al guardar", str(e))
@@ -332,7 +359,6 @@ class MainWindow(QtWidgets.QMainWindow):
         if self._intl_progress:
             self._intl_progress.reset()
             self._intl_progress.close()
-        # Rehabilita acciones
         for key in ("internationalize",):
             try:
                 self.actions_map[key].setEnabled(True)
@@ -342,14 +368,12 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.actions_toolbar_map[key].setEnabled(True)
             except Exception:
                 pass
-        # Para y limpia el hilo
         if self._intl_thread:
             self._intl_thread.quit()
             self._intl_thread.wait()
             if self._intl_worker:
                 self._intl_worker.deleteLater()
             self._intl_thread.deleteLater()
-        # Limpia refs
         self._intl_thread = None
         self._intl_worker = None
         self._intl_progress = None
@@ -373,20 +397,16 @@ class MainWindow(QtWidgets.QMainWindow):
             )
             return
 
-        # Preguntar ruta ANTES de traducir
         save_path = self._ask_save_path(tgt)
         if not save_path:
             return
 
-        # Guarda estado para usarlo en los slots
         self._tr_save_path = save_path
         self._tr_src = src
         self._tr_tgt = tgt
 
-        # Recoge cambios de pestañas
         value = self._collect_from_tabs()
 
-        # Desactivar acciones (menú y toolbar)
         try:
             self.actions_map["translate"].setEnabled(False)
         except Exception:
@@ -396,7 +416,6 @@ class MainWindow(QtWidgets.QMainWindow):
         except Exception:
             pass
 
-        # Spinner indeterminado bien visible
         self._tr_progress = QtWidgets.QProgressDialog("Traduciendo…", "", 0, 0, self)
         self._tr_progress.setWindowTitle("Traducción")
         self._tr_progress.setWindowModality(QtCore.Qt.WindowModality.ApplicationModal)
@@ -404,30 +423,23 @@ class MainWindow(QtWidgets.QMainWindow):
         self._tr_progress.setAutoClose(False)
         self._tr_progress.setAutoReset(False)
         self._tr_progress.setMinimumDuration(0)
-        self._tr_progress.setRange(0, 0)  # indeterminado explícito
+        self._tr_progress.setRange(0, 0)
         self._tr_progress.show()
         self._tr_progress.raise_()
         self._tr_progress.activateWindow()
-        # Fuerza un ciclo de eventos para que se pinte YA
         QtWidgets.QApplication.processEvents(
             QtCore.QEventLoop.ProcessEventsFlag.AllEvents
         )
 
-        # Hilo + worker
         thread = QtCore.QThread(self)
         worker = TranslateWorker()
         worker.moveToThread(thread)
-
-        # Guarda referencias para cleanup
         self._tr_thread = thread
         self._tr_worker = worker
 
-        # Conexiones: a SLOTS del MainWindow (UI thread)
         worker.finished.connect(self._tr_on_finished)
         worker.error.connect(self._tr_on_error)
         thread.started.connect(lambda: worker.run(value, src, tgt))
-
-        # Importante: arrancar el hilo en el PRÓXIMO tick para no pisar el repintado
         QtCore.QTimer.singleShot(0, thread.start)
 
     def action_summarize(self) -> None:
@@ -435,30 +447,20 @@ class MainWindow(QtWidgets.QMainWindow):
             QtWidgets.QMessageBox.information(self, "Info", "No hay datos cargados")
             return
 
-        # Pide ratio (0..1)
         ratio, ok = QtWidgets.QInputDialog.getDouble(
-            self,
-            "Resumir JSON",
-            "Ratio (0-1):",
-            value=0.2,
-            decimals=2,
+            self, "Resumir JSON", "Ratio (0-1):", value=0.2, decimals=2
         )
         if not ok:
             return
 
-        # Pregunta "Guardar como..." ANTES de arrancar
         save_path = self._ask_save_path_summary()
         if not save_path:
             return
 
-        # Guarda estado para los slots
         self._sum_save_path = save_path
         self._sum_ratio = ratio
-
-        # Recoge datos de pestañas
         value = self._collect_from_tabs()
 
-        # Desactivar acciones (menú y toolbar)
         try:
             self.actions_map["summarize"].setEnabled(False)
         except Exception:
@@ -468,7 +470,6 @@ class MainWindow(QtWidgets.QMainWindow):
         except Exception:
             pass
 
-        # Spinner indeterminado visible
         self._sum_progress = QtWidgets.QProgressDialog("Resumiendo…", "", 0, 0, self)
         self._sum_progress.setWindowTitle("Resumen")
         self._sum_progress.setWindowModality(QtCore.Qt.WindowModality.ApplicationModal)
@@ -484,19 +485,15 @@ class MainWindow(QtWidgets.QMainWindow):
             QtCore.QEventLoop.ProcessEventsFlag.AllEvents
         )
 
-        # Hilo + worker
         thread = QtCore.QThread(self)
         worker = SummarizeWorker()
         worker.moveToThread(thread)
         self._sum_thread = thread
         self._sum_worker = worker
 
-        # Conexiones a slots del MainWindow
         worker.finished.connect(self._sum_on_finished)
         worker.error.connect(self._sum_on_error)
         thread.started.connect(lambda: worker.run(value, ratio))
-
-        # Arranca en el próximo tick para no pisar el repintado
         QtCore.QTimer.singleShot(0, thread.start)
 
     def action_internationalize(self) -> None:
@@ -504,33 +501,18 @@ class MainWindow(QtWidgets.QMainWindow):
             QtWidgets.QMessageBox.information(self, "Info", "No hay datos cargados")
             return
 
-        # 1) Elegir idioma origen y ratio
         dlg = InternationalizeDialog(self)
         if not dlg.exec():
             return
         src, ratio = dlg.values()
 
-        # 2) Elegir carpeta de salida
-        if self.current_path:
-            suggested_dir = str(self.current_path.parent)
-        else:
-            suggested_dir = str(Path.home())
-
-        out_dir = QtWidgets.QFileDialog.getExistingDirectory(
-            self, "Selecciona carpeta de salida", suggested_dir
-        )
-        if not out_dir:
-            return
-
-        # Guardamos estado
+        # Guardamos estado (directo a <BASE>/public/cv)
         self._intl_src = src
         self._intl_ratio = ratio
-        self._intl_out_dir = out_dir
+        self._intl_out_dir = str(self.dir_cv)
 
-        # Recoger datos actuales
         value = self._collect_from_tabs()
 
-        # Desactivar acciones
         for key in ("internationalize",):
             try:
                 self.actions_map[key].setEnabled(False)
@@ -541,7 +523,6 @@ class MainWindow(QtWidgets.QMainWindow):
             except Exception:
                 pass
 
-        # Spinner indeterminado
         self._intl_progress = QtWidgets.QProgressDialog(
             "Internationalizing…", "", 0, 0, self
         )
@@ -559,7 +540,6 @@ class MainWindow(QtWidgets.QMainWindow):
             QtCore.QEventLoop.ProcessEventsFlag.AllEvents
         )
 
-        # Hilo + worker
         thread = QtCore.QThread(self)
         worker = InternationalizeWorker()
         worker.moveToThread(thread)
@@ -570,5 +550,4 @@ class MainWindow(QtWidgets.QMainWindow):
         worker.error.connect(self._intl_on_error)
         thread.started.connect(lambda: worker.run(value, src, ratio))
 
-        # Arranca en el próximo tick para no bloquear el repintado del spinner
         QtCore.QTimer.singleShot(0, thread.start)

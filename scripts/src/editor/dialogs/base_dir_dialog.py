@@ -19,7 +19,7 @@ class BaseDirDialog(QtWidgets.QDialog):
 
     def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
         super().__init__(parent)
-        self.setWindowTitle("Carpeta base del proyecto")
+        self.setWindowTitle("CV Editor")
         self.setModal(True)
 
         self._edit = QtWidgets.QLineEdit()
