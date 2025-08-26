@@ -1,12 +1,29 @@
-# --- Diálogo de idiomas ---
-from typing import Optional
-from PySide6 import QtWidgets
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+from PySide6 import QtCore, QtWidgets
+
+from .base_dialog import BaseDialog
 
 
-class TranslateDialog(QtWidgets.QDialog):
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
-        self.setWindowTitle("Traducir JSON")
+class TranslateDialog(BaseDialog):
+    changed = QtCore.Signal()
+
+    @property
+    def title(self) -> str:
+        return "Traducir CV"
+
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
+    ) -> None:
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
 
         self._choices = [("es", "Español"), ("en", "Inglés"), ("zh", "Chino")]
 
@@ -24,30 +41,34 @@ class TranslateDialog(QtWidgets.QDialog):
         form.addRow("Origen", self._src)
         form.addRow("Destino", self._tgt)
 
-        self._buttons = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-            | QtWidgets.QDialogButtonBox.StandardButton.Cancel,
-            parent=self,
-        )
-        self._ok = self._buttons.button(QtWidgets.QDialogButtonBox.StandardButton.Ok)
-
         root = QtWidgets.QVBoxLayout(self)
         root.addLayout(form)
         root.addWidget(self._buttons)
 
         self._src.currentIndexChanged.connect(self._revalidate)
         self._tgt.currentIndexChanged.connect(self._revalidate)
-        self._buttons.accepted.connect(self._on_accept)
+        self._buttons.accepted.connect(self.accept)
         self._buttons.rejected.connect(self.reject)
 
         self._revalidate()
 
     def _revalidate(self) -> None:
-        self._ok.setEnabled(self._src.currentData() != self._tgt.currentData())
-
-    def _on_accept(self) -> None:
-        if self._ok.isEnabled():
-            self.accept()
+        self._ok_btn.setEnabled(self._src.currentData() != self._tgt.currentData())
 
     def codes(self) -> tuple[str, str]:
         return (self._src.currentData(), self._tgt.currentData())
+
+    def set_value(self, data: Dict[str, Any]) -> None:
+        pass
+
+    def value(self) -> Dict[str, Any]:
+        return {}
+
+    def str(self) -> str:
+        return ""
+
+    def tuple(self) -> Tuple:
+        return ()
+
+    def _on_accept(self) -> None:
+        pass
