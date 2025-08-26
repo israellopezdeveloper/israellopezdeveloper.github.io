@@ -96,13 +96,11 @@ class IntroTab(QtWidgets.QWidget):
         box_links = QtWidgets.QGroupBox("Links", self)
         vl = QtWidgets.QVBoxLayout(box_links)
         vl.addWidget(self._links)
-        vl.addLayout(self._links.layout())
 
         # Bio
         box_bio = QtWidgets.QGroupBox("Bio", self)
         vb = QtWidgets.QVBoxLayout(box_bio)
         vb.addWidget(self._bio)
-        vb.addLayout(self._bio.layout())
 
         right = QtWidgets.QVBoxLayout()
         right.addWidget(box_links, 4)
@@ -127,21 +125,15 @@ class IntroTab(QtWidgets.QWidget):
         for w in [self._greeting, self._name, self._title]:
             w.textChanged.connect(self.changed)
 
-        if hasattr(self._profile_image, "valueChanged"):
-            try:
-                self._profile_image.valueChanged.connect(lambda _: self.changed.emit())  # type: ignore[attr-defined]
-            except Exception:
-                pass
+        try:
+            self._profile_image.valueChanged.connect(
+                lambda _: self.changed.emit(),
+            )
+        except Exception:
+            pass
 
-        if hasattr(self._summary, "htmlChanged"):
-            self._summary.htmlChanged.connect(self.changed)  # type: ignore[attr-defined]
-        else:
-            self._summary.textChanged.connect(self.changed)  # type: ignore[attr-defined]
-
-        if hasattr(self._hobbies, "htmlChanged"):
-            self._hobbies.htmlChanged.connect(self.changed)  # type: ignore[attr-defined]
-        else:
-            self._hobbies.textChanged.connect(self.changed)  # type: ignore[attr-defined]
+        self._summary.htmlChanged.connect(self.changed)
+        self._hobbies.htmlChanged.connect(self.changed)
 
         # Links
         self._links.changed.connect(self.changed)

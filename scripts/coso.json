@@ -49,24 +49,29 @@
   },
   "works": [
     {
-      "name": "Datura AI",
-      "short_description": "Datura AI es una startup especializada en tecnologías descentralizadas para redes como Bittensor. Su misión consiste en construir soluciones que superen los sistemas centralizados, ofreciendo\n    herramientas de fácil uso y gran rendimiento. Entre sus productos se encuentra <strong>Celium</strong>, una plataforma para despliegue instantáneo de modelos de IA en containers,\n    que habilita edición de pods, plantillas de despliegue y ejecución rápida de modelos como Stable Diffusion o Whisper.",
-      "thumbnail": "daturaai.png",
-      "period_time": "Marzo 2025 –- Actualidad",
-      "full_description": "<p><strong>Datura AI</strong> es una compañía especializada en el desarrollo de tecnologías para la distribución y ejecución de modelos de Inteligencia Artificial en redes descentralizadas y entornos distribuidos. Su objetivo es eliminar las limitaciones de los sistemas centralizados, ofreciendo herramientas que permitan desplegar modelos de IA de forma segura, rápida y escalable, tanto en la nube como en dispositivos remotos.</p>\n\n<p>Su producto principal, <strong>Celium</strong>, es una plataforma para la orquestación y gestión de modelos de IA en contenedores. Permite:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en entornos distribuidos o en el edge.</li>\n  <li>Editar pods y ajustar recursos dinámicamente.</li>\n  <li>Utilizar plantillas optimizadas para modelos como Stable Diffusion, Whisper, LLaMA o Mistral.</li>\n  <li>Supervisar y optimizar el rendimiento en tiempo real.</li>\n  <li>Integrarse con ecosistemas descentralizados como Bittensor.</li>\n</ul>",
       "contribution": "<ul>\n  <li>Optimización del ciclo de despliegue de modelos en entornos distribuidos, reduciendo tiempos de puesta en producción.</li>\n  <li>Implementación de módulos en Python y Rust para gestión de modelos, monitorización y recuperación ante fallos.</li>\n  <li>Integración de código en C para operaciones críticas de alto rendimiento.</li>\n  <li>Automatización de pipelines de despliegue con Docker y Kubernetes.</li>\n  <li>Optimización del uso de GPU y CPU para maximizar eficiencia energética.</li>\n  <li>Colaboración con el equipo de producto para definir estrategias de escalabilidad y reducción de costes.</li>\n</ul>",
+      "full_description": "<p><strong>Datura AI</strong> es una compañía especializada en el desarrollo de tecnologías para la distribución y ejecución de modelos de Inteligencia Artificial en redes descentralizadas y entornos distribuidos. Su objetivo es eliminar las limitaciones de los sistemas centralizados, ofreciendo herramientas que permitan desplegar modelos de IA de forma segura, rápida y escalable, tanto en la nube como en dispositivos remotos.</p>\n\n<p>Su producto principal, <strong>Celium</strong>, es una plataforma para la orquestación y gestión de modelos de IA en contenedores. Permite:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en entornos distribuidos o en el edge.</li>\n  <li>Editar pods y ajustar recursos dinámicamente.</li>\n  <li>Utilizar plantillas optimizadas para modelos como Stable Diffusion, Whisper, LLaMA o Mistral.</li>\n  <li>Supervisar y optimizar el rendimiento en tiempo real.</li>\n  <li>Integrarse con ecosistemas descentralizados como Bittensor.</li>\n</ul>",
+      "images": [],
       "links": [
         {
+          "icon": "",
           "text": "Website",
           "url": "https://www.datura.ai"
         }
       ],
+      "name": "Datura AI",
+      "period_time": {
+        "current": true,
+        "end": "None",
+        "start": "Marzo 2025"
+      },
       "projects": [
         {
-          "description": "<p>Celium es una plataforma desarrollada por <strong>Datura AI</strong> para gestionar, desplegar y optimizar modelos de Inteligencia Artificial en redes distribuidas y dispositivos remotos. Su objetivo es facilitar la ejecución de modelos complejos, como Stable Diffusion, Whisper, LLaMA o Mistral, incluso en entornos con recursos limitados, garantizando alta disponibilidad, escalabilidad y rendimiento.</p>\n\n<p>La plataforma permite a los usuarios:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en contenedores sobre infraestructuras locales, en la nube o en el edge.</li>\n  <li>Editar pods y reasignar recursos (CPU, GPU, memoria) dinámicamente para adaptarse a la demanda.</li>\n  <li>Utilizar plantillas de despliegue optimizadas para modelos específicos.</li>\n  <li>Monitorizar métricas de rendimiento y uso de recursos en tiempo real.</li>\n  <li>Automatizar la actualización y distribución de modelos en cientos de nodos remotos.</li>\n  <li>Integrar la plataforma con ecosistemas descentralizados como Bittensor para aumentar la interoperabilidad.</li>\n</ul>\n\n<p>Celium utiliza una arquitectura modular basada en contenedores y orquestadores, optimizada para reducir la latencia y el consumo de recursos. Emplea balanceo de cargas inteligente, gestión distribuida de datos y técnicas avanzadas de afinidad de procesos para maximizar la eficiencia energética y el rendimiento del hardware disponible.</p>\n",
+          "description": "<p>Celium es una plataforma desarrollada por <strong>Datura AI</strong> para gestionar, desplegar y optimizar modelos de Inteligencia Artificial en redes distribuidas y dispositivos remotos. Su objetivo es facilitar la ejecución de modelos complejos, como Stable Diffusion, Whisper, LLaMA o Mistral, incluso en entornos con recursos limitados, garantizando alta disponibilidad, escalabilidad y rendimiento.</p>\n\n<p>La plataforma permite a los usuarios:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en contenedores sobre infraestructuras locales, en la nube o en el edge.</li>\n  <li>Editar pods y reasignar recursos (CPU, GPU, memoria) dinámicamente para adaptarse a la demanda.</li>\n  <li>Utilizar plantillas de despliegue optimizadas para modelos específicos.</li>\n  <li>Monitorizar métricas de rendimiento y uso de recursos en tiempo real.</li>\n  <li>Automatizar la actualización y distribución de modelos en cientos de nodos remotos.</li>\n  <li>Integrar la plataforma con ecosistemas descentralizados como Bittensor para aumentar la interoperabilidad.</li>\n</ul>\n\n<p>Celium utiliza una arquitectura modular basada en contenedores y orquestadores, optimizada para reducir la latencia y el consumo de recursos. Emplea balanceo de cargas inteligente, gestión distribuida de datos y técnicas avanzadas de afinidad de procesos para maximizar la eficiencia energética y el rendimiento del hardware disponible.</p>",
           "images": [],
           "links": [
             {
+              "icon": "",
               "text": "Portal de Celium",
               "url": "https://lium.io/"
             }
@@ -89,22 +94,27 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "Datura AI es una startup especializada en tecnologías descentralizadas para redes como Bittensor. Su misión consiste en construir soluciones que superen los sistemas centralizados, ofreciendo\n    herramientas de fácil uso y gran rendimiento. Entre sus productos se encuentra <strong>Celium</strong>, una plataforma para despliegue instantáneo de modelos de IA en containers,\n    que habilita edición de pods, plantillas de despliegue y ejecución rápida de modelos como Stable Diffusion o Whisper.",
+      "thumbnail": "daturaai.png"
     },
     {
-      "name": "Indra",
-      "short_description": "Indra es una multinacional española líder en consultoría y tecnología, con presencia en más de 140 países. Ofrece soluciones innovadoras para sectores como Defensa, Transporte, Energía, Seguridad y Transformación Digital. En el ámbito de Defensa, desarrolla sistemas estratégicos y de misión crítica que fortalecen la autonomía tecnológica y la interoperabilidad de las fuerzas armadas de Europa y países aliados de la OTAN.",
-      "thumbnail": "indra.png",
-      "period_time": "Abril 2024 –- Febrero 2025",
-      "full_description": "<p>Indra es una de las principales empresas globales de consultoría y tecnología, líder en soluciones integradas para los sectores de Defensa, Transporte, Energía, Seguridad y Transformación Digital. Con una fuerte presencia internacional, Indra desarrolla sistemas y tecnologías estratégicas para clientes en Europa, América, Asia y África.</p>\n<p>En el ámbito de Defensa, Indra lidera el desarrollo del primer sistema de misión de nueva generación para vehículos militares de Europa y países de la OTAN, un proyecto pionero que busca proporcionar a las fuerzas armadas una plataforma abierta, modular y escalable que integre sensores, sistemas de comunicación, capacidades de Inteligencia Artificial y componentes GIS para optimizar la toma de decisiones en entornos operativos complejos. Este sistema forma parte de la iniciativa del Fondo Europeo de Defensa, orientada a reforzar la autonomía estratégica de Europa y la interoperabilidad entre ejércitos aliados.</p>\n<p>Trabajé en este proyecto como Senior Software Engineer, contribuyendo a la definición, desarrollo e integración de componentes críticos en un ecosistema tecnológico que combinaba Java, Node.js, Python, sistemas de Recuperación Aumentada de Información (RAG) y GIS.</p>",
       "contribution": "<p>En Indra participé en las siguientes áreas clave:</p>\n<ul>\n    <li><strong>Diseño e implementación backend</strong> en Java y Node.js con principios de Clean Architecture para lograr mantenibilidad y escalabilidad.</li>\n    <li><strong>Integración de un sistema RAG</strong> para recuperación contextual de inteligencia operativa: ingesta heterogénea, embeddings y búsqueda semántica.</li>\n    <li><strong>Capacidades GIS</strong> para análisis geoespacial, visualización táctica y optimización de rutas/despliegues en tiempo real.</li>\n    <li><strong>Definición de APIs e interfaces</strong> para interoperar con sistemas OTAN, cumpliendo estándares y protocolos seguros.</li>\n    <li><strong>Agile (SCRUM) y gestión en Jira</strong>, priorizando funcionalidades críticas y coordinando dependencias.</li>\n    <li><strong>CI/CD con GitLab</strong> y despliegues en <strong>Kubernetes</strong>; observabilidad con Prometheus y Grafana.</li>\n    <li><strong>Optimización de rendimiento y resiliencia</strong>: pruebas de carga, tolerancia a fallos y simulaciones de entornos hostiles.</li>\n  </ul>",
+      "full_description": "<p>Indra es una de las principales empresas globales de consultoría y tecnología, líder en soluciones integradas para los sectores de Defensa, Transporte, Energía, Seguridad y Transformación Digital. Con una fuerte presencia internacional, Indra desarrolla sistemas y tecnologías estratégicas para clientes en Europa, América, Asia y África.</p>\n<p>En el ámbito de Defensa, Indra lidera el desarrollo del primer sistema de misión de nueva generación para vehículos militares de Europa y países de la OTAN, un proyecto pionero que busca proporcionar a las fuerzas armadas una plataforma abierta, modular y escalable que integre sensores, sistemas de comunicación, capacidades de Inteligencia Artificial y componentes GIS para optimizar la toma de decisiones en entornos operativos complejos. Este sistema forma parte de la iniciativa del Fondo Europeo de Defensa, orientada a reforzar la autonomía estratégica de Europa y la interoperabilidad entre ejércitos aliados.</p>\n<p>Trabajé en este proyecto como Senior Software Engineer, contribuyendo a la definición, desarrollo e integración de componentes críticos en un ecosistema tecnológico que combinaba Java, Node.js, Python, sistemas de Recuperación Aumentada de Información (RAG) y GIS.</p>",
+      "images": [],
       "links": [],
+      "name": "Indra",
+      "period_time": {
+        "current": false,
+        "end": "Febrero 2025",
+        "start": "Abril 2024"
+      },
       "projects": [
         {
           "description": "<p>\n    Proyecto estratégico desarrollado por Indra en el marco del Fondo Europeo de Defensa para crear el\n    <strong>primer sistema de misión de nueva generación para vehículos militares de Europa y países de la OTAN</strong>.\n    El sistema integra capacidades de Inteligencia Artificial, GIS y gestión de sensores para ofrecer a las\n    fuerzas armadas una ventaja táctica en entornos operativos complejos.\n  </p>\n\n  <p>\n    La arquitectura es abierta, modular y escalable, permitiendo la interoperabilidad entre ejércitos aliados\n    y la rápida integración de nuevos componentes tecnológicos. Incluye un <strong>sistema RAG</strong> para\n    recuperación contextual de información, análisis geoespacial en tiempo real, y módulos de comunicación\n    seguros para la transmisión de datos críticos.\n  </p>\n<h3>Responsabilidades</h3>\n  <ul class=\"responsibilities\">\n    <li>Diseño e implementación de microservicios backend en Java y Node.js bajo principios de Clean Architecture.</li>\n    <li>Desarrollo e integración de un sistema RAG para búsqueda semántica y contextualización de datos operativos.</li>\n    <li>Implementación de funcionalidades GIS para análisis geoespacial y visualización táctica en mapas interactivos.</li>\n    <li>Definición de APIs y protocolos seguros para interoperar con otros sistemas OTAN.</li>\n    <li>Automatización de pipelines CI/CD en GitLab con despliegues en Kubernetes.</li>\n    <li>Optimización de rendimiento, pruebas de carga y validación de tolerancia a fallos.</li>\n  </ul>",
           "images": [],
           "links": [
             {
+              "icon": "",
               "text": "Participación de Indra en el Fondo Europeo de Defensa",
               "url": "https://www.indracompany.com/es/noticia/indra-lidera-participacion-espanola-proyectos-fondo-europeo-defensa-entra-formar-12"
             }
@@ -137,27 +147,36 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "Indra es una multinacional española líder en consultoría y tecnología, con presencia en más de 140 países. Ofrece soluciones innovadoras para sectores como Defensa, Transporte, Energía, Seguridad y Transformación Digital. En el ámbito de Defensa, desarrolla sistemas estratégicos y de misión crítica que fortalecen la autonomía tecnológica y la interoperabilidad de las fuerzas armadas de Europa y países aliados de la OTAN.",
+      "thumbnail": "indra.png"
     },
     {
-      "name": "Devo",
-      "short_description": "Empresa nativa de la nube que ofrece análisis de seguridad en tiempo real, aprendizaje automático y soluciones escalables para la gestión de datos empresariales.",
-      "thumbnail": "devo.png",
-      "period_time": "Marzo 2020 –- Marzo 2024",
-      "full_description": "<P>Devo es una empresa líder en análisis de registros y seguridad nativa en la nube, dedicada a proporcionar conocimientos en tiempo real y análisis avanzados para datos empresariales. Su robusta plataforma permite a las organizaciones detectar, analizar y responder eficientemente a amenazas de seguridad, aprovechando el poder del aprendizaje automático y una arquitectura altamente escalable. Las soluciones de Devo están diseñadas para manejar grandes volúmenes de datos, asegurando que las empresas puedan mantener altos niveles de rendimiento y seguridad. Sirviendo a una amplia gama de industrias, incluidas finanzas y telecomunicaciones, Devo mejora las medidas de ciberseguridad y optimiza las prácticas de gestión de datos, ayudando a las empresas a mantenerse por delante de las amenazas y requisitos regulatorios en evolución. Con un compromiso con la innovación y la excelencia, Devo está a la vanguardia de la transformación de cómo las empresas abordan la seguridad y el análisis de datos.</P>",
       "contribution": "<P>En Devo, desempeñé un papel crucial en el equipo de ingesta de datos, centrándome específicamente en el balanceador de carga. Dada la sensibilidad de los datos y su importancia para diagnosticar posibles ataques, el servicio debía ser tanto fiable como rápido. Bajo mi experiencia, el sistema pudo manejar un impresionante volumen de ingesta de aproximadamente 60TB por día. Además, contribuí significativamente a los esfuerzos de Devo para adaptarse a los estándares necesarios para la integración con sistemas federales de EE.UU., logrando la certificación FedRAMP. Asimismo, participé en la creación de un sistema de respaldo multirregional y multicloud, asegurando la redundancia y fiabilidad de los datos en diversos entornos. Mi trabajo garantizó que la plataforma de Devo cumpliera con los más altos niveles de seguridad y cumplimiento, mejorando la capacidad de la empresa para servir eficazmente a sus clientes.</P>",
+      "full_description": "<P>Devo es una empresa líder en análisis de registros y seguridad nativa en la nube, dedicada a proporcionar conocimientos en tiempo real y análisis avanzados para datos empresariales. Su robusta plataforma permite a las organizaciones detectar, analizar y responder eficientemente a amenazas de seguridad, aprovechando el poder del aprendizaje automático y una arquitectura altamente escalable. Las soluciones de Devo están diseñadas para manejar grandes volúmenes de datos, asegurando que las empresas puedan mantener altos niveles de rendimiento y seguridad. Sirviendo a una amplia gama de industrias, incluidas finanzas y telecomunicaciones, Devo mejora las medidas de ciberseguridad y optimiza las prácticas de gestión de datos, ayudando a las empresas a mantenerse por delante de las amenazas y requisitos regulatorios en evolución. Con un compromiso con la innovación y la excelencia, Devo está a la vanguardia de la transformación de cómo las empresas abordan la seguridad y el análisis de datos.</P>",
+      "images": [
+        "devo1.png",
+        "devo2.png"
+      ],
       "links": [
         {
+          "icon": "",
           "text": "Sitio web de Devo",
           "url": "https://www.devo.com/es/"
         }
       ],
+      "name": "Devo",
+      "period_time": {
+        "current": false,
+        "end": "Marzo 2024",
+        "start": "Marzo 2020"
+      },
       "projects": [
         {
           "description": "<P>Contribuí significativamente a mejorar el rendimiento del balanceador de carga de Devo mediante la implementación de estrategias avanzadas que mejoraron la tolerancia a fallos y optimizaron la monitorización de los servicios de ingesta de datos. Analicé meticulosamente los requisitos del sistema e identifiqué áreas clave de mejora, asegurando que el balanceador de carga pudiera manejar niveles variables de tráfico con mayor eficiencia. Mis esfuerzos en mejorar los mecanismos de tolerancia a fallos ayudaron al sistema a recuperarse rápidamente de fallos inesperados, manteniendo alta disponibilidad y fiabilidad. Además, creé soporte para el protocolo RELP (Reliable Event Logging Protocol) desde cero, asegurando un registro de eventos fiable y eficiente en todo el sistema.</P><P>Asimismo, desarrollé métodos para equilibrar la carga basado en el cliente, lo que facilitó consultas de datos más compactas. Al asegurar que los datos no se mezclaran innecesariamente en todos los nodos, agilice el proceso de recuperación de datos, haciéndolo más rápido y eficiente. Este enfoque de balanceo de carga específico para clientes no solo mejoró el rendimiento de las consultas sino que también redujo la sobrecarga en el sistema. Mis contribuciones llevaron a un sistema de balanceo de carga más robusto y receptivo, mejorando significativamente el rendimiento y la experiencia del usuario en Devo.</P>",
           "images": [],
           "links": [
             {
+              "icon": "",
               "text": "Documentación del balanceador de carga",
               "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers"
             }
@@ -241,24 +260,26 @@
           ]
         }
       ],
-      "images": [
-        "devo1.png",
-        "devo2.png"
-      ]
+      "short_description": "Empresa nativa de la nube que ofrece análisis de seguridad en tiempo real, aprendizaje automático y soluciones escalables para la gestión de datos empresariales.",
+      "thumbnail": "devo.png"
     },
     {
-      "name": "Comisión Europea",
-      "short_description": "La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones y gestionar los asuntos diarios.",
-      "thumbnail": "European_Commission_01.png",
-      "period_time": "Junio 2017 –- Enero 2020",
-      "full_description": "<P>La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones, defender los tratados de la UE y gestionar los asuntos diarios de la UE. Opera como un gobierno de gabinete, con 27 miembros de la Comisión (uno de cada estado miembro) encabezados por un Presidente. Los principales roles de la Comisión incluyen desarrollar estrategias y políticas, hacer cumplir las leyes de la UE y negociar acuerdos internacionales en nombre de la UE.</P><P>Dentro de la Comisión Europea, la Dirección General de Competencia (DG COMP) juega un papel crucial. DG COMP es responsable de establecer e implementar la política de competencia para asegurar una competencia justa dentro del mercado interno de la UE. Esto incluye hacer cumplir las leyes antimonopolio, supervisar fusiones y adquisiciones y prevenir prácticas monopolísticas y ayudas estatales que podrían distorsionar la competencia. DG COMP trabaja para proteger a consumidores y empresas promoviendo la innovación, asegurando una igualdad de condiciones y mejorando la eficiencia económica.</P><P>Trabajé en DG COMP, contribuyendo a los esfuerzos de la Comisión para mantener mercados competitivos y fomentar el crecimiento económico en toda la Unión Europea.</P>",
       "contribution": "<P>En la Comisión Europea, trabajé como arquitecto de software en tres proyectos, con una amplia gama de responsabilidades que demostraron mi experiencia y liderazgo en el desarrollo de software. Mis principales responsabilidades incluyeron:</P><ul><li><b>Gestión de Requisitos No Funcionales y Definición del Proyecto</b>: Usando Enterprise Architect, fui responsable de identificar y gestionar requisitos no funcionales, asegurando que cada proyecto estuviera claramente definido y alineado con los objetivos organizacionales.</li><li><b>Priorización de Tareas</b>: Utilizando Jira, prioricé tareas eficazmente para asegurar que los elementos más críticos se abordaran de manera oportuna.</li><li><b>Gestión de Dependencias de Tareas</b>: Usé Jira para gestionar dependencias entre tareas, asegurando un progreso fluido y minimizando retrasos.</li><li><b>Selección de Tecnología</b>: Fui fundamental en la selección de tecnologías apropiadas para cada proyecto, asegurando que fueran adecuadas para cumplir con las necesidades del proyecto.</li><li><b>Definición de Perfiles de Miembros del Equipo</b>: Definí los perfiles y roles de los miembros del equipo, asegurando que el equipo tuviera las habilidades y experiencia necesarias para tener éxito.</li><li><b>Colaboración entre Equipos</b>: Facilitó la colaboración entre diferentes equipos cuyos proyectos necesitaban integrarse, asegurando una integración y cooperación sin problemas.</li><li><b>Control de Calidad y Pruebas</b>: Definí controles de calidad y protocolos de pruebas, incluyendo pruebas unitarias utilizando tecnologías como JUnit o Google Test/Valgrind, dependiendo del lenguaje de programación.</li><li><b>Implementación de Sistemas CI/CD</b>: Definí e implementé sistemas de Integración Continua y Despliegue Continuo utilizando herramientas como Bamboo y SonarQube.</li><li><b>Metodologías de Desarrollo de Software</b>: Apliqué prácticas de Desarrollo Basado en Pruebas (TDD) y Desarrollo Basado en Comportamiento (BDD) para asegurar un desarrollo de software de alta calidad.</li><li><b>Metodología Ágil</b>: Utilicé SCRUM como la metodología principal para la gestión de proyectos, fomentando un proceso de desarrollo ágil y eficiente.</li></ul>",
+      "full_description": "<P>La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones, defender los tratados de la UE y gestionar los asuntos diarios de la UE. Opera como un gobierno de gabinete, con 27 miembros de la Comisión (uno de cada estado miembro) encabezados por un Presidente. Los principales roles de la Comisión incluyen desarrollar estrategias y políticas, hacer cumplir las leyes de la UE y negociar acuerdos internacionales en nombre de la UE.</P><P>Dentro de la Comisión Europea, la Dirección General de Competencia (DG COMP) juega un papel crucial. DG COMP es responsable de establecer e implementar la política de competencia para asegurar una competencia justa dentro del mercado interno de la UE. Esto incluye hacer cumplir las leyes antimonopolio, supervisar fusiones y adquisiciones y prevenir prácticas monopolísticas y ayudas estatales que podrían distorsionar la competencia. DG COMP trabaja para proteger a consumidores y empresas promoviendo la innovación, asegurando una igualdad de condiciones y mejorando la eficiencia económica.</P><P>Trabajé en DG COMP, contribuyendo a los esfuerzos de la Comisión para mantener mercados competitivos y fomentar el crecimiento económico en toda la Unión Europea.</P>",
+      "images": [],
       "links": [
         {
+          "icon": "",
           "text": "Sitio web de la Comisión Europea, DG COMP",
           "url": "https://competition-policy.ec.europa.eu/index_en"
         }
       ],
+      "name": "Comisión Europea",
+      "period_time": {
+        "current": false,
+        "end": "Enero 2020",
+        "start": "Junio 2017"
+      },
       "projects": [
         {
           "description": "<P>El primer proyecto involucró la definición de dos APIs RESTful que implementaron el Modelo de Madurez de Richardson Nivel 3, incorporando HATEOAS. Estas APIs fueron diseñadas como plataformas para el intercambio seguro de documentos legales en procedimientos antimonopolio.</P><ul><li><b>API Interna</b>: La primera API estaba destinada a servir al personal interno de la Comisión Europea.</li><li><b>API Externa</b>: La segunda API sirvió como plataforma para el personal externo.</li></ul>Ambas APIs contaban con control de acceso a través de un sistema de Inicio de Sesión Único llamado CAS. La persistencia de datos se gestionó utilizando tanto Oracle DB como MongoDB. Además, las APIs se integraron con un proyecto interno de almacenamiento seguro de documentos a través de una interfaz SOAP. El flujo de trabajo de cada procedimiento se gestionó utilizando el patrón de diseño State, y los administradores del sistema fueron notificados de los cambios de estado por correo electrónico.",
@@ -267,6 +288,7 @@
           ],
           "links": [
             {
+              "icon": "",
               "text": "Documentación de e-leniency",
               "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf"
             }
@@ -304,6 +326,7 @@
           "images": [],
           "links": [
             {
+              "icon": "",
               "text": "Documentación de e-confidencialidad",
               "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en"
             }
@@ -407,21 +430,26 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones y gestionar los asuntos diarios.",
+      "thumbnail": "European_Commission_01.png"
     },
     {
-      "name": "Panel Sistemas",
-      "short_description": "Panel Sistemas es una empresa especializada en soluciones tecnológicas, ofreciendo servicios de software, consultoría y desarrollo a diversas industrias.",
-      "thumbnail": "panel_sistemas.png",
-      "period_time": "Septiembre 2015 –- Junio 2017",
-      "full_description": "<P>Panel Sistemas es una empresa líder en soluciones tecnológicas, especializada en desarrollo de software, consultoría y servicios de TI. Fundada en España, sirve a diversas industrias con clientes destacados como Telefónica, BBVA, Santander, Repsol y El Corte Inglés.</P><b>Servicios Ofrecidos</b><lu><li>Desarrollo de Software: Soluciones de software a medida.</li><li>Consultoría: Estrategia y optimización de TI.</li><li>Mantenimiento y Soporte: Soporte continuo de aplicaciones.</li><li>Aseguramiento de Calidad: Pruebas de software completas.</li><li>Transformación Digital: Transición de negocios a plataformas digitales.</li></lu><b>Experiencia en la Industria</b><lu><li>Finanzas</li><li>Telecomunicaciones</li><li>Energía</li><li>Retail</li></lu>",
       "contribution": "<P>En Panel Sistemas, trabajé como analista funcional en tres proyectos. Además, realicé tareas como programador senior en la fase posterior a la toma de decisiones. Mis responsabilidades como analista funcional incluyeron lo siguiente:</P><ul><li>Análisis de requisitos no funcionales y toma de decisiones sobre la implementación exacta de la solución (Redmine)</li><li>Creación de sub-tareas con menor granularidad para lograr objetivos (Redmine)</li><li>Estimación de tiempos (Redmine)</li><li>Definición e implementación de la estructura del proyecto en las tecnologías especificadas</li><li>Definición de la cobertura y calidad de las pruebas unitarias (JUnit, Google Test, Valgrind)</li><li>Implementación de sistemas CI/CD (Jenkins)</li><li>Utilización de SCRUM como metodología de desarrollo</li><li>Aplicación de TDD y BDD en el desarrollo de software</li><li>Impartición de sesiones de capacitación sobre TDD, BDD, Redes Neuronales, Código Limpio y más</li></ul>",
+      "full_description": "<P>Panel Sistemas es una empresa líder en soluciones tecnológicas, especializada en desarrollo de software, consultoría y servicios de TI. Fundada en España, sirve a diversas industrias con clientes destacados como Telefónica, BBVA, Santander, Repsol y El Corte Inglés.</P><b>Servicios Ofrecidos</b><lu><li>Desarrollo de Software: Soluciones de software a medida.</li><li>Consultoría: Estrategia y optimización de TI.</li><li>Mantenimiento y Soporte: Soporte continuo de aplicaciones.</li><li>Aseguramiento de Calidad: Pruebas de software completas.</li><li>Transformación Digital: Transición de negocios a plataformas digitales.</li></lu><b>Experiencia en la Industria</b><lu><li>Finanzas</li><li>Telecomunicaciones</li><li>Energía</li><li>Retail</li></lu>",
+      "images": [],
       "links": [
         {
+          "icon": "",
           "text": "Sitio web de Panel Sistemas",
           "url": "https://www.panel.es/"
         }
       ],
+      "name": "Panel Sistemas",
+      "period_time": {
+        "current": false,
+        "end": "Junio 2017",
+        "start": "Septiembre 2015"
+      },
       "projects": [
         {
           "description": "<P>El primero de los proyectos en los que trabajé involucró la implementación de una plataforma de intercambio de mensajes para el transporte marítimo y aéreo. Este proyecto reemplazó con éxito el estándar IATA obsoleto, basado en texto plano y propenso a errores humanos debido a su dependencia de la posición de la cadena de texto, con un formato más moderno, legible y resistente a errores basado en XML/JSON.</P><P>Para lograr esto, definí un analizador que traducía mensajes del formato antiguo a cualquiera de los dos estándares modernos a través de una API Restful que cumplía con el modelo de madurez de Richardson Nivel 3. Esta API no solo proporcionó un punto de entrada para la traducción de mensajes, sino que también facilitó la intercomunicación con otras plataformas en todo el mundo y el almacenamiento de estas comunicaciones para asegurar la trazabilidad del tránsito de paquetes a nivel mundial. Los objetivos del proyecto requerían una estructura de alta disponibilidad y un sistema de base de datos replicada basado en MongoDB, implementado a través de un clúster de servidores con cada fragmento replicado.</P>",
@@ -545,21 +573,26 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "Panel Sistemas es una empresa especializada en soluciones tecnológicas, ofreciendo servicios de software, consultoría y desarrollo a diversas industrias.",
+      "thumbnail": "panel_sistemas.png"
     },
     {
-      "name": "Grupo Prisa",
-      "short_description": "Grupo PRISA es un conglomerado de medios español, conocido por sus influyentes periódicos, emisoras de radio y publicaciones educativas.",
-      "thumbnail": "prisa.png",
-      "period_time": "Marzo 2012 –- Mayo 2015",
-      "full_description": "<p>Grupo PRISA, formalmente conocido como Promotora de Informaciones, S.A., es un destacado conglomerado de medios español con una significativa influencia en el mundo hispanohablante. Fundado en 1972 por Jesús de Polanco, PRISA ha crecido hasta convertirse en una de las mayores empresas de medios en España y América Latina, abarcando una amplia gama de medios, incluyendo periódicos, emisoras de radio, canales de televisión y publicaciones educativas.</p><p>Aspectos clave de Grupo PRISA incluyen:</p><ul><li><strong>Periódicos:</strong> El periódico insignia de PRISA es <em>El País</em>, uno de los diarios más leídos y respetados de España. Lanzado en 1976 durante la transición democrática de España, <em>El País</em> rápidamente se convirtió en un símbolo de la nueva era democrática, ofreciendo periodismo de alta calidad y una postura editorial progresista. El periódico cubre una amplia gama de temas, desde noticias nacionales e internacionales hasta cultura, economía y deportes. También ha expandido su alcance con una robusta presencia en línea, atendiendo a millones de lectores en todo el mundo.</li><li><strong>Radio:</strong> En el sector de la radio, PRISA posee Cadena SER, la red de radio líder en España. Cadena SER es conocida por su programación informativa, programas de tertulia y cobertura deportiva. Tiene una sustancial audiencia y es conocida por su completa cobertura de noticias y programas de tertulia que abordan asuntos de actualidad, política y problemas sociales. Otras emisoras destacadas bajo el paraguas de PRISA incluyen Los 40 Principales, una popular emisora de música que toca éxitos contemporáneos, y Cadena Dial, que se enfoca en música en español.</li><li><strong>Televisión:</strong> PRISA también ha incursionado en la televisión, con su canal <em>CNN+</em> habiendo sido un jugador significativo en el mercado de noticias español hasta su cierre en 2010. A pesar de esto, PRISA sigue teniendo presencia en el sector televisivo a través de diversas asociaciones y producción de contenidos.</li><li><strong>Publicaciones Educativas:</strong> Más allá de las noticias y el entretenimiento, PRISA es un jugador importante en la industria de publicaciones educativas a través de su subsidiaria, Santillana. Fundada en 1960, Santillana es una editorial líder de materiales educativos en España y América Latina. Ofrece una amplia gama de libros de texto, contenido digital y recursos educativos para estudiantes y profesores, haciendo contribuciones significativas a la educación en el mundo hispanohablante.</li><li><strong>Transformación Digital:</strong> En los últimos años, PRISA ha adoptado la transformación digital, adaptándose al cambiante panorama de los medios. La empresa ha invertido fuertemente en plataformas digitales, aplicaciones móviles y contenido en línea para alcanzar a una audiencia más amplia y mantenerse relevante en la era digital. <em>El País</em>, por ejemplo, tiene una fuerte presencia digital, con un sitio web que atrae a millones de visitantes cada mes y una variedad de contenido multimedia, incluyendo videos, podcasts y características interactivas.</li><li><strong>Influencia Global:</strong> La influencia de PRISA se extiende más allá de España y América Latina. Ha formado asociaciones estratégicas con empresas de medios internacionales y ha expandido su alcance a otras regiones. El contenido de la empresa es consumido por millones de personas en todo el mundo, convirtiéndolo en un puente cultural e informativo significativo entre España, América Latina y el resto del mundo.</li></ul>",
       "contribution": "<p>Tengo una amplia experiencia trabajando como programador senior remoto en tres proyectos importantes. En este rol, se me confió una variedad de responsabilidades críticas que requerían tanto experiencia técnica como fuertes habilidades de comunicación. Uno de mis deberes principales fue asistir a reuniones con el propietario del producto para definir los requisitos detallados del proyecto. Esto implicaba un análisis exhaustivo de los objetivos del proyecto y desglosarlos en tareas específicas y procesables. Al hacerlo, aseguré que todos los aspectos del proyecto fueran claramente entendidos y abordados desde el principio.</p><p>La coordinación con equipos externos fue otro aspecto importante de mi rol. Trabajé en estrecha colaboración con equipos de colaboración con sede en América del Sur, India y China. Esta coordinación internacional requería que gestionara eficazmente diferentes zonas horarias y diferencias culturales. Para facilitar una comunicación y colaboración fluidas, traduje e interpreté los requisitos en chino. Esta habilidad lingüística fue crucial para superar las brechas de comunicación y asegurar que todos los miembros del equipo, independientemente de su ubicación, tuvieran una comprensión clara y precisa de los requisitos del proyecto.</p><p>La innovación y la eficiencia fueron áreas clave de enfoque en mi rol. Participé en sesiones de lluvia de ideas para desarrollar e implementar nuevas herramientas destinadas a mejorar la automatización y la productividad del equipo. Estas herramientas estaban diseñadas para agilizar los flujos de trabajo, reducir el esfuerzo manual y mejorar la eficiencia general del proceso de desarrollo. Al introducir estas innovaciones, pude contribuir a un entorno de equipo más productivo y efectivo.</p><p>La planificación detallada del proyecto fue otra responsabilidad crítica. Utilicé la metodología SCRUM para asegurar que todas las tareas estuvieran organizadas y gestionadas eficazmente a lo largo del ciclo de vida del proyecto. Esto implicaba crear planes detallados, establecer cronogramas realistas y monitorear continuamente el progreso para asegurar que se cumplieran los hitos del proyecto. El uso de SCRUM permitió un enfoque flexible e iterativo para la gestión de proyectos, permitiendo que el equipo se adaptara a los cambios y abordara los desafíos de manera rápida.</p><p>En general, mi experiencia como programador senior remoto me ha dotado de un conjunto de habilidades diverso y una profunda comprensión de la gestión efectiva de proyectos en un entorno de trabajo remoto y global. Mi capacidad para definir requisitos detallados, coordinar con equipos internacionales, innovar para mejorar la productividad y gestionar proyectos utilizando SCRUM me ha permitido contribuir significativamente al éxito de los proyectos en los que he estado involucrado.</p>",
+      "full_description": "<p>Grupo PRISA, formalmente conocido como Promotora de Informaciones, S.A., es un destacado conglomerado de medios español con una significativa influencia en el mundo hispanohablante. Fundado en 1972 por Jesús de Polanco, PRISA ha crecido hasta convertirse en una de las mayores empresas de medios en España y América Latina, abarcando una amplia gama de medios, incluyendo periódicos, emisoras de radio, canales de televisión y publicaciones educativas.</p><p>Aspectos clave de Grupo PRISA incluyen:</p><ul><li><strong>Periódicos:</strong> El periódico insignia de PRISA es <em>El País</em>, uno de los diarios más leídos y respetados de España. Lanzado en 1976 durante la transición democrática de España, <em>El País</em> rápidamente se convirtió en un símbolo de la nueva era democrática, ofreciendo periodismo de alta calidad y una postura editorial progresista. El periódico cubre una amplia gama de temas, desde noticias nacionales e internacionales hasta cultura, economía y deportes. También ha expandido su alcance con una robusta presencia en línea, atendiendo a millones de lectores en todo el mundo.</li><li><strong>Radio:</strong> En el sector de la radio, PRISA posee Cadena SER, la red de radio líder en España. Cadena SER es conocida por su programación informativa, programas de tertulia y cobertura deportiva. Tiene una sustancial audiencia y es conocida por su completa cobertura de noticias y programas de tertulia que abordan asuntos de actualidad, política y problemas sociales. Otras emisoras destacadas bajo el paraguas de PRISA incluyen Los 40 Principales, una popular emisora de música que toca éxitos contemporáneos, y Cadena Dial, que se enfoca en música en español.</li><li><strong>Televisión:</strong> PRISA también ha incursionado en la televisión, con su canal <em>CNN+</em> habiendo sido un jugador significativo en el mercado de noticias español hasta su cierre en 2010. A pesar de esto, PRISA sigue teniendo presencia en el sector televisivo a través de diversas asociaciones y producción de contenidos.</li><li><strong>Publicaciones Educativas:</strong> Más allá de las noticias y el entretenimiento, PRISA es un jugador importante en la industria de publicaciones educativas a través de su subsidiaria, Santillana. Fundada en 1960, Santillana es una editorial líder de materiales educativos en España y América Latina. Ofrece una amplia gama de libros de texto, contenido digital y recursos educativos para estudiantes y profesores, haciendo contribuciones significativas a la educación en el mundo hispanohablante.</li><li><strong>Transformación Digital:</strong> En los últimos años, PRISA ha adoptado la transformación digital, adaptándose al cambiante panorama de los medios. La empresa ha invertido fuertemente en plataformas digitales, aplicaciones móviles y contenido en línea para alcanzar a una audiencia más amplia y mantenerse relevante en la era digital. <em>El País</em>, por ejemplo, tiene una fuerte presencia digital, con un sitio web que atrae a millones de visitantes cada mes y una variedad de contenido multimedia, incluyendo videos, podcasts y características interactivas.</li><li><strong>Influencia Global:</strong> La influencia de PRISA se extiende más allá de España y América Latina. Ha formado asociaciones estratégicas con empresas de medios internacionales y ha expandido su alcance a otras regiones. El contenido de la empresa es consumido por millones de personas en todo el mundo, convirtiéndolo en un puente cultural e informativo significativo entre España, América Latina y el resto del mundo.</li></ul>",
+      "images": [],
       "links": [
         {
+          "icon": "",
           "text": "Sitio web de Grupo Prisa",
           "url": "https://www.prisa.com/es"
         }
       ],
+      "name": "Grupo Prisa",
+      "period_time": {
+        "current": false,
+        "end": "Mayo 2015",
+        "start": "Marzo 2012"
+      },
       "projects": [
         {
           "description": "<p>El primer proyecto implicó el desarrollo de una aplicación integral para plataformas Android e iOS destinada a la visualización de paquetes educativos. Esta aplicación fue meticulosamente diseñada para ser compatible con dispositivos de gama baja, asegurando que pudiera alcanzar una base de usuarios más amplia sin comprometer el rendimiento. Era esencial que la aplicación interactuara fluidamente con los usuarios, proporcionando una experiencia sin interrupciones y atractiva. Además, la aplicación estaba equipada con funcionalidad para rastrear y enviar el progreso de los usuarios al servidor, facilitando un monitoreo y evaluación efectivos de su viaje de aprendizaje.</p><p>Una característica clave de la aplicación fue su capacidad para manejar paquetes educativos que cumplieran con el estándar SCORM (Modelo de Referencia de Objetos de Contenido Compartible), que se utiliza ampliamente en el campo del e-learning para crear y entregar contenido de aprendizaje interactivo y adaptativo. Para asegurar la compatibilidad con versiones anteriores, la aplicación también fue diseñada para soportar versiones antiguas de paquetes educativos. Esta doble compatibilidad aseguraba que los usuarios pudieran acceder a una amplia gama de contenido educativo, tanto moderno como antiguo, mejorando así la utilidad y el atractivo de la aplicación en varios contextos educativos.</p>",
@@ -625,21 +658,26 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "Grupo PRISA es un conglomerado de medios español, conocido por sus influyentes periódicos, emisoras de radio y publicaciones educativas.",
+      "thumbnail": "prisa.png"
     },
     {
-      "name": "Intelygenz",
-      "short_description": "Intelygenz es una empresa de tecnología especializada en inteligencia artificial, aprendizaje automático y soluciones de software a medida para diversas industrias.",
-      "thumbnail": "intelygenz.png",
-      "period_time": "Enero 2010 –- Enero 2012",
-      "full_description": "<p>El tercer proyecto se desarrolló utilizando C# en la plataforma .NET, diseñado como un entorno integral para profesores y profesionales de la educación. Esta plataforma permitía a los usuarios gestionar diversas tareas educativas, incluyendo la gestión de estudiantes, el manejo de paquetes educativos y el análisis de sus resultados. También facilitaba la programación y ejecución de tareas relacionadas con el servidor de medios para fines de transmisión.</p><p>Además, la plataforma contaba con un centro de comunicación de audio y video de alta resolución vía IP, mejorando las interacciones en tiempo real entre educadores y estudiantes. Este sistema robusto soportaba un flujo de trabajo sin interrupciones y eficiente, asegurando que todas las actividades educativas se gestionaran y ejecutaran efectivamente dentro de un entorno unificado.</p>",
       "contribution": "<p>Como Programador Senior, contribuí a tres proyectos significativos. El primer proyecto fue una aplicación para Antena 3 Televisión, desarrollada de forma nativa para Android. Esta aplicación servía como una interfaz interactiva en tiempo real con el contenido televisivo, actualizada a través de marcadores inaudibles incrustados en el audio. El audio era interceptado por la aplicación, utilizando una solución personalizada desarrollada en el NDK de Android para asegurar un alto rendimiento y bajo consumo de batería. Esta solución modificaba el audio añadiendo ecos separados por distancias temporales específicas, que se interpretaban de manera binaria.</p>",
+      "full_description": "<p>El tercer proyecto se desarrolló utilizando C# en la plataforma .NET, diseñado como un entorno integral para profesores y profesionales de la educación. Esta plataforma permitía a los usuarios gestionar diversas tareas educativas, incluyendo la gestión de estudiantes, el manejo de paquetes educativos y el análisis de sus resultados. También facilitaba la programación y ejecución de tareas relacionadas con el servidor de medios para fines de transmisión.</p><p>Además, la plataforma contaba con un centro de comunicación de audio y video de alta resolución vía IP, mejorando las interacciones en tiempo real entre educadores y estudiantes. Este sistema robusto soportaba un flujo de trabajo sin interrupciones y eficiente, asegurando que todas las actividades educativas se gestionaran y ejecutaran efectivamente dentro de un entorno unificado.</p>",
+      "images": [],
       "links": [
         {
+          "icon": "",
           "text": "Sitio web de Intelygenz",
           "url": "https://intelygenz.com/"
         }
       ],
+      "name": "Intelygenz",
+      "period_time": {
+        "current": false,
+        "end": "Enero 2012",
+        "start": "Enero 2010"
+      },
       "projects": [
         {
           "description": "<p>El primer proyecto involucró el desarrollo de una aplicación para Antena 3 Televisión, construida de forma nativa para Android. Esta aplicación servía como una interfaz interactiva en tiempo real con el contenido televisivo, actualizada dinámicamente utilizando marcadores inaudibles incrustados en el audio. Para lograr esto, la aplicación utilizaba una solución personalizada desarrollada en el NDK de Android, que aseguraba un mayor rendimiento y menor consumo de batería.</p><p>El audio modificado incluía ecos separados por intervalos temporales específicos, que la aplicación interpretaba en formato binario. Este enfoque innovador permitía que la aplicación interactuara sin problemas con la transmisión televisiva, proporcionando a los usuarios una experiencia de visualización mejorada y atractiva.</p>",
@@ -648,6 +686,7 @@
           ],
           "links": [
             {
+              "icon": "",
               "text": "Documentación de la aplicación de Antena 3 TV",
               "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf"
             }
@@ -713,21 +752,26 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "Intelygenz es una empresa de tecnología especializada en inteligencia artificial, aprendizaje automático y soluciones de software a medida para diversas industrias.",
+      "thumbnail": "intelygenz.png"
     },
     {
-      "name": "UAH",
-      "short_description": "La Universidad de Alcalá de Henares es una prestigiosa institución española conocida por su rica historia y diversos programas académicos.",
-      "thumbnail": "uah.svg",
-      "period_time": "Enero 2006 –- Enero 2009",
-      "full_description": "<p>La Universidad de Alcalá de Henares, comúnmente conocida como la Universidad de Alcalá, es una reconocida universidad pública ubicada en Alcalá de Henares, una ciudad histórica cerca de Madrid, España. Fundada en 1499 por el Cardenal Cisneros, es una de las universidades más antiguas de España y tiene una rica herencia que combina tradición con modernidad.</p><p>La Universidad de Alcalá es celebrada por su compromiso con la excelencia académica y la innovación. Ofrece una amplia gama de programas de pregrado, posgrado y doctorado en diversos campos de estudio, incluyendo humanidades, ciencias sociales, ciencias naturales, ingeniería, ciencias de la salud y derecho. La universidad es particularmente conocida por sus sólidos programas en literatura, lingüística y estudios de la lengua española, atrayendo a estudiantes y académicos de todo el mundo.</p><p>Una de las características más notables de la universidad es su campus histórico, que es un sitio del Patrimonio Mundial de la UNESCO. El campus incluye impresionantes ejemplos de arquitectura renacentista española, como el Colegio de San Ildefonso, el edificio principal de la universidad, que cuenta con un hermoso patio y una capilla histórica. El compromiso de la universidad con la preservación de su patrimonio histórico y cultural es evidente en el mantenimiento y restauración cuidadosa de estos tesoros arquitectónicos.</p><p>Además de su campus histórico, la Universidad de Alcalá cuenta con instalaciones modernas equipadas con la última tecnología para apoyar la investigación de vanguardia y métodos de enseñanza innovadores. Las bibliotecas, laboratorios y centros de investigación de la universidad proporcionan a los estudiantes y profesores los recursos que necesitan para perseguir sus metas académicas y profesionales. La universidad también promueve una fuerte cultura de investigación y fomenta la colaboración con instituciones e industrias tanto a nivel nacional como internacional.</p><p>La Universidad de Alcalá está dedicada a fomentar una comunidad diversa e inclusiva. Da la bienvenida a estudiantes de todo el mundo y ofrece una gama de servicios de apoyo para ayudar a los estudiantes internacionales a integrarse en la vida del campus. La vibrante vida estudiantil de la universidad incluye numerosas actividades culturales, sociales y deportivas, proporcionando a los estudiantes oportunidades para interactuar con la comunidad en general y desarrollar sus habilidades personales y profesionales.</p><p>Un aspecto clave de la misión de la Universidad de Alcalá es su compromiso con la responsabilidad social y el desarrollo sostenible. La universidad participa activamente en iniciativas que promueven la sostenibilidad ambiental, la justicia social y el desarrollo comunitario. Colabora con organizaciones locales, nacionales e internacionales para abordar desafíos globales urgentes y contribuir al bienestar de la sociedad.</p><p>La red de exalumnos de la Universidad de Alcalá es un testimonio de su impacto e influencia. Los graduados de la universidad han alcanzado un éxito significativo en diversos campos, incluyendo la academia, los negocios, el gobierno y las artes. La universidad mantiene fuertes conexiones con sus exalumnos, fomentando una comunidad de apoyo y comprometida que sigue contribuyendo al legado de la universidad.</p><p>En resumen, la Universidad de Alcalá de Henares es una institución distinguida que combina una importancia histórica con un enfoque progresista hacia la educación. Su dedicación a la excelencia académica, la preservación cultural, la innovación en la investigación y la responsabilidad social la convierte en una universidad líder en España y un nombre respetado en la educación superior global.</p>",
       "contribution": "<p>Mi rol como investigador en la universidad fue dentro del grupo de investigación TIFyC, donde tuve una gama de responsabilidades enfocadas en avanzar en el campo de la tecnología y la inteligencia artificial. Una de mis principales tareas fue realizar investigaciones exhaustivas sobre el estado del arte en diversas áreas, incluyendo problemas de accesibilidad, algoritmos de IA, visión artificial y sistemas biométricos. Esto implicaba mantenerse actualizado con los últimos avances, evaluar nuevas metodologías e identificar posibles áreas de innovación.</p><p>Además de mis deberes de investigación, participé activamente en colaboraciones con grupos de investigación de diferentes universidades. Estas colaboraciones tenían como objetivo fomentar el intercambio de conocimientos, promover la investigación interdisciplinaria e impulsar proyectos innovadores. Al trabajar estrechamente con otros investigadores, pudimos combinar nuestra experiencia y recursos para abordar desafíos complejos y expandir los límites de nuestros respectivos campos.</p><p>Otro aspecto clave de mi rol fue la preparación de informes detallados sobre nuestros hallazgos de investigación. Estos informes documentaban nuestras metodologías, resultados y conclusiones, proporcionando un recurso valioso para investigaciones futuras y contribuyendo a la comunidad científica en general. Mi capacidad para comunicar claramente y de manera efectiva nuestros hallazgos fue crucial para asegurar que nuestro trabajo tuviera un impacto significativo.</p><p>Además, participé en el estudio y la solicitud de ayudas estatales y subvenciones para proyectos de investigación y desarrollo (I+D). Esto requería una comprensión exhaustiva del panorama de financiación y la capacidad de elaborar propuestas convincentes que demostraran la importancia y el impacto potencial de nuestra investigación. Obtener estos fondos fue esencial para apoyar nuestros proyectos en curso y permitir nuevas iniciativas.</p><p>Como parte de mis responsabilidades, también serví como profesor asistente, enseñando cursos sobre Inteligencia Artificial y Sistemas de Visión Artificial. En esta capacidad, fui responsable de impartir conocimientos a los estudiantes, diseñar materiales del curso y guiarlos a través de conceptos complejos y aplicaciones prácticas. Mi rol de enseñanza me permitió compartir mi pasión por la IA y la visión artificial con la próxima generación de investigadores y profesionales, al mismo tiempo que me mantenía comprometido con la comunidad académica.</p>",
+      "full_description": "<p>La Universidad de Alcalá de Henares, comúnmente conocida como la Universidad de Alcalá, es una reconocida universidad pública ubicada en Alcalá de Henares, una ciudad histórica cerca de Madrid, España. Fundada en 1499 por el Cardenal Cisneros, es una de las universidades más antiguas de España y tiene una rica herencia que combina tradición con modernidad.</p><p>La Universidad de Alcalá es celebrada por su compromiso con la excelencia académica y la innovación. Ofrece una amplia gama de programas de pregrado, posgrado y doctorado en diversos campos de estudio, incluyendo humanidades, ciencias sociales, ciencias naturales, ingeniería, ciencias de la salud y derecho. La universidad es particularmente conocida por sus sólidos programas en literatura, lingüística y estudios de la lengua española, atrayendo a estudiantes y académicos de todo el mundo.</p><p>Una de las características más notables de la universidad es su campus histórico, que es un sitio del Patrimonio Mundial de la UNESCO. El campus incluye impresionantes ejemplos de arquitectura renacentista española, como el Colegio de San Ildefonso, el edificio principal de la universidad, que cuenta con un hermoso patio y una capilla histórica. El compromiso de la universidad con la preservación de su patrimonio histórico y cultural es evidente en el mantenimiento y restauración cuidadosa de estos tesoros arquitectónicos.</p><p>Además de su campus histórico, la Universidad de Alcalá cuenta con instalaciones modernas equipadas con la última tecnología para apoyar la investigación de vanguardia y métodos de enseñanza innovadores. Las bibliotecas, laboratorios y centros de investigación de la universidad proporcionan a los estudiantes y profesores los recursos que necesitan para perseguir sus metas académicas y profesionales. La universidad también promueve una fuerte cultura de investigación y fomenta la colaboración con instituciones e industrias tanto a nivel nacional como internacional.</p><p>La Universidad de Alcalá está dedicada a fomentar una comunidad diversa e inclusiva. Da la bienvenida a estudiantes de todo el mundo y ofrece una gama de servicios de apoyo para ayudar a los estudiantes internacionales a integrarse en la vida del campus. La vibrante vida estudiantil de la universidad incluye numerosas actividades culturales, sociales y deportivas, proporcionando a los estudiantes oportunidades para interactuar con la comunidad en general y desarrollar sus habilidades personales y profesionales.</p><p>Un aspecto clave de la misión de la Universidad de Alcalá es su compromiso con la responsabilidad social y el desarrollo sostenible. La universidad participa activamente en iniciativas que promueven la sostenibilidad ambiental, la justicia social y el desarrollo comunitario. Colabora con organizaciones locales, nacionales e internacionales para abordar desafíos globales urgentes y contribuir al bienestar de la sociedad.</p><p>La red de exalumnos de la Universidad de Alcalá es un testimonio de su impacto e influencia. Los graduados de la universidad han alcanzado un éxito significativo en diversos campos, incluyendo la academia, los negocios, el gobierno y las artes. La universidad mantiene fuertes conexiones con sus exalumnos, fomentando una comunidad de apoyo y comprometida que sigue contribuyendo al legado de la universidad.</p><p>En resumen, la Universidad de Alcalá de Henares es una institución distinguida que combina una importancia histórica con un enfoque progresista hacia la educación. Su dedicación a la excelencia académica, la preservación cultural, la innovación en la investigación y la responsabilidad social la convierte en una universidad líder en España y un nombre respetado en la educación superior global.</p>",
+      "images": [],
       "links": [
         {
+          "icon": "",
           "text": "Sitio web de la Universidad de Alcalá",
           "url": "https://uah.es/"
         }
       ],
+      "name": "UAH",
+      "period_time": {
+        "current": false,
+        "end": "Enero 2009",
+        "start": "Enero 2006"
+      },
       "projects": [
         {
           "description": "<p>Uno de los proyectos significativos llevados a cabo por nuestro grupo de investigación se centró en investigar dispositivos innovadores diseñados para mejorar la interacción para individuos con discapacidades visuales, auditivas o motoras. El objetivo principal de esta investigación era desarrollar y perfeccionar tecnologías que pudieran facilitar interacciones más intuitivas y accesibles con varios tipos de sistemas, incluidos computadoras de escritorio, portátiles y dispositivos móviles.</p><p>Nuestro equipo exploró una amplia gama de tecnologías de asistencia y mejoras de interfaces de usuario destinadas a superar los desafíos que enfrentan las personas con discapacidades. Esto incluyó el desarrollo de dispositivos de entrada especializados, soluciones de software adaptativas y diseños avanzados de interfaces de usuario que se adaptaran específicamente a las necesidades de los usuarios con discapacidades visuales, auditivas y motoras. Al enfocarnos en estas áreas, buscábamos crear un entorno digital más inclusivo que empoderara a los usuarios para interactuar con la tecnología de manera más efectiva e independiente.</p><p>La investigación también involucró extensas pruebas de usuario y colaboración con individuos que tienen discapacidades para asegurar que las soluciones desarrolladas fueran prácticas, fáciles de usar y realmente beneficiosas. Al integrar comentarios de usuarios reales, nuestro grupo de investigación pudo hacer avances significativos en la creación de dispositivos y aplicaciones que no solo cumplieran con los estándares de accesibilidad, sino que también mejoraran la experiencia general del usuario para personas con discapacidades.</p><p>Este proyecto ejemplifica nuestro compromiso de aprovechar la tecnología para eliminar barreras y mejorar la calidad de vida de las personas con discapacidades, haciendo que la tecnología sea accesible y usable para todos, independientemente de sus capacidades físicas.</p>",
@@ -805,16 +849,20 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "La Universidad de Alcalá de Henares es una prestigiosa institución española conocida por su rica historia y diversos programas académicos.",
+      "thumbnail": "uah.svg"
     },
     {
-      "name": "Knowcentury",
-      "short_description": "Pequeña empresa dedicada a la creación de páginas web",
-      "thumbnail": "knowcentury.png",
-      "period_time": "Enero 2005 –- Julio 2005",
-      "full_description": "Pequeña empresa dedicada a la creación de páginas web",
       "contribution": "<p>Durante mis primeros años en la universidad, con el fin de poder pagar mis estudios, trabajé como programador web junior utilizando CMS en Knowcentury.</p>",
+      "full_description": "Pequeña empresa dedicada a la creación de páginas web",
+      "images": [],
       "links": [],
+      "name": "Knowcentury",
+      "period_time": {
+        "current": false,
+        "end": "Julio 2005",
+        "start": "Enero 2005"
+      },
       "projects": [
         {
           "description": "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>",
@@ -830,16 +878,20 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "Pequeña empresa dedicada a la creación de páginas web",
+      "thumbnail": "knowcentury.png"
     },
     {
-      "name": "IBM",
-      "short_description": "IBM, una empresa tecnológica global, se especializa en computación en la nube, IA y hardware, proporcionando soluciones innovadoras para negocios en todo el mundo.",
-      "thumbnail": "ibm.svg",
-      "period_time": "Septiembre 2003 –- Diciembre 2004",
-      "full_description": "<p>IBM, o International Business Machines Corporation, es una empresa tecnológica de renombre mundial con una rica historia que abarca más de un siglo. Fundada en 1911 y con sede en Armonk, Nueva York, IBM ha estado constantemente a la vanguardia de la innovación tecnológica, influyendo en numerosos sectores con sus soluciones pioneras. Hoy en día, IBM es un líder en computación en la nube, inteligencia artificial (IA) y hardware empresarial, ofreciendo una suite completa de productos y servicios que atienden a negocios de todos los tamaños.</p><p>Una de las contribuciones más significativas de IBM a la tecnología es su desarrollo de potentes sistemas de IA, particularmente la plataforma IBM Watson. Watson está diseñado para aprovechar el procesamiento del lenguaje natural y el aprendizaje automático para analizar grandes cantidades de datos, proporcionando información y habilitando la automatización en diversas industrias, incluyendo salud, finanzas y servicio al cliente. Las capacidades de IBM Watson en análisis de datos y análisis predictivo ayudan a las organizaciones a tomar decisiones más informadas, mejorar la eficiencia operativa e impulsar la innovación.</p><p>Además de la IA, IBM ha hecho avances sustanciales en computación en la nube con su plataforma IBM Cloud. Esta robusta plataforma ofrece una amplia gama de servicios en la nube, incluyendo infraestructura como servicio (IaaS), plataforma como servicio (PaaS) y software como servicio (SaaS). IBM Cloud está diseñado para soportar tanto entornos de nube pública como privada, permitiendo a las empresas desplegar y gestionar aplicaciones con mayor flexibilidad y seguridad. Las capacidades de integración de la plataforma permiten una conectividad perfecta con los sistemas existentes, facilitando la transformación digital y la innovación.</p><p>Las soluciones de hardware de IBM también han jugado un papel fundamental en el éxito de la empresa. La serie de mainframes IBM Z, por ejemplo, son conocidos por su fiabilidad, seguridad y rendimiento, particularmente en industrias que requieren capacidades robustas de procesamiento de datos, como la banca y las finanzas. Estos mainframes están diseñados para manejar el procesamiento de transacciones a gran escala y la gestión de datos, asegurando la continuidad del negocio y la eficiencia operativa.</p><p>Otra área clave de la experiencia de IBM es su compromiso con la investigación y el desarrollo (I+D). IBM invierte fuertemente en I+D, empujando constantemente los límites de lo que es posible en tecnología. Las innovaciones de la empresa han llevado a numerosos avances, incluyendo el desarrollo de la computación cuántica. IBM Quantum es una plataforma de computación avanzada que aprovecha los principios de la mecánica cuántica para resolver problemas complejos que están más allá de las capacidades de las computadoras clásicas. Esta tecnología de vanguardia tiene el potencial de revolucionar las industrias al habilitar nuevos enfoques para la resolución de problemas y la optimización.</p><p>Además, el compromiso de IBM con la sostenibilidad y la responsabilidad social corporativa (RSC) refleja su dedicación a tener un impacto positivo en el mundo. La empresa ha implementado diversas iniciativas destinadas a reducir su huella ambiental, promover la diversidad y la inclusión, y apoyar la educación y el desarrollo comunitario. Los esfuerzos de RSC de IBM subrayan su creencia en usar la tecnología como una fuerza para el bien, impulsando un cambio positivo en la sociedad.</p><p>En resumen, IBM es un líder global en tecnología, ofreciendo soluciones innovadoras en IA, computación en la nube y hardware empresarial. Con un fuerte énfasis en la investigación y el desarrollo, la empresa continúa impulsando avances tecnológicos que dan forma al futuro de diversas industrias. El compromiso de IBM con la sostenibilidad y la responsabilidad social refuerza aún más su reputación como una organización progresista y consciente socialmente. A través de su suite completa de productos y servicios, IBM empodera a las empresas para lograr sus objetivos y navegar las complejidades de la era digital.</p>",
       "contribution": "<p>Durante este período, mi responsabilidad principal fue realizar una investigación exhaustiva sobre el uso del mainframe IBM System Z/390s para la virtualización de sistemas. Este proyecto implicaba utilizar Qemu, un emulador de código abierto, para facilitar el proceso de virtualización. El objetivo era habilitar el uso de sistemas remotos creando entornos virtualizados en el mainframe de IBM. Estos sistemas virtuales debían operar bajo el sistema operativo Suse Linux Enterprise Edition, asegurando una plataforma robusta y segura para diversas aplicaciones y servicios.</p><p>Mi rol requería una comprensión integral de la arquitectura y capacidades del IBM System Z/390s. Me centré en explorar cómo Qemu podía integrarse eficazmente con el mainframe para lograr una virtualización eficiente. Esto implicaba configurar y optimizar el mainframe para soportar múltiples máquinas virtuales, cada una ejecutando su instancia del Suse Linux Enterprise Edition. El uso de Suse Linux era crítico ya que proporcionaba la estabilidad necesaria y las características de nivel empresarial requeridas para sistemas virtuales de alto rendimiento y fiabilidad.</p><p>Además, investigué varios aspectos de la virtualización de sistemas, incluyendo la asignación de recursos, la optimización del rendimiento y las medidas de seguridad. Asegurar que los sistemas virtualizados pudieran operar sin problemas y eficientemente en el mainframe era primordial. Esto implicaba pruebas exhaustivas y ajustes finos de los entornos virtuales para cumplir con las necesidades específicas de los usuarios de sistemas remotos. El proyecto tenía como objetivo aprovechar el poder y la fiabilidad del IBM System Z/390s para proporcionar soluciones virtualizadas escalables y seguras para aplicaciones empresariales.</p>",
+      "full_description": "<p>IBM, o International Business Machines Corporation, es una empresa tecnológica de renombre mundial con una rica historia que abarca más de un siglo. Fundada en 1911 y con sede en Armonk, Nueva York, IBM ha estado constantemente a la vanguardia de la innovación tecnológica, influyendo en numerosos sectores con sus soluciones pioneras. Hoy en día, IBM es un líder en computación en la nube, inteligencia artificial (IA) y hardware empresarial, ofreciendo una suite completa de productos y servicios que atienden a negocios de todos los tamaños.</p><p>Una de las contribuciones más significativas de IBM a la tecnología es su desarrollo de potentes sistemas de IA, particularmente la plataforma IBM Watson. Watson está diseñado para aprovechar el procesamiento del lenguaje natural y el aprendizaje automático para analizar grandes cantidades de datos, proporcionando información y habilitando la automatización en diversas industrias, incluyendo salud, finanzas y servicio al cliente. Las capacidades de IBM Watson en análisis de datos y análisis predictivo ayudan a las organizaciones a tomar decisiones más informadas, mejorar la eficiencia operativa e impulsar la innovación.</p><p>Además de la IA, IBM ha hecho avances sustanciales en computación en la nube con su plataforma IBM Cloud. Esta robusta plataforma ofrece una amplia gama de servicios en la nube, incluyendo infraestructura como servicio (IaaS), plataforma como servicio (PaaS) y software como servicio (SaaS). IBM Cloud está diseñado para soportar tanto entornos de nube pública como privada, permitiendo a las empresas desplegar y gestionar aplicaciones con mayor flexibilidad y seguridad. Las capacidades de integración de la plataforma permiten una conectividad perfecta con los sistemas existentes, facilitando la transformación digital y la innovación.</p><p>Las soluciones de hardware de IBM también han jugado un papel fundamental en el éxito de la empresa. La serie de mainframes IBM Z, por ejemplo, son conocidos por su fiabilidad, seguridad y rendimiento, particularmente en industrias que requieren capacidades robustas de procesamiento de datos, como la banca y las finanzas. Estos mainframes están diseñados para manejar el procesamiento de transacciones a gran escala y la gestión de datos, asegurando la continuidad del negocio y la eficiencia operativa.</p><p>Otra área clave de la experiencia de IBM es su compromiso con la investigación y el desarrollo (I+D). IBM invierte fuertemente en I+D, empujando constantemente los límites de lo que es posible en tecnología. Las innovaciones de la empresa han llevado a numerosos avances, incluyendo el desarrollo de la computación cuántica. IBM Quantum es una plataforma de computación avanzada que aprovecha los principios de la mecánica cuántica para resolver problemas complejos que están más allá de las capacidades de las computadoras clásicas. Esta tecnología de vanguardia tiene el potencial de revolucionar las industrias al habilitar nuevos enfoques para la resolución de problemas y la optimización.</p><p>Además, el compromiso de IBM con la sostenibilidad y la responsabilidad social corporativa (RSC) refleja su dedicación a tener un impacto positivo en el mundo. La empresa ha implementado diversas iniciativas destinadas a reducir su huella ambiental, promover la diversidad y la inclusión, y apoyar la educación y el desarrollo comunitario. Los esfuerzos de RSC de IBM subrayan su creencia en usar la tecnología como una fuerza para el bien, impulsando un cambio positivo en la sociedad.</p><p>En resumen, IBM es un líder global en tecnología, ofreciendo soluciones innovadoras en IA, computación en la nube y hardware empresarial. Con un fuerte énfasis en la investigación y el desarrollo, la empresa continúa impulsando avances tecnológicos que dan forma al futuro de diversas industrias. El compromiso de IBM con la sostenibilidad y la responsabilidad social refuerza aún más su reputación como una organización progresista y consciente socialmente. A través de su suite completa de productos y servicios, IBM empodera a las empresas para lograr sus objetivos y navegar las complejidades de la era digital.</p>",
+      "images": [],
       "links": [],
+      "name": "IBM",
+      "period_time": {
+        "current": false,
+        "end": "Diciembre 2004",
+        "start": "Septiembre 2003"
+      },
       "projects": [
         {
           "description": "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>",
@@ -859,7 +911,8 @@
           ]
         }
       ],
-      "images": []
+      "short_description": "IBM, una empresa tecnológica global, se especializa en computación en la nube, IA y hardware, proporcionando soluciones innovadoras para negocios en todo el mundo.",
+      "thumbnail": "ibm.svg"
     }
   ],
   "educations": {
@@ -901,7 +954,7 @@
         "institution": "Fundación Linux",
         "period_time": {
           "current": true,
-          "end": "",
+          "end": "None",
           "start": "Septiembre 2015"
         },
         "summary": "Certificación oficial de administración de sistemas Linux que implica la calificación para: Administración avanzada de sistemas Linux, incluidos los relacionados con el kernel. Realizar gestión avanzada del almacenamiento de bloques y sistemas de archivos, así como la autenticación avanzada de redes y la seguridad del sistema, incluidos el firewall y la VPN Instalar y configurar servicios centrales de red (DHCP, DNS, SSH, servidores web, servidores de archivos, correo electrónico, etc.). Monitorizar asistentes y asesorar a la administración sobre automatización y compras",
@@ -915,7 +968,7 @@
         "institution": "Fundación Linux",
         "period_time": {
           "current": true,
-          "end": "",
+          "end": "None",
           "start": "Septiembre 2013"
         },
         "summary": "Certificación oficial de administración de sistemas Linux que implica la calificación para: Instalar un sistema Linux, incluido X11 y configurarlo como un cliente de red. Trabajar en la línea de comandos. Gestionar archivos y permisos de acceso, incluidos ACL, así como la seguridad del sistema. Realizar tareas de mantenimiento sencillas.",
@@ -929,7 +982,7 @@
         "institution": "Universidad de Alcalá de Henares",
         "period_time": {
           "current": true,
-          "end": "",
+          "end": "None",
           "start": "Septiembre 2007"
         },
         "summary": "Diseño de contenido educativo a través del estándar SCORM.",
@@ -943,7 +996,7 @@
         "institution": "Universidad de Alcalá de Henares",
         "period_time": {
           "current": true,
-          "end": "",
+          "end": "None",
           "start": "Septiembre 2007"
         },
         "summary": "Sistemas de visión artificial, matrices de convolución, filtros.",
@@ -953,38 +1006,60 @@
     ],
     "languages": [
       {
-        "acreditation": [],
-        "language": "Español",
-        "read": "nativo",
-        "spoken": "nativo",
-        "thumbnail": "spanish.png",
-        "writen": "nativo"
-      },
-      {
-        "acreditation": [],
-        "language": "Inglés",
-        "read": "fluido",
-        "spoken": "fluido",
-        "thumbnail": "english.svg",
-        "writen": "fluido"
-      },
-      {
-        "acreditation": [
-          {
-            "institution": "Instituto Confucio Madrid",
-            "period_time": {
-              "current": true,
-              "end": "",
-              "start": "Septiembre 2009"
-            },
-            "title": "HSK 3"
-          }
+        "images": [
+          "linux_foundation.png"
         ],
-        "language": "Chino",
-        "read": "fluido",
-        "spoken": "fluido",
-        "thumbnail": "chinese.png",
-        "writen": "fluido"
+        "institution": "Fundación Linux",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "Septiembre 2015"
+        },
+        "summary": "Certificación oficial de administración de sistemas Linux que implica la calificación para: Administración avanzada de sistemas Linux, incluidos los relacionados con el kernel. Realizar gestión avanzada del almacenamiento de bloques y sistemas de archivos, así como la autenticación avanzada de redes y la seguridad del sistema, incluidos el firewall y la VPN Instalar y configurar servicios centrales de red (DHCP, DNS, SSH, servidores web, servidores de archivos, correo electrónico, etc.). Monitorizar asistentes y asesorar a la administración sobre automatización y compras",
+        "thumbnail": "linux_foundation.png",
+        "title": "LPIC - 2"
+      },
+      {
+        "images": [
+          "linux_foundation.png"
+        ],
+        "institution": "Fundación Linux",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "Septiembre 2013"
+        },
+        "summary": "Certificación oficial de administración de sistemas Linux que implica la calificación para: Instalar un sistema Linux, incluido X11 y configurarlo como un cliente de red. Trabajar en la línea de comandos. Gestionar archivos y permisos de acceso, incluidos ACL, así como la seguridad del sistema. Realizar tareas de mantenimiento sencillas.",
+        "thumbnail": "linux_foundation.png",
+        "title": "LPIC - 1"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "institution": "Universidad de Alcalá de Henares",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "Septiembre 2007"
+        },
+        "summary": "Diseño de contenido educativo a través del estándar SCORM.",
+        "thumbnail": "uah.svg",
+        "title": "Diseño y evaluación de contenidos educativos digitales"
+      },
+      {
+        "images": [
+          "uah.svg"
+        ],
+        "institution": "Universidad de Alcalá de Henares",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "Septiembre 2007"
+        },
+        "summary": "Sistemas de visión artificial, matrices de convolución, filtros.",
+        "thumbnail": "uah.svg",
+        "title": "Curso de visión artificial"
       }
     ]
   }

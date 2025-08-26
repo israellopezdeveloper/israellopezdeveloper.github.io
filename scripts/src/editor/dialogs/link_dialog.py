@@ -70,9 +70,6 @@ class LinkDialog(BaseDialog):
         self._edit_url.textChanged.connect(self._revalidate)
         self._edit_icon.textChanged.connect(self._revalidate)
 
-        # Ajustes visuales
-        self.resize(480, 160)
-
     # ------------------------------------------------------------------
     # API pública
 

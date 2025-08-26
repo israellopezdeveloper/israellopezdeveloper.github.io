@@ -2,95 +2,30 @@
 from __future__ import annotations
 
 from typing import Any, Dict, List, Optional, Tuple
+
 from PySide6 import QtCore, QtWidgets
 
-from editor.dialogs.base_dialog import BaseDialog
+# Utils
+from ..utils.lists import CustomList
 
-# ---------- Widgets / utilidades opcionales con fallback ----------
-from ..widgets.html_editor import HtmlEditor  # editor + preview HTML
-from ..widgets.file_select import FileSelect  # selector de archivo reutilizable
-from ..utils.lists import CustomList, enable_reorder, move_selected, remove_selected
-
+# Widgets
+from ..widgets.file_select import FileSelect
+from ..widgets.html_editor import HtmlEditor
 
 # Dialogs
-from ..dialogs.link_dialog import LinkDialog  # type: ignore
-from ..dialogs.project_dialog import ProjectDialog  # <- modal completo
+from .base_dialog import BaseDialog
+from .file_dialog import FileDialog
+from .link_dialog import LinkDialog
+from .project_dialog import ProjectDialog
 
 Qt = QtCore.Qt
 
 
-# -------------------- helpers de datos --------------------
-def _s(v: Any) -> str:
-    return "" if v is None else str(v)
-
-
-def _to_link_tuple(d: Dict[str, Any]) -> Tuple[str, str, str]:
-    return (_s(d.get("text")), _s(d.get("url")), _s(d.get("icon")))
-
-
-def _to_link_dict(t: Tuple[str, str, str]) -> Dict[str, str]:
-    text, url, icon = t
-    out = {"text": text, "url": url}
-    if icon:
-        out["icon"] = icon
-    return out
-
-
-def _fmt_link(text: str, url: str, icon: str) -> str:
-    return f"[{icon}] {text} — {url}" if icon else f"{text} — {url}"
-
-
-def _fmt_project(p: Dict[str, Any]) -> str:
-    """
-    Etiqueta: 'name  [tX lY iZ]' si hay tecnologías/links/imágenes.
-    """
-    nm = _s(p.get("name"))
-    n_techs = len(p.get("technologies") or [])
-    n_links = len(p.get("links") or [])
-    n_imags = len(p.get("images") or [])
-    suffix = []
-    if n_techs:
-        suffix.append(f"t{n_techs}")
-    if n_links:
-        suffix.append(f"l{n_links}")
-    if n_imags:
-        suffix.append(f"i{n_imags}")
-    return f"{nm}  [{' '.join(suffix)}]" if suffix else nm or "(proyecto)"
-
-
-# -------------------- fallbacks de UI --------------------
-class _FileSelect(QtWidgets.QWidget):
-    """Fallback si no existe widgets.file_select.FileSelect."""
-
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
-        lay = QtWidgets.QHBoxLayout(self)
-        self.edit = QtWidgets.QLineEdit()
-        btn = QtWidgets.QPushButton("…")
-        lay.addWidget(self.edit)
-        lay.addWidget(btn)
-        btn.clicked.connect(self._pick)
-
-    def value(self) -> str:
-        return self.edit.text().strip()
-
-    def set_value(self, path: str) -> None:
-        self.edit.setText(path or "")
-
-    def _pick(self) -> None:
-        fn, _ = QtWidgets.QFileDialog.getOpenFileName(
-            self,
-            "Elegir imagen",
-            "",
-            "Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)",
-        )
-        if fn:
-            self.edit.setText(fn)
-
-
 # -------------------- Formulario de un trabajo --------------------
-class _WorkForm(BaseDialog):
-    """Editor de un trabajo con el esquema solicitado."""
+class WorkDialog(BaseDialog):
+    """Diálogo modal para crear/editar un trabajo."""
+
+    changed = QtCore.Signal()
 
     @property
     def title(self) -> str:
@@ -142,28 +77,17 @@ class _WorkForm(BaseDialog):
         )
 
         # projects (lista; **abre modal** al añadir/editar)
-        self._projects = QtWidgets.QListWidget()
-        enable_reorder(self._projects)
-        self._btn_p_add = QtWidgets.QPushButton("Añadir")
-        self._btn_p_edit = QtWidgets.QPushButton("Editar")
-        self._btn_p_del = QtWidgets.QPushButton("Eliminar")
-        self._btn_p_up = QtWidgets.QPushButton("▲")
-        self._btn_p_down = QtWidgets.QPushButton("▼")
+        self._projects = CustomList(
+            self,
+            dialog_cls=ProjectDialog,
+        )
 
         # images (lista de rutas de imagen)
-        self._images = QtWidgets.QListWidget()
-        enable_reorder(self._images)
-        self._btn_i_add = QtWidgets.QPushButton("Añadir")
-        self._btn_i_edit = QtWidgets.QPushButton("Cambiar…")
-        self._btn_i_del = QtWidgets.QPushButton("Eliminar")
-        self._btn_i_up = QtWidgets.QPushButton("▲")
-        self._btn_i_down = QtWidgets.QPushButton("▼")
+        self._images = CustomList(
+            self,
+            dialog_cls=FileDialog,
+        )
 
-        self._build_ui()
-        self._connect()
-
-    # ----- UI -----
-    def _build_ui(self) -> None:
         # fila 1: name + thumbnail
         grid = QtWidgets.QGridLayout()
         grid.addWidget(QtWidgets.QLabel("Empresa"), 0, 0)
@@ -194,50 +118,17 @@ class _WorkForm(BaseDialog):
         vcon = QtWidgets.QVBoxLayout(box_contrib)
         vcon.addWidget(self._contrib)
 
-        def build_section(
-            title: str,
-            lw: QtWidgets.QListWidget,
-            b_add: QtWidgets.QPushButton,
-            b_edit: QtWidgets.QPushButton,
-            b_del: QtWidgets.QPushButton,
-            b_up: QtWidgets.QPushButton,
-            b_down: QtWidgets.QPushButton,
-        ) -> QtWidgets.QGroupBox:
-            box = QtWidgets.QGroupBox(title)
-            v = QtWidgets.QVBoxLayout(box)
-            v.addWidget(lw)
-            row = QtWidgets.QGridLayout()
-            row.addWidget(b_add, 0, 0)
-            row.addWidget(b_edit, 0, 1)
-            row.addWidget(b_del, 0, 2)
-            row.addWidget(b_up, 0, 3)
-            row.addWidget(b_down, 0, 4)
-            v.addLayout(row)
-            return box
-
         box_links = QtWidgets.QGroupBox("Links", self)
         vl = QtWidgets.QVBoxLayout(box_links)
         vl.addWidget(self._links)
-        vl.addLayout(self._links.layout())
 
-        box_projects = build_section(
-            "Proyectos",
-            self._projects,
-            self._btn_p_add,
-            self._btn_p_edit,
-            self._btn_p_del,
-            self._btn_p_up,
-            self._btn_p_down,
-        )
-        box_images = build_section(
-            "Imágenes",
-            self._images,
-            self._btn_i_add,
-            self._btn_i_edit,
-            self._btn_i_del,
-            self._btn_i_up,
-            self._btn_i_down,
-        )
+        box_projects = QtWidgets.QGroupBox("Projects", self)
+        vl = QtWidgets.QVBoxLayout(box_projects)
+        vl.addWidget(self._projects)
+
+        box_images = QtWidgets.QGroupBox("Imagenes", self)
+        vl = QtWidgets.QVBoxLayout(box_images)
+        vl.addWidget(self._images)
 
         left = QtWidgets.QVBoxLayout()
         left.addLayout(grid)
@@ -266,6 +157,10 @@ class _WorkForm(BaseDialog):
 
         root = QtWidgets.QVBoxLayout(self)
         root.addWidget(split)
+        root.addWidget(self._buttons)
+
+        self._buttons.accepted.connect(self.accept)
+        self._buttons.rejected.connect(self.reject)
 
     def _connect(self) -> None:
         self._name.textChanged.connect(self.changed)
@@ -278,230 +173,55 @@ class _WorkForm(BaseDialog):
         if hasattr(self._contrib, "htmlChanged"):
             self._contrib.htmlChanged.connect(self.changed)  # type: ignore
 
-        # Links
-        self._btn_l_add.clicked.connect(self._add_link)
-        self._btn_l_edit.clicked.connect(self._edit_link)
-        self._btn_l_del.clicked.connect(lambda: remove_selected(self._links))
-        self._btn_l_up.clicked.connect(lambda: move_selected(self._links, -1))
-        self._btn_l_down.clicked.connect(lambda: move_selected(self._links, +1))
-
-        # Projects (abre modal)
-        self._btn_p_add.clicked.connect(self._add_project)
-        self._btn_p_edit.clicked.connect(self._edit_project)
-        self._btn_p_del.clicked.connect(lambda: remove_selected(self._projects))
-        self._btn_p_up.clicked.connect(lambda: move_selected(self._projects, -1))
-        self._btn_p_down.clicked.connect(lambda: move_selected(self._projects, +1))
-
-        # Images
-        self._btn_i_add.clicked.connect(self._add_image)
-        self._btn_i_edit.clicked.connect(self._edit_image)
-        self._btn_i_del.clicked.connect(lambda: remove_selected(self._images))
-        self._btn_i_up.clicked.connect(lambda: move_selected(self._images, -1))
-        self._btn_i_down.clicked.connect(lambda: move_selected(self._images, +1))
-
-    # ----- Links -----
-    def _add_link(self) -> None:
-        if LinkDialog is not None:
-            dlg = LinkDialog(self)
-            if dlg.exec():
-                v = dlg.value()
-                t, u, i = _to_link_tuple(v if isinstance(v, dict) else {})
-                it = QtWidgets.QListWidgetItem(_fmt_link(t, u, i))
-                it.setData(Qt.ItemDataRole.UserRole, (t, u, i))
-                self._links.addItem(it)
-                self.changed.emit()
-            return
-        # fallback
-        t, ok = QtWidgets.QInputDialog.getText(self, "Link", "Texto:")
-        if not ok:
-            return
-        u, ok = QtWidgets.QInputDialog.getText(self, "Link", "URL:")
-        if not ok:
-            return
-        i, _ = QtWidgets.QInputDialog.getText(self, "Link", "Icono (opcional):")
-        it = QtWidgets.QListWidgetItem(_fmt_link(t.strip(), u.strip(), i.strip()))
-        it.setData(Qt.ItemDataRole.UserRole, (t.strip(), u.strip(), i.strip()))
-        self._links.addItem(it)
-        self.changed.emit()
-
-    def _edit_link(self) -> None:
-        it = self._links.currentItem()
-        if not it:
-            return
-        cur: Tuple[str, str, str] = it.data(Qt.ItemDataRole.UserRole) or ("", "", "")
-        if LinkDialog is not None:
-            dlg = LinkDialog(self)
-            try:
-                dlg.set_value({"text": cur[0], "url": cur[1], "icon": cur[2]})
-            except Exception:
-                pass
-            if dlg.exec():
-                v = dlg.value()
-                t, u, i = _to_link_tuple(v if isinstance(v, dict) else {})
-                it.setText(_fmt_link(t, u, i))
-                it.setData(Qt.ItemDataRole.UserRole, (t, u, i))
-                self.changed.emit()
-            return
-        # fallback
-        t, ok = QtWidgets.QInputDialog.getText(self, "Link", "Texto:", text=cur[0])
-        if not ok:
-            return
-        u, ok = QtWidgets.QInputDialog.getText(self, "Link", "URL:", text=cur[1])
-        if not ok:
-            return
-        i, _ = QtWidgets.QInputDialog.getText(
-            self, "Link", "Icono (opcional):", text=cur[2]
-        )
-        it.setText(_fmt_link(t.strip(), u.strip(), i.strip()))
-        it.setData(Qt.ItemDataRole.UserRole, (t.strip(), u.strip(), i.strip()))
-        self.changed.emit()
-
-    # ----- Projects (SIEMPRE modal si está disponible) -----
-    def _add_project(self) -> None:
-        if ProjectDialog is not None:
-            dlg = ProjectDialog(self)
-            # (opcional) sugerencias de tecnologías a partir de otros proyectos del mismo trabajo
-            tech_pool = self._collect_existing_techs()
-            if hasattr(dlg, "set_tech_suggestions"):
-                dlg.set_tech_suggestions(sorted(tech_pool))
-            if dlg.exec():
-                proj = dlg.value()  # dict completo
-                it = QtWidgets.QListWidgetItem(_fmt_project(proj))
-                it.setData(Qt.ItemDataRole.UserRole, proj)
-                self._projects.addItem(it)
-                self.changed.emit()
-            return
-        # fallback mínimo: solo nombre
-        nm, ok = QtWidgets.QInputDialog.getText(self, "Proyecto", "Nombre:")
-        if not ok:
-            return
-        proj = {
-            "name": nm.strip(),
-            "description": "",
-            "technologies": [],
-            "links": [],
-            "images": [],
-        }
-        it = QtWidgets.QListWidgetItem(_fmt_project(proj))
-        it.setData(Qt.ItemDataRole.UserRole, proj)
-        self._projects.addItem(it)
-        self.changed.emit()
-
-    def _edit_project(self) -> None:
-        it = self._projects.currentItem()
-        if not it:
-            return
-        cur: Dict[str, Any] = it.data(Qt.ItemDataRole.UserRole) or {}
-        if ProjectDialog is not None:
-            dlg = ProjectDialog(self)
-            if hasattr(dlg, "set_value"):
-                try:
-                    dlg.set_value(cur)
-                except Exception:
-                    pass
-            tech_pool = self._collect_existing_techs()
-            if hasattr(dlg, "set_tech_suggestions"):
-                dlg.set_tech_suggestions(sorted(tech_pool))
-            if dlg.exec():
-                proj = dlg.value()
-                it.setText(_fmt_project(proj))
-                it.setData(Qt.ItemDataRole.UserRole, proj)
-                self.changed.emit()
-            return
-        # fallback: editar solo nombre
-        nm, ok = QtWidgets.QInputDialog.getText(
-            self, "Proyecto", "Nombre:", text=_s(cur.get("name"))
-        )
-        if not ok:
-            return
-        cur["name"] = nm.strip()
-        it.setText(_fmt_project(cur))
-        it.setData(Qt.ItemDataRole.UserRole, cur)
-        self.changed.emit()
-
     def _collect_existing_techs(self) -> List[str]:
         """Agrupa tecnologías de los proyectos ya listados (para sugerencias)."""
         seen = set()
-        for i in range(self._projects.count()):
-            it = self._projects.item(i)
-            pj = it.data(Qt.ItemDataRole.UserRole) or {}
-            for t in pj.get("technologies") or []:
+        for item in self._projects.data():
+            for t in item.get("technologies") or []:
                 if t:
                     seen.add(str(t))
         return list(seen)
 
-    # ----- Images -----
-    def _add_image(self) -> None:
-        fns, _ = QtWidgets.QFileDialog.getOpenFileNames(
-            self,
-            "Añadir imágenes",
-            "",
-            "Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)",
-        )
-        for fn in fns or []:
-            it = QtWidgets.QListWidgetItem(fn)
-            it.setData(Qt.ItemDataRole.UserRole, fn)
-            self._images.addItem(it)
-        if fns:
-            self.changed.emit()
-
-    def _edit_image(self) -> None:
-        it = self._images.currentItem()
-        if not it:
-            return
-        fn, _ = QtWidgets.QFileDialog.getOpenFileName(
-            self,
-            "Cambiar imagen",
-            "",
-            "Imágenes (*.png *.jpg *.jpeg *.webp *.gif);;Todos (*)",
-        )
-        if fn:
-            it.setText(fn)
-            it.setData(Qt.ItemDataRole.UserRole, fn)
-            self.changed.emit()
-
     # ----- carga/volcado -----
-    def set_value(self, w: Dict[str, Any]) -> None:
-        self._name.setText(_s(w.get("name")))
-        self._short_desc.setPlainText(_s(w.get("short_description")))
-        self._set_thumb(_s(w.get("thumbnail")))
+    def set_value(self, data: Dict[str, Any]) -> None:
+        self._name.setText(str(data.get("name")))
+        self._short_desc.setPlainText(str(data.get("short_description")))
+        self._set_thumb(str(data.get("thumbnail")))
 
-        period = w.get("period_time") or {}
-        start = _s(period.get("start") or w.get("start"))
-        end = _s(period.get("end") or w.get("end"))
+        period = data.get("period_time") or {}
+        start = str(period.get("start") or data.get("start"))
+        end = str(period.get("end") or data.get("end"))
         current = bool(
-            period.get("current") if "current" in period else w.get("current")
+            period.get("current") if "current" in period else data.get("current")
         )
         self._start.setText(start)
         self._end.setText(end)
         self._current.setChecked(current)
 
-        self._set_full(_s(w.get("full_description")))
-        self._set_contrib(_s(w.get("contribution")))
+        self._set_full(str(data.get("full_description")))
+        self._set_contrib(str(data.get("contribution")))
 
-        self._links.clear()
-        for lk in w.get("links") or []:
-            t, u, i = _to_link_tuple(lk if isinstance(lk, dict) else {})
-            it = QtWidgets.QListWidgetItem(_fmt_link(t, u, i))
-            it.setData(Qt.ItemDataRole.UserRole, (t, u, i))
-            self._links.addItem(it)
+        self._links.setData(data.get("links") or [])
 
-        self._projects.clear()
-        for pj in w.get("projects") or []:
-            proj = dict(pj) if isinstance(pj, dict) else {"name": _s(pj)}
-            it = QtWidgets.QListWidgetItem(_fmt_project(proj))
-            it.setData(Qt.ItemDataRole.UserRole, proj)
-            self._projects.addItem(it)
+        self._projects.setData(data.get("projects") or [])
 
-        self._images.clear()
-        for path in w.get("images") or []:
-            p = _s(path)
-            it = QtWidgets.QListWidgetItem(p)
-            it.setData(Qt.ItemDataRole.UserRole, p)
-            self._images.addItem(it)
+        self._images.setData(
+            list(
+                map(
+                    lambda img: (
+                        {
+                            "path": img,
+                        }
+                        if isinstance(img, str)
+                        else img
+                    ),
+                    data.get("images") or [],
+                )
+            )
+        )
 
     def value(self) -> Dict[str, Any]:
-        out: Dict[str, Any] = {
+        return {
             "name": self._name.text().strip(),
             "short_description": self._short_desc.toPlainText().strip(),
             "thumbnail": self._get_thumb().strip(),
@@ -512,67 +232,22 @@ class _WorkForm(BaseDialog):
             },
             "full_description": self._get_full().strip(),
             "contribution": self._get_contrib().strip(),
-            "links": [],
-            "projects": [],
-            "images": [],
+            "links": self._links.data(),
+            "projects": self._projects.data(),
+            "images": list(map(lambda item: item.get("path"), self._images.data())),
         }
-        # links
-        for i in range(self._links.count()):
-            it = self._links.item(i)
-            t: Tuple[str, str, str] = it.data(Qt.ItemDataRole.UserRole) or ("", "", "")
-            out["links"].append(_to_link_dict(t))
-        # projects
-        for i in range(self._projects.count()):
-            it = self._projects.item(i)
-            proj: Dict[str, Any] = it.data(Qt.ItemDataRole.UserRole) or {}
-            clean = {
-                "name": _s(proj.get("name")).strip(),
-                "description": _s(proj.get("description")),
-                "technologies": [
-                    str(t) for t in (proj.get("technologies") or []) if str(t).strip()
-                ],
-                "links": proj.get("links") or [],
-                "images": [
-                    str(p) for p in (proj.get("images") or []) if str(p).strip()
-                ],
-            }
-            out["projects"].append(clean)
-        # images
-        for i in range(self._images.count()):
-            it = self._images.item(i)
-            path: str = it.data(Qt.ItemDataRole.UserRole) or ""
-            if path:
-                out["images"].append(path)
-        return out
 
+    def str(self) -> str:
+        dates = self._start.text().strip() + " - "
+        dates += "Actualidad" if self._current.isChecked() else self._end.text().strip()
+        name = self._name.text().strip()
+        return f"[{dates}] {name}"
 
-# -------------------- Modal que envuelve el formulario --------------------
-class WorkDialog(QtWidgets.QDialog):
-    """Diálogo modal para crear/editar un trabajo."""
-
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
-        self.setWindowTitle("Trabajo")
-        self.setModal(True)
-
-        self._form = _WorkForm(self)
-        btns = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-            | QtWidgets.QDialogButtonBox.StandardButton.Cancel
-        )
-        btns.accepted.connect(self.accept)
-        btns.rejected.connect(self.reject)
-
-        lay = QtWidgets.QVBoxLayout(self)
-        lay.addWidget(self._form)
-        lay.addWidget(btns)
-
-    # API de datos
-    def set_value(self, work: Dict[str, Any]) -> None:
-        self._form.set_value(work)
-
-    def value(self) -> Dict[str, Any]:
-        return self._form.value()
+    def tuple(self) -> Tuple[str, str]:
+        dates = self._start.text().strip() + " - "
+        dates += "Actualidad" if self._current else self._end.text().strip()
+        name = self._name.text().strip()
+        return (dates, name)
 
 
 __all__ = ["WorkDialog"]

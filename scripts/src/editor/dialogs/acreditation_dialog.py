@@ -1,28 +1,30 @@
 # src/editor/dialogs/acreditation_dialog.py
 from __future__ import annotations
 
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, Tuple
 from PySide6 import QtCore, QtWidgets
+
+# Dialogs
+from .base_dialog import BaseDialog
 
 Qt = QtCore.Qt
 
 
-def _s(v: Any) -> str:
-    return "" if v is None else str(v)
-
-
-class AcreditationDialog(QtWidgets.QDialog):
+class AcreditationDialog(BaseDialog):
     """Diálogo de acreditación (mínimo):
     - institution (texto)
     - title (texto)
     - period_time { start, end, current }
     """
 
+    changed = QtCore.Signal()
+
+    @property
+    def title(self) -> str:
+        return "Acreditación"
+
     def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
         super().__init__(parent)
-        self.setWindowTitle("Acreditación")
-        self.setModal(True)
-        self.resize(560, 220)
 
         # Campos
         self._institution = QtWidgets.QLineEdit(self)
@@ -33,17 +35,6 @@ class AcreditationDialog(QtWidgets.QDialog):
         self._end = QtWidgets.QLineEdit(self)
         self._end.setPlaceholderText("YYYY-MM")
         self._current = QtWidgets.QCheckBox("Actual", self)
-
-        # Botonera
-        self._buttons = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-            | QtWidgets.QDialogButtonBox.StandardButton.Cancel,
-            parent=self,
-        )
-        self._ok_btn = self._buttons.button(
-            QtWidgets.QDialogButtonBox.StandardButton.Ok
-        )
-        self._ok_btn.setEnabled(False)
 
         # Layout
         form = QtWidgets.QFormLayout()
@@ -75,27 +66,40 @@ class AcreditationDialog(QtWidgets.QDialog):
 
     # -------- API pública --------
     def set_value(self, data: Dict[str, Any]) -> None:
-        self._institution.setText(_s(data.get("institution")))
-        self._title.setText(_s(data.get("title")))
+        self._institution.setText(str(data.get("institution")))
+        self._title.setText(str(data.get("title")))
         period = data.get("period_time") or {}
-        self._start.setText(_s(period.get("start") or data.get("start")))
-        self._end.setText(_s(period.get("end") or data.get("end")))
+        self._start.setText(str(period.get("start") or data.get("start")))
+        self._end.setText(str(period.get("end") or data.get("end")))
         self._current.setChecked(
             bool(period.get("current") if "current" in period else data.get("current"))
         )
         self._revalidate()
 
     def value(self) -> Dict[str, Any]:
-        period_time = self._start.text().strip() + " - "
-        if self._current.isChecked():
-            period_time += "Actualidad"
-        else:
-            period_time += self._end.text().strip()
         return {
             "institution": self._institution.text().strip(),
             "title": self._title.text().strip(),
-            "period_time": period_time,
+            "period_time": {
+                "start": self._start.text().strip(),
+                "end": self._end.text().strip(),
+                "current": self._current.isChecked(),
+            },
         }
+
+    def str(self) -> str:
+        uni = self._institution.text().strip()
+        title = self._title.text().strip()
+        date = self._start.text().strip() + " - "
+        date += "Actualidad" if self._current.isChecked() else self._end.text().strip()
+        return f"[{date}] {uni} — {title}" if date else f"{uni} — {title}"
+
+    def tuple(self) -> Tuple[str, str, str]:
+        uni = self._institution.text().strip()
+        title = self._title.text().strip()
+        date = self._start.text().strip() + " - "
+        date += "Actualidad" if self._current.isChecked() else self._end.text().strip()
+        return (date, uni, title)
 
     # -------- Internos --------
     def _revalidate(self) -> None:
