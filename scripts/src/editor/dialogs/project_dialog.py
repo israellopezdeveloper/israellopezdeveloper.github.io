@@ -5,13 +5,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtCore, QtWidgets
 
 # Utils
-from ..utils.lists import (
-    CustomList,
-    add_item,
-    enable_reorder,
-    move_selected,
-    remove_selected,
-)
+from ..utils.lists import CustomList, TechList
 
 # Widgets
 from ..widgets.html_editor import HtmlEditor
@@ -24,146 +18,6 @@ from .link_dialog import LinkDialog
 Qt = QtCore.Qt
 
 
-# -------- componente propio: TechList --------
-class TechList(QtWidgets.QWidget):
-    """
-    Lista de tecnologías con campo de entrada y sugerencias.
-    - Deduplica case-insensitive.
-    - Si el texto coincide (case-insensitive) con una sugerencia, usa la forma canónica
-      de la sugerencia para estandarizar grafía.
-    API:
-      set_value(list[str]), value() -> list[str]
-      set_suggestions(list[str])
-    """
-
-    changed = QtCore.Signal()
-
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None) -> None:
-        super().__init__(parent)
-        self._suggestions: List[str] = []
-
-        self._edit = QtWidgets.QLineEdit()
-        self._edit.setPlaceholderText("Añadir tecnología…")
-        self._btn_add = QtWidgets.QPushButton("+")
-        self._btn_add.setFixedWidth(28)
-
-        self._list = QtWidgets.QListWidget()
-        enable_reorder(self._list)
-
-        top = QtWidgets.QHBoxLayout()
-        top.addWidget(self._edit)
-        top.addWidget(self._btn_add)
-
-        root = QtWidgets.QVBoxLayout(self)
-        root.setContentsMargins(0, 0, 0, 0)
-        root.addLayout(top)
-        root.addWidget(self._list)
-
-        # Completer (sugerencias)
-        self._completer = QtWidgets.QCompleter([], self)
-        self._completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
-        self._completer.setFilterMode(Qt.MatchFlag.MatchContains)
-        self._edit.setCompleter(self._completer)
-
-        # Botonera secundaria
-        self._btn_edit = QtWidgets.QPushButton("Editar")
-        self._btn_del = QtWidgets.QPushButton("Eliminar")
-        self._btn_up = QtWidgets.QPushButton("▲")
-        self._btn_down = QtWidgets.QPushButton("▼")
-        grid = QtWidgets.QGridLayout()
-        grid.addWidget(self._btn_edit, 0, 0)
-        grid.addWidget(self._btn_del, 0, 1)
-        grid.addWidget(self._btn_up, 0, 2)
-        grid.addWidget(self._btn_down, 0, 3)
-        root.addLayout(grid)
-
-        # Conexiones
-        self._btn_add.clicked.connect(self._on_add)
-        self._edit.returnPressed.connect(self._on_add)
-        self._btn_edit.clicked.connect(self._on_edit)
-        self._btn_del.clicked.connect(
-            lambda: (remove_selected(self._list), self.changed.emit())
-        )
-        self._btn_up.clicked.connect(
-            lambda: (move_selected(self._list, -1), self.changed.emit())
-        )
-        self._btn_down.clicked.connect(
-            lambda: (move_selected(self._list, +1), self.changed.emit())
-        )
-        self._list.itemChanged.connect(self._emit_changed)
-        self._list.itemSelectionChanged.connect(self._emit_changed)
-
-    # API
-    def set_value(self, items: List[str] | None) -> None:
-        self._list.clear()
-        for t in items or []:
-            add_item(self._list, str(t))
-
-    def value(self) -> List[str]:
-        return [self._list.item(i).text() for i in range(self._list.count())]
-
-    def set_suggestions(self, items: List[str]) -> None:
-        self._suggestions = [i for i in items if i]
-        model = QtCore.QStringListModel(self._suggestions, self)
-        self._completer.setModel(model)
-
-    # Internos
-    def _emit_changed(self) -> None:
-        self.changed.emit()
-
-    def _canonical(self, text: str) -> str:
-        """Devuelve forma canónica según sugerencias (si coincide)."""
-        t = text.strip()
-        if not t:
-            return t
-        for s in self._suggestions:
-            if s.casefold() == t.casefold():
-                return s  # usar grafía sugerida
-        return t
-
-    def _exists(self, text: str) -> bool:
-        norm = text.casefold().strip()
-        for i in range(self._list.count()):
-            if self._list.item(i).text().casefold().strip() == norm:
-                return True
-        return False
-
-    def _on_add(self) -> None:
-        raw = self._edit.text()
-        can = self._canonical(raw)
-        if not can:
-            return
-        if self._exists(can):
-            # Selecciona el existente
-            for i in range(self._list.count()):
-                if (
-                    self._list.item(i).text().casefold().strip()
-                    == can.casefold().strip()
-                ):
-                    self._list.setCurrentRow(i)
-                    break
-            return
-        add_item(self._list, can)
-        self._edit.clear()
-        self.changed.emit()
-
-    def _on_edit(self) -> None:
-        it = self._list.currentItem()
-        if not it:
-            return
-        txt, ok = QtWidgets.QInputDialog.getText(
-            self, "Editar tecnología", "Nombre:", text=it.text()
-        )
-        if not ok:
-            return
-        can = self._canonical(txt)
-        if not can:
-            return
-        it.setText(can)
-        self.changed.emit()
-
-
-# -------- diálogo principal --------
 class ProjectDialog(BaseDialog):
     """Proyecto con:
     - name (texto)
@@ -176,8 +30,9 @@ class ProjectDialog(BaseDialog):
     def __init__(
         self,
         parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
     ) -> None:
-        super().__init__(parent)
+        super().__init__(parent, suggestions)
 
         # --- Campos ---
         self._name = QtWidgets.QLineEdit()
@@ -189,7 +44,8 @@ class ProjectDialog(BaseDialog):
         self._get_desc = self._desc.html
 
         # technologies
-        self._techs = TechList()
+        self._techs = TechList(self)
+        self._techs.set_suggestions(self._suggestions)
 
         # links
         self._links = CustomList(
@@ -290,9 +146,6 @@ class ProjectDialog(BaseDialog):
     def tuple(self) -> Tuple[str]:
         name = self._name.text().strip()
         return (name,)
-
-    def set_tech_suggestions(self, items: List[str]) -> None:
-        self._techs.set_suggestions(items)
 
     # ------- lógicas internas -------
     def _revalidate(self) -> None:

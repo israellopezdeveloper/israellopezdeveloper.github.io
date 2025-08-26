@@ -1,6 +1,6 @@
 # src/editor/models/schema.py
 from __future__ import annotations
-from typing import List, TypedDict, Literal, NotRequired
+from typing import Any, Dict, List, TypedDict, Literal, NotRequired
 
 
 # Reutilizables
@@ -101,3 +101,12 @@ class PortfolioData(TypedDict, total=False):
     intro: Intro
     works: List[Work]
     educations: Educations
+
+
+def get_technologies(works: List[Dict[str, Any]] = []) -> List[str]:
+    out: List[str] = []
+    for work in works:
+        for project in work.get("projects") or []:
+            for technology in project.get("technologies") or []:
+                out.append(technology)
+    return out

@@ -4,6 +4,7 @@ from typing import Any, Dict, List, Optional
 from PySide6 import QtCore, QtWidgets
 
 from editor.dialogs.work_dialog import WorkDialog
+from editor.models.schema import get_technologies
 from editor.utils.lists import (
     CustomList,
 )
@@ -22,6 +23,7 @@ class WorksTab(QtWidgets.QWidget):
         self._list = CustomList(
             self,
             dialog_cls=WorkDialog,
+            suggestions=[],
         )
         root = QtWidgets.QVBoxLayout(self)
         root.addWidget(self._list)
@@ -36,6 +38,7 @@ class WorksTab(QtWidgets.QWidget):
           - None
         """
         self._list.setData(works)
+        self._list.set_suggestions(get_technologies(works))
 
     def value(self) -> List[Dict[str, Any]]:
         return self._list.data()

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from abc import ABCMeta, abstractmethod
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 from PySide6 import QtWidgets
 
 
@@ -10,8 +10,14 @@ class _QDialogABCMeta(ABCMeta, type(QtWidgets.QDialog)):
 
 
 class BaseDialog(QtWidgets.QDialog, metaclass=_QDialogABCMeta):
-    def __init__(self, parent: Optional[QtWidgets.QWidget] = None):
+    def __init__(
+        self,
+        parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+    ):
         super().__init__(parent)
+
+        self._suggestions = suggestions
         self.setModal(True)
         try:
             self.setWindowTitle(self.title)
@@ -55,3 +61,6 @@ class BaseDialog(QtWidgets.QDialog, metaclass=_QDialogABCMeta):
     @abstractmethod
     def _on_accept(self) -> None:
         raise NotImplementedError
+
+    def set_suggestions(self, sugestions: List[str]) -> None:
+        self._suggestions = sugestions

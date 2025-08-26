@@ -34,8 +34,9 @@ class WorkDialog(BaseDialog):
     def __init__(
         self,
         parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
     ) -> None:
-        super().__init__(parent)
+        super().__init__(parent, suggestions)
 
         # --- Campos ---
         self._name = QtWidgets.QLineEdit()
@@ -80,6 +81,7 @@ class WorkDialog(BaseDialog):
         self._projects = CustomList(
             self,
             dialog_cls=ProjectDialog,
+            suggestions=self._suggestions,
         )
 
         # images (lista de rutas de imagen)
@@ -172,15 +174,6 @@ class WorkDialog(BaseDialog):
             self._full_desc.htmlChanged.connect(self.changed)  # type: ignore
         if hasattr(self._contrib, "htmlChanged"):
             self._contrib.htmlChanged.connect(self.changed)  # type: ignore
-
-    def _collect_existing_techs(self) -> List[str]:
-        """Agrupa tecnologías de los proyectos ya listados (para sugerencias)."""
-        seen = set()
-        for item in self._projects.data():
-            for t in item.get("technologies") or []:
-                if t:
-                    seen.add(str(t))
-        return list(seen)
 
     # ----- carga/volcado -----
     def set_value(self, data: Dict[str, Any]) -> None:
