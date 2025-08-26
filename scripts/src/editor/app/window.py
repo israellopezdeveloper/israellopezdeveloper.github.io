@@ -2,21 +2,19 @@
 from pathlib import Path
 from typing import Dict, Optional
 
-from PySide6 import QtCore, QtWidgets
-
 from editor.dialogs.internationalize_dialog import InternationalizeDialog
 from editor.dialogs.translate_dialog import TranslateDialog
 from editor.services.internationalize import InternationalizeWorker
 from editor.services.summarize import SummarizeWorker
 from editor.services.translate import TranslateWorker
+from PySide6 import QtCore, QtWidgets
 
+from ..actions.factory import create_button_actions, create_menu_actions
+from ..models.defaults import ensure_educations_defaults, ensure_intro_defaults
+from ..services.io import load_json, save_json
+from ..tabs.educations_tab import EducationsTab
 from ..tabs.intro_tab import IntroTab
 from ..tabs.works_tab import WorksTab
-from ..tabs.educations_tab import EducationsTab
-
-from ..actions.factory import create_menu_actions, create_button_actions
-from ..services.io import load_json, save_json
-from ..models.defaults import ensure_intro_defaults, ensure_educations_defaults
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -235,7 +233,8 @@ class MainWindow(QtWidgets.QMainWindow):
                 save_json(self._tr_save_path, res)
             if self._tr_src and self._tr_tgt and self._tr_save_path:
                 self.statusBar().showMessage(
-                    f"Traducido {self._tr_src}->{self._tr_tgt} y guardado en: {self._tr_save_path}",
+                    f"Traducido {self._tr_src}->{self._tr_tgt} y "
+                    "guardado en: {self._tr_save_path}",
                     7000,
                 )
         except Exception as e:
@@ -284,7 +283,8 @@ class MainWindow(QtWidgets.QMainWindow):
                 save_json(self._sum_save_path, res)
             if self._sum_save_path and self._sum_ratio is not None:
                 self.statusBar().showMessage(
-                    f"Resumido (ratio {self._sum_ratio:.2f}) y guardado en: {self._sum_save_path}",
+                    f"Resumido (ratio {self._sum_ratio:.2f}) y "
+                    "guardado en: {self._sum_save_path}",
                     7000,
                 )
         except Exception as e:

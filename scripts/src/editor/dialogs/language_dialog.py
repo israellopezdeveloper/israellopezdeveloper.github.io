@@ -1,18 +1,14 @@
-# src/editor/dialogs/language_dialog.py
 from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+
 from PySide6 import QtCore, QtWidgets
 
 # Utils
-from ..utils.lists import (
-    CustomList,
-)
-
+from ..utils.lists import CustomList
 # Widgets
 from ..widgets.file_select import FileSelect
-
 # Dialog
 from .acreditation_dialog import AcreditationDialog
 from .base_dialog import BaseDialog
@@ -26,7 +22,7 @@ _ALLOWED = ["Básico", "Intermedio", "Fluido", "Avanzado", "Nativo"]
 class LanguageDialog(BaseDialog):
     """Diálogo de idioma:
     - language (texto)
-    - spoken / writen / read (QComboBox con {Basico, intermedio, fluido, avanzado, nativo})
+    - spoken / writen / read
     - acreditation (lista + modal)
     - thumbnail (selector de imagen)
     """
@@ -117,14 +113,19 @@ class LanguageDialog(BaseDialog):
 
         self._language.textChanged.connect(self._revalidate)
         try:
-            self._thumbnail.valueChanged.connect(lambda _: self._revalidate())  # type: ignore[attr-defined]
+            self._thumbnail.valueChanged.connect(
+                lambda _: self._revalidate(),
+            )
         except Exception:
             pass
 
     # ---- API pública ----
     def set_value(self, data: Dict[str, Any]) -> None:
         def _set_combo_to(cb: QtWidgets.QComboBox, value: str) -> None:
-            """Selecciona en el combo el item que coincide (case-insensitive). Si no, deja vacío."""
+            """
+            Selecciona en el combo el item que coincide (case-insensitive).
+            Si no, deja vacío.
+            """
             val = (value or "").strip()
             if not val:
                 cb.setCurrentIndex(0)

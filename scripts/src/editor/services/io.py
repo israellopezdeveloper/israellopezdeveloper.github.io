@@ -1,8 +1,10 @@
 # src/editor/services/io.py
 from __future__ import annotations
+
 import json
 import re
-from typing import Any, Dict, Tuple, List
+from typing import Any, Dict, List, Tuple
+
 from ..models.defaults import ensure_portfolio_defaults
 
 
@@ -26,7 +28,8 @@ def _decode_json_bytes(raw: bytes) -> str:
             last_err = e
             continue
     raise RuntimeError(
-        f"No pude decodificar el archivo como UTF-8/UTF-16/Latin-1. Último error: {last_err!r}"
+        f"No pude decodificar el archivo como UTF-8/UTF-16/Latin-1."
+        f"Último error: {last_err}"
     )
 
 

@@ -1,6 +1,8 @@
 # src/editor/widgets/html_editor.py
 from __future__ import annotations
-from typing import Optional, List
+
+from typing import List, Optional
+
 from PySide6 import QtCore, QtGui, QtWidgets
 
 # Preview: WebEngine si está disponible; si no, QTextBrowser
@@ -173,7 +175,11 @@ class HtmlEditor(QtWidgets.QWidget):
         html = (
             f"<{tag}>\n"
             + "\n".join(
-                f"  <li>{QtGui.QXmlStreamWriter().codec().toUnicode(bytes(li, 'utf-8')) if False else li}</li>"
+                f"  <li>{
+                    QtGui.QXmlStreamWriter().codec().toUnicode(bytes(li, 'utf-8'))
+                    if False
+                    else li
+                }</li>"
                 for li in items
             )
             + f"\n</{tag}>"

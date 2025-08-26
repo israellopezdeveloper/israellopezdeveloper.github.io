@@ -296,7 +296,7 @@ def _language_hint(text: str) -> str:
     cjk = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
     if cjk > max(10, len(text) // 20):
         return "zh"
-    # si tildes -> es; si no, por defecto es/en no importa (stopwords compartidas mínimas)
+    # si tildes -> es; si no, por defecto es/en no importa
     if any(ch in "áéíóúüñÁÉÍÓÚÜÑ" for ch in text):
         return "es"
     return "en"

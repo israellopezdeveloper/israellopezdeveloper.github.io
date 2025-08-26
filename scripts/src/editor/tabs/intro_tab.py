@@ -2,13 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, Optional
+
 from PySide6 import QtCore, QtWidgets
 
-from ..utils.lists import CustomList
 from ..dialogs.bio_dialog import BioDialog
-from ..widgets.html_editor import HtmlEditor
-from ..widgets.file_select import FileSelect
 from ..dialogs.link_dialog import LinkDialog
+from ..utils.lists import CustomList
+from ..widgets.file_select import FileSelect
+from ..widgets.html_editor import HtmlEditor
 
 Qt = QtCore.Qt
 
@@ -23,7 +24,14 @@ def _join_html(v: Any) -> str:
 # --- Tab ---
 class IntroTab(QtWidgets.QWidget):
     """Editor de perfil conforme al esquema:
-    greeting, profile_image, name, title, summary(HTML), bio(list), hobbies(HTML), links(list)
+    greeting,
+    profile_image,
+    name,
+    title,
+    summary(HTML),
+    bio(list),
+    hobbies(HTML),
+    links(list)
     """
 
     changed = QtCore.Signal()

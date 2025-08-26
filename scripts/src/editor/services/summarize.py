@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
+
 from typing import Any
 
-from PySide6 import QtCore
-
 from editor.summarizer.summarizer import summarize_json_in_memory
+from PySide6 import QtCore
 
 # Si ya tienes summarize_json en otro módulo, importa desde allí:
 # from editor.services.summarize_core import summarize_json

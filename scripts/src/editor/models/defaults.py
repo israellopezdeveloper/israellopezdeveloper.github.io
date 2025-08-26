@@ -1,20 +1,11 @@
 # src/editor/models/defaults.py
 from __future__ import annotations
+
 from typing import Any
-from .schema import (
-    Bio,
-    Link,
-    PeriodTime,
-    Project,
-    Work,
-    UniversityEntry,
-    ComplementaryEntry,
-    Acreditation,
-    LanguageEntry,
-    Educations,
-    Intro,
-    PortfolioData,
-)
+
+from .schema import (Acreditation, Bio, ComplementaryEntry, Educations, Intro,
+                     LanguageEntry, Link, PeriodTime, PortfolioData, Project,
+                     UniversityEntry, Work)
 
 
 def ensure_period_time(v: Any) -> PeriodTime:

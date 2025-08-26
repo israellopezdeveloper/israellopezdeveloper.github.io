@@ -3,9 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, List, Optional
 
-from PySide6 import QtCore, QtWidgets
-
 from editor.widgets.file_select import FileSelect
+from PySide6 import QtCore, QtWidgets
 
 from .base_dialog import BaseDialog
 

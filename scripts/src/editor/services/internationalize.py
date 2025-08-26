@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
+
 from typing import Any, Dict, List
 
 from PySide6 import QtCore
@@ -12,8 +13,8 @@ class InternationalizeWorker(QtCore.QObject):
     @QtCore.Slot(dict, str, float)
     def run(self, data: dict, src_lang: str, ratio: float) -> None:
         try:
-            from editor.traductor.traductor import translate_json
             from editor.summarizer.summarizer import summarize_json_in_memory
+            from editor.traductor.traductor import translate_json
 
             langs = {"es", "en", "zh"}
             if src_lang not in langs:

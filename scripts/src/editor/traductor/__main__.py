@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import argparse
 import os
-from editor.traductor.traductor import translate_json_file, to_nllb
+
+from editor.traductor.traductor import to_nllb, translate_json_file
 
 
 def build_parser() -> argparse.ArgumentParser:

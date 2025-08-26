@@ -2,18 +2,15 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
 from PySide6 import QtCore, QtWidgets
 
-# Utils
-from ..utils.lists import (
-    CustomList,
-)
-
-# Dialogs
-from ..dialogs.university_dialog import UniversityDialog
 from ..dialogs.complementary_dialog import ComplementaryDialog
 from ..dialogs.language_dialog import LanguageDialog
-
+# Dialogs
+from ..dialogs.university_dialog import UniversityDialog
+# Utils
+from ..utils.lists import CustomList
 
 Qt = QtCore.Qt
 
@@ -24,7 +21,8 @@ class EducationsTab(QtWidgets.QWidget):
     - 'Añadir' y 'Editar' abren modal (si existe dialogo específico; si no, fallback).
     - API:
         from_data(dict|None)
-        value() -> dict { 'university': [...], 'complementary': [...], 'languages': [...] }
+        value() -> dict { 'university': [...], 'complementary': [...],
+        'languages': [...] }
     """
 
     def __init__(

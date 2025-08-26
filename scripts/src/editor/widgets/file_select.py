@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+import shutil
 from pathlib import Path
 from typing import Optional
-import shutil
 
 from PySide6 import QtCore, QtGui, QtWidgets
 
@@ -186,7 +186,8 @@ class FileSelect(QtWidgets.QWidget):
                 QtWidgets.QMessageBox.critical(
                     self,
                     "Error al copiar",
-                    f"No se pudo copiar el archivo seleccionado al directorio de trabajo:\n{e}",
+                    f"No se pudo copiar el archivo seleccionado al directorio "
+                    f"de trabajo:\n{e}",
                 )
                 self.set_value(sel.as_posix())
                 return sel.as_posix() if return_path else None

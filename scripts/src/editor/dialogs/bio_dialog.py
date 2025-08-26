@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any, Dict, Optional, Tuple
+
 from PySide6 import QtCore, QtWidgets
 
 from .base_dialog import BaseDialog

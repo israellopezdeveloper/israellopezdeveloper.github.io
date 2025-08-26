@@ -1,6 +1,8 @@
 # src/editor/actions/factory.py
 from __future__ import annotations
-from typing import Dict, Callable, Optional
+
+from typing import Callable, Dict, Optional
+
 from PySide6 import QtGui, QtWidgets
 
 

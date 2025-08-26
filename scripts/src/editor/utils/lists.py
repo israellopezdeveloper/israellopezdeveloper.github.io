@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from pathlib import Path
-from typing import Dict, Iterable, Any, List, Optional
 from difflib import SequenceMatcher
-from PySide6 import QtCore, QtWidgets
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional
 
 from editor.dialogs.base_dialog import BaseDialog
+from PySide6 import QtCore, QtWidgets
 
 Qt = QtCore.Qt
 

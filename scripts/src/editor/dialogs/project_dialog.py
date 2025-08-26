@@ -7,10 +7,8 @@ from PySide6 import QtCore, QtWidgets
 
 # Utils
 from ..utils.lists import CustomList, TechList
-
 # Widgets
 from ..widgets.html_editor import HtmlEditor
-
 # Dialogs
 from .base_dialog import BaseDialog
 from .file_dialog import FileDialog

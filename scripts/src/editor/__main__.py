@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import os
-from PySide6 import QtCore, QtGui, QtWidgets
+
 from editor.app_desktop import MainWindow
+from PySide6 import QtCore, QtGui, QtWidgets
 
 
 def main():

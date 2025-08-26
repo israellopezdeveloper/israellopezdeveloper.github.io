@@ -4,10 +4,10 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
+from editor.dialogs.base_dir_dialog import BaseDirDialog
 from PySide6 import QtWidgets
 
 from .window import MainWindow
-from editor.dialogs.base_dir_dialog import BaseDirDialog
 
 
 def main() -> int:

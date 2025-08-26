@@ -1,6 +1,7 @@
 # src/editor/models/schema.py
 from __future__ import annotations
-from typing import Any, Dict, List, TypedDict, Literal, NotRequired
+
+from typing import Any, Dict, List, Literal, NotRequired, TypedDict
 
 
 # Reutilizables

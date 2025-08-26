@@ -2,19 +2,17 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+
 from PySide6 import QtCore, QtWidgets
 
 # Utils
 from ..utils.lists import CustomList
-
+from ..widgets.file_select import FileSelect
 # Widgets
 from ..widgets.html_editor import HtmlEditor
-from ..widgets.file_select import FileSelect
-
+from .base_dialog import BaseDialog
 # Dialogs
 from .file_dialog import FileDialog
-from .base_dialog import BaseDialog
-
 
 Qt = QtCore.Qt
 

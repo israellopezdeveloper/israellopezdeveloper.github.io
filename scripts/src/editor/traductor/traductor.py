@@ -2,14 +2,14 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from typing import Any, Dict, List, Optional, Tuple
 
 import torch
 from bs4 import BeautifulSoup
-from bs4.element import Tag, NavigableString
+from bs4.element import NavigableString, Tag
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-import os
 
 # Evita exceso de hilos en tokenizers (a veces da sensación de "freeze")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
@@ -94,7 +94,9 @@ _COMPILED_EXCLUDE = _compile_exclude_patterns(EXCLUDE_PATHS)
 
 
 def _path_matches_tokens(tokens: List[Tuple[str, bool]], path: Tuple[Any, ...]) -> bool:
-    """Compara tokens (clave / clave[]) con la tupla de ruta real (claves y enteros). Match exacto."""
+    """
+    Compara tokens (clave / clave[]) con la tupla de ruta real (claves y enteros).
+    """
     j = 0
     for key, wants_index in tokens:
         if j >= len(path) or path[j] != key:

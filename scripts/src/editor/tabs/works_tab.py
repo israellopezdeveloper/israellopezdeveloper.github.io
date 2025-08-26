@@ -2,13 +2,11 @@ from __future__ import annotations
 
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-from PySide6 import QtCore, QtWidgets
 
 from editor.dialogs.work_dialog import WorkDialog
 from editor.models.schema import get_technologies
-from editor.utils.lists import (
-    CustomList,
-)
+from editor.utils.lists import CustomList
+from PySide6 import QtCore, QtWidgets
 
 Qt = QtCore.Qt
 
