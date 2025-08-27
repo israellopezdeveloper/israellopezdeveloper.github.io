@@ -168,7 +168,7 @@
       "images": [],
       "links": [
         {
-          "icon": "",
+          "icon": "🌐",
           "text": "Website",
           "url": "https://www.datura.ai"
         }
@@ -181,7 +181,7 @@
       },
       "projects": [
         {
-          "description": "<p>Celium es una plataforma desarrollada por <strong>Datura AI</strong> para gestionar, desplegar y optimizar modelos de Inteligencia Artificial en redes distribuidas y dispositivos remotos. Su objetivo es facilitar la ejecución de modelos complejos, como Stable Diffusion, Whisper, LLaMA o Mistral, incluso en entornos con recursos limitados, garantizando alta disponibilidad, escalabilidad y rendimiento.</p>\n\n<p>La plataforma permite a los usuarios:</p>\n<ul>\n  <li>Desplegar modelos de forma instantánea en contenedores sobre infraestructuras locales, en la nube o en el edge.</li>\n  <li>Editar pods y reasignar recursos (CPU, GPU, memoria) dinámicamente para adaptarse a la demanda.</li>\n  <li>Utilizar plantillas de despliegue optimizadas para modelos específicos.</li>\n  <li>Monitorizar métricas de rendimiento y uso de recursos en tiempo real.</li>\n  <li>Automatizar la actualización y distribución de modelos en cientos de nodos remotos.</li>\n  <li>Integrar la plataforma con ecosistemas descentralizados como Bittensor para aumentar la interoperabilidad.</li>\n</ul>\n\n<p>Celium utiliza una arquitectura modular basada en contenedores y orquestadores, optimizada para reducir la latencia y el consumo de recursos. Emplea balanceo de cargas inteligente, gestión distribuida de datos y técnicas avanzadas de afinidad de procesos para maximizar la eficiencia energética y el rendimiento del hardware disponible.</p>",
+          "description": "<p>\n  En esta tarea me centré en optimizar el sistema de recompensas de la plataforma, cuyo objetivo es incentivar a los nodos que realmente ofrecen el mejor desempeño dentro de la red. Para ello, realicé un rediseño profundo del algoritmo, incorporando parámetros más representativos del rendimiento y ajustando la ponderación de las métricas con el fin de premiar la eficiencia y la estabilidad.\n</p>\n<p>\n  El trabajo consistió en analizar cómo los nodos gestionaban factores críticos como el tiempo de servicio sostenido, la latencia de respuesta durante las inferencias y el impacto que generan los cambios de modelo en caliente. A partir de este análisis, establecí un nuevo sistema de puntuación que da mayor relevancia a la disponibilidad continua, penaliza de forma progresiva las interrupciones o los tiempos excesivos de cambio de modelo, y favorece a los nodos que logran mantener un servicio estable y predecible.\n</p>\n<p>\n  Para reforzar la equidad del sistema, también introduje mecanismos de control frente a intentos de manipulación o comportamientos oportunistas, asegurando que la acumulación de recompensas no dependa únicamente de volumen de tareas, sino de la calidad real con la que se ejecutan. Además, el algoritmo se diseñó con un enfoque flexible, permitiendo ajustar dinámicamente los pesos de cada métrica en función de la evolución de la red y de los objetivos estratégicos de la plataforma.\n</p>\n<p>\n  Gracias a esta mejora, el sistema de recompensas ahora alinea mucho mejor los incentivos con las metas de Celium: los nodos que garantizan alta disponibilidad, baja latencia y tiempos mínimos de transición entre modelos reciben un reconocimiento proporcional a su aportación, lo que fomenta la colaboración, la estabilidad y la eficiencia general de la infraestructura distribuida.\n</p>\n<p>Introduje mecanismos para evitar manipulación de métricas y ponderaciones dinámicas para equilibrar el sistema.</p>",
           "images": [],
           "links": [
             {
@@ -190,25 +190,94 @@
               "url": "https://lium.io/"
             }
           ],
-          "name": "Plataforma para la orquestación y distribución de modelos de IA en entornos distribuidos",
+          "name": "Mejora del algoritmo de recompensa en el desempeño",
           "technologies": [
-            "Prometheus",
-            "Bittensor",
-            "Tech",
+            "Grafana",
+            "Celery",
+            "PostgreSQL",
+            "Redis",
+            "FastAPI",
+            "Python",
+            "Rust",
+            "C",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "Git",
+            "GitHub Actions",
+            "GPU Computing",
             "CUDA",
+            "Tech",
+            "Bittensor",
+            "Prometheus"
+          ]
+        },
+        {
+          "description": "<p>mplementé capacidades de despliegue instantáneo de modelos en contenedores sobre infraestructuras locales, en la nube y en el edge.</p>\n\n<p>Habilitaba la edición de pods y la reasignación en caliente de recursos (CPU, GPU, memoria) para adaptarse a la demanda en tiempo real.</p>",
+          "images": [],
+          "links": [],
+          "name": "Despliegue y gestión dinámica de modelos",
+          "technologies": [
+            "Python",
             "GPU Computing",
             "GitHub Actions",
-            "Git",
+            "gRPC",
+            "TensorRT",
+            "CUDA",
             "Helm",
             "Kubernetes",
+            "Docker"
+          ]
+        },
+        {
+          "description": "<p>Desarrollé procesos de actualización y distribución de modelos de forma automática en cientos de nodos remotos.</p>\n\n<p>Esto redujo drásticamente los tiempos de propagación de nuevas versiones y mejoró la resiliencia del sistema.</p>",
+          "images": [],
+          "links": [],
+          "name": "Automatización y escalabilidad",
+          "technologies": [
+            "Git",
+            "Bash",
+            "MinIO",
+            "Kafka",
+            "Terraform",
+            "Ansible"
+          ]
+        },
+        {
+          "description": "<p>Integré métricas en tiempo real de uso de recursos y rendimiento, mejorando la visibilidad y la capacidad de diagnóstico de la plataforma.</p>\n\n<p>Se aplicaron técnicas avanzadas de balanceo de cargas y afinidad de procesos para optimizar la eficiencia energética y maximizar el rendimiento del hardware disponible.</p>",
+          "images": [],
+          "links": [],
+          "name": "Monitorización y rendimiento",
+          "technologies": [
+            "NginX",
+            "cAdvisor",
+            "Node Exporter",
+            "Kibana",
+            "Logstash",
+            "Elastic Search",
+            "Elastic Stack",
+            "Grafana",
+            "Prometheus"
+          ]
+        },
+        {
+          "description": "<p>Contribuí a la integración de Celium con redes como Bittensor, aumentando la interoperabilidad y extendiendo las capacidades de la plataforma en entornos descentralizados.</p>",
+          "images": [],
+          "links": [],
+          "name": "Interoperabilidad con ecosistemas descentralizados",
+          "technologies": [
+            "Kubernetes",
             "Docker",
-            "C",
-            "Rust",
-            "Python"
+            "Polkadot.js",
+            "Substrate API",
+            "Web3",
+            "ONNX Runtime",
+            "PyTorch",
+            "Bittensor"
           ]
         }
       ],
-      "short_description": "Datura AI es una startup especializada en tecnologías descentralizadas para redes como Bittensor. Su misión consiste en construir soluciones que superen los sistemas centralizados, ofreciendo\n    herramientas de fácil uso y gran rendimiento. Entre sus productos se encuentra <strong>Celium</strong>, una plataforma para despliegue instantáneo de modelos de IA en containers,\n    que habilita edición de pods, plantillas de despliegue y ejecución rápida de modelos como Stable Diffusion o Whisper.",
+      "short_description": "Datura AI es una startup especializada en tecnologías descentralizadas para redes como Bittensor. Su misión consiste en construir soluciones que superen los sistemas centralizados, ofreciendo herramientas de fácil uso y gran rendimiento. Entre sus productos se encuentra <strong>Celium</strong>, una plataforma para despliegue instantáneo de modelos de IA en containers, que habilita edición de pods, plantillas de despliegue y ejecución rápida de modelos como Stable Diffusion o Whisper.",
       "thumbnail": "daturaai.png"
     },
     {
@@ -259,6 +328,60 @@
             "Spring Boot",
             "Java"
           ]
+        },
+        {
+          "description": "<p>\n  Participé activamente en la integración de sistemas de Recuperación Aumentada de Información (RAG) con el objetivo de mejorar la capacidad del sistema de misión para acceder a información crítica en tiempo real. Mi trabajo consistió en diseñar y desarrollar pipelines que permitieran ingestar, procesar y consultar datos provenientes de múltiples fuentes heterogéneas, garantizando que la información recuperada fuera siempre relevante, precisa y estuviera disponible con baja latencia. \n</p>\n<p>\n  Además, adapté los sistemas para que pudieran escalar en entornos distribuidos y con recursos limitados, optimizando consultas semánticas, integrando vectores de embeddings y aplicando técnicas de búsqueda híbrida (texto completo y semántica). Esta labor fue clave para que el personal en misión tuviera a su disposición la información más adecuada para la toma de decisiones en escenarios dinámicos y de alta complejidad operativa.\n</p>",
+          "images": [],
+          "links": [],
+          "name": "Integración de sistemas de Recuperación Aumentada de Información (RAG)",
+          "technologies": [
+            "Kubernetes",
+            "Docker",
+            "PostgreSQL",
+            "LangChain",
+            "Qdrant",
+            "Elastic Search",
+            "Python",
+            "Node Exporter",
+            "Spring Data",
+            "Spring Security",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>\n  Formé parte del equipo encargado de diseñar e integrar módulos de Inteligencia Artificial dentro de la plataforma, orientados a mejorar la capacidad de análisis y decisión en misiones críticas. Colaboré en la creación de servicios que permitieran procesar datos en tiempo real, incluyendo análisis de imágenes satelitales, reconocimiento de patrones en vídeo y procesamiento de lenguaje natural para la extracción automática de información relevante.\n</p>\n<p>\n  Mi contribución incluyó la implementación de pipelines de entrenamiento y despliegue de modelos, la conversión de modelos a formatos optimizados para GPU y entornos de recursos limitados, y la integración de APIs que conectaban estos módulos de IA con el resto del ecosistema de la plataforma. Esta experiencia me permitió trabajar en un entorno altamente multidisciplinar, alineando las capacidades técnicas de la IA con los requisitos de interoperabilidad de las fuerzas armadas de la OTAN.\n</p>",
+          "images": [],
+          "links": [],
+          "name": "Colaboración en módulos de Inteligencia Artificial",
+          "technologies": [
+            "Docker",
+            "Grafana",
+            "FastAPI",
+            "ONNX Runtime",
+            "CUDA",
+            "OpenCV",
+            "Hugging Face Transformers",
+            "Bittensor",
+            "PyTorch",
+            "Python"
+          ]
+        },
+        {
+          "description": "<p>\n  Lideré y participé en pruebas de integración complejas, asegurando que los diferentes módulos del sistema se comunicaran correctamente en entornos distribuidos y de misión crítica. Mi trabajo incluyó la definición de escenarios de prueba, la creación de pipelines de integración continua y la validación de la interoperabilidad de servicios desplegados en infraestructuras tanto locales como en la nube. \n</p>\n<p>\n  También contribuí en el diseño y ejecución de despliegues utilizando orquestadores de contenedores y herramientas de automatización, con el fin de garantizar la escalabilidad, resiliencia y seguridad de la plataforma. Para ello implementé monitorización en tiempo real, trazabilidad de eventos y dashboards que facilitaron la identificación rápida de incidencias. Este esfuerzo fue clave para entregar un sistema robusto, preparado para operar en condiciones exigentes y con altos niveles de disponibilidad.\n</p>",
+          "images": [],
+          "links": [],
+          "name": "Pruebas de integración y despliegue en entornos distribuidos",
+          "technologies": [
+            "Grafana",
+            "Prometheus",
+            "Terraform",
+            "Ansible",
+            "Helm",
+            "Kubernetes",
+            "Docker",
+            "Git",
+            "Jenkins"
+          ]
         }
       ],
       "short_description": "Indra es una multinacional española líder en consultoría y tecnología, con presencia en más de 140 países. Ofrece soluciones innovadoras para sectores como Defensa, Transporte, Energía, Seguridad y Transformación Digital. En el ámbito de Defensa, desarrolla sistemas estratégicos y de misión crítica que fortalecen la autonomía tecnológica y la interoperabilidad de las fuerzas armadas de Europa y países aliados de la OTAN.",
@@ -270,8 +393,8 @@
       "images": ["devo1.png", "devo2.png"],
       "links": [
         {
-          "icon": "",
-          "text": "Sitio web de Devo",
+          "icon": "🌐",
+          "text": "Website",
           "url": "https://www.devo.com/es/"
         }
       ],
@@ -380,7 +503,7 @@
       "images": [],
       "links": [
         {
-          "icon": "",
+          "icon": "🌐",
           "text": "Sitio web de la Comisión Europea, DG COMP",
           "url": "https://competition-policy.ec.europa.eu/index_en"
         }
@@ -566,31 +689,31 @@
           "links": [],
           "name": "Modernización de la mensajería de transporte marítimo y aéreo: reemplazo de IATA por XML/JSON",
           "technologies": [
-            "Ansible",
-            "Docker",
-            "IntelliJ IDEA",
-            "Redmine",
-            "Jenkins",
-            "GIT",
-            "Maven",
-            "Selenium",
-            "Hadoop",
-            "Phonegap",
-            "AWS",
-            "GWT",
-            "Primefaces",
-            "JSF",
-            "JUnit",
-            "RabbitMQ",
-            "MongoDB",
-            "Wildfly/JBoss",
-            "Hibernate",
-            "JPA",
-            "Spring Documentation",
-            "Spring Data",
-            "Spring MVC",
+            "Java",
             "Spring Security",
-            "Java"
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Wildfly/JBoss",
+            "MongoDB",
+            "RabbitMQ",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "GWT",
+            "AWS",
+            "Phonegap",
+            "Hadoop",
+            "Selenium",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Redmine",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible"
           ]
         },
         {
@@ -599,38 +722,38 @@
           "links": [],
           "name": "Gestión Inteligente de Terminales de Iberdrola con Siemens",
           "technologies": [
-            "Spring IOT",
-            "Spring Documentation",
-            "Spring Data",
-            "Spring MVC",
-            "Spring Security",
-            "SNMP",
-            "JNLP",
-            "Kubernetes",
-            "Ansible",
-            "Docker",
-            "IntelliJ IDEA",
-            "Jira",
-            "Jenkins",
-            "GIT",
-            "Maven",
-            "Hadoop",
-            "Primefaces",
-            "JSF",
-            "JUnit",
-            "MongoDB",
-            "Apache Tomcat",
-            "Hibernate",
-            "JPA",
-            "RabbitMQ",
-            "Java",
-            "Microservices",
-            "gRPC",
-            "Boost",
-            "cLion",
-            "Valgrind",
+            "C++",
             "Google Test",
-            "C++"
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "MongoDB",
+            "JUnit",
+            "JSF",
+            "Primefaces",
+            "Hadoop",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes",
+            "JNLP",
+            "SNMP",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IOT"
           ]
         },
         {
@@ -639,41 +762,41 @@
           "links": [],
           "name": "Sistema de monitoreo y cuidado para personas con discapacidades o ancianos para Securitas Direct",
           "technologies": [
-            "Kubernetes",
-            "Ansible",
-            "Docker",
-            "IntelliJ IDEA",
-            "Confluence",
-            "Jira",
-            "Jenkins",
-            "GIT",
-            "Maven",
-            "Jasmine",
-            "Selenium",
-            "Hadoop",
-            "Typescript",
-            "Ionic",
-            "JUnit",
-            "Oracle DB",
-            "Apache Tomcat",
-            "Hibernate",
-            "JPA",
-            "RabbitMQ",
-            "Spring Batch",
-            "Spring IoC",
-            "Spring Documentation",
-            "Spring Data",
-            "Spring MVC",
-            "Spring Security",
-            "AWS",
-            "Java",
-            "Microservices",
-            "gRPC",
-            "Boost",
-            "cLion",
-            "Valgrind",
+            "C++",
             "Google Test",
-            "C++"
+            "Valgrind",
+            "cLion",
+            "Boost",
+            "gRPC",
+            "Microservices",
+            "Java",
+            "AWS",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "Spring IoC",
+            "Spring Batch",
+            "RabbitMQ",
+            "JPA",
+            "Hibernate",
+            "Apache Tomcat",
+            "Oracle DB",
+            "JUnit",
+            "Ionic",
+            "Typescript",
+            "Hadoop",
+            "Selenium",
+            "Jasmine",
+            "Maven",
+            "GIT",
+            "Jenkins",
+            "Jira",
+            "Confluence",
+            "IntelliJ IDEA",
+            "Docker",
+            "Ansible",
+            "Kubernetes"
           ]
         }
       ],
@@ -704,19 +827,19 @@
           "links": [],
           "name": "Aplicación de visor de paquetes educativos",
           "technologies": [
-            "Confluence",
-            "GIT",
-            "Jira",
-            "jQuery",
-            "Bootstrap",
-            "JavaScript",
-            "HTML",
-            "SCORM",
-            "Dagger",
-            "Objective-C",
-            "XCode",
+            "Java",
             "Android Studio",
-            "Java"
+            "XCode",
+            "Objective-C",
+            "Dagger",
+            "SCORM",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
           ]
         },
         {
@@ -725,24 +848,24 @@
           "links": [],
           "name": "Proyecto de estandarización de paquetes educativos",
           "technologies": [
-            "Valgrind",
-            "NginX",
-            "Bash",
-            "Xen",
-            "KVM",
-            "QEmu",
-            "Confluence",
-            "GIT",
-            "Jira",
-            "jQuery",
-            "SCORM",
-            "Bootstrap",
-            "AngularJS",
-            "JavaScript",
-            "HTML",
-            "Flash",
+            "C++",
             "Linux",
-            "C++"
+            "Flash",
+            "HTML",
+            "JavaScript",
+            "AngularJS",
+            "Bootstrap",
+            "SCORM",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence",
+            "QEmu",
+            "KVM",
+            "Xen",
+            "Bash",
+            "NginX",
+            "Valgrind"
           ]
         },
         {
@@ -751,14 +874,14 @@
           "links": [],
           "name": "Proyecto de plataforma educativa",
           "technologies": [
-            "Confluence",
-            "GIT",
-            "Jira",
-            "Microsoft SQL Server",
-            "Windows Server",
-            "IIS",
+            "C#",
             ".NET",
-            "C#"
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Jira",
+            "GIT",
+            "Confluence"
           ]
         }
       ],
@@ -795,12 +918,12 @@
           ],
           "name": "Proyecto de Antena 3 Televisión",
           "technologies": [
-            "Confluence",
-            "GIT",
-            "Jira",
-            "Android NDK",
+            "Java",
             "Android Studio",
-            "Java"
+            "Android NDK",
+            "Jira",
+            "GIT",
+            "Confluence"
           ]
         },
         {
@@ -809,19 +932,19 @@
           "links": [],
           "name": "Proyecto de gestor de documentos para BBVA",
           "technologies": [
-            "Confluence",
-            "GIT",
-            "Jira",
-            "jQuery",
-            "Bootstrap",
-            "JavaScript",
-            "HTML",
-            "Cassandra",
-            "Microsoft SQL Server",
-            "Windows Server",
-            "IIS",
+            "C#",
             ".NET",
-            "C#"
+            "IIS",
+            "Windows Server",
+            "Microsoft SQL Server",
+            "Cassandra",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "jQuery",
+            "Jira",
+            "GIT",
+            "Confluence"
           ]
         },
         {
@@ -830,23 +953,23 @@
           "links": [],
           "name": "Proyecto de Front colaborativo",
           "technologies": [
-            "Eclipse",
-            "GIT",
-            "Confluence",
-            "Jira",
-            "GIT",
-            "Maven",
-            "JSF",
-            "JUnit",
-            "Oracle DB",
-            "Websphere",
-            "Hibernate",
-            "JPA",
-            "Spring Documentation",
-            "Spring Data",
-            "Spring MVC",
+            "Java",
             "Spring Security",
-            "Java"
+            "Spring MVC",
+            "Spring Data",
+            "Spring Documentation",
+            "JPA",
+            "Hibernate",
+            "Websphere",
+            "Oracle DB",
+            "JUnit",
+            "JSF",
+            "Maven",
+            "GIT",
+            "Jira",
+            "Confluence",
+            "GIT",
+            "Eclipse"
           ]
         }
       ],
@@ -877,19 +1000,19 @@
           "links": [],
           "name": "Proyecto del grupo de investigación",
           "technologies": [
-            "Mono",
-            ".NET",
-            "C#",
-            "SVN",
-            "Arduino",
-            "PIC",
-            "Qt",
-            "Anjuta",
-            "C++",
-            "Linux",
-            "Android",
+            "Java",
             "Android Studio",
-            "Java"
+            "Android",
+            "Linux",
+            "C++",
+            "Anjuta",
+            "Qt",
+            "PIC",
+            "Arduino",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
           ]
         },
         {
@@ -898,14 +1021,14 @@
           "links": [],
           "name": "Sistema de comunicación para dispositivos biométricos",
           "technologies": [
-            "Mono",
-            ".NET",
-            "C#",
-            "SVN",
-            "Anjuta",
-            "C++",
+            "Java",
             "Linux",
-            "Java"
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
           ]
         },
         {
@@ -914,14 +1037,14 @@
           "links": [],
           "name": "Proyecto de página web del grupo de investigación",
           "technologies": [
-            "Mono",
-            ".NET",
-            "C#",
-            "SVN",
-            "Anjuta",
-            "C++",
+            "Java",
             "Linux",
-            "Java"
+            "C++",
+            "Anjuta",
+            "SVN",
+            "C#",
+            ".NET",
+            "Mono"
           ]
         },
         {
@@ -930,14 +1053,14 @@
           "links": [],
           "name": "Contribuciones al grupo de investigación",
           "technologies": [
-            "Python",
-            "Java",
-            "Octave",
-            "Mathlab",
-            "PIC",
-            "Arduino",
+            "C",
             "C++",
-            "C"
+            "Arduino",
+            "PIC",
+            "Mathlab",
+            "Octave",
+            "Java",
+            "Python"
           ]
         }
       ],
@@ -961,7 +1084,7 @@
           "images": [],
           "links": [],
           "name": "Desarrollo de sitios web",
-          "technologies": ["HTML", "MySQL", "JavaScript", "PHP", "Joomla"]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "short_description": "Pequeña empresa dedicada a la creación de páginas web",
@@ -984,7 +1107,7 @@
           "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
           "links": [],
           "name": "Desarrollo de sitios web",
-          "technologies": ["HTML", "MySQL", "JavaScript", "PHP", "Joomla"]
+          "technologies": ["Joomla", "PHP", "JavaScript", "MySQL", "HTML"]
         }
       ],
       "short_description": "IBM, una empresa tecnológica global, se especializa en computación en la nube, IA y hardware, proporcionando soluciones innovadoras para negocios en todo el mundo.",

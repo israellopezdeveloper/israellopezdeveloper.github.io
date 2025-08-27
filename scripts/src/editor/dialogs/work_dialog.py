@@ -8,9 +8,11 @@ from PySide6 import QtCore, QtWidgets
 
 # Utils
 from ..utils.lists import CustomList
+
 # Widgets
 from ..widgets.file_select import FileSelect
 from ..widgets.html_editor import HtmlEditor
+
 # Dialogs
 from .base_dialog import BaseDialog
 from .file_dialog import FileDialog
@@ -172,6 +174,7 @@ class WorkDialog(BaseDialog):
 
         self._buttons.accepted.connect(self.accept)
         self._buttons.rejected.connect(self.reject)
+        self._ok_btn.setDisabled(False)
 
     def _connect(self) -> None:
         self._name.textChanged.connect(self.changed)
@@ -183,6 +186,10 @@ class WorkDialog(BaseDialog):
             self._full_desc.htmlChanged.connect(self.changed)  # type: ignore
         if hasattr(self._contrib, "htmlChanged"):
             self._contrib.htmlChanged.connect(self.changed)  # type: ignore
+
+    def _revalidate(self) -> None:
+        self._ok_btn.setDisabled(self._name.text() == "")
+
 
     # ----- carga/volcado -----
     def set_value(self, data: Dict[str, Any]) -> None:
