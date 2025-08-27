@@ -12,12 +12,21 @@ import {
   getLanguageSlug,
 } from '../lib/slug';
 
+import type { CVPeriod } from '../types/cv';
 import type { JSX } from 'react';
 
 export default function EducationsPage(): JSX.Element {
   const { lang, short } = useLanguage();
   const { data, loading } = useCvData(lang, short);
   const t = useI18n();
+
+  function formatPeriod(p: CVPeriod): string {
+    const start = (p.start ?? '').toString().trim();
+    const end = p.current ? t('present') : (p.end ?? '').toString().trim();
+    if (start && end) return `${start} – ${end}`;
+    if (start) return `${start} – ${end || t('present')}`;
+    return end || '';
+  }
 
   if (loading || !data) {
     return (
@@ -45,11 +54,13 @@ export default function EducationsPage(): JSX.Element {
                 href={`/educations/university/${getUniversitySlug(u)}`}
                 title={u.title ?? u.university_name ?? 'Untitled'}
                 {...(u.university_name ? { subtitle: u.university_name } : {})}
-                {...(u.period_time ? { period: u.period_time } : {})}
+                {...(u.period_time
+                  ? { period: formatPeriod(u.period_time) }
+                  : {})}
                 {...(u.thumbnail
                   ? { thumbnail: `/images/educations/${u.thumbnail}` }
                   : {})}
-                {...(u.summary?.length ? { summary: u.summary } : {})}
+                {...{ summary: u.summary }}
               />
             ))}
           </SimpleGrid>
@@ -64,11 +75,13 @@ export default function EducationsPage(): JSX.Element {
                 href={`/educations/complementary/${getComplementarySlug(c)}`}
                 title={c.title ?? 'Untitled'}
                 {...(c.institution ? { subtitle: c.institution } : {})}
-                {...(c.period_time ? { period: c.period_time } : {})}
+                {...(c.period_time
+                  ? { period: formatPeriod(c.period_time) }
+                  : {})}
                 {...(c.thumbnail
                   ? { thumbnail: `/images/educations/${c.thumbnail}` }
                   : {})}
-                {...(c.summary?.length ? { summary: c.summary } : {})}
+                {...{ summary: c.summary }}
               />
             ))}
           </SimpleGrid>
@@ -94,13 +107,9 @@ export default function EducationsPage(): JSX.Element {
                   {...(language.thumbnail
                     ? { thumbnail: `/images/educations/${language.thumbnail}` }
                     : {})}
-                  {...(language.acreditations?.length
-                    ? {
-                        summary: [
-                          `${language.acreditations.length} ${t('accreditations')}`,
-                        ],
-                      }
-                    : {})}
+                  {...{
+                    summary: `${language.acreditation.length} ${t('accreditations')}`,
+                  }}
                 />
               );
             })}

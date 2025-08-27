@@ -1,7 +1,15 @@
 // src/app/components/TechFilterSidebar.tsx
 'use client';
 
-import { VStack, HStack, Heading, Badge, Box, Button } from '@chakra-ui/react';
+import {
+  VStack,
+  HStack,
+  Heading,
+  Badge,
+  Box,
+  Button,
+  Input,
+} from '@chakra-ui/react';
 import * as React from 'react';
 
 import { useI18n } from '../i18n/useI18n';
@@ -36,6 +44,14 @@ export default function TechFilterSidebar({
 }): React.JSX.Element {
   const t = useI18n(); // ✅ Hook siempre al principio
 
+  const [query, setQuery] = React.useState('');
+
+  const visibleItems = React.useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return items;
+    return items.filter((it) => it.tech.toLowerCase().includes(q));
+  }, [items, query]);
+
   if (!items.length) return <></>; // ✅ early return después del hook
 
   return (
@@ -50,6 +66,14 @@ export default function TechFilterSidebar({
         {t('usedTechnologies')}
       </Heading>
 
+      <Input
+        size="sm"
+        placeholder={t('searchTechnologies') + '...'}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        mb={3}
+      />
+
       <HStack gap={2} mb={3}>
         <Button size="xs" onClick={onActivateAllAction}>
           {t('activateAll')}
@@ -60,7 +84,7 @@ export default function TechFilterSidebar({
       </HStack>
 
       <VStack align="stretch" gap={2}>
-        {items.map((it) => {
+        {visibleItems.map((it) => {
           const isActive = active.has(it.tech);
           return (
             <HStack

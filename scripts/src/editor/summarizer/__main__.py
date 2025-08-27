@@ -1,5 +1,6 @@
 # src/editor/summarizer/__main__.py
 import argparse
+
 from editor.summarizer.summarizer import summarize_json_file
 
 

@@ -2,13 +2,20 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from typing import Any, Dict, List, Optional, Tuple
 
 import torch
 from bs4 import BeautifulSoup
-from bs4.element import Tag, NavigableString
+from bs4.element import NavigableString, Tag
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+# Evita exceso de hilos en tokenizers (a veces da sensación de "freeze")
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+
+# Cache sencilla de traductores por configuración
+_TRANSLATOR_CACHE: dict[tuple, NLLBTranslator] = {}
 
 # ---------- Mapeo de idiomas a códigos NLLB (acepta ISO corto) ------------
 
@@ -45,28 +52,69 @@ def to_nllb(code: str) -> str:
 
 # ------------------------ Reglas de exclusión ------------------------------
 
-EXCLUDE_KEYS = {
-    "url",
-    "urls",
-    "link",
-    "links",
-    "thumbnail",
-    "thumbnails",
-    "icon",
-    "icons",
-    "image",
-    "images",
-    "profile_image",
-    "period_time",
-    "dates",
-    "acreditations",
-    "phone",
-    "tel",
-    "email",
-    "technologies",
-    "name",
-    "university_name",
-}
+EXCLUDE_PATHS = [
+    "intro.name",
+    "intro.links[].icon",
+    "intro.links[].url",
+    "works[].name",
+    "works[].thumbnail",
+    "works[].links[].icon",
+    "works[].links[].url",
+    "works[].projects[].links[].url",
+    "works[].projects[].links[].icon",
+    "works[].projects[].technologies[]",
+    "works[].technologies[]",
+    "works[].images[]",
+    "educations[].university[].images[]",
+    "educations[].university[].thumbnail",
+    "educations[].university[].university_name",
+    "educations[].complementary[].images[]",
+    "educations[].complementary[].thumbnail",
+    "educations[].complementary[].institution",
+    "educations[].languages[].acreditations[].institution",
+    "educations[].languages[].acreditations[].title",
+    "educations[].languages[].thumbnail",
+]
+
+
+def _compile_exclude_patterns(patterns: List[str]):
+    comp = []
+    for p in patterns:
+        toks = []
+        for part in p.split("."):
+            if part.endswith("[]"):
+                toks.append((part[:-2], True))  # (clave, requiere_indice)
+            else:
+                toks.append((part, False))
+        comp.append(toks)
+    return comp
+
+
+_COMPILED_EXCLUDE = _compile_exclude_patterns(EXCLUDE_PATHS)
+
+
+def _path_matches_tokens(tokens: List[Tuple[str, bool]], path: Tuple[Any, ...]) -> bool:
+    """
+    Compara tokens (clave / clave[]) con la tupla de ruta real (claves y enteros).
+    """
+    j = 0
+    for key, wants_index in tokens:
+        if j >= len(path) or path[j] != key:
+            return False
+        j += 1
+        if wants_index:
+            if j >= len(path) or not isinstance(path[j], int):
+                return False
+            j += 1
+    return j == len(path)
+
+
+def is_excluded_path(path: Tuple[Any, ...]) -> bool:
+    for tokens in _COMPILED_EXCLUDE:
+        if _path_matches_tokens(tokens, path):
+            return True
+    return False
+
 
 RE_URL = re.compile(r"^https?://", re.I)
 RE_EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -102,19 +150,30 @@ def walk_collect(
     if isinstance(obj, dict):
         molded: Dict[Any, Any] = {}
         for k, v in obj.items():
-            if k in EXCLUDE_KEYS:
+            new_path = path + (k,)
+            if is_excluded_path(new_path) or v == "":
+                # No tocar nada bajo esta ruta
                 molded[k] = v
                 continue
-            molded[k] = walk_collect(v, path + (k,), k, pending_plain, pending_html)
+            molded[k] = walk_collect(v, new_path, k, pending_plain, pending_html)
         return molded
 
     if isinstance(obj, list):
-        return [
-            walk_collect(v, path + (i,), parent_key, pending_plain, pending_html)
-            for i, v in enumerate(obj)
-        ]
+        out_list: List[Any] = []
+        for i, v in enumerate(obj):
+            new_path = path + (i,)
+            if is_excluded_path(new_path):
+                out_list.append(v)  # entero excluido (p.ej. images[], technologies[])
+            else:
+                out_list.append(
+                    walk_collect(v, new_path, parent_key, pending_plain, pending_html)
+                )
+        return out_list
 
     if isinstance(obj, str):
+        # Excluir por ruta exacta (e.g., intro.name, ... .url, ... .thumbnail, etc.)
+        if is_excluded_path(path):
+            return obj
         if is_untranslatable_leaf(obj):
             return obj
         if is_html_like(obj):
@@ -361,6 +420,37 @@ def translate_json_file(
         json.dump(translated, f, ensure_ascii=False, indent=2)
 
 
+def _get_translator(
+    *,
+    model_name: str,
+    device: Optional[str],
+    fp16: bool,
+    num_beams: int,
+    max_input_length: int = 1024,
+    max_new_tokens: int = 512,
+) -> NLLBTranslator:
+    key = (
+        model_name,
+        device or ("cuda:0" if torch.cuda.is_available() else "cpu"),
+        bool(fp16),
+        int(num_beams),
+        int(max_input_length),
+        int(max_new_tokens),
+    )
+    tr = _TRANSLATOR_CACHE.get(key)
+    if tr is None:
+        tr = NLLBTranslator(
+            model_name=model_name,
+            device=device,
+            fp16=fp16,
+            num_beams=num_beams,
+            max_input_length=max_input_length,
+            max_new_tokens=max_new_tokens,
+        )
+        _TRANSLATOR_CACHE[key] = tr
+    return tr
+
+
 def translate_json(
     data: Any,
     src_lang: str = "es",
@@ -377,6 +467,12 @@ def translate_json(
     Traduce un objeto JSON ya cargado en memoria usando NLLB.
     Acepta códigos ISO cortos ("es", "en", "zh") o NLLB ("spa_Latn", etc.).
     """
+    translator = _get_translator(
+        model_name=model_name,
+        device=device,
+        fp16=True,
+        num_beams=num_beams,
+    )
     translator = NLLBTranslator(
         model_name=model_name,
         device=device,

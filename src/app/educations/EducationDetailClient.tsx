@@ -25,6 +25,7 @@ import type {
   CVComplementary,
   CVEducations,
   CVLang,
+  CVPeriod,
   CVUniversity,
 } from '../types/cv';
 import type { JSX } from 'react';
@@ -51,6 +52,16 @@ function isLang(x: CVUniversity | CVComplementary | CVLang): x is CVLang {
   return (x as CVLang).language !== undefined;
 }
 
+function isPeriodObject(v: unknown): v is CVPeriod {
+  return (
+    !!v &&
+    typeof v === 'object' &&
+    ('start' in (v as CVPeriod) ||
+      'end' in (v as CVPeriod) ||
+      'current' in (v as CVPeriod))
+  );
+}
+
 export default function EducationDetailClient({
   category,
   id,
@@ -61,6 +72,14 @@ export default function EducationDetailClient({
   const { lang, short } = useLanguage();
   const { data, loading } = useCvData(lang, short);
   const t = useI18n();
+
+  function formatPeriod(p: CVPeriod): string {
+    const start = (p.start ?? '').toString().trim();
+    const end = p.current ? t('present') : (p.end ?? '').toString().trim();
+    if (start && end) return `${start} – ${end}`;
+    if (start) return `${start} – ${end || t('present')}`;
+    return end || '';
+  }
 
   if (loading || !data) {
     return (
@@ -112,6 +131,17 @@ export default function EducationDetailClient({
           ? item.university_name
           : 'Untitled';
 
+  let yearText = '';
+  if (isUniversity(item)) {
+    yearText =
+      item?.period_time &&
+      (isPeriodObject(item.period_time)
+        ? formatPeriod(item.period_time)
+        : item.period_time != null
+          ? String(item.period_time)
+          : '');
+  }
+
   return (
     <Container maxW="container.md" py={8}>
       <Heading mb={4} style={{ display: 'inline' }}>
@@ -122,9 +152,9 @@ export default function EducationDetailClient({
       </Heading>
 
       {/* Periodo — solo si existe en este tipo */}
-      {'period_time' in item && item.period_time ? (
+      {'period_time' in item && item.period_time && yearText !== '' ? (
         <Text className="periodTime" fontSize="sm" color="gray.500" mb={4}>
-          {item.period_time}
+          {yearText}
         </Text>
       ) : null}
 
@@ -152,13 +182,13 @@ export default function EducationDetailClient({
       ) : null}
 
       {/* Summary solo existe en University/Complementary */}
-      {'summary' in item &&
-        Array.isArray(item.summary) &&
-        item.summary.map((p: string, i: number) => (
-          <Text key={`p-${i}`} mb={3}>
-            {p}
-          </Text>
-        ))}
+      {'summary' in item && (
+        <Text
+          key={'summary'}
+          mb={3}
+          dangerouslySetInnerHTML={{ __html: item.summary }}
+        ></Text>
+      )}
 
       {/* ===== Solo Idiomas: niveles ===== */}
       {category === 'languages' && isLang(item) ? (
@@ -202,8 +232,8 @@ export default function EducationDetailClient({
       {/* ===== Solo Idiomas: acreditaciones ===== */}
       {category === 'languages' &&
       isLang(item) &&
-      Array.isArray(item.acreditations) &&
-      item.acreditations.length > 0 ? (
+      Array.isArray(item.acreditation) &&
+      item.acreditation.length > 0 ? (
         <Box mt={6}>
           <Heading as="h4" size="sm" mb={3}>
             {t('accreditations')}
@@ -230,11 +260,11 @@ export default function EducationDetailClient({
               </chakra.tr>
             </chakra.thead>
             <chakra.tbody>
-              {item.acreditations.map((a: CVAcreditation, i: number) => (
+              {item.acreditation.map((a: CVAcreditation, i: number) => (
                 <chakra.tr key={i} _odd={{ bg: 'blackAlpha.50' }}>
                   <chakra.td p={3}>{a.institution ?? '-'}</chakra.td>
                   <chakra.td p={3}>{a.title ?? '-'}</chakra.td>
-                  <chakra.td p={3}>{a.period_time ?? '-'}</chakra.td>
+                  <chakra.td p={3}>{formatPeriod(a.period_time)}</chakra.td>
                 </chakra.tr>
               ))}
             </chakra.tbody>

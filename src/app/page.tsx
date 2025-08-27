@@ -55,7 +55,10 @@ export default function HomePage(): JSX.Element {
         overflow="hidden"
         alignSelf={'center'}
       >
-        <Image src={'/images/israel.png'} alt="Profile Image" />
+        <Image
+          src={'/images/intro/' + intro.profile_image}
+          alt="Profile Image"
+        />
       </Box>
       <Box>
         <Box alignItems={'center'}>
@@ -73,7 +76,7 @@ export default function HomePage(): JSX.Element {
 
       <div
         style={{ textAlign: 'justify' }}
-        dangerouslySetInnerHTML={{ __html: intro.summary?.join('') || '' }}
+        dangerouslySetInnerHTML={{ __html: intro.summary || '' }}
       />
 
       <Heading>{t('myBio')}</Heading>

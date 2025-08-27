@@ -19,15 +19,47 @@ import { useLanguage } from '../../components/context/LanguageContext';
 import { useCvData } from '../../hooks/useCvData';
 import { getItemSlug } from '../../lib/slug';
 
-import type { CVLink, CVProject, CVWork } from '@/app/types/cv';
+import type { CVLink, CVPeriod, CVProject, CVWork } from '@/app/types/cv';
 import type { JSX } from 'react';
 
 type WorkClientProps = { id: string };
 
+type PeriodObj = {
+  start?: string | null;
+  end?: string | null;
+  current?: boolean | null;
+};
+
+function isPeriodObject(v: unknown): v is PeriodObj {
+  return (
+    !!v &&
+    typeof v === 'object' &&
+    ('start' in (v as CVPeriod) ||
+      'end' in (v as CVPeriod) ||
+      'current' in (v as CVPeriod))
+  );
+}
+
+function findById<T extends { name: string; slug?: string }>(
+  arr: T[] | undefined,
+  id: string,
+): T | undefined {
+  return arr?.find((x) => getItemSlug(x) === id);
+}
+
 export default function WorkClient({ id }: WorkClientProps): JSX.Element {
+  const t = useI18n();
+
+  function formatPeriod(p: PeriodObj): string {
+    const start = (p.start ?? '').toString().trim();
+    const end = p.current ? t('present') : (p.end ?? '').toString().trim();
+    if (start && end) return `${start} – ${end}`;
+    if (start) return `${start} – ${end || t('present')}`;
+    return end || '';
+  }
+
   const { lang, short } = useLanguage();
   const { data, loading } = useCvData(lang, short);
-  const t = useI18n();
 
   if (loading || !data) {
     return (
@@ -37,16 +69,10 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
     );
   }
 
-  const findById = (
-    arr?: Array<{ name: string; slug?: string }>,
-  ):
-    | {
-        name: string;
-        slug?: string;
-      }
-    | undefined => arr?.find((x) => getItemSlug(x) === id);
+  const work =
+    findById<CVWork>(data.works, id) ??
+    findById<CVWork>(data.personal_projects as unknown as CVWork[], id);
 
-  const work = findById(data.works) || findById(data.personal_projects);
   if (!work) {
     return (
       <Container maxW="container.md" py={8}>
@@ -56,6 +82,11 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
   }
 
   const w: CVWork = work;
+  const yearText = isPeriodObject(w.period_time)
+    ? formatPeriod(w.period_time)
+    : w.period_time != null
+      ? String(w.period_time)
+      : '';
 
   return (
     <Container maxW="container.md" py={8} className="DetailPage">
@@ -67,17 +98,15 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
       </Heading>
       {w.period_time && (
         <Text className="periodTime" fontSize="sm" color="gray.500" mb={4}>
-          {w.period_time}
+          {yearText}
         </Text>
       )}
-      {w.full_description?.map((p: string, i: number) => (
-        <Text
-          key={`d-${i}`}
-          mb={3}
-          style={{ marginTop: '10px', textAlign: 'justify' }}
-          dangerouslySetInnerHTML={{ __html: p }}
-        />
-      ))}
+      <Text
+        key={'full_description'}
+        mb={3}
+        style={{ marginTop: '10px', textAlign: 'justify' }}
+        dangerouslySetInnerHTML={{ __html: w.full_description }}
+      />
       {w.thumbnail && (
         <Box mb={6} rounded="xl" overflow="hidden">
           <Image
@@ -112,27 +141,23 @@ export default function WorkClient({ id }: WorkClientProps): JSX.Element {
       <Heading mb={4} className="subtitle1">
         {t('contributions')}
       </Heading>
-      {w.contribution?.map((p: string, i: number) => (
-        <Text
-          key={`c-${i}`}
-          mb={3}
-          style={{ marginTop: '10px', textAlign: 'justify' }}
-          dangerouslySetInnerHTML={{ __html: p }}
-        />
-      ))}
+      <Text
+        key={'contribution'}
+        mb={3}
+        style={{ marginTop: '10px', textAlign: 'justify' }}
+        dangerouslySetInnerHTML={{ __html: w.contribution || '' }}
+      />
       {w.projects?.map((project: CVProject, index: number) => (
         <div key={'project' + index}>
           <Heading mb={4} className="subtitle1">
             Project {index + 1}: {project.name}
           </Heading>
-          {project.description?.map((description: string, i: number) => (
-            <Text
-              key={`desc-${i}`}
-              mb={3}
-              style={{ marginTop: '10px', textAlign: 'justify' }}
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
-          ))}
+          <Text
+            key={'description'}
+            mb={3}
+            style={{ marginTop: '10px', textAlign: 'justify' }}
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          />
           <Heading mb={4} className="subtitle2">
             {t('technologies')}
           </Heading>

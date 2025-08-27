@@ -9,6 +9,7 @@ export type LabelKey =
   | 'myHobbies'
   | 'experience'
   | 'usedTechnologies'
+  | 'searchTechnologies'
   | 'activateAll'
   | 'clear'
   | 'years'
@@ -34,6 +35,8 @@ export type LabelKey =
   | 'notFound'
   | 'loading'
   | 'toggleColorMode'
+  | 'filter'
+  | 'present'
   | 'accreditations';
 
 const es: Record<LabelKey, string> = {
@@ -44,6 +47,7 @@ const es: Record<LabelKey, string> = {
   myHobbies: 'Mis hobbies',
   experience: 'Experiencia',
   usedTechnologies: 'Tecnologías usadas',
+  searchTechnologies: 'Buscar tecnología',
   activateAll: 'Activar todo',
   clear: 'Limpiar',
   years: 'años',
@@ -69,6 +73,8 @@ const es: Record<LabelKey, string> = {
   notFound: 'No se ha encontrado',
   loading: 'Cargando ...',
   toggleColorMode: 'Cambiar modo de color',
+  filter: 'Filtro',
+  present: 'Actualidad',
   accreditations: 'Acreditaciones',
 };
 
@@ -80,6 +86,7 @@ const en: Record<LabelKey, string> = {
   myHobbies: 'My hobbies',
   experience: 'Experience',
   usedTechnologies: 'Used technologies',
+  searchTechnologies: 'Search technology',
   activateAll: 'Activate all',
   clear: 'Clear',
   years: 'years',
@@ -105,10 +112,11 @@ const en: Record<LabelKey, string> = {
   notFound: 'Not found',
   loading: 'Loading ...',
   toggleColorMode: 'Toggle color mode',
+  filter: 'Filter',
+  present: 'Present',
   accreditations: 'Accreditations',
 };
 
-// ⬇️ NUEVO: chino simplificado
 const zh: Record<LabelKey, string> = {
   jobsAndProjects: '工作与项目',
   education: '教育',
@@ -117,6 +125,7 @@ const zh: Record<LabelKey, string> = {
   myHobbies: '我的爱好',
   experience: '工作经验',
   usedTechnologies: '使用的技术',
+  searchTechnologies: '搜索技术',
   activateAll: '全选',
   clear: '清空',
   years: '年',
@@ -142,6 +151,8 @@ const zh: Record<LabelKey, string> = {
   notFound: '未找到',
   loading: '加载中……',
   toggleColorMode: '切换颜色模式',
+  filter: '滤波器',
+  present: '展示',
   accreditations: '认证',
 };
 
