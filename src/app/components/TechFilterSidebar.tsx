@@ -68,7 +68,7 @@ export default function TechFilterSidebar({
 
       <Input
         size="sm"
-        placeholder="Search technologies…"
+        placeholder={t('searchTechnologies') + '...'}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         mb={3}

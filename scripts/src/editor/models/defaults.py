@@ -3,9 +3,20 @@ from __future__ import annotations
 
 from typing import Any
 
-from .schema import (Acreditation, Bio, ComplementaryEntry, Educations, Intro,
-                     LanguageEntry, Link, PeriodTime, PortfolioData, Project,
-                     UniversityEntry, Work)
+from .schema import (
+    Acreditation,
+    Bio,
+    ComplementaryEntry,
+    Educations,
+    Intro,
+    LanguageEntry,
+    Link,
+    PeriodTime,
+    PortfolioData,
+    Project,
+    UniversityEntry,
+    Work,
+)
 
 
 def ensure_period_time(v: Any) -> PeriodTime:
@@ -124,7 +135,7 @@ def ensure_intro_defaults(v: Any) -> Intro:
         summary_json = "".join(summary_json)
     hobbies_json = d.get("hobbies", "")
     if isinstance(hobbies_json, list):
-        summary_json = "".join(hobbies_json)
+        hobbies_json = "".join(hobbies_json)
     return {
         "greeting": d.get("greeting", ""),
         "profile_image": d.get("profile_image", ""),

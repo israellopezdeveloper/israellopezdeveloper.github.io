@@ -55,7 +55,10 @@ export default function HomePage(): JSX.Element {
         overflow="hidden"
         alignSelf={'center'}
       >
-        <Image src={'/images/israel.png'} alt="Profile Image" />
+        <Image
+          src={'/images/intro/' + intro.profile_image}
+          alt="Profile Image"
+        />
       </Box>
       <Box>
         <Box alignItems={'center'}>

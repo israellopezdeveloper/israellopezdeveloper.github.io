@@ -36,7 +36,7 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
                   <ChakraTooltip.ArrowTip />
                 </ChakraTooltip.Arrow>
               )}
-              {content}
+              <div dangerouslySetInnerHTML={{ __html: content || '' }}></div>
             </ChakraTooltip.Content>
           </ChakraTooltip.Positioner>
         </Portal>

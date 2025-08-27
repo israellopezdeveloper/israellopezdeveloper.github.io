@@ -7,8 +7,10 @@ from PySide6 import QtCore, QtWidgets
 
 from ..dialogs.complementary_dialog import ComplementaryDialog
 from ..dialogs.language_dialog import LanguageDialog
+
 # Dialogs
 from ..dialogs.university_dialog import UniversityDialog
+
 # Utils
 from ..utils.lists import CustomList
 
@@ -98,7 +100,7 @@ class EducationsTab(QtWidgets.QWidget):
         return {
             "university": self._university.data(),
             "complementary": self._complementary.data(),
-            "languages": self._complementary.data(),
+            "languages": self._languages.data(),
         }
 
 

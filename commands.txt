@@ -1,4 +1,4 @@
 1 -  Editor - cls; nvim
 2 -  Server - cls; rm -rf .next; npm run dev
 3 -  App - cls; cd scripts/;
-4 -  Commands - cls
+4 -🗃️ Ranger - cls; ranger public/cv/

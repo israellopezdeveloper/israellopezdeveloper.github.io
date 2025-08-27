@@ -204,8 +204,8 @@ export default function WorksPage(): React.JSX.Element {
                     work={{
                       id,
                       title: w.name,
-                      ...(w.short_description?.[0] && {
-                        description: w.short_description[0],
+                      ...(w.short_description && {
+                        description: w.short_description,
                       }),
                       ...(w.period_time && { year: w.period_time }),
                       ...(w.thumbnail && {

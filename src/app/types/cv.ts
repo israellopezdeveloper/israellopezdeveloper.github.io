@@ -5,6 +5,12 @@ export type CVLink = {
   tag?: string;
 };
 
+export type CVPeriod = {
+  start: string;
+  end: string;
+  current: boolean;
+};
+
 export type CVBio = {
   dates: string;
   text: string;
@@ -15,40 +21,40 @@ export type CVIntro = {
   profile_image?: string;
   name: string;
   title: string;
-  summary?: string[];
-  bio?: CVBio[];
-  hobbies?: string[];
-  links?: CVLink[];
+  summary: string;
+  bio: CVBio[];
+  hobbies: string;
+  links: CVLink[];
 };
 
 export type CVProject = {
   name: string;
-  description?: string[];
-  technologies?: string[];
-  links?: CVLink[];
-  images?: string[];
+  description: string;
+  technologies: string[];
+  links: CVLink[];
+  images: string[];
 };
 
 export type CVWork = {
   slug?: string;
   name: string;
-  short_description?: string[];
+  short_description: string;
   thumbnail?: string;
-  period_time?: string;
-  full_description?: string[];
-  contribution?: string[];
-  links?: CVLink[];
-  projects?: CVProject[];
-  images?: string[];
+  period_time: CVPeriod;
+  full_description: string;
+  contribution: string;
+  links: CVLink[];
+  projects: CVProject[];
+  images: string[];
 };
 
 export type CVUniversity = {
   slug?: string;
   university_name: string;
   title: string;
-  period_time?: string;
-  summary?: string[];
-  images?: string[];
+  period_time: CVPeriod;
+  summary: string;
+  images: string[];
   thumbnail?: string;
 };
 
@@ -56,16 +62,16 @@ export type CVComplementary = {
   slug?: string;
   institution: string;
   title: string;
-  period_time?: string;
-  summary?: string[];
-  images?: string[];
+  period_time: CVPeriod;
+  summary: string;
+  images: string[];
   thumbnail?: string;
 };
 
 export type CVAcreditation = {
   institution: string;
   title: string;
-  period_time?: string;
+  period_time: CVPeriod;
 };
 
 export type CVLang = {
@@ -74,7 +80,7 @@ export type CVLang = {
   spoken?: string;
   writen?: string;
   read?: string;
-  acreditations?: CVAcreditation[];
+  acreditation: CVAcreditation[];
   thumbnail?: string;
 };
 

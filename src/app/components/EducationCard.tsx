@@ -11,6 +11,10 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
+import { Tooltip } from './ui/tooltip';
+import { useI18n } from '../i18n/useI18n';
+
+import type { CVPeriod } from '../types/cv';
 import type { JSX } from 'react';
 
 type Props = {
@@ -19,9 +23,19 @@ type Props = {
   subtitle?: string; // uni/institución o idioma
   period?: string; // periodo
   thumbnail?: string; // /images/educations/...
-  summary?: string[]; // primeras líneas
+  summary: string; // primeras líneas
   badges?: string[]; // extras (por ejemplo skills/keywords)
 };
+
+function isPeriodObject(v: unknown): v is CVPeriod {
+  return (
+    !!v &&
+    typeof v === 'object' &&
+    ('start' in (v as CVPeriod) ||
+      'end' in (v as CVPeriod) ||
+      'current' in (v as CVPeriod))
+  );
+}
 
 export default function EducationCard({
   href,
@@ -32,6 +46,21 @@ export default function EducationCard({
   summary,
   badges,
 }: Props): JSX.Element {
+  const t = useI18n();
+
+  function formatPeriod(p: CVPeriod): string {
+    const start = (p.start ?? '').toString().trim();
+    const end = p.current ? t('present') : (p.end ?? '').toString().trim();
+    if (start && end) return `${start} – ${end}`;
+    if (start) return `${start} – ${end || t('present')}`;
+    return end || '';
+  }
+
+  const yearText = isPeriodObject(period)
+    ? formatPeriod(period)
+    : period != null
+      ? String(period)
+      : '';
   return (
     <Box
       as="article"
@@ -73,12 +102,14 @@ export default function EducationCard({
         ) : null}
         {period ? (
           <Text fontSize="sm" color="fg.muted" mb={2}>
-            {period}
+            {yearText}
           </Text>
         ) : null}
-        {summary?.length ? (
+        {summary ? (
           <VStack align="start" gap={1}>
-            <Text lineClamp={3}>{summary[0]}</Text>
+            <Tooltip content={summary} showArrow>
+              <Text lineClamp={2}>{summary}</Text>
+            </Tooltip>
           </VStack>
         ) : null}
         {badges?.length ? (
