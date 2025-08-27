@@ -190,6 +190,7 @@ class WorkDialog(BaseDialog):
     def _revalidate(self) -> None:
         self._ok_btn.setDisabled(self._name.text() == "")
 
+
     # ----- carga/volcado -----
     def set_value(self, data: Dict[str, Any]) -> None:
         self._name.setText(str(data.get("name")))
