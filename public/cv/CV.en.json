@@ -97,7 +97,7 @@
         "summary": "Artificial intelligence and machine learning. Supervised, unsupervised and reinforced. Symbolic learning. Classification and regression models. Model optimization. Deep networks. Multilayer networks, retropropagation. Loss functions. Hyperparameters and learning strategies. Convoltional networks. Image recognition. Sequential and recurrent networks. LSTM models. Parallelisation and computing techniques in GPU-based architectures. Vectoring techniques. Programming with tensorflow and theano. Automated learning. Scalable learning. Frameworks for scalability in computer clusters. Applications in medicine, finance, automated driving, etc.",
         "thumbnail": "uah.svg",
         "title": "Master's degree in Artificial Intelligence in information and communication technologies",
-        "university_name": "A.U.A."
+        "university_name": "UAH"
       },
       {
         "images": ["uah.svg"],
@@ -109,7 +109,7 @@
         "summary": "With honors in: Artificial intelligence, diffuse logic, systems of artificial vision, physics II, mathematical analysis, data structure, networks.",
         "thumbnail": "uah.svg",
         "title": "Technical engineering in computer science",
-        "university_name": "A.U.A."
+        "university_name": "UAH"
       }
     ]
   },
@@ -133,7 +133,7 @@
       }
     ],
     "greeting": "Hello, I'm Israel, a hardened senior developer traveling the world.",
-    "hobbies": " climbing,  snowboarding,  traveling,  diving,  mathematics (especially linear algebra and statistics),  Artificial intelligence.",
+    "hobbies": "🧗 climbing, 🏂 snowboarding, 🧭 traveling, 🤿 diving, ⨋ mathematics (especially linear algebra and statistics), 🧠 Artificial intelligence.",
     "links": [
       {
         "icon": "",
