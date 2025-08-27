@@ -61,7 +61,7 @@ class BaseDirDialog(QtWidgets.QDialog):
         self._buttons.rejected.connect(self.reject)
 
         # Sugerir HOME
-        self._edit.setText(str(Path.cwd()))
+        self._edit.setText(str(Path.cwd().parent))
 
     # ---- API ----
     def base_dir(self) -> Path:
