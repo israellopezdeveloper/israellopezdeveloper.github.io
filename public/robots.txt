@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://israellopezdeveloper.github.io
+
+# Sitemaps
+Sitemap: https://israellopezdeveloper.github.io/sitemap.xml
