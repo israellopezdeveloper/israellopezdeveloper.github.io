@@ -1,3 +1,7 @@
+
+clean:
+	@rm -rf ./node_modules/ ./scripts/.venv ./.next ./dist/
+
 dev_app:
 	@rm -rf scripts/CV.base.en.json
 	@cd scripts && \

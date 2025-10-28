@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 
 from PySide6 import QtCore, QtWidgets
 
@@ -15,8 +16,14 @@ class BioDialog(BaseDialog):
     def __init__(
         self,
         parent: Optional[QtWidgets.QWidget] = None,
+        suggestions: List[str] = [],
+        dialog_dir: Path = Path.cwd(),
     ) -> None:
-        super().__init__(parent)
+        super().__init__(
+            parent,
+            suggestions=suggestions,
+            dialog_dir=dialog_dir,
+        )
         self._dates = QtWidgets.QLineEdit(self)
         self._text = QtWidgets.QPlainTextEdit(self)
         form = QtWidgets.QFormLayout()
