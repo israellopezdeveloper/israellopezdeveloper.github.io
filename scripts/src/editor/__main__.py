@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 
-from editor.app_desktop import MainWindow
+from editor.app import MainWindow
 from PySide6 import QtCore, QtGui, QtWidgets
 
 
