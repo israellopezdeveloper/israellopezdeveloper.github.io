@@ -4,7 +4,8 @@
     { href: '#services', label: 'Services' },
     { href: '#experience', label: 'Experience' },
     { href: '#social-proof', label: 'Social Proof' },
-    { href: '#tech-stack', label: 'Tech Stack' }
+    { href: '#tech-stack', label: 'Tech Stack' },
+    { href: '#contact', label: 'Contact' }
   ];
 </script>
 

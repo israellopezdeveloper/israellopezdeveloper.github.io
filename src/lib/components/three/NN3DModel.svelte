@@ -87,10 +87,6 @@
     width: 100%;
     height: 100%;
   }
-  :global(.panel) {
-    height: calc(100% - 300px);
-    overflow: hidden;
-  }
 
   .fallback,
   .runtime {

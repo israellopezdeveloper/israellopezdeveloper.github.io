@@ -4,6 +4,7 @@
   import Services from '../routes/sections/Services.svelte';
   import SocialProof from '../routes/sections/SocialProof.svelte';
   import TechStack from '../routes/sections/TechStack.svelte';
+  import Contact from './sections/Contact.svelte';
 </script>
 
 <main>
@@ -12,4 +13,5 @@
   <Experience></Experience>
   <SocialProof></SocialProof>
   <TechStack></TechStack>
+  <Contact></Contact>
 </main>
