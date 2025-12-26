@@ -1,0 +1,118 @@
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b0b0f;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    Noto Sans,
+    Helvetica,
+    Arial;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Layout tokens */
+:root {
+  --bg: #0b0b0f;
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.72);
+  --border: rgba(255, 255, 255, 0.1);
+  --panel: rgba(255, 255, 255, 0.03);
+}
+
+/* Generic section layout */
+.section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 4rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.section--hero {
+  /* hero full-bleed */
+  padding: 0; /* <- importantísimo */
+  justify-content: flex-start; /* <- evita texto centrado en la cara */
+  position: relative;
+  overflow: hidden;
+}
+
+.section--tight {
+  padding: 56px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.top {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+}
+
+.desc {
+  margin: 0;
+  color: var(--muted);
+  max-width: 80ch;
+  line-height: 1.6;
+}
+
+/* Make anchors not hide under sticky header */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Reusable panel */
+.panel {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 20px;
+}
+
+.panel--md {
+  border-radius: 16px;
+}
+.panel--lg {
+  border-radius: 20px;
+}
+
+.panel--padded {
+  padding: 18px;
+}
+
+.work-image {
+  padding-left: 10%;
+  width: 80%;
+  object-fit: contain;
+}
