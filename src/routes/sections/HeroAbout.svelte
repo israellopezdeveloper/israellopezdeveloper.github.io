@@ -25,42 +25,58 @@
 
     <!-- Content layer -->
     <div class="heroContent" class:reduced>
-      <div class="kicker">Freelance · Senior</div>
-      <h1 class="headline">Backend &amp; Cloud Engineer</h1>
+      <div class="kicker">Senior IC · Freelance · Global</div>
+
+      <h1 class="headline">
+        Senior Software Engineer
+        <span class="headline__muted"
+          >(AI Systems · High-Performance Backend)</span
+        >
+      </h1>
 
       <p class="subheadline">
-        I build and scale production systems with a performance-first mindset:
-        reliability, cost control, and clean architecture you can evolve.
+        Hands-on engineer (80%+ coding) helping teams build, scale, and fix
+        complex production systems — especially where AI, performance,
+        reliability, and cost control matter.
       </p>
 
       <ul class="bullets">
-        <li>Scale backend systems and reduce latency under real traffic</li>
-        <li>Cloud/serverless optimization (AWS) with strong observability</li>
-        <li>AI/LLM integration on top of existing systems (no rewrites)</li>
+        <li>
+          AI in production: LLM/RAG integrations, model deployment,
+          observability
+        </li>
+        <li>Distributed backend at scale: latency, throughput, resilience</li>
+        <li>
+          AWS &amp; cloud optimization: pragmatic architecture, measurable cost
+          control
+        </li>
       </ul>
 
       <div class="proof">
         <span class="pill">15+ years</span>
-        <span class="pill">Production systems</span>
-        <span class="pill">Async / distributed</span>
+        <span class="pill">80%+ coding</span>
+        <span class="pill">Long-term (6+ months)</span>
       </div>
 
       <div class="ctaRow">
-        <a class="primary" href="#contact">Book a call</a>
+        <a class="primary" href="#contact">Let’s talk about your system</a>
         <a class="secondary" href="#experience">View selected work</a>
       </div>
+
+      <p class="micro">
+        Hourly preferred · Open to project/retainer · No people management (IC
+        track)
+      </p>
     </div>
   </div>
 </Section>
 
 <style>
-  /* Contenedor real del hero: referencia para el absolute + 100vh */
   .heroShell {
     position: relative;
     width: 100%;
     min-height: 100vh;
 
-    /* para que el contenido no quede debajo del header sticky */
     padding-top: 88px;
 
     display: flex;
@@ -81,14 +97,12 @@
     height: 100%;
     object-fit: cover;
 
-    /* 🔑 IMPORTANTE: foto vertical => en desktop hay que subir el encuadre */
     object-position: 50% 8%;
 
     filter: saturate(1.05) contrast(1.05);
-    transform: scale(1.02);
+    transform: scale(1);
   }
 
-  /* Si la pantalla es MUY panorámica, todavía sube más la cara */
   @media (min-aspect-ratio: 16/9) {
     .heroImg {
       object-position: 50% 6%;
@@ -99,7 +113,6 @@
     position: absolute;
     inset: 0;
 
-    /* Más oscuro en la izquierda para que el texto NO compita con la cara */
     background: linear-gradient(
       to right,
       rgba(2, 6, 23, 0.92) 0%,
@@ -117,9 +130,8 @@
     z-index: 1;
 
     width: 100%;
-    max-width: 760px;
+    max-width: 820px;
 
-    /* texto a la izquierda, no centrado en la cara */
     margin-left: clamp(18px, 6vw, 84px);
     margin-right: 18px;
   }
@@ -145,8 +157,17 @@
 
   .headline {
     margin: 10px 0 12px;
-    font-size: 44px;
+    font-size: 40px;
     line-height: 1.05;
+  }
+
+  .headline__muted {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.55em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.72);
+    letter-spacing: 0.01em;
   }
 
   @media (min-width: 960px) {
@@ -159,7 +180,7 @@
     color: rgba(255, 255, 255, 0.78);
     font-size: 16px;
     line-height: 1.6;
-    max-width: 58ch;
+    max-width: 64ch;
     margin: 0 0 18px;
   }
 
@@ -167,6 +188,7 @@
     margin: 0 0 18px;
     padding-left: 18px;
     color: rgba(255, 255, 255, 0.82);
+    max-width: 70ch;
   }
 
   .bullets li {
@@ -177,7 +199,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 18px 0 22px;
+    margin: 18px 0 18px;
   }
 
   .pill {
@@ -220,6 +242,14 @@
 
   .secondary:hover {
     color: white;
+  }
+
+  .micro {
+    margin: 14px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.62);
+    max-width: 70ch;
   }
 
   /* =========================

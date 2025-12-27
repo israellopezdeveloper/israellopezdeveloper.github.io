@@ -1,9 +1,10 @@
 <script lang="ts">
   const links = [
     { href: '#about', label: 'About' },
+    { href: '#social-proof', label: 'Social Proof' },
+    { href: '#how-i-work', label: 'How I Work' },
     { href: '#services', label: 'Services' },
     { href: '#experience', label: 'Experience' },
-    { href: '#social-proof', label: 'Social Proof' },
     { href: '#tech-stack', label: 'Tech Stack' },
     { href: '#contact', label: 'Contact' }
   ];

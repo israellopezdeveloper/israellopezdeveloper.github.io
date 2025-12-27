@@ -5,13 +5,15 @@
   import SocialProof from '../routes/sections/SocialProof.svelte';
   import TechStack from '../routes/sections/TechStack.svelte';
   import Contact from './sections/Contact.svelte';
+  import HowIWork from './sections/HowIWork.svelte';
 </script>
 
 <main>
-  <HeroAbout></HeroAbout>
-  <Services></Services>
-  <Experience></Experience>
-  <SocialProof></SocialProof>
-  <TechStack></TechStack>
-  <Contact></Contact>
+  <HeroAbout />
+  <SocialProof />
+  <HowIWork />
+  <Services />
+  <Experience />
+  <TechStack />
+  <Contact />
 </main>

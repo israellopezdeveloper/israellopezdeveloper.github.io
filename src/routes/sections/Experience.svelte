@@ -144,7 +144,7 @@
   }
 </script>
 
-<Section title="Experience" id="experience">
+<Section title="Case studies" id="experience">
   <div class="experience__fullbleed">
     <div class="experience__grid">
       <div class="experience__left">
