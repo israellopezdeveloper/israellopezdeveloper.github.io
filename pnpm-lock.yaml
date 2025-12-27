@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@israellopezdeveloper/nn3d':
-        specifier: ^0.1.13
-        version: 0.1.13(gsap@3.14.2)(svelte@5.46.0)(three@0.182.0)
+        specifier: ^0.1.14
+        version: 0.1.14(gsap@3.14.2)(svelte@5.46.0)(three@0.182.0)
       gsap:
         specifier: ^3.14.2
         version: 3.14.2
@@ -295,8 +295,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@israellopezdeveloper/nn3d@0.1.13':
-    resolution: {integrity: sha512-Q+/L47wiJxjNtw3Dh/xrAE3+mu7ivRGsH7+Nwy5Kz5WgGfh+OL8MDbXZsEfvM3SpyZDyyugsIA+SEPXRGsj6jQ==}
+  '@israellopezdeveloper/nn3d@0.1.14':
+    resolution: {integrity: sha512-NDUEeTzK/ORk8N6CGvLYZCMBTingRD3T62zgV5zst7haY+NjtxptN+217CcX5tBty+6tRrx5pZjaYkJ96bLafQ==}
     peerDependencies:
       gsap: ^3.14.1
       svelte: ^5.0.0
@@ -1277,7 +1277,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@israellopezdeveloper/nn3d@0.1.13(gsap@3.14.2)(svelte@5.46.0)(three@0.182.0)':
+  '@israellopezdeveloper/nn3d@0.1.14(gsap@3.14.2)(svelte@5.46.0)(three@0.182.0)':
     dependencies:
       gsap: 3.14.2
       svelte: 5.46.0
