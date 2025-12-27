@@ -134,7 +134,8 @@ mapTechType.set('Cloud & Infrastructure', [
   'Websphere',
   'WebLogic 12',
   'IIS',
-  'BalenaIO'
+  'BalenaIO',
+  'IBM System z'
 ]);
 
 mapTechType.set('DevOps & CI/CD', [

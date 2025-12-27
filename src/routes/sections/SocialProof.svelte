@@ -1,6 +1,10 @@
 <script lang="ts">
   import { socialProof } from '$lib/data/socialProof';
   import Section from './Section.svelte';
+
+  // Optional safety defaults (in case fields are missing)
+  const awards = socialProof.awards ?? [];
+  const recommendations = socialProof.recommendations ?? [];
 </script>
 
 <Section
@@ -16,7 +20,42 @@
     </div>
 
     <figure class="quote">
+      {#if awards.length || recommendations.length}
+        <div class="proof">
+          {#each awards as a}
+            <div class="chip">
+              <span class="chip__label">Award</span>
+              <span class="chip__text">{a.title}</span>
+              {#if a.org}<span class="chip__meta">· {a.org}</span>{/if}
+              {#if a.year}<span class="chip__meta">· {a.year}</span>{/if}
+            </div>
+          {/each}
+
+          {#each recommendations as r}
+            {#if r.url}
+              <a
+                class="chip chip--link"
+                href={r.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span class="chip__label">Recommendation</span>
+                <span class="chip__text">{r.org ?? 'Devo'}</span>
+                {#if r.author}<span class="chip__meta">· {r.author}</span>{/if}
+              </a>
+            {:else}
+              <div class="chip">
+                <span class="chip__label">Recommendation</span>
+                <span class="chip__text">{r.org ?? 'Devo'}</span>
+                {#if r.author}<span class="chip__meta">· {r.author}</span>{/if}
+              </div>
+            {/if}
+          {/each}
+        </div>
+      {/if}
+
       <blockquote>“{socialProof.testimonial.quote}”</blockquote>
+
       <figcaption>
         <div class="author">{socialProof.testimonial.author}</div>
         <div class="role">{socialProof.testimonial.role}</div>
@@ -74,6 +113,50 @@
     padding: 18px;
     display: grid;
     gap: 14px;
+  }
+
+  /* NEW: proof chips */
+  .proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.18);
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 12.5px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .chip--link {
+    text-decoration: none;
+    transition:
+      transform 120ms ease,
+      border-color 120ms ease;
+  }
+  .chip--link:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .chip__label {
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.95);
+  }
+  .chip__text {
+    font-weight: 650;
+  }
+  .chip__meta {
+    color: rgba(255, 255, 255, 0.65);
   }
 
   blockquote {

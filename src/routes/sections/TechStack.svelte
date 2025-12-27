@@ -1,6 +1,21 @@
 <script lang="ts">
-  import { stack } from '$lib/data/stack';
+  import { stack, type TechXP } from '$lib/data/stack';
   import Section from './Section.svelte';
+  import { slide } from 'svelte/transition';
+
+  let expandedGroups = new Set<string>();
+  const numMax = 8;
+
+  function toggleGroup(label: string) {
+    if (expandedGroups.has(label)) {
+      expandedGroups.delete(label);
+    } else {
+      expandedGroups.add(label);
+    }
+    expandedGroups = expandedGroups;
+  }
+
+  const sortByExp = (a: any, b: any) => b.experience - a.experience;
 </script>
 
 <Section
@@ -10,17 +25,41 @@
 >
   <div class="grid">
     {#each stack as g}
+      {@const sortedItems = [...g.items].sort(sortByExp)}
       <div class="group">
         <div class="label">{g.label}</div>
         <div class="chips">
-          {#each g.items as item}
+          {#each sortedItems.slice(0, numMax) as item}
             <span
               class="chip has-tooltip"
-              data-tooltip={`${item.experience} months`}
+              data-tooltip={`${(item as TechXP).experience} months`}
             >
-              {item.name}
+              {(item as TechXP).name}
             </span>
           {/each}
+
+          {#if expandedGroups.has(g.label)}
+            <div class="expanded-contents" transition:slide={{ duration: 300 }}>
+              <div class="chips-inner">
+                {#each sortedItems.slice(numMax) as item}
+                  <span
+                    class="chip has-tooltip"
+                    data-tooltip={`${item.experience} months`}
+                  >
+                    {item.name}
+                  </span>
+                {/each}
+              </div>
+            </div>
+          {/if}
+
+          {#if sortedItems.length > numMax}
+            <button class="show-more-btn" on:click={() => toggleGroup(g.label)}>
+              {expandedGroups.has(g.label)
+                ? 'Show less'
+                : `+${sortedItems.length - numMax} more`}
+            </button>
+          {/if}
         </div>
       </div>
     {/each}
@@ -28,6 +67,42 @@
 </Section>
 
 <style>
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .expanded-contents {
+    width: 100%;
+  }
+
+  .chips-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .show-more-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .show-more-btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
   .grid {
     display: grid;
     gap: 14px;
