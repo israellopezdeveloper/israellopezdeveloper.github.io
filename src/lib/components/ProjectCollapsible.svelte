@@ -14,7 +14,6 @@
 {#if open}
   <div class="panel">
     {#if project.description}
-      <h4>Details</h4>
       <div class="html">{@html project.description}</div>
     {/if}
 

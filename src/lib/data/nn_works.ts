@@ -2,205 +2,197 @@ import type { ModelNode } from '@israellopezdeveloper/nn3d';
 
 export const nn_works: ModelNode[] = [
   {
-    id: 'works',
-    label: 'Works',
+    id: "works",
+    label: "Works",
     layers: [
       {
-        id: 'datura-ai',
-        label: 'Datura AI',
+        id: "datura-ai",
+        label: "Datura AI",
         neurons: [
           {
-            id: 'mejora-del-algoritmo-de-recompensa-en-el-desempeno',
-            label: 'Mejora del algoritmo de recompensa en el desempeño'
+            id: "performance-based-reward-algorithm-improvement",
+            label: "Performance-based reward algorithm improvement"
           },
           {
-            id: 'despliegue-y-gestion-dinamica-de-modelos',
-            label: 'Despliegue y gestión dinámica de modelos'
+            id: "model-deployment-and-dynamic-resource-management",
+            label: "Model deployment and dynamic resource management"
           },
           {
-            id: 'automatizacion-y-escalabilidad',
-            label: 'Automatización y escalabilidad'
+            id: "automation-and-scalability",
+            label: "Automation and scalability"
           },
           {
-            id: 'monitorizacion-y-rendimiento',
-            label: 'Monitorización y rendimiento'
+            id: "monitoring-and-performance-optimization",
+            label: "Monitoring and performance optimization"
           },
           {
-            id: 'interoperabilidad-con-ecosistemas-descentralizados',
-            label: 'Interoperabilidad con ecosistemas descentralizados'
+            id: "interoperability-with-decentralized-ecosystems",
+            label: "Interoperability with decentralized ecosystems"
           }
         ]
       },
       {
-        id: 'indra',
-        label: 'Indra',
+        id: "indra",
+        label: "Indra",
         neurons: [
           {
-            id: 'sistema-de-mision-de-nueva-generacion-para-vehiculos-militar',
-            label:
-              'Sistema de misión de nueva generación para vehículos militares'
+            id: "next-generation-mission-system-for-military-vehicles",
+            label: "Next-generation mission system for military vehicles"
           },
           {
-            id: 'integracion-de-sistemas-de-recuperacion-aumentada-de-informa',
-            label:
-              'Integración de sistemas de Recuperación Aumentada de Información (RAG)'
+            id: "retrieval-augmented-generation-rag-systems-integration",
+            label: "Retrieval-Augmented Generation (RAG) systems integration"
           },
           {
-            id: 'colaboracion-en-modulos-de-inteligencia-artificial',
-            label: 'Colaboración en módulos de Inteligencia Artificial'
+            id: "artificial-intelligence-modules-collaboration",
+            label: "Artificial Intelligence modules collaboration"
           },
           {
-            id: 'pruebas-de-integracion-y-despliegue-en-entornos-distribuidos',
-            label:
-              'Pruebas de integración y despliegue en entornos distribuidos'
+            id: "integration-testing-and-deployment-in-distributed-environmen",
+            label: "Integration testing and deployment in distributed environments"
           }
         ]
       },
       {
-        id: 'devo',
-        label: 'Devo',
+        id: "devo",
+        label: "Devo",
         neurons: [
           {
-            id: 'mejorar-el-balanceador-de-carga-existente',
-            label: 'Mejorar el balanceador de carga existente'
+            id: "improve-the-existing-load-balancer",
+            label: "Improve the existing load balancer"
           },
           {
-            id: 'crear-un-sistema-de-respaldo-multicloud',
-            label: 'Crear un sistema de respaldo multicloud'
+            id: "build-a-multi-cloud-backup-system",
+            label: "Build a multi-cloud backup system"
           },
           {
-            id: 'integrar-revisiones-de-calidad-y-seguridad-en-el-pipeline-ci',
-            label:
-              'Integrar revisiones de calidad y seguridad en el pipeline CI/CD'
+            id: "integrate-quality-and-security-checks-into-ci-cd",
+            label: "Integrate quality and security checks into CI/CD"
           },
           {
-            id: 'creacion-de-un-sistema-de-alerta-para-monitoreo-con-promethe',
-            label:
-              'Creación de un sistema de alerta para monitoreo con Prometheus'
+            id: "build-an-alerting-system-with-prometheus",
+            label: "Build an alerting system with Prometheus"
           }
         ]
       },
       {
-        id: 'comision-europea',
-        label: 'Comisión Europea',
+        id: "european-commission",
+        label: "European Commission",
         neurons: [
           {
-            id: 'definicion-de-dos-apis-restful',
-            label: 'Definición de dos APIs RESTful'
+            id: "definition-of-two-restful-apis",
+            label: "Definition of two RESTful APIs"
           },
           {
-            id: 'e-confidencialidad',
-            label: 'E-Confidencialidad'
+            id: "e-confidentiality",
+            label: "E-Confidentiality"
           },
           {
-            id: 'indice-semantico-de-documentos-legales',
-            label: 'Índice semántico de documentos legales'
+            id: "semantic-index-for-legal-documents",
+            label: "Semantic index for legal documents"
           },
           {
-            id: 'desarrollo-de-un-sistema-de-distribucion-de-energia-renovabl',
-            label:
-              'Desarrollo de un sistema de distribución de energía renovable'
+            id: "renewable-energy-distribution-system-development",
+            label: "Renewable energy distribution system development"
           }
         ]
       },
       {
-        id: 'panel-sistemas',
-        label: 'Panel Sistemas',
+        id: "panel-sistemas",
+        label: "Panel Sistemas",
         neurons: [
           {
-            id: 'modernizacion-de-la-mensajeria-de-transporte-maritimo-y-aere',
-            label:
-              'Modernización de la mensajería de transporte marítimo y aéreo: reemplazo de IATA por XML/JSON'
+            id: "modernizing-maritime-and-air-transport-messaging-replacing-i",
+            label: "Modernizing maritime and air transport messaging: replacing IATA with XML/JSON"
           },
           {
-            id: 'gestion-inteligente-de-terminales-de-iberdrola-con-siemens',
-            label: 'Gestión Inteligente de Terminales de Iberdrola con Siemens'
+            id: "iberdrola-smart-terminal-management-with-siemens",
+            label: "Iberdrola smart terminal management with Siemens"
           },
           {
-            id: 'sistema-de-monitoreo-y-cuidado-para-personas-con-discapacida',
-            label:
-              'Sistema de monitoreo y cuidado para personas con discapacidades o ancianos para Securitas Direct'
+            id: "monitoring-and-assisted-care-system-for-elderly-and-disabled",
+            label: "Monitoring and assisted-care system for elderly and disabled users (Securitas Direct)"
           }
         ]
       },
       {
-        id: 'grupo-prisa',
-        label: 'Grupo Prisa',
+        id: "grupo-prisa",
+        label: "Grupo PRISA",
         neurons: [
           {
-            id: 'aplicacion-de-visor-de-paquetes-educativos',
-            label: 'Aplicación de visor de paquetes educativos'
+            id: "educational-content-viewer-mobile-application",
+            label: "Educational content viewer mobile application"
           },
           {
-            id: 'proyecto-de-estandarizacion-de-paquetes-educativos',
-            label: 'Proyecto de estandarización de paquetes educativos'
+            id: "educational-package-standardization-and-flash-to-html5-migra",
+            label: "Educational package standardization and Flash-to-HTML5 migration"
           },
           {
-            id: 'proyecto-de-plataforma-educativa',
-            label: 'Proyecto de plataforma educativa'
+            id: "integrated-education-management-platform",
+            label: "Integrated education management platform"
           }
         ]
       },
       {
-        id: 'intelygenz',
-        label: 'Intelygenz',
+        id: "intelygenz",
+        label: "Intelygenz",
         neurons: [
           {
-            id: 'proyecto-de-antena-3-television',
-            label: 'Proyecto de Antena 3 Televisión'
+            id: "antena-3-television-interactive-android-application",
+            label: "Antena 3 Television interactive Android application"
           },
           {
-            id: 'proyecto-de-gestor-de-documentos-para-bbva',
-            label: 'Proyecto de gestor de documentos para BBVA'
+            id: "bbva-document-management-system",
+            label: "BBVA document management system"
           },
           {
-            id: 'proyecto-de-front-colaborativo',
-            label: 'Proyecto de Front colaborativo'
+            id: "collaborative-frontend-platform-for-bbva",
+            label: "Collaborative frontend platform for BBVA"
           }
         ]
       },
       {
-        id: 'uah',
-        label: 'UAH',
+        id: "university-of-alcala-uah",
+        label: "University of Alcalá (UAH)",
         neurons: [
           {
-            id: 'proyecto-del-grupo-de-investigacion',
-            label: 'Proyecto del grupo de investigación'
+            id: "accessible-interaction-devices-research",
+            label: "Accessible interaction devices research"
           },
           {
-            id: 'sistema-de-comunicacion-para-dispositivos-biometricos',
-            label: 'Sistema de comunicación para dispositivos biométricos'
+            id: "standardized-communication-system-for-biometric-devices",
+            label: "Standardized communication system for biometric devices"
           },
           {
-            id: 'proyecto-de-pagina-web-del-grupo-de-investigacion',
-            label: 'Proyecto de página web del grupo de investigación'
+            id: "research-group-website-platform",
+            label: "Research group website platform"
           },
           {
-            id: 'contribuciones-al-grupo-de-investigacion',
-            label: 'Contribuciones al grupo de investigación'
+            id: "research-teaching-and-robotics-activities",
+            label: "Research, teaching, and robotics activities"
           }
         ]
       },
       {
-        id: 'knowcentury',
-        label: 'Knowcentury',
+        id: "knowcentury",
+        label: "Knowcentury",
         neurons: [
           {
-            id: 'desarrollo-de-sitios-web',
-            label: 'Desarrollo de sitios web'
+            id: "website-development",
+            label: "Website development"
           }
         ]
       },
       {
-        id: 'ibm',
-        label: 'IBM',
+        id: "ibm",
+        label: "IBM",
         neurons: [
           {
-            id: 'desarrollo-de-sitios-web',
-            label: 'Desarrollo de sitios web'
+            id: "mainframe-based-system-virtualization-research",
+            label: "Mainframe-based system virtualization research"
           }
         ]
       }
     ]
   }
-];
+] as ModelNode[];

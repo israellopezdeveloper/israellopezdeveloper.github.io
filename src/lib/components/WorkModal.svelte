@@ -112,18 +112,8 @@
         </header>
 
         <div class="content">
-          {#if (selected as Work).short_description}
-            <section class="block">
-              <h4>Summary</h4>
-              <div class="html">
-                {@html (selected as Work).short_description}
-              </div>
-            </section>
-          {/if}
-
           {#if (selected as Work).full_description}
             <section class="block">
-              <h4>Details</h4>
               <div class="html">
                 {@html (selected as Work).full_description}
               </div>

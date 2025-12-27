@@ -108,7 +108,7 @@ function main() {
 
   const content = `import type { ModelNode } from '@israellopezdeveloper/nn3d';
 
-export const models: ModelNode[] = ${tsLiteral(models)} as ModelNode[];
+export const nn_projects: ModelNode[] = ${tsLiteral(models)} as ModelNode[];
 `;
 
   ensureDir(output);
