@@ -55,9 +55,7 @@
 
         <div class="divider"></div>
 
-        <div class="footnote">
-          Remote-first · Europe / US friendly · English / Spanish
-        </div>
+        <div class="footnote">Remote-first · English / Spanish / Chinese</div>
       </div>
     </div>
   </div>

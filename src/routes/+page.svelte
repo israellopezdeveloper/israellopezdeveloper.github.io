@@ -10,10 +10,10 @@
 
 <main>
   <HeroAbout />
-  <SocialProof />
   <HowIWork />
   <Services />
   <Experience />
   <TechStack />
+  <SocialProof />
   <Contact />
 </main>

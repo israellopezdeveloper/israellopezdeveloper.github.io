@@ -37,7 +37,7 @@
       <p class="subheadline">
         Hands-on engineer (80%+ coding) helping teams build, scale, and fix
         complex production systems — especially where AI, performance,
-        reliability, and cost control matter.
+        reliability, and cost control matter. More than 15 years of experience:
       </p>
 
       <ul class="bullets">
@@ -52,21 +52,12 @@
         </li>
       </ul>
 
-      <div class="proof">
-        <span class="pill">15+ years</span>
-        <span class="pill">80%+ coding</span>
-        <span class="pill">Long-term (6+ months)</span>
-      </div>
-
       <div class="ctaRow">
         <a class="primary" href="#contact">Let’s talk about your system</a>
         <a class="secondary" href="#experience">View selected work</a>
       </div>
 
-      <p class="micro">
-        Hourly preferred · Open to project/retainer · No people management (IC
-        track)
-      </p>
+      <p class="micro">Hourly preferred · Open to project/retainer</p>
     </div>
   </div>
 </Section>
@@ -96,7 +87,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+High-Performance
     object-position: 50% 8%;
 
     filter: saturate(1.05) contrast(1.05);
