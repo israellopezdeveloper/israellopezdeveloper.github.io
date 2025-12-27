@@ -1,0 +1,1120 @@
+{
+  "intro": {
+    "greeting": "Hi! I’m Israel, a hardcore senior developer traveling the world.",
+    "profile_image": "israel.png",
+    "name": "Israel López",
+    "title": "Senior Software Engineer",
+    "summary": "<p>My backpack is full of code and an endless drive to keep learning. Programming is my superpower.</p><p>I got hooked on coding at 13 and never stopped. Wherever I am in the world, my laptop comes with me.</p><p>I’m a restless mind with an insatiable curiosity to learn, innovate, and take on new intellectual challenges. I love watching ideas turn into reality through code.</p><p>Programming isn’t just my job—it’s my passion. I’m relentless about finding the optimal solution and I take pride in delivering clean, efficient, high-quality code.</p><p>If we connect, are you ready to embark on a new tech adventure together?</p>",
+    "hobbies": "🧗 climbing, 🏂 snowboarding, 🧭 traveling, 🤿 diving, ⨋ mathematics (especially linear algebra and statistics), 🧠 Artificial Intelligence.",
+    "links": [
+      {
+        "icon": "",
+        "text": "@israellopezdeveloper",
+        "url": "https://github.com/israellopezdeveloper"
+      },
+      {
+        "icon": "󰇮",
+        "text": "israel.lopez.developer@gmail.com",
+        "url": "mailto:israel.lopez.developer@gmail.com"
+      },
+      {
+        "icon": "󰌻",
+        "text": "https://www.linkedin.com/in/israellopezmaiz/",
+        "url": "https://www.linkedin.com/in/israellopezmaiz/"
+      },
+      {
+        "icon": "",
+        "text": "+34 648 13 66 40",
+        "url": "tel:+34648136640"
+      }
+    ],
+    "bio": [
+      {
+        "dates": "1983",
+        "text": "Born in Madrid, Spain"
+      },
+      {
+        "dates": "2007",
+        "text": "Completed a degree in Computer Science at the University of Alcalá"
+      },
+      {
+        "dates": "2009",
+        "text": "Completed a Master’s degree in Artificial Intelligence for Information and Communication Technologies at the University of Alcalá"
+      },
+      {
+        "dates": "2004 – present",
+        "text": "Working professionally as a software engineer"
+      }
+    ]
+  },
+  "works": [
+    {
+      "contribution": "<ul>\n  <li>Optimized the model deployment lifecycle in distributed environments, significantly reducing time-to-production.</li>\n  <li>Implemented core modules in Python and Rust for model management, monitoring, and fault recovery.</li>\n  <li>Integrated high-performance C code for latency-critical operations.</li>\n  <li>Automated deployment pipelines using Docker and Kubernetes.</li>\n  <li>Optimized GPU and CPU utilization to maximize performance and energy efficiency.</li>\n  <li>Worked closely with product teams to define scalability strategies and cost-optimization initiatives.</li>\n</ul>",
+      "full_description": "<p><strong>Datura AI</strong> is a company focused on building technologies for the distribution and execution of Artificial Intelligence models across decentralized networks and distributed environments. Its mission is to overcome the limitations of centralized systems by providing tools that enable secure, fast, and scalable AI model deployment across cloud and remote infrastructures.</p>\n\n<p>Its flagship product, <strong>Celium</strong>, is a platform for orchestrating and managing AI models in containers. It enables:</p>\n<ul>\n  <li>Instant model deployment across distributed and edge environments.</li>\n  <li>Dynamic pod editing and real-time resource adjustment.</li>\n  <li>Optimized deployment templates for models such as Stable Diffusion, Whisper, LLaMA, and Mistral.</li>\n  <li>Real-time performance monitoring and optimization.</li>\n  <li>Native integration with decentralized ecosystems like Bittensor.</li>\n</ul>",
+      "images": [],
+      "links": [
+        {
+          "icon": "",
+          "text": "Website",
+          "url": "https://www.datura.ai"
+        }
+      ],
+      "name": "Datura AI",
+      "period_time": {
+        "current": true,
+        "end": "None",
+        "start": "March 2025"
+      },
+      "projects": [
+        {
+          "description": "<p>\n  I led the optimization of the platform’s reward system, designed to incentivize nodes that consistently deliver the highest performance across the network. This involved a deep redesign of the scoring algorithm, introducing more representative performance parameters and recalibrating metric weights to better reward efficiency and stability.\n</p>\n<p>\n  The work included analyzing how nodes handled critical factors such as sustained uptime, inference latency, and the operational impact of hot model swaps. Based on this analysis, I introduced a new scoring model that prioritizes continuous availability, progressively penalizes downtime or excessive model-switching times, and favors nodes providing predictable and stable service.\n</p>\n<p>\n  To improve fairness and robustness, I added safeguards against metric manipulation and opportunistic behavior, ensuring rewards are driven by execution quality rather than raw task volume. The algorithm was designed to remain flexible, allowing dynamic adjustment of metric weights as the network and strategic goals evolve.\n</p>\n<p>\n  As a result, the reward system now aligns much more closely with Celium’s objectives: nodes that deliver high availability, low latency, and minimal transition times between models are rewarded proportionally, fostering collaboration, stability, and overall efficiency across the distributed infrastructure.\n</p>\n<p>Introduced anti-manipulation mechanisms and dynamic weighting to maintain balance and fairness.</p>",
+          "images": [],
+          "links": [
+            {
+              "icon": "",
+              "text": "Celium Portal",
+              "url": "https://lium.io/"
+            }
+          ],
+          "name": "Performance-based reward algorithm improvement",
+          "technologies": [
+            "Prometheus",
+            "Bittensor",
+            "Tech",
+            "CUDA",
+            "GPU Computing",
+            "GitHub Actions",
+            "Git",
+            "Helm",
+            "Kubernetes",
+            "Docker",
+            "C",
+            "Rust",
+            "Python",
+            "FastAPI",
+            "Redis",
+            "PostgreSQL",
+            "Celery",
+            "Grafana"
+          ]
+        },
+        {
+          "description": "<p>I implemented a platform for <strong>instant deployment of Machine Learning models in containers</strong>, running across <em>on-premise</em>, public cloud, and <em>edge</em> environments. The design prioritized portability, low latency, and scalability, enabling secure model publishing and updates with minimal service disruption.</p>\n<p>The solution features <strong>dynamic resource management</strong> through real-time pod editing and <strong>hot reallocation of CPU, GPU, and memory</strong> to handle demand spikes efficiently. This significantly reduced time-to-production while maintaining system stability and an optimal cost-performance balance.</p>\n<h4>Responsibilities</h4>\n<ul>\n  <li>Designed and implemented container-based infrastructure for multi-environment model deployment (local, cloud, and edge).</li>\n  <li>Enabled real-time pod editing and hot reallocation of CPU, GPU, and memory without noticeable downtime.</li>\n  <li>Automated CI/CD pipelines for model packaging, validation, and publishing with safe rollback mechanisms.</li>\n  <li>Defined scaling, affinity, and anti-affinity policies for GPU-accelerated workloads.</li>\n  <li>Implemented monitoring and alerting for latency, throughput, and resource usage (CPU/GPU/memory).</li>\n  <li>Collaborated with Data Science and DevOps teams to shorten the training-to-production cycle.</li>\n  <li>Ensured cross-environment model portability by standardizing images, dependencies, and inference contracts.</li>\n</ul>",
+          "images": [],
+          "links": [],
+          "name": "Model deployment and dynamic resource management",
+          "technologies": [
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "CUDA",
+            "TensorRT",
+            "gRPC",
+            "GitHub Actions",
+            "GPU Computing",
+            "Python"
+          ]
+        },
+        {
+          "description": "<p>\n  I developed <strong>automated model update and distribution pipelines</strong> across hundreds of remote nodes,\n  ensuring version consistency while minimizing manual intervention.\n</p>\n\n<p>\n  This approach dramatically reduced propagation times for new releases and strengthened overall <strong>system resilience</strong>,\n  ensuring continuity in large-scale distributed environments.\n</p>\n\n<h4>Responsibilities</h4>\n<ul>\n  <li>Designed automation workflows for model updates and deployments in distributed systems.</li>\n  <li>Implemented reliable distribution mechanisms with strict version control across hundreds of remote nodes.</li>\n  <li>Reduced rollout times through optimized CI/CD pipelines.</li>\n  <li>Monitored integrity and consistency of deployed models across heterogeneous clusters.</li>\n  <li>Defined rollback and recovery strategies to ensure resilience during distribution failures.</li>\n  <li>Worked with infrastructure teams to improve scalability and system availability.</li>\n</ul>",
+          "images": [],
+          "links": [],
+          "name": "Automation and scalability",
+          "technologies": [
+            "Ansible",
+            "Terraform",
+            "Kafka",
+            "MinIO",
+            "Bash",
+            "Git"
+          ]
+        },
+        {
+          "description": "<p>\n  I integrated <strong>real-time performance and resource usage metrics</strong>, significantly increasing system observability and\n  improving early detection and resolution of incidents across the platform.\n</p>\n\n<p>\n  I applied advanced <strong>load-balancing</strong> and <strong>process affinity</strong> techniques to optimize energy efficiency\n  and fully leverage available hardware in distributed environments.\n</p>\n\n<h4>Responsibilities</h4>\n<ul>\n  <li>Designed and implemented real-time metrics collection for CPU, GPU, memory, and inference latency.</li>\n  <li>Built dashboards and proactive alerts to provide full platform observability.</li>\n  <li>Applied dynamic load-balancing strategies to maintain stability under high demand.</li>\n  <li>Configured process affinity and anti-affinity policies to optimize hardware utilization.</li>\n  <li>Analyzed usage patterns to continuously improve energy efficiency.</li>\n  <li>Collaborated with operations teams to define and enforce performance KPIs.</li>\n</ul>",
+          "images": [],
+          "links": [],
+          "name": "Monitoring and performance optimization",
+          "technologies": [
+            "Prometheus",
+            "Grafana",
+            "Elastic Stack",
+            "Elastic Search",
+            "Logstash",
+            "Kibana",
+            "Node Exporter",
+            "cAdvisor",
+            "Nginx"
+          ]
+        },
+        {
+          "description": "<p>\n  I contributed to the <strong>integration of Celium with decentralized networks</strong> such as Bittensor, expanding the platform’s\n  capabilities and improving interoperability across collaborative distributed ecosystems.\n</p>\n\n<p>\n  This integration enabled the use of decentralized infrastructure for resource sharing and model deployment,\n  strengthening scalability and ecosystem resilience.\n</p>\n\n<h4>Responsibilities</h4>\n<ul>\n  <li>Designed and implemented connectors between Celium and decentralized networks such as Bittensor.</li>\n  <li>Ensured protocol and data format compatibility across heterogeneous systems.</li>\n  <li>Developed secure authentication and validation mechanisms for cross-network interactions.</li>\n  <li>Optimized task and workload distribution using decentralized resources.</li>\n  <li>Collaborated with research teams to explore new interoperability use cases in decentralized AI.</li>\n  <li>Contributed to documentation and standardization of multi-ecosystem integration processes.</li>\n</ul>",
+          "images": [],
+          "links": [],
+          "name": "Interoperability with decentralized ecosystems",
+          "technologies": [
+            "Kubernetes",
+            "Docker",
+            "Polkadot.js",
+            "Substrate API",
+            "Web3",
+            "ONNX Runtime",
+            "PyTorch",
+            "Bittensor"
+          ]
+        }
+      ],
+      "short_description": "Datura AI is a startup focused on decentralized technologies for networks such as Bittensor. Its mission is to move beyond centralized systems by delivering high-performance, easy-to-use tools. One of its core products is <strong>Celium</strong>, a platform for instant AI model deployment in containers, enabling pod editing, deployment templates, and fast execution of models such as Stable Diffusion or Whisper.",
+      "thumbnail": "daturaai.png"
+    },
+    {
+      "contribution": "<p>At Indra, I contributed across the following key areas:</p>\n<ul>\n    <li><strong>Backend design and implementation</strong> using Java and Node.js, applying Clean Architecture principles to ensure maintainability and scalability.</li>\n    <li><strong>Integration of a RAG system</strong> for contextual retrieval of operational intelligence, including heterogeneous ingestion, embeddings, and semantic search.</li>\n    <li><strong>GIS capabilities</strong> for geospatial analysis, tactical visualization, and real-time route and deployment optimization.</li>\n    <li><strong>API and interface definition</strong> to interoperate with NATO systems, complying with secure standards and protocols.</li>\n    <li><strong>Agile (SCRUM) delivery and Jira-based planning</strong>, prioritizing critical features and managing dependencies.</li>\n    <li><strong>CI/CD with GitLab</strong> and deployments on <strong>Kubernetes</strong>, with observability via Prometheus and Grafana.</li>\n    <li><strong>Performance and resilience optimization</strong> through load testing, fault tolerance, and hostile-environment simulations.</li>\n  </ul>",
+      "full_description": "<p>Indra is one of the world’s leading consulting and technology companies, delivering integrated solutions across Defense, Transport, Energy, Security, and Digital Transformation. With a strong international presence, Indra develops strategic systems and technologies for clients across Europe, the Americas, Asia, and Africa.</p>\n<p>Within the Defense domain, Indra leads the development of the first next-generation mission system for military vehicles in Europe and NATO countries. This flagship initiative aims to provide armed forces with an open, modular, and scalable platform integrating sensors, communication systems, Artificial Intelligence, and GIS components to enhance decision-making in complex operational environments. The project is part of the European Defence Fund, focused on strengthening Europe’s strategic autonomy and interoperability among allied forces.</p>\n<p>I worked on this initiative as a Senior Software Engineer, contributing to the definition, development, and integration of critical components within a technology stack combining Java, Node.js, Python, Retrieval-Augmented Generation (RAG) systems, and GIS.</p>",
+      "images": [],
+      "links": [],
+      "name": "Indra",
+      "period_time": {
+        "current": false,
+        "end": "February 2025",
+        "start": "April 2024"
+      },
+      "projects": [
+        {
+          "description": "<p>\n    A strategic project led by Indra under the European Defence Fund to build the\n    <strong>first next-generation mission system for military vehicles in Europe and NATO countries</strong>.\n    The system integrates Artificial Intelligence, GIS, and sensor management to provide armed forces with a\n    tactical advantage in complex operational environments.\n  </p>\n\n  <p>\n    The architecture is open, modular, and scalable, enabling interoperability between allied forces and\n    rapid integration of new technological components. It includes a <strong>RAG system</strong> for contextual\n    information retrieval, real-time geospatial analysis, and secure communication modules for critical data exchange.\n  </p>\n<h3>Responsibilities</h3>\n  <ul class=\"responsibilities\">\n    <li>Designed and implemented backend microservices in Java and Node.js following Clean Architecture principles.</li>\n    <li>Developed and integrated a RAG system for semantic search and contextualization of operational data.</li>\n    <li>Implemented GIS features for geospatial analysis and tactical visualization on interactive maps.</li>\n    <li>Defined secure APIs and protocols to interoperate with other NATO systems.</li>\n    <li>Automated CI/CD pipelines in GitLab with deployments to Kubernetes.</li>\n    <li>Optimized performance through load testing and fault-tolerance validation.</li>\n  </ul>",
+          "images": [],
+          "links": [
+            {
+              "icon": "",
+              "text": "Indra participation in the European Defence Fund",
+              "url": "https://www.indracompany.com/es/noticia/indra-lidera-participacion-espanola-proyectos-fondo-europeo-defensa-entra-formar-12"
+            }
+          ],
+          "name": "Next-generation mission system for military vehicles",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Spring Data",
+            "Spring Security",
+            "Node.js",
+            "Express",
+            "Python",
+            "FastAPI",
+            "RAG",
+            "Vector DB",
+            "Embeddings",
+            "PostgreSQL",
+            "MongoDB",
+            "GIS",
+            "PostGIS",
+            "OpenLayers",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "GitHub Actions",
+            "Jira",
+            "Prometheus",
+            "Grafana"
+          ]
+        },
+        {
+          "description": "<p>\n  I actively contributed to the integration of Retrieval-Augmented Generation (RAG) systems to enhance the mission platform’s ability to access critical information in real time. My work focused on designing and implementing pipelines to ingest, process, and query data from multiple heterogeneous sources, ensuring that retrieved information remained relevant, accurate, and low-latency.\n</p>\n<p>\n  In addition, I adapted the system to scale efficiently in distributed and resource-constrained environments by optimizing semantic queries, integrating embedding vectors, and applying hybrid search techniques (full-text and semantic). This work was instrumental in providing mission personnel with timely and actionable information in dynamic, high-complexity operational scenarios.\n</p>",
+          "images": [],
+          "links": [],
+          "name": "Retrieval-Augmented Generation (RAG) systems integration",
+          "technologies": [
+            "Java",
+            "Spring Security",
+            "Spring Data",
+            "Node Exporter",
+            "Python",
+            "Elastic Search",
+            "Qdrant",
+            "LangChain",
+            "PostgreSQL",
+            "Docker",
+            "Kubernetes"
+          ]
+        },
+        {
+          "description": "<p>\n  I was part of the team responsible for designing and integrating Artificial Intelligence modules into the platform, aimed at improving analysis and decision-making in mission-critical scenarios. I collaborated on services capable of real-time data processing, including satellite imagery analysis, video pattern recognition, and natural language processing for automated extraction of relevant information.\n</p>\n<p>\n  My contributions included implementing training and deployment pipelines, converting models to GPU-optimized formats for resource-constrained environments, and integrating APIs that connected AI modules with the rest of the platform ecosystem. This work took place in a highly multidisciplinary environment, aligning advanced AI capabilities with NATO interoperability requirements.\n</p>",
+          "images": [],
+          "links": [],
+          "name": "Artificial Intelligence modules collaboration",
+          "technologies": [
+            "Python",
+            "PyTorch",
+            "Bittensor",
+            "Hugging Face Transformers",
+            "OpenCV",
+            "CUDA",
+            "ONNX Runtime",
+            "FastAPI",
+            "Grafana",
+            "Docker"
+          ]
+        },
+        {
+          "description": "<p>\n  I led and participated in complex integration testing efforts, ensuring that system modules communicated reliably in distributed, mission-critical environments. This included defining test scenarios, building continuous integration pipelines, and validating interoperability across services deployed on both on-premise and cloud infrastructures.\n</p>\n<p>\n  I also contributed to the design and execution of deployments using container orchestration and automation tools to ensure platform scalability, resilience, and security. Real-time monitoring, event tracing, and dashboards were implemented to enable rapid incident detection and resolution. This effort was key to delivering a robust system capable of operating under demanding conditions with high availability requirements.\n</p>",
+          "images": [],
+          "links": [],
+          "name": "Integration testing and deployment in distributed environments",
+          "technologies": [
+            "Jenkins",
+            "Git",
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "Ansible",
+            "Terraform",
+            "Prometheus",
+            "Grafana"
+          ]
+        }
+      ],
+      "short_description": "Indra is a leading Spanish multinational in consulting and technology, operating in more than 140 countries. It delivers innovative solutions across Defense, Transport, Energy, Security, and Digital Transformation. In the Defense domain, Indra develops strategic, mission-critical systems that strengthen technological sovereignty and interoperability for European and NATO allied forces.",
+      "thumbnail": "indra.png"
+    },
+    {
+      "contribution": "<p>At Devo, I played a key role on the data ingestion team, focused on the load balancer. Because the data was highly sensitive and critical for diagnosing potential attacks, the service had to be both reliable and fast. Under my ownership, the system sustained ingestion volumes of ~60TB/day. I also contributed to Devo’s effort to meet U.S. federal integration requirements, supporting the path to FedRAMP compliance. In addition, I helped build a multi-region, multi-cloud backup system to ensure data redundancy and reliability across environments. My work strengthened Devo’s security posture and operational resilience, enabling the platform to serve customers at scale with high assurance.</p>",
+      "full_description": "<p>Devo is a cloud-native security analytics and log management company built for real-time insight at scale. Its platform enables organizations to detect, investigate, and respond to security threats using high-throughput ingestion, advanced analytics, and a highly scalable architecture. Devo is designed to handle massive data volumes while maintaining strong performance and security, helping enterprises stay ahead of evolving threats and compliance requirements across industries such as finance and telecommunications.</p>",
+      "images": ["devo1.png", "devo2.png"],
+      "links": [
+        {
+          "icon": "",
+          "text": "Devo website",
+          "url": "https://www.devo.com/es/"
+        }
+      ],
+      "name": "Devo",
+      "period_time": {
+        "current": false,
+        "end": "March 2024",
+        "start": "March 2020"
+      },
+      "projects": [
+        {
+          "description": "<p>I significantly improved Devo’s event load balancer performance by introducing advanced strategies to increase fault tolerance and strengthen observability across ingestion services. I analyzed system requirements, identified bottlenecks, and ensured the balancer handled highly variable traffic more efficiently. I improved failure-recovery mechanisms to maintain high availability under unexpected faults. I also implemented RELP (Reliable Event Logging Protocol) support from scratch to ensure reliable, low-loss event delivery.</p><p>In addition, I designed client-aware load balancing to keep customer data locality where possible, enabling more compact queries and faster retrieval. By avoiding unnecessary data mixing across nodes, query paths became shorter and the system’s operational overhead was reduced. These changes delivered a more robust, responsive load balancing layer and improved the overall ingestion and query experience.</p>",
+          "images": [],
+          "links": [
+            {
+              "icon": "",
+              "text": "Load balancer documentation",
+              "url": "https://docs.devo.com/space/latest/94653692/Event+load+balancers"
+            }
+          ],
+          "name": "Improve the existing load balancer",
+          "technologies": [
+            "BDD",
+            "TDD",
+            "Jira",
+            "GIT",
+            "Kubernetes",
+            "Gitlab CI/CD",
+            "Jenkins",
+            "Owasp",
+            "Snyk",
+            "SonarQube",
+            "FedRAMP",
+            "FIPS",
+            "C++",
+            "C",
+            "Node.js"
+          ]
+        },
+        {
+          "description": "<p>I led the design and development of a next-generation multi-cloud backup system from scratch, a critical upgrade to Devo’s redundancy and disaster-recovery capabilities. The system stored customer logs across multiple regions and cloud environments to maximize data protection and availability. A key feature was real-time configuration of storage tiers, allowing seamless changes to cloud storage settings based on live operational needs.</p><p>I implemented automated data transition rules to move data across storage classes based on access patterns and retention policies, ensuring cost-efficiency without compromising accessibility or performance.</p><p>The system also included robust node-recovery mechanisms to restore service quickly after node failures, reducing downtime and protecting data integrity. To improve efficiency, I implemented advanced compaction strategies for data approaching end-of-life, optimizing storage utilization and reducing overhead.</p><p>Finally, I integrated precise cleanup schedules so obsolete data was removed on time, keeping storage health and performance stable. This project reinforced Devo’s data resilience and supported strict security and retention requirements.</p>",
+          "images": [],
+          "links": [],
+          "name": "Build a multi-cloud backup system",
+          "technologies": [
+            "BDD",
+            "TDD",
+            "Jira",
+            "GIT",
+            "Kubernetes",
+            "Gitlab CI/CD",
+            "Jenkins",
+            "Owasp",
+            "Snyk",
+            "SonarQube",
+            "FedRAMP",
+            "FIPS",
+            "GCP",
+            "AWS",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>I played a key role in embedding comprehensive quality and security checks into Devo’s CI/CD pipeline, helping the engineering process meet strict industry standards including NIST, FIPS, and FedRAMP.</p><p><b>Jenkins pipeline integration</b></p><p>I introduced SonarQube into the Jenkins pipeline for continuous code-quality analysis, enabling early detection of defects, code smells, and potential vulnerabilities and ensuring only high-quality changes reached production.</p><p><b>Migration to GitLab CI/CD</b></p><p>After stabilizing the approach in Jenkins, I migrated the pipeline to GitLab CI/CD to streamline workflows and improve automation and collaboration.</p><p><b>Security vulnerability scanning</b></p><p>I integrated Snyk and OWASP tooling into CI/CD. Snyk provided real-time dependency vulnerability scanning and remediation guidance, while OWASP tooling supported broader security assessments focused on web application risks.</p><p><b>Compliance outcomes</b></p><p>I implemented automated gates to ensure every change passed rigorous quality and security checks before deployment. This strengthened the platform’s security posture and reduced the friction of compliance verification, supporting Devo’s FedRAMP readiness.</p>",
+          "images": [],
+          "links": [],
+          "name": "Integrate quality and security checks into CI/CD",
+          "technologies": [
+            "Jira",
+            "Kubernetes",
+            "Owasp",
+            "Snyk",
+            "SonarQube",
+            "FedRAMP",
+            "FIPS",
+            "NIST",
+            "Jenkins",
+            "Gitlab CI/CD"
+          ]
+        },
+        {
+          "description": "<p>I built a comprehensive alerting system to monitor performance and critical situations in production using Prometheus. The goal was real-time visibility and rapid response for issues such as attack indicators, fraud patterns, and operational anomalies.</p><p>I integrated Prometheus into Devo’s infrastructure, defined core KPIs and thresholds, and implemented alerting rules to detect abnormal patterns in ingestion throughput, processing latency, and resource usage.</p><p>To reduce incident response time, I created a detailed troubleshooting playbook with step-by-step diagnostics, recommended actions, and escalation paths. I also implemented early automated responses (e.g., service restarts, load redistribution, and dynamic scaling) to mitigate incidents before they escalated, reducing MTTR and minimizing user impact.</p><p>Finally, I helped define incident-handling protocols (roles, communication, coordination) for high-severity scenarios, improving response consistency and platform reliability.</p>",
+          "images": [],
+          "links": [],
+          "name": "Build an alerting system with Prometheus",
+          "technologies": [
+            "GIT",
+            "Ansible",
+            "Bash",
+            "Python",
+            "Kibana",
+            "Elastic Stack",
+            "Docker",
+            "Kubernetes",
+            "Grafana",
+            "Prometheus"
+          ]
+        }
+      ],
+      "short_description": "Cloud-native security analytics platform providing real-time threat detection and scalable data ingestion for enterprise observability.",
+      "thumbnail": "devo.png"
+    },
+    {
+      "contribution": "<p>At the European Commission, I worked as a Software Architect across three projects, taking ownership of end-to-end delivery aspects that showcased both technical leadership and hands-on execution. Key responsibilities included:</p><ul><li><b>Non-functional requirements and project definition</b>: Using Enterprise Architect, I captured and managed NFRs to ensure each project was clearly scoped and aligned with organizational goals.</li><li><b>Task prioritization</b>: Leveraged Jira to sequence work and keep delivery focused on the highest-impact items.</li><li><b>Dependency management</b>: Managed cross-team and cross-epic dependencies in Jira to avoid blockers and reduce delivery risk.</li><li><b>Technology selection</b>: Drove technology choices per project, balancing security, maintainability, and long-term scalability.</li><li><b>Team role definition</b>: Defined required profiles and responsibilities to ensure the team had the right skills to execute.</li><li><b>Cross-team collaboration</b>: Facilitated coordination between teams whose systems needed to integrate cleanly.</li><li><b>Quality and testing strategy</b>: Defined QA gates and testing protocols, including unit testing with JUnit or Google Test/Valgrind depending on the stack.</li><li><b>CI/CD implementation</b>: Designed and implemented CI/CD workflows using Bamboo and SonarQube.</li><li><b>Engineering practices</b>: Promoted TDD and BDD to improve correctness and reduce regression risk.</li><li><b>Agile delivery</b>: Worked under Scrum as the primary delivery framework to keep execution iterative and predictable.</li></ul>",
+      "full_description": "<p>The European Commission is the executive arm of the European Union, responsible for proposing legislation, implementing decisions, upholding EU treaties, and managing the day-to-day operations of the EU. It operates as a cabinet-style body with 27 Commissioners (one per Member State) led by a President. The Commission’s core roles include shaping strategy and policy, enforcing EU law, and negotiating international agreements on behalf of the EU.</p><p>Within the European Commission, the Directorate-General for Competition (DG COMP) plays a central role. DG COMP defines and enforces competition policy to ensure fair competition within the EU internal market. This includes enforcing antitrust rules, assessing mergers and acquisitions, and preventing anti-competitive practices and state aid that could distort competition. DG COMP works to protect consumers and businesses by promoting innovation, ensuring a level playing field, and improving economic efficiency.</p><p>I worked within DG COMP, contributing to systems that support the Commission’s efforts to maintain competitive markets and foster economic growth across the European Union.</p>",
+      "images": [],
+      "links": [
+        {
+          "icon": "",
+          "text": "European Commission website, DG COMP",
+          "url": "https://competition-policy.ec.europa.eu/index_en"
+        }
+      ],
+      "name": "European Commission",
+      "period_time": {
+        "current": false,
+        "end": "January 2020",
+        "start": "June 2017"
+      },
+      "projects": [
+        {
+          "description": "<p>The first project involved defining two RESTful APIs following the Richardson Maturity Model Level 3, including HATEOAS. These APIs served as secure platforms for exchanging legal documents in antitrust procedures.</p><ul><li><b>Internal API</b>: Designed for European Commission staff.</li><li><b>External API</b>: Designed for external parties.</li></ul><p>Both APIs enforced access control via a Single Sign-On system (CAS). Data persistence used Oracle DB and MongoDB. The APIs also integrated with an internal secure document storage system via a SOAP interface. Each procedure workflow was modeled using the State pattern, and system administrators were notified of state transitions via email.</p>",
+          "images": ["European_Commission_02.png"],
+          "links": [
+            {
+              "icon": "",
+              "text": "e-Leniency documentation",
+              "url": "https://competition-policy.ec.europa.eu/document/download/2fc568de-61ff-4aaf-9c9b-e03e96324ef7_en?filename=eleniency_guidance_access-notification.pdf"
+            }
+          ],
+          "name": "Definition of two RESTful APIs",
+          "technologies": [
+            "BDD",
+            "TDD",
+            "SonarQube",
+            "Bamboo",
+            "JUnit",
+            "Jira",
+            "CAS",
+            "GIT",
+            "Maven",
+            "Selenium",
+            "AngularJS",
+            "JUnit",
+            "Swagger",
+            "MongoDB",
+            "Oracle DB",
+            "WebLogic 12",
+            "Eclipselink",
+            "JPA",
+            "Spring IoC",
+            "Spring Documentation",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Security",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>In the second project, I served as Software Architect overseeing the delivery of a system to negotiate confidential versions of legal documents in antitrust procedures. I defined the approach for creating and assigning dynamic review groups responsible for managing online legal workflows. These groups (internal staff) were authenticated via the Central Authentication Service (CAS), a system previously implemented under my direction.</p><p>I designed the document state architecture using the Status/State pattern with support for change reversal, enabling safe rollbacks and preserving integrity throughout the negotiation process.</p><p>I selected and integrated Oracle DB and MongoDB to cover the project’s persistence needs, and ensured the API design aligned with Richardson Level 3 principles including HATEOAS. The result was a secure, scalable, and user-friendly platform for handling sensitive legal documentation, strengthening DG COMP’s operational effectiveness.</p>",
+          "images": [],
+          "links": [
+            {
+              "icon": "",
+              "text": "e-Confidentiality documentation",
+              "url": "https://competition-policy.ec.europa.eu/index/it-tools/econfidentiality_en"
+            }
+          ],
+          "name": "E-Confidentiality",
+          "technologies": [
+            "WebLogic 12",
+            "TDD",
+            "Swagger",
+            "Spring Security",
+            "Spring MVC",
+            "Spring IoC",
+            "Spring Documentation",
+            "Spring Data",
+            "SonarQube",
+            "Selenium",
+            "Oracle DB",
+            "MongoDB",
+            "Maven",
+            "Jira",
+            "Java",
+            "JUnit",
+            "JPA",
+            "IntelliJ IDEA",
+            "GIT",
+            "Enterprise Architect",
+            "Eclipselink",
+            "Docker",
+            "CAS",
+            "Bamboo",
+            "BDD",
+            "Ansible",
+            "AngularJS"
+          ]
+        },
+        {
+          "description": "<p>The third project, proposed by me, focused on building a semantic indexing system for legal documents. I acted as the project architect and stayed hands-on in implementation to ensure delivery. The solution applied clustering techniques (K-Means) to DG COMP’s antitrust legal document dataset. Indexing ran in a dedicated microservice built with gRPC and implemented in C++14 for maximum efficiency and performance.</p><p>The microservice architecture followed CQRS and was deployed as a service pool to ensure resilience and fast response times. Semantic search was powered by a neural network trained on the legal document corpus using TensorFlow. I also built a complementary Java service that consumed the semantic search capability to enhance downstream functionality.</p><p>This dual-service approach enabled high-speed semantic search and robust, scalable indexing of complex legal documentation. The system emphasized resilience, efficiency, and precision, making it a key capability for legal document management and retrieval.</p>",
+          "images": [],
+          "links": [],
+          "name": "Semantic index for legal documents",
+          "technologies": [
+            "gRPC",
+            "WebLogic 12",
+            "Valgrind",
+            "TensorFlow",
+            "Swagger",
+            "Spring Security",
+            "Spring MVC",
+            "Spring Documentation",
+            "Spring Data",
+            "SonarQube",
+            "Selenium",
+            "Oracle DB",
+            "OpenCL",
+            "Microservices",
+            "Maven",
+            "Jira",
+            "Java",
+            "JUnit",
+            "JPA",
+            "IntelliJ IDEA",
+            "Groovy",
+            "Google Test",
+            "GIT",
+            "Enterprise Architect",
+            "Eclipselink",
+            "Docker",
+            "Cassandra",
+            "CUDA",
+            "C++",
+            "Bamboo",
+            "Ansible",
+            "AngularJS"
+          ]
+        },
+        {
+          "description": "<p>The fourth project involved building a renewable energy distribution system aimed at normalizing and stabilizing electricity consumption over time to maximize renewable energy utilization. I contributed significantly across architecture and implementation.</p><p>The solution integrated a wide range of technologies. At the core, a Kafka-based messaging cluster handled device communication using Avro schemas. An intermediate gateway, implemented on Raspberry Pi devices, sent telemetry and received commands. The gateway software was written in Go and supported ModBus (serial and TCP), with TCP secured via VPN.</p><p>Device software lifecycle management was handled with BalenaIO, enabling reliable deployment and operations across distributed gateways. CI/CD was managed with CircleCI to ensure efficient delivery.</p><p>I also built a Groovy-based statistics analyzer for telemetry ingestion, generating operational insights on energy consumption patterns and system performance. I helped drive architecture, implementation, and integration across key components to ensure a reliable end-to-end system.</p>",
+          "images": [],
+          "links": [],
+          "name": "Renewable energy distribution system development",
+          "technologies": [
+            "Groovy",
+            "Jira",
+            "Kibana",
+            "Elastic Search",
+            "Ansible",
+            "Avro Schemas",
+            "Kafka",
+            "IoTHub",
+            "Azure",
+            "GCP",
+            "Kubernetes",
+            "Docker",
+            "Make",
+            "Python",
+            "Modbus",
+            "RaspberryPI",
+            "BalenaIO",
+            "Unit Test",
+            "Go"
+          ]
+        }
+      ],
+      "short_description": "The European Commission is the executive arm of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day EU operations.",
+      "thumbnail": "European_Commission_01.png"
+    },
+    {
+      "contribution": "<p>At Panel Sistemas, I worked as a Functional Analyst across three projects and later took ownership as a Senior Developer during the execution phase. My responsibilities included:</p><ul><li>Non-functional requirements analysis and implementation decision-making (Redmine).</li><li>Breaking down work into lower-granularity sub-tasks to deliver measurable outcomes (Redmine).</li><li>Effort estimation and delivery planning (Redmine).</li><li>Defining and implementing the project structure using the selected technologies.</li><li>Defining unit-test coverage and quality standards (JUnit, Google Test, Valgrind).</li><li>Implementing CI/CD workflows (Jenkins).</li><li>Using Scrum as the delivery framework.</li><li>Applying TDD and BDD practices to improve reliability and reduce regressions.</li><li>Delivering internal training sessions on TDD, BDD, Neural Networks, Clean Code, and related topics.</li></ul>",
+      "full_description": "<p>Panel Sistemas is a Spanish technology company specializing in software development, IT consulting, and managed services. It serves multiple industries and has worked with major clients such as Telefónica, BBVA, Santander, Repsol, and El Corte Inglés.</p><b>Services</b><ul><li>Software Development: Custom-built solutions.</li><li>Consulting: IT strategy and optimization.</li><li>Maintenance & Support: Ongoing application support.</li><li>Quality Assurance: End-to-end software testing.</li><li>Digital Transformation: Migration and modernization of business platforms.</li></ul><b>Industry Experience</b><ul><li>Finance</li><li>Telecommunications</li><li>Energy</li><li>Retail</li></ul>",
+      "images": [],
+      "links": [
+        {
+          "icon": "",
+          "text": "Panel Sistemas website",
+          "url": "https://www.panel.es/"
+        }
+      ],
+      "name": "Panel Sistemas",
+      "period_time": {
+        "current": false,
+        "end": "June 2017",
+        "start": "September 2015"
+      },
+      "projects": [
+        {
+          "description": "<p>The first project delivered a modern messaging exchange platform for maritime and air transport. It successfully replaced an outdated IATA standard based on plain text and positional fields (highly error-prone) with a more robust, readable XML/JSON-based format.</p><p>I defined a parser that translated legacy messages into the new standards through a RESTful API aligned with Richardson Maturity Model Level 3. Beyond translation, the API enabled interoperability with external platforms worldwide and persisted all exchanges to ensure end-to-end traceability of global parcel transit. Given high availability requirements, we implemented a replicated, sharded MongoDB architecture across a server cluster.</p>",
+          "images": ["iata.png"],
+          "links": [],
+          "name": "Modernizing maritime and air transport messaging: replacing IATA with XML/JSON",
+          "technologies": [
+            "Ansible",
+            "Docker",
+            "IntelliJ IDEA",
+            "Redmine",
+            "Jenkins",
+            "GIT",
+            "Maven",
+            "Selenium",
+            "Hadoop",
+            "Phonegap",
+            "AWS",
+            "GWT",
+            "Primefaces",
+            "JSF",
+            "JUnit",
+            "RabbitMQ",
+            "MongoDB",
+            "Wildfly/JBoss",
+            "Hibernate",
+            "JPA",
+            "Spring Documentation",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Security",
+            "Java"
+          ]
+        },
+        {
+          "description": "The second project was a joint initiative with Siemens to build Iberdrola’s smart terminal management infrastructure. Terminals reported customer electricity consumption daily via SNMP, with optional high-resolution monitoring down to per-minute usage for selected devices. Data was stored in a distributed MongoDB setup (multiple clusters, load balancing, and replicated sharding).\n\nData placement followed geographic locality when capacity allowed, reducing query scope and improving performance. We retained one year of per-minute data, then compacted it into daily min/max/avg for five years, followed by additional compaction thereafter. The system also supported real-time control and monitoring of devices via SNMP and JNLP.\n\nThis platform was built using C++ microservices with gRPC and deployed across a fleet of Red Hat Enterprise Linux servers.",
+          "images": ["iberdrola.svg", "siemens.png"],
+          "links": [],
+          "name": "Iberdrola smart terminal management with Siemens",
+          "technologies": [
+            "Spring IOT",
+            "Spring Documentation",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Security",
+            "SNMP",
+            "JNLP",
+            "Kubernetes",
+            "Ansible",
+            "Docker",
+            "IntelliJ IDEA",
+            "Jira",
+            "Jenkins",
+            "GIT",
+            "Maven",
+            "Hadoop",
+            "Primefaces",
+            "JSF",
+            "JUnit",
+            "MongoDB",
+            "Apache Tomcat",
+            "Hibernate",
+            "JPA",
+            "RabbitMQ",
+            "Java",
+            "Microservices",
+            "gRPC",
+            "Boost",
+            "cLion",
+            "Valgrind",
+            "Google Test",
+            "C++"
+          ]
+        },
+        {
+          "description": "<p>The third project, delivered for Securitas Direct, involved building an end-to-end monitoring and assisted-care system for elderly users and people with disabilities. The system inferred user status using in-home sensors (presence, door opening, and personal fall detectors) and produced a detailed activity timeline. Beyond storage and querying, it generated alerts by learning typical behavioral patterns and detecting sudden deviations, with configurable alarm policies.</p><p>The solution also included a hybrid mobile app that leveraged device sensors to detect falls, track GPS location, and support additional safety-related signals.</p>",
+          "images": [],
+          "links": [],
+          "name": "Monitoring and assisted-care system for elderly and disabled users (Securitas Direct)",
+          "technologies": [
+            "Kubernetes",
+            "Ansible",
+            "Docker",
+            "IntelliJ IDEA",
+            "Confluence",
+            "Jira",
+            "Jenkins",
+            "GIT",
+            "Maven",
+            "Jasmine",
+            "Selenium",
+            "Hadoop",
+            "Typescript",
+            "Ionic",
+            "JUnit",
+            "Oracle DB",
+            "Apache Tomcat",
+            "Hibernate",
+            "JPA",
+            "RabbitMQ",
+            "Spring Batch",
+            "Spring IoC",
+            "Spring Documentation",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Security",
+            "AWS",
+            "Java",
+            "Microservices",
+            "gRPC",
+            "Boost",
+            "cLion",
+            "Valgrind",
+            "Google Test",
+            "C++"
+          ]
+        }
+      ],
+      "short_description": "Spanish technology consultancy delivering custom software, IT advisory, and engineering services across multiple industries.",
+      "thumbnail": "panel_sistemas.png"
+    },
+    {
+      "contribution": "<p>I worked remotely as a Senior Software Engineer across three major projects, taking ownership of both technical execution and cross-team coordination. Key responsibilities included:</p><ul><li>Working directly with the Product Owner to define detailed requirements and translate business goals into actionable technical tasks.</li><li>Coordinating distributed teams across South America, India, and China, managing time zones and cultural differences.</li><li>Translating and clarifying requirements in Chinese to ensure alignment with external teams.</li><li>Driving automation and productivity improvements through internal tooling and workflow optimizations.</li><li>Planning and tracking delivery using Scrum, with clear milestones and iterative feedback.</li><li>Ensuring consistent progress and delivery in a fully remote, global environment.</li></ul>",
+      "full_description": "<p>Grupo PRISA (Promotora de Informaciones, S.A.) is one of the leading Spanish media groups, with strong influence across Spain and Latin America. Founded in 1972, PRISA operates newspapers, radio networks, digital media, and educational publishing businesses.</p><p>Its flagship newspaper, <em>El País</em>, is one of the most widely read and respected publications in the Spanish-speaking world. In radio, PRISA owns Cadena SER and music networks such as Los 40 and Cadena Dial. Through Santillana, PRISA is also a major player in educational publishing, providing learning content and digital platforms across multiple countries.</p><p>In recent years, PRISA has invested heavily in digital transformation, expanding its online platforms, mobile applications, and multimedia content to reach a global audience.</p>",
+      "images": [],
+      "links": [
+        {
+          "icon": "",
+          "text": "Grupo PRISA website",
+          "url": "https://www.prisa.com/es"
+        }
+      ],
+      "name": "Grupo PRISA",
+      "period_time": {
+        "current": false,
+        "end": "May 2015",
+        "start": "March 2012"
+      },
+      "projects": [
+        {
+          "description": "<p>This project involved building a cross-platform mobile application (Android and iOS) for consuming educational content packages. The app was optimized to run smoothly on low-end devices, ensuring broad accessibility without sacrificing user experience.</p><p>It supported SCORM-compliant learning packages, tracked user progress, and reported learning metrics back to the server. Backward compatibility with legacy content ensured long-term usability across existing educational materials.</p>",
+          "images": [],
+          "links": [],
+          "name": "Educational content viewer mobile application",
+          "technologies": [
+            "Confluence",
+            "GIT",
+            "Jira",
+            "jQuery",
+            "Bootstrap",
+            "JavaScript",
+            "HTML",
+            "SCORM",
+            "Dagger",
+            "Objective-C",
+            "XCode",
+            "Android Studio",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>This project focused on standardizing educational content packages by building a Flash-to-HTML5 translation tool compatible with the SCORM standard. The goal was to avoid costly manual migrations while preserving existing content.</p><p>A centralized shared library ensured that updates propagated automatically to all previously generated packages. New versions were thoroughly validated in virtualized environments (QEmu, KVM, Xen) before release, ensuring stability, consistency, and long-term maintainability.</p>",
+          "images": [],
+          "links": [],
+          "name": "Educational package standardization and Flash-to-HTML5 migration",
+          "technologies": [
+            "Valgrind",
+            "NginX",
+            "Bash",
+            "Xen",
+            "KVM",
+            "QEmu",
+            "Confluence",
+            "GIT",
+            "Jira",
+            "jQuery",
+            "SCORM",
+            "Bootstrap",
+            "AngularJS",
+            "JavaScript",
+            "HTML",
+            "Flash",
+            "Linux",
+            "C++"
+          ]
+        },
+        {
+          "description": "<p>The third project was built on the .NET platform and delivered a comprehensive digital environment for teachers and education professionals. It enabled student management, educational content administration, and result analysis.</p><p>The platform also integrated a high-resolution IP-based audio and video communication system, supporting real-time interaction and media streaming. This unified solution streamlined educational workflows and improved collaboration between educators and learners.</p>",
+          "images": [],
+          "links": [],
+          "name": "Integrated education management platform",
+          "technologies": [
+            "Confluence",
+            "GIT",
+            "Jira",
+            "Microsoft SQL Server",
+            "Windows Server",
+            "IIS",
+            ".NET",
+            "C#"
+          ]
+        }
+      ],
+      "short_description": "Leading Spanish media group operating newspapers, radio networks, digital platforms, and educational publishing at global scale.",
+      "thumbnail": "prisa.png"
+    },
+    {
+      "contribution": "<p>As a Senior Software Engineer, I contributed to three high-impact projects, combining low-level performance work with end-user applications. My role required strong ownership of technical decisions and close collaboration with product and client teams.</p>",
+      "full_description": "<p>Intelygenz is a technology company specialized in artificial intelligence, machine learning, and custom software solutions for multiple industries. During my time there, I worked as a Senior Software Engineer on client-facing and platform-level projects, delivering performant, reliable systems under demanding constraints.</p>",
+      "images": [],
+      "links": [
+        {
+          "icon": "",
+          "text": "Intelygenz website",
+          "url": "https://intelygenz.com/"
+        }
+      ],
+      "name": "Intelygenz",
+      "period_time": {
+        "current": false,
+        "end": "January 2012",
+        "start": "January 2010"
+      },
+      "projects": [
+        {
+          "description": "<p>This project involved building a native Android application for Antena 3 Television that acted as a real-time interactive companion to live TV content. The app synchronized dynamically with broadcasts using inaudible audio markers embedded in the signal.</p><p>I implemented a custom high-performance solution using the Android NDK to capture and process audio with minimal battery impact. The system encoded binary data through precisely timed audio echoes, enabling seamless interaction between the broadcast and the mobile application.</p>",
+          "images": ["intelygenz_01.jpeg"],
+          "links": [
+            {
+              "icon": "",
+              "text": "Antena 3 TV application documentation",
+              "url": "https://www.atresmediacorporacion.com/a3document/2012/05/24/DOCUMENTS/00012/00012.pdf"
+            }
+          ],
+          "name": "Antena 3 Television interactive Android application",
+          "technologies": [
+            "Confluence",
+            "GIT",
+            "Jira",
+            "Android NDK",
+            "Android Studio",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>The second project was a document management system for BBVA, implemented in C# on the .NET platform. The system integrated with external services built on Google App Engine and was tailored for secure handling of financial documents.</p><p>It supported editing, review, and accreditation workflows, embedding BBVA’s business logic and approval processes. The solution improved cross-team collaboration and ensured alignment with banking standards and regulatory requirements.</p>",
+          "images": ["bbva.jpg"],
+          "links": [],
+          "name": "BBVA document management system",
+          "technologies": [
+            "Confluence",
+            "GIT",
+            "Jira",
+            "jQuery",
+            "Bootstrap",
+            "JavaScript",
+            "HTML",
+            "Cassandra",
+            "Microsoft SQL Server",
+            "Windows Server",
+            "IIS",
+            ".NET",
+            "C#"
+          ]
+        },
+        {
+          "description": "<p>The third project focused on building a collaborative frontend for BBVA, developed in Java and JavaScript and integrated with the NACAR platform. This environment enabled advanced interaction patterns within banking applications.</p><p>A key outcome was the creation of <strong>IRIS</strong>, a reusable gesture and on-screen interaction library that significantly improved usability and responsiveness. This library became a core component for enhancing user experience across the platform.</p>",
+          "images": ["bbva.jpg"],
+          "links": [],
+          "name": "Collaborative frontend platform for BBVA",
+          "technologies": [
+            "Eclipse",
+            "GIT",
+            "Confluence",
+            "Jira",
+            "Maven",
+            "JSF",
+            "JUnit",
+            "Oracle DB",
+            "Websphere",
+            "Hibernate",
+            "JPA",
+            "Spring Documentation",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Security",
+            "Java"
+          ]
+        }
+      ],
+      "short_description": "Technology company delivering AI-driven and custom software solutions, with strong focus on performance and complex client systems.",
+      "thumbnail": "intelygenz.png"
+    },
+    {
+      "contribution": "<p>I worked as a researcher within the TIFyC research group, combining applied research, academic collaboration, and teaching. My work focused on advancing AI-driven technologies through rigorous research, cross-university collaboration, and knowledge transfer.</p><ul><li>Conducted state-of-the-art research in accessibility, AI algorithms, computer vision, and biometric systems.</li><li>Collaborated with research groups from multiple universities on interdisciplinary projects.</li><li>Authored technical reports documenting methodologies, results, and conclusions.</li><li>Participated in the analysis and submission of public R&D grants and funding proposals.</li><li>Served as a teaching assistant in Artificial Intelligence and Computer Vision courses.</li></ul>",
+      "full_description": "<p>The University of Alcalá (UAH) is a prestigious public university in Spain, founded in 1499 and recognized for its strong academic tradition and research excellence. It combines a historic UNESCO-listed campus with modern research facilities and international collaboration.</p><p>Within UAH, I worked in the TIFyC research group, contributing to applied research projects at the intersection of artificial intelligence, accessibility, computer vision, and biometric systems.</p>",
+      "images": [],
+      "links": [
+        {
+          "icon": "",
+          "text": "University of Alcalá website",
+          "url": "https://uah.es/"
+        }
+      ],
+      "name": "University of Alcalá (UAH)",
+      "period_time": {
+        "current": false,
+        "end": "January 2009",
+        "start": "January 2006"
+      },
+      "projects": [
+        {
+          "description": "<p>This project focused on researching and prototyping assistive devices to improve interaction for users with visual, auditory, or motor disabilities. The goal was to design inclusive input mechanisms and adaptive interfaces for desktop, mobile, and embedded systems.</p><p>User-centered testing and direct collaboration with people with disabilities ensured practical, usable, and impactful solutions that significantly improved accessibility and user experience.</p>",
+          "images": ["tifyc.jpg"],
+          "links": [],
+          "name": "Accessible interaction devices research",
+          "technologies": [
+            "Mono",
+            ".NET",
+            "C#",
+            "SVN",
+            "Arduino",
+            "PIC",
+            "Qt",
+            "Anjuta",
+            "C++",
+            "Linux",
+            "Android",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>I contributed to the design of a standardized communication system for biometric devices from multiple vendors. The solution embedded an RPC layer directly into devices, enabling transparent, language-agnostic, and OS-independent communication.</p><p>The system addressed interoperability, security, and robustness requirements, enabling encrypted and authenticated data exchange for sensitive biometric information.</p>",
+          "images": [],
+          "links": [],
+          "name": "Standardized communication system for biometric devices",
+          "technologies": [
+            "Mono",
+            ".NET",
+            "C#",
+            "SVN",
+            "Anjuta",
+            "C++",
+            "Linux",
+            "Java"
+          ]
+        },
+        {
+          "description": "<p>I designed, built, and maintained the research group’s public website using Joomla CMS. The site served as a central hub for publications, project updates, and events.</p><p>My work focused on performance optimization, accessibility compliance, responsive design, and ongoing maintenance, ensuring scalability, security, and ease of content management for non-technical contributors.</p>",
+          "images": ["tifyc.jpg"],
+          "links": [],
+          "name": "Research group website platform",
+          "technologies": [
+            "Joomla",
+            "Linux",
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript"
+          ]
+        },
+        {
+          "description": "<p>I supported multiple research activities, organized technical seminars on Robotics, and served as a teaching assistant for AI and Computer Vision courses.</p><p>I also participated in the Hispabot robotics competition (maze-solving category), applying AI and robotics techniques in a competitive, real-world setting.</p>",
+          "images": ["hispabot.jpeg"],
+          "links": [],
+          "name": "Research, teaching, and robotics activities",
+          "technologies": [
+            "Python",
+            "Java",
+            "Octave",
+            "MATLAB",
+            "Arduino",
+            "PIC",
+            "C",
+            "C++"
+          ]
+        }
+      ],
+      "short_description": "Public Spanish university with a strong focus on research, innovation, and applied artificial intelligence.",
+      "thumbnail": "uah.svg"
+    },
+    {
+      "contribution": "<p>During my early university years, I worked as a Junior Web Developer to support my studies. This role gave me hands-on experience delivering real-world web projects and building a solid foundation in web technologies.</p>",
+      "full_description": "<p>Knowcentury was a small web agency focused on building websites for local clients, primarily using CMS-based solutions.</p>",
+      "images": [],
+      "links": [],
+      "name": "Knowcentury",
+      "period_time": {
+        "current": false,
+        "end": "July 2005",
+        "start": "January 2005"
+      },
+      "projects": [
+        {
+          "description": "<p>Built and customized websites using popular CMS platforms, focusing on clean structure, basic performance, and client-specific requirements.</p>",
+          "images": [],
+          "links": [],
+          "name": "Website development",
+          "technologies": ["HTML", "MySQL", "JavaScript", "PHP", "Joomla"]
+        }
+      ],
+      "short_description": "Small web agency specializing in CMS-based website development.",
+      "thumbnail": "knowcentury.png"
+    },
+    {
+      "contribution": "<p>During this period, I conducted applied research on system virtualization using IBM System z/390 mainframes. The focus was on enabling secure, scalable remote systems by running virtualized environments on enterprise-grade hardware.</p><ul><li>Researched and evaluated the use of QEMU for virtualization on IBM System z/390.</li><li>Designed and configured virtual environments running SUSE Linux Enterprise.</li><li>Analyzed resource allocation, performance tuning, and security aspects of mainframe-based virtualization.</li><li>Validated stability and reliability for enterprise and remote-use scenarios.</li></ul>",
+      "full_description": "<p>IBM (International Business Machines Corporation) is a global technology leader known for enterprise hardware, cloud computing, and advanced research. Its IBM Z mainframes are widely used in industries requiring extreme reliability, security, and large-scale transaction processing.</p><p>My work was aligned with IBM’s long-standing focus on virtualization, consolidation, and efficient use of enterprise infrastructure.</p>",
+      "images": [],
+      "links": [],
+      "name": "IBM",
+      "period_time": {
+        "current": false,
+        "end": "December 2004",
+        "start": "September 2003"
+      },
+      "projects": [
+        {
+          "description": "<p>Research project focused on virtualizing Linux environments on IBM System z/390 using QEMU. The goal was to enable secure, high-performance remote systems by consolidating workloads on a mainframe running SUSE Linux Enterprise.</p>",
+          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "links": [],
+          "name": "Mainframe-based system virtualization research",
+          "technologies": [
+            "IBM System z",
+            "QEMU",
+            "SUSE Linux Enterprise",
+            "Linux",
+            "Virtualization",
+            "Enterprise Systems"
+          ]
+        }
+      ],
+      "short_description": "Global technology leader specializing in enterprise hardware, cloud computing, and advanced research.",
+      "thumbnail": "ibm.svg"
+    }
+  ],
+  "educations": {
+    "university": [
+      {
+        "images": ["uah.svg"],
+        "period_time": {
+          "current": false,
+          "end": "June 2009",
+          "start": "September 2007"
+        },
+        "summary": "Artificial intelligence and machine learning: supervised, unsupervised, and reinforcement learning. Symbolic learning. Classification and regression models. Model optimization. Deep learning: multilayer networks, backpropagation, loss functions, hyperparameters, and training strategies. Convolutional neural networks for image recognition. Sequential and recurrent networks (LSTM). Parallelization and GPU-based computing. Vectorization techniques. Programming with TensorFlow and Theano. Scalable automated learning. Cluster parallelization frameworks. Applications in medicine, finance, autonomous driving, and more.",
+        "thumbnail": "uah.svg",
+        "title": "Master’s Degree in Artificial Intelligence for Information and Communication Technologies",
+        "university_name": "UAH"
+      },
+      {
+        "images": ["uah.svg"],
+        "period_time": {
+          "current": false,
+          "end": "June 2007",
+          "start": "September 2001"
+        },
+        "summary": "Graduated with honors in: Artificial Intelligence, Fuzzy Logic, Computer Vision Systems, Physics II, Mathematical Analysis, Data Structures, and Networks.",
+        "thumbnail": "uah.svg",
+        "title": "Technical Degree in Computer Engineering",
+        "university_name": "UAH"
+      }
+    ],
+    "complementary": [
+      {
+        "images": ["linux_foundation.png"],
+        "institution": "Linux Foundation",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "September 2015"
+        },
+        "summary": "Official Linux system administration certification covering advanced Linux administration, kernel-related tasks, advanced storage and filesystems, network authentication, system security (firewalls, VPNs), installation and configuration of core network services (DHCP, DNS, SSH, web, file, and mail servers), monitoring, automation, and infrastructure advisory.",
+        "thumbnail": "linux_foundation.png",
+        "title": "LPIC - 2"
+      },
+      {
+        "images": ["linux_foundation.png"],
+        "institution": "Linux Foundation",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "September 2013"
+        },
+        "summary": "Official Linux system administration certification covering Linux installation (including X11), command-line usage, file and permission management (ACLs), basic system security, and routine maintenance tasks.",
+        "thumbnail": "linux_foundation.png",
+        "title": "LPIC - 1"
+      },
+      {
+        "images": ["uah.svg"],
+        "institution": "University of Alcalá",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "September 2007"
+        },
+        "summary": "Design of digital educational content using the SCORM standard.",
+        "thumbnail": "uah.svg",
+        "title": "Design and Evaluation of Digital Educational Content"
+      },
+      {
+        "images": ["uah.svg"],
+        "institution": "University of Alcalá",
+        "period_time": {
+          "current": true,
+          "end": "None",
+          "start": "September 2007"
+        },
+        "summary": "Computer vision systems, convolution matrices, and filtering techniques.",
+        "thumbnail": "uah.svg",
+        "title": "Computer Vision Course"
+      }
+    ],
+    "languages": [
+      {
+        "acreditation": [],
+        "language": "Spanish",
+        "read": "Native",
+        "spoken": "Native",
+        "thumbnail": "spanish.png",
+        "writen": "Native"
+      },
+      {
+        "acreditation": [],
+        "language": "English",
+        "read": "Fluent",
+        "spoken": "Fluent",
+        "thumbnail": "english.svg",
+        "writen": "Fluent"
+      },
+      {
+        "acreditation": [
+          {
+            "institution": "Confucius Institute Madrid",
+            "period_time": {
+              "current": true,
+              "end": "None",
+              "start": "September 2009"
+            },
+            "title": "HSK 3"
+          }
+        ],
+        "language": "Chinese",
+        "read": "Fluent",
+        "spoken": "Fluent",
+        "thumbnail": "chinese.png",
+        "writen": "Fluent"
+      }
+    ]
+  }
+}
