@@ -70,34 +70,41 @@
       <div class="block__label">University</div>
 
       <div class="grid">
-        {#each university as e (e.title)}
+        {#each university as e, i (e.title)}
           <article class="card">
-            <div class="head">
-              {#if pickLogo(e)}
-                <div class="logoFrame" aria-hidden="true">
-                  <img
-                    class="logo"
-                    src={`${IMG_BASE}/${pickLogo(e)}`}
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-              {/if}
+            <input
+              type="checkbox"
+              id="toggle-input-u{i}"
+              class="toggle-input"
+            />
+            <label for="toggle-input-u{i}" class="toggle-label how__title">
+              <div class="head">
+                {#if pickLogo(e)}
+                  <div class="logoFrame" aria-hidden="true">
+                    <img
+                      class="logo"
+                      src={`${IMG_BASE}/${pickLogo(e)}`}
+                      alt=""
+                      loading="lazy"
+                    />
+                  </div>
+                {/if}
 
-              <div class="headText">
-                <div class="title">{e.title}</div>
-                <div class="meta">
-                  <span class="org">{e.university_name}</span>
-                  {#if formatPeriod(e.period_time)}
-                    <span class="dot">·</span>
-                    <span class="period">{formatPeriod(e.period_time)}</span>
-                  {/if}
+                <div class="headText">
+                  <div class="title">{e.title}</div>
+                  <div class="meta">
+                    <span class="org">{e.university_name}</span>
+                    {#if formatPeriod(e.period_time)}
+                      <span class="dot">·</span>
+                      <span class="period">{formatPeriod(e.period_time)}</span>
+                    {/if}
+                  </div>
                 </div>
               </div>
-            </div>
+            </label>
 
             {#if e.summary}
-              <div class="summary">{e.summary}</div>
+              <div class="summary content">{@html e.summary}</div>
             {/if}
           </article>
         {/each}
@@ -109,48 +116,55 @@
       <div class="block__label">Certifications & courses</div>
 
       <div class="grid">
-        {#each complementary as c (c.title)}
+        {#each complementary as c, i (c.title)}
           <article class="card">
-            <div class="head">
-              {#if pickLogo(c)}
-                <div class="logoFrame" aria-hidden="true">
-                  <img
-                    class="logo"
-                    src={`${IMG_BASE}/${pickLogo(c)}`}
-                    alt=""
-                    loading="lazy"
-                  />
-                </div>
-              {/if}
-
-              <div class="headText">
-                <div class="title">{c.title}</div>
-
-                <div class="meta">
-                  <span class="org">{c.institution}</span>
-                  {#if formatPeriod(c.period_time)}
-                    <span class="dot">·</span>
-                    <span class="period">{formatPeriod(c.period_time)}</span>
-                  {/if}
-                </div>
-
-                {#if c.validation}
-                  <div class="actions">
-                    <a
-                      class="link"
-                      href={c.validation}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Verify →
-                    </a>
+            <input
+              type="checkbox"
+              id="toggle-input-c{i}"
+              class="toggle-input"
+            />
+            <label for="toggle-input-c{i}" class="toggle-label how__title">
+              <div class="head">
+                {#if pickLogo(c)}
+                  <div class="logoFrame" aria-hidden="true">
+                    <img
+                      class="logo"
+                      src={`${IMG_BASE}/${pickLogo(c)}`}
+                      alt=""
+                      loading="lazy"
+                    />
                   </div>
                 {/if}
+
+                <div class="headText">
+                  <div class="title">{c.title}</div>
+
+                  <div class="meta">
+                    <span class="org">{c.institution}</span>
+                    {#if formatPeriod(c.period_time)}
+                      <span class="dot">·</span>
+                      <span class="period">{formatPeriod(c.period_time)}</span>
+                    {/if}
+                  </div>
+
+                  {#if c.validation}
+                    <div class="actions">
+                      <a
+                        class="link"
+                        href={c.validation}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Verify →
+                      </a>
+                    </div>
+                  {/if}
+                </div>
               </div>
-            </div>
+            </label>
 
             {#if c.summary}
-              <div class="summary">{c.summary}</div>
+              <div class="summary content">{@html c.summary}</div>
             {/if}
           </article>
         {/each}
@@ -298,7 +312,7 @@
 
   .title {
     font-weight: 750;
-    font-size: 13px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.92);
     line-height: 1.25;
   }
@@ -370,5 +384,32 @@
     flex-wrap: wrap;
     gap: 8px;
     align-items: center;
+  }
+
+  /* Ocultamos el checkbox real */
+  .toggle-input {
+    display: none;
+  }
+
+  /* Estilo básico del botón */
+  .toggle-label {
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 750;
+    user-select: none;
+  }
+
+  /* El contenido está oculto por defecto */
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Animación suave */
+  }
+
+  /* Cuando el checkbox está marcado, mostramos el contenido */
+  .toggle-input:checked ~ .content {
+    max-height: 200px; /* Un valor lo suficientemente alto */
+    padding: 10px;
   }
 </style>

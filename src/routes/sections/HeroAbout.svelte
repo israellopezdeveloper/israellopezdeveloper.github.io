@@ -4,141 +4,127 @@
   import Section from './Section.svelte';
 
   let reduced = false;
-
   const unsub = prefersReducedMotion.subscribe((v) => (reduced = v));
   onDestroy(unsub);
 </script>
 
 <Section id="about" variant="hero">
   <div class="heroShell">
-    <!-- Media layer -->
-    <div class="heroMedia" aria-hidden="true">
-      <img
-        class="heroImg"
-        src="/images/hero-israel.png"
-        alt=""
-        loading="eager"
-        decoding="async"
-      />
-      <div class="heroOverlay"></div>
-    </div>
+    <div class="heroPages">
+      <!-- PAGE 1 -->
+      <div class="page page--intro">
+        <div class="heroContent">
+          <div class="kicker">Senior IC · Freelance · Global</div>
 
-    <!-- Content layer -->
-    <div class="heroContent" class:reduced>
-      <div class="kicker">Senior IC · Freelance · Global</div>
-
-      <h1 class="headline">
-        Senior Software Engineer
-        <span class="headline__muted"
-          >(AI Systems · High-Performance Backend)</span
-        >
-      </h1>
-
-      <p class="subheadline">
-        Hands-on engineer (80%+ coding) helping teams build, scale, and fix
-        complex production systems — especially where AI, performance,
-        reliability —, and cost control matter. More than 15 years of
-        experience:
-      </p>
-
-      <ul class="bullets">
-        <li>
-          AI in production: LLM/RAG integrations, model deployment,
-          observability
-        </li>
-        <li>Distributed backend at scale: latency, throughput, resilience</li>
-        <li>
-          AWS &amp; cloud optimization: pragmatic architecture, measurable cost
-          control
-        </li>
-      </ul>
-
-      <div class="ctaRow">
-        <a class="primary" href="#contact">Let’s talk about your system</a>
-        <a class="secondary" href="#experience">View selected work</a>
+          <h1 class="headline">
+            Senior Software Engineer
+            <span class="headline__muted"
+              >(AI Systems · High-Performance Backend)</span
+            >
+          </h1>
+        </div>
       </div>
 
-      <p class="micro">Hourly preferred · Open to project/retainer</p>
+      <!-- PAGE 2 -->
+      <div class="page page--details">
+        <div class="heroContent">
+          <p class="subheadline">
+            Hands-on engineer (80%+ coding) helping teams build, scale, and fix
+            complex production systems — especially where AI, performance,
+            reliability, and cost control matter. More than 15 years of
+            experience:
+          </p>
+
+          <ul class="bullets">
+            <li>
+              AI in production: LLM/RAG integrations, model deployment,
+              observability
+            </li>
+            <li>
+              Distributed backend at scale: latency, throughput, resilience
+            </li>
+            <li>
+              AWS &amp; cloud optimization: pragmatic architecture, measurable
+              cost control
+            </li>
+          </ul>
+          <!-- CTAs sticky SOLO dentro del hero -->
+          <div class="ctaSticky" class:reduced>
+            <div class="ctaRow">
+              <a class="primary" href="#contact">Let’s talk about your system</a
+              >
+              <a class="secondary" href="#experience">View selected work</a>
+            </div>
+            <p class="micro">Hourly preferred · Open to project/retainer</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </Section>
 
 <style>
+  /* NO pongas overflow aquí: rompe sticky si algún padre ya lo toca */
   .heroShell {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-
+    min-height: 200vh; /* 2 páginas */
     padding-top: 88px;
-
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+    background-image: url('/images/hero-israel.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 8%;
   }
 
-  /* =========================
-     MEDIA (IMAGE + OVERLAY)
-     ========================= */
-  .heroMedia {
-    position: absolute;
-    inset: 0;
-  }
-
-  .heroImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 8%;
-
-    filter: saturate(1.05) contrast(1.05);
-    transform: scale(1);
-  }
-
-  @media (min-aspect-ratio: 16/9) {
-    .heroImg {
-      object-position: 50% 6%;
-    }
-  }
-
-  .heroOverlay {
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-      to right,
-      rgba(2, 6, 23, 0.92) 0%,
-      rgba(2, 6, 23, 0.75) 38%,
-      rgba(2, 6, 23, 0.22) 72%,
-      rgba(2, 6, 23, 0.08) 100%
-    );
-  }
-
-  /* =========================
-     CONTENT LAYER
-     ========================= */
-  .heroContent {
+  /* Contenido encima */
+  .heroPages {
     position: relative;
     z-index: 1;
 
+    /* Empieza a dibujar encima del viewport del fondo */
+    margin-top: 0;
+  }
+
+  .page {
+    min-height: calc(100vh - 88px);
+    display: flex;
+  }
+
+  .page--intro {
+    align-items: end;
+  }
+
+  .page--details {
+    align-items: end;
+  }
+
+  .heroContent {
     width: 100%;
     max-width: 820px;
-
     margin-left: clamp(18px, 6vw, 84px);
     margin-right: 18px;
+    background: rgba(2, 6, 23, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 100px;
   }
 
   @media (max-width: 600px) {
     .heroShell {
       padding-top: 72px;
+      background-position: 70% 8%;
     }
-    .heroImg {
-      object-position: 50% 10%;
+    .page {
+      min-height: calc(100vh - 72px);
+    }
+    .page--details {
+      padding-top: 14px;
     }
   }
 
-  /* =========================
-     TYPOGRAPHY & UI
-     ========================= */
+  /* Tipografía */
   .kicker {
     color: rgba(255, 255, 255, 0.65);
     font-size: 13px;
@@ -186,6 +172,31 @@
     margin: 8px 0;
   }
 
+  .micro {
+    margin: 14px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.62);
+    max-width: 70ch;
+  }
+
+  /* CTA sticky dentro del hero */
+  .ctaSticky {
+    position: sticky;
+    bottom: 16px;
+    z-index: 2;
+
+    width: fit-content;
+    margin-left: clamp(18px, 6vw, 84px);
+
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .ctaSticky.reduced {
+    backdrop-filter: none;
+  }
+
   .ctaRow {
     display: flex;
     gap: 12px;
@@ -202,6 +213,7 @@
     font-weight: 650;
     text-decoration: none;
     font-size: 14px;
+    white-space: nowrap;
   }
 
   .primary {
@@ -217,35 +229,5 @@
 
   .secondary:hover {
     color: white;
-  }
-
-  .micro {
-    margin: 14px 0 0;
-    font-size: 13px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.62);
-    max-width: 70ch;
-  }
-
-  /* =========================
-     INTRO ANIMATION
-     ========================= */
-  .heroContent {
-    animation: fadeUp 0.8s ease-out both;
-  }
-
-  .reduced.heroContent {
-    animation: none;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 </style>

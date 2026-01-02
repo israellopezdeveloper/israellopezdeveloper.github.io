@@ -1,12 +1,11 @@
 <script lang="ts">
   const links = [
-    { href: '#about', label: 'About' },
+    { href: '#about', label: 'About me' },
     { href: '#how-i-work', label: 'How I Work' },
     { href: '#services', label: 'Services' },
     { href: '#experience', label: 'Case estudies' },
     { href: '#tech-stack', label: 'Tech Stack' },
     { href: '#education', label: 'Education' },
-    { href: '#social-proof', label: 'Social Proof' },
     { href: '#contact', label: 'Contact' }
   ];
 

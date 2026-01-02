@@ -1012,7 +1012,7 @@
           "end": "June 2009",
           "start": "September 2007"
         },
-        "summary": "Artificial intelligence and machine learning: supervised, unsupervised, and reinforcement learning. Symbolic learning. Classification and regression models. Model optimization. Deep learning: multilayer networks, backpropagation, loss functions, hyperparameters, and training strategies. Convolutional neural networks for image recognition. Sequential and recurrent networks (LSTM). Parallelization and GPU-based computing. Vectorization techniques. Programming with TensorFlow and Theano. Scalable automated learning. Cluster parallelization frameworks. Applications in medicine, finance, autonomous driving, and more.",
+        "summary": "<p>Artificial intelligence and machine learning: supervised, unsupervised, and reinforcement learning.</p> <ul> <li>Symbolic learning.</li> <li>Classification and regression models.</li> <li>Model optimization.</li> <li>Deep learning: multilayer networks, backpropagation, loss functions, hyperparameters, and training strategies.</li> <li>Convolutional neural networks for image recognition. Sequential and recurrent networks (LSTM).</li> <li>Parallelization and GPU-based computing.</li> <li>Vectorization techniques.</li> <li>Programming with TensorFlow and Theano.</li> <li>Scalable automated learning.</li> <li>Cluster parallelization frameworks.</li> <li>Applications in medicine, finance, autonomous driving, and more.</li> </ul>",
         "thumbnail": "uah.svg",
         "title": "Master’s Degree in Artificial Intelligence for Information and Communication Technologies",
         "university_name": "UAH"
@@ -1024,7 +1024,7 @@
           "end": "June 2007",
           "start": "September 2001"
         },
-        "summary": "Graduated with honors in: Artificial Intelligence, Fuzzy Logic, Computer Vision Systems, Physics II, Mathematical Analysis, Data Structures, and Networks.",
+        "summary": "<p>Graduated with honors in: Artificial Intelligence, Fuzzy Logic, Computer Vision Systems, Physics II, Mathematical Analysis, Data Structures, and Networks.</p>",
         "thumbnail": "uah.svg",
         "title": "Technical Degree in Computer Engineering",
         "university_name": "UAH"
@@ -1039,7 +1039,7 @@
           "end": "February 2016",
           "start": "September 2015"
         },
-        "summary": "Official Linux system administration certification covering advanced Linux administration, kernel-related tasks, advanced storage and filesystems, network authentication, system security (firewalls, VPNs), installation and configuration of core network services (DHCP, DNS, SSH, web, file, and mail servers), monitoring, automation, and infrastructure advisory.",
+        "summary": "<p>Official Linux system administration certification covering:</p> <ul> <li>advanced Linux administration</li> <li>kernel-related tasks</li> <li>advanced storage and filesystems</li> <li>network authentication</li> <li>system security (firewalls, VPNs)</li> <li>installation</li> <li>configuration of core network services (DHCP, DNS, SSH, web, file, and mail servers)</li> <li>monitoring</li> <li>automation</li> <li>infrastructure advisory.</li> </ul>",
         "thumbnail": "linux_foundation.svg",
         "title": "LPIC - 2"
       },
@@ -1051,7 +1051,7 @@
           "end": "February 2014",
           "start": "September 2013"
         },
-        "summary": "Official Linux system administration certification covering Linux installation (including X11), command-line usage, file and permission management (ACLs), basic system security, and routine maintenance tasks.",
+        "summary": "<p>Official Linux system administration certification covering:</p> <ul> <li>Linux installation (including X11)</li> <li>command-line usage</li> <li>file and permission management (ACLs)</li> <li>basic system security</li> <li>routine maintenance tasks.</li> </ul>",
         "thumbnail": "linux_foundation.svg",
         "title": "LPIC - 1"
       },
@@ -1063,7 +1063,7 @@
           "end": "October 2007",
           "start": "September 2007"
         },
-        "summary": "Design of digital educational content using the SCORM standard.",
+        "summary": "<p>Design of digital educational content using the SCORM standard.</p>",
         "thumbnail": "uah.svg",
         "title": "Design and Evaluation of Digital Educational Content"
       },
@@ -1075,7 +1075,7 @@
           "end": "October 2007",
           "start": "September 2007"
         },
-        "summary": "Computer vision systems, convolution matrices, and filtering techniques.",
+        "summary": "<p>Computer vision systems, convolution matrices, and filtering techniques.</p>",
         "thumbnail": "uah.svg",
         "title": "Computer Vision Course"
       },
@@ -1087,7 +1087,7 @@
           "end": "December 2025",
           "start": "December 2025"
         },
-        "summary": "This course provides a comprehensive foundation in deep learning and artificial neural networks, teaching how to build and evaluate models for regression and classification using the Keras library. You have also gained expertise in designing advanced architectures like CNNs, RNNs, and transformers to solve complex real-world challenges such as image analysis and natural language processing.",
+        "summary": "<p>This course provides a comprehensive foundation in deep learning and artificial neural networks, teaching how to build and evaluate models for regression and classification using the Keras library.</p> <p>You have also gained expertise in designing advanced architectures like CNNs, RNNs, and transformers to solve complex real-world challenges such as image analysis and natural language processing.</p>",
         "thumbnail": "IBM.svg",
         "title": "Introduction to Deep Learning & Neural Networks with Keras",
         "certificate": "Coursera A28BYB1VTOMO.pdf",
@@ -1101,7 +1101,7 @@
           "end": "December 2025",
           "start": "December 2025"
         },
-        "summary": "This program covers the complete machine learning workflow, from applying supervised and unsupervised learning algorithms using Python and scikit-learn to building advanced deep learning models with Keras. I have developed the expertise to design and evaluate complex neural architectures, including CNNs, RNNs, and Transformers, to solve real-world challenges in image classification, natural language processing, and predictive modeling.",
+        "summary": "<p>This program covers the complete machine learning workflow, from applying supervised and unsupervised learning algorithms using Python and scikit-learn to building advanced deep learning models with Keras.</p><p>I have developed the expertise to design and evaluate complex neural architectures, including CNNs, RNNs, and Transformers, to solve real-world challenges in image classification, natural language processing, and predictive modeling.</p>",
         "thumbnail": "IBM.svg",
         "title": "Machine Learning with Python",
         "certificate": "Coursera 8F0N1UCIL61O.pdf",

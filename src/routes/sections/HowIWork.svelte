@@ -8,32 +8,44 @@
       <div class="how__label">How I work</div>
 
       <div class="how__grid">
-        <div class="how__item">
-          <div class="how__title">Embedded senior IC</div>
-          <div class="how__text">
+        <div class="how__item collapse-container">
+          <input type="checkbox" id="toggle-input-how" class="toggle-input" />
+          <label for="toggle-input-how" class="toggle-label how__title">
+            Embedded senior IC
+          </label>
+          <div class="how__text content">
             I take ownership of a subsystem and ship improvements end-to-end
             (design → code → deploy → observe).
           </div>
         </div>
 
         <div class="how__item">
-          <div class="how__title">80%+ coding</div>
-          <div class="how__text">
+          <input type="checkbox" id="toggle-input-code" class="toggle-input" />
+          <label for="toggle-input-code" class="toggle-label how__title">
+            80%+ coding
+          </label>
+          <div class="how__text content">
             Minimal ceremony. Clear technical decisions and measurable outcomes.
           </div>
         </div>
 
         <div class="how__item">
-          <div class="how__title">AI in production</div>
-          <div class="how__text">
+          <input type="checkbox" id="toggle-input-ai" class="toggle-input" />
+          <label for="toggle-input-ai" class="toggle-label how__title">
+            AI in production
+          </label>
+          <div class="how__text content">
             LLM/RAG integrations, model deployment & observability — without
             risky rewrites.
           </div>
         </div>
 
         <div class="how__item">
-          <div class="how__title">Best fit</div>
-          <div class="how__text">
+          <input type="checkbox" id="toggle-input-fit" class="toggle-input" />
+          <label for="toggle-input-fit" class="toggle-label how__title">
+            Best fit
+          </label>
+          <div class="how__text content">
             Long-term work (6+ months) where I can run 2–3 parallel projects and
             drive sustained impact.
           </div>
@@ -82,6 +94,33 @@
 </Section>
 
 <style>
+  /* Ocultamos el checkbox real */
+  .toggle-input {
+    display: none;
+  }
+
+  /* Estilo básico del botón */
+  .toggle-label {
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 750;
+    user-select: none;
+  }
+
+  /* El contenido está oculto por defecto */
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Animación suave */
+  }
+
+  /* Cuando el checkbox está marcado, mostramos el contenido */
+  .toggle-input:checked ~ .content {
+    max-height: 200px; /* Un valor lo suficientemente alto */
+    padding: 10px;
+  }
+
   .topCtas {
     display: grid;
     gap: 14px;
@@ -138,8 +177,6 @@
   }
 
   .how__title {
-    font-weight: 750;
-    font-size: 13px;
     color: rgba(255, 255, 255, 0.92);
   }
 

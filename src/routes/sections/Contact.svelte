@@ -113,6 +113,7 @@
 
   .right {
     display: grid;
+    margin-bottom: 100px;
   }
 
   .card {
