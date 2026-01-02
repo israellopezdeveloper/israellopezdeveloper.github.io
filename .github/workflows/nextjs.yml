@@ -43,7 +43,7 @@ jobs:
       - name: Generate NN data
         run: |
           pnpm exec tsx src/script/cv-nn.ts --input src/lib/data/data_CV.json --output src/lib/data/nn_works.ts
-          pnpm exec tsx src/script/repos-nn.ts --input src/lib/data/projects.json --output src/lib/data/nn_projects.ts
+          pnpm exec tsx src/script/repos-nn.ts --input src/lib/data/data_projects.json --output src/lib/data/nn_projects.ts
 
       - name: Build
         run: pnpm build
