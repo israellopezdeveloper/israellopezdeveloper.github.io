@@ -209,7 +209,7 @@
             <section class="block">
               <h4>URL</h4>
               <div class="html">
-                <a href={(selected as Project).url}>
+                <a href={(selected as Project).url} target="_blank">
                   <span class="pill"
                     >GitHub {(selected as Project).lang.en.name}</span
                   >

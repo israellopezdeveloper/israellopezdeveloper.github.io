@@ -37,7 +37,8 @@
       <p class="subheadline">
         Hands-on engineer (80%+ coding) helping teams build, scale, and fix
         complex production systems — especially where AI, performance,
-        reliability, and cost control matter. More than 15 years of experience:
+        reliability —, and cost control matter. More than 15 years of
+        experience:
       </p>
 
       <ul class="bullets">
@@ -87,7 +88,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-High-Performance
     object-position: 50% 8%;
 
     filter: saturate(1.05) contrast(1.05);
@@ -184,22 +184,6 @@ High-Performance
 
   .bullets li {
     margin: 8px 0;
-  }
-
-  .proof {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 18px 0 18px;
-  }
-
-  .pill {
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.04);
-    padding: 8px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.86);
   }
 
   .ctaRow {

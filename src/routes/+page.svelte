@@ -5,6 +5,7 @@
   import SocialProof from '../routes/sections/SocialProof.svelte';
   import TechStack from '../routes/sections/TechStack.svelte';
   import Contact from './sections/Contact.svelte';
+  import Education from './sections/Education.svelte';
   import HowIWork from './sections/HowIWork.svelte';
 </script>
 
@@ -14,6 +15,7 @@
   <Services />
   <Experience />
   <TechStack />
+  <Education />
   <SocialProof />
   <Contact />
 </main>

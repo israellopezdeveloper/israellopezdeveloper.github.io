@@ -188,7 +188,7 @@
 <style>
   .experience__fullbleed {
     width: 100vw;
-    height: 85vh;
+    height: 100%;
     margin-left: calc(50% - 50vw);
     padding: 0 1.25rem;
     box-sizing: border-box;

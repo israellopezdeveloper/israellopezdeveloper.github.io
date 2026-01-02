@@ -8,18 +8,21 @@
     </div>
 
     <div class="links">
-      <a href="mailto:israel.lopez.developer@gmail.com">Email</a>
+      <a class="email" href="mailto:israel.lopez.developer@gmail.com">Email</a>
       <a
+        class="calendly"
         href="https://calendly.com/israel-lopez-developer"
         target="_blank"
         rel="noreferrer">Calendly</a
       >
       <a
+        class="linkedin"
         href="https://www.linkedin.com/in/israellopezmaiz/"
         target="_blank"
         rel="noreferrer">LinkedIn</a
       >
       <a
+        class="upwork"
         href="https://www.upwork.com/freelancers/~01d29eab7db9abdaf8"
         target="_blank"
         rel="noreferrer">Upwork</a
@@ -70,5 +73,22 @@
   }
   a:hover {
     color: white;
+  }
+
+  /* Mobile only */
+  @media (max-width: 768px) {
+    .links .email,
+    .links .linkedin,
+    .links .upwork {
+      display: none;
+    }
+
+    .links {
+      justify-content: center;
+    }
+
+    .subtitle {
+      display: none;
+    }
   }
 </style>

@@ -39,7 +39,6 @@ section[id] {
 
 /* Generic section layout */
 .section {
-  scroll-snap-align: start;
   min-height: 100vh;
   padding: 4rem;
   box-sizing: border-box;
@@ -115,4 +114,10 @@ section[id] {
   padding-left: 10%;
   width: 80%;
   object-fit: contain;
+}
+
+@media (max-width: 859px) {
+  .section {
+    padding: 0px;
+  }
 }

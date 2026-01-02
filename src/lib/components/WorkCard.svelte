@@ -26,6 +26,15 @@
 
   let isClient = false;
 
+  let isMobile = false;
+  let mq: MediaQueryList | null = null;
+
+  function computeIsMobile() {
+    const small = window.matchMedia('(max-width: 980px)').matches;
+    const touch = window.matchMedia('(hover: none)').matches;
+    isMobile = small || touch;
+  }
+
   function clamp(n: number, a: number, b: number) {
     return Math.max(a, Math.min(b, n));
   }
@@ -60,7 +69,7 @@
   }
 
   function show() {
-    if (!isClient) return;
+    if (!isClient || isMobile) return;
     open = true;
     updatePos();
     window.addEventListener('scroll', updatePos, true);
@@ -80,6 +89,21 @@
 
   onMount(() => {
     isClient = true;
+
+    mq = window.matchMedia('(max-width: 980px)');
+    computeIsMobile();
+
+    const handler = () => {
+      computeIsMobile();
+      if (isMobile) hide(); // si cambia a móvil, cierra tooltip
+    };
+
+    // compat: addEventListener / addListener
+    mq.addEventListener?.('change', handler);
+
+    return () => {
+      mq?.removeEventListener?.('change', handler);
+    };
   });
 
   onDestroy(() => {
@@ -242,5 +266,11 @@
   .tooltip__desc :global(ul) {
     margin: 0.35rem 0 0;
     padding-left: 1.1rem;
+  }
+
+  @media (max-width: 980px) {
+    .tooltip-portal {
+      display: none !important;
+    }
   }
 </style>

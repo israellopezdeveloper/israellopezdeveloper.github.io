@@ -19,8 +19,7 @@
         <div class="how__item">
           <div class="how__title">80%+ coding</div>
           <div class="how__text">
-            No people management. Minimal ceremony. Clear technical decisions
-            and measurable outcomes.
+            Minimal ceremony. Clear technical decisions and measurable outcomes.
           </div>
         </div>
 
@@ -265,5 +264,16 @@
     font-size: 12px;
     color: rgba(255, 255, 255, 0.78);
     white-space: nowrap;
+  }
+
+  /* =========================
+   MOBILE: full width
+   ========================= */
+  @media (max-width: 859px) {
+    .how,
+    .pricing,
+    .primaryCta {
+      width: 100%;
+    }
   }
 </style>
