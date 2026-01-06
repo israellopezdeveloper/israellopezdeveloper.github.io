@@ -23,6 +23,11 @@
   description="Senior IC engagements for teams with a live product — hands-on engineering (80%+ coding), performance-first delivery, and AI in production."
 >
   <div class="grid">
+    <a href="/services" id="viewmore">
+      <button type="button" class="badge">Service details</button>
+    </a>
+  </div>
+  <div class="grid">
     {#each services as s, i}
       <Panel as="aside">
         <div class="cardTop">
@@ -92,6 +97,17 @@
 </Section>
 
 <style>
+  a#viewmore {
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  a#viewmore button {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+  }
+
   .titleActions {
     display: flex;
     align-items: center;

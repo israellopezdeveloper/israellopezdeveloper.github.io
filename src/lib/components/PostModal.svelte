@@ -121,8 +121,8 @@
   }
 
   .modal {
-    width: min(980px, 100%);
-    max-height: min(82vh, 860px);
+    width: 80vw;
+    max-height: 80vh;
     overflow: hidden;
     border: 1px solid #222;
     border-radius: 14px;

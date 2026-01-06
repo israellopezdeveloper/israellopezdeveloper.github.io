@@ -1,13 +1,13 @@
 <script lang="ts">
   const links = [
-    { href: '#about', label: 'About me' },
-    { href: '#how-i-work', label: 'How I Work' },
-    { href: '#services', label: 'Services' },
-    { href: '#experience', label: 'Case estudies' },
-    { href: '#tech-stack', label: 'Tech Stack' },
-    { href: '#education', label: 'Education' },
-    { href: '#posts', label: 'Posts' },
-    { href: '#contact', label: 'Contact' }
+    { href: '/#about', label: 'About me' },
+    { href: '/#how-i-work', label: 'How I Work' },
+    { href: '/#services', label: 'Services' },
+    { href: '/#experience', label: 'Case estudies' },
+    { href: '/#tech-stack', label: 'Tech Stack' },
+    { href: '/#education', label: 'Education' },
+    { href: '/#posts', label: 'Posts' },
+    { href: '/#contact', label: 'Contact' }
   ];
 
   let open = false;
@@ -23,7 +23,7 @@
 
 <header>
   <div class="inner">
-    <a class="brand" href="#about" on:click={close}>Israel López</a>
+    <a class="brand" href="/#about" on:click={close}>Israel López</a>
 
     <!-- Desktop nav -->
     <nav class="nav desktop">
