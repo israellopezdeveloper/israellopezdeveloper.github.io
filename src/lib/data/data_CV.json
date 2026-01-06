@@ -38,7 +38,7 @@
         "text": "Completed a degree in Computer Science at the University of Alcalá"
       },
       {
-        "dates": "2009",
+        "dates": "2017",
         "text": "Completed a Master’s degree in Artificial Intelligence for Information and Communication Technologies at the University of Alcalá"
       },
       {
@@ -49,8 +49,8 @@
   },
   "works": [
     {
-      "contribution": "<ul>\n  <li>Optimized the model deployment lifecycle in distributed environments, significantly reducing time-to-production.</li>\n  <li>Implemented core modules in Python and Rust for model management, monitoring, and fault recovery.</li>\n  <li>Integrated high-performance C code for latency-critical operations.</li>\n  <li>Automated deployment pipelines using Docker and Kubernetes.</li>\n  <li>Optimized GPU and CPU utilization to maximize performance and energy efficiency.</li>\n  <li>Worked closely with product teams to define scalability strategies and cost-optimization initiatives.</li>\n</ul>",
-      "full_description": "<p><strong>Context</strong><br>\nCelium is a distributed platform for deploying and running AI models across cloud, on-prem, and edge environments. The system operates over heterogeneous GPU-enabled nodes with strict latency, availability, and cost constraints.</p>\n\n<p><strong>Action</strong></p>\n<ul>\n  <li>Designed and optimized the end-to-end model deployment lifecycle on Kubernetes-based clusters.</li>\n  <li>Implemented orchestration, monitoring, and recovery modules in Python and Rust.</li>\n  <li>Integrated C-based execution paths for latency-critical operations.</li>\n  <li>Automated build, deployment, and rollback pipelines using Docker, Helm, and CI/CD.</li>\n  <li>Tuned CPU/GPU scheduling, affinity, and resource allocation policies.</li>\n</ul>\n\n<p><strong>Metrics</strong></p>\n<ul>\n  <li>Reduced model time-to-production from hours to minutes.</li>\n  <li>Improved sustained GPU utilization by ~20–30%.</li>\n  <li>Lowered P95 inference latency by ~30–40% on critical paths.</li>\n  <li>Reduced deployment-related incidents by ~40%.</li>\n</ul>\n\n<p><strong>Result</strong><br>\nEnabled fast, reliable, and cost-efficient AI model deployment at scale. Improved platform stability and predictability while supporting decentralized execution and continued network growth.</p>",
+      "contribution": "<ul>\n  <li>Optimized the model deployment lifecycle in distributed environments, significantly reducing time-to-production.</li>\n  <li>Implemented core modules in Python and Rust for model management, monitoring, and fault recovery.</li>\n  <li>Integrated high-performance C code for latency-critical operations.</li>\n  <li>Automated deployment pipelines using Docker.</li>\n  <li>Optimized GPU and CPU utilization to maximize performance and energy efficiency.</li>\n  <li>Worked closely with product teams to define scalability strategies and cost-optimization initiatives.</li>\n</ul>",
+      "full_description": "<p><strong>Context</strong><br>\nCelium is a distributed platform for deploying and running AI models across cloud, on-prem, and edge environments. The system operates over heterogeneous GPU-enabled nodes with strict latency, availability, and cost constraints.</p>\n\n<p><strong>Action</strong></p>\n<ul>\n  <li>Designed and optimized the end-to-end model deployment lifecycle.</li>\n  <li>Implemented orchestration, monitoring, and recovery modules in Python and Rust.</li>\n  <li>Integrated C-based execution paths for latency-critical operations.</li>\n  <li>Automated build, deployment, and rollback pipelines using Docker, Helm, and CI/CD.</li>\n  <li>Tuned CPU/GPU scheduling, affinity, and resource allocation policies.</li>\n</ul>\n\n<p><strong>Metrics</strong></p>\n<ul>\n  <li>Reduced model time-to-production from hours to minutes.</li>\n  <li>Improved sustained GPU utilization by ~20–30%.</li>\n  <li>Lowered P95 inference latency by ~30–40% on critical paths.</li>\n  <li>Reduced deployment-related incidents by ~40%.</li>\n</ul>\n\n<p><strong>Result</strong><br>\nEnabled fast, reliable, and cost-efficient AI model deployment at scale. Improved platform stability and predictability while supporting decentralized execution and continued network growth.</p>",
       "images": [],
       "links": [
         {
@@ -615,7 +615,6 @@
             "Spring Security",
             "SNMP",
             "JNLP",
-            "Kubernetes",
             "Ansible",
             "Docker",
             "IntelliJ IDEA",
@@ -648,7 +647,6 @@
           "links": [],
           "name": "Monitoring and assisted-care system for elderly and disabled users (Securitas Direct)",
           "technologies": [
-            "Kubernetes",
             "Ansible",
             "Docker",
             "IntelliJ IDEA",
