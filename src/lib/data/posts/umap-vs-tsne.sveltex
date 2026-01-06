@@ -1,0 +1,243 @@
+---
+title: UMAP vs t-SNE
+date: '2026-01-06'
+summary: 'Qué optimizan, cuándo usarlos y cuándo no.'
+---
+
+<script lang="ts">
+export const meta = {
+    title: "{title}",
+    date: "{date}",
+    summary: "{summary}"
+  };
+</script>
+
+# {title}
+
+Otro de los temas en los que pocos piensan cuando se piensa en Inteligencia
+Artificial. Pero que utilizan empresas como Google, Meta, Amazon o Netflix para
+tareas como:
+
+- visualización de embeddings:
+  - validación de embeddings
+  - detección de embeddings inesperados
+  - identificación de ruido, outliers o sesgos
+
+> Por ejemplo Google usa t-SNE para visualizar sus embeddings de palabras e
+> imágenes en TensorBoard.
+
+- En bioinformática o genómica:
+  - identificación de tipos celulares
+  - Estados celulares
+  - validación de clusters biológicos
+
+- En ciberseguridad y detección de fraudes:
+  - visualización de transacciones y patrones de tráfico
+  - análisis exploratorio de fraudes
+  - apoyo a analistas humanos
+  - detección de comportamientos anómalos
+
+- Monitorización de modelos en producción
+
+En resumen, t-SNE y UMAP rara vez se usan directamente en inferencia en
+producción, pero son herramientas clave en producción analítica, validación de
+modelos, monitoring y toma de decisiones.
+
+## UMAP y t-SNE: qué están haciendo realmente cuando “dibujan” tus datos
+
+Seguro que te ha pasado:
+tiras un **UMAP** o un **t-SNE**, ves clusters claros y piensas:
+
+> “Vale, aquí hay estructura.”
+
+A veces la hay. Muchas veces, no exactamente como crees.
+
+No porque la técnica sea mala —al contrario—
+sino porque **no solemos entender qué problema matemático están resolviendo**.
+
+## La intuición básica (sin fórmulas… todavía)
+
+Tanto **t-SNE** como **UMAP** parten de la misma idea simple:
+
+> _En el espacio original, hay puntos que son vecinos.
+> En 2D, esos vecinos deberían seguir siéndolo._
+
+Eso es todo.
+
+No intentan:
+
+- conservar distancias reales
+- respetar tamaños
+- mantener proporciones globales
+
+Solo intentan **no romper vecindarios**.
+
+Todo lo demás es negociable.
+
+## t-SNE: una lupa para lo local
+
+_(Distill, 2016)_
+
+t-SNE funciona así, a grandes rasgos:
+
+1. Mira tus datos en alta dimensión
+2. Convierte distancias en **probabilidades de vecindad**
+3. Hace lo mismo en 2D
+4. Ajusta los puntos para que esas probabilidades se parezcan lo máximo posible
+
+Matemáticamente, lo que minimiza es una **divergencia KL** entre dos
+distribuciones de probabilidad:
+
+$$
+KL(P | Q)
+$$
+
+Y aquí está la clave que explica **todos los malentendidos**:
+
+- Esa divergencia penaliza mucho **perder vecinos cercanos**,
+- pero le da bastante igual distorsionar lo global.
+
+Por eso, como explica Distill:
+
+- la distancia entre clusters no significa nada
+- el tamaño de los clusters no significa nada
+- el espacio vacío no significa nada
+
+t-SNE no te dice _cómo de distintos_ son dos grupos.
+Solo te dice _qué puntos se parecen localmente_.
+
+Es una **lupa**, no un mapa.
+
+## UMAP: misma idea, pero más estructurada
+
+_(McInnes et al., 2018 · PAIR)_
+
+UMAP parte de una intuición parecida, pero añade una capa más “geométrica”.
+
+UMAP asume que:
+
+- los datos viven sobre una especie de superficie (un _manifold_)
+- localmente, esa superficie es coherente
+- las distancias cercanas importan más que las lejanas
+
+Con eso, construye un **grafo de vecinos**:
+quién está conectado con quién, y con qué intensidad.
+
+Esa intensidad se modela con probabilidades del estilo:
+
+$$
+p_{ij} = \exp\left(-\frac{d(x_i, x_j) - \rho_i}{\sigma_i}\right)
+$$
+
+No hace falta obsesionarse con la fórmula.
+La idea es:
+
+> “Cuanto más cerca están dos puntos, más fuerte es su conexión.”
+
+Luego UMAP intenta colocar los puntos en 2D de forma que ese **grafo** se
+parezca lo máximo posible arriba y abajo, minimizando una **cross-entropy**
+entre ambos.
+
+- UMAP no preserva varianza (como PCA).
+- Preserva **relaciones topológicas**.
+
+Por eso suele “verse mejor”.
+Pero sigue siendo una **optimización**, no una verdad absoluta.
+
+## Por qué tocar un parámetro cambia tanto el dibujo
+
+Aquí encajan muy bien tanto **PAIR** como el paper de 2021.
+
+Parámetros como:
+
+- `n_neighbors`
+- `min_dist`
+- la métrica
+
+no son detalles técnicos.
+
+Son **suposiciones sobre el dato**.
+
+Cambiar `n_neighbors` es cambiar la pregunta de:
+
+> “¿Qué considero local?”
+
+Desde el punto de vista matemático:
+
+- el problema es **no convexo**
+- hay múltiples soluciones válidas
+- distintas inicializaciones → distintos mínimos
+
+Por eso el paper de 2021 muestra que:
+
+> pequeños cambios producen visualizaciones muy distintas
+
+No porque UMAP “falle”,
+sino porque **no existe un único embedding correcto**.
+
+## Entonces… ¿cuándo son realmente útiles?
+
+Son muy útiles cuando se usan **como lo que son**:
+
+- para explorar embeddings
+- para detectar vecindarios raros
+- para depurar representaciones
+- para generar hipótesis
+
+Ejemplos reales:
+
+- embeddings de texto
+- embeddings de imágenes
+- análisis exploratorio antes de modelar
+
+Aquí brillan.
+
+## ¿Y cuándo no conviene usarlos?
+
+Cuando se usan para:
+
+- decidir cuántos clusters hay
+- justificar decisiones de negocio
+- medir similitud real
+- “probar” estructura
+
+Si la conclusión depende solo del gráfico 2D,
+el problema no es UMAP ni t-SNE.
+
+Es la interpretación.
+
+## Una regla sencilla que casi nunca falla
+
+- **PCA** → entender varianza y estructura lineal
+- **t-SNE** → inspeccionar relaciones locales
+- **UMAP** → explorar estructura local a escala
+- **Métricas + dominio** → decidir
+
+Si una idea desaparece al:
+
+- cambiar parámetros
+- cambiar la seed
+- cambiar la muestra
+
+probablemente nunca fue una idea sólida.
+
+## Cierre
+
+Todos los recursos citados coinciden en lo mismo, aunque lo digan con distinto
+lenguaje:
+
+> La reducción de dimensionalidad no descubre estructura.
+> **Optimiza una idea de estructura.**
+
+La diferencia entre junior y senior no es saber usar UMAP.
+Es saber **cuándo el dibujo ayuda… y cuándo engaña**.
+
+## Referencias
+
+- [McInnes et al., **_UMAP: Uniform Manifold Approximation and Projection_** (2018)](https://arxiv.org/abs/1802.03426)
+
+- [**_On the instability and misinterpretation of dimensionality reduction visualizations_** (2021)](https://arxiv.org/abs/2102.01384)
+
+- [Distill.pub — **_How to Use t-SNE Effectively_** (2016)](https://distill.pub/2016/misread-tsne/)
+
+- [Google PAIR — **_Understanding UMAP_**](https://pair-code.github.io/understanding-umap/)

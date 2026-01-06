@@ -9,6 +9,7 @@
 
 <svelte:head>
   <link rel="icon" href={favicon} />
+  <title>Israel Lopez</title>
 </svelte:head>
 
 <Header></Header>

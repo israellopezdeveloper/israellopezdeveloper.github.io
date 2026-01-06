@@ -6,6 +6,7 @@
     { href: '#experience', label: 'Case estudies' },
     { href: '#tech-stack', label: 'Tech Stack' },
     { href: '#education', label: 'Education' },
+    { href: '#posts', label: 'Posts' },
     { href: '#contact', label: 'Contact' }
   ];
 

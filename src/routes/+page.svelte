@@ -6,6 +6,7 @@
   import Contact from './sections/Contact.svelte';
   import Education from './sections/Education.svelte';
   import HowIWork from './sections/HowIWork.svelte';
+  import Posts from './sections/Posts.svelte';
 </script>
 
 <main>
@@ -15,5 +16,6 @@
   <Experience />
   <TechStack />
   <Education />
+  <Posts />
   <Contact />
 </main>
