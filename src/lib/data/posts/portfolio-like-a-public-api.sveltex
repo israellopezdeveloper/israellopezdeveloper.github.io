@@ -1,0 +1,40 @@
+---
+title: Why I started treating my portfolio like a public API
+date: '2026-01-06'
+summary: 'When I became freelance, I started treating my portfolio like a public API: clear contract, low friction, and no assumed context.'
+---
+
+<script lang="ts">
+export const meta = {
+    title: "{title}",
+    date: "{date}",
+    summary: "{summary}"
+  };
+</script>
+
+# {title}
+
+For most of my career, I never had a portfolio.
+I didn’t need one. I was working full-time, shipping real systems, and my work lived in production environments, not on a personal website.
+
+When I decided to go freelance, it wasn’t because I wanted to optimize my income or chase flexibility as a buzzword. It was about freedom: choosing what I work on, where I work from, and who I work with.
+
+That decision forced me to do something I had never done before: explain what I do without interviews, recruiters, or internal context. For the first time, my work needed to speak for itself in a public, asynchronous way.
+
+That’s when I realized I didn’t want a traditional portfolio. I didn’t want a static list of technologies or a polished CV in HTML. I wanted something that behaved like a system.
+
+So I started treating my portfolio the same way I treat any public-facing API.
+
+A public API doesn’t assume context. It has a clear contract. It respects the consumer’s time. It makes it obvious, very quickly, whether it’s the right tool or not.
+
+A portfolio, especially for a freelancer, should do exactly the same.
+
+It shouldn’t try to tell your entire story. It shouldn’t prove that you know everything. It should answer a small set of critical questions as efficiently as possible: what problems you solve, who you solve them for, how you work, and what happens next if someone wants to talk.
+
+Once I shifted to that mindset, everything changed. I removed content that didn’t add signal, focused on clarity over completeness, and started thinking in terms of usability instead of self-promotion.
+
+The result wasn’t a better-looking portfolio. It was a more useful one.
+
+And in a way, that aligns perfectly with why I chose freelancing in the first place. Freedom isn’t about working alone. It’s about being intentional, setting boundaries, and making it easy for the right people to find you.
+
+If you’ve spent years working full-time and only later moved into freelancing, I’m curious: did you also struggle with making your work “public”? And did you treat your portfolio as a product—or just as a requirement?

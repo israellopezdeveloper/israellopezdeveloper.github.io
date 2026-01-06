@@ -121,7 +121,7 @@
   }
 
   .modal {
-    width: 80vw;
+    width: 60vw;
     max-height: 80vh;
     overflow: hidden;
     border: 1px solid #222;
@@ -129,6 +129,12 @@
     background: #0b0b0b;
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    .modal {
+      width: 90vw;
+    }
   }
 
   .modal:focus {
