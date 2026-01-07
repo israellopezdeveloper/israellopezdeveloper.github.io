@@ -3,11 +3,12 @@
   import type { ServicePageData } from './+page';
 
   let { data }: { data: ServicePageData } = $props();
-  const { service } = data;
+  const service = $derived(data.service);
 
-  const mailTo =
+  const mailTo = $derived(
     'mailto:israellopezdeveloper@gmail.com?subject=' +
-    encodeURIComponent(`[Service Inquiry] ${service.title}`);
+      encodeURIComponent(`[Service Inquiry] ${service.title}`)
+  );
 </script>
 
 <svelte:head>
