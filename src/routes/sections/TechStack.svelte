@@ -86,9 +86,10 @@
   }
 
   .show-more-btn {
+    color: #e5e7eb;
+    background-color: #1f2933;
+    border: 1px solid #374151;
     background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.4);
     font-size: 12px;
     cursor: pointer;
     padding: 4px 8px;
