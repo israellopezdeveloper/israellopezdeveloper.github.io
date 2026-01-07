@@ -12,12 +12,10 @@
 
 <svelte:head>
   <title>{data.title}</title>
-  <meta name="description" content={data.description} />
   <link rel="canonical" href={data.canonical} />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content={service.title} />
-  <meta property="og:description" content={data.description} />
   <meta property="og:url" content={data.canonical} />
 
   <meta name="twitter:card" content="summary_large_image" />

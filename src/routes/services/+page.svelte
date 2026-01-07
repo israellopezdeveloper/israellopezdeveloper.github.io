@@ -10,8 +10,10 @@
 
 <svelte:head>
   <title>{title} · Israel Lopez</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href="https://israellopezdeveloper.github.io/services" />
+  <link
+    rel="canonical"
+    href="https://israellopezdeveloper.github.io/services"
+  />
 </svelte:head>
 
 <main class="wrap">
@@ -22,7 +24,11 @@
 
   <div class="grid">
     {#each services as s}
-      <a class="cardLink" href={`/services/${slugify(s.title)}`} aria-label={`Open ${s.title}`}>
+      <a
+        class="cardLink"
+        href={`/services/${slugify(s.title)}`}
+        aria-label={`Open ${s.title}`}
+      >
         <Panel as="article">
           <div class="top">
             <div class="titleRow">
