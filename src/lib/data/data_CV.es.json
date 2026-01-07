@@ -1,7 +1,7 @@
 {
   "intro": {
     "greeting": "¡Hola! Soy Israel, un dev senior empedernido viajando por el mundo.",
-    "profile_image": "israel.png",
+    "profile_image": "israel.webp ",
     "name": "Israel López",
     "title": "Ingeniero de Software Senior",
     "summary": "<P>Mi mochila está llena de código y de ganas de seguir aprendiendo. ¡La programación es mi superpoder!</P><P>Desde los 13 me picó el gusanillo de la programación y no he podido parar. ¡En cualquier rincón del mundo, con mi portátil bajo el brazo!</P><P>Me considero una mente inquieta por las ganas insaciables que tengo de aprender,  innovar y superar nuevos retos intelectuales. Disfruto de la sensación de ver cómo una idea se convierte en realidad a través de código.</P><P>Tengo la suerte de que la programación no solo es mi trabajo, también es mi pasión y si hay algo que me caracteriza es mi insistencia por encontrar la solución óptima al proyecto.  Porque si, me  enorgullece entregar código limpio y eficiente.</P><P>Si conectamos, ¿estás listo para embarcarte en una nueva aventura tecnológica conmigo?</P>",
@@ -164,7 +164,7 @@
         }
       ],
       "short_description": "Datura AI es una startup especializada en tecnologías descentralizadas para redes como Bittensor. Su misión consiste en construir soluciones que superen los sistemas centralizados, ofreciendo herramientas de fácil uso y gran rendimiento. Entre sus productos se encuentra <strong>Celium</strong>, una plataforma para despliegue instantáneo de modelos de IA en containers, que habilita edición de pods, plantillas de despliegue y ejecución rápida de modelos como Stable Diffusion o Whisper.",
-      "thumbnail": "daturaai.png"
+      "thumbnail": "daturaai.webp "
     },
     {
       "contribution": "<p>En Indra participé en las siguientes áreas clave:</p>\n<ul>\n    <li><strong>Diseño e implementación backend</strong> en Java y Node.js con principios de Clean Architecture para lograr mantenibilidad y escalabilidad.</li>\n    <li><strong>Integración de un sistema RAG</strong> para recuperación contextual de inteligencia operativa: ingesta heterogénea, embeddings y búsqueda semántica.</li>\n    <li><strong>Capacidades GIS</strong> para análisis geoespacial, visualización táctica y optimización de rutas/despliegues en tiempo real.</li>\n    <li><strong>Definición de APIs e interfaces</strong> para interoperar con sistemas OTAN, cumpliendo estándares y protocolos seguros.</li>\n    <li><strong>Agile (SCRUM) y gestión en Jira</strong>, priorizando funcionalidades críticas y coordinando dependencias.</li>\n    <li><strong>CI/CD con GitLab</strong> y despliegues en <strong>Kubernetes</strong>; observabilidad con Prometheus y Grafana.</li>\n    <li><strong>Optimización de rendimiento y resiliencia</strong>: pruebas de carga, tolerancia a fallos y simulaciones de entornos hostiles.</li>\n  </ul>",
@@ -271,12 +271,12 @@
         }
       ],
       "short_description": "Indra es una multinacional española líder en consultoría y tecnología, con presencia en más de 140 países. Ofrece soluciones innovadoras para sectores como Defensa, Transporte, Energía, Seguridad y Transformación Digital. En el ámbito de Defensa, desarrolla sistemas estratégicos y de misión crítica que fortalecen la autonomía tecnológica y la interoperabilidad de las fuerzas armadas de Europa y países aliados de la OTAN.",
-      "thumbnail": "indra.png"
+      "thumbnail": "indra.webp "
     },
     {
       "contribution": "<P>En Devo, desempeñé un papel crucial en el equipo de ingesta de datos, centrándome específicamente en el balanceador de carga. Dada la sensibilidad de los datos y su importancia para diagnosticar posibles ataques, el servicio debía ser tanto fiable como rápido. Bajo mi experiencia, el sistema pudo manejar un impresionante volumen de ingesta de aproximadamente 60TB por día. Además, contribuí significativamente a los esfuerzos de Devo para adaptarse a los estándares necesarios para la integración con sistemas federales de EE.UU., logrando la certificación FedRAMP. Asimismo, participé en la creación de un sistema de respaldo multirregional y multicloud, asegurando la redundancia y fiabilidad de los datos en diversos entornos. Mi trabajo garantizó que la plataforma de Devo cumpliera con los más altos niveles de seguridad y cumplimiento, mejorando la capacidad de la empresa para servir eficazmente a sus clientes.</P>",
       "full_description": "<P>Devo es una empresa líder en análisis de registros y seguridad nativa en la nube, dedicada a proporcionar conocimientos en tiempo real y análisis avanzados para datos empresariales. Su robusta plataforma permite a las organizaciones detectar, analizar y responder eficientemente a amenazas de seguridad, aprovechando el poder del aprendizaje automático y una arquitectura altamente escalable. Las soluciones de Devo están diseñadas para manejar grandes volúmenes de datos, asegurando que las empresas puedan mantener altos niveles de rendimiento y seguridad. Sirviendo a una amplia gama de industrias, incluidas finanzas y telecomunicaciones, Devo mejora las medidas de ciberseguridad y optimiza las prácticas de gestión de datos, ayudando a las empresas a mantenerse por delante de las amenazas y requisitos regulatorios en evolución. Con un compromiso con la innovación y la excelencia, Devo está a la vanguardia de la transformación de cómo las empresas abordan la seguridad y el análisis de datos.</P>",
-      "images": ["devo1.png", "devo2.png"],
+      "images": ["devo1.webp ", "devo2.webp "],
       "links": [
         {
           "icon": "",
@@ -381,7 +381,7 @@
         }
       ],
       "short_description": "Empresa nativa de la nube que ofrece análisis de seguridad en tiempo real, aprendizaje automático y soluciones escalables para la gestión de datos empresariales.",
-      "thumbnail": "devo.png"
+      "thumbnail": "devo.webp "
     },
     {
       "contribution": "<P>En la Comisión Europea, trabajé como arquitecto de software en tres proyectos, con una amplia gama de responsabilidades que demostraron mi experiencia y liderazgo en el desarrollo de software. Mis principales responsabilidades incluyeron:</P><ul><li><b>Gestión de Requisitos No Funcionales y Definición del Proyecto</b>: Usando Enterprise Architect, fui responsable de identificar y gestionar requisitos no funcionales, asegurando que cada proyecto estuviera claramente definido y alineado con los objetivos organizacionales.</li><li><b>Priorización de Tareas</b>: Utilizando Jira, prioricé tareas eficazmente para asegurar que los elementos más críticos se abordaran de manera oportuna.</li><li><b>Gestión de Dependencias de Tareas</b>: Usé Jira para gestionar dependencias entre tareas, asegurando un progreso fluido y minimizando retrasos.</li><li><b>Selección de Tecnología</b>: Fui fundamental en la selección de tecnologías apropiadas para cada proyecto, asegurando que fueran adecuadas para cumplir con las necesidades del proyecto.</li><li><b>Definición de Perfiles de Miembros del Equipo</b>: Definí los perfiles y roles de los miembros del equipo, asegurando que el equipo tuviera las habilidades y experiencia necesarias para tener éxito.</li><li><b>Colaboración entre Equipos</b>: Facilitó la colaboración entre diferentes equipos cuyos proyectos necesitaban integrarse, asegurando una integración y cooperación sin problemas.</li><li><b>Control de Calidad y Pruebas</b>: Definí controles de calidad y protocolos de pruebas, incluyendo pruebas unitarias utilizando tecnologías como JUnit o Google Test/Valgrind, dependiendo del lenguaje de programación.</li><li><b>Implementación de Sistemas CI/CD</b>: Definí e implementé sistemas de Integración Continua y Despliegue Continuo utilizando herramientas como Bamboo y SonarQube.</li><li><b>Metodologías de Desarrollo de Software</b>: Apliqué prácticas de Desarrollo Basado en Pruebas (TDD) y Desarrollo Basado en Comportamiento (BDD) para asegurar un desarrollo de software de alta calidad.</li><li><b>Metodología Ágil</b>: Utilicé SCRUM como la metodología principal para la gestión de proyectos, fomentando un proceso de desarrollo ágil y eficiente.</li></ul>",
@@ -403,7 +403,7 @@
       "projects": [
         {
           "description": "<P>El primer proyecto involucró la definición de dos APIs RESTful que implementaron el Modelo de Madurez de Richardson Nivel 3, incorporando HATEOAS. Estas APIs fueron diseñadas como plataformas para el intercambio seguro de documentos legales en procedimientos antimonopolio.</P><ul><li><b>API Interna</b>: La primera API estaba destinada a servir al personal interno de la Comisión Europea.</li><li><b>API Externa</b>: La segunda API sirvió como plataforma para el personal externo.</li></ul>Ambas APIs contaban con control de acceso a través de un sistema de Inicio de Sesión Único llamado CAS. La persistencia de datos se gestionó utilizando tanto Oracle DB como MongoDB. Además, las APIs se integraron con un proyecto interno de almacenamiento seguro de documentos a través de una interfaz SOAP. El flujo de trabajo de cada procedimiento se gestionó utilizando el patrón de diseño State, y los administradores del sistema fueron notificados de los cambios de estado por correo electrónico.",
-          "images": ["European_Commission_02.png"],
+          "images": ["European_Commission_02.webp "],
           "links": [
             {
               "icon": "",
@@ -549,7 +549,7 @@
         }
       ],
       "short_description": "La Comisión Europea es el brazo ejecutivo de la Unión Europea, responsable de proponer legislación, implementar decisiones y gestionar los asuntos diarios.",
-      "thumbnail": "European_Commission_01.png"
+      "thumbnail": "European_Commission_01.webp "
     },
     {
       "contribution": "<P>En Panel Sistemas, trabajé como analista funcional en tres proyectos. Además, realicé tareas como programador senior en la fase posterior a la toma de decisiones. Mis responsabilidades como analista funcional incluyeron lo siguiente:</P><ul><li>Análisis de requisitos no funcionales y toma de decisiones sobre la implementación exacta de la solución (Redmine)</li><li>Creación de sub-tareas con menor granularidad para lograr objetivos (Redmine)</li><li>Estimación de tiempos (Redmine)</li><li>Definición e implementación de la estructura del proyecto en las tecnologías especificadas</li><li>Definición de la cobertura y calidad de las pruebas unitarias (JUnit, Google Test, Valgrind)</li><li>Implementación de sistemas CI/CD (Jenkins)</li><li>Utilización de SCRUM como metodología de desarrollo</li><li>Aplicación de TDD y BDD en el desarrollo de software</li><li>Impartición de sesiones de capacitación sobre TDD, BDD, Redes Neuronales, Código Limpio y más</li></ul>",
@@ -571,7 +571,7 @@
       "projects": [
         {
           "description": "<P>El primero de los proyectos en los que trabajé involucró la implementación de una plataforma de intercambio de mensajes para el transporte marítimo y aéreo. Este proyecto reemplazó con éxito el estándar IATA obsoleto, basado en texto plano y propenso a errores humanos debido a su dependencia de la posición de la cadena de texto, con un formato más moderno, legible y resistente a errores basado en XML/JSON.</P><P>Para lograr esto, definí un analizador que traducía mensajes del formato antiguo a cualquiera de los dos estándares modernos a través de una API Restful que cumplía con el modelo de madurez de Richardson Nivel 3. Esta API no solo proporcionó un punto de entrada para la traducción de mensajes, sino que también facilitó la intercomunicación con otras plataformas en todo el mundo y el almacenamiento de estas comunicaciones para asegurar la trazabilidad del tránsito de paquetes a nivel mundial. Los objetivos del proyecto requerían una estructura de alta disponibilidad y un sistema de base de datos replicada basado en MongoDB, implementado a través de un clúster de servidores con cada fragmento replicado.</P>",
-          "images": ["iata.png"],
+          "images": ["iata.webp "],
           "links": [],
           "name": "Modernización de la mensajería de transporte marítimo y aéreo: reemplazo de IATA por XML/JSON",
           "technologies": [
@@ -604,7 +604,7 @@
         },
         {
           "description": "El segundo proyecto fue un proyecto conjunto con Siemens para crear la infraestructura de gestión inteligente de terminales de Iberdrola. Estos terminales tomaban información sobre el consumo eléctrico del usuario enviando un informe diario al servidor utilizando el protocolo de comunicación SNMP, a menos que se deseara un monitoreo más detallado de un dispositivo o conjunto de dispositivos específico, en cuyo caso se generarían informes con un nivel de detalle que llegaría al consumo por minuto. Estos datos se almacenaban en una base de datos no relacional MongoDB, que por razones obvias eran varios clústeres, con balanceo de carga y fragmentos replicados. La información de cada punto se almacenaba en el clúster por proximidad geográfica, siempre que el servidor pudiera asumir el volumen de datos que incluía la inclusión de dicho nodo. La información de cada nodo se mantenía durante un año con un nivel de detalle de consumo por minuto, después de un año se compactaba generando el máximo, mínimo y promedio de cada día y esta información se mantenía a este nivel de detalle durante 5 años y pasado ese lapso de tiempo la información de cada nodo se compactaba nuevamente. El sistema también daba la posibilidad de controlar y escuchar en tiempo real el dispositivo a través del protocolo SNMP y JNLP. Esta estructura se creó utilizando microservicios en C++ con el framework de llamada a procedimiento remoto gRPC y se implementó en un conjunto de servidores basados en Red Hat Enterprise Linux.",
-          "images": ["iberdrola.svg", "siemens.png"],
+          "images": ["iberdrola.svg", "siemens.webp "],
           "links": [],
           "name": "Gestión Inteligente de Terminales de Iberdrola con Siemens",
           "technologies": [
@@ -687,7 +687,7 @@
         }
       ],
       "short_description": "Panel Sistemas es una empresa especializada en soluciones tecnológicas, ofreciendo servicios de software, consultoría y desarrollo a diversas industrias.",
-      "thumbnail": "panel_sistemas.png"
+      "thumbnail": "panel_sistemas.webp "
     },
     {
       "contribution": "<p>Tengo una amplia experiencia trabajando como programador senior remoto en tres proyectos importantes. En este rol, se me confió una variedad de responsabilidades críticas que requerían tanto experiencia técnica como fuertes habilidades de comunicación. Uno de mis deberes principales fue asistir a reuniones con el propietario del producto para definir los requisitos detallados del proyecto. Esto implicaba un análisis exhaustivo de los objetivos del proyecto y desglosarlos en tareas específicas y procesables. Al hacerlo, aseguré que todos los aspectos del proyecto fueran claramente entendidos y abordados desde el principio.</p><p>La coordinación con equipos externos fue otro aspecto importante de mi rol. Trabajé en estrecha colaboración con equipos de colaboración con sede en América del Sur, India y China. Esta coordinación internacional requería que gestionara eficazmente diferentes zonas horarias y diferencias culturales. Para facilitar una comunicación y colaboración fluidas, traduje e interpreté los requisitos en chino. Esta habilidad lingüística fue crucial para superar las brechas de comunicación y asegurar que todos los miembros del equipo, independientemente de su ubicación, tuvieran una comprensión clara y precisa de los requisitos del proyecto.</p><p>La innovación y la eficiencia fueron áreas clave de enfoque en mi rol. Participé en sesiones de lluvia de ideas para desarrollar e implementar nuevas herramientas destinadas a mejorar la automatización y la productividad del equipo. Estas herramientas estaban diseñadas para agilizar los flujos de trabajo, reducir el esfuerzo manual y mejorar la eficiencia general del proceso de desarrollo. Al introducir estas innovaciones, pude contribuir a un entorno de equipo más productivo y efectivo.</p><p>La planificación detallada del proyecto fue otra responsabilidad crítica. Utilicé la metodología SCRUM para asegurar que todas las tareas estuvieran organizadas y gestionadas eficazmente a lo largo del ciclo de vida del proyecto. Esto implicaba crear planes detallados, establecer cronogramas realistas y monitorear continuamente el progreso para asegurar que se cumplieran los hitos del proyecto. El uso de SCRUM permitió un enfoque flexible e iterativo para la gestión de proyectos, permitiendo que el equipo se adaptara a los cambios y abordara los desafíos de manera rápida.</p><p>En general, mi experiencia como programador senior remoto me ha dotado de un conjunto de habilidades diverso y una profunda comprensión de la gestión efectiva de proyectos en un entorno de trabajo remoto y global. Mi capacidad para definir requisitos detallados, coordinar con equipos internacionales, innovar para mejorar la productividad y gestionar proyectos utilizando SCRUM me ha permitido contribuir significativamente al éxito de los proyectos en los que he estado involucrado.</p>",
@@ -772,7 +772,7 @@
         }
       ],
       "short_description": "Grupo PRISA es un conglomerado de medios español, conocido por sus influyentes periódicos, emisoras de radio y publicaciones educativas.",
-      "thumbnail": "prisa.png"
+      "thumbnail": "prisa.webp "
     },
     {
       "contribution": "<p>Como Programador Senior, contribuí a tres proyectos significativos. El primer proyecto fue una aplicación para Antena 3 Televisión, desarrollada de forma nativa para Android. Esta aplicación servía como una interfaz interactiva en tiempo real con el contenido televisivo, actualizada a través de marcadores inaudibles incrustados en el audio. El audio era interceptado por la aplicación, utilizando una solución personalizada desarrollada en el NDK de Android para asegurar un alto rendimiento y bajo consumo de batería. Esta solución modificaba el audio añadiendo ecos separados por distancias temporales específicas, que se interpretaban de manera binaria.</p>",
@@ -794,7 +794,7 @@
       "projects": [
         {
           "description": "<p>El primer proyecto involucró el desarrollo de una aplicación para Antena 3 Televisión, construida de forma nativa para Android. Esta aplicación servía como una interfaz interactiva en tiempo real con el contenido televisivo, actualizada dinámicamente utilizando marcadores inaudibles incrustados en el audio. Para lograr esto, la aplicación utilizaba una solución personalizada desarrollada en el NDK de Android, que aseguraba un mayor rendimiento y menor consumo de batería.</p><p>El audio modificado incluía ecos separados por intervalos temporales específicos, que la aplicación interpretaba en formato binario. Este enfoque innovador permitía que la aplicación interactuara sin problemas con la transmisión televisiva, proporcionando a los usuarios una experiencia de visualización mejorada y atractiva.</p>",
-          "images": ["intelygenz_01.jpeg"],
+          "images": ["intelygenz_01.webp"],
           "links": [
             {
               "icon": "",
@@ -814,7 +814,7 @@
         },
         {
           "description": "<p>El segundo proyecto involucró el desarrollo de un gestor de documentos para el banco BBVA, implementado en C# dentro del entorno .NET. Este sistema fue diseñado para conectarse con herramientas externas basadas en el framework Google App Engine. Especializado en documentos financieros, el gestor de documentos facilitaba la creación de grupos de edición, supervisión y acreditación, asegurando una gestión completa de varias tareas relacionadas con los documentos.</p><p>Además, el gestor de documentos integraba el flujo de trabajo y la lógica de negocio de BBVA, permitiendo una interacción fluida con otras entidades bancarias. Esta implementación no solo agilizó los procesos de manejo de documentos, sino que también aseguró que las operaciones del banco estuvieran alineadas con los estándares y mejores prácticas de la industria, mejorando así la eficiencia y colaboración entre diferentes departamentos y socios externos.</p>",
-          "images": ["bbva.jpg"],
+          "images": ["bbva.webp"],
           "links": [],
           "name": "Proyecto de gestor de documentos para BBVA",
           "technologies": [
@@ -835,7 +835,7 @@
         },
         {
           "description": "<p>El tercer proyecto involucró el desarrollo de un front-end colaborativo para el banco BBVA, utilizando tanto Java como JavaScript. Este proyecto se integró con el entorno NACAR, una plataforma diseñada para mejorar la funcionalidad y experiencia del usuario de aplicaciones bancarias. La integración con NACAR permitió el desarrollo de características avanzadas y una interacción fluida dentro del sistema bancario.</p><p>Un logro significativo de este proyecto fue la creación de una biblioteca de gestos y acciones en pantalla, conocida como IRIS. Esta biblioteca fue diseñada para mejorar la interacción del usuario proporcionando formas intuitivas y eficientes de realizar varias tareas. La biblioteca IRIS mejoró la experiencia general del usuario, haciendo que la aplicación fuera más receptiva y fácil de usar.</p>",
-          "images": ["bbva.jpg"],
+          "images": ["bbva.webp"],
           "links": [],
           "name": "Proyecto de Front colaborativo",
           "technologies": [
@@ -860,7 +860,7 @@
         }
       ],
       "short_description": "Intelygenz es una empresa de tecnología especializada en inteligencia artificial, aprendizaje automático y soluciones de software a medida para diversas industrias.",
-      "thumbnail": "intelygenz.png"
+      "thumbnail": "intelygenz.webp "
     },
     {
       "contribution": "<p>Mi rol como investigador en la universidad fue dentro del grupo de investigación TIFyC, donde tuve una gama de responsabilidades enfocadas en avanzar en el campo de la tecnología y la inteligencia artificial. Una de mis principales tareas fue realizar investigaciones exhaustivas sobre el estado del arte en diversas áreas, incluyendo problemas de accesibilidad, algoritmos de IA, visión artificial y sistemas biométricos. Esto implicaba mantenerse actualizado con los últimos avances, evaluar nuevas metodologías e identificar posibles áreas de innovación.</p><p>Además de mis deberes de investigación, participé activamente en colaboraciones con grupos de investigación de diferentes universidades. Estas colaboraciones tenían como objetivo fomentar el intercambio de conocimientos, promover la investigación interdisciplinaria e impulsar proyectos innovadores. Al trabajar estrechamente con otros investigadores, pudimos combinar nuestra experiencia y recursos para abordar desafíos complejos y expandir los límites de nuestros respectivos campos.</p><p>Otro aspecto clave de mi rol fue la preparación de informes detallados sobre nuestros hallazgos de investigación. Estos informes documentaban nuestras metodologías, resultados y conclusiones, proporcionando un recurso valioso para investigaciones futuras y contribuyendo a la comunidad científica en general. Mi capacidad para comunicar claramente y de manera efectiva nuestros hallazgos fue crucial para asegurar que nuestro trabajo tuviera un impacto significativo.</p><p>Además, participé en el estudio y la solicitud de ayudas estatales y subvenciones para proyectos de investigación y desarrollo (I+D). Esto requería una comprensión exhaustiva del panorama de financiación y la capacidad de elaborar propuestas convincentes que demostraran la importancia y el impacto potencial de nuestra investigación. Obtener estos fondos fue esencial para apoyar nuestros proyectos en curso y permitir nuevas iniciativas.</p><p>Como parte de mis responsabilidades, también serví como profesor asistente, enseñando cursos sobre Inteligencia Artificial y Sistemas de Visión Artificial. En esta capacidad, fui responsable de impartir conocimientos a los estudiantes, diseñar materiales del curso y guiarlos a través de conceptos complejos y aplicaciones prácticas. Mi rol de enseñanza me permitió compartir mi pasión por la IA y la visión artificial con la próxima generación de investigadores y profesionales, al mismo tiempo que me mantenía comprometido con la comunidad académica.</p>",
@@ -882,7 +882,7 @@
       "projects": [
         {
           "description": "<p>Uno de los proyectos significativos llevados a cabo por nuestro grupo de investigación se centró en investigar dispositivos innovadores diseñados para mejorar la interacción para individuos con discapacidades visuales, auditivas o motoras. El objetivo principal de esta investigación era desarrollar y perfeccionar tecnologías que pudieran facilitar interacciones más intuitivas y accesibles con varios tipos de sistemas, incluidos computadoras de escritorio, portátiles y dispositivos móviles.</p><p>Nuestro equipo exploró una amplia gama de tecnologías de asistencia y mejoras de interfaces de usuario destinadas a superar los desafíos que enfrentan las personas con discapacidades. Esto incluyó el desarrollo de dispositivos de entrada especializados, soluciones de software adaptativas y diseños avanzados de interfaces de usuario que se adaptaran específicamente a las necesidades de los usuarios con discapacidades visuales, auditivas y motoras. Al enfocarnos en estas áreas, buscábamos crear un entorno digital más inclusivo que empoderara a los usuarios para interactuar con la tecnología de manera más efectiva e independiente.</p><p>La investigación también involucró extensas pruebas de usuario y colaboración con individuos que tienen discapacidades para asegurar que las soluciones desarrolladas fueran prácticas, fáciles de usar y realmente beneficiosas. Al integrar comentarios de usuarios reales, nuestro grupo de investigación pudo hacer avances significativos en la creación de dispositivos y aplicaciones que no solo cumplieran con los estándares de accesibilidad, sino que también mejoraran la experiencia general del usuario para personas con discapacidades.</p><p>Este proyecto ejemplifica nuestro compromiso de aprovechar la tecnología para eliminar barreras y mejorar la calidad de vida de las personas con discapacidades, haciendo que la tecnología sea accesible y usable para todos, independientemente de sus capacidades físicas.</p>",
-          "images": ["tifyc.jpg"],
+          "images": ["tifyc.webp"],
           "links": [],
           "name": "Proyecto del grupo de investigación",
           "technologies": [
@@ -919,7 +919,7 @@
         },
         {
           "description": "<p>El tercer proyecto involucró la creación y el mantenimiento continuo de la página web del grupo de investigación utilizando el Sistema de Gestión de Contenidos (CMS) Joomla. Este proyecto requería no solo el desarrollo inicial de una página web fácil de usar y visualmente atractiva, sino también la actualización y mejora continuas de sus características y contenido para satisfacer las necesidades en evolución del grupo de investigación.</p><p>El sitio web servía como un centro central para las actividades del grupo de investigación, proporcionando acceso a publicaciones, actualizaciones de proyectos y eventos futuros. Aprovechando el robusto framework de Joomla, aseguré que el sitio web fuera tanto seguro como escalable, capaz de manejar un volumen creciente de contenido e interacciones de usuarios. El CMS permitía una gestión de contenido fácil, habilitando a los miembros del grupo de investigación a contribuir y actualizar información sin requerir conocimientos técnicos extensos.</p><p>Además de la implementación técnica, me enfoqué en optimizar el rendimiento y la accesibilidad del sitio web. Esto incluía asegurar tiempos de carga rápidos, implementar un diseño responsivo para la compatibilidad con varios dispositivos y adherirse a los estándares de accesibilidad para hacer que el sitio fuera usable para todos los visitantes. Las tareas de mantenimiento regular incluían actualizar el núcleo de Joomla y las extensiones, monitorear el rendimiento del sitio y abordar cualquier vulnerabilidad de seguridad de manera oportuna.</p><p>En resumen, este proyecto demostró mi capacidad para desarrollar y gestionar una presencia web dinámica que respalda efectivamente los objetivos y actividades de un grupo especializado, utilizando las potentes características del CMS Joomla.</p>",
-          "images": ["tifyc.jpg"],
+          "images": ["tifyc.webp"],
           "links": [],
           "name": "Proyecto de página web del grupo de investigación",
           "technologies": [
@@ -935,7 +935,7 @@
         },
         {
           "description": "<p>Durante mi permanencia en el grupo de investigación, contribuí en diversas capacidades. Mi trabajo de apoyo abarcó una variedad de tareas destinadas a facilitar los objetivos del grupo. También organicé y conduje seminarios especializados enfocados en la Robótica, compartiendo conocimientos avanzados y los últimos desarrollos en el campo con mis colegas y estudiantes.</p><p>Además, serví como profesor asistente, donde enseñé asignaturas como Inteligencia Artificial y Visión Artificial. En este rol, fui responsable de preparar y dictar conferencias, asistir en el diseño del curso y brindar orientación a los estudiantes sobre temas complejos relacionados con las tecnologías de IA y visión por computadora. Mi participación en estas asignaturas ayudó a cerrar la brecha entre los conceptos teóricos y las aplicaciones prácticas para los estudiantes.</p><p>Más allá de los roles de enseñanza y apoyo, participé activamente en actividades extracurriculares, incluyendo el concurso de robótica Hispabot. Competí en el modo de resolución de laberintos, donde apliqué mi experiencia en robótica e IA para diseñar y programar robots capaces de navegar y resolver laberintos. Esta experiencia no solo mejoró mis habilidades técnicas, sino que también demostró mi capacidad para aplicar la investigación en entornos competitivos del mundo real.</p>",
-          "images": ["hispabot.jpeg"],
+          "images": ["hispabot.webp"],
           "links": [],
           "name": "Contribuciones al grupo de investigación",
           "technologies": [
@@ -974,7 +974,7 @@
         }
       ],
       "short_description": "Pequeña empresa dedicada a la creación de páginas web",
-      "thumbnail": "knowcentury.png"
+      "thumbnail": "knowcentury.webp "
     },
     {
       "contribution": "<p>Durante este período, mi responsabilidad principal fue realizar una investigación exhaustiva sobre el uso del mainframe IBM System Z/390s para la virtualización de sistemas. Este proyecto implicaba utilizar Qemu, un emulador de código abierto, para facilitar el proceso de virtualización. El objetivo era habilitar el uso de sistemas remotos creando entornos virtualizados en el mainframe de IBM. Estos sistemas virtuales debían operar bajo el sistema operativo Suse Linux Enterprise Edition, asegurando una plataforma robusta y segura para diversas aplicaciones y servicios.</p><p>Mi rol requería una comprensión integral de la arquitectura y capacidades del IBM System Z/390s. Me centré en explorar cómo Qemu podía integrarse eficazmente con el mainframe para lograr una virtualización eficiente. Esto implicaba configurar y optimizar el mainframe para soportar múltiples máquinas virtuales, cada una ejecutando su instancia del Suse Linux Enterprise Edition. El uso de Suse Linux era crítico ya que proporcionaba la estabilidad necesaria y las características de nivel empresarial requeridas para sistemas virtuales de alto rendimiento y fiabilidad.</p><p>Además, investigué varios aspectos de la virtualización de sistemas, incluyendo la asignación de recursos, la optimización del rendimiento y las medidas de seguridad. Asegurar que los sistemas virtualizados pudieran operar sin problemas y eficientemente en el mainframe era primordial. Esto implicaba pruebas exhaustivas y ajustes finos de los entornos virtuales para cumplir con las necesidades específicas de los usuarios de sistemas remotos. El proyecto tenía como objetivo aprovechar el poder y la fiabilidad del IBM System Z/390s para proporcionar soluciones virtualizadas escalables y seguras para aplicaciones empresariales.</p>",
@@ -990,7 +990,7 @@
       "projects": [
         {
           "description": "<p>Implementación de páginas web utilizando CMS como Joomla, Drupal y Moodle.</p>",
-          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "images": ["ibm_system_z.webp", "kvm.webp ", "suse.webp "],
           "links": [],
           "name": "Desarrollo de sitios web",
           "technologies": ["HTML", "MySQL", "JavaScript", "PHP", "Joomla"]
@@ -1029,7 +1029,7 @@
     ],
     "complementary": [
       {
-        "images": ["linux_foundation.png"],
+        "images": ["linux_foundation.webp "],
         "institution": "Fundación Linux",
         "period_time": {
           "current": true,
@@ -1037,11 +1037,11 @@
           "start": "Septiembre 2015"
         },
         "summary": "Certificación oficial de administración de sistemas Linux que implica la calificación para: Administración avanzada de sistemas Linux, incluidos los relacionados con el kernel. Realizar gestión avanzada del almacenamiento de bloques y sistemas de archivos, así como la autenticación avanzada de redes y la seguridad del sistema, incluidos el firewall y la VPN Instalar y configurar servicios centrales de red (DHCP, DNS, SSH, servidores web, servidores de archivos, correo electrónico, etc.). Monitorizar asistentes y asesorar a la administración sobre automatización y compras",
-        "thumbnail": "linux_foundation.png",
+        "thumbnail": "linux_foundation.webp ",
         "title": "LPIC - 2"
       },
       {
-        "images": ["linux_foundation.png"],
+        "images": ["linux_foundation.webp "],
         "institution": "Fundación Linux",
         "period_time": {
           "current": true,
@@ -1049,7 +1049,7 @@
           "start": "Septiembre 2013"
         },
         "summary": "Certificación oficial de administración de sistemas Linux que implica la calificación para: Instalar un sistema Linux, incluido X11 y configurarlo como un cliente de red. Trabajar en la línea de comandos. Gestionar archivos y permisos de acceso, incluidos ACL, así como la seguridad del sistema. Realizar tareas de mantenimiento sencillas.",
-        "thumbnail": "linux_foundation.png",
+        "thumbnail": "linux_foundation.webp ",
         "title": "LPIC - 1"
       },
       {
@@ -1083,7 +1083,7 @@
         "language": "Español",
         "read": "Nativo",
         "spoken": "Nativo",
-        "thumbnail": "spanish.png",
+        "thumbnail": "spanish.webp ",
         "writen": "Nativo"
       },
       {
@@ -1109,7 +1109,7 @@
         "language": "Chino",
         "read": "Fluido",
         "spoken": "Fluido",
-        "thumbnail": "chinese.png",
+        "thumbnail": "chinese.webp ",
         "writen": "Fluido"
       }
     ]

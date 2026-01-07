@@ -103,7 +103,7 @@
   <div class="card__logoFrame">
     <img
       class="card__logo"
-      src={p.thumbnail ?? '/images/github.png'}
+      src={p.thumbnail ?? '/images/github.webp '}
       alt={p.lang.en.name}
       loading="lazy"
     />

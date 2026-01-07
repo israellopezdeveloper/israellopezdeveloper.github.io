@@ -1,7 +1,7 @@
 {
   "intro": {
     "greeting": "Hi! I’m Israel, a hardcore senior developer traveling the world.",
-    "profile_image": "israel.png",
+    "profile_image": "israel.webp ",
     "name": "Israel López",
     "title": "Senior Software Engineer",
     "summary": "<p>My backpack is full of code and an endless drive to keep learning. Programming is my superpower.</p><p>I got hooked on coding at 13 and never stopped. Wherever I am in the world, my laptop comes with me.</p><p>I’m a restless mind with an insatiable curiosity to learn, innovate, and take on new intellectual challenges. I love watching ideas turn into reality through code.</p><p>Programming isn’t just my job—it’s my passion. I’m relentless about finding the optimal solution and I take pride in delivering clean, efficient, high-quality code.</p><p>If we connect, are you ready to embark on a new tech adventure together?</p>",
@@ -164,7 +164,7 @@
         }
       ],
       "short_description": "Datura AI is a startup focused on decentralized technologies for networks such as Bittensor. Its mission is to move beyond centralized systems by delivering high-performance, easy-to-use tools. One of its core products is <strong>Celium</strong>, a platform for instant AI model deployment in containers, enabling pod editing, deployment templates, and fast execution of models such as Stable Diffusion or Whisper.",
-      "thumbnail": "daturaai.png"
+      "thumbnail": "daturaai.webp "
     },
     {
       "contribution": "<p>At Indra, I contributed across the following key areas:</p>\n<ul>\n    <li><strong>Backend design and implementation</strong> using Java and Node.js, applying Clean Architecture principles to ensure maintainability and scalability.</li>\n    <li><strong>Integration of a RAG system</strong> for contextual retrieval of operational intelligence, including heterogeneous ingestion, embeddings, and semantic search.</li>\n    <li><strong>GIS capabilities</strong> for geospatial analysis, tactical visualization, and real-time route and deployment optimization.</li>\n    <li><strong>API and interface definition</strong> to interoperate with NATO systems, complying with secure standards and protocols.</li>\n    <li><strong>Agile (SCRUM) delivery and Jira-based planning</strong>, prioritizing critical features and managing dependencies.</li>\n    <li><strong>CI/CD with GitLab</strong> and deployments on <strong>Kubernetes</strong>, with observability via Prometheus and Grafana.</li>\n    <li><strong>Performance and resilience optimization</strong> through load testing, fault tolerance, and hostile-environment simulations.</li>\n  </ul>",
@@ -271,12 +271,12 @@
         }
       ],
       "short_description": "Indra is a leading Spanish multinational in consulting and technology, operating in more than 140 countries. It delivers innovative solutions across Defense, Transport, Energy, Security, and Digital Transformation. In the Defense domain, Indra develops strategic, mission-critical systems that strengthen technological sovereignty and interoperability for European and NATO allied forces.",
-      "thumbnail": "indra.png"
+      "thumbnail": "indra.webp "
     },
     {
       "contribution": "<p>At Devo, I played a key role on the data ingestion team, focused on the load balancer. Because the data was highly sensitive and critical for diagnosing potential attacks, the service had to be both reliable and fast. Under my ownership, the system sustained ingestion volumes of ~60TB/day. I also contributed to Devo’s effort to meet U.S. federal integration requirements, supporting the path to FedRAMP compliance. In addition, I helped build a multi-region, multi-cloud backup system to ensure data redundancy and reliability across environments. My work strengthened Devo’s security posture and operational resilience, enabling the platform to serve customers at scale with high assurance.</p>",
       "full_description": "<p><strong>Context</strong><br>\nCloud-native security analytics platform ingesting massive volumes of sensitive logs. The ingestion layer must handle bursty traffic, strict reliability targets, and compliance constraints (FedRAMP/FIPS/NIST).</p>\n\n<p><strong>Action</strong></p>\n<ul>\n  <li>Owned and optimized the ingestion load balancer for sustained high-throughput production traffic.</li>\n  <li>Improved fault tolerance, recovery paths, and observability across ingestion services.</li>\n  <li>Implemented reliability features (including RELP support) to reduce event loss under failure scenarios.</li>\n  <li>Built multi-region / multi-cloud redundancy mechanisms to improve disaster recovery posture.</li>\n  <li>Integrated quality and security controls into CI/CD to support FedRAMP readiness.</li>\n</ul>\n\n<p><strong>Metrics</strong></p>\n<ul>\n  <li>Sustained ~60 TB/day ingestion under production load.</li>\n  <li>Reduced event loss and improved delivery guarantees during network/service failures.</li>\n  <li>Lowered incident frequency and improved detection time via stronger telemetry and alerting.</li>\n  <li>Improved recovery time for ingestion components through hardened failover and runbooks.</li>\n</ul>\n\n<p><strong>Result</strong><br>\nDelivered a faster and more reliable ingestion layer for mission-critical security data. Increased operational resilience and strengthened the compliance path while keeping performance stable at scale.</p>",
-      "images": ["devo1.png", "devo2.png"],
+      "images": ["devo1.webp ", "devo2.webp "],
       "links": [
         {
           "icon": "",
@@ -381,7 +381,7 @@
         }
       ],
       "short_description": "Cloud-native security analytics platform providing real-time threat detection and scalable data ingestion for enterprise observability.",
-      "thumbnail": "devo.png"
+      "thumbnail": "devo.webp "
     },
     {
       "contribution": "<p>At the European Commission, I worked as a Software Architect across three projects, taking ownership of end-to-end delivery aspects that showcased both technical leadership and hands-on execution. Key responsibilities included:</p><ul><li><b>Non-functional requirements and project definition</b>: Using Enterprise Architect, I captured and managed NFRs to ensure each project was clearly scoped and aligned with organizational goals.</li><li><b>Task prioritization</b>: Leveraged Jira to sequence work and keep delivery focused on the highest-impact items.</li><li><b>Dependency management</b>: Managed cross-team and cross-epic dependencies in Jira to avoid blockers and reduce delivery risk.</li><li><b>Technology selection</b>: Drove technology choices per project, balancing security, maintainability, and long-term scalability.</li><li><b>Team role definition</b>: Defined required profiles and responsibilities to ensure the team had the right skills to execute.</li><li><b>Cross-team collaboration</b>: Facilitated coordination between teams whose systems needed to integrate cleanly.</li><li><b>Quality and testing strategy</b>: Defined QA gates and testing protocols, including unit testing with JUnit or Google Test/Valgrind depending on the stack.</li><li><b>CI/CD implementation</b>: Designed and implemented CI/CD workflows using Bamboo and SonarQube.</li><li><b>Engineering practices</b>: Promoted TDD and BDD to improve correctness and reduce regression risk.</li><li><b>Agile delivery</b>: Worked under Scrum as the primary delivery framework to keep execution iterative and predictable.</li></ul>",
@@ -403,7 +403,7 @@
       "projects": [
         {
           "description": "<p>The first project involved defining two RESTful APIs following the Richardson Maturity Model Level 3, including HATEOAS. These APIs served as secure platforms for exchanging legal documents in antitrust procedures.</p><ul><li><b>Internal API</b>: Designed for European Commission staff.</li><li><b>External API</b>: Designed for external parties.</li></ul><p>Both APIs enforced access control via a Single Sign-On system (CAS). Data persistence used Oracle DB and MongoDB. The APIs also integrated with an internal secure document storage system via a SOAP interface. Each procedure workflow was modeled using the State pattern, and system administrators were notified of state transitions via email.</p>",
-          "images": ["European_Commission_02.png"],
+          "images": ["European_Commission_02.webp "],
           "links": [
             {
               "icon": "",
@@ -549,7 +549,7 @@
         }
       ],
       "short_description": "The European Commission is the executive arm of the European Union, responsible for proposing legislation, implementing decisions, and managing day-to-day EU operations.",
-      "thumbnail": "European_Commission_01.png"
+      "thumbnail": "European_Commission_01.webp "
     },
     {
       "contribution": "<p>At Panel Sistemas, I worked as a Functional Analyst across three projects and later took ownership as a Senior Developer during the execution phase. My responsibilities included:</p><ul><li>Non-functional requirements analysis and implementation decision-making (Redmine).</li><li>Breaking down work into lower-granularity sub-tasks to deliver measurable outcomes (Redmine).</li><li>Effort estimation and delivery planning (Redmine).</li><li>Defining and implementing the project structure using the selected technologies.</li><li>Defining unit-test coverage and quality standards (JUnit, Google Test, Valgrind).</li><li>Implementing CI/CD workflows (Jenkins).</li><li>Using Scrum as the delivery framework.</li><li>Applying TDD and BDD practices to improve reliability and reduce regressions.</li><li>Delivering internal training sessions on TDD, BDD, Neural Networks, Clean Code, and related topics.</li></ul>",
@@ -571,7 +571,7 @@
       "projects": [
         {
           "description": "<p>The first project delivered a modern messaging exchange platform for maritime and air transport. It successfully replaced an outdated IATA standard based on plain text and positional fields (highly error-prone) with a more robust, readable XML/JSON-based format.</p><p>I defined a parser that translated legacy messages into the new standards through a RESTful API aligned with Richardson Maturity Model Level 3. Beyond translation, the API enabled interoperability with external platforms worldwide and persisted all exchanges to ensure end-to-end traceability of global parcel transit. Given high availability requirements, we implemented a replicated, sharded MongoDB architecture across a server cluster.</p>",
-          "images": ["iata.png"],
+          "images": ["iata.webp "],
           "links": [],
           "name": "Modernizing maritime and air transport messaging: replacing IATA with XML/JSON",
           "technologies": [
@@ -604,7 +604,7 @@
         },
         {
           "description": "The second project was a joint initiative with Siemens to build Iberdrola’s smart terminal management infrastructure. Terminals reported customer electricity consumption daily via SNMP, with optional high-resolution monitoring down to per-minute usage for selected devices. Data was stored in a distributed MongoDB setup (multiple clusters, load balancing, and replicated sharding).\n\nData placement followed geographic locality when capacity allowed, reducing query scope and improving performance. We retained one year of per-minute data, then compacted it into daily min/max/avg for five years, followed by additional compaction thereafter. The system also supported real-time control and monitoring of devices via SNMP and JNLP.\n\nThis platform was built using C++ microservices with gRPC and deployed across a fleet of Red Hat Enterprise Linux servers.",
-          "images": ["iberdrola.svg", "siemens.png"],
+          "images": ["iberdrola.svg", "siemens.webp "],
           "links": [],
           "name": "Iberdrola smart terminal management with Siemens",
           "technologies": [
@@ -685,7 +685,7 @@
         }
       ],
       "short_description": "Spanish technology consultancy delivering custom software, IT advisory, and engineering services across multiple industries.",
-      "thumbnail": "panel_sistemas.png"
+      "thumbnail": "panel_sistemas.webp "
     },
     {
       "contribution": "<p>I worked remotely as a Senior Software Engineer across three major projects, taking ownership of both technical execution and cross-team coordination. Key responsibilities included:</p><ul><li>Working directly with the Product Owner to define detailed requirements and translate business goals into actionable technical tasks.</li><li>Coordinating distributed teams across South America, India, and China, managing time zones and cultural differences.</li><li>Translating and clarifying requirements in Chinese to ensure alignment with external teams.</li><li>Driving automation and productivity improvements through internal tooling and workflow optimizations.</li><li>Planning and tracking delivery using Scrum, with clear milestones and iterative feedback.</li><li>Ensuring consistent progress and delivery in a fully remote, global environment.</li></ul>",
@@ -770,7 +770,7 @@
         }
       ],
       "short_description": "Leading Spanish media group operating newspapers, radio networks, digital platforms, and educational publishing at global scale.",
-      "thumbnail": "prisa.png"
+      "thumbnail": "prisa.webp "
     },
     {
       "contribution": "<p>As a Senior Software Engineer, I contributed to three high-impact projects, combining low-level performance work with end-user applications. My role required strong ownership of technical decisions and close collaboration with product and client teams.</p>",
@@ -792,7 +792,7 @@
       "projects": [
         {
           "description": "<p>This project involved building a native Android application for Antena 3 Television that acted as a real-time interactive companion to live TV content. The app synchronized dynamically with broadcasts using inaudible audio markers embedded in the signal.</p><p>I implemented a custom high-performance solution using the Android NDK to capture and process audio with minimal battery impact. The system encoded binary data through precisely timed audio echoes, enabling seamless interaction between the broadcast and the mobile application.</p>",
-          "images": ["intelygenz_01.jpeg"],
+          "images": ["intelygenz_01.webp"],
           "links": [
             {
               "icon": "",
@@ -812,7 +812,7 @@
         },
         {
           "description": "<p>The second project was a document management system for BBVA, implemented in C# on the .NET platform. The system integrated with external services built on Google App Engine and was tailored for secure handling of financial documents.</p><p>It supported editing, review, and accreditation workflows, embedding BBVA’s business logic and approval processes. The solution improved cross-team collaboration and ensured alignment with banking standards and regulatory requirements.</p>",
-          "images": ["bbva.jpg"],
+          "images": ["bbva.webp"],
           "links": [],
           "name": "BBVA document management system",
           "technologies": [
@@ -833,7 +833,7 @@
         },
         {
           "description": "<p>The third project focused on building a collaborative frontend for BBVA, developed in Java and JavaScript and integrated with the NACAR platform. This environment enabled advanced interaction patterns within banking applications.</p><p>A key outcome was the creation of <strong>IRIS</strong>, a reusable gesture and on-screen interaction library that significantly improved usability and responsiveness. This library became a core component for enhancing user experience across the platform.</p>",
-          "images": ["bbva.jpg"],
+          "images": ["bbva.webp"],
           "links": [],
           "name": "Collaborative frontend platform for BBVA",
           "technologies": [
@@ -857,7 +857,7 @@
         }
       ],
       "short_description": "Technology company delivering AI-driven and custom software solutions, with strong focus on performance and complex client systems.",
-      "thumbnail": "intelygenz.png"
+      "thumbnail": "intelygenz.webp "
     },
     {
       "contribution": "<p>I worked as a researcher within the TIFyC research group, combining applied research, academic collaboration, and teaching. My work focused on advancing AI-driven technologies through rigorous research, cross-university collaboration, and knowledge transfer.</p><ul><li>Conducted state-of-the-art research in accessibility, AI algorithms, computer vision, and biometric systems.</li><li>Collaborated with research groups from multiple universities on interdisciplinary projects.</li><li>Authored technical reports documenting methodologies, results, and conclusions.</li><li>Participated in the analysis and submission of public R&D grants and funding proposals.</li><li>Served as a teaching assistant in Artificial Intelligence and Computer Vision courses.</li></ul>",
@@ -879,7 +879,7 @@
       "projects": [
         {
           "description": "<p>This project focused on researching and prototyping assistive devices to improve interaction for users with visual, auditory, or motor disabilities. The goal was to design inclusive input mechanisms and adaptive interfaces for desktop, mobile, and embedded systems.</p><p>User-centered testing and direct collaboration with people with disabilities ensured practical, usable, and impactful solutions that significantly improved accessibility and user experience.</p>",
-          "images": ["tifyc.jpg"],
+          "images": ["tifyc.webp"],
           "links": [],
           "name": "Accessible interaction devices research",
           "technologies": [
@@ -915,7 +915,7 @@
         },
         {
           "description": "<p>I designed, built, and maintained the research group’s public website using Joomla CMS. The site served as a central hub for publications, project updates, and events.</p><p>My work focused on performance optimization, accessibility compliance, responsive design, and ongoing maintenance, ensuring scalability, security, and ease of content management for non-technical contributors.</p>",
-          "images": ["tifyc.jpg"],
+          "images": ["tifyc.webp"],
           "links": [],
           "name": "Research group website platform",
           "technologies": [
@@ -929,7 +929,7 @@
         },
         {
           "description": "<p>I supported multiple research activities, organized technical seminars on Robotics, and served as a teaching assistant for AI and Computer Vision courses.</p><p>I also participated in the Hispabot robotics competition (maze-solving category), applying AI and robotics techniques in a competitive, real-world setting.</p>",
-          "images": ["hispabot.jpeg"],
+          "images": ["hispabot.webp"],
           "links": [],
           "name": "Research, teaching, and robotics activities",
           "technologies": [
@@ -968,7 +968,7 @@
         }
       ],
       "short_description": "Small web agency specializing in CMS-based website development.",
-      "thumbnail": "knowcentury.png"
+      "thumbnail": "knowcentury.webp "
     },
     {
       "contribution": "<p>During this period, I conducted applied research on system virtualization using IBM System z/390 mainframes. The focus was on enabling secure, scalable remote systems by running virtualized environments on enterprise-grade hardware.</p><ul><li>Researched and evaluated the use of QEMU for virtualization on IBM System z/390.</li><li>Designed and configured virtual environments running SUSE Linux Enterprise.</li><li>Analyzed resource allocation, performance tuning, and security aspects of mainframe-based virtualization.</li><li>Validated stability and reliability for enterprise and remote-use scenarios.</li></ul>",
@@ -984,7 +984,7 @@
       "projects": [
         {
           "description": "<p>Research project focused on virtualizing Linux environments on IBM System z/390 using QEMU. The goal was to enable secure, high-performance remote systems by consolidating workloads on a mainframe running SUSE Linux Enterprise.</p>",
-          "images": ["ibm_system_z.jpg", "kvm.png", "suse.png"],
+          "images": ["ibm_system_z.webp", "kvm.webp ", "suse.webp "],
           "links": [],
           "name": "Mainframe-based system virtualization research",
           "technologies": [

@@ -70,7 +70,7 @@
     width: 100%;
     min-height: 200vh; /* 2 páginas */
     padding-top: 88px;
-    background-image: url('/images/hero-israel.png');
+    background-image: url('/images/hero-israel.webp');
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 8%;

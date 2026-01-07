@@ -15,13 +15,13 @@ export const meta = {
 # {title}
 
 
-![Image](https://www.researchgate.net/profile/Chuck-Grace/publication/341231042/figure/fig10/AS%3A1026960872448002%401621857960386/t-SNE-visualization-for-the-full-dataset-by-cluster-projected-onto-two-embeddings.ppm)
+![t-SNE visualization](https://www.researchgate.net/profile/Chuck-Grace/publication/341231042/figure/fig10/AS%3A1026960872448002%401621857960386/t-SNE-visualization-for-the-full-dataset-by-cluster-projected-onto-two-embeddings.ppm)
 
-![Image](https://umap-learn.readthedocs.io/en/latest/_images/20newsgroups_hellinger_counts.png)
+![umap visualization](https://umap-learn.readthedocs.io/en/latest/_images/20newsgroups_hellinger_counts.png)
 
-![Image](https://projector.tensorflow.org/preview.png)
+![TensorBoard](https://projector.tensorflow.org/preview.png)
 
-![Image](https://biostatsquid.com/wp-content/uploads/2025/03/Slide89.png)
+![Bioinformatics](https://biostatsquid.com/wp-content/uploads/2025/03/Slide89.png)
 
 # The invisible backbone of AI systems: UMAP, t-SNE, and why your plots lie (sometimes)
 
