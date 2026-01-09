@@ -21,11 +21,53 @@ interface PeriodTime {
 
 function calculateElapsedMonths(period: PeriodTime): number {
   const parseDate = (dateStr: string): Date => {
-    const d = new Date(dateStr);
-    if (isNaN(d.getTime())) {
-      throw new Error(`Fecha inválida: ${dateStr}`);
+    const s = dateStr.trim();
+
+    const direct = new Date(s);
+    if (!isNaN(direct.getTime())) return direct;
+
+    const m = /^([A-Za-z]+)\s+(\d{4})$/.exec(s);
+    if (m) {
+      const monthName = m[1].toLowerCase();
+      const year = Number(m[2]);
+
+      const monthMap: Record<string, number> = {
+        january: 0,
+        february: 1,
+        march: 2,
+        april: 3,
+        may: 4,
+        june: 5,
+        july: 6,
+        august: 7,
+        september: 8,
+        october: 9,
+        november: 10,
+        december: 11,
+
+        // extra por si acaso vienen abreviaturas
+        jan: 0,
+        feb: 1,
+        mar: 2,
+        apr: 3,
+        jun: 5,
+        jul: 6,
+        aug: 7,
+        sep: 8,
+        sept: 8,
+        oct: 9,
+        nov: 10,
+        dec: 11
+      };
+
+      const monthIndex = monthMap[monthName];
+      if (monthIndex !== undefined && !Number.isNaN(year)) {
+        // Día 1 del mes, hora 12:00 para evitar rarezas de DST en algunos husos
+        return new Date(year, monthIndex, 1, 12, 0, 0, 0);
+      }
     }
-    return d;
+
+    throw new Error(`Fecha inválida: ${dateStr}`);
   };
 
   const startDate = parseDate(period.start);
