@@ -41,7 +41,7 @@
             class="icon"
             loading="lazy"
           />
-          israel.lopez.developer@gmail.com →
+          israel.lopez.developer@gmail.com
         </a>
 
         <a
@@ -56,7 +56,7 @@
             class="icon"
             loading="lazy"
           />
-          LinkedIn profile →
+          LinkedIn profile
         </a>
 
         <a
@@ -71,7 +71,7 @@
             class="icon"
             loading="lazy"
           />
-          Schedule a call →
+          Schedule a call
         </a>
 
         <a
@@ -86,7 +86,7 @@
             class="icon"
             loading="lazy"
           />
-          Discord (technical teams) →
+          Discord
         </a>
 
         <a
