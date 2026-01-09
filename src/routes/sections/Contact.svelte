@@ -226,5 +226,10 @@
     width: 18px;
     height: 18px;
     opacity: 0.9;
+    filter: brightness(0.5) invert(0.5);
+  }
+  .cta:hover img {
+    opacity: 1;
+    filter: brightness(1) invert(0);
   }
 </style>
