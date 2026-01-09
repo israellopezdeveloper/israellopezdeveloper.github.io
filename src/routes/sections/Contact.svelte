@@ -56,7 +56,7 @@
             class="icon"
             loading="lazy"
           />
-          LinkedIn profile
+          LinkedIn
         </a>
 
         <a
