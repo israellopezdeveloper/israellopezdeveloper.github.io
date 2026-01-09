@@ -31,26 +31,62 @@
       <div class="card">
         <div class="label">Get in touch</div>
 
-        <a class="cta primary" href="mailto:israel.lopez.developer@gmail.com">
+        <a
+          class="cta primary with-icon"
+          href="mailto:israel.lopez.developer@gmail.com"
+        >
+          <img
+            src="/images/contact/email.svg"
+            alt="email"
+            class="icon"
+            loading="lazy"
+          />
           israel.lopez.developer@gmail.com →
         </a>
 
         <a
-          class="cta"
+          class="cta with-icon"
           href="https://www.linkedin.com/in/israellopezmaiz/"
           target="_blank"
           rel="noopener"
         >
+          <img
+            src="/images/contact/linkedin.svg"
+            alt="LinkedIn"
+            class="icon"
+            loading="lazy"
+          />
           LinkedIn profile →
         </a>
 
         <a
-          class="cta"
+          class="cta with-icon"
           href="https://calendly.com/israel-lopez-developer"
           target="_blank"
           rel="noopener"
         >
+          <img
+            src="/images/contact/calendly.svg"
+            alt="Calendly"
+            class="icon"
+            loading="lazy"
+          />
           Schedule a call →
+        </a>
+
+        <a
+          class="cta with-icon"
+          href="https://discord.com/users/714146726390530069"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/images/contact/discord.svg"
+            alt="Discord"
+            class="icon"
+            loading="lazy"
+          />
+          Discord (technical teams) →
         </a>
 
         <div class="divider"></div>
@@ -164,5 +200,17 @@
   .footnote {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.65);
+  }
+
+  .cta.with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cta svg,
+  .cta img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.9;
   }
 </style>
