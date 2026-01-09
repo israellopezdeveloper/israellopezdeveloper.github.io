@@ -8,25 +8,73 @@
     </div>
 
     <div class="links">
-      <a class="email" href="mailto:israel.lopez.developer@gmail.com">Email</a>
       <a
-        class="calendly"
-        href="https://calendly.com/israel-lopez-developer"
-        target="_blank"
-        rel="noreferrer">Calendly</a
+        class="cta primary with-icon"
+        href="mailto:israel.lopez.developer@gmail.com"
       >
+        <img
+          src="/images/contact/email.svg"
+          alt="email"
+          class="icon"
+          loading="lazy"
+        />
+      </a>
+
       <a
-        class="linkedin"
+        class="cta with-icon"
         href="https://www.linkedin.com/in/israellopezmaiz/"
         target="_blank"
-        rel="noreferrer">LinkedIn</a
+        rel="noopener"
       >
+        <img
+          src="/images/contact/linkedin.svg"
+          alt="LinkedIn"
+          class="icon"
+          loading="lazy"
+        />
+      </a>
+
       <a
-        class="upwork"
+        class="cta with-icon"
+        href="https://calendly.com/israel-lopez-developer"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="/images/contact/calendly.svg"
+          alt="Calendly"
+          class="icon"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        class="cta with-icon"
+        href="https://discord.com/users/714146726390530069"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="/images/contact/discord.svg"
+          alt="Discord"
+          class="icon"
+          loading="lazy"
+        />
+      </a>
+
+      <a
+        class="cta with-icon"
         href="https://www.upwork.com/freelancers/~01d29eab7db9abdaf8"
         target="_blank"
-        rel="noreferrer">Upwork</a
+        rel="noopener"
       >
+        <img
+          src="/images/contact/upwork.svg"
+          alt="Upwork"
+          class="icon"
+          loading="lazy"
+        />
+      </a>
     </div>
   </div>
 </footer>
@@ -75,14 +123,19 @@
     color: white;
   }
 
+  .cta img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.9;
+    filter: brightness(0.5) invert(0.5);
+  }
+  .cta:hover img {
+    opacity: 1;
+    filter: brightness(1) invert(0);
+  }
+
   /* Mobile only */
   @media (max-width: 768px) {
-    .links .email,
-    .links .linkedin,
-    .links .upwork {
-      display: none;
-    }
-
     .links {
       justify-content: center;
     }
