@@ -104,6 +104,7 @@
             </label>
 
             {#if e.summary}
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -->
               <div class="summary content">{@html e.summary}</div>
             {/if}
           </article>
@@ -164,6 +165,7 @@
             </label>
 
             {#if c.summary}
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -->
               <div class="summary content">{@html c.summary}</div>
             {/if}
           </article>

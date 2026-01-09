@@ -1,11 +1,11 @@
 <script lang="ts">
   import Panel from '$lib/components/Panel.svelte';
   import { services } from '$lib/data/services';
+  import { SvelteSet } from 'svelte/reactivity';
   import Section from './Section.svelte';
   import { slide } from 'svelte/transition'; // Importamos la transición de Svelte
 
-  // Estado para manejar qué paneles están expandidos (vacío por defecto)
-  let expandedIndices = new Set<number>();
+  let expandedIndices = new SvelteSet<number>();
 
   function toggle(idx: number) {
     if (expandedIndices.has(idx)) {
@@ -28,7 +28,7 @@
     </a>
   </div>
   <div class="grid">
-    {#each services as s, i}
+    {#each services as s, i (s.title)}
       <Panel as="aside">
         <div class="cardTop">
           <div class="titleRow">
@@ -59,7 +59,7 @@
             <div class="block">
               <div class="label">When it fits</div>
               <ul class="list">
-                {#each s.when as w}
+                {#each s.when as w (w)}
                   <li>{w}</li>
                 {/each}
               </ul>
@@ -68,7 +68,7 @@
             <div class="block">
               <div class="label">Deliverables</div>
               <ul class="list">
-                {#each s.deliverables as d}
+                {#each s.deliverables as d (d)}
                   <li>{d}</li>
                 {/each}
               </ul>
@@ -78,7 +78,7 @@
               <div class="block soft">
                 <div class="label">Not a fit for</div>
                 <ul class="list subtle">
-                  {#each s.notFor as n}
+                  {#each s.notFor as n (n)}
                     <li>{n}</li>
                   {/each}
                 </ul>

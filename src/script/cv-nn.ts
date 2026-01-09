@@ -4,37 +4,40 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-type WorkProject = {
+interface WorkProject {
   name: string;
   description?: string;
   tech_stack?: string[];
   links?: { icon?: string; text: string; url: string }[];
-};
+}
 
-type Work = {
+interface Work {
   name: string;
   projects?: WorkProject[];
-};
+}
 
-type CV = {
+interface CV {
   works?: Work[];
-};
+}
 
 // Output shape (compatible with your example)
-type ModelNode = {
+interface ModelNode {
   id: string;
   label: string;
-  layers: Array<{
+  layers: {
     id: string;
     label: string;
-    neurons: Array<{
+    neurons: {
       id: string;
       label: string;
-    }>;
-  }>;
-};
+    }[];
+  }[];
+}
 
-function parseArgs(argv: string[]) {
+function parseArgs(argv: string[]): {
+  input: string;
+  output: string;
+} {
   const args: Record<string, string> = {};
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -62,24 +65,24 @@ function slugify(s: string): string {
 }
 
 function uniqueId(base: string, used: Set<string>): string {
-  let id = base || 'item';
+  const id = base || 'item';
   if (!used.has(id)) {
     used.add(id);
     return id;
   }
   let n = 2;
-  while (used.has(`${id}-${n}`)) n++;
-  const out = `${id}-${n}`;
+  while (used.has(`${id}-${String(n)}`)) n++;
+  const out = `${id}-${String(n)}`;
   used.add(out);
   return out;
 }
 
-function readJson<T>(filePath: string): T {
+function readJson(filePath: string): unknown {
   const raw = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(raw) as T;
+  return JSON.parse(raw);
 }
 
-function ensureDir(outFile: string) {
+function ensureDir(outFile: string): void {
   const dir = path.dirname(outFile);
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -89,13 +92,13 @@ function toModels(cv: CV): ModelNode[] {
   const usedLayerIds = new Set<string>();
 
   const layers = works.map((w, wi) => {
-    const layerBase = slugify(w.name) || `job-${wi + 1}`;
+    const layerBase = slugify(w.name) || `job-${String(wi + 1)}`;
     const layerId = uniqueId(layerBase, usedLayerIds);
 
     const usedNeuronIds = new Set<string>();
     const projects = w.projects ?? [];
     const neurons = projects.map((p, pi) => {
-      const nBase = slugify(p.name) || `project-${pi + 1}`;
+      const nBase = slugify(p.name) || `project-${String(pi + 1)}`;
       const nId = uniqueId(nBase, usedNeuronIds);
       return { id: nId, label: p.name };
     });
@@ -124,9 +127,9 @@ function tsLiteral(obj: unknown): string {
     .replace(/"project"/g, '"project"');
 }
 
-function main() {
+function main(): void {
   const { input, output } = parseArgs(process.argv.slice(2));
-  const cv = readJson<CV>(input);
+  const cv: CV = readJson(input) as CV;
 
   const models = toModels(cv);
 

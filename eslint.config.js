@@ -11,32 +11,34 @@ import svelteConfig from './svelte.config.js';
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 
 export default defineConfig(
+  // Respeta .gitignore
   includeIgnoreFile(gitignorePath),
-  js.configs.recommended,
-  ...ts.configs.strictTypeChecked,
-  ...ts.configs.stylisticTypeChecked,
-  ...svelte.configs.recommended,
-  prettier,
-  ...svelte.configs.prettier,
+
+  // -----------------------------
+  // 0) Base ignores extra (opcional pero recomendado)
+  // -----------------------------
   {
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    ignores: ['node_modules/**', '.svelte-kit/**', 'build/**', 'dist/**']
+  },
+
+  // -----------------------------
+  // 1) BASE JS (sin typed linting)
+  //    Esto cubre eslint.config.js y cualquier .js
+  // -----------------------------
+  js.configs.recommended,
+
+  // globals compartidos
+  {
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node }
+    },
 
     rules: {
-      // typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
-      // see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-      'no-undef': 'off',
-
+      // Tus reglas "globales" que NO dependen de type info
       'no-console': ['error', { allow: ['warn', 'error'] }],
-      '@typescript-eslint/no-explicit-any': 'error',
-      '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/explicit-function-return-type': [
-        'error',
-        { allowExpressions: true }
-      ],
 
       'max-len': [
         'error',
-
         {
           code: 80,
           ignoreComments: false,
@@ -50,9 +52,55 @@ export default defineConfig(
       ]
     }
   },
+
+  // -----------------------------
+  // 2) TYPESCRIPT (typed linting SOLO para TS)
+  // -----------------------------
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    ...ts.configs.strictTypeChecked[0], // base config (languageOptions/plugins)
+    languageOptions: {
+      ...ts.configs.strictTypeChecked[0].languageOptions,
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        // 🔴 clave: type info solo aquí
+        project: ['./tsconfig.eslint.json'],
+        tsconfigRootDir: import.meta.dirname
+      }
+    },
+    rules: {
+      // Merge de strict + stylistic typed
+      ...ts.configs.strictTypeChecked.reduce(
+        (acc, cfg) => ({ ...acc, ...(cfg.rules ?? {}) }),
+        {}
+      ),
+      ...ts.configs.stylisticTypeChecked.reduce(
+        (acc, cfg) => ({ ...acc, ...(cfg.rules ?? {}) }),
+        {}
+      ),
+
+      // tu set
+      'no-undef': 'off',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/explicit-function-return-type': [
+        'error',
+        { allowExpressions: true }
+      ]
+    }
+  },
+
+  // -----------------------------
+  // 3) SVELTE
+  // -----------------------------
+  ...svelte.configs.recommended,
+
+  // Svelte parser config + type-aware para .svelte
   {
     files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
-
+    plugins: {
+      '@typescript-eslint': ts.plugin
+    },
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -60,6 +108,25 @@ export default defineConfig(
         parser: ts.parser,
         svelteConfig
       }
+    },
+    rules: {
+      'no-undef': 'off',
+      'svelte/no-navigation-without-resolve': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_'
+        }
+      ]
     }
-  }
+  },
+
+  // -----------------------------
+  // 4) PRETTIER (siempre al final)
+  // -----------------------------
+  prettier,
+  ...svelte.configs.prettier
 );

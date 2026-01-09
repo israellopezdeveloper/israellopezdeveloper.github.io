@@ -14,6 +14,7 @@
 {#if open}
   <div class="panel">
     {#if project.description}
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
       <div class="html">{@html project.description}</div>
     {/if}
 
@@ -21,7 +22,7 @@
       <div>
         <h4>Technologies</h4>
         <div class="pills">
-          {#each project.technologies as t}
+          {#each project.technologies as t (t)}
             <span class="pill">{t}</span>
           {/each}
         </div>
@@ -31,7 +32,7 @@
     {#if project.links && project.links.length}
       <h4>Links</h4>
       <div class="links pills">
-        {#each project.links as l}
+        {#each project.links as l (l.url)}
           <a href={l.url} target="_blank">
             <span class="pill">{l.text}</span>
           </a>
@@ -41,7 +42,7 @@
 
     {#if project.images && project.images.length > 0}
       <h4>Images</h4>
-      {#each project.images as image}
+      {#each project.images as image (image)}
         <img src="/images/works/{image}" alt={image} class="work-image" />
       {/each}
     {/if}

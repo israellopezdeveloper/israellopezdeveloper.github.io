@@ -5,20 +5,45 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // Output shape (compatible with your example)
-type ModelNode = {
+interface ModelNode {
   id: string;
   label: string;
-  layers: Array<{
+  layers: {
     id: string;
     label: string;
-    neurons: Array<{
+    neurons: {
       id: string;
       label: string;
-    }>;
-  }>;
-};
+    }[];
+  }[];
+}
 
-function parseArgs(argv: string[]) {
+interface RepoLang {
+  name: string;
+  desc: string;
+}
+
+interface RepoTech {
+  tech: string;
+  time: number;
+}
+
+interface Repo {
+  id: string;
+  url: string;
+  thumbnail: string;
+  lang: {
+    en: RepoLang;
+    es: RepoLang;
+    zh: RepoLang;
+  };
+  technologies: RepoTech[];
+}
+
+function parseArgs(argv: string[]): {
+  input: string;
+  output: string;
+} {
   const args: Record<string, string> = {};
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -46,32 +71,32 @@ function slugify(s: string): string {
 }
 
 function uniqueId(base: string, used: Set<string>): string {
-  let id = base || 'item';
+  const id = base || 'item';
   if (!used.has(id)) {
     used.add(id);
     return id;
   }
   let n = 2;
-  while (used.has(`${id}-${n}`)) n++;
-  const out = `${id}-${n}`;
+  while (used.has(`${id}-${String(n)}`)) n++;
+  const out = `${id}-${String(n)}`;
   used.add(out);
   return out;
 }
 
-function readJson<T>(filePath: string): T {
+function readJson(filePath: string): unknown {
   const raw = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(raw) as T;
+  return JSON.parse(raw);
 }
 
-function ensureDir(outFile: string) {
+function ensureDir(outFile: string): void {
   const dir = path.dirname(outFile);
   fs.mkdirSync(dir, { recursive: true });
 }
 
-function toModels(repos: any): ModelNode[] {
+function toModels(repos: Repo[]): ModelNode[] {
   const usedLayerIds = new Set<string>();
-  const layers = repos.map((r: any, ri: number) => {
-    const layerBase = slugify(r.lang.en.name) || `job-${ri + 1}`;
+  const layers = repos.map((r: Repo, ri: number) => {
+    const layerBase = slugify(r.lang.en.name) || `job-${String(ri + 1)}`;
     const layerId = uniqueId(layerBase, usedLayerIds);
     return {
       id: layerId,
@@ -100,9 +125,9 @@ function tsLiteral(obj: unknown): string {
     .replace(/"project"/g, '"project"');
 }
 
-function main() {
+function main(): void {
   const { input, output } = parseArgs(process.argv.slice(2));
-  const cv = readJson<any>(input);
+  const cv = readJson(input) as Repo[];
 
   const models = toModels(cv);
 

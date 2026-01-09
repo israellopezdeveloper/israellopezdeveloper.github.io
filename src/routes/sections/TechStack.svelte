@@ -1,9 +1,10 @@
 <script lang="ts">
   import { stack, type TechXP } from '$lib/data/stack';
+  import { SvelteSet } from 'svelte/reactivity';
   import Section from './Section.svelte';
   import { slide } from 'svelte/transition';
 
-  let expandedGroups = new Set<string>();
+  let expandedGroups = new SvelteSet<string>();
   const numMax = 8;
 
   function toggleGroup(label: string) {
@@ -24,12 +25,12 @@
   description="Focused tools I use to ship and maintain production systems."
 >
   <div class="grid">
-    {#each stack as g}
+    {#each stack as g (g.label)}
       {@const sortedItems = [...g.items].sort(sortByExp)}
       <div class="group">
         <div class="label">{g.label}</div>
         <div class="chips">
-          {#each sortedItems.slice(0, numMax) as item}
+          {#each sortedItems.slice(0, numMax) as item ((item as TechXP).name)}
             <span
               class="chip has-tooltip"
               data-tooltip={`${(item as TechXP).experience} months`}
@@ -41,12 +42,12 @@
           {#if expandedGroups.has(g.label)}
             <div class="expanded-contents" transition:slide={{ duration: 300 }}>
               <div class="chips-inner">
-                {#each sortedItems.slice(numMax) as item}
+                {#each sortedItems.slice(numMax) as item ((item as TechXP).name)}
                   <span
                     class="chip has-tooltip"
-                    data-tooltip={`${item.experience} months`}
+                    data-tooltip={`${(item as TechXP).experience} months`}
                   >
-                    {item.name}
+                    {(item as TechXP).name}
                   </span>
                 {/each}
               </div>

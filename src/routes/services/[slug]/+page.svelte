@@ -55,7 +55,7 @@
     <Panel as="section">
       <h2>When it fits</h2>
       <ul>
-        {#each service.when as w}
+        {#each service.when as w (w)}
           <li>{w}</li>
         {/each}
       </ul>
@@ -64,7 +64,7 @@
     <Panel as="section">
       <h2>Deliverables</h2>
       <ul>
-        {#each service.deliverables as d}
+        {#each service.deliverables as d (d)}
           <li>{d}</li>
         {/each}
       </ul>
@@ -76,7 +76,7 @@
       <Panel as="section">
         <h2>Not a fit for</h2>
         <ul class="muted">
-          {#each service.notFor as n}
+          {#each service.notFor as n (n)}
             <li>{n}</li>
           {/each}
         </ul>

@@ -6,27 +6,27 @@ import process from 'node:process';
 
 type LangKey = 'en' | 'es' | 'zh';
 
-type RepoAPI = {
+interface RepoAPI {
   id: number;
   name: string;
   html_url: string;
   created_at: string;
   languages_url: string;
   description: string | null;
-};
+}
 
-type RepoMeta = {
+interface RepoMeta {
   lang?: Partial<Record<LangKey, { name: string; desc?: string }>>;
   technologies?: string[];
-};
+}
 
-type PersonalProject = {
+interface PersonalProject {
   id: number;
   url: string;
   thumbnail?: string;
   lang: Record<LangKey, { name: string; desc?: string }>;
   technologies?: { tech: string; time: number }[];
-};
+}
 
 /* -------------------------------- utilities ------------------------------- */
 
@@ -48,7 +48,7 @@ async function fetchJson<T>(url: string): Promise<T> {
         : {})
     }
   });
-  if (!r.ok) throw new Error(`Failed ${url}: ${r.status}`);
+  if (!r.ok) throw new Error(`Failed ${url}: ${String(r.status)}`);
   return (await r.json()) as T;
 }
 
@@ -86,7 +86,7 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  console.log(`▶ Fetching repos for ${username}`);
+  console.warn(`▶ Fetching repos for ${username}`);
 
   const repos = await fetchJson<RepoAPI[]>(
     `https://api.github.com/users/${username}/repos?per_page=100&sort=updated`
@@ -102,8 +102,10 @@ async function main(): Promise<void> {
         const langs = await fetchJson<Record<string, number>>(
           repo.languages_url
         );
-        languages = Object.keys(langs || {});
-      } catch {}
+        languages = Object.keys(langs);
+      } catch {
+        console.error('Not valid language');
+      }
 
       // Optional metadata
       const { meta, thumb } = await fetchRepoMeta(repo);
@@ -116,7 +118,12 @@ async function main(): Promise<void> {
       const fallbackName = repo.name;
       const fallbackDesc = repo.description ?? undefined;
 
-      const makeLang = (k: LangKey) => ({
+      const makeLang = (
+        k: LangKey
+      ): {
+        desc?: string | undefined;
+        name: string;
+      } => ({
         name: meta?.lang?.[k]?.name ?? fallbackName,
         ...(meta?.lang?.[k]?.desc || fallbackDesc
           ? { desc: meta?.lang?.[k]?.desc ?? fallbackDesc }
@@ -148,11 +155,11 @@ async function main(): Promise<void> {
   await fs.mkdir(path.dirname(absOut), { recursive: true });
   await fs.writeFile(absOut, JSON.stringify(projects, null, 2));
 
-  console.log(`✅ Saved ${projects.length} projects to`);
-  console.log(`   ${absOut}`);
+  console.warn(`✅ Saved ${String(projects.length)} projects to`);
+  console.warn(`   ${absOut}`);
 }
 
-main().catch((err) => {
+main().catch((err: unknown) => {
   console.error('❌ Error:', err);
   process.exit(1);
 });

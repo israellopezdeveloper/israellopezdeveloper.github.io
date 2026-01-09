@@ -27,7 +27,7 @@
 
     <!-- Desktop nav -->
     <nav class="nav desktop">
-      {#each links as l}
+      {#each links as l (l.href)}
         <a href={l.href}>{l.label}</a>
       {/each}
     </nav>
@@ -53,7 +53,7 @@
   {#if open}
     <div class="mobileMenu">
       <nav class="mobileNav">
-        {#each links as l}
+        {#each links as l (l.href)}
           <a href={l.href} on:click={close}>{l.label}</a>
         {/each}
       </nav>

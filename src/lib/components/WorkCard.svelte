@@ -153,9 +153,8 @@
     {/if}
 
     {#if w.short_description}
-      <div class="tooltip__desc">
-        {@html w.short_description}
-      </div>
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+      <div class="tooltip__desc">{@html w.short_description}</div>
     {/if}
   </div>
 {/if}

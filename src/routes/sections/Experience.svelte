@@ -155,7 +155,7 @@
         </div>
         <h1>My own projects</h1>
         <div class="cards">
-          {#each projects as p}
+          {#each projects as p (p.id)}
             {#if p.lang.en.name && p.lang.en.name !== '.github'}
               <ProjectCard {p} onSelect={openProject} />
             {/if}

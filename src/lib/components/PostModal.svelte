@@ -1,20 +1,33 @@
 <script lang="ts">
   import { browser } from '$app/environment';
-  import { onDestroy, onMount, tick } from 'svelte';
+  import { onMount, tick } from 'svelte';
 
-  export let open = false;
-  export let title = '';
-  export let date = '';
-  export let tags: string[] = [];
-  export let onClose: () => void = () => {};
+  type Props = {
+    open?: boolean;
+    title?: string;
+    date?: string;
+    tags?: string[];
+    onClose?: () => void;
+    children?: () => any;
+  };
 
-  let dialogEl: HTMLDivElement | null = null;
+  let {
+    open = $bindable(false),
+    title = '',
+    date = '',
+    tags = [],
+    onClose = () => {},
+    children
+  }: Props = $props();
+
+  let dialogEl: HTMLDivElement | null = $state<HTMLDivElement | null>(null);
 
   // para restaurar foco y overflow
   let prevOverflow: string | null = null;
   let prevActiveEl: Element | null = null;
 
   function close() {
+    open = false;
     onClose();
   }
 
@@ -30,12 +43,15 @@
     if (e.key === 'Escape') close();
   }
 
-  $: if (browser) {
+  $effect(() => {
+    if (!browser) return;
+
     if (open) {
       if (prevOverflow === null) prevOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
 
       prevActiveEl = document.activeElement;
+
       (async () => {
         await tick();
         dialogEl?.focus();
@@ -45,22 +61,23 @@
         document.body.style.overflow = prevOverflow;
         prevOverflow = null;
       }
-      if (prevActiveEl instanceof HTMLElement) {
-        prevActiveEl.focus();
-      }
+      if (prevActiveEl instanceof HTMLElement) prevActiveEl.focus();
       prevActiveEl = null;
     }
-  }
+
+    return () => {
+      if (!browser) return;
+      if (prevOverflow !== null) {
+        document.body.style.overflow = prevOverflow;
+        prevOverflow = null;
+      }
+    };
+  });
 
   onMount(() => {
     if (!browser) return;
     window.addEventListener('keydown', onGlobalKeydown);
     return () => window.removeEventListener('keydown', onGlobalKeydown);
-  });
-
-  onDestroy(() => {
-    if (!browser) return;
-    if (prevOverflow !== null) document.body.style.overflow = prevOverflow;
   });
 </script>
 
@@ -70,8 +87,8 @@
     role="button"
     tabindex="0"
     aria-label="Cerrar modal"
-    on:click={close}
-    on:keydown={onBackdropKeydown}
+    onclick={close}
+    onkeydown={onBackdropKeydown}
   >
     <div
       bind:this={dialogEl}
@@ -80,8 +97,8 @@
       aria-modal="true"
       aria-label={title}
       tabindex="-1"
-      on:click|stopPropagation
-      on:keydown|stopPropagation
+      onclick={(e) => e.stopPropagation()}
+      onkeydown={(e) => e.stopPropagation()}
     >
       <header class="header">
         <div>
@@ -90,20 +107,20 @@
             {#if date}<span>{date}</span>{/if}
             {#if tags?.length}
               <span class="dot">·</span>
-              {#each tags as t}
+              {#each tags as t (t)}
                 <span class="tag">#{t}</span>
               {/each}
             {/if}
           </div>
         </div>
 
-        <button class="close" type="button" aria-label="Cerrar" on:click={close}
-          >✕</button
-        >
+        <button class="close" type="button" aria-label="Cerrar" onclick={close}>
+          ✕
+        </button>
       </header>
 
       <div class="body">
-        <slot />
+        {@render children?.()}
       </div>
     </div>
   </div>

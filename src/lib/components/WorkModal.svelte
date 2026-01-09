@@ -115,6 +115,7 @@
           {#if (selected as Work).full_description}
             <section class="block">
               <div class="html">
+                <!-- eslint-disable-next-line svelte/no-at-html-tags -->
                 {@html (selected as Work).full_description}
               </div>
             </section>
@@ -188,9 +189,8 @@
           {#if (selected as Project).lang.en.desc}
             <section class="block">
               <h4>Summary</h4>
-              <div class="html">
-                {@html (selected as Project).lang.en.desc}
-              </div>
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+              <div class="html">{@html (selected as Project).lang.en.desc}</div>
             </section>
           {/if}
           {#if selected && 'technologies' in selected}
@@ -198,7 +198,7 @@
               <div>
                 <h4>Technologies</h4>
                 <div class="pills">
-                  {#each selected.technologies as t}
+                  {#each selected.technologies as t (t.tech)}
                     <span class="pill">{t.tech}</span>
                   {/each}
                 </div>
@@ -210,9 +210,9 @@
               <h4>URL</h4>
               <div class="html">
                 <a href={(selected as Project).url} target="_blank">
-                  <span class="pill"
-                    >GitHub {(selected as Project).lang.en.name}</span
-                  >
+                  <span class="pill">
+                    GitHub {(selected as Project).lang.en.name}
+                  </span>
                 </a>
               </div>
             </section>

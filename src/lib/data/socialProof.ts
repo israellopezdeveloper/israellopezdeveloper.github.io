@@ -1,4 +1,4 @@
-export type SocialProof = {
+export interface SocialProof {
   logos: string[];
   testimonial: {
     quote: string;
@@ -17,7 +17,7 @@ export type SocialProof = {
     source?: string;
     url?: string;
   }[];
-};
+}
 
 export const socialProof: SocialProof = {
   logos: ['Devo', 'BBVA', 'La Caixa', 'AWS', 'Startups'],

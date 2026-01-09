@@ -1,4 +1,4 @@
-export type Service = {
+export interface Service {
   title: string;
   subtitle: string;
 
@@ -14,7 +14,7 @@ export type Service = {
 
   // Short label shown as pill at the bottom
   engagement: string; // e.g. "Fixed-scope", "Retainer", "Advisory"
-};
+}
 
 export const services: Service[] = [
   {

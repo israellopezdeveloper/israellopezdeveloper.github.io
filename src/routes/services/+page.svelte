@@ -23,7 +23,7 @@
   </header>
 
   <div class="grid">
-    {#each services as s}
+    {#each services as s (s.title)}
       <a
         class="cardLink"
         href={`/services/${slugify(s.title)}`}

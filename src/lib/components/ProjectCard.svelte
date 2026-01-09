@@ -4,7 +4,7 @@
 
   export let p: Project;
 
-  export let onSelect: (p: Project) => void = () => {};
+  export let onSelect: (_p: Project) => void = (_p) => {};
 
   const formatPeriod = (p: Project) => {
     let time: number = 0;
@@ -127,9 +127,8 @@
     {/if}
 
     {#if p.lang.en.desc}
-      <div class="tooltip__desc">
-        {@html p.lang.en.desc}
-      </div>
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
+      <div class="tooltip__desc">{@html p.lang.en.desc}</div>
     {/if}
   </div>
 {/if}

@@ -14,7 +14,7 @@
 >
   <div class="grid">
     <div class="logos">
-      {#each socialProof.logos as l}
+      {#each socialProof.logos as l (l)}
         <div class="logo">{l}</div>
       {/each}
     </div>
@@ -22,7 +22,7 @@
     <figure class="quote">
       {#if awards.length || recommendations.length}
         <div class="proof">
-          {#each awards as a}
+          {#each awards as a (a.title)}
             <div class="chip">
               <span class="chip__label">Award</span>
               <span class="chip__text">{a.title}</span>
@@ -31,7 +31,7 @@
             </div>
           {/each}
 
-          {#each recommendations as r}
+          {#each recommendations as r (r.role)}
             {#if r.url}
               <a
                 class="chip chip--link"

@@ -1,26 +1,24 @@
-import type { Url } from 'node:url';
-
-export type WorkLink = {
+export interface WorkLink {
   icon?: string;
   text: string;
   url: string;
-};
+}
 
-export type WorkProject = {
+export interface WorkProject {
   name: string;
   description?: string;
   technologies?: string[];
   links?: WorkLink[];
   images?: string[];
-};
+}
 
-export type PeriodTime = {
+export interface PeriodTime {
   start?: string;
   end?: string;
   current?: boolean;
-};
+}
 
-export type Work = {
+export interface Work {
   name: string;
   period_time?: PeriodTime;
   thumbnail?: string;
@@ -33,18 +31,18 @@ export type Work = {
 
   links?: WorkLink[];
   projects?: WorkProject[];
-};
+}
 
-export type CV = {
+export interface CV {
   works: Work[];
-};
+}
 
-export type Tech = {
+export interface Tech {
   tech: string;
   time: number;
-};
+}
 
-export type Project = {
+export interface Project {
   id: number;
   url: string;
   thumbnail?: string;
@@ -63,4 +61,4 @@ export type Project = {
     };
   };
   technologies?: Tech[];
-};
+}

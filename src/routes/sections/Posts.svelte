@@ -111,7 +111,7 @@
 
             {#if p.meta.tags?.length}
               <div class="tags">
-                {#each p.meta.tags as t}
+                {#each p.meta.tags as t (t)}
                   <span class="tag">#{t}</span>
                 {/each}
               </div>

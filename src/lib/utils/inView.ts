@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store';
+import { readable, type Readable } from 'svelte/store';
 
 export function inView(
   node: Element,
@@ -7,7 +7,7 @@ export function inView(
     rootMargin: '200px',
     threshold: 0.01
   }
-) {
+): Readable<boolean> {
   return readable(false, (set) => {
     if (typeof window === 'undefined') return;
 
@@ -17,6 +17,8 @@ export function inView(
 
     obs.observe(node);
 
-    return () => obs.disconnect();
+    return () => {
+      obs.disconnect();
+    };
   });
 }

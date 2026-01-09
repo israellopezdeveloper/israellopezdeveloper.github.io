@@ -1,22 +1,19 @@
 import cv from '$lib/data/data_CV.json';
-import projects from '$lib/data/data_projects.json';
 
-export type TechXP = {
+export interface TechXP {
   name: string;
   experience: number;
-};
+}
 
-export type StackGroup = {
+export interface StackGroup {
   label: string;
   items: (string | TechXP)[];
-};
-
-let techs: Set<TechXP> = new Set<TechXP>();
+}
 
 interface PeriodTime {
   current: boolean;
   start: string;
-  end: string | 'None';
+  end: string | null;
 }
 
 function calculateElapsedMonths(period: PeriodTime): number {
@@ -60,8 +57,8 @@ function calculateElapsedMonths(period: PeriodTime): number {
         dec: 11
       };
 
-      const monthIndex = monthMap[monthName];
-      if (monthIndex !== undefined && !Number.isNaN(year)) {
+      const monthIndex: number = monthMap[monthName];
+      if (!Number.isNaN(year)) {
         // Día 1 del mes, hora 12:00 para evitar rarezas de DST en algunos husos
         return new Date(year, monthIndex, 1, 12, 0, 0, 0);
       }
@@ -72,20 +69,18 @@ function calculateElapsedMonths(period: PeriodTime): number {
 
   const startDate = parseDate(period.start);
 
-  const endDate =
-    period.current || period.end === 'None'
-      ? new Date()
-      : parseDate(period.end);
+  const endDate: Date =
+    period.current || period.end ? new Date() : parseDate(period.end ?? '');
 
   const yearsDiff = endDate.getFullYear() - startDate.getFullYear();
   const monthsDiff = endDate.getMonth() - startDate.getMonth();
 
-  let totalMonths = yearsDiff * 12 + monthsDiff;
+  const totalMonths: number = yearsDiff * 12 + monthsDiff;
 
   return Math.max(0, totalMonths);
 }
 
-let techsMap = new Map<string, TechXP>();
+const techsMap: Map<string, TechXP> = new Map<string, TechXP>();
 
 cv.works.forEach((w) => {
   const monthsInThisWork = calculateElapsedMonths(w.period_time);
@@ -94,7 +89,8 @@ cv.works.forEach((w) => {
     p.technologies.forEach((t) => {
       if (techsMap.has(t)) {
         // Si ya existe, sumamos la experiencia
-        const existing = techsMap.get(t)!;
+        const existing =
+          techsMap.get(t) ?? ({ name: '', experience: 0 } as TechXP);
         existing.experience += monthsInThisWork;
       } else {
         // Si no existe, lo creamos
@@ -303,13 +299,6 @@ const tempStack: StackGroup[] = categories.map((label) => ({
   label: label,
   items: finalTechs.filter((t) => mapTechType.get(label)?.includes(t.name))
 }));
-
-const categorizedTechNames = new Set(Array.from(mapTechType.values()).flat());
-
-const others: StackGroup = {
-  label: 'Others',
-  items: finalTechs.filter((t) => !categorizedTechNames.has(t.name))
-};
 
 export const stack: StackGroup[] = [...tempStack].filter(
   (group) => group.items.length > 0

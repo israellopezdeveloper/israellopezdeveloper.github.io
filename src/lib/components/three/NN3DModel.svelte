@@ -16,12 +16,10 @@
   export let nn: Nn3d | null = null;
 
   export let onNothingSelect: (() => void) | undefined;
-  export let onModelSelect: ((info: ModelNode) => void) | undefined;
-  export let onLayerSelect:
-    | ((modelId: string, info: LayerNode) => void)
-    | undefined;
+  export let onModelSelect: ((_: ModelNode) => void) | undefined;
+  export let onLayerSelect: ((_: string, __: LayerNode) => void) | undefined;
   export let onNeuronSelect:
-    | ((modelId: string, layerId: string, info: NeuronNode) => void)
+    | ((_modelId: string, _layerId: string, _info: NeuronNode) => void)
     | undefined;
 
   let reduced = false;
