@@ -64,10 +64,10 @@
         <div class="pricing__value">
           <span class="chip">Hourly</span>
           <strong>$100–$130/h</strong>
-          <span class="muted">·</span>
+        </div>
+        <div class="pricing__value">
           <span class="chip">Project</span>
           <strong>$3.6k+</strong>
-          <span class="muted">·</span>
           <span class="chip">Monthly retainer</span>
           <strong>$2.4k+</strong>
         </div>
