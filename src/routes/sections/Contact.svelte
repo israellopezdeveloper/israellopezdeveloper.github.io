@@ -89,6 +89,21 @@
           Discord (technical teams) →
         </a>
 
+        <a
+          class="cta with-icon"
+          href="https://www.upwork.com/freelancers/~01d29eab7db9abdaf8"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="/images/contact/upwork.svg"
+            alt="Upwork"
+            class="icon"
+            loading="lazy"
+          />
+          Upwork
+        </a>
+
         <div class="divider"></div>
 
         <div class="footnote">Remote-first · English / Spanish / Chinese</div>
@@ -207,7 +222,6 @@
     align-items: center;
     gap: 10px;
   }
-  .cta svg,
   .cta img {
     width: 18px;
     height: 18px;
