@@ -48,7 +48,7 @@
               cost control
             </li>
           </ul>
-          <!-- CTAs sticky SOLO dentro del hero -->
+
           <div class="ctaSticky" class:reduced>
             <div class="ctaRow">
               <a class="primary" href="#contact">Let’s talk about your system</a
@@ -64,24 +64,42 @@
 </Section>
 
 <style>
-  /* NO pongas overflow aquí: rompe sticky si algún padre ya lo toca */
   .heroShell {
     position: relative;
     width: 100%;
-    min-height: 200vh; /* 2 páginas */
-    padding-top: 88px;
-    background-image: url('/images/hero-israel.webp');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 8%;
+    height: 200vh;
+
+    /* clave: crea contexto de apilado para que el ::before quede detrás */
+    isolation: isolate;
   }
 
-  /* Contenido encima */
+  /* Parallax “fixed” consistente (incluye Safari iOS) */
+  .heroShell::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+
+    background-image: url('/images/hero-israel.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 8%;
+
+    pointer-events: none;
+    transform: translateZ(0);
+    will-change: transform;
+    clip-path: inset(0 0 0 0);
+  }
+
+  @supports (clip-path: inset(0)) {
+    .heroShell {
+      /* crea el área de recorte para el pseudo-elemento */
+      clip-path: inset(0);
+    }
+  }
+
   .heroPages {
     position: relative;
     z-index: 1;
-
-    /* Empieza a dibujar encima del viewport del fondo */
     margin-top: 0;
   }
 
@@ -90,10 +108,7 @@
     display: flex;
   }
 
-  .page--intro {
-    align-items: end;
-  }
-
+  .page--intro,
   .page--details {
     align-items: end;
   }
@@ -114,8 +129,12 @@
   @media (max-width: 600px) {
     .heroShell {
       padding-top: 72px;
+    }
+
+    .heroShell::before {
       background-position: 70% 8%;
     }
+
     .page {
       min-height: calc(100vh - 72px);
     }
@@ -180,7 +199,6 @@
     max-width: 70ch;
   }
 
-  /* CTA sticky dentro del hero */
   .ctaSticky {
     position: sticky;
     bottom: 16px;
