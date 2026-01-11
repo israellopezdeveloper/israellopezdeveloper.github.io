@@ -44,6 +44,7 @@ jobs:
         run: |
           pnpm exec tsx src/script/cv-nn.ts --input src/lib/data/data_CV.json --output src/lib/data/nn_works.ts
           pnpm exec tsx src/script/repos-nn.ts --input src/lib/data/data_projects.json --output src/lib/data/nn_projects.ts
+          node src/script/cv-pdf.js src/lib/data/data_CV.json static/CV.pdf
 
       - name: Build
         run: pnpm build

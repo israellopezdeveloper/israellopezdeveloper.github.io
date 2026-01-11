@@ -51,9 +51,11 @@
 
           <div class="ctaSticky" class:reduced>
             <div class="ctaRow">
-              <a class="primary" href="#contact">Let’s talk about your system</a
-              >
+              <a class="primary" href="#contact">
+                Let’s talk about your system
+              </a>
               <a class="secondary" href="#experience">View selected work</a>
+              <a class="primary" href="/CV.pdf"> Download my PDF 📝 </a>
             </div>
             <p class="micro">Hourly preferred · Open to project/retainer</p>
           </div>
