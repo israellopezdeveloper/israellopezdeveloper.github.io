@@ -56,7 +56,7 @@
               </a>
               <a class="secondary" href="#experience">View selected work</a>
               <a class="primary" href="/CV.pdf" target="_blank">
-                Download my PDF 📝
+                Download my CV 📝
               </a>
             </div>
             <p class="micro">Hourly preferred · Open to project/retainer</p>
