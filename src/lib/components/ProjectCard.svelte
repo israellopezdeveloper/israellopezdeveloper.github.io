@@ -110,7 +110,7 @@
   </div>
 
   <div class="card__name" title={p.lang.en.name}>
-    {p.lang.en.desc ?? p.lang.en.name}
+    {p.lang.en.name ?? p.lang.en.desc}
   </div>
 </article>
 
