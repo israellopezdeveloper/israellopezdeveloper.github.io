@@ -63,13 +63,13 @@
         <div class="pricing__label">Typical engagement</div>
         <div class="pricing__value">
           <span class="chip">Hourly</span>
-          <strong>$60–$70/h</strong>
+          <strong>$40–$100/h</strong>
         </div>
         <div class="pricing__value">
           <span class="chip">Project</span>
-          <strong>$2.6k+</strong>
+          <strong>$5.0k+</strong>
           <span class="chip">Monthly retainer</span>
-          <strong>$2.0k+</strong>
+          <strong>$3.0k+</strong>
         </div>
         <div class="pricing__note">
           Global clients. Rates vary by scope and complexity — I’ll propose a
