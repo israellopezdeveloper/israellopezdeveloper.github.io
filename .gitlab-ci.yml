@@ -1,0 +1,39 @@
+# Usamos la imagen de Node 24 que ya tienes en GitHub
+image: node:24
+
+# Cache de pnpm para que los despliegues sean rápidos
+cache:
+  key:
+    files:
+      - pnpm-lock.yaml
+  paths:
+    - .pnpm-store
+
+pages:
+  stage: deploy
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@9 --activate
+    - pnpm config set store-dir .pnpm-store
+  script:
+    # 1. Instalar dependencias
+    - pnpm install
+
+    # 2. Generar datos NN (Tus scripts personalizados)
+    - pnpm exec tsx src/script/cv-nn.ts --input src/lib/data/data_CV.json --output src/lib/data/nn_works.ts
+    - pnpm exec tsx src/script/repos-nn.ts --input src/lib/data/data_projects.json --output src/lib/data/nn_projects.ts
+    - node src/script/cv-pdf.js src/lib/data/data_CV.json static/CV.pdf
+
+    # 3. Build de Svelte
+    - pnpm build
+
+    # 4. GitLab Pages requiere que el contenido esté en la carpeta 'public'
+    # Si tu build de Svelte genera la carpeta 'build', la movemos a 'public'
+    - rm -rf public
+    - mv build public
+    
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
