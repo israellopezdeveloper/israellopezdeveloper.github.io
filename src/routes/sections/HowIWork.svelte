@@ -63,7 +63,7 @@
         <div class="pricing__label">Typical engagement</div>
         <div class="pricing__value">
           <span class="chip">Hourly</span>
-          <strong>$40–$100/h</strong>
+          <strong>$50–$100/h</strong>
         </div>
         <div class="pricing__value">
           <span class="chip">Project</span>
