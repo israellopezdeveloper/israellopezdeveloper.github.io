@@ -134,7 +134,7 @@ async function drawIntro(doc) {
   doc.fontSize(10.5);
 
   doc.text('Email: israellopezdeveloper@gmail.com');
-  doc.text('Phone: +995 591 311 854');
+  doc.text('Phone: +34 648 13 66 40');
 
   doc
     .text('Portfolio: ', { continued: true })
