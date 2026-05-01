@@ -11,7 +11,7 @@ const config = {
   kit: {
     adapter: adapter(),
     prerender: {
-      entries: ['*', '/aipublisher-privacy', '/aipublisher-terms']
+      entries: ['*']
     }
   }
 };
