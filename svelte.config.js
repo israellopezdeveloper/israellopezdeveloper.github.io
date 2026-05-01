@@ -8,7 +8,12 @@ const config = {
 
   preprocess: [vitePreprocess(), sveltexPreprocessor],
 
-  kit: { adapter: adapter() }
+  kit: {
+    adapter: adapter(),
+    prerender: {
+      entries: ['*', '/aipublisher-privacy', '/aipublisher-terms']
+    }
+  }
 };
 
 export default config;

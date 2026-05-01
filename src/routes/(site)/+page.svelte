@@ -1,8 +1,8 @@
 <script>
-  import Experience from '../routes/sections/Experience.svelte';
-  import HeroAbout from '../routes/sections/HeroAbout.svelte';
-  import Services from '../routes/sections/Services.svelte';
-  import TechStack from '../routes/sections/TechStack.svelte';
+  import Experience from './sections/Experience.svelte';
+  import HeroAbout from './sections/HeroAbout.svelte';
+  import Services from './sections/Services.svelte';
+  import TechStack from './sections/TechStack.svelte';
   import Contact from './sections/Contact.svelte';
   import Education from './sections/Education.svelte';
   import HowIWork from './sections/HowIWork.svelte';
