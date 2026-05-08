@@ -6,7 +6,7 @@
 
   let { children } = $props();
 
-  const siteUrl = 'https://israellopezdeveloper.github.io';
+  const siteUrl = 'https://www.israellopez.org';
 
   const jsonLd = {
     '@context': 'https://schema.org',

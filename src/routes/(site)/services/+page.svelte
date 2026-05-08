@@ -10,10 +10,7 @@
 
 <svelte:head>
   <title>{title} · Israel Lopez</title>
-  <link
-    rel="canonical"
-    href="https://israellopezdeveloper.github.io/services"
-  />
+  <link rel="canonical" href="https://www.israellopez.org/services" />
 </svelte:head>
 
 <main class="wrap">

@@ -140,8 +140,8 @@ async function drawIntro(doc) {
   doc
     .text('Portfolio: ', { continued: true })
     .fillColor('blue')
-    .text('https://israellopezdeveloper.github.io', {
-      link: 'https://israellopezdeveloper.github.io',
+    .text('https://www.israellopez.org', {
+      link: 'https://www.israellopez.org',
       underline: true
     });
 

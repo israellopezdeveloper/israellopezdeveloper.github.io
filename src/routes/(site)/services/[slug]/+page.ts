@@ -21,7 +21,7 @@ export const load: PageLoad = ({ params }) => {
     throw error(404, 'Service not found');
   }
 
-  const canonical = `https://israellopezdeveloper.github.io/services/${slug}`;
+  const canonical = `https://www.israellopez.org/services/${slug}`;
   const title = `${service.title} · Israel Lopez`;
   const description = service.outcome ?? service.subtitle;
 
