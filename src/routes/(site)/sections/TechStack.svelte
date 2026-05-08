@@ -1,5 +1,6 @@
 <script lang="ts">
   import { stack, type TechXP } from '$lib/data/stack';
+  import { formatMonths } from '$lib/utils/duration';
   import { SvelteSet } from 'svelte/reactivity';
   import Section from './Section.svelte';
   import { slide } from 'svelte/transition';
@@ -33,7 +34,7 @@
           {#each sortedItems.slice(0, numMax) as item ((item as TechXP).name)}
             <span
               class="chip has-tooltip"
-              data-tooltip={`${(item as TechXP).experience} months`}
+              data-tooltip={formatMonths((item as TechXP).experience)}
             >
               {(item as TechXP).name}
             </span>
@@ -45,7 +46,7 @@
                 {#each sortedItems.slice(numMax) as item ((item as TechXP).name)}
                   <span
                     class="chip has-tooltip"
-                    data-tooltip={`${(item as TechXP).experience} months`}
+                    data-tooltip={formatMonths((item as TechXP).experience)}
                   >
                     {(item as TechXP).name}
                   </span>

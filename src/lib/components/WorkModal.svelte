@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Project, Work } from '$lib/data/types';
+  import { formatMonths } from '$lib/utils/duration';
   import { onMount, onDestroy, tick } from 'svelte';
   import ProjectCollapsible from './ProjectCollapsible.svelte';
   import { slugify } from './three/NN3DModel';
@@ -175,7 +176,7 @@
               {#if selected && 'technologies' in selected}
                 {#if selected.technologies && selected.technologies.length > 0}
                   <div class="meta">
-                    {selected.technologies[0].time} months
+                    {formatMonths(selected.technologies[0].time)}
                   </div>
                 {/if}
               {/if}

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Project } from '$lib/data/types';
+  import { formatMonths } from '$lib/utils/duration';
   import { onMount, onDestroy, tick } from 'svelte';
 
   export let p: Project;
@@ -11,7 +12,7 @@
     p.technologies?.forEach((t) => {
       time = Math.max(time, t.time);
     });
-    return time + ' months';
+    return formatMonths(time);
   };
 
   let cardEl: HTMLElement | null = null;
