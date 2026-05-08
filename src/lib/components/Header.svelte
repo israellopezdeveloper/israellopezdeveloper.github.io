@@ -3,7 +3,7 @@
     { href: '/#about', label: 'About me' },
     { href: '/#how-i-work', label: 'How I Work' },
     { href: '/#services', label: 'Services' },
-    { href: '/#experience', label: 'Case estudies' },
+    { href: '/#experience', label: 'Case studies' },
     { href: '/#tech-stack', label: 'Tech Stack' },
     { href: '/#education', label: 'Education' },
     { href: '/#posts', label: 'Posts' },
