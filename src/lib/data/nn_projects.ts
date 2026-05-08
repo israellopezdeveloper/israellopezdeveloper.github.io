@@ -2,261 +2,261 @@ import type { ModelNode } from '@israellopezdeveloper/nn3d';
 
 export const nn_projects: ModelNode[] = [
   {
-    id: 'repositories',
-    label: 'Repositories',
+    id: "repositories",
+    label: "Repositories",
     layers: [
       {
-        id: 'nn3d',
-        label: 'NN3D',
+        id: "nn3d",
+        label: "NN3D",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'arch-koala-project',
-        label: 'Arch Koala Project',
+        id: "arch-koala-project",
+        label: "Arch Koala Project",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'my-portfolio',
-        label: 'My portfolio',
+        id: "my-portfolio",
+        label: "My portfolio",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'crew-estimator',
-        label: 'crew_estimator',
+        id: "crew-estimator",
+        label: "crew_estimator",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'democracy-chain',
-        label: 'Democracy Chain',
+        id: "democracy-chain",
+        label: "Democracy Chain",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'scaffold',
-        label: 'Scaffold',
+        id: "scaffold",
+        label: "Scaffold",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'playmate',
-        label: 'playmate',
+        id: "playmate",
+        label: "playmate",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'miner-validator',
-        label: 'miner-validator',
+        id: "miner-validator",
+        label: "miner-validator",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'bittensor-sentiment-api',
-        label: 'bittensor-sentiment-api',
+        id: "bittensor-sentiment-api",
+        label: "bittensor-sentiment-api",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'saurion',
-        label: 'Saurion',
+        id: "saurion",
+        label: "Saurion",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'docker-repository',
-        label: 'Docker Repository',
+        id: "docker-repository",
+        label: "Docker Repository",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'nanologger',
-        label: 'NanoLogger',
+        id: "nanologger",
+        label: "NanoLogger",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'threadripper',
-        label: 'ThreadRipper',
+        id: "threadripper",
+        label: "ThreadRipper",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       },
       {
-        id: 'github',
-        label: '.github',
+        id: "github",
+        label: ".github",
         neurons: [
           {
-            id: 'url',
-            label: 'url'
+            id: "url",
+            label: "url"
           },
           {
-            id: 'description',
-            label: 'description'
+            id: "description",
+            label: "description"
           },
           {
-            id: 'technologies',
-            label: 'technologies'
+            id: "technologies",
+            label: "technologies"
           }
         ]
       }
     ]
   }
-];
+] as ModelNode[];

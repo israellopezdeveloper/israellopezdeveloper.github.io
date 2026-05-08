@@ -54,5 +54,12 @@
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "three": "^0.182.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
   }
 }

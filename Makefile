@@ -40,11 +40,13 @@ lint:
 format:
 	$(PKG) format
 
+TSX := ./node_modules/.bin/tsx
+
 gen-cv:
-	$(PKG) exec tsx src/script/cv-nn.ts --input src/lib/data/data_CV.json --output src/lib/data/nn_works.ts
+	$(TSX) src/script/cv-nn.ts --input src/lib/data/data_CV.json --output src/lib/data/nn_works.ts
 
 gen-projects:
-	$(PKG) exec tsx src/script/repos-nn.ts --input src/lib/data/data_projects.json --output src/lib/data/nn_projects.ts
+	$(TSX) src/script/repos-nn.ts --input src/lib/data/data_projects.json --output src/lib/data/nn_projects.ts
 
 gen-pdf:
 	node src/script/cv-pdf.js src/lib/data/data_CV.json static/CV.pdf
